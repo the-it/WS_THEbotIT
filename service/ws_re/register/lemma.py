@@ -1,4 +1,5 @@
 import contextlib
+import math
 import re
 import unicodedata
 from datetime import datetime
@@ -292,12 +293,15 @@ class Lemma():
                f"<sup>({wiki_type.upper()} {parts[1]})</sup>]]", \
                f"{parts[0]}:{parts[1]}:{self.make_sort_key(':'.join(parts[2:]))}"
 
+    def _get_start_column(self, lemma_chapter: LemmaChapter) -> int:
+        columns_on_page = 4
+        if self.volume.name == "R":
+            columns_on_page = 2
+        return ((math.ceil((lemma_chapter.start + (columns_on_page / 2)) / columns_on_page) - 1) * columns_on_page) + 1
+
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
-        start_page_scan = lemma_chapter.start
-        if start_page_scan % 2 == 0:
-            start_page_scan -= 1
-        pages_str = f"[[Special:Filepath/Pauly-Wissowa_{self._volume.name}," \
-                    f"_{start_page_scan:04d}.jpg|{lemma_chapter.start}]]"
+        pages_str = f"[https://elexikon.ch/meyers/RE/{self._volume.name}_" \
+                    f"{self._get_start_column(lemma_chapter)}.png {lemma_chapter.start}]"
         if lemma_chapter.end and lemma_chapter.start != lemma_chapter.end:
             pages_str += f"-{lemma_chapter.end}"
         return pages_str

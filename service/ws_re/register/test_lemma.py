@@ -118,13 +118,18 @@ class TestLemma(BaseTestRegister):
 
     def test_get_pages(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]",
+        compare("[https://elexikon.ch/meyers/RE/I,1_1.png 1]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0017.jpg|18]]",
+        compare("[https://elexikon.ch/meyers/RE/I,1_17.png 18]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 18, "author": "Abel"})))
-        compare("[[Special:Filepath/Pauly-Wissowa_I,1,_0197.jpg|198]]-200",
+        compare("[https://elexikon.ch/meyers/RE/I,1_197.png 198]-200",
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
+        re_register_lemma = Lemma(self.basic_dict, self.volumes["R"], self.authors)
+        compare("[https://elexikon.ch/meyers/RE/R_5.png 5]",
+                re_register_lemma._get_pages(LemmaChapter({"start": 5, "end": 5, "author": "Abel"})))
+
+    #https://elexikon.ch/meyers/RE/XVIII,3_289.png
     def test_get_author_and_year(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("Abert", re_register_lemma._get_author_str(
@@ -175,7 +180,7 @@ class TestLemma(BaseTestRegister):
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
 |style="background:#AA0000"|UNK
 |data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
 |style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
@@ -188,11 +193,11 @@ class TestLemma(BaseTestRegister):
 |rowspan=2 data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
 |rowspan=2 style="background:#AA0000"|UNK
 |rowspan=2 data-sort-value="w:en:lemm"|[[w:en:Lemm|Lemm<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
 |style="background:#FFCBCB"|1998
 |-
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
 |William Abbott
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())

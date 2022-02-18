@@ -44,7 +44,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||I,1
 |style="background:#AA0000"|UNK
 ||
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0001.jpg|1]]-4
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
 |William Abbott
 |style="background:#CBCBCB"|
 |-
@@ -52,7 +52,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||I,1
 |style="background:#AA0000"|UNK
 ||
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
+|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Herman Abel
 |style="background:#B9FFC5"|1950
 |-
@@ -60,7 +60,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||I,1
 |style="background:#556B2F"|KOR
 ||
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
+|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Herman Abel
 |style="background:#B9FFC5"|1950
 |-
@@ -68,7 +68,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||III,1
 |style="background:#AA0000"|UNK
 ||
-|[[Special:Filepath/Pauly-Wissowa_III,1,_0001.jpg|1]]-4
+|[https://elexikon.ch/meyers/RE/III,1_1.png 1]-4
 |William Abbott
 |style="background:#CBCBCB"|
 |-
@@ -76,11 +76,11 @@ class TestPublicDomainRegister(BaseTestRegister):
 |rowspan=2 |I,1
 |rowspan=2 style="background:#669966"|FER
 |rowspan=2 |
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]
+|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Abert
 |style="background:#B9FFC5"|1927
 |-
-|[[Special:Filepath/Pauly-Wissowa_I,1,_0003.jpg|4]]-5
+|[https://elexikon.ch/meyers/RE/I,1_5.png 4]-5
 |Herman Abel
 |style="background:#B9FFC5"|1950
 |-
@@ -88,7 +88,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||III,1
 |style="background:#669966"|FER
 ||
-|[[Special:Filepath/Pauly-Wissowa_III,1,_0003.jpg|4]]
+|[https://elexikon.ch/meyers/RE/III,1_5.png 4]
 |Herman Abel
 |style="background:#B9FFC5"|1950
 |}
