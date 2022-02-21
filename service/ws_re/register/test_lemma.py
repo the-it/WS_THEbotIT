@@ -120,14 +120,22 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("[https://elexikon.ch/meyers/RE/I,1_1.png 1]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
+        compare("[https://elexikon.ch/meyers/RE/I,1_5.png 3]",
+                re_register_lemma._get_pages(LemmaChapter({"start": 3, "author": "Abel"})))
+        compare("[https://elexikon.ch/meyers/RE/I,1_5.png 5]",
+                re_register_lemma._get_pages(LemmaChapter({"start": 5, "author": "Abel"})))
         compare("[https://elexikon.ch/meyers/RE/I,1_17.png 18]",
                 re_register_lemma._get_pages(LemmaChapter({"start": 18, "author": "Abel"})))
         compare("[https://elexikon.ch/meyers/RE/I,1_197.png 198]-200",
                 re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
 
         re_register_lemma = Lemma(self.basic_dict, self.volumes["R"], self.authors)
-        compare("[https://elexikon.ch/meyers/RE/R_5.png 5]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 5, "end": 5, "author": "Abel"})))
+        compare("[https://elexikon.ch/meyers/RE/R_3.png 3]",
+                re_register_lemma._get_pages(LemmaChapter({"start": 3, "author": "Abel"})))
+
+        re_register_lemma = Lemma(self.basic_dict, self.volumes["V A,1"], self.authors)
+        compare("[https://elexikon.ch/meyers/RE/VA,1_1.png 1]",
+                re_register_lemma._get_pages(LemmaChapter({"start": 1, "author": "Abel"})))
 
     #https://elexikon.ch/meyers/RE/XVIII,3_289.png
     def test_get_author_and_year(self):
