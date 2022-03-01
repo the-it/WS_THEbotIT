@@ -11784,7 +11784,7 @@
   {
     "lemma": "Myrmekion",
     "previous": "Myrmekides",
-    "next": "Myrmex 1",
+    "next": "Μύρμηξ 1",
     "chapters": [
       {
         "start": 1105,
@@ -11793,24 +11793,28 @@
     ]
   },
   {
-    "lemma": "Myrmex 1",
+    "lemma": "Μύρμηξ 1",
     "previous": "Myrmekion",
     "next": "Myrmex 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1105,
-        "author": "Stählin"
+        "end": 1105,
+        "author": "Friedr. Stählin."
       }
     ]
   },
   {
     "lemma": "Myrmex 2",
-    "previous": "Myrmex 1",
+    "previous": "Μύρμηξ 1",
     "next": "Myrmex 3",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1105,
-        "author": "Schmidt"
+        "end": 1105,
+        "author": "W. Ruge."
       }
     ]
   },
@@ -11831,10 +11835,12 @@
     "lemma": "Myrmex 4",
     "previous": "Myrmex 3",
     "next": "Myrmex 5",
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1105,
-        "author": "Schmidt"
+        "end": 1105,
+        "author": "J. Schmidt."
       }
     ]
   },
@@ -11842,10 +11848,12 @@
     "lemma": "Myrmex 5",
     "previous": "Myrmex 4",
     "next": "Myrmex 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1105,
-        "author": "Schmidt"
+        "end": 1106,
+        "author": "J. Schmidt."
       }
     ]
   },
@@ -11853,10 +11861,13 @@
     "lemma": "Myrmex 6",
     "previous": "Myrmex 5",
     "next": "Myrmex 7",
+    "proof_read": 2,
+    "wp_link": "w:de:ca:Mírmex",
     "chapters": [
       {
         "start": 1106,
-        "author": "Schmidt"
+        "end": 1106,
+        "author": "J. Schmidt."
       }
     ]
   },
@@ -11864,10 +11875,12 @@
     "lemma": "Myrmex 7",
     "previous": "Myrmex 6",
     "next": "Myrmex 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1106,
-        "author": "Reincke"
+        "end": 1106,
+        "author": "Reincke."
       }
     ]
   },
