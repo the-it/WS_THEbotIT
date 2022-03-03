@@ -2533,10 +2533,12 @@
     "lemma": "Satyros 5",
     "previous": "Satyros 4",
     "next": "Satyros 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 226,
-        "author": "Fluss"
+        "end": 226,
+        "author": "Fluss."
       }
     ]
   },
@@ -2557,10 +2559,12 @@
     "lemma": "Satyros 7",
     "previous": "Satyros 6",
     "next": "Satyros 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 226,
-        "author": "Daebritz"
+        "end": 226,
+        "author": "Daebritz."
       }
     ]
   },
@@ -2568,16 +2572,7 @@
     "lemma": "Satyros 8",
     "previous": "Satyros 7",
     "next": "Satyros 9",
-    "chapters": [
-      {
-        "start": 226
-      }
-    ]
-  },
-  {
-    "lemma": "Satyros 9",
-    "previous": "Satyros 8",
-    "next": "Satyros 11",
+    "redirect": "Athenion 6",
     "proof_read": 2,
     "chapters": [
       {
@@ -2588,8 +2583,34 @@
     ]
   },
   {
-    "lemma": "Satyros 11",
+    "lemma": "Satyros 9",
+    "previous": "Satyros 8",
+    "next": "Satyros 10",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 226,
+        "end": 226,
+        "author": "Münzer."
+      }
+    ]
+  },
+  {
+    "lemma": "Satyros 10",
     "previous": "Satyros 9",
+    "next": "Satyros 11",
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 226,
+        "end": 226,
+        "author": "Seeck."
+      }
+    ]
+  },
+  {
+    "lemma": "Satyros 11",
+    "previous": "Satyros 10",
     "next": "Satyros 12",
     "proof_read": 2,
     "chapters": [
