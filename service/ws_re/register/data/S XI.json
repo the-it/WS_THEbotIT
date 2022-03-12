@@ -1163,7 +1163,7 @@
   {
     "lemma": "Hierokles 19a",
     "previous": "Heldica",
-    "next": "Illustris 2",
+    "next": "Homeros",
     "proof_read": 2,
     "chapters": [
       {
@@ -1174,8 +1174,16 @@
     ]
   },
   {
+    "lemma": "Homeros",
+    "previous": "Hierokles 19a"
+  },
+  {
+    "lemma": "Ias(s)ii",
+    "next": "Illustris 2"
+  },
+  {
     "lemma": "Illustris 2",
-    "previous": "Hierokles 19a",
+    "previous": "Ias(s)ii",
     "next": "Immurium",
     "proof_read": 2,
     "chapters": [
