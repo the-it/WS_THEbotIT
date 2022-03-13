@@ -57,7 +57,7 @@ class TestReArticle(TestCase):
         self.assertEqual(next(iterator).name, "BAND")
         self.assertEqual(next(iterator).name, "SPALTE_START")
         self.assertEqual(next(iterator).name, "SPALTE_END")
-        for _ in range(5):
+        for _ in range(6):
             next(iterator)
         self.assertEqual(next(iterator).name, "WIKISOURCE")
         for _ in range(4):
@@ -65,7 +65,7 @@ class TestReArticle(TestCase):
         self.assertEqual(next(iterator).name, "NACHTRAG")
         self.assertEqual(next(iterator).name, "ÜBERSCHRIFT")
         self.assertEqual(next(iterator).name, "VERWEIS")
-        self.assertEqual(len(self.article), 16)
+        self.assertEqual(len(self.article), 17)
 
     def test_properties_init(self):
         article = Article(re_daten_properties={"BAND": "I 1", "NACHTRAG": True})
