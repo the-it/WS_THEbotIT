@@ -11,12 +11,12 @@ from service.ws_re.register.register_types.short import ShortRegister
 from service.ws_re.register.register_types.volume import VolumeRegister
 from service.ws_re.volumes import Volumes
 
+RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g", "h", "hi", "i", "k",
+               "kl", "l", "lf", "m", "mb", "mi", "n", "o", "p", "pe", "pi", "po", "pr", "q", "r", "s", "se", "so",
+               "t", "th", "ti", "u", "uf", "x", "y", "z"]
+
 
 class Registers:
-    _RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g", "h", "hi", "i", "k",
-                    "kl", "l", "lf", "m", "mb", "mi", "n", "o", "p", "pe", "pi", "po", "pr", "q", "r", "s", "se", "so",
-                    "t", "th", "ti", "u", "uf", "x", "y", "z"]
-
     def __init__(self):
         self._authors: Authors = Authors()
         self._registers: Dict[str, VolumeRegister] = OrderedDict()
@@ -30,16 +30,16 @@ class Registers:
 
     @property
     def alphabetic(self) -> Generator[AlphabeticRegister, None, None]:
-        for idx, start in enumerate(self._RE_ALPHABET):
+        for idx, start in enumerate(RE_ALPHABET):
             end = "zzzzzz"
             before_start = None
             after_next_start = None
             with contextlib.suppress(IndexError):
-                end = self._RE_ALPHABET[idx + 1]
+                end = RE_ALPHABET[idx + 1]
             with contextlib.suppress(IndexError):
-                before_start = self._RE_ALPHABET[idx - 1]
+                before_start = RE_ALPHABET[idx - 1]
             with contextlib.suppress(IndexError):
-                after_next_start = self._RE_ALPHABET[idx + 2]
+                after_next_start = RE_ALPHABET[idx + 2]
             yield AlphabeticRegister(start, end,
                                      before_start, after_next_start,
                                      self._registers)
