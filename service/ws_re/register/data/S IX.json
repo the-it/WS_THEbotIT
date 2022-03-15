@@ -2138,7 +2138,7 @@
   {
     "lemma": "Palaimon 2",
     "previous": "Palaimon 1",
-    "next": "Palaimon 4",
+    "next": "Palaimon 3",
     "proof_read": 2,
     "chapters": [
       {
@@ -2149,8 +2149,11 @@
     ]
   },
   {
+    "lemma": "Palaimon 3",
+    "previous": "Palaimon 2"
+  },
+  {
     "lemma": "Palaimon 4",
-    "previous": "Palaimon 2",
     "next": "Pambotis",
     "chapters": [
       {
