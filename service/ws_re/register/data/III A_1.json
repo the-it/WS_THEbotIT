@@ -13893,10 +13893,12 @@
     "lemma": "Sopatros 1",
     "previous": "Sopatreia",
     "next": "Sopatros 2",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 999,
-        "author": "Schmidt"
+        "end": 1001,
+        "author": "Joh. Schmidt."
       }
     ]
   },
@@ -13904,10 +13906,12 @@
     "lemma": "Sopatros 2",
     "previous": "Sopatros 1",
     "next": "Sopatros 3",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Schoch"
+        "end": 1001,
+        "author": "Schoch."
       }
     ]
   },
@@ -13915,10 +13919,12 @@
     "lemma": "Sopatros 3",
     "previous": "Sopatros 2",
     "next": "Sopatros 4",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Schoch"
+        "end": 1001,
+        "author": "Schoch."
       }
     ]
   },
@@ -13926,10 +13932,12 @@
     "lemma": "Sopatros 4",
     "previous": "Sopatros 3",
     "next": "Sopatros 5",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Schoch"
+        "end": 1001,
+        "author": "Schoch."
       }
     ]
   },
@@ -13937,10 +13945,12 @@
     "lemma": "Sopatros 5",
     "previous": "Sopatros 4",
     "next": "Sopatros 6",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Stein, [Arthur]"
+        "end": 1001,
+        "author": "Stein."
       }
     ]
   },
@@ -13948,10 +13958,12 @@
     "lemma": "Sopatros 6",
     "previous": "Sopatros 5",
     "next": "Sopatros 7",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Stein, [Arthur]"
+        "end": 1001,
+        "author": "Stein."
       }
     ]
   },
@@ -13959,10 +13971,12 @@
     "lemma": "Sopatros 7",
     "previous": "Sopatros 6",
     "next": "Sopatros 8",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Stein, [Arthur]"
+        "end": 1001,
+        "author": "Stein."
       }
     ]
   },
@@ -13970,10 +13984,12 @@
     "lemma": "Sopatros 8",
     "previous": "Sopatros 7",
     "next": "Sopatros 9",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Seeck"
+        "end": 1001,
+        "author": "Seeck."
       }
     ]
   },
@@ -13981,10 +13997,12 @@
     "lemma": "Sopatros 9",
     "previous": "Sopatros 8",
     "next": "Sopatros 10",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1001,
-        "author": "Körte"
+        "end": 1002,
+        "author": "Körte."
       }
     ]
   },
@@ -14003,10 +14021,12 @@
     "lemma": "Sopatros 11",
     "previous": "Sopatros 10",
     "next": "Sopatros 12",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1006,
-        "author": "Seeck"
+        "end": 1007,
+        "author": "Seeck."
       }
     ]
   },
@@ -14014,10 +14034,12 @@
     "lemma": "Sopatros 12",
     "previous": "Sopatros 11",
     "next": "Sopatros 13",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1007,
-        "author": "Seeck"
+        "end": 1007,
+        "author": "Seeck."
       }
     ]
   },
@@ -14025,10 +14047,12 @@
     "lemma": "Sopatros 13",
     "previous": "Sopatros 12",
     "next": "Sopatros 14",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1007,
-        "author": "Seeck"
+        "end": 1007,
+        "author": "Seeck."
       }
     ]
   },
@@ -14058,10 +14082,12 @@
     "lemma": "Sopatros 16",
     "previous": "Sopatros 15",
     "next": "Sopeithes",
+    "proof_read": 2,
     "chapters": [
       {
         "start": 1008,
-        "author": "Lippold, Georg"
+        "end": 1008,
+        "author": "Lippold."
       }
     ]
   },
@@ -15137,7 +15163,7 @@
   {
     "lemma": "Soron",
     "previous": "Sorobis",
-    "next": "Sorores, ad",
+    "next": "ad Sorores",
     "chapters": [
       {
         "start": 1138,
@@ -15146,11 +15172,11 @@
     ]
   },
   {
-    "lemma": "Sorores, ad",
+    "lemma": "ad Sorores",
     "previous": "Soron",
     "next": "Sororia",
     "sort_key": "Sorores,ad",
-    "proof_read": 2,
+    "proof_read": 3,
     "chapters": [
       {
         "start": 1138,
@@ -15161,7 +15187,7 @@
   },
   {
     "lemma": "Sororia",
-    "previous": "Sorores, ad",
+    "previous": "ad Sorores",
     "next": "Sororia tigillum",
     "chapters": [
       {
