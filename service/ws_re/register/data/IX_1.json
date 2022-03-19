@@ -9573,7 +9573,20 @@
   {
     "lemma": "Idaion 2",
     "previous": "Idaion 1",
-    "next": "Idaios 1",
+    "next": "Idaios 1a",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 867,
+        "end": 867,
+        "author": "Bürchner."
+      }
+    ]
+  },
+  {
+    "lemma": "Idaios 1a",
+    "previous": "Idaion 2",
+    "sort_key": "Idaios 01a",
     "proof_read": 3,
     "chapters": [
       {
@@ -9585,7 +9598,6 @@
   },
   {
     "lemma": "Idaios 1",
-    "previous": "Idaion 2",
     "next": "Idaios 2",
     "sort_key": "Idaios 01",
     "proof_read": 2,
@@ -9614,7 +9626,6 @@
   {
     "lemma": "Idaios 3",
     "previous": "Idaios 2",
-    "next": "Idale",
     "sort_key": "Idaios 03",
     "proof_read": 3,
     "chapters": [
@@ -9626,8 +9637,21 @@
     ]
   },
   {
+    "lemma": "Idaios 3a",
+    "next": "Idale",
+    "sort_key": "Idaios 03a",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 867,
+        "end": 867,
+        "author": "Sundwall."
+      }
+    ]
+  },
+  {
     "lemma": "Idale",
-    "previous": "Idaios 3",
+    "previous": "Idaios 3a",
     "next": "Idalia",
     "proof_read": 3,
     "chapters": [
