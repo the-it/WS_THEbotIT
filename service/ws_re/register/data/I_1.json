@@ -29876,7 +29876,7 @@
   {
     "lemma": "Agricius",
     "previous": "Agrias",
-    "next": "Agricola 1",
+    "next": "Agricola",
     "redirect": "Agroecius 1",
     "proof_read": 3,
     "chapters": [
@@ -29887,8 +29887,22 @@
     ]
   },
   {
-    "lemma": "Agricola 1",
+    "lemma": "Agricola",
     "previous": "Agricius",
+    "next": "Agricola 1",
+    "sort_key": "Agricola 0",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 892,
+        "end": 892,
+        "author": "v. Rohden."
+      }
+    ]
+  },
+  {
+    "lemma": "Agricola 1",
+    "previous": "Agricola",
     "next": "Agricola 2",
     "proof_read": 3,
     "chapters": [
