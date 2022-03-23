@@ -47,6 +47,10 @@ class KURZTask(ReScannerTask):
 
     def task(self):
         article = self.re_page.first_article
+        if article["VERWEIS"].value:
+            article["KURZTEXT"].value = ""
+            self.re_page.first_article.text = re.sub(self.MAINTENANCE_CAT, self.re_page.first_article.text, "")
+            return
         if article["KURZTEXT"].value:
             return
         try:
