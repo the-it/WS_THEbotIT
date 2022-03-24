@@ -2505,7 +2505,7 @@
     "lemma": "Maximilianus 2",
     "previous": "Maximilianus 1",
     "next": "Maximilianus 3",
-    "redirect": "Macrobius 2",
+    "redirect": true,
     "proof_read": 2,
     "chapters": [
       {
@@ -2962,6 +2962,7 @@
   {
     "lemma": "Maximinus 25f",
     "previous": "Maximinus 25e",
+    "next": "Maximinus 25g",
     "proof_read": 2,
     "chapters": [
       {
@@ -2973,8 +2974,6 @@
   },
   {
     "lemma": "Maximina",
-    "previous": "Maximinus 34",
-    "next": "Maximius",
     "sort_key": "Maximinus 35",
     "proof_read": 2,
     "chapters": [
@@ -2987,6 +2986,7 @@
   },
   {
     "lemma": "Maximinus 25g",
+    "previous": "Maximinus 25f",
     "next": "Maximinus 26",
     "proof_read": 2,
     "chapters": [
@@ -3999,7 +3999,7 @@
     "lemma": "Maximus 117",
     "previous": "Maximus 116",
     "next": "Maximus 118",
-    "redirect": "Maximus 74",
+    "redirect": true,
     "proof_read": 2,
     "chapters": [
       {
