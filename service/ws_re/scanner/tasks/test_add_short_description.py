@@ -90,6 +90,7 @@ text
         self.text_mock.return_value = """{{REDaten
 |VERWEIS=ON
 |KURZTEXT=blub}}
+test
 [[Kategorie:RE:Kurztext überprüfen]]
 {{REAutor|Autor.}}"""
         self.title_mock.return_value = "Re:Aachen"
@@ -97,7 +98,7 @@ text
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
         compare("", re_page.first_article["KURZTEXT"].value)
-        compare("", re_page.first_article.text)
+        compare("test", re_page.first_article.text)
 
 
 @skip("only for analysis")
