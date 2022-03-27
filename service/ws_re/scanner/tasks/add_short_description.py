@@ -49,7 +49,9 @@ class KURZTask(ReScannerTask):
         article = self.re_page.first_article
         if article["VERWEIS"].value:
             article["KURZTEXT"].value = ""
-            self.re_page.first_article.text = re.sub(r"\[\[Kategorie:RE:Kurztext überprüfen\]\]", "", self.re_page.first_article.text).strip()
+            self.re_page.first_article.text = re.sub(pattern=r"\[\[Kategorie:RE:Kurztext überprüfen\]\]",
+                                                     repl="",
+                                                     string=self.re_page.first_article.text).strip()
             return
         if article["KURZTEXT"].value:
             return
