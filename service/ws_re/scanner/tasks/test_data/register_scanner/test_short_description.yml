@@ -1,0 +1,23 @@
+short_descrition_found:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |KURZTEXT=kurzer Text
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - short_description: "kurzer Text"
+    - []
+
+no_short_descrition:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |KURZTEXT=
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["short_description"]
