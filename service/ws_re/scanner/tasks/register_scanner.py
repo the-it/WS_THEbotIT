@@ -142,6 +142,14 @@ class SCANTask(ReScannerTask):
             return {"next": next_lemma}, []
         return {}, ["next"]
 
+    @staticmethod
+    def _fetch_short_description(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list[0]
+        short_description = str(article["KURZTEXT"].value)
+        if short_description:
+            return {"short_description": short_description}, []
+        return {}, ["short_description"]
+
     def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         # if there is something outside an article ignore it
         article_list = [article for article in article_list if isinstance(article, Article)]

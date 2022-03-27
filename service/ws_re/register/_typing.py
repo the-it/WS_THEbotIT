@@ -32,6 +32,7 @@ class LemmaDict(TypedDict, total=False):
     sort_key: str
     redirect: Union[str, bool]
     proof_read: int
+    short_description: str
     wp_link: str
     ws_link: str
     wd_link: str

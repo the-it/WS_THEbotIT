@@ -149,6 +149,12 @@ text.
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(result, SCANTask._fetch_next(article))
 
+    @file_data("test_data/register_scanner/test_short_description.yml")
+    def test_short_description(self, text, result):
+        self.text_mock.return_value = text
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(result, SCANTask._fetch_short_description(article))
+
     @file_data("test_data/register_scanner/test_pages_simple.yml")
     def test_pages(self, text, expect):
         task = SCANTask(None, self.logger)
