@@ -1,10 +1,11 @@
 import json
 from typing import Union, Optional, List
 
-from service.ws_re.register._base import Register, _REGISTER_PATH
+from service.ws_re.register._base import _REGISTER_PATH
 from service.ws_re.register._typing import LemmaDict
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
+from service.ws_re.register.register_types._base import Register
 from service.ws_re.volumes import Volume, Volumes
 
 
@@ -42,6 +43,7 @@ class VolumeRegister(Register):
     def _get_table(self) -> str:
         header = """{|class="wikitable sortable"
 !Artikel
+!Kurztext
 !Status
 !Wikilinks
 !Seite

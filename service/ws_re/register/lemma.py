@@ -144,6 +144,10 @@ class Lemma:
     def sort_key(self) -> str:
         return self._sort_key
 
+    @property
+    def short_description(self) -> str:
+        return str(self["short_description"]) if self["short_description"] else ""
+
     def _set_sort_key(self):
         if self["sort_key"]:
             lemma = self["sort_key"]
@@ -214,14 +218,14 @@ class Lemma:
         else:
             link_or_volume = self.get_link()
             sort_value = f"data-sort-value=\"{self.sort_key}\""
+        multi_row = ""
         if len(self._chapters) > 1:
-            row_string.append(f"rowspan={len(self._chapters)} {sort_value}|{link_or_volume}")
-            row_string.append(f"rowspan={len(self._chapters)} style=\"background:{proof_color}\"|{proof_state}")
-            row_string.append(f"rowspan={len(self._chapters)} {interwiki_sort_key}|{interwiki_links}")
-        else:
-            row_string.append(f"{sort_value}|{link_or_volume}")
-            row_string.append(f"style=\"background:{proof_color}\"|{proof_state}")
-            row_string.append(f"{interwiki_sort_key}|{interwiki_links}")
+            multi_row = f"rowspan={len(self._chapters)}"
+        row_string.append(f"{multi_row} {sort_value}|{link_or_volume}".strip())
+        if not print_volume:
+            row_string.append(f"{multi_row}|{self.short_description}")
+        row_string.append(f"{multi_row} style=\"background:{proof_color}\"|{proof_state}".strip())
+        row_string.append(f"{multi_row} {interwiki_sort_key}|{interwiki_links}".strip())
         for chapter in self._chapters:
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))

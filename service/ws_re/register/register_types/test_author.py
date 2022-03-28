@@ -36,6 +36,7 @@ class TestAuthorRegister(BaseTestRegister):
 
 {|class="wikitable sortable"
 !Artikel
+!Kurztext
 !Band
 !Status
 !Wikilinks
@@ -44,6 +45,7 @@ class TestAuthorRegister(BaseTestRegister):
 !Sterbejahr
 |-
 |data-sort-value="aba 001"|[[RE:Aba 1|'''{{Anker2|Aba 1}}''']]
+||This is Aba 1
 ||I,1
 |style="background:#AA0000"|UNK
 ||
@@ -52,6 +54,7 @@ class TestAuthorRegister(BaseTestRegister):
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
+||
 ||I,1
 |style="background:#556B2F"|KOR
 ||
@@ -60,6 +63,7 @@ class TestAuthorRegister(BaseTestRegister):
 |style="background:#FFCBCB"|1998
 |-
 |rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
+|rowspan=2|This is Beta
 |rowspan=2 |I,1
 |rowspan=2 style="background:#669966"|FER
 |rowspan=2 |
@@ -72,6 +76,7 @@ class TestAuthorRegister(BaseTestRegister):
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
+||
 ||III,1
 |style="background:#669966"|FER
 ||

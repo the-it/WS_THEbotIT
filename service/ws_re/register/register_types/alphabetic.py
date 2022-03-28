@@ -1,24 +1,23 @@
 from typing import Dict, Optional
 
-from service.ws_re.register._base import Register
 from service.ws_re.register.lemma import Lemma
+from service.ws_re.register.register_types._filtered_register import FilteredRegister
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
-class AlphabeticRegister(Register):
+class AlphabeticRegister(FilteredRegister):
     def __init__(self,
                  start: str,
                  end: str,
                  before_start: Optional[str],
                  after_next_start: Optional[str],
                  registers: Dict[str, VolumeRegister]):
-        super().__init__()
+        super().__init__(registers)
         self._start: str = start
         self._end: str = end
         self._before_start = before_start
         self._after_next_start = after_next_start
-        self._registers = registers
-        self._init_lemmas()
+        self._init_lemmas(self._is_lemma_in_range)
 
     def __repr__(self):
         return f"<{self.__class__.__name__} - start:{self._start}, end:{self._end}, lemmas:{len(self)}>"
@@ -37,14 +36,6 @@ class AlphabeticRegister(Register):
     def end(self):
         return self._end
 
-    def _init_lemmas(self):
-        lemmas = []
-        for volume_str in self._registers:
-            for lemma in self._registers[volume_str].lemmas:
-                if self._is_lemma_in_range(lemma):
-                    lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
-
     def _is_lemma_in_range(self, lemma: Lemma) -> bool:
         append = True
         # include start
@@ -54,34 +45,6 @@ class AlphabeticRegister(Register):
         elif lemma.sort_key >= self._end:
             append = False
         return append
-
-    def _get_table(self) -> str:
-        header = """{|class="wikitable sortable"
-!Artikel
-!Band
-!Status
-!Wikilinks
-!Seite
-!Autor
-!Sterbejahr"""
-        table = [header]
-        for lemmas in self.squash_lemmas(self._lemmas):
-            chapter_sum = 0
-            table_rows = []
-            lemma = None
-            for lemma in lemmas:
-                # if there are no chapters ... one line must be added no madder what
-                chapter_sum += max(len(lemma.chapters), 1)
-                table_rows.append(lemma.get_table_row(print_volume=True))
-            # strip |-/n form the first line it is later replaced by the lemma line
-            table_rows[0] = table_rows[0][3:]
-            if chapter_sum > 1:
-                table.append(f"|-\n|rowspan={chapter_sum} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}")
-            else:
-                table.append(f"|-\n|data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}")
-            table += table_rows
-        table.append("|}")
-        return "\n".join(table)
 
     def _get_header(self) -> str:
         header = ["RERegister"]

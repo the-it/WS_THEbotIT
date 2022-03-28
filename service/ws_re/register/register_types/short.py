@@ -1,6 +1,6 @@
 from typing import Dict
 
-from service.ws_re.register._base import Register
+from service.ws_re.register.register_types._base import Register
 from service.ws_re.register.register_types.volume import VolumeRegister
 from service.ws_re.volumes import Volumes
 

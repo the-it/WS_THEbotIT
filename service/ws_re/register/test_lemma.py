@@ -180,25 +180,27 @@ class TestLemma(BaseTestRegister):
             print(Lemma(no_chapter_dict, self.volumes["I,1"], self.authors))
 
     def test_get_row(self):
-        one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+        one_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next", "short_description": "Blub",
                          "wp_link": "w:en:Lemma", "ws_link": "s:de:Lemma",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+||Blub
 |style="background:#AA0000"|UNK
 |data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
 |style="background:#FFCBCB"|1998"""
         compare(expected_row, re_register_lemma.get_table_row())
-        two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
+        two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next", "short_description": "Blub",
                          "wp_link": "w:en:Lemm", "ws_link": "s:de:Lemma",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |rowspan=2 data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+|rowspan=2|Blub
 |rowspan=2 style="background:#AA0000"|UNK
 |rowspan=2 data-sort-value="w:en:lemm"|[[w:en:Lemm|Lemm<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]
@@ -210,6 +212,7 @@ class TestLemma(BaseTestRegister):
 |style="background:#CBCBCB"|"""
         compare(expected_row, re_register_lemma.get_table_row())
         expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|'''{{Anker2|lemma}}''']]", "|I,1")
+        expected_row = expected_row.replace("|rowspan=2|Blub\n", "")
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
     def test_get_row_no_chapter(self):
@@ -219,6 +222,7 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
 |data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
+||
 |style="background:#AA0000"|UNK
 ||"""
         compare(expected_row, re_register_lemma.get_table_row())
