@@ -1,7 +1,7 @@
 from typing import Dict, Optional
 
-from service.ws_re.register._base import FilteredRegister
 from service.ws_re.register.lemma import Lemma
+from service.ws_re.register.register_types._filtered_register import FilteredRegister
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
@@ -12,13 +12,12 @@ class AlphabeticRegister(FilteredRegister):
                  before_start: Optional[str],
                  after_next_start: Optional[str],
                  registers: Dict[str, VolumeRegister]):
-        super().__init__()
+        super().__init__(registers)
         self._start: str = start
         self._end: str = end
         self._before_start = before_start
         self._after_next_start = after_next_start
-        self._registers = registers
-        self._init_lemmas()
+        self._init_lemmas(self._is_lemma_in_range)
 
     def __repr__(self):
         return f"<{self.__class__.__name__} - start:{self._start}, end:{self._end}, lemmas:{len(self)}>"
@@ -36,14 +35,6 @@ class AlphabeticRegister(FilteredRegister):
     @property
     def end(self):
         return self._end
-
-    def _init_lemmas(self):
-        lemmas = []
-        for volume_str in self._registers:
-            for lemma in self._registers[volume_str].lemmas:
-                if self._is_lemma_in_range(lemma):
-                    lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
 
     def _is_lemma_in_range(self, lemma: Lemma) -> bool:
         append = True

@@ -146,7 +146,7 @@ class Lemma:
 
     @property
     def short_description(self) -> str:
-        return self["short_description"] if self["short_description"] else ""
+        return str(self["short_description"]) if self["short_description"] else ""
 
     def _set_sort_key(self):
         if self["sort_key"]:

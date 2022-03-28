@@ -1,9 +1,9 @@
 from typing import Dict, Tuple
 
-from service.ws_re.register._base import FilteredRegister
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
+from service.ws_re.register.register_types._filtered_register import FilteredRegister
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
@@ -12,11 +12,10 @@ class AuthorRegister(FilteredRegister):
                  author: Author,
                  authors: Authors,
                  registers: Dict[str, VolumeRegister]):
-        super().__init__()
+        super().__init__(registers)
         self._author: Author = author
         self._authors: Authors = authors
-        self._registers = registers
-        self._init_lemmas()
+        self._init_lemmas(self._is_lemma_of_author)
 
     def __repr__(self):
         return f"<{self.__class__.__name__} - author:{self._author}, lemmas:{len(self)}>"
@@ -30,14 +29,6 @@ class AuthorRegister(FilteredRegister):
     @property
     def author(self):
         return self._author
-
-    def _init_lemmas(self):
-        lemmas = []
-        for volume_str in self._registers:
-            for lemma in self._registers[volume_str].lemmas:
-                if self._is_lemma_of_author(lemma):
-                    lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
 
     def _is_lemma_of_author(self, lemma: Lemma) -> bool:
         for chapter in lemma.chapters:
