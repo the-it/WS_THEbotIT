@@ -91,10 +91,7 @@ PRE_FINALIZE_REGEX = _generate_pre_finalize_regex()
 TRANSLATION_DICT = _generate_translation_dict()
 
 
-class Lemma():
-    _keys = ["lemma", "previous", "next", "sort_key", "redirect", "proof_read", "wp_link", "ws_link", "wd_link",
-             "chapters"]
-
+class Lemma:
     def __init__(self,
                  lemma_dict: LemmaDict,
                  volume: Volume,
@@ -183,14 +180,13 @@ class Lemma():
     @property
     def lemma_dict(self) -> LemmaDict:
         return_dict: LemmaDict = {}
-        for property_key in self._keys:
-            if property_key in self.keys():
-                if property_key == "chapters":
-                    value = self._get_chapter_dicts()
-                else:
-                    value = self._lemma_dict[property_key]  # type: ignore # TypedDict only works with string literals
-                if value:
-                    return_dict[property_key] = value  # type: ignore # TypedDict only works with string literals
+        for property_key in self.keys():
+            if property_key == "chapters":
+                value = self._get_chapter_dicts()
+            else:
+                value = self._lemma_dict[property_key]  # type: ignore # TypedDict only works with string literals
+            if value:
+                return_dict[property_key] = value  # type: ignore # TypedDict only works with string literals
         return return_dict
 
     def _get_chapter_dicts(self) -> List[ChapterDict]:

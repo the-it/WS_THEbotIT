@@ -188,6 +188,7 @@ text.
 |SORTIERUNG=Aal
 |VERWEIS=ON
 |KORREKTURSTAND=korrigiert
+|KURZTEXT=Short Description
 }}
 text.
 {{REAutor|OFF}}"""
@@ -202,6 +203,7 @@ text.
             compare(True, post_lemma.lemma_dict["redirect"])
             compare("Lemma Previous", post_lemma.lemma_dict["previous"])
             compare("Lemma Next", post_lemma.lemma_dict["next"])
+            compare("Short Description", post_lemma.lemma_dict["short_description"])
 
     def test_fetch_from_properties_self_append(self):
         with LogCapture():
