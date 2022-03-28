@@ -51,3 +51,37 @@ class Register(ABC):
                 elif proof_read == 1:
                     unk += 1
         return fer, kor, unk
+
+class FilteredRegister(Register):
+    def _get_table(self) -> str:
+        header = """{|class="wikitable sortable"
+!Artikel
+!Kurztext
+!Band
+!Status
+!Wikilinks
+!Seite
+!Autor
+!Sterbejahr"""
+        table = [header]
+        for lemmas in self.squash_lemmas(self._lemmas):
+            chapter_sum = 0
+            table_rows = []
+            lemma = None
+            for lemma in lemmas:
+                # if there are no chapters ... one line must be added no madder what
+                chapter_sum += max(len(lemma.chapters), 1)
+                table_rows.append(lemma.get_table_row(print_volume=True))
+            # strip |-/n form the first line it is later replaced by the lemma line
+            table_rows[0] = table_rows[0][3:]
+            # take generell information from first template (no supplement)
+            lemma = lemmas[0]
+            multi_chapter = ""
+            if chapter_sum > 1:
+                multi_chapter = f"rowspan={chapter_sum}"
+            table.append(f"|-\n|" +
+                         f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip() +
+                         f"\n|{multi_chapter}|{lemma.short_description}")
+            table += table_rows
+        table.append("|}")
+        return "\n".join(table)

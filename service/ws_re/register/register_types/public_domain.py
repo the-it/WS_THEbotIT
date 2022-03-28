@@ -1,13 +1,13 @@
 from typing import Dict, List
 
-from service.ws_re.register._base import Register
+from service.ws_re.register._base import FilteredRegister
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
-class PublicDomainRegister(Register):
+class PublicDomainRegister(FilteredRegister):
     def __init__(self,
                  year: int,
                  authors: Authors,
@@ -55,34 +55,6 @@ class PublicDomainRegister(Register):
                     if author in authors_of_lemma:
                         return True
         return False
-
-    def _get_table(self) -> str:
-        header = """{|class="wikitable sortable"
-!Artikel
-!Band
-!Status
-!Wikilinks
-!Seite
-!Autor
-!Sterbejahr"""
-        table = [header]
-        for lemmas in self.squash_lemmas(self._lemmas):
-            chapter_sum = 0
-            table_rows = []
-            lemma = None
-            for lemma in lemmas:
-                # if there are no chapters ... one line must be added no madder what
-                chapter_sum += max(len(lemma.chapters), 1)
-                table_rows.append(lemma.get_table_row(print_volume=True))
-            # strip |-/n form the first line it is later replaced by the lemma line
-            table_rows[0] = table_rows[0][3:]
-            if chapter_sum > 1:
-                table.append(f"|-\n|rowspan={chapter_sum} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}")
-            else:
-                table.append(f"|-\n|data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}")
-            table += table_rows
-        table.append("|}")
-        return "\n".join(table)
 
     def get_register_str(self) -> str:
         return f"{self._get_table()}\n[[Kategorie:RE:Register|!]]"

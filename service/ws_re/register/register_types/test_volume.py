@@ -54,6 +54,7 @@ class TestRegister(BaseTestRegister):
 
 {|class="wikitable sortable"
 !Artikel
+!Kurztext
 !Status
 !Wikilinks
 !Seite
@@ -61,6 +62,7 @@ class TestRegister(BaseTestRegister):
 !Sterbejahr
 |-
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
+||Ein Fisch
 |style="background:#669966"|FER
 ||
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
@@ -68,6 +70,7 @@ class TestRegister(BaseTestRegister):
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
+||
 |style="background:#556B2F"|KOR
 ||
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]
@@ -89,6 +92,7 @@ Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,
     "lemma": "Aal",
     "next": "Aarassos",
     "proof_read": 3,
+    "short_description": "Ein Fisch",
     "chapters": [
       {
         "start": 1,

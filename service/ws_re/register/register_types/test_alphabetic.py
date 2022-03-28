@@ -105,6 +105,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 
 {|class="wikitable sortable"
 !Artikel
+!Kurztext
 !Band
 !Status
 !Wikilinks
@@ -113,6 +114,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 !Sterbejahr
 |-
 |rowspan=3 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
+|rowspan=3|This is Beta
 |rowspan=2 |I,1
 |rowspan=2 style="background:#669966"|FER
 |rowspan=2 |
@@ -129,6 +131,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
+||
 ||III,1
 |style="background:#669966"|FER
 ||
@@ -137,6 +140,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |style="background:#FFCBCB"|1998
 |-
 |data-sort-value="delta"|[[RE:Delta|'''{{Anker2|Delta}}''']]
+||
 ||III,1
 |style="background:#556B2F"|KOR
 ||
@@ -145,6 +149,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |style="background:#B9FFC5"|1927
 |-
 |data-sort-value="uaaa"|[[RE:Vaaa|'''{{Anker2|Vaaa}}''']]
+||
 ||III,1
 |style="background:#669966"|FER
 ||
@@ -153,6 +158,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |style="background:#B9FFC5"|1927
 |-
 |data-sort-value="ueee"|[[RE:Ueee|'''{{Anker2|Ueee}}''']]
+||
 ||III,1
 |style="background:#AA0000"|UNK
 ||
