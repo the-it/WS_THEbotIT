@@ -166,7 +166,117 @@ plinius_5:
     {{#lst:RE:Plinius 5/VII}}
     {{#lst:RE:Plinius 5/VIII}}
   expect:
-    - { }
+    - "chapters":
+        - { "start": 271, "end": 439}
+    - [ ]
+
+herakles_1:
+  text: |
+    {{REDaten
+    |BAND=VIII,1
+    |SPALTE_START=516
+    |SPALTE_END=528
+    |VORGÄNGER=Ἡρακλέους λιμήν
+    |NACHFOLGER=Heraklianos
+    |SORTIERUNG=
+    |KORREKTURSTAND=
+    |WIKIPEDIA=Herakles
+    |WIKISOURCE=Herakles
+    |EXTSCAN_START={{REIA|VIII,1|515}}
+    |EXTSCAN_END={{REIA|VIII,1|527}}
+    |GND=118639552
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=1959
+    |GEBURTSJAHR=
+    |NACHTRAG=OFF
+    |ÜBERSCHRIFT=OFF
+    |VERWEIS=OFF
+    }}
+    {{Center|'''<big>Herakles.</big>'''}}
+    __TOC__
+    {{#lst:RE:Herakles/I}}
+    {{#lst:RE:Herakles/II}}
+    {{REAutor|Zwicker.}}
+    {{REDaten
+    |BAND=S III
+    |SPALTE_START=910
+    |SPALTE_END=1121
+    |VORGÄNGER=Herakleon 7
+    |NACHFOLGER=Herapel
+    |SORTIERUNG=
+    |KORREKTURSTAND=korrigiert
+    |WIKIPEDIA=
+    |WIKISOURCE=
+    |EXTSCAN_START={{REIA|S III|909}}
+    |EXTSCAN_END={{REIA|S III|1121}}
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    |NACHTRAG=ON
+    |ÜBERSCHRIFT=ON
+    |VERWEIS=OFF
+    }}
+    S. 516 zum Art. '''Herakles:'''
+
+    Über [[#I|I. die Namensformen]] und [[#II|II. die Etymologie von H.]] hat o. Bd. VIII S. 516ff. {{SperrSchrift|Zwicker}} gehandelt. Nachstehend wird der Rest in folgender Anordnung gegeben: [[#III|III. Örtliche Verbreitung der H.-Kulte und -Sagen.]] – [[#IV|IV. Kultnamen.]] – [[#V|V. Feste und Kultgebräuche.]] – [[#VI|VI. Das Wesen und die Bedeutung des H. im Kult.]] – [[#VII|VII. Sagen. – VIII. Frauen, Geliebte und Kinder.]] – [[#IX|IX. Beziehungen zu Gottheiten.]] – [[#X|X. Gleichsetzung mit andern Heroen oder Gottheiten und Unterscheidung mehrerer H.]] – [[#XI|XI. Kunstdarstellungen.]] – [[#XII|XII. Schlußbetrachtung über die Entwicklung der H.-Vorstellung.]]
+
+    {{#lst:RE:Herakles/III}}
+    {{#lst:RE:Herakles/IV}}
+    {{#lst:RE:Herakles/V}}
+    {{#lst:RE:Herakles/VI}}
+    {{#lst:RE:Herakles/VII}}
+    {{#lst:RE:Herakles/VIII}}
+    {{#lst:RE:Herakles/IX}}
+    {{#lst:RE:Herakles/X}}
+    {{#lst:RE:Herakles/XI}}
+    {{#lst:RE:Herakles/XII}}
+    {{REAutor|Gruppe.}}
+  expect:
+    - "chapters":
+        - { "start": 516, "end": 528, "author": "Zwicker." }
+    - [ ]
+
+herakles_2:
+  text: |
+    {{REDaten
+    |BAND=S III
+    |SPALTE_START=910
+    |SPALTE_END=1121
+    |VORGÄNGER=Herakleon 7
+    |NACHFOLGER=Herapel
+    |SORTIERUNG=
+    |KORREKTURSTAND=korrigiert
+    |WIKIPEDIA=
+    |WIKISOURCE=
+    |EXTSCAN_START={{REIA|S III|909}}
+    |EXTSCAN_END={{REIA|S III|1121}}
+    |GND=
+    |KEINE_SCHÖPFUNGSHÖHE=OFF
+    |TODESJAHR=
+    |GEBURTSJAHR=
+    |NACHTRAG=ON
+    |ÜBERSCHRIFT=ON
+    |VERWEIS=OFF
+    }}
+    S. 516 zum Art. '''Herakles:'''
+
+    Über [[#I|I. die Namensformen]] und [[#II|II. die Etymologie von H.]] hat o. Bd. VIII S. 516ff. {{SperrSchrift|Zwicker}} gehandelt. Nachstehend wird der Rest in folgender Anordnung gegeben: [[#III|III. Örtliche Verbreitung der H.-Kulte und -Sagen.]] – [[#IV|IV. Kultnamen.]] – [[#V|V. Feste und Kultgebräuche.]] – [[#VI|VI. Das Wesen und die Bedeutung des H. im Kult.]] – [[#VII|VII. Sagen. – VIII. Frauen, Geliebte und Kinder.]] – [[#IX|IX. Beziehungen zu Gottheiten.]] – [[#X|X. Gleichsetzung mit andern Heroen oder Gottheiten und Unterscheidung mehrerer H.]] – [[#XI|XI. Kunstdarstellungen.]] – [[#XII|XII. Schlußbetrachtung über die Entwicklung der H.-Vorstellung.]]
+
+    {{#lst:RE:Herakles/III}}
+    {{#lst:RE:Herakles/IV}}
+    {{#lst:RE:Herakles/V}}
+    {{#lst:RE:Herakles/VI}}
+    {{#lst:RE:Herakles/VII}}
+    {{#lst:RE:Herakles/VIII}}
+    {{#lst:RE:Herakles/IX}}
+    {{#lst:RE:Herakles/X}}
+    {{#lst:RE:Herakles/XI}}
+    {{#lst:RE:Herakles/XII}}
+    {{REAutor|Gruppe.}}
+  expect:
+    - "chapters":
+        - { "start": 910, "end": 1121, "author": "Gruppe." }
     - [ ]
 
 umbri_umbria:

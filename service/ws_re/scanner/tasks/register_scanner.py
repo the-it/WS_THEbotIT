@@ -153,14 +153,14 @@ class SCANTask(ReScannerTask):
     def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         # if there is something outside an article ignore it
         article_list = [article for article in article_list if isinstance(article, Article)]
-        if self.re_page.complex_construction:
-            self.logger.error(f"The construct of {self.re_page.lemma_as_link} "
-                              f"is too complex, can't analyse.")
-            return {}, []
         if len(article_list) == 1:
             chapter_dict = self._analyse_simple_article_list(article_list)
             if chapter_dict:
                 return {"chapters": [chapter_dict]}, []
+            return {}, []
+        if self.re_page.complex_construction:
+            self.logger.error(f"The construct of {self.re_page.lemma_as_link} "
+                              f"is too complex, can't analyse.")
             return {}, []
         return {"chapters": self._analyse_complex_article_list(article_list)}, []
 

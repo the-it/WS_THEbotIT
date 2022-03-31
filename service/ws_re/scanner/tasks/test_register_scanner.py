@@ -1,5 +1,5 @@
 # pylint: disable=protected-access
-from unittest import mock, skip
+from unittest import mock
 
 import pywikibot
 from ddt import file_data, ddt
@@ -14,6 +14,7 @@ from service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from service.ws_re.template.re_page import RePage
+from tools.test import real_wiki_test
 
 
 class TaskTestWithRegister(TaskTestCase):
@@ -258,7 +259,7 @@ text.
                                          StringComparison("No available Lemma in Registers for issue I,1 "
                                                           ".* Reason is:.*")))
 
-    @skip("I must mock this. For now I use this test in development.")
+    @real_wiki_test
     def test_get_wd_sitelink(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Demetrios 79"))
