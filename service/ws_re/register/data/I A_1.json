@@ -2344,7 +2344,8 @@
         "end": 232,
         "author": "Beer."
       }
-    ]
+    ],
+    "short_description": "Stadt d. syr. Provinz Cassiotis"
   },
   {
     "lemma": "Raphana 2",
@@ -2359,7 +2360,8 @@
         "end": 232,
         "author": "Beer."
       }
-    ]
+    ],
+    "short_description": "Zur Dekapolis gerechneter Ort"
   },
   {
     "lemma": "Ῥαφανίδωσις",
@@ -2373,7 +2375,8 @@
         "end": 232,
         "author": "Thalheim."
       }
-    ]
+    ],
+    "short_description": "Raphanidosis"
   },
   {
     "lemma": "Raphia",
@@ -2418,7 +2421,8 @@
         "end": 234,
         "author": "Kleinfeller."
       }
-    ]
+    ],
+    "short_description": "Raub"
   },
   {
     "lemma": "Rapinium",
@@ -6846,7 +6850,8 @@
         "end": 686,
         "author": "Nagl."
       }
-    ]
+    ],
+    "short_description": "Christin aus Karthago"
   },
   {
     "lemma": "Restutus",
@@ -9412,7 +9417,8 @@
         "end": 956,
         "author": "Bürchner."
       }
-    ]
+    ],
+    "short_description": "s. Rhodos"
   },
   {
     "lemma": "Ῥοδίων περαία",
@@ -13565,12 +13571,12 @@
         "end": 1185,
         "author": "Seeck."
       }
-    ]
+    ],
+    "short_description": "L. Aradius Paternus"
   },
   {
     "lemma": "Rufini taberna",
     "previous": "Rufinianus 4",
-    "next": "Ῥουφίνου",
     "sort_key": "Rufinitaberna",
     "proof_read": 2,
     "chapters": [
@@ -13579,7 +13585,22 @@
         "end": 1185,
         "author": "Keune."
       }
-    ]
+    ],
+    "next": "Ῥουφίνου"
+  },
+  {
+    "lemma": "Ῥουφίνου",
+    "next": "Rufinus 1",
+    "chapters": [
+      {
+        "start": 1185,
+        "end": 1185,
+        "author": "Bürchner."
+      }
+    ],
+    "proof_read": 3,
+    "redirect": "Rufinianae 2",
+    "sort_key": "Rufinu"
   },
   {
     "lemma": "Rufinus 1",
@@ -13592,7 +13613,8 @@
         "end": 1185,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "Kommandant in Gallien, am Aufstand des (C. Iulius) Vindex 68 n. Chr."
   },
   {
     "lemma": "Rufinus 2",
@@ -13605,7 +13627,8 @@
         "end": 1185,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "Person bei Martial III 31"
   },
   {
     "lemma": "Rufinus 3",
@@ -13618,7 +13641,8 @@
         "end": 1185,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "aus Zypern Vom Kyniker Demonax verspottet"
   },
   {
     "lemma": "Rufinus 4",
@@ -13660,7 +13684,7 @@
   {
     "lemma": "Ῥουφινιαναί, αἱ",
     "previous": "Rufinianae 2",
-    "next": "Rufinianus 1",
+    "next": "Ruphinu",
     "sort_key": "Rufinianai hai",
     "redirect": true,
     "proof_read": 3,
@@ -13696,7 +13720,8 @@
         "end": 1186,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "Lib(eralis?)"
   },
   {
     "lemma": "Rufinus 8",
@@ -14104,7 +14129,8 @@
         "end": 1198,
         "author": "Stech."
       }
-    ]
+    ],
+    "short_description": "infans"
   },
   {
     "lemma": "Rufio 1",
@@ -14290,7 +14316,8 @@
         "end": 1199,
         "author": "Seeck."
       }
-    ]
+    ],
+    "short_description": "Marcellinus"
   },
   {
     "lemma": "Rufius 12",
@@ -14394,7 +14421,8 @@
         "end": 1199,
         "author": "Stech."
       }
-    ]
+    ],
+    "short_description": "Apronianus Asterius, Turcius cos. im J. 494 s. Artikel Asterius Nr.  10"
   },
   {
     "lemma": "Rufius 19",
@@ -14433,7 +14461,8 @@
         "end": 1200,
         "author": "Stech."
       }
-    ]
+    ],
+    "short_description": "Placidus, (Flavius) cos. im J. 481, s. Placidus"
   },
   {
     "lemma": "Rufius 22",
@@ -14446,7 +14475,8 @@
         "end": 1200,
         "author": "Nagl."
       }
-    ]
+    ],
+    "short_description": "Rufia Aquilina"
   },
   {
     "lemma": "Rufius 23",
@@ -14459,7 +14489,8 @@
         "end": 1200,
         "author": "Nagl."
       }
-    ]
+    ],
+    "short_description": "Rufia Marcella"
   },
   {
     "lemma": "Rufius 24",
@@ -14472,7 +14503,8 @@
         "end": 1200,
         "author": "Nagl."
       }
-    ]
+    ],
+    "short_description": "Rufia Procula"
   },
   {
     "lemma": "Rufrae",
@@ -14519,7 +14551,8 @@
         "end": 1201,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "Claudius"
   },
   {
     "lemma": "Rufrium",
@@ -15813,7 +15846,8 @@
         "end": 1239,
         "author": "Stech."
       }
-    ]
+    ],
+    "short_description": "Person bei Ennodius"
   },
   {
     "lemma": "Rusticelius 1",
@@ -15826,7 +15860,8 @@
         "end": 1239,
         "author": "Münzer."
       }
-    ]
+    ],
+    "short_description": "Gen. Hercules, Person bei Plin. nat."
   },
   {
     "lemma": "Rusticelius 2",
@@ -15839,7 +15874,8 @@
         "end": 1239,
         "author": "Münzer."
       }
-    ]
+    ],
+    "short_description": "C. Aus Bononia, Redner"
   },
   {
     "lemma": "Rusticelius 3",
@@ -15852,7 +15888,8 @@
         "end": 1240,
         "author": "Lippold."
       }
-    ]
+    ],
+    "short_description": "Felix, C. Aus Africa, Verfertiger v. Sigillaria"
   },
   {
     "lemma": "Rustici",
@@ -15892,7 +15929,8 @@
         "end": 1240,
         "author": "Schulten."
       }
-    ]
+    ],
+    "short_description": "Stadt d. Vettones in Lusitanien"
   },
   {
     "lemma": "Rusticianus 1",
@@ -15918,7 +15956,8 @@
         "end": 1240,
         "author": "Seeck."
       }
-    ]
+    ],
+    "short_description": "Manlius Praef. praet. d. Maxentius"
   },
   {
     "lemma": "Rusticianus 3",
@@ -15931,7 +15970,8 @@
         "end": 1240,
         "author": "Seeck."
       }
-    ]
+    ],
+    "short_description": "Sacerdotalis d. Provinz Tripolis"
   },
   {
     "lemma": "Rusticius 1",
@@ -16052,7 +16092,8 @@
         "end": 1241,
         "author": "Stech."
       }
-    ]
+    ],
+    "short_description": "Mailänder, Person bei Ennodius"
   },
   {
     "lemma": "Rusticus 1",
@@ -16065,7 +16106,8 @@
         "end": 1241,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "An ihn schreibt Plin. ep. IX 29"
   },
   {
     "lemma": "Rusticus 2",
@@ -16078,7 +16120,8 @@
         "end": 1241,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "Person bei Martial. VIII 23,2"
   },
   {
     "lemma": "Rusticus 3",
@@ -16091,7 +16134,8 @@
         "end": 1241,
         "author": "Stein."
       }
-    ]
+    ],
+    "short_description": "Ein vermögender Mann, von dessen Gütern ein Teil für das Ärar in Anspruch"
   },
   {
     "lemma": "Rusticus 4",
