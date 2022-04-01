@@ -51,11 +51,13 @@ class TestKURZTaskProcessSource(TaskTestCase):
         union_dict = task._load_short_descriptions()
         compare(union_dict["aachen"], "deutsche Stadt = Aquae")
         compare(union_dict["zaa"], "Volk Aithiopiens")
-        compare(4, len(union_dict))
+        compare(5, len(union_dict))
 
     def test_load_short_descriptions_from_text(self):
         short_text_lookup = KURZTask._parse_short_description(TEXT_A)
-        compare(short_text_lookup, {"aachen": "deutsche Stadt = Aquae", "aal": "Zoologisch"})
+        compare(short_text_lookup, {"aachen": "deutsche Stadt = Aquae",
+                                    "aal": "Zoologisch",
+                                    "achaion akte": "Fancy greek stuff"})
 
     def test_add_short_description_to_lemma(self):
         self.text_mock.return_value = """{{REDaten}}
