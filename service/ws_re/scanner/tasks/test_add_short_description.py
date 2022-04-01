@@ -17,6 +17,8 @@ TEXT_A = """{|class="wikitable"
 |[[RE:Aal]]||Zoologisch
 |-
 |[[RE:No real description]]||(-)
+|-
+|[[RE:Ἀχαιῶν ἀκτή]]||Fancy greek stuff
 |}"""
 
 TEXT_Z = """
@@ -47,13 +49,13 @@ class TestKURZTaskProcessSource(TaskTestCase):
         task = KURZTask(None, self.logger)
         self.page_fetcher_mock.side_effect = [TEXT_A, TEXT_Z]
         union_dict = task._load_short_descriptions()
-        compare(union_dict["Aachen"], "deutsche Stadt = Aquae")
-        compare(union_dict["Zaa"], "Volk Aithiopiens")
+        compare(union_dict["aachen"], "deutsche Stadt = Aquae")
+        compare(union_dict["zaa"], "Volk Aithiopiens")
         compare(4, len(union_dict))
 
     def test_load_short_descriptions_from_text(self):
         short_text_lookup = KURZTask._parse_short_description(TEXT_A)
-        compare(short_text_lookup, {"Aachen": "deutsche Stadt = Aquae", "Aal": "Zoologisch"})
+        compare(short_text_lookup, {"aachen": "deutsche Stadt = Aquae", "aal": "Zoologisch"})
 
     def test_add_short_description_to_lemma(self):
         self.text_mock.return_value = """{{REDaten}}
@@ -64,6 +66,17 @@ text
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
         compare("deutsche Stadt = Aquae", re_page.first_article["KURZTEXT"].value)
+        compare("text\n[[Kategorie:RE:Kurztext überprüfen]]", re_page.first_article.text)
+
+    def test_add_short_description_to_lemma_sort_key(self):
+        self.text_mock.return_value = """{{REDaten}}
+text
+{{REAutor|Autor.}}"""
+        self.title_mock.return_value = "Re:Ἀχαιῶν akte"
+        re_page = RePage(self.page_mock)
+        task = KURZTask(None, self.logger)
+        compare({"success": True, "changed": True}, task.run(re_page))
+        compare("Fancy greek stuff", re_page.first_article["KURZTEXT"].value)
         compare("text\n[[Kategorie:RE:Kurztext überprüfen]]", re_page.first_article.text)
 
     def test_existing_short_description_to_lemma(self):
