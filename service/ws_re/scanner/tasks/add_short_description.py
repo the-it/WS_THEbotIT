@@ -3,6 +3,7 @@ from typing import Dict
 
 import pywikibot
 
+from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.registers import RE_ALPHABET
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from tools.bots.pi import WikiLogger
@@ -42,7 +43,7 @@ class KURZTask(ReScannerTask):
             # don't process if there is an invalid description
             if match:
                 if match.group(2) != "(-)":
-                    new_lookup_dict[match.group(1)] = match.group(2)
+                    new_lookup_dict[Lemma.make_sort_key(match.group(1))] = match.group(2)
         return new_lookup_dict
 
     def task(self):
@@ -56,7 +57,8 @@ class KURZTask(ReScannerTask):
         if article["KURZTEXT"].value:
             return
         try:
-            article["KURZTEXT"].value = self.short_description_lookup[self.re_page.lemma_without_prefix]
+            article["KURZTEXT"].value = \
+                self.short_description_lookup[Lemma.make_sort_key(self.re_page.lemma_without_prefix)]
             self.re_page.first_article.text += f"\n{self.MAINTENANCE_CAT}"
         except KeyError:
             pass
