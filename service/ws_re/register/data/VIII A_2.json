@@ -673,7 +673,7 @@
   {
     "lemma": "Verimodus",
     "previous": "Veridica",
-    "next": "Verina Augusta, Aelia",
+    "next": "Verina",
     "chapters": [
       {
         "start": 1546,
@@ -682,19 +682,23 @@
     ]
   },
   {
-    "lemma": "Verina Augusta, Aelia",
-    "previous": "Verimodus",
+    "lemma": "Verina",
     "next": "Verinianus 1",
     "chapters": [
       {
         "start": 1546,
-        "author": "Enßlin"
+        "end": 1548,
+        "author": "Wilh. Enßlin."
       }
-    ]
+    ],
+    "previous": "Verimodus",
+    "sort_key": "Verina 1",
+    "wd_link": "d:Q258150",
+    "wp_link": "w:de:Verina"
   },
   {
     "lemma": "Verinianus 1",
-    "previous": "Verina Augusta, Aelia",
+    "previous": "Verina",
     "next": "Verinianus 2",
     "chapters": [
       {
@@ -4824,7 +4828,8 @@
         "end": 1950,
         "author": "H. Gundel."
       }
-    ]
+    ],
+    "short_description": "L., Zeitgenosse des Verres"
   },
   {
     "lemma": "Vibius 6",
@@ -4848,7 +4853,8 @@
         "end": 1950,
         "author": "H. Gundel."
       }
-    ]
+    ],
+    "short_description": "T., Freund des D. Brutus"
   },
   {
     "lemma": "Vibius 8",
@@ -4962,7 +4968,8 @@
         "end": 1953,
         "author": "H. Gundel."
       }
-    ]
+    ],
+    "short_description": "Pansae, bekanntester Zweig der Vibii"
   },
   {
     "lemma": "Vibius 15a",
@@ -5024,7 +5031,8 @@
         "end": 1966,
         "author": "H. Gundel."
       }
-    ]
+    ],
+    "short_description": "Temudinus, T. Quaestor urbanus"
   },
   {
     "lemma": "Vibius 20",
