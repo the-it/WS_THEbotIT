@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from abc import ABC
-from typing import Tuple, List, Dict, Optional
+from typing import Tuple, List, Callable, Mapping
 
 from service.ws_re.register.lemma import Lemma
 
@@ -9,9 +9,9 @@ from service.ws_re.register.lemma import Lemma
 class Register(ABC):
     def __init__(self):
         self._lemmas: List[Lemma] = []
-        self._registers: Optional[Dict[str, Register]] = None
+        self._registers: Mapping = None
 
-    def _init_lemmas(self, check_function):
+    def _init_lemmas(self, check_function: Callable):
         lemmas = []
         for volume_str in self._registers:
             for lemma in self._registers[volume_str].lemmas:
@@ -39,7 +39,7 @@ class Register(ABC):
             return_lemmas.append(last_lemmas)
         return return_lemmas
 
-    def _get_table(self, print_volume: bool=True) -> str:
+    def _get_table(self, print_volume: bool = True) -> str:
         header = f"""{{|class="wikitable sortable"
 !Artikel
 !Kurztext

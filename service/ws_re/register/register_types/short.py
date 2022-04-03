@@ -20,6 +20,7 @@ class ShortRegister(Register):
     def __len__(self):
         return len(self._lemmas)
 
+    # pylint: disable=arguments-differ
     def _init_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
