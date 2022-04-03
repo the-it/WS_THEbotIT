@@ -71,13 +71,8 @@ class VolumeRegister(Register):
         header.append(f"FER={fer}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
-    def _get_footer(self) -> str:
-        return f"[[Kategorie:RE:Register|!]]\nZahl der Artikel: {len(self._lemmas)}, " \
-               f"davon [[:Kategorie:RE:Band {self._volume.name}" \
-               f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
-
     def get_register_str(self) -> str:
-        return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"
+        return f"{self._get_header()}\n{self._get_table()}\n[[Kategorie:RE:Register|!]]"
 
     def persist(self):
         persist_list = []

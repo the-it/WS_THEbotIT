@@ -77,8 +77,7 @@ class TestRegister(BaseTestRegister):
 |Abert
 |style="background:#B9FFC5"|1927
 |}
-[[Kategorie:RE:Register|!]]
-Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
+[[Kategorie:RE:Register|!]]"""
         compare(expected_table, register.get_register_str())
 
     def test_persist(self):
