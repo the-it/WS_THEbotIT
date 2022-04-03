@@ -64,7 +64,7 @@ class TestAuthorRegister(BaseTestRegister):
 |-
 |rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=2|This is Beta
-|rowspan=2 |I,1
+|rowspan=2|I,1
 |rowspan=2 style="background:#669966"|FER
 |rowspan=2 |
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]

@@ -55,6 +55,7 @@ class TestRegister(BaseTestRegister):
 {|class="wikitable sortable"
 !Artikel
 !Kurztext
+
 !Status
 !Wikilinks
 !Seite

@@ -212,18 +212,11 @@ class Lemma:
         row_string = ["|-"]
         interwiki_links, interwiki_sort_key = self.get_wiki_links()
         proof_color, proof_state = self.get_proofread()
-        if print_volume:
-            link_or_volume = self.volume.name
-            sort_value = ""
-        else:
-            link_or_volume = self.get_link()
-            sort_value = f"data-sort-value=\"{self.sort_key}\""
         multi_row = ""
         if len(self._chapters) > 1:
             multi_row = f"rowspan={len(self._chapters)}"
-        row_string.append(f"{multi_row} {sort_value}|{link_or_volume}".strip())
-        if not print_volume:
-            row_string.append(f"{multi_row}|{self.short_description}")
+        if print_volume:
+            row_string.append(f"{multi_row}|{self.volume.name}".strip())
         row_string.append(f"{multi_row} style=\"background:{proof_color}\"|{proof_state}".strip())
         row_string.append(f"{multi_row} {interwiki_sort_key}|{interwiki_links}".strip())
         for chapter in self._chapters:

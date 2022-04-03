@@ -3,16 +3,17 @@ from typing import Dict, List
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
-from service.ws_re.register.register_types._filtered_register import FilteredRegister
+from service.ws_re.register.register_types._base import Register
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
-class PublicDomainRegister(FilteredRegister):
+class PublicDomainRegister(Register):
     def __init__(self,
                  year: int,
                  authors: Authors,
                  registers: Dict[str, VolumeRegister]):
-        super().__init__(registers)
+        super().__init__()
+        self._registers = registers
         self.year: int = year
         self._authors: Authors = authors
         self._pd_authors: List[Author] = self._get_pd_authors()
