@@ -1543,7 +1543,8 @@
         "end": 24,
         "author": "Max Fluss."
       }
-    ]
+    ],
+    "short_description": "Illyr. Volk"
   },
   {
     "lemma": "Cincius 9",
@@ -2357,7 +2358,6 @@
   {
     "lemma": "Ira 4",
     "previous": "Ionnaria",
-    "next": "Isamnus",
     "proof_read": 3,
     "chapters": [
       {
@@ -2378,11 +2378,13 @@
         "end": 137,
         "author": "Fluss."
       }
-    ]
+    ],
+    "next": "Iulianum",
+    "previous": "Istros 1a",
+    "short_description": "Iulia, Tochter des Kaisers Titus und der Marcia Nr. 126) Furnilla"
   },
   {
     "lemma": "Isamnus",
-    "previous": "Ira 4",
     "next": "Istris",
     "proof_read": 3,
     "chapters": [
@@ -2411,7 +2413,6 @@
   {
     "lemma": "Istros 1a",
     "previous": "Istris",
-    "next": "Iulius 552a",
     "proof_read": 2,
     "chapters": [
       {
@@ -2433,7 +2434,9 @@
         "end": 137,
         "author": "Fluss."
       }
-    ]
+    ],
+    "previous": "Iulius 552a",
+    "short_description": "Illyr. Straßenstation"
   },
   {
     "lemma": "Iunius 183a",
