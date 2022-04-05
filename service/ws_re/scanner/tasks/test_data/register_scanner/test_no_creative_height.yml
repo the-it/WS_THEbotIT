@@ -1,0 +1,35 @@
+no_creative_height_found:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |KSCH=ON
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - no_creative_height: True
+    - []
+
+no_no_creative_height:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |KSCH=
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["no_creative_height"]
+
+no_creative_height_off:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |KSCH=OFF
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - {}
+    - ["no_creative_height"]

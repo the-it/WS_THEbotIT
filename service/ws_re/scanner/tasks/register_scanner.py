@@ -150,6 +150,14 @@ class SCANTask(ReScannerTask):
             return {"short_description": short_description}, []
         return {}, ["short_description"]
 
+    @staticmethod
+    def _fetch_no_creative_height(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list[0]
+        no_creative_height = bool(article["KEINE_SCHÖPFUNGSHÖHE"].value)
+        if no_creative_height:
+            return {"no_creative_height": no_creative_height}, []
+        return {}, ["no_creative_height"]
+
     def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         # if there is something outside an article ignore it
         article_list = [article for article in article_list if isinstance(article, Article)]
