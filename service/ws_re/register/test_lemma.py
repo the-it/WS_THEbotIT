@@ -164,6 +164,10 @@ class TestLemma(BaseTestRegister):
         compare("", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2})))
 
+    def test_get_lemma_status(self):
+        lemma = Lemma(self.basic_dict, Volumes()["I,1"], self.authors)
+        compare(("????", "#FFCBCB"), lemma._get_lemma_status())
+
     def test_year_format(self):
         year_free_content = datetime.now().year - 71
         compare("style=\"background:#B9FFC5\"", Lemma._get_year_format(str(year_free_content)))
@@ -213,7 +217,7 @@ class TestLemma(BaseTestRegister):
 |rowspan=2 data-sort-value="w:en:lemm"|[[w:en:Lemm|Lemm<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
-|style="background:#FFCBCB"|1998
+|rowspan=2 style="background:#FFCBCB"|1998
 |-
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
 |William Abbott

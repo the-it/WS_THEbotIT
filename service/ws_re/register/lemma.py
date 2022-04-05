@@ -5,6 +5,7 @@ import unicodedata
 from datetime import datetime
 from typing import List, Tuple, KeysView, Optional, Literal, Pattern
 
+from service.ws_re import public_domain
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
 from service.ws_re.register.authors import Authors
@@ -210,15 +211,12 @@ class Lemma:
 
     def get_table_row(self, print_volume: bool = False) -> str:
         row_string = ["|-"]
-        interwiki_links, interwiki_sort_key = self.get_wiki_links()
         proof_color, proof_state = self.get_proofread()
         multi_row = ""
         if len(self._chapters) > 1:
             multi_row = f"rowspan={len(self._chapters)}"
         if print_volume:
             row_string.append(f"{multi_row}|{self.volume.name}".strip())
-        row_string.append(f"{multi_row} style=\"background:{proof_color}\"|{proof_state}".strip())
-        row_string.append(f"{multi_row} {interwiki_sort_key}|{interwiki_links}".strip())
         for chapter in self._chapters:
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))
@@ -324,6 +322,14 @@ class Lemma:
                 year = "????"
         return year
 
+    def _get_lemma_status(self) -> Tuple[str, str]:
+        unkorrigiert = "#AA0000"
+        fertig = "#669966"
+        korrigiert = "#556B2F"
+        light_red = "#FFCBCB"
+        gray = "#CBCBCB"
+        return "????", light_red
+
     @staticmethod
     def _get_year_format(year: str) -> str:
         green = "style=\"background:#B9FFC5\""
@@ -333,7 +339,7 @@ class Lemma:
             year_format = gray
         else:
             try:
-                content_free_year = datetime.now().year - 71
+                content_free_year = datetime.now().year - public_domain.YEARS_AFTER_DEATH
                 if int(year) <= content_free_year:
                     year_format = green
                 else:
