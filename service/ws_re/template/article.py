@@ -3,6 +3,7 @@ import contextlib
 from datetime import datetime
 from typing import Union, Tuple, Generator, Optional, List
 
+from service.ws_re import public_domain
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
 from service.ws_re.template._typing import KeyValuePair, ArticleProperties
 from service.ws_re.template.property import Property
@@ -104,10 +105,12 @@ class Article(collections.Mapping):
     def common_free(self) -> bool:
         current_year = datetime.now().year
         with contextlib.suppress(ValueError):
-            if self["TODESJAHR"].value and int(self["TODESJAHR"].value) > current_year - 71:
+            if self["TODESJAHR"].value and \
+                    int(self["TODESJAHR"].value) > current_year - public_domain.YEARS_AFTER_DEATH:
                 if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
                     return False
-            if self["GEBURTSJAHR"].value and int(self["GEBURTSJAHR"].value) > current_year - 171:
+            if self["GEBURTSJAHR"].value and int(self["GEBURTSJAHR"].value) > \
+                    current_year - public_domain.YEARS_AFTER_BIRTH:
                 if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
                     return False
         return True

@@ -34,3 +34,16 @@ class TestAuthor(TestCase):
         register_author = Author("Test Name", {"wp_lemma": "Tada_lemma"})
         compare(None, register_author.death)
         compare("Tada_lemma", register_author.wp_lemma)
+
+    def testPublicDomain(self):
+        author = Author("Test Name", {})
+        compare(2100, author.year_public_domain)
+
+        author = Author("Test Name", {"death": 1900})
+        compare(1971, author.year_public_domain)
+
+        author = Author("Test Name", {"birth": 1900})
+        compare(2051, author.year_public_domain)
+
+        author = Author("Test Name", {"death": 1950, "birth": 1900})
+        compare(2021, author.year_public_domain)

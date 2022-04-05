@@ -1,5 +1,6 @@
 from typing import Optional
 
+from service.ws_re import public_domain
 from service.ws_re.register._typing import AuthorDict
 
 
@@ -64,3 +65,11 @@ class Author:
 
     def to_dict(self) -> AuthorDict:
         return self._dict
+
+    @property
+    def year_public_domain(self) -> int:
+        if self.death:
+            return self.death + public_domain.YEARS_AFTER_DEATH
+        if self.birth:
+            return self.birth + public_domain.YEARS_AFTER_BIRTH
+        return 2100

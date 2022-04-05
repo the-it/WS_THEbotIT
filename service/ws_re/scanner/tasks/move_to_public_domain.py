@@ -2,6 +2,7 @@ import datetime
 
 import pywikibot
 
+from service.ws_re import public_domain
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
@@ -13,7 +14,8 @@ class PDKSTask(ReScannerTask):
         super().__init__(wiki, logger, debug)
         self.authors = Authors()
         current_year = datetime.datetime.now().year
-        self.pd_todesjahr, self.pd_geburtsjahr = current_year - 71, current_year - 151
+        self.pd_todesjahr, self.pd_geburtsjahr = \
+            current_year - public_domain.YEARS_AFTER_DEATH, current_year - public_domain.YEARS_AFTER_BIRTH
 
     def task(self):
         for re_article in self.re_page:

@@ -1,5 +1,6 @@
 from typing import Dict, List
 
+from service.ws_re import public_domain
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
@@ -32,10 +33,10 @@ class PublicDomainRegister(Register):
         author_list = []
         for author in self._authors:
             if author.death:
-                if author.death == self.year - 71:
+                if author.death == self.year - public_domain.YEARS_AFTER_DEATH:
                     author_list.append(author)
                 continue
-            if author.birth == self.year - 171:
+            if author.birth == self.year - public_domain.YEARS_AFTER_BIRTH:
                 author_list.append(author)
         return author_list
 
