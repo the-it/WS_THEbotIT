@@ -164,6 +164,27 @@ class TestLemma(BaseTestRegister):
         compare("", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2})))
 
+    def test_get_public_domain_year(self):
+        # one author
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["I,1"], self.authors)
+        compare(2069, re_register_lemma._get_public_domain_year())
+
+        # two authors for one article
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "redirect_list"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["I,1"], self.authors)
+        compare(2069, re_register_lemma._get_public_domain_year())
+
+        # two authors two articles
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                     {"start": 1, "end": 1, "author": "Abert"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["XVI,1"], self.authors)
+        compare(2058, re_register_lemma._get_public_domain_year())
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abert"},
+                                                     {"start": 1, "end": 1, "author": "Abel"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["XVI,1"], self.authors)
+        compare(2058, re_register_lemma._get_public_domain_year())
+
     def test_get_lemma_status(self):
         lemma = Lemma(self.basic_dict, Volumes()["I,1"], self.authors)
         compare(("????", "#FFCBCB"), lemma._get_lemma_status())

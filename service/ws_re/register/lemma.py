@@ -308,18 +308,17 @@ class Lemma:
                 author_str = lemma_chapter.author
         return author_str
 
-    def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
-        year = ""
-        if self._get_author_str(lemma_chapter):
-            mapped_author = None
-            if lemma_chapter.author:
-                mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
-                                                                    self._volume.name)
-            if mapped_author:
-                years = [author.death for author in mapped_author if author.death]
-                year = str(max(years)) if years else ""
-            else:
-                year = "????"
+    def _get_public_domain_year(self) -> int:
+        year = 0
+        for chapter in self.chapters:
+            if self._get_author_str(chapter):
+                mapped_author = None
+                if chapter.author:
+                    mapped_author = self._authors.get_author_by_mapping(chapter.author, self._volume.name)
+                if mapped_author:
+                    years = [author.year_public_domain for author in mapped_author if author.year_public_domain]
+                    if (tmp_max_year:= max(years)) > year:
+                        year = tmp_max_year
         return year
 
     def _get_lemma_status(self) -> Tuple[str, str]:
@@ -328,6 +327,7 @@ class Lemma:
         korrigiert = "#556B2F"
         light_red = "#FFCBCB"
         gray = "#CBCBCB"
+
         return "????", light_red
 
     @staticmethod
