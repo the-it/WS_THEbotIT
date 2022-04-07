@@ -210,35 +210,23 @@ class Lemma:
         return True
 
     def get_table_row(self, print_volume: bool = False) -> str:
-        row_string = ["|-"]
-        proof_color, proof_state = self.get_proofread()
+        row_string = [""]
         multi_row = ""
         if len(self._chapters) > 1:
             multi_row = f"rowspan={len(self._chapters)}"
         if print_volume:
             row_string.append(f"{multi_row}|{self.volume.name}".strip())
-        for chapter in self._chapters:
+        for idx, chapter in enumerate(self._chapters):
             row_string.append(self._get_pages(chapter))
             row_string.append(self._get_author_str(chapter))
-            year = self._get_death_year(chapter)
-            row_string.append(f"{self._get_year_format(year)}|{year}")
+            if idx == 0:
+                status = self._get_lemma_status()
+                row_string.append(f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip())
             row_string.append("-")
         # remove the last entry again because the row separator only needed between rows
         if row_string[-1] == "-":
             row_string.pop(-1)
-        return "\n|".join(row_string)
-
-    def get_proofread(self) -> Tuple[str, str]:
-        color = "#AA0000"
-        status = "UNK"
-        proof_state = self["proof_read"]
-        if proof_state == 3:
-            color = "#669966"
-            status = "FER"
-        elif proof_state == 2:
-            color = "#556B2F"
-            status = "KOR"
-        return color, status
+        return "\n|".join(row_string).strip()
 
     @staticmethod
     def _escape_link_for_templates(link: str) -> str:
@@ -326,27 +314,20 @@ class Lemma:
         fertig = "#669966"
         korrigiert = "#556B2F"
         light_red = "#FFCBCB"
-        gray = "#CBCBCB"
+        # gray = "#CBCBCB"
 
-        return "????", light_red
+        if pd_year:=self._get_public_domain_year():
+            current_year = datetime.now().year
+            if pd_year > current_year:
+                if not self["no_creative_height"]:
+                    return str(pd_year), light_red
 
-    @staticmethod
-    def _get_year_format(year: str) -> str:
-        green = "style=\"background:#B9FFC5\""
-        red = "style=\"background:#FFCBCB\""
-        gray = "style=\"background:#CBCBCB\""
-        if year == "":
-            year_format = gray
-        else:
-            try:
-                content_free_year = datetime.now().year - public_domain.YEARS_AFTER_DEATH
-                if int(year) <= content_free_year:
-                    year_format = green
-                else:
-                    year_format = red
-            except (TypeError, ValueError):
-                year_format = red
-        return year_format
+        if self["proof_read"] == 2:
+            return "KOR", korrigiert
+        if self["proof_read"] == 3:
+            return "FER", fertig
+
+        return "UNK", unkorrigiert
 
     def update_lemma_dict(self, update_dict: LemmaDict, remove_items: List[str] = None):
         for item_key in update_dict:
