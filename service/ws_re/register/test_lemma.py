@@ -1,7 +1,6 @@
 # pylint: disable=no-self-use,protected-access
 import copy
 from collections import OrderedDict
-from datetime import datetime
 
 from testfixtures import compare
 

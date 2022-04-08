@@ -67,7 +67,8 @@ class Register(ABC):
             table.append("".join(("|-\n|",
                                   f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip(),
                                   f"\n|{multi_chapter}|{lemma.short_description}",
-                                  f"\n|{multi_chapter + '' if multi_chapter else ''}{interwiki_sort_key}|{interwiki_links}")))
+                                  f"\n|{multi_chapter + '' if multi_chapter else ''}"
+                                  f"{interwiki_sort_key}|{interwiki_links}")))
             table += table_rows
         table.append("|}")
         return "\n".join(table)

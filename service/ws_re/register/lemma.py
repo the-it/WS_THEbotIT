@@ -5,7 +5,6 @@ import unicodedata
 from datetime import datetime
 from typing import List, Tuple, KeysView, Optional, Literal, Pattern
 
-from service.ws_re import public_domain
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
 from service.ws_re.register.authors import Authors
@@ -308,7 +307,7 @@ class Lemma:
                     mapped_author = self._authors.get_author_by_mapping(chapter.author, self._volume.name)
                 if mapped_author:
                     years = [author.year_public_domain for author in mapped_author if author.year_public_domain]
-                    if (tmp_max_year:= max(years)) > year:
+                    if (tmp_max_year := max(years)) > year:
                         year = tmp_max_year
         return year
 
@@ -320,7 +319,7 @@ class Lemma:
         light_red = "#FFCBCB"
         # gray = "#CBCBCB"
 
-        if pd_year:=self._get_public_domain_year():
+        if pd_year := self._get_public_domain_year():
             current_year = datetime.now().year
             if pd_year > current_year:
                 if not self["no_creative_height"]:
