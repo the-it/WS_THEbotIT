@@ -20,8 +20,8 @@ class ChapterDict(TypedDict, total=False):
     end: int
 
 
-LemmaDictKeys = Literal["lemma", "previous", "next", "sort_key", "redirect",
-                        "proof_read", "short_description", "wp_link", "ws_link", "wd_link", "chapters"]
+LemmaDictKeys = Literal["lemma", "previous", "next", "sort_key", "redirect", "proof_read", "short_description",
+                        "wp_link", "ws_link", "wd_link", "no_creative_height", "chapters"]
 LemmaDictItems = Union[str, bool, int, List[ChapterDict]]
 
 
@@ -36,6 +36,7 @@ class LemmaDict(TypedDict, total=False):
     wp_link: str
     ws_link: str
     wd_link: str
+    no_creative_height: bool
     chapters: List[ChapterDict]
 
 

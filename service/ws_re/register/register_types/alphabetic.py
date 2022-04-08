@@ -1,18 +1,19 @@
 from typing import Dict, Optional
 
 from service.ws_re.register.lemma import Lemma
-from service.ws_re.register.register_types._filtered_register import FilteredRegister
+from service.ws_re.register.register_types._base import Register
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
-class AlphabeticRegister(FilteredRegister):
+class AlphabeticRegister(Register):
     def __init__(self,
                  start: str,
                  end: str,
                  before_start: Optional[str],
                  after_next_start: Optional[str],
                  registers: Dict[str, VolumeRegister]):
-        super().__init__(registers)
+        super().__init__()
+        self._registers = registers
         self._start: str = start
         self._end: str = end
         self._before_start = before_start

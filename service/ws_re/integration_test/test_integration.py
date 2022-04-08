@@ -61,7 +61,9 @@ class TestIntegrationRegister(parent_class):
 
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic:
-            self.assertGreater(_MAX_SIZE_WIKI_PAGE, len(register.get_register_str()),
+            size = len(register.get_register_str())
+            print(f"Register {register.start}-{register.end} has length: {size}")
+            self.assertGreater(_MAX_SIZE_WIKI_PAGE, size,
                                f"register {register} is now to big.")
 
     def test_previous_next_in_order(self):

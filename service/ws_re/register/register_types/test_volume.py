@@ -35,7 +35,7 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         i1 = VolumeRegister(Volumes()["I,1"], Authors())._get_header().replace("\n", "")
         compare(StringComparison(".*SUM=8.*"), i1)
-        compare(StringComparison(".*UNK=1.*"), i1)
+        compare(StringComparison(".*UNK=3.*"), i1)
         compare(StringComparison(".*KOR=2.*"), i1)
         compare(StringComparison(".*FER=3.*"), i1)
 
@@ -47,38 +47,35 @@ class TestRegister(BaseTestRegister):
 |VG=
 |NF=I,2
 |SUM=2
-|UNK=0
+|UNK=1
 |KOR=1
-|FER=1
+|FER=0
 }}
 
 {|class="wikitable sortable"
 !Artikel
 !Kurztext
-!Status
 !Wikilinks
+
 !Seite
 !Autor
-!Sterbejahr
+!Stat
 |-
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||Ein Fisch
-|style="background:#669966"|FER
 ||
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
 |Herman Abel
-|style="background:#FFCBCB"|1998
+|style="background:#FFCBCB"|2069
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
-|style="background:#556B2F"|KOR
 ||
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Abert
-|style="background:#B9FFC5"|1927
+|style="background:#556B2F"|KOR
 |}
-[[Kategorie:RE:Register|!]]
-Zahl der Artikel: 2, davon [[:Kategorie:RE:Band I,1|{{PAGESINCATEGORY:RE:Band I,1|pages}} in Volltext]]."""
+[[Kategorie:RE:Register|!]]"""
         compare(expected_table, register.get_register_str())
 
     def test_persist(self):

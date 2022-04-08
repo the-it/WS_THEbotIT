@@ -40,21 +40,6 @@ class VolumeRegister(Register):
     def lemmas(self) -> List[Lemma]:
         return self._lemmas
 
-    def _get_table(self) -> str:
-        header = """{|class="wikitable sortable"
-!Artikel
-!Kurztext
-!Status
-!Wikilinks
-!Seite
-!Autor
-!Sterbejahr"""
-        table = [header]
-        for lemma in self._lemmas:
-            table.append(lemma.get_table_row())
-        table.append("|}")
-        return "\n".join(table)
-
     def _get_header(self) -> str:
         header = ["RERegister"]
         header.append(f"BAND={self.volume.name}")
@@ -71,13 +56,8 @@ class VolumeRegister(Register):
         header.append(f"FER={fer}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
-    def _get_footer(self) -> str:
-        return f"[[Kategorie:RE:Register|!]]\nZahl der Artikel: {len(self._lemmas)}, " \
-               f"davon [[:Kategorie:RE:Band {self._volume.name}" \
-               f"|{{{{PAGESINCATEGORY:RE:Band {self._volume.name}|pages}}}} in Volltext]]."
-
     def get_register_str(self) -> str:
-        return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"
+        return f"{self._get_header()}\n{self._get_table(print_volume=False)}\n[[Kategorie:RE:Register|!]]"
 
     def persist(self):
         persist_list = []

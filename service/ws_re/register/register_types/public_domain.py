@@ -1,18 +1,20 @@
 from typing import Dict, List
 
+from service.ws_re import public_domain
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
-from service.ws_re.register.register_types._filtered_register import FilteredRegister
+from service.ws_re.register.register_types._base import Register
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
-class PublicDomainRegister(FilteredRegister):
+class PublicDomainRegister(Register):
     def __init__(self,
                  year: int,
                  authors: Authors,
                  registers: Dict[str, VolumeRegister]):
-        super().__init__(registers)
+        super().__init__()
+        self._registers = registers
         self.year: int = year
         self._authors: Authors = authors
         self._pd_authors: List[Author] = self._get_pd_authors()
@@ -31,10 +33,10 @@ class PublicDomainRegister(FilteredRegister):
         author_list = []
         for author in self._authors:
             if author.death:
-                if author.death == self.year - 71:
+                if author.death == self.year - public_domain.YEARS_AFTER_DEATH:
                     author_list.append(author)
                 continue
-            if author.birth == self.year - 171:
+            if author.birth == self.year - public_domain.YEARS_AFTER_BIRTH:
                 author_list.append(author)
         return author_list
 

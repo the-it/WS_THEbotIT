@@ -61,7 +61,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |NF=be
 |NFNF=c
 |SUM=5
-|UNK=2
+|UNK=3
 |KOR=1
 |FER=1
 }}
@@ -84,7 +84,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |VG=be
 |NF=zzzzzz
 |SUM=4
-|UNK=0
+|UNK=1
 |KOR=1
 |FER=2
 }}
@@ -98,7 +98,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |VG=a
 |NF=zzzzzz
 |SUM=6
-|UNK=1
+|UNK=2
 |KOR=1
 |FER=3
 }}
@@ -106,65 +106,59 @@ class TestAlphabeticRegister(BaseTestRegister):
 {|class="wikitable sortable"
 !Artikel
 !Kurztext
-!Band
-!Status
 !Wikilinks
+!Band
 !Seite
 !Autor
-!Sterbejahr
+!Stat
 |-
 |rowspan=3 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=3|This is Beta
-|rowspan=2 |I,1
-|rowspan=2 style="background:#669966"|FER
-|rowspan=2 |
+|rowspan=3|
+|rowspan=2|I,1
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Abert
-|style="background:#B9FFC5"|1927
+|rowspan=2 style="background:#669966"|FER
 |-
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]-5
 |Herman Abel
-|style="background:#FFCBCB"|1998
 |-
 ||III,1
-|style="background:#AA0000"|UNK
 ||
+||
+|style="background:#AA0000"|UNK
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||
-||III,1
-|style="background:#669966"|FER
 ||
+||III,1
 |[https://elexikon.ch/meyers/RE/III,1_5.png 4]
 |Herman Abel
-|style="background:#FFCBCB"|1998
+|style="background:#669966"|FER
 |-
 |data-sort-value="delta"|[[RE:Delta|'''{{Anker2|Delta}}''']]
 ||
-||III,1
-|style="background:#556B2F"|KOR
 ||
+||III,1
 |[https://elexikon.ch/meyers/RE/III,1_5.png 4]
 |Abert
-|style="background:#B9FFC5"|1927
+|style="background:#556B2F"|KOR
 |-
 |data-sort-value="uaaa"|[[RE:Vaaa|'''{{Anker2|Vaaa}}''']]
 ||
-||III,1
-|style="background:#669966"|FER
 ||
+||III,1
 |[https://elexikon.ch/meyers/RE/III,1_5.png 4]
 |Abert
-|style="background:#B9FFC5"|1927
+|style="background:#669966"|FER
 |-
 |data-sort-value="ueee"|[[RE:Ueee|'''{{Anker2|Ueee}}''']]
 ||
-||III,1
-|style="background:#AA0000"|UNK
 ||
+||III,1
 |[https://elexikon.ch/meyers/RE/III,1_5.png 4]
 |Abert
-|style="background:#B9FFC5"|1927
+|style="background:#AA0000"|UNK
 |}
 [[Kategorie:RE:Register|!]]"""
         compare(expected_table, b_register.get_register_str())

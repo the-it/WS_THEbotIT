@@ -34,70 +34,62 @@ class TestPublicDomainRegister(BaseTestRegister):
         expected_table = """{|class="wikitable sortable"
 !Artikel
 !Kurztext
-!Band
-!Status
 !Wikilinks
+!Band
 !Seite
 !Autor
-!Sterbejahr
+!Stat
 |-
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||
-||I,1
-|style="background:#AA0000"|UNK
 ||
+||I,1
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
 |William Abbott
-|style="background:#CBCBCB"|
+|style="background:#AA0000"|UNK
 |-
 |data-sort-value="aba 001"|[[RE:Aba 1|'''{{Anker2|Aba 1}}''']]
 ||This is Aba 1
-||I,1
-|style="background:#AA0000"|UNK
 ||
+||I,1
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Herman Abel
-|style="background:#B9FFC5"|1950
+|style="background:#AA0000"|UNK
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||
-||I,1
-|style="background:#556B2F"|KOR
 ||
+||I,1
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Herman Abel
-|style="background:#B9FFC5"|1950
+|style="background:#556B2F"|KOR
 |-
 |data-sort-value="adam"|[[RE:Adam|'''{{Anker2|Adam}}''']]
 ||
-||III,1
-|style="background:#AA0000"|UNK
 ||
+||III,1
 |[https://elexikon.ch/meyers/RE/III,1_1.png 1]-4
 |William Abbott
-|style="background:#CBCBCB"|
+|style="background:#AA0000"|UNK
 |-
 |rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=2|This is Beta
-|rowspan=2 |I,1
-|rowspan=2 style="background:#669966"|FER
-|rowspan=2 |
+|rowspan=2|
+|rowspan=2|I,1
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]
 |Abert
-|style="background:#B9FFC5"|1927
+|rowspan=2 style="background:#669966"|FER
 |-
 |[https://elexikon.ch/meyers/RE/I,1_5.png 4]-5
 |Herman Abel
-|style="background:#B9FFC5"|1950
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||
-||III,1
-|style="background:#669966"|FER
 ||
+||III,1
 |[https://elexikon.ch/meyers/RE/III,1_5.png 4]
 |Herman Abel
-|style="background:#B9FFC5"|1950
+|style="background:#669966"|FER
 |}
 [[Kategorie:RE:Register|!]]"""
         compare(expected_table, pd_2021_register.get_register_str())

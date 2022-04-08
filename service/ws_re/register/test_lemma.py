@@ -1,7 +1,6 @@
 # pylint: disable=no-self-use,protected-access
 import copy
 from collections import OrderedDict
-from datetime import datetime
 
 from testfixtures import compare
 
@@ -138,39 +137,70 @@ class TestLemma(BaseTestRegister):
                 re_register_lemma._get_pages(LemmaChapter({"start": 1, "author": "Abel"})))
 
     #https://elexikon.ch/meyers/RE/XVIII,3_289.png
-    def test_get_author_and_year(self):
+    def test_get_author(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("Abert", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
-        compare("1927", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
-        compare("", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "Abbott"})))
 
         # check use case one chapter several authors
-        compare("1998", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
         compare("Abert, Herman Abel", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
 
         # check if author not there
-        compare("????", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2, "author": "Tada"})))
         compare("Tada", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2, "author": "Tada"})))
 
-        compare("", re_register_lemma._get_death_year(
-            LemmaChapter({"start": 1, "end": 2})))
         compare("", re_register_lemma._get_author_str(
             LemmaChapter({"start": 1, "end": 2})))
 
-    def test_year_format(self):
-        year_free_content = datetime.now().year - 71
-        compare("style=\"background:#B9FFC5\"", Lemma._get_year_format(str(year_free_content)))
-        compare("style=\"background:#FFCBCB\"", Lemma._get_year_format(str(year_free_content + 1)))
-        compare("style=\"background:#CBCBCB\"", Lemma._get_year_format(""))
-        compare("style=\"background:#FFCBCB\"", Lemma._get_year_format("????"))
-        compare("style=\"background:#FFCBCB\"", Lemma._get_year_format(None))
+    def test_get_public_domain_year(self):
+        # one author
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["I,1"], self.authors)
+        compare(2069, re_register_lemma._get_public_domain_year())
+
+        # two authors for one article
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "redirect_list"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["I,1"], self.authors)
+        compare(2069, re_register_lemma._get_public_domain_year())
+
+        # two authors two articles
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"},
+                                                     {"start": 1, "end": 1, "author": "Abert"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["XVI,1"], self.authors)
+        compare(2058, re_register_lemma._get_public_domain_year())
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abert"},
+                                                     {"start": 1, "end": 1, "author": "Abel"}]}
+        re_register_lemma = Lemma(small_dict, self.volumes["XVI,1"], self.authors)
+        compare(2058, re_register_lemma._get_public_domain_year())
+
+    def test_get_lemma_status(self):
+        # basics
+        small_dict = {"lemma": "lemma"}
+        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
+        compare(("UNK", "#AA0000"), lemma.status)
+
+        small_dict = {"lemma": "lemma", "proof_read": 1}
+        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
+        compare(("UNK", "#AA0000"), lemma.status)
+
+        small_dict = {"lemma": "lemma", "proof_read": 2}
+        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
+        compare(("KOR", "#556B2F"), lemma.status)
+
+        small_dict = {"lemma": "lemma", "proof_read": 3}
+        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
+        compare(("FER", "#669966"), lemma.status)
+
+        # author (not) public domain
+        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "author": "Abel"}]}
+        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
+        compare(("2069", "#FFCBCB"), lemma.status)
+
+        small_dict = {"lemma": "lemma", "proof_read": 3, "no_creative_height": True,
+                      "chapters": [{"start": 1, "author": "Abel"}]}
+        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
+        compare(("FER", "#669966"), lemma.status)
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
@@ -185,13 +215,9 @@ class TestLemma(BaseTestRegister):
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
-||Blub
-|style="background:#AA0000"|UNK
-|data-sort-value="w:en:lemma"|[[w:en:Lemma|Lemma<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
-|style="background:#FFCBCB"|1998"""
+|style="background:#FFCBCB"|2069"""
         compare(expected_row, re_register_lemma.get_table_row())
         two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next", "short_description": "Blub",
                          "wp_link": "w:en:Lemm", "ws_link": "s:de:Lemma",
@@ -199,20 +225,21 @@ class TestLemma(BaseTestRegister):
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|rowspan=2 data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
-|rowspan=2|Blub
-|rowspan=2 style="background:#AA0000"|UNK
-|rowspan=2 data-sort-value="w:en:lemm"|[[w:en:Lemm|Lemm<sup>(WP en)</sup>]]<br/>[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
-|style="background:#FFCBCB"|1998
+|rowspan=2 style="background:#FFCBCB"|2100
 |-
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
-|William Abbott
-|style="background:#CBCBCB"|"""
+|William Abbott"""
         compare(expected_row, re_register_lemma.get_table_row())
-        expected_row = expected_row.replace("data-sort-value=\"lemma\"|[[RE:lemma|'''{{Anker2|lemma}}''']]", "|I,1")
-        expected_row = expected_row.replace("|rowspan=2|Blub\n", "")
+        expected_row = """|-
+|rowspan=2|I,1
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]
+|Herman Abel
+|rowspan=2 style="background:#FFCBCB"|2100
+|-
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
+|William Abbott"""
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 
     def test_get_row_no_chapter(self):
@@ -221,10 +248,9 @@ class TestLemma(BaseTestRegister):
                          "chapters": []}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|data-sort-value="lemma"|[[RE:lemma|'''{{Anker2|lemma}}''']]
 ||
-|style="background:#AA0000"|UNK
-||"""
+||
+|style="background:#AA0000"|UNK"""
         compare(expected_row, re_register_lemma.get_table_row())
 
     def test_strip_accents(self):

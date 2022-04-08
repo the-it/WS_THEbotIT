@@ -210,44 +210,25 @@ class Lemma:
 
     def get_table_row(self, print_volume: bool = False) -> str:
         row_string = ["|-"]
-        interwiki_links, interwiki_sort_key = self.get_wiki_links()
-        proof_color, proof_state = self.get_proofread()
-        if print_volume:
-            link_or_volume = self.volume.name
-            sort_value = ""
-        else:
-            link_or_volume = self.get_link()
-            sort_value = f"data-sort-value=\"{self.sort_key}\""
         multi_row = ""
         if len(self._chapters) > 1:
             multi_row = f"rowspan={len(self._chapters)}"
-        row_string.append(f"{multi_row} {sort_value}|{link_or_volume}".strip())
-        if not print_volume:
-            row_string.append(f"{multi_row}|{self.short_description}")
-        row_string.append(f"{multi_row} style=\"background:{proof_color}\"|{proof_state}".strip())
-        row_string.append(f"{multi_row} {interwiki_sort_key}|{interwiki_links}".strip())
-        for chapter in self._chapters:
-            row_string.append(self._get_pages(chapter))
-            row_string.append(self._get_author_str(chapter))
-            year = self._get_death_year(chapter)
-            row_string.append(f"{self._get_year_format(year)}|{year}")
-            row_string.append("-")
+        if print_volume:
+            row_string.append(f"{multi_row}|{self.volume.name}".strip())
+        status = self.status
+        if self._chapters:
+            for idx, chapter in enumerate(self._chapters):
+                row_string.append(self._get_pages(chapter))
+                row_string.append(self._get_author_str(chapter))
+                if idx == 0:
+                    row_string.append(f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip())
+                row_string.append("-")
+        else:
+            row_string += ["|", "|", f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip()]
         # remove the last entry again because the row separator only needed between rows
         if row_string[-1] == "-":
             row_string.pop(-1)
-        return "\n|".join(row_string)
-
-    def get_proofread(self) -> Tuple[str, str]:
-        color = "#AA0000"
-        status = "UNK"
-        proof_state = self["proof_read"]
-        if proof_state == 3:
-            color = "#669966"
-            status = "FER"
-        elif proof_state == 2:
-            color = "#556B2F"
-            status = "KOR"
-        return color, status
+        return "\n|".join(row_string).strip()
 
     @staticmethod
     def _escape_link_for_templates(link: str) -> str:
@@ -317,37 +298,39 @@ class Lemma:
                 author_str = lemma_chapter.author
         return author_str
 
-    def _get_death_year(self, lemma_chapter: LemmaChapter) -> str:
-        year = ""
-        if self._get_author_str(lemma_chapter):
-            mapped_author = None
-            if lemma_chapter.author:
-                mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
-                                                                    self._volume.name)
-            if mapped_author:
-                years = [author.death for author in mapped_author if author.death]
-                year = str(max(years)) if years else ""
-            else:
-                year = "????"
+    def _get_public_domain_year(self) -> int:
+        year = 0
+        for chapter in self.chapters:
+            if self._get_author_str(chapter):
+                mapped_author = None
+                if chapter.author:
+                    mapped_author = self._authors.get_author_by_mapping(chapter.author, self._volume.name)
+                if mapped_author:
+                    years = [author.year_public_domain for author in mapped_author if author.year_public_domain]
+                    if (tmp_max_year := max(years)) > year:
+                        year = tmp_max_year
         return year
 
-    @staticmethod
-    def _get_year_format(year: str) -> str:
-        green = "style=\"background:#B9FFC5\""
-        red = "style=\"background:#FFCBCB\""
-        gray = "style=\"background:#CBCBCB\""
-        if year == "":
-            year_format = gray
-        else:
-            try:
-                content_free_year = datetime.now().year - 71
-                if int(year) <= content_free_year:
-                    year_format = green
-                else:
-                    year_format = red
-            except (TypeError, ValueError):
-                year_format = red
-        return year_format
+    @property
+    def status(self) -> Tuple[str, str]:
+        unkorrigiert = "#AA0000"
+        fertig = "#669966"
+        korrigiert = "#556B2F"
+        light_red = "#FFCBCB"
+        # gray = "#CBCBCB"
+
+        if pd_year := self._get_public_domain_year():
+            current_year = datetime.now().year
+            if pd_year > current_year:
+                if not self["no_creative_height"]:
+                    return str(pd_year), light_red
+
+        if self["proof_read"] == 2:
+            return "KOR", korrigiert
+        if self["proof_read"] == 3:
+            return "FER", fertig
+
+        return "UNK", unkorrigiert
 
     def update_lemma_dict(self, update_dict: LemmaDict, remove_items: List[str] = None):
         for item_key in update_dict:

@@ -156,6 +156,12 @@ text.
         article = RePage(self.page_mock).splitted_article_list[0]
         compare(result, SCANTask._fetch_short_description(article))
 
+    @file_data("test_data/register_scanner/test_no_creative_height.yml")
+    def test_no_creative_height(self, text, result):
+        self.text_mock.return_value = text
+        article = RePage(self.page_mock).splitted_article_list[0]
+        compare(result, SCANTask._fetch_no_creative_height(article))
+
     @file_data("test_data/register_scanner/test_pages_simple.yml")
     def test_pages(self, text, expect):
         task = SCANTask(None, self.logger)
@@ -190,6 +196,7 @@ text.
 |VERWEIS=ON
 |KORREKTURSTAND=korrigiert
 |KURZTEXT=Short Description
+|KEINE_SCHÖPFUNGSHÖHE=ON
 }}
 text.
 {{REAutor|OFF}}"""
@@ -205,6 +212,7 @@ text.
             compare("Lemma Previous", post_lemma.lemma_dict["previous"])
             compare("Lemma Next", post_lemma.lemma_dict["next"])
             compare("Short Description", post_lemma.lemma_dict["short_description"])
+            compare(True, post_lemma.lemma_dict["no_creative_height"])
 
     def test_fetch_from_properties_self_append(self):
         with LogCapture():

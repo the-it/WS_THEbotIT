@@ -329,11 +329,11 @@ text
 
         article = Article()
         # author Geburtsjahr
-        article["GEBURTSJAHR"].value = str(year_common_free - 100)
+        article["GEBURTSJAHR"].value = str(year_common_free - 80)
         article["KEINE_SCHÖPFUNGSHÖHE"].value = False
         self.assertTrue(article.common_free)
-        # author birth not 171 year or more ago
-        article["GEBURTSJAHR"].value = str(year_common_free - 90)
+        # author birth not 151 year or more ago
+        article["GEBURTSJAHR"].value = str(year_common_free - 70)
         article["KEINE_SCHÖPFUNGSHÖHE"].value = False
         self.assertFalse(article.common_free)
         article["KEINE_SCHÖPFUNGSHÖHE"].value = True

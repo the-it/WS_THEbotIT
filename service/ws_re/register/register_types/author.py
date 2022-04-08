@@ -3,16 +3,17 @@ from typing import Dict, Tuple
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
-from service.ws_re.register.register_types._filtered_register import FilteredRegister
+from service.ws_re.register.register_types._base import Register
 from service.ws_re.register.register_types.volume import VolumeRegister
 
 
-class AuthorRegister(FilteredRegister):
+class AuthorRegister(Register):
     def __init__(self,
                  author: Author,
                  authors: Authors,
                  registers: Dict[str, VolumeRegister]):
-        super().__init__(registers)
+        super().__init__()
+        self._registers = registers
         self._author: Author = author
         self._authors: Authors = authors
         self._init_lemmas(self._is_lemma_of_author)
