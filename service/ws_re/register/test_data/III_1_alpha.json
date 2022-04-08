@@ -3,6 +3,7 @@
     "lemma": "Adam",
     "next": "Beta",
     "proof_read": 1,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1,
@@ -16,6 +17,7 @@
     "previous": "Adam",
     "next": "Charlie",
     "proof_read": 1,
+    "no_creative_height": true,
     "short_description": "This is Beta 1"
   },
   {
@@ -23,6 +25,7 @@
     "previous": "Beta",
     "next": "Delta",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 4,
@@ -36,6 +39,7 @@
     "previous": "Charlie",
     "next": "Vaaa",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 4,
@@ -49,6 +53,7 @@
     "previous": "Delta",
     "next": "Ueee",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 4,
@@ -60,6 +65,7 @@
   {
     "lemma": "Ueee",
     "previous": "Vaaa",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 4,

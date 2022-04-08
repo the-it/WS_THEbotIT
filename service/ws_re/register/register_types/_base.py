@@ -43,12 +43,11 @@ class Register(ABC):
         header = f"""{{|class="wikitable sortable"
 !Artikel
 !Kurztext
-{'!Band' if print_volume else ''}
-!Status
 !Wikilinks
+{'!Band' if print_volume else ''}
 !Seite
 !Autor
-!Sterbejahr"""
+!Stat"""
         table = [header]
         for lemmas in self.squash_lemmas(self._lemmas):
             chapter_sum = 0
@@ -64,9 +63,11 @@ class Register(ABC):
             multi_chapter = ""
             if chapter_sum > 1:
                 multi_chapter = f"rowspan={chapter_sum}"
+            interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
             table.append("".join(("|-\n|",
                                   f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip(),
-                                  f"\n|{multi_chapter}|{lemma.short_description}")))
+                                  f"\n|{multi_chapter}|{lemma.short_description}",
+                                  f"\n|{multi_chapter + '' if multi_chapter else ''}{interwiki_sort_key}|{interwiki_links}")))
             table += table_rows
         table.append("|}")
         return "\n".join(table)
@@ -75,12 +76,11 @@ class Register(ABC):
     def proof_read(self) -> Tuple[int, int, int]:
         fer = kor = unk = 0
         for lemma in self.lemmas:
-            proof_read = lemma["proof_read"]
-            if proof_read:
-                if proof_read == 3:
-                    fer += 1
-                elif proof_read == 2:
-                    kor += 1
-                elif proof_read == 1:
-                    unk += 1
+            status, _ = lemma.status
+            if status == "FER":
+                fer += 1
+            elif status == "KOR":
+                kor += 1
+            else:
+                unk += 1
         return fer, kor, unk

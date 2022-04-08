@@ -210,19 +210,22 @@ class Lemma:
         return True
 
     def get_table_row(self, print_volume: bool = False) -> str:
-        row_string = [""]
+        row_string = ["|-"]
         multi_row = ""
         if len(self._chapters) > 1:
             multi_row = f"rowspan={len(self._chapters)}"
         if print_volume:
             row_string.append(f"{multi_row}|{self.volume.name}".strip())
-        for idx, chapter in enumerate(self._chapters):
-            row_string.append(self._get_pages(chapter))
-            row_string.append(self._get_author_str(chapter))
-            if idx == 0:
-                status = self._get_lemma_status()
-                row_string.append(f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip())
-            row_string.append("-")
+        status = self.status
+        if self._chapters:
+            for idx, chapter in enumerate(self._chapters):
+                row_string.append(self._get_pages(chapter))
+                row_string.append(self._get_author_str(chapter))
+                if idx == 0:
+                    row_string.append(f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip())
+                row_string.append("-")
+        else:
+            row_string += ["|", "|", f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip()]
         # remove the last entry again because the row separator only needed between rows
         if row_string[-1] == "-":
             row_string.pop(-1)
@@ -309,7 +312,8 @@ class Lemma:
                         year = tmp_max_year
         return year
 
-    def _get_lemma_status(self) -> Tuple[str, str]:
+    @property
+    def status(self) -> Tuple[str, str]:
         unkorrigiert = "#AA0000"
         fertig = "#669966"
         korrigiert = "#556B2F"

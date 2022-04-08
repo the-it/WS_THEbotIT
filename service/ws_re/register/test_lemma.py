@@ -179,29 +179,29 @@ class TestLemma(BaseTestRegister):
         # basics
         small_dict = {"lemma": "lemma"}
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("UNK", "#AA0000"), lemma._get_lemma_status())
+        compare(("UNK", "#AA0000"), lemma.status)
 
         small_dict = {"lemma": "lemma", "proof_read": 1}
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("UNK", "#AA0000"), lemma._get_lemma_status())
+        compare(("UNK", "#AA0000"), lemma.status)
 
         small_dict = {"lemma": "lemma", "proof_read": 2}
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("KOR", "#556B2F"), lemma._get_lemma_status())
+        compare(("KOR", "#556B2F"), lemma.status)
 
         small_dict = {"lemma": "lemma", "proof_read": 3}
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("FER", "#669966"), lemma._get_lemma_status())
+        compare(("FER", "#669966"), lemma.status)
 
         # author (not) public domain
         small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "author": "Abel"}]}
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("2069", "#FFCBCB"), lemma._get_lemma_status())
+        compare(("2069", "#FFCBCB"), lemma.status)
 
         small_dict = {"lemma": "lemma", "proof_read": 3, "no_creative_height": True,
                       "chapters": [{"start": 1, "author": "Abel"}]}
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("FER", "#669966"), lemma._get_lemma_status())
+        compare(("FER", "#669966"), lemma.status)
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
@@ -215,7 +215,8 @@ class TestLemma(BaseTestRegister):
                          "wp_link": "w:en:Lemma", "ws_link": "s:de:Lemma",
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
-        expected_row = """|[https://elexikon.ch/meyers/RE/I,1_1.png 1]
+        expected_row = """|-
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
 |style="background:#FFCBCB"|2069"""
         compare(expected_row, re_register_lemma.get_table_row())
@@ -224,14 +225,16 @@ class TestLemma(BaseTestRegister):
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"},
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = Lemma(two_line_dict, self.volumes["I,1"], self.authors)
-        expected_row = """|[https://elexikon.ch/meyers/RE/I,1_1.png 1]
+        expected_row = """|-
+|[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
 |rowspan=2 style="background:#FFCBCB"|2100
 |-
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
 |William Abbott"""
         compare(expected_row, re_register_lemma.get_table_row())
-        expected_row = """|rowspan=2|I,1
+        expected_row = """|-
+|rowspan=2|I,1
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]
 |Herman Abel
 |rowspan=2 style="background:#FFCBCB"|2100
@@ -245,7 +248,10 @@ class TestLemma(BaseTestRegister):
                          "redirect": False,
                          "chapters": []}
         re_register_lemma = Lemma(one_line_dict, self.volumes["I,1"], self.authors)
-        expected_row = ""
+        expected_row = """|-
+||
+||
+|style="background:#AA0000"|UNK"""
         compare(expected_row, re_register_lemma.get_table_row())
 
     def test_strip_accents(self):
