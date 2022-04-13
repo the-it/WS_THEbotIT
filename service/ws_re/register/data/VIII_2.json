@@ -2107,7 +2107,8 @@
         "end": 1476,
         "author": "Bürchner."
       }
-    ]
+    ],
+    "short_description": "In Lydien s. Hiera Kome, Hierokaisareia"
   },
   {
     "lemma": "Hierokles 1",
@@ -2131,7 +2132,9 @@
         "end": 1476,
         "author": "Sundwall."
       }
-    ]
+    ],
+    "no_creative_height": true,
+    "short_description": "Eponymer Priester auf Rhodos"
   },
   {
     "lemma": "Hierokles 3",
@@ -2144,7 +2147,9 @@
         "end": 1476,
         "author": "Sundwall."
       }
-    ]
+    ],
+    "no_creative_height": true,
+    "short_description": "Archon in Thebe"
   },
   {
     "lemma": "Hierokles 4",
@@ -2168,7 +2173,9 @@
         "end": 1476,
         "author": "Sundwall."
       }
-    ]
+    ],
+    "no_creative_height": true,
+    "short_description": "Athener, Schiffsbaumeister"
   },
   {
     "lemma": "Hierokles 6",
@@ -2181,7 +2188,9 @@
         "end": 1476,
         "author": "Sundwall."
       }
-    ]
+    ],
+    "no_creative_height": true,
+    "short_description": "Athener, Thesmothet 183/2 v. Chr."
   },
   {
     "lemma": "Hierokles 7",
@@ -2194,7 +2203,9 @@
         "end": 1476,
         "author": "Sundwall."
       }
-    ]
+    ],
+    "no_creative_height": true,
+    "short_description": "Athener, Trierarch"
   },
   {
     "lemma": "Hierokles 8",
@@ -2207,7 +2218,9 @@
         "end": 1476,
         "author": "Sundwall."
       }
-    ]
+    ],
+    "no_creative_height": true,
+    "short_description": "Athener, Thesmothet 227/6 v. Chr."
   },
   {
     "lemma": "Hierokles 9",
@@ -7429,7 +7442,8 @@
         "author": "Zwicker."
       }
     ],
-    "short_description": "Von Neoptolemos getöteter Troer"
+    "short_description": "Von Neoptolemos getöteter Troer",
+    "no_creative_height": true
   },
   {
     "lemma": "Hippomedon 3",
@@ -7443,7 +7457,8 @@
         "author": "Zwicker."
       }
     ],
-    "short_description": "Troer, Vater d. Menoites"
+    "short_description": "Troer, Vater d. Menoites",
+    "no_creative_height": true
   },
   {
     "lemma": "Hippomedon 4",
@@ -7457,7 +7472,8 @@
         "author": "Zwicker."
       }
     ],
-    "short_description": "Sohn d. Mainalos"
+    "short_description": "Sohn d. Mainalos",
+    "no_creative_height": true
   },
   {
     "lemma": "Hippomedon 5",
@@ -7471,7 +7487,8 @@
         "author": "Zwicker."
       }
     ],
-    "short_description": "Myth. Oikist v. Syros"
+    "short_description": "Myth. Oikist v. Syros",
+    "no_creative_height": true
   },
   {
     "lemma": "Hippomedon 6",
@@ -7507,7 +7524,8 @@
         "author": "Zwicker."
       }
     ],
-    "short_description": "Freier d. Hippodamia"
+    "short_description": "Freier d. Hippodamia",
+    "no_creative_height": true
   },
   {
     "lemma": "Hippomedon 9",
@@ -8004,7 +8022,8 @@
         "end": 1913,
         "author": "Bürchner."
       }
-    ]
+    ],
+    "short_description": "Zum Namen"
   },
   {
     "lemma": "Hippos 1",
@@ -8018,7 +8037,8 @@
         "end": 1913,
         "author": "Bürchner."
       }
-    ]
+    ],
+    "short_description": "hai(?) Hippoi, Eilande vor Erythrai"
   },
   {
     "lemma": "Hippos 2",
@@ -8074,7 +8094,8 @@
         "end": 1914,
         "author": "Tkač."
       }
-    ]
+    ],
+    "short_description": "oros, Vorgebirge Arabiens am Roten Meer"
   },
   {
     "lemma": "Hippos 6",
@@ -8088,7 +8109,8 @@
         "end": 1918,
         "author": "Kiessling."
       }
-    ]
+    ],
+    "short_description": "Nebenfluß d. Phasis"
   },
   {
     "lemma": "Hippos 7",
@@ -10712,7 +10734,8 @@
         "end": 2277,
         "author": "Groag."
       }
-    ]
+    ],
+    "short_description": "s. Cocceius Honorinus Nr.6a"
   },
   {
     "lemma": "Honoriopolis",
@@ -13358,7 +13381,14 @@
     "previous": "Ad Herculem castra",
     "next": "Hippo Regius",
     "sort_key": "Herodes 07",
-    "proof_read": 2
+    "proof_read": 2,
+    "chapters": [
+      {
+        "start": 2625,
+        "end": 2625,
+        "author": "Walter Otto."
+      }
+    ]
   },
   {
     "lemma": "Hippo Regius",
