@@ -790,7 +790,8 @@
         "author": "Waser."
       }
     ],
-    "short_description": "Musiker"
+    "short_description": "Musiker",
+    "no_creative_height": true
   },
   {
     "lemma": "Dorion 1",
@@ -1239,7 +1240,8 @@
         "author": "Waser."
       }
     ],
-    "short_description": "Person in d. Komödie"
+    "short_description": "Person in d. Komödie",
+    "no_creative_height": true
   },
   {
     "lemma": "Dorocortorum",
@@ -3767,7 +3769,8 @@
         "end": 1668,
         "author": "Philippson."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Drausus",
@@ -4225,7 +4228,8 @@
         "author": "Waser."
       }
     ],
-    "short_description": "Eine der Alkyoniden"
+    "short_description": "Eine der Alkyoniden",
+    "no_creative_height": true
   },
   {
     "lemma": "Drimo 2",
@@ -5795,7 +5799,8 @@
         "author": "Philippson."
       }
     ],
-    "short_description": "Eichenwald auf d. Gebirge Telethrion"
+    "short_description": "Eichenwald auf d. Gebirge Telethrion",
+    "no_creative_height": true
   },
   {
     "lemma": "Drymos 4",
@@ -9043,7 +9048,8 @@
         "end": 1889,
         "author": "Waser."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Dysmai",
@@ -9095,7 +9101,8 @@
         "end": 1889,
         "author": "Waser."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Dysoron",
@@ -9639,7 +9646,8 @@
         "end": 1899,
         "author": "Waser."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Ebrius",
@@ -10019,7 +10027,8 @@
         "end": 1907,
         "author": "Philippson."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Echedamos",
@@ -10032,7 +10041,8 @@
         "end": 1907,
         "author": "Kirchner."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Echedemeia 1",
@@ -10046,7 +10056,8 @@
         "author": "Escher."
       }
     ],
-    "short_description": "Früherer Name d. Akadeie"
+    "short_description": "Früherer Name d. Akadeie",
+    "no_creative_height": true
   },
   {
     "lemma": "Echedemeia 2",
@@ -10453,7 +10464,8 @@
         "end": 1913,
         "author": "Jacoby."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Echemmon",
@@ -16596,7 +16608,8 @@
         "author": "Waser."
       }
     ],
-    "short_description": "Ahnherr d. att. Elasidai"
+    "short_description": "Ahnherr d. att. Elasidai",
+    "no_creative_height": true
   },
   {
     "lemma": "Elasos 4",
@@ -17491,7 +17504,7 @@
   },
   {
     "lemma": "Elegea 2",
-    "previous": "Elegeia 1",
+    "previous": "Elege",
     "next": "Elegeis",
     "sort_key": "Elegeia 2",
     "proof_read": 2,
@@ -17507,7 +17520,7 @@
   {
     "lemma": "Elegeia 1",
     "previous": "Elege",
-    "next": "Elegeis",
+    "next": "Elegea 2",
     "sort_key": "Elegeia 1",
     "proof_read": 2,
     "chapters": [

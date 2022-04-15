@@ -10,7 +10,8 @@
         "start": 5,
         "end": 5
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Abercius b",
@@ -23,7 +24,8 @@
         "start": 5,
         "end": 5
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Aberglaube",
@@ -257,7 +259,8 @@
         "start": 9,
         "end": 9
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Aelius 24a",
@@ -348,7 +351,8 @@
         "start": 9,
         "end": 9
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Aelius 80a",
@@ -1478,7 +1482,7 @@
   },
   {
     "lemma": "Athenadas 1",
-    "previous": "Athanadas 1-7",
+    "previous": "Athanadas 1–7",
     "next": "Athenadas 2",
     "redirect": true,
     "proof_read": 3,
@@ -1852,7 +1856,8 @@
         "start": 62,
         "end": 62
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Bappo 2",
@@ -2563,7 +2568,7 @@
   {
     "lemma": "Cornelius 282b",
     "previous": "Cornelius 274aa",
-    "next": "Cosius 1–3",
+    "next": "Cosius 1-3",
     "redirect": true,
     "proof_read": 3,
     "chapters": [
@@ -2574,7 +2579,7 @@
     ]
   },
   {
-    "lemma": "Cosius 1–3",
+    "lemma": "Cosius 1-3",
     "previous": "Cornelius 282b",
     "next": "Cotus 2",
     "redirect": "Cosius 3",
@@ -2588,7 +2593,7 @@
   },
   {
     "lemma": "Cotus 2",
-    "previous": "Cosius 1–3",
+    "previous": "Cosius 1-3",
     "next": "Crescens 9",
     "redirect": true,
     "proof_read": 3,

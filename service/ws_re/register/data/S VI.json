@@ -1075,7 +1075,8 @@
       }
     ],
     "proof_read": 3,
-    "short_description": "Oberlauf des Tanager in Lukanien und seine Fortsetzung ab Pertosa"
+    "short_description": "Oberlauf des Tanager in Lukanien und seine Fortsetzung ab Pertosa",
+    "no_creative_height": true
   },
   {
     "lemma": "Calouitanus Portus",
@@ -1192,7 +1193,8 @@
       }
     ],
     "proof_read": 3,
-    "short_description": "unteritalischer Ort, in Lucanien?"
+    "short_description": "unteritalischer Ort, in Lucanien?",
+    "no_creative_height": true
   },
   {
     "lemma": "Camere",
@@ -1310,7 +1312,8 @@
       }
     ],
     "proof_read": 3,
-    "short_description": "Kastell bei Compsa in Samnium, T. Annius Milo sei dort gefallen"
+    "short_description": "Kastell bei Compsa in Samnium, T. Annius Milo sei dort gefallen",
+    "no_creative_height": true
   },
   {
     "lemma": "Caristanius 1",
@@ -2458,7 +2461,6 @@
         "author": "Max Fluss."
       }
     ],
-    "next": "Isamnus",
     "short_description": "Pannon. Fluß"
   },
   {
@@ -2473,7 +2475,9 @@
         "author": "Fluss."
       }
     ],
-    "short_description": "Iulia, Tochter des Kaisers Titus und der Marcia Nr. 126) Furnilla"
+    "short_description": "Iulia, Tochter des Kaisers Titus und der Marcia Nr. 126) Furnilla",
+    "next": "Iulianum",
+    "previous": "Istros 1a"
   },
   {
     "lemma": "Isamnus",
@@ -2486,7 +2490,6 @@
         "author": "Max Fluss."
       }
     ],
-    "previous": "Ira 4",
     "short_description": "Epeirot. Fluß"
   },
   {
@@ -2516,7 +2519,6 @@
         "author": "Max Fluss."
       }
     ],
-    "next": "Iulius 552a",
     "short_description": "Dalmat. Insel(?)"
   },
   {
@@ -2532,7 +2534,8 @@
         "author": "Fluss."
       }
     ],
-    "short_description": "Illyr. Straßenstation"
+    "short_description": "Illyr. Straßenstation",
+    "previous": "Iulius 552a"
   },
   {
     "lemma": "Iunius 183a",

@@ -280,7 +280,8 @@
         "end": 46,
         "author": "Hölscher."
       }
-    ]
+    ],
+    "no_creative_height": true
   },
   {
     "lemma": "Asklepiades 51",
@@ -889,7 +890,8 @@
         "author": "Lippold."
       }
     ],
-    "short_description": "H. von (dem kypr.?) Salamis, Bildhauer, Sohn des H., s. Kallikles Nr. 6a"
+    "short_description": "H. von (dem kypr.?) Salamis, Bildhauer, Sohn des H., s. Kallikles Nr. 6a",
+    "no_creative_height": true
   },
   {
     "lemma": "Hierastamnai",
@@ -961,7 +963,8 @@
         "author": "Lippold."
       }
     ],
-    "short_description": "H. aus Rhodos, Bildhauer im 3. Jh. v. Chr."
+    "short_description": "H. aus Rhodos, Bildhauer im 3. Jh. v. Chr.",
+    "no_creative_height": true
   },
   {
     "lemma": "Hippus",
@@ -1210,7 +1213,8 @@
         "author": "Lippold."
       }
     ],
-    "short_description": "Bildhauer um 400 v. Chr."
+    "short_description": "Bildhauer um 400 v. Chr.",
+    "no_creative_height": true
   },
   {
     "lemma": "Kallikles 6a",
@@ -1392,7 +1396,8 @@
         "author": "Hölscher."
       }
     ],
-    "short_description": "Palaestin. Ort"
+    "short_description": "Palaestin. Ort",
+    "no_creative_height": true
   },
   {
     "lemma": "Lairbenos",
@@ -1417,7 +1422,8 @@
         "author": "Hölscher."
       }
     ],
-    "short_description": "Ort in Iudaea"
+    "short_description": "Ort in Iudaea",
+    "no_creative_height": true
   },
   {
     "lemma": "Laistrygonen",
@@ -1453,7 +1459,8 @@
         "author": "Hölscher."
       }
     ],
-    "short_description": "Galil.-phoinik. Grenzort"
+    "short_description": "Galil.-phoinik. Grenzort",
+    "no_creative_height": true
   },
   {
     "lemma": "Lampitos 2",
@@ -1504,7 +1511,8 @@
         "author": "Lippold."
       }
     ],
-    "short_description": "Maler"
+    "short_description": "Maler",
+    "no_creative_height": true
   },
   {
     "lemma": "Lazarion",
@@ -1529,7 +1537,8 @@
         "author": "Hölscher."
       }
     ],
-    "short_description": "Syr. Dorf"
+    "short_description": "Syr. Dorf",
+    "no_creative_height": true
   },
   {
     "lemma": "Secundinus 6a",
@@ -1743,7 +1752,8 @@
         "author": "Schulten."
       }
     ],
-    "short_description": "Station an der Straße Emerita-Caesarobriga"
+    "short_description": "Station an der Straße Emerita-Caesarobriga",
+    "no_creative_height": true
   },
   {
     "lemma": "Leuke 4a",
@@ -1757,7 +1767,8 @@
         "author": "Hölscher."
       }
     ],
-    "short_description": "Felsen bei Masada (XIV 2056 )"
+    "short_description": "Felsen bei Masada (XIV 2056 )",
+    "no_creative_height": true
   },
   {
     "lemma": "Lex Glitia",
@@ -1870,7 +1881,8 @@
         "author": "Philipp."
       }
     ],
-    "short_description": "Gall.(?) Ort unbekannter Lage"
+    "short_description": "Gall.(?) Ort unbekannter Lage",
+    "no_creative_height": true
   },
   {
     "lemma": "Lictia",
@@ -1884,7 +1896,8 @@
         "author": "Philipp."
       }
     ],
-    "short_description": "Kalabr. Ort = Lupia (XIII 1842 Nr. 1)"
+    "short_description": "Kalabr. Ort = Lupia (XIII 1842 Nr. 1)",
+    "no_creative_height": true
   },
   {
     "lemma": "Lidus oder Ledus",
@@ -1945,7 +1958,8 @@
         "author": "Lippold."
       }
     ],
-    "short_description": "L. von Thasos, Erzgießer, Sohn des Charopinos"
+    "short_description": "L. von Thasos, Erzgießer, Sohn des Charopinos",
+    "no_creative_height": true
   },
   {
     "lemma": "Limen(ius) a",
@@ -3105,7 +3119,6 @@
         "author": "W. Enßlin."
       }
     ],
-    "next": "Maximinus 25g",
     "no_creative_height": true,
     "short_description": "kath. Bischof von Sufes, am Konzil von Thelepte 419 n. Chr."
   },
@@ -3119,7 +3132,10 @@
         "end": 668,
         "author": "Enßlin."
       }
-    ]
+    ],
+    "next": "Maximius",
+    "no_creative_height": true,
+    "previous": "Maximinus 34"
   },
   {
     "lemma": "Maximinus 25g",
@@ -3133,7 +3149,6 @@
       }
     ],
     "no_creative_height": true,
-    "previous": "Maximinus 25f",
     "short_description": "kath. Bischof, am Konzil von Cirta 412 n. Chr."
   },
   {
