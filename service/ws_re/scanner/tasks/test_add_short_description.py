@@ -18,6 +18,8 @@ TEXT_A = """{|class="wikitable"
 |-
 |[[RE:No real description]]||(-)
 |-
+|[[RE:Nothing to see]]||
+|-
 |[[RE:Ἀχαιῶν ἀκτή]]||Fancy greek stuff
 |}"""
 
@@ -68,7 +70,7 @@ text
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
         compare("deutsche Stadt = Aquae", re_page.first_article["KURZTEXT"].value)
-        compare("text\n[[Kategorie:RE:Kurztext überprüfen]]", re_page.first_article.text)
+        compare("[[Kategorie:RE:Kurztext überprüfen]]", re_page._article_list[-1])
 
     def test_add_short_description_to_lemma_sort_key(self):
         self.text_mock.return_value = """{{REDaten}}
@@ -79,7 +81,7 @@ text
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
         compare("Fancy greek stuff", re_page.first_article["KURZTEXT"].value)
-        compare("text\n[[Kategorie:RE:Kurztext überprüfen]]", re_page.first_article.text)
+        compare("[[Kategorie:RE:Kurztext überprüfen]]", re_page._article_list[-1])
 
     def test_existing_short_description_to_lemma(self):
         self.text_mock.return_value = """{{REDaten
@@ -106,14 +108,14 @@ text
 |VERWEIS=ON
 |KURZTEXT=blub}}
 test
-[[Kategorie:RE:Kurztext überprüfen]]
-{{REAutor|Autor.}}"""
+{{REAutor|Autor.}}
+[[Kategorie:RE:Kurztext überprüfen]]"""
         self.title_mock.return_value = "Re:Aachen"
         re_page = RePage(self.page_mock)
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
         compare("", re_page.first_article["KURZTEXT"].value)
-        compare("test", re_page.first_article.text)
+        compare(1, len(re_page._article_list))
 
 
 @skip("only for analysis")

@@ -10,7 +10,7 @@ from tools.bots.pi import WikiLogger
 
 
 class KURZTask(ReScannerTask):
-    MAINTENANCE_CAT = "[[Kategorie:RE:Kurztext überprüfen]]"
+    MAINTENANCE_CAT = "RE:Kurztext überprüfen"
     SHORT_TEXT_URL = "Wikisource:RE-Werkstatt/Kurzbeschreibung/"
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
@@ -42,7 +42,7 @@ class KURZTask(ReScannerTask):
             match = re.search(r"\[\[RE:([^\]]*?)\]\]\|\|(.*)", line)
             # don't process if there is an invalid description
             if match:
-                if match.group(2) != "(-)":
+                if match.group(2) not in ["", "(-)"]:
                     new_lookup_dict[Lemma.make_sort_key(match.group(1))] = match.group(2)
         return new_lookup_dict
 
@@ -50,15 +50,13 @@ class KURZTask(ReScannerTask):
         article = self.re_page.first_article
         if article["VERWEIS"].value:
             article["KURZTEXT"].value = ""
-            self.re_page.first_article.text = re.sub(pattern=r"\[\[Kategorie:RE:Kurztext überprüfen\]\]",
-                                                     repl="",
-                                                     string=self.re_page.first_article.text).strip()
+            self.re_page.remove_error_category(category=self.MAINTENANCE_CAT)
             return
         if article["KURZTEXT"].value:
             return
         try:
             article["KURZTEXT"].value = \
                 self.short_description_lookup[Lemma.make_sort_key(self.re_page.lemma_without_prefix)]
-            self.re_page.first_article.text += f"\n{self.MAINTENANCE_CAT}"
+            self.re_page.add_error_category(category=self.MAINTENANCE_CAT)
         except KeyError:
             pass
