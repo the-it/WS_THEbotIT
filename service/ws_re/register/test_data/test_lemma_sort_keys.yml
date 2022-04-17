@@ -1,0 +1,41 @@
+basic_conversions:
+  - ["Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū", "uuuiiissceaouesoaceeeeiioouusu"]
+remove_prefix:
+  - ["ad Flexum", "flexum"]
+  - ["ab epistulis", "epistulis"]
+  - ["a memoria", "memoria"]
+keep_words_ending_on_a_abd:
+  - ["aabaa abfl", "aabaa abfl"]
+  - ["aabab abfl", "aabab abfl"]
+  - ["aabad abfl", "aabad abfl"]
+remove_abbrevations:
+  - ["G. abfl", "abfl"]
+remove_special_characters:
+  - ["Abdigildus (?)–-", "abdigildus"]
+  - ["E....orceni", "e    orceni"]
+  - ["Abd 1 11 230", "abd 001 011 230"]
+basic_greek:
+  - ["Ἀβάλας λιμήνου", "abalas limenu"]
+  - ["Καυαληνῶν κατοικία", "kaualenon katoikia"]
+  - ["Ἀλανὰ ὄρη", "alana ore"]
+silent_h:
+  - ["Ἑστίασις", "hestiasis"]
+  - ["Ἱαρὸν τᾶς Ἀθαναίας", "hiaron tas athanaias"]
+  - ["Ἀγνοῦ κέρας", "agnu keras"]
+  - ["Ἀπτούχου ἱερόν", "aptuchu hieron"]
+  - ["Ὑακινθὶς ὁδός", "hyakinthis hodos"]
+  - ["Ὑπερήμερος, ὑπερημερία", "hyperemeros, hyperemeria"]
+  - ["Ἀγαύα κώμη", "agaua kome"]
+  - ["ἡ κυρία", "he kyria"]
+  - ["Βόκκανον ἥμερον", "bokkanon hemeron"]
+  - ["Ἡραΐτης Ὅρμος", "heraites hormos"]
+  - ["Ἅμιπποι", "hamippoi"]
+  - ["Ἑα", "hea"]
+  - ["Ἐα", "ea"]
+double_characters:
+  - ["Χαριστήρια ἐλευθερίας", "charisteria eleutherias"]
+  - ["Ἐφόδιον", "ephodion"]
+  - ["Χρυσοῦν στόμα", "chrysun stoma"]
+  - ["Χρυσοῦνγγ στόμα", "chrysunng stoma"]
+  # - ["Δριμύλον ὅρος", "drimylon oros"] doesn't work yet
+  - ["Ἰαβαδίου νῆσος", "iabadiu nesos"]

@@ -2,6 +2,7 @@
 import copy
 from collections import OrderedDict
 
+from ddt import file_data, ddt
 from testfixtures import compare
 
 from service.ws_re.register._base import RegisterException
@@ -12,6 +13,7 @@ from service.ws_re.register.test_base import BaseTestRegister
 from service.ws_re.volumes import Volumes
 
 
+@ddt
 class TestLemma(BaseTestRegister):
     def setUp(self):
         self.authors = Authors()
@@ -256,40 +258,10 @@ class TestLemma(BaseTestRegister):
     def test_strip_accents(self):
         compare("Αβαλας λιμηνaoueeeec", Lemma._strip_accents("Ἀβάλας λιμήνäöüèéêëç"))
 
-    def test_sort_key(self):
-        compare("uuuiiissceaouesoaceeeeiioouusu", Lemma.make_sort_key("Uv(Wij)'ï?ßçëäöüêśôʾʿâçèéêëîïôöûüśū"))
-        compare("flexum", Lemma.make_sort_key("ad Flexum"))
-        compare("epistulis", Lemma.make_sort_key("ab epistulis"))
-        compare("memoria", Lemma.make_sort_key("a memoria"))
-        compare("aabaa abfl", Lemma.make_sort_key("aabaa abfl"))
-        compare("aabab abfl", Lemma.make_sort_key("aabab abfl"))
-        compare("aabad abfl", Lemma.make_sort_key("aabad abfl"))
-        compare("abfl", Lemma.make_sort_key("G. abfl"))
-        compare("abdigildus", Lemma.make_sort_key("Abdigildus (?)–-"))
-        compare("abd 001 011 230", Lemma.make_sort_key("Abd 1 11 230"))
-        compare("e    orceni", Lemma.make_sort_key("E....orceni"))
-        compare("abalas limenu", Lemma.make_sort_key("Ἀβάλας λιμήνου"))
-        compare("hestiasis", Lemma.make_sort_key("Ἑστίασις"))
-        compare("hiaron tas athanaias", Lemma.make_sort_key("Ἱαρὸν τᾶς Ἀθαναίας"))
-        compare("agnu keras", Lemma.make_sort_key("Ἀγνοῦ κέρας"))
-        compare("aptuchu hieron", Lemma.make_sort_key("Ἀπτούχου ἱερόν"))
-        compare("hyakinthis hodos", Lemma.make_sort_key("Ὑακινθὶς ὁδός"))
-        compare("kaualenon katoikia", Lemma.make_sort_key("Καυαληνῶν κατοικία"))
-        compare("agaua kome", Lemma.make_sort_key("Ἀγαύα κώμη"))
-        compare("hyperemeros, hyperemeria", Lemma.make_sort_key("Ὑπερήμερος, ὑπερημερία"))
-        compare("he kyria", Lemma.make_sort_key("ἡ κυρία"))
-        compare("bokkanon hemeron", Lemma.make_sort_key("Βόκκανον ἥμερον"))
-        compare("charisteria eleutherias", Lemma.make_sort_key("Χαριστήρια ἐλευθερίας"))
-        compare("ephodion", Lemma.make_sort_key("Ἐφόδιον"))
-        compare("alana ore", Lemma.make_sort_key("Ἀλανὰ ὄρη"))
-        compare("heraites hormos", Lemma.make_sort_key("Ἡραΐτης Ὅρμος"))
-        compare("hamippoi", Lemma.make_sort_key("Ἅμιπποι"))
-        compare("chrysun stoma", Lemma.make_sort_key("Χρυσοῦν στόμα"))
-        compare("chrysunng stoma", Lemma.make_sort_key("Χρυσοῦνγγ στόμα"))
-        # compare("drimylon oros", Lemma.make_sort_key("Δριμύλον ὅρος"))
-        compare("hea", Lemma.make_sort_key("Ἑα"))
-        compare("ea", Lemma.make_sort_key("Ἐα"))
-        compare("iabadiu nesos", Lemma.make_sort_key("Ἰαβαδίου νῆσος"))
+    @file_data("test_data/test_lemma_sort_keys.yml")
+    def test_sort_key(self, testlist):
+        for item in testlist:
+            compare(item[1], Lemma.make_sort_key(item[0]))
 
 
     def test_sort_key_provide_by_lemma(self):

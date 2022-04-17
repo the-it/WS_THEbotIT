@@ -14,7 +14,7 @@ _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("test_register")
 
 def copy_tst_data(source: str, destination: str):
     base_path = Path(__file__).parent
-    shutil.copy(str(base_path.joinpath("test_data").joinpath(source + ".json")),
+    shutil.copy(str(base_path.joinpath("test_data/register_stubs").joinpath(source + ".json")),
                 str(base_path.joinpath("test_register").joinpath(destination + ".json")))
 
 
