@@ -3,7 +3,7 @@ import math
 import re
 import unicodedata
 from datetime import datetime
-from typing import List, Tuple, KeysView, Optional, Literal, Pattern
+from typing import List, Tuple, KeysView, Optional, Literal, Pattern, get_args
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
@@ -92,6 +92,8 @@ TRANSLATION_DICT = _generate_translation_dict()
 
 
 class Lemma:
+    _keys = get_args(LemmaDictKeys)
+
     def __init__(self,
                  lemma_dict: LemmaDict,
                  volume: Volume,
@@ -184,13 +186,14 @@ class Lemma:
     @property
     def lemma_dict(self) -> LemmaDict:
         return_dict: LemmaDict = {}
-        for property_key in self.keys():
-            if property_key == "chapters":
-                value = self._get_chapter_dicts()
-            else:
-                value = self._lemma_dict[property_key]  # type: ignore # TypedDict only works with string literals
-            if value:
-                return_dict[property_key] = value  # type: ignore # TypedDict only works with string literals
+        for property_key in self._keys:
+            if property_key in self.keys():
+                if property_key == "chapters":
+                    value = self._get_chapter_dicts()
+                else:
+                    value = self._lemma_dict[property_key]  # type: ignore # TypedDict only works with string literals
+                if value:
+                    return_dict[property_key] = value  # type: ignore # TypedDict only works with string literals
         return return_dict
 
     def _get_chapter_dicts(self) -> List[ChapterDict]:
