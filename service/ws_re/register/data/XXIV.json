@@ -26,29 +26,29 @@
     "previous": "Pyramos 2",
     "next": "Pyramos 4",
     "proof_read": 2,
+    "short_description": "s. Thisbe",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 11,
         "end": 11,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "s. Thisbe",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pyramos 4",
     "previous": "Pyramos 3",
     "next": "Pyrandros",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 11,
         "end": 11,
         "author": "H. Diller."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pyrandros",
@@ -101,15 +101,15 @@
     "previous": "Pyrasos 1",
     "next": "Pyrasos 3",
     "proof_read": 2,
+    "short_description": "Vater des Aithops",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 11,
         "end": 11,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Vater des Aithops",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pyrasos 3",
@@ -186,14 +186,14 @@
     "previous": "Pyrenaei Promunturium 2",
     "next": "Pyrene 1",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 13,
         "end": 13,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pyrene 1",
@@ -247,15 +247,15 @@
     "previous": "Pyres 1",
     "next": "Pyres 3",
     "proof_read": 2,
+    "short_description": "Vater des Parmenides",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 19,
         "end": 19,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Vater des Parmenides"
+    ]
   },
   {
     "lemma": "Pyres 3",
@@ -273,15 +273,15 @@
     "previous": "Pyres 3",
     "next": "Pyretos 1",
     "proof_read": 2,
+    "short_description": "Athener, Zeuge in dem Prozeß um die Erbschaft des Pyrrhos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 19,
         "end": 19,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Athener, Zeuge in dem Prozeß um die Erbschaft des Pyrrhos"
+    ]
   },
   {
     "lemma": "Pyretos 1",
@@ -299,15 +299,15 @@
     "previous": "Pyretos 1",
     "next": "Pyretos 3",
     "proof_read": 2,
+    "short_description": "Pyretus (Pyraethus), Kentaur",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 19,
         "end": 19,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Pyretus (Pyraethus), Kentaur"
+    ]
   },
   {
     "lemma": "Pyretos 3",
@@ -327,30 +327,30 @@
     "next": "Pyrgessa",
     "sort_key": "Pyrgensispater",
     "proof_read": 2,
+    "short_description": "Stadtgott",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 22,
         "end": 22,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Stadtgott"
+    ]
   },
   {
     "lemma": "Pyrgessa",
     "previous": "Pyrgensis pater",
     "next": "Pyrgeus",
     "proof_read": 2,
+    "short_description": "wohl das etruskische Pyrgi",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 22,
         "end": 22,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "wohl das etruskische Pyrgi"
+    ]
   },
   {
     "lemma": "Pyrgeus",
@@ -573,15 +573,15 @@
     "previous": "Pyrgos 7",
     "next": "Pyrgos 9",
     "proof_read": 2,
+    "short_description": "ho tou Pelorou legomenos in Sizilien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 48,
         "end": 48,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "ho tou Pelorou legomenos in Sizilien"
+    ]
   },
   {
     "lemma": "Pyrgos 9",
@@ -611,28 +611,28 @@
     "previous": "Pyrgos 10",
     "next": "Pyrgoteles 2",
     "proof_read": 3,
+    "short_description": "Architekt",
     "chapters": [
       {
         "start": 49,
         "end": 49,
         "author": "E. Fabricius."
       }
-    ],
-    "short_description": "Architekt"
+    ]
   },
   {
     "lemma": "Pyrgoteles 2",
     "previous": "Pyrgoteles 1",
     "next": "Pyrgoteles 3",
     "proof_read": 3,
+    "short_description": "[Pyrg]oteles Zoetos, Schiffsbaumeister",
     "chapters": [
       {
         "start": 49,
         "end": 49,
         "author": "E. Fabricius."
       }
-    ],
-    "short_description": "[Pyrg]oteles Zoetos, Schiffsbaumeister"
+    ]
   },
   {
     "lemma": "Pyrgoteles 3",
@@ -710,15 +710,15 @@
     "previous": "Pyrilampos",
     "next": "Pyrinus",
     "proof_read": 3,
+    "short_description": "Stadt in Karien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 52,
         "end": 52,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Stadt in Karien"
+    ]
   },
   {
     "lemma": "Pyrinus",
@@ -736,30 +736,30 @@
     "previous": "Pyrinus",
     "next": "Pyripais",
     "proof_read": 2,
+    "short_description": ",feueräugig‘",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 52,
         "end": 52,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": ",feueräugig‘"
+    ]
   },
   {
     "lemma": "Pyripais",
     "previous": "Pyriopes",
     "next": "Pyripeganyx",
     "proof_read": 2,
+    "short_description": "poetisches Beiwort des Dionysos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 52,
         "end": 52,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "poetisches Beiwort des Dionysos"
+    ]
   },
   {
     "lemma": "Pyripeganyx",
@@ -777,15 +777,15 @@
     "previous": "Pyripeganyx",
     "next": "Pyriphlegethon 1",
     "proof_read": 2,
+    "short_description": "‚feuerleuchtend‘, literarisches Epitheton des Dionysos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 52,
         "end": 52,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "‚feuerleuchtend‘, literarisches Epitheton des Dionysos"
+    ]
   },
   {
     "lemma": "Pyriphlegethon 1",
@@ -804,51 +804,53 @@
     "previous": "Pyriphlegethon 1",
     "next": "Pyrippe 1",
     "proof_read": 2,
+    "short_description": "Wasserlauf südlich von Cumae/Campanien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 53,
         "end": 53,
         "author": "Ernst Wüst."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Wasserlauf südlich von Cumae/Campanien"
+    ]
   },
   {
     "lemma": "Pyrippe 1",
     "previous": "Pyriphlegethon 2",
     "next": "Pyrippe 2",
     "proof_read": 2,
+    "short_description": "eine der 50 Töchter des Thespios",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 53,
         "end": 53,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "eine der 50 Töchter des Thespios"
+    ]
   },
   {
     "lemma": "Pyrippe 2",
     "previous": "Pyrippe 1",
     "next": "Pyris",
     "proof_read": 3,
+    "short_description": "Eigenname auf einer Inschrift aus dem thebanischen Kabirion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 53,
         "end": 53,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Eigenname auf einer Inschrift aus dem thebanischen Kabirion"
+    ]
   },
   {
     "lemma": "Pyris",
     "previous": "Pyrippe 2",
     "next": "Pyrisporos",
     "proof_read": 3,
+    "short_description": "Lykier, der von Patroklos getötet wird",
+    "no_creative_height": true,
     "wp_link": "w:it:Piri",
     "wd_link": "d:Q3905618",
     "chapters": [
@@ -857,24 +859,22 @@
         "end": 53,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Lykier, der von Patroklos getötet wird"
+    ]
   },
   {
     "lemma": "Pyrisporos",
     "previous": "Pyris",
     "next": "Pyrissaioi",
     "proof_read": 2,
+    "short_description": "‚im Feuer erzeugt‘, vgl. Pyrigenes, Epitheton des Dionysos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 53,
         "end": 53,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "‚im Feuer erzeugt‘, vgl. Pyrigenes, Epitheton des Dionysos"
+    ]
   },
   {
     "lemma": "Pyrissaioi",
@@ -972,45 +972,45 @@
     "previous": "Pyrmerulas",
     "next": "Pyrnos 2",
     "proof_read": 2,
+    "short_description": "ein Kyzikener",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 56,
         "end": 56,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "ein Kyzikener"
+    ]
   },
   {
     "lemma": "Pyrnos 2",
     "previous": "Pyrnos 1",
     "next": "Pyrodes",
     "proof_read": 2,
+    "short_description": "karische Stadt",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 56,
         "end": 56,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "karische Stadt"
+    ]
   },
   {
     "lemma": "Pyrodes",
     "previous": "Pyrnos 2",
     "next": "Pyroeis 1",
     "proof_read": 2,
+    "short_description": "Erfinder der Kunst, Feuer aus dem Kiesel zu schlagen",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 56,
         "end": 56,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Erfinder der Kunst, Feuer aus dem Kiesel zu schlagen"
+    ]
   },
   {
     "lemma": "Pyroeis 1",
@@ -1028,30 +1028,30 @@
     "previous": "Pyroeis 1",
     "next": "Pyroeis 3",
     "proof_read": 2,
+    "short_description": "und Aethon, als Rosse des Sol",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 56,
         "end": 56,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "und Aethon, als Rosse des Sol"
+    ]
   },
   {
     "lemma": "Pyroeis 3",
     "previous": "Pyroeis 2",
     "next": "Pyroeis 4",
     "proof_read": 2,
+    "short_description": "Bezeichnung des Ares",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 57,
         "end": 57,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Bezeichnung des Ares"
+    ]
   },
   {
     "lemma": "Pyroeis 4",
@@ -1107,30 +1107,30 @@
     "previous": "Pyrogeri",
     "next": "Pyron 2",
     "proof_read": 2,
+    "short_description": "Heros der lokr. Stadt Pyronaia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 73,
         "end": 73,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Heros der lokr. Stadt Pyronaia"
+    ]
   },
   {
     "lemma": "Pyron 2",
     "previous": "Pyron 1",
     "next": "Pyronaia",
     "proof_read": 2,
+    "short_description": "Seemann in einem Epigramm des Antipatros von Thessalonike",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 73,
         "end": 73,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Seemann in einem Epigramm des Antipatros von Thessalonike"
+    ]
   },
   {
     "lemma": "Pyronaia",
@@ -1235,14 +1235,14 @@
     "next": "Pyrrha 1",
     "redirect": "Pyroeis 4",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 77,
         "end": 77,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pyrrha 1",
@@ -1261,30 +1261,30 @@
     "previous": "Pyrrha 1",
     "next": "Pyrrha 3",
     "proof_read": 2,
+    "short_description": "Mutter des Neoptolemos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 78,
         "end": 78,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Mutter des Neoptolemos"
+    ]
   },
   {
     "lemma": "Pyrrha 3",
     "previous": "Pyrrha 2",
     "next": "Pyrrha 4",
     "proof_read": 2,
+    "short_description": "Name des als Mädchen getarnten Achilleus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 78,
         "end": 78,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Name des als Mädchen getarnten Achilleus"
+    ]
   },
   {
     "lemma": "Pyrrha 4",
@@ -1302,30 +1302,30 @@
     "previous": "Pyrrha 4",
     "next": "Pyrrha 6",
     "proof_read": 2,
+    "short_description": "Mutter Helenes",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 78,
         "end": 78,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Mutter Helenes"
+    ]
   },
   {
     "lemma": "Pyrrha 6",
     "previous": "Pyrrha 5",
     "next": "Pyrrha 7",
     "proof_read": 2,
+    "short_description": "Beiname der Agamede",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 78,
         "end": 78,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Beiname der Agamede"
+    ]
   },
   {
     "lemma": "Pyrrha 7",
@@ -1705,15 +1705,15 @@
     "previous": "Pyrrhichos 2ff.",
     "next": "Pyrrhichos 4",
     "proof_read": 2,
+    "short_description": "Korinthier",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 86,
         "end": 86,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Korinthier"
+    ]
   },
   {
     "lemma": "Pyrrhichos 4",
@@ -1731,30 +1731,30 @@
     "previous": "Pyrrhichos 4",
     "next": "Pyrrhine",
     "proof_read": 2,
+    "short_description": "s. Claudius Pyrrichus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 86,
         "end": 86,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "s. Claudius Pyrrichus"
+    ]
   },
   {
     "lemma": "Pyrrhine",
     "previous": "Pyrrhichos 5",
     "next": "Pyrrhion",
     "proof_read": 2,
+    "short_description": "Hetäre",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 87,
         "end": 87,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Hetäre"
+    ]
   },
   {
     "lemma": "Pyrrhion",
@@ -1798,30 +1798,30 @@
     "previous": "Pyrrhon 1",
     "next": "Pyrrhon 3",
     "proof_read": 2,
+    "short_description": "Pythagoreer aus Metapontion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 106,
         "end": 106,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Pythagoreer aus Metapontion"
+    ]
   },
   {
     "lemma": "Pyrrhon 3",
     "previous": "Pyrrhon 2",
     "next": "Pyrrhon 4",
     "proof_read": 2,
+    "short_description": "aus Phleius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 106,
         "end": 106,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "aus Phleius"
+    ]
   },
   {
     "lemma": "Pyrrhon 4",
@@ -1839,15 +1839,15 @@
     "previous": "Pyrrhon 4",
     "next": "Pyrrhos 1",
     "proof_read": 2,
+    "short_description": "Vater des Pratinas",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 106,
         "end": 106,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Vater des Pratinas"
+    ]
   },
   {
     "lemma": "Pyrrhos 1",
@@ -1866,15 +1866,15 @@
     "previous": "Pyrrhos 1",
     "next": "Pyrrhos 3",
     "proof_read": 2,
+    "short_description": "Name Achills auf Skyros",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 107,
         "end": 107,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Name Achills auf Skyros"
+    ]
   },
   {
     "lemma": "Pyrrhos 3",
@@ -1892,15 +1892,15 @@
     "previous": "Pyrrhos 3",
     "next": "Pyrrhos 5",
     "proof_read": 2,
+    "short_description": "Phryger",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 107,
         "end": 107,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Phryger"
+    ]
   },
   {
     "lemma": "Pyrrhos 5",
@@ -1919,90 +1919,90 @@
     "previous": "Pyrrhos 5",
     "next": "Pyrrhos 10",
     "proof_read": 2,
+    "short_description": "Kentaur",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Kentaur"
+    ]
   },
   {
     "lemma": "Pyrrhos 6",
     "previous": "Pyrrhos 5",
     "next": "Pyrrhos 7",
     "proof_read": 2,
+    "short_description": "delischer Fischer, eine frühere Inkarnation des Pythagoras",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "delischer Fischer, eine frühere Inkarnation des Pythagoras"
+    ]
   },
   {
     "lemma": "Pyrrhos 7",
     "previous": "Pyrrhos 6",
     "next": "Pyrrhos 8",
     "proof_read": 2,
+    "short_description": "delischer Fischerr, vom Blitz erschlagen, dessen Fahrzeug leer zurückkam",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "delischer Fischerr, vom Blitz erschlagen, dessen Fahrzeug leer zurückkam"
+    ]
   },
   {
     "lemma": "Pyrrhos 8",
     "previous": "Pyrrhos 7",
     "next": "Pyros 9",
     "proof_read": 2,
+    "short_description": "Name eines geliebten Knaben",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Name eines geliebten Knaben"
+    ]
   },
   {
     "lemma": "Pyrrhos 10",
     "previous": "Pyros 9",
     "next": "Pyrrhos 11",
     "proof_read": 2,
+    "short_description": "Künstlername",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Künstlername"
+    ]
   },
   {
     "lemma": "Pyrrhos 11",
     "previous": "Pyrrhos 10",
     "next": "Pyrrhos 12",
     "proof_read": 2,
+    "short_description": "mythisches Pferd auf einem Vasenbild",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "mythisches Pferd auf einem Vasenbild"
+    ]
   },
   {
     "lemma": "Pyrrhos 12",
@@ -2103,30 +2103,30 @@
     "previous": "Pyrrhos 19-20",
     "next": "Pyrson",
     "proof_read": 2,
+    "short_description": "Nymphen",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 170,
         "end": 170,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Nymphen"
+    ]
   },
   {
     "lemma": "Pyrson",
     "previous": "Pyrsanides",
     "next": "Pyrsophion",
     "proof_read": 2,
+    "short_description": "Sohn des Sositheos, Bruder des Hegesianax",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 170,
         "end": 170,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Sohn des Sositheos, Bruder des Hegesianax"
+    ]
   },
   {
     "lemma": "Pyrsophion",
@@ -2144,15 +2144,15 @@
     "previous": "Pyrsophion",
     "next": "Pytha(i)eus 1",
     "proof_read": 2,
+    "short_description": "von Gela, mit Aristonus von den Geloern als Gründer von Akragas eingesetzt",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 170,
         "end": 170,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "von Gela, mit Aristonus von den Geloern als Gründer von Akragas eingesetzt"
+    ]
   },
   {
     "lemma": "Pytha(i)eus 1",
@@ -2245,15 +2245,15 @@
     "previous": "Pythagoras 5",
     "next": "Pythagoras 7",
     "proof_read": 2,
+    "short_description": "Seher bei Plut. Alex.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 302,
         "end": 302,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Seher bei Plut. Alex."
+    ]
   },
   {
     "lemma": "Pythagoras 7",
@@ -2282,15 +2282,15 @@
     "previous": "Pythagoras 8",
     "next": "Pythagoras 10",
     "proof_read": 2,
+    "short_description": "Bischof von Sinope",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 302,
         "end": 302,
         "author": "Wilh. Enßlin."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Bischof von Sinope"
+    ]
   },
   {
     "lemma": "Pythagoras 10",
@@ -2321,30 +2321,30 @@
     "previous": "Pythagoras 11",
     "next": "Pythagoras 13",
     "proof_read": 2,
+    "short_description": "als rhetor mochtheros bei Diog. Laert.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 305,
         "end": 305,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "als rhetor mochtheros bei Diog. Laert.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythagoras 13",
     "previous": "Pythagoras 12",
     "next": "Pythagoras 14",
     "proof_read": 2,
+    "short_description": "von Paros Maler",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 305,
         "end": 305,
         "author": "Andreas Rumpf."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "von Paros Maler"
+    ]
   },
   {
     "lemma": "Pythagoras 14",
@@ -2387,75 +2387,75 @@
     "previous": "Pytainetos",
     "next": "Pythais",
     "proof_read": 2,
+    "short_description": "Nebenform von Pythios",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 309,
         "end": 309,
         "author": "Hans v. Geisau."
       }
-    ],
-    "short_description": "Nebenform von Pythios",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythais",
     "previous": "Pythaios",
     "next": "Pythangelos 1",
     "proof_read": 2,
+    "short_description": "Mutter des Pythagoras",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 309,
         "end": 309,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Mutter des Pythagoras"
+    ]
   },
   {
     "lemma": "Pythangelos 1",
     "previous": "Pythais",
     "next": "Pythangelos 2",
     "proof_read": 2,
+    "short_description": "Athener, zeigt Hierokles an, wegen Gewändern aus Schatz er Artemis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 309,
         "end": 309,
         "author": "Hans Gärtner."
       }
-    ],
-    "short_description": "Athener, zeigt Hierokles an, wegen Gewändern aus Schatz er Artemis",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythangelos 2",
     "previous": "Pythangelos 1",
     "next": "Pythangelos 3",
     "proof_read": 2,
+    "short_description": "Thebaner, Sohn des Phyleides, Boiotarch",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 309,
         "end": 309,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Thebaner, Sohn des Phyleides, Boiotarch",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythangelos 3",
     "previous": "Pythangelos 2",
     "next": "Πυθαγγέλου βωμοί",
     "proof_read": 2,
+    "short_description": "Tragiker",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 309,
         "end": 309,
         "author": "F. Stoessl."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Tragiker"
+    ]
   },
   {
     "lemma": "Πυθαγγέλου βωμοί",
@@ -2582,15 +2582,15 @@
     "previous": "Pytheas 4",
     "next": "Pytheas 6",
     "proof_read": 2,
+    "short_description": "Thebaner, Vater des Sängers Kleon",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 369,
         "end": 369,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Thebaner, Vater des Sängers Kleon"
+    ]
   },
   {
     "lemma": "Pytheas 6",
@@ -2620,15 +2620,15 @@
     "previous": "Pytheas 7",
     "next": "Pytheas 9",
     "proof_read": 2,
+    "short_description": "von Aigina, Sohn des Lampon",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 370,
         "end": 370,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "von Aigina, Sohn des Lampon"
+    ]
   },
   {
     "lemma": "Pytheas 9",
@@ -2646,15 +2646,15 @@
     "previous": "Pytheas 9",
     "next": "Pytheas 11",
     "proof_read": 3,
+    "short_description": "Vater des berühmten Malers Apelles von Kolophon",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 370,
         "end": 370,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Vater des berühmten Malers Apelles von Kolophon"
+    ]
   },
   {
     "lemma": "Pytheas 11",
@@ -2694,14 +2694,14 @@
     "previous": "Pytheas 13",
     "next": "Pythen",
     "proof_read": 3,
+    "short_description": "Sohn des Sosidemos aus Alopeke",
     "chapters": [
       {
         "start": 370,
         "end": 371,
         "author": "E. Fabricius."
       }
-    ],
-    "short_description": "Sohn des Sosidemos aus Alopeke"
+    ]
   },
   {
     "lemma": "Pythen",
@@ -3080,15 +3080,15 @@
     "previous": "Pythion 8",
     "next": "Pythion 10",
     "proof_read": 2,
+    "short_description": "in Lakonien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 563,
         "end": 563,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "in Lakonien"
+    ]
   },
   {
     "lemma": "Pythion 10",
@@ -3188,30 +3188,30 @@
     "previous": "Pythios 1",
     "next": "Pythios 3",
     "proof_read": 2,
+    "short_description": "Monatsname",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 567,
         "end": 567,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Monatsname"
+    ]
   },
   {
     "lemma": "Pythios 3",
     "previous": "Pythios 2",
     "next": "Pythios 4",
     "proof_read": 2,
+    "short_description": "Beiname des Zeus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 567,
         "end": 567,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Beiname des Zeus"
+    ]
   },
   {
     "lemma": "Pythios 4",
@@ -3256,15 +3256,15 @@
     "previous": "Pythios 6",
     "next": "Pythis 2",
     "proof_read": 2,
+    "short_description": "Tochter des Delphos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 569,
         "end": 569,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Tochter des Delphos"
+    ]
   },
   {
     "lemma": "Pythis 2",
@@ -3308,30 +3308,30 @@
     "previous": "Pytho 1",
     "next": "Pythochares",
     "proof_read": 2,
+    "short_description": "eine der fünf Hyaden",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 580,
         "end": 580,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "eine der fünf Hyaden"
+    ]
   },
   {
     "lemma": "Pythochares",
     "previous": "Pytho 2",
     "next": "Pythochrestos 1",
     "proof_read": 2,
+    "short_description": "Aulet, der durch sein Blasen den Ansturm wütender Wölfe zurücktrieb",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 580,
         "end": 580,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Aulet, der durch sein Blasen den Ansturm wütender Wölfe zurücktrieb"
+    ]
   },
   {
     "lemma": "Pythochrestoi exegetai",
@@ -3361,15 +3361,15 @@
     "next": "Pythodelos",
     "sort_key": "Pythochrestos 2",
     "proof_read": 2,
+    "short_description": "s. Exegetai",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 580,
         "end": 580,
         "author": "v. Geisau."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "s. Exegetai"
+    ]
   },
   {
     "lemma": "Pythodelos",
@@ -3515,75 +3515,75 @@
     "previous": "Pythodoros 7",
     "next": "Pythodoros 9",
     "proof_read": 2,
+    "short_description": "Schüler des Akademikers Arkesilaos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 590,
         "end": 590,
         "author": "Hatto H. Schmitt."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Schüler des Akademikers Arkesilaos"
+    ]
   },
   {
     "lemma": "Pythodoros 9",
     "previous": "Pythodoros 8",
     "next": "Pythodoros 10",
     "proof_read": 2,
+    "short_description": "Stephanophoros von Smyrna",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 590,
         "end": 590,
         "author": "Hatto H. Schmitt."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Stephanophoros von Smyrna"
+    ]
   },
   {
     "lemma": "Pythodoros 10",
     "previous": "Pythodoros 9",
     "next": "Pythodoros 11",
     "proof_read": 2,
+    "short_description": "eponymer Helios-Priester in Rhodos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 590,
         "end": 590,
         "author": "Hatto H. Schmitt."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "eponymer Helios-Priester in Rhodos"
+    ]
   },
   {
     "lemma": "Pythodoros 11",
     "previous": "Pythodoros 10",
     "next": "Pythodoros 12-14",
     "proof_read": 2,
+    "short_description": "Pythagoreer auf Kyzikos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 590,
         "end": 590,
         "author": "Konrat Ziegler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Pythagoreer auf Kyzikos"
+    ]
   },
   {
     "lemma": "Pythodoros 12",
     "previous": "Pythodoros 11",
     "next": "Pythodoros 13",
     "proof_read": 2,
+    "short_description": "Vater des Chairemon aus Nysa am Mäander",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 590,
         "end": 590,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Vater des Chairemon aus Nysa am Mäander"
+    ]
   },
   {
     "lemma": "Pythodoros 12-14",
@@ -3591,15 +3591,15 @@
     "next": "Pythodoros 12",
     "sort_key": "Pythodoros 11z",
     "proof_read": 2,
+    "short_description": "häufiger Name in einer bedeutenden Familie in Karien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 590,
         "end": 590,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "häufiger Name in einer bedeutenden Familie in Karien",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythodoros 13",
@@ -3698,15 +3698,15 @@
     "previous": "Pythodoros 18",
     "next": "Pythodotos",
     "proof_read": 3,
+    "short_description": "zwei Bildhauer, die die Wohnräume des Caesaren schmückten",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 596,
         "end": 596,
         "author": "Andreas Rumpf."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "zwei Bildhauer, die die Wohnräume des Caesaren schmückten"
+    ]
   },
   {
     "lemma": "Pythodotos",
@@ -3724,15 +3724,15 @@
     "previous": "Pythodotos",
     "next": "Pythogeitonioi",
     "proof_read": 3,
+    "short_description": "s. Pythogeitonioi",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 597,
         "end": 597,
         "author": "V. Gebhard."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "s. Pythogeitonioi"
+    ]
   },
   {
     "lemma": "Pythogeitonioi",
@@ -3810,15 +3810,15 @@
     "previous": "Pythokles 1",
     "next": "Pythokles 3",
     "proof_read": 2,
+    "short_description": "Attiker aus dem Demos Myrrhinus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 600,
         "end": 600,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Attiker aus dem Demos Myrrhinus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythokles 3",
@@ -3836,6 +3836,8 @@
     "previous": "Pythokles 3",
     "next": "Pythokles 5",
     "proof_read": 2,
+    "short_description": "von Elis",
+    "no_creative_height": true,
     "wp_link": "w:el:Πυθοκλής ο Ηλείος",
     "wd_link": "d:Q21685730",
     "chapters": [
@@ -3844,9 +3846,7 @@
         "end": 600,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "von Elis",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythokles 5",
@@ -3875,30 +3875,30 @@
     "previous": "Pythokles 6",
     "next": "Pythokles 8",
     "proof_read": 2,
+    "short_description": "Sohn des Bugelos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 600,
         "end": 600,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Sohn des Bugelos",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythokles 8",
     "previous": "Pythokles 7",
     "next": "Pythokles 9",
     "proof_read": 2,
+    "short_description": "Von Lampsakos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 600,
         "end": 600,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Von Lampsakos",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythokles 9",
@@ -3928,21 +3928,23 @@
     "previous": "Pythokles 10",
     "next": "Pythokles 12",
     "proof_read": 2,
+    "short_description": "Grammatiker",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 601,
         "end": 601,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Grammatiker",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythokles 12",
     "previous": "Pythokles 11",
     "next": "Pythokritos 1",
     "proof_read": 2,
+    "short_description": "Bronzebildner",
+    "no_creative_height": true,
     "wp_link": "w:de:Pythokles",
     "wd_link": "d:Q97657374",
     "chapters": [
@@ -3951,24 +3953,22 @@
         "end": 601,
         "author": "Andreas Rumpf."
       }
-    ],
-    "short_description": "Bronzebildner",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythokritos 1",
     "previous": "Pythokles 12",
     "next": "Pythokritos 2",
     "proof_read": 2,
+    "short_description": "Athenischer Archon 494/3 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 601,
         "end": 601,
         "author": "Hans Gärtner."
       }
-    ],
-    "short_description": "Athenischer Archon 494/3 v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythokritos 2",
@@ -3998,30 +3998,30 @@
     "previous": "Pythokritos 3",
     "next": "Pytholaos",
     "proof_read": 2,
+    "short_description": "Beiwort Apollons",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 602,
         "end": 602,
         "author": "Hans v. Geisau."
       }
-    ],
-    "short_description": "Beiwort Apollons",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pytholaos",
     "previous": "Pythoktonos",
     "next": "Pytholaou akroterion",
     "proof_read": 2,
+    "short_description": "statt Peitholaos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 602,
         "end": 602,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "statt Peitholaos",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pytholaou akroterion",
@@ -4066,29 +4066,29 @@
     "previous": "Πυθολάου στῆλαι",
     "next": "Pythomantis",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 606,
         "end": 606,
         "author": "Hans v. Geisau."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythomantis",
     "previous": "Pytholetas",
     "next": "Python 1",
     "proof_read": 2,
+    "short_description": "Beiwort Apollons",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 606,
         "end": 606,
         "author": "Hans v. Geisau."
       }
-    ],
-    "short_description": "Beiwort Apollons",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Python 1",
@@ -4424,15 +4424,15 @@
     "previous": "Pyttalos",
     "next": "Pyxa(i",
     "proof_read": 2,
+    "short_description": "Vater des Amarynkeus, wanderte in der Generation vor Herakles in Elis ein",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 619,
         "end": 619,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Vater des Amarynkeus, wanderte in der Generation vor Herakles in Elis ein",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pyxa(i",
@@ -4520,29 +4520,29 @@
     "next": "Q als Sigle 3",
     "redirect": "Quirina tribus",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 622,
         "end": 622,
         "author": "H. Chantraine."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Q als Sigle 3",
     "previous": "Q als Sigle 2",
     "next": "Q als Sigle 4",
     "proof_read": 2,
+    "short_description": "Quirites in der Verbindung p. R. Q.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 622,
         "end": 622,
         "author": "H. Chantraine."
       }
-    ],
-    "short_description": "Quirites in der Verbindung p. R. Q.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Q als Sigle 4",
@@ -4692,15 +4692,15 @@
     "previous": "Quadratianus 1",
     "next": "Quadration",
     "proof_read": 2,
+    "short_description": "Bischof von Sicilibba um 411 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 674,
         "end": 674,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Sicilibba um 411 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quadration",
@@ -4775,45 +4775,45 @@
     "previous": "Quadratus 2",
     "next": "Quadratus 4",
     "proof_read": 2,
+    "short_description": "Proconsul Asiae 154/5 n. Chr., s. L. Statius Quadratus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 677,
         "end": 677,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Proconsul Asiae 154/5 n. Chr., s. L. Statius Quadratus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quadratus 4",
     "previous": "Quadratus 3",
     "next": "Quadratus 5",
     "proof_read": 2,
+    "short_description": "Verschwörer gegen Commodus 182 n. Chr., s. Ummidius Quadratus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 677,
         "end": 677,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Verschwörer gegen Commodus 182 n. Chr., s. Ummidius Quadratus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quadratus 5",
     "previous": "Quadratus 4",
     "next": "Quadratus 6",
     "proof_read": 2,
+    "short_description": "Arzt, von Galen zitiert",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 677,
         "end": 677,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Arzt, von Galen zitiert",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quadratus 6",
@@ -4831,15 +4831,15 @@
     "previous": "Quadratus 6",
     "next": "Quadratus 8",
     "proof_read": 2,
+    "short_description": "Quadratus Maesianus Celsus, Xvir stlit. iudic., Augur unbestimmter Zeit",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 677,
         "end": 677,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Quadratus Maesianus Celsus, Xvir stlit. iudic., Augur unbestimmter Zeit",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quadratus 8",
@@ -4894,15 +4894,15 @@
     "previous": "Quadriburgium 1",
     "next": "Quadriburgium 3",
     "proof_read": 2,
+    "short_description": "spätantike Festung in Pannonia prim., Garnison equites sagittarii",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 680,
         "end": 680,
         "author": "B. Saria."
       }
-    ],
-    "short_description": "spätantike Festung in Pannonia prim., Garnison equites sagittarii",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quadriburgium 3",
@@ -5068,15 +5068,15 @@
     "previous": "quaesitor 1",
     "next": "quaestio 1",
     "proof_read": 2,
+    "short_description": "Beamter in Constantinopel",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 720,
         "end": 720,
         "author": "Gunter Wesener."
       }
-    ],
-    "short_description": "Beamter in Constantinopel",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "quaestio 1",
@@ -5144,15 +5144,15 @@
     "previous": "quaestorium",
     "next": "quaestorius 2",
     "proof_read": 2,
+    "short_description": "den Quaestor betreffend",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 827,
         "end": 827,
         "author": "Gunter Wesener."
       }
-    ],
-    "short_description": "den Quaestor betreffend",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "quaestorius 2",
@@ -5334,30 +5334,30 @@
     "previous": "Quartunzialstandard",
     "next": "Quartus 2",
     "proof_read": 2,
+    "short_description": "M. Aurelius Consius Quartus iunior",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 838,
         "end": 838,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "M. Aurelius Consius Quartus iunior",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quartus 2",
     "previous": "Quartus 1",
     "next": "quaternio 1",
     "proof_read": 2,
+    "short_description": "Flavius Iunius Quartus Palladius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 838,
         "end": 838,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Flavius Iunius Quartus Palladius",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "quaternio 1",
@@ -5486,15 +5486,15 @@
     "previous": "Querquetulanae",
     "next": "Quidila 1",
     "proof_read": 2,
+    "short_description": "Ort in Makedonien bei Thessalonike",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 876,
         "end": 876,
         "author": "B. Saria."
       }
-    ],
-    "short_description": "Ort in Makedonien bei Thessalonike",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quidila 1",
@@ -5512,15 +5512,15 @@
     "previous": "Quidila 1",
     "next": "Quies 1",
     "proof_read": 2,
+    "short_description": "Sajo unter dem Ostgotenkönig Athalarich",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 876,
         "end": 876,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Sajo unter dem Ostgotenkönig Athalarich",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quies 1",
@@ -5618,15 +5618,15 @@
     "previous": "Quietus",
     "next": "Quietus 2",
     "proof_read": 2,
+    "short_description": "Bischof von Utica um 348 †",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 879,
         "end": 879,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Utica um 348 †",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quietus 2",
@@ -5725,45 +5725,45 @@
     "previous": "Quinctilius 5",
     "next": "Quinctilius 6",
     "proof_read": 2,
+    "short_description": "Varus, gestorben 42 v. Chr. s. Nr. 17",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 902,
         "end": 902,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "Varus, gestorben 42 v. Chr. s. Nr. 17",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctilius 6",
     "previous": "Quinctilius 5a",
     "next": "Quinctilius 7",
     "proof_read": 2,
+    "short_description": "(Varus), L. um 460 v. Chr. Großvater von Nr. 9",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 902,
         "end": 902,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "(Varus), L. um 460 v. Chr. Großvater von Nr. 9",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctilius 7",
     "previous": "Quinctilius 6",
     "next": "Quinctilius 8",
     "proof_read": 2,
+    "short_description": "(Quinctilius?) Varus, L., um 440 v. Chr. Vater von Nr. 9",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 902,
         "end": 902,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "(Quinctilius?) Varus, L., um 440 v. Chr. Vater von Nr. 9",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctilius 8",
@@ -5817,15 +5817,15 @@
     "previous": "Quinctilius 10a",
     "next": "Quinctilius 12",
     "proof_read": 2,
+    "short_description": "Varus, P. um 510 v. Chr. Großvater von Nr. 15",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 903,
         "end": 903,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "Varus, P. um 510 v. Chr. Großvater von Nr. 15",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctilius 12",
@@ -5855,15 +5855,15 @@
     "previous": "Quinctilius 13",
     "next": "Quinctilius 15",
     "proof_read": 2,
+    "short_description": "Varus, Sex. um 480 v. Chr. Vater von Nr. 15",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 904,
         "end": 904,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "Varus, Sex. um 480 v. Chr. Vater von Nr. 15",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctilius 15",
@@ -6031,30 +6031,30 @@
     "previous": "Quinctilius 28",
     "next": "Quinctilius 30",
     "proof_read": 2,
+    "short_description": "Schwester des P. Quinctilius Varus Nr. 20, Gattin des Nonius Asprenas",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 987,
         "end": 987,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Schwester des P. Quinctilius Varus Nr. 20, Gattin des Nonius Asprenas"
+    ]
   },
   {
     "lemma": "Quinctilius 30",
     "previous": "Quinctilius 29",
     "next": "Quinctilius 31",
     "proof_read": 2,
+    "short_description": "Quinctilia, zweite Schwester des P. Quinctilius Varus Nr. 20",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 987,
         "end": 987,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Quinctilia, zweite Schwester des P. Quinctilius Varus Nr. 20"
+    ]
   },
   {
     "lemma": "Quinctilius 31",
@@ -6072,15 +6072,15 @@
     "previous": "Quinctilius 31",
     "next": "Quinctius",
     "proof_read": 2,
+    "short_description": "Quintilius Laetus, praef. urbi 395 n. Chr. = Quintilius Laetus Nr. 1a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 987,
         "end": 987,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Quintilius Laetus, praef. urbi 395 n. Chr. = Quintilius Laetus Nr. 1a",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius",
@@ -6155,15 +6155,15 @@
     "previous": "Quinctius 4",
     "next": "Quinctius 6",
     "proof_read": 2,
+    "short_description": "1. Jh. v. Chr. Freund des Catull mit Liebschaft in Verona",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 998,
         "end": 998,
         "author": "H. Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "1. Jh. v. Chr. Freund des Catull mit Liebschaft in Verona"
+    ]
   },
   {
     "lemma": "Quinctius 6",
@@ -6275,15 +6275,15 @@
     "previous": "Quinctius 13",
     "next": "Quinctius 14a",
     "proof_read": 2,
+    "short_description": "Markos Kointos Gaiou yios Rhomaios, Inschrift auf Chios um 100 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1006,
         "end": 1006,
         "author": "H. Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Markos Kointos Gaiou yios Rhomaios, Inschrift auf Chios um 100 v. Chr."
+    ]
   },
   {
     "lemma": "Quinctius 14a",
@@ -6301,15 +6301,15 @@
     "previous": "Quinctius 14a",
     "next": "Quinctius 15",
     "proof_read": 2,
+    "short_description": "Cincinnatus Capitolinus, M. vgl. Nr. 32",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1006,
         "end": 1006,
         "author": "Hans Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Cincinnatus Capitolinus, M. vgl. Nr. 32"
+    ]
   },
   {
     "lemma": "Quinctius 15",
@@ -6339,15 +6339,15 @@
     "previous": "Quinctius 16",
     "next": "Quinctius 18",
     "proof_read": 2,
+    "short_description": "P. f., P. aus tribus Romilia, 1. Jh. v. Chr., trib. militum legio XVI",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1008,
         "end": 1008,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "P. f., P. aus tribus Romilia, 1. Jh. v. Chr., trib. militum legio XVI",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 18",
@@ -6458,29 +6458,29 @@
     "previous": "Quinctius 25",
     "next": "Cincinnati 26-30.32ff.",
     "proof_read": 3,
+    "short_description": "Capitolinus, T. Tribunus militum consulari potestate 385 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1019,
         "end": 1019,
         "author": "Hans Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Capitolinus, T. Tribunus militum consulari potestate 385 v. Chr."
+    ]
   },
   {
     "lemma": "Cincinnati 26-30.32ff.",
     "previous": "Quinctius 25a",
     "next": "Quinctius 26",
     "sort_key": "Quinctius 25z",
+    "short_description": "Cognomen den Quinctier, ‚Lockenkopf‘",
     "chapters": [
       {
         "start": 1019,
         "end": 1019,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "Cognomen den Quinctier, ‚Lockenkopf‘"
+    ]
   },
   {
     "lemma": "Quinctius 26",
@@ -6546,15 +6546,15 @@
     "previous": "Quinctius 30",
     "next": "Quinctius 32",
     "proof_read": 2,
+    "short_description": "(Cincinnatus?), Q. Consulartribun 369 v. Chr., Sohn des Q. Nr. 30.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1025,
         "end": 1025,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "(Cincinnatus?), Q. Consulartribun 369 v. Chr., Sohn des Q. Nr. 30.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 32",
@@ -6681,15 +6681,15 @@
     "previous": "Quinctius 40",
     "next": "Quinctius 42",
     "proof_read": 2,
+    "short_description": "Flamininus, Kaeso, Duumvir aedi locandae 217 v. Chr. mit C. Pupius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1039,
         "end": 1039,
         "author": "Hans Gundel."
       }
-    ],
-    "short_description": "Flamininus, Kaeso, Duumvir aedi locandae 217 v. Chr. mit C. Pupius",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 42",
@@ -6720,15 +6720,15 @@
     "previous": "Quinctius 43",
     "next": "Quinctius 45",
     "proof_read": 2,
+    "short_description": "(Flamininus), T. um 240 v. Chr. Vater von Nr. 43 und 45, Sohn von Nr. 42",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1047,
         "end": 1047,
         "author": "H. Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "(Flamininus), T. um 240 v. Chr. Vater von Nr. 43 und 45, Sohn von Nr. 42"
+    ]
   },
   {
     "lemma": "Quinctius 45",
@@ -6793,30 +6793,30 @@
     "previous": "Quinctius 49",
     "next": "Quinctius 51",
     "proof_read": 2,
+    "short_description": "M. f. Gallus, bekannt aus Inschrift im Gebiet der Aequer",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1102,
         "end": 1102,
         "author": "H. Gundel."
       }
-    ],
-    "short_description": "M. f. Gallus, bekannt aus Inschrift im Gebiet der Aequer",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 51",
     "previous": "Quinctius 50",
     "next": "Quinctius 52",
     "proof_read": 2,
+    "short_description": "M. f. Plancinus, M. aus der Tribus Pollia, Senator 44 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1102,
         "end": 1102,
         "author": "Hans Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "M. f. Plancinus, M. aus der Tribus Pollia, Senator 44 v. Chr."
+    ]
   },
   {
     "lemma": "Quinctius 52",
@@ -6879,75 +6879,75 @@
     "previous": "Quinctius 56",
     "next": "Quinctius 58",
     "proof_read": 2,
+    "short_description": "Valgus?, C., vgl. Art. Valgius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1104,
         "end": 1104,
         "author": "H. Gundel."
       }
-    ],
-    "short_description": "Valgus?, C., vgl. Art. Valgius",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 58",
     "previous": "Quinctius 57",
     "next": "Quinctius 59",
     "proof_read": 2,
+    "short_description": "Quinctia?, Schwester von Nr. 6 und Nr. 16, lebte um 100 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1104,
         "end": 1104,
         "author": "H. Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Quinctia?, Schwester von Nr. 6 und Nr. 16, lebte um 100 v. Chr."
+    ]
   },
   {
     "lemma": "Quinctius 59",
     "previous": "Quinctius 58",
     "next": "Quinctius 60",
     "proof_read": 2,
+    "short_description": "möglicherweise Schwester von Nr. 5",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1104,
         "end": 1104,
         "author": "H. Gundel."
       }
-    ],
-    "short_description": "möglicherweise Schwester von Nr. 5",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 60",
     "previous": "Quinctius 59",
     "next": "Quinctius 61",
     "proof_read": 2,
+    "short_description": "Quintia, Tochter des Senators Nr. 13, Gattin des C. Asinius Pollio",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1105,
         "end": 1105,
         "author": "H. Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Quintia, Tochter des Senators Nr. 13, Gattin des C. Asinius Pollio"
+    ]
   },
   {
     "lemma": "Quinctius 61",
     "previous": "Quinctius 60",
     "next": "Quinctius 62",
     "proof_read": 2,
+    "short_description": "L. f. Rufa aus Lanuvium",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1105,
         "end": 1105,
         "author": "H. Gundel."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. f. Rufa aus Lanuvium"
+    ]
   },
   {
     "lemma": "Quinctius 62",
@@ -6977,75 +6977,75 @@
     "previous": "Quinctius 63",
     "next": "Quinctius 65",
     "proof_read": 2,
+    "short_description": "Atticus, (M.) Legatus Aug. der Legion IV Scythica",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1106,
         "end": 1106,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Atticus, (M.) Legatus Aug. der Legion IV Scythica",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 65",
     "previous": "Quinctius 64",
     "next": "Quinctius 66",
     "proof_read": 2,
+    "short_description": "C. f. Vel. Certus Publius Marcellus, cos. 120, s. Publicius Nr. 36",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1106,
         "end": 1106,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. f. Vel. Certus Publius Marcellus, cos. 120, s. Publicius Nr. 36"
+    ]
   },
   {
     "lemma": "Quinctius 66",
     "previous": "Quinctius 65",
     "next": "Quinctius 67",
     "proof_read": 2,
+    "short_description": "Certus, römischer Ritter, in Korsika auf Seite Othos, 69 v. Chr. getötet",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1106,
         "end": 1106,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Certus, römischer Ritter, in Korsika auf Seite Othos, 69 v. Chr. getötet",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 67",
     "previous": "Quinctius 66",
     "next": "Quinctius 68",
     "proof_read": 2,
+    "short_description": "Cestianus Ducenius Proculus, Polyonymos d. 2. Jh.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1106,
         "end": 1106,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Cestianus Ducenius Proculus, Polyonymos d. 2. Jh.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 68",
     "previous": "Quinctius 67",
     "next": "Quinctius 69",
     "proof_read": 2,
+    "short_description": "Cincinnatus, Caligula nahm ihm sein Familienzeichen, das Haar",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1106,
         "end": 1106,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Cincinnatus, Caligula nahm ihm sein Familienzeichen, das Haar"
+    ]
   },
   {
     "lemma": "Quinctius 69",
@@ -7075,15 +7075,15 @@
     "previous": "Quinctius 71",
     "next": "Quinctius 73",
     "proof_read": 2,
+    "short_description": "Paulinus, Vizepräfekt von Ägypten 72/3 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1107,
         "end": 1107,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Paulinus, Vizepräfekt von Ägypten 72/3 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 71",
@@ -7101,45 +7101,45 @@
     "previous": "Quinctius 72",
     "next": "Quinctius 74",
     "proof_read": 2,
+    "short_description": "Trogus, (C.) von vornehmem Stand, Freigelassener ist Kalator pontificum",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1107,
         "end": 1107,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Trogus, (C.) von vornehmem Stand, Freigelassener ist Kalator pontificum",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quinctius 74",
     "previous": "Quinctius 73",
     "next": "Quinctius 75",
     "proof_read": 2,
+    "short_description": "Quintia Gallt P. f., Mutter des C. Annius Lepidus Marcellus, IIIvir",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1107,
         "end": 1107,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Quintia Gallt P. f., Mutter des C. Annius Lepidus Marcellus, IIIvir"
+    ]
   },
   {
     "lemma": "Quinctius 75",
     "previous": "Quinctius 74",
     "next": "quincunx",
     "proof_read": 2,
+    "short_description": "C. f. Severa, vornehme Spanierin aus traianisch-hadrianischer Zeit",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1107,
         "end": 1107,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. f. Severa, vornehme Spanierin aus traianisch-hadrianischer Zeit"
+    ]
   },
   {
     "lemma": "quincunx",
@@ -7369,60 +7369,60 @@
     "previous": "Ad Quintanas",
     "next": "Quintasius 2",
     "proof_read": 2,
+    "short_description": "Bischof von Caralis in Sardinien am Konzil von Arles 314 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1264,
         "end": 1264,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Caralis in Sardinien am Konzil von Arles 314 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintasius 2",
     "previous": "Quintasius 1",
     "next": "Quintasius 3",
     "proof_read": 2,
+    "short_description": "Bischof von Capsa in Byzacena um 393 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1264,
         "end": 1264,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Capsa in Byzacena um 393 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintasius 3",
     "previous": "Quintasius 2",
     "next": "Quintasius 4",
     "proof_read": 2,
+    "short_description": "Episc. Vaiensis, Donatist am Religionsgespräch in Karthago 411 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1264,
         "end": 1264,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Episc. Vaiensis, Donatist am Religionsgespräch in Karthago 411 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintasius 4",
     "previous": "Quintasius 3",
     "next": "Quintiana positio",
     "proof_read": 2,
+    "short_description": "Bischof von Mutecia zur Zeit der Katholikenverfolgung unter Hunerich",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1264,
         "end": 1264,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Mutecia zur Zeit der Katholikenverfolgung unter Hunerich",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintiana positio",
@@ -7430,45 +7430,45 @@
     "next": "Quintianus 1",
     "sort_key": "Quintianapositio",
     "proof_read": 2,
+    "short_description": "unbedeutender Hafenplatz an der tyrrhenischen Küste",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1264,
         "end": 1264,
         "author": "Gerhard Radke."
       }
-    ],
-    "short_description": "unbedeutender Hafenplatz an der tyrrhenischen Küste",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintianus 1",
     "previous": "Quintiana positio",
     "next": "Quintianus 2",
     "proof_read": 2,
+    "short_description": "Freund Martials",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1264,
         "end": 1264,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Freund Martials",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintianus 2",
     "previous": "Quintianus 1",
     "next": "Quintianus 3",
     "proof_read": 2,
+    "short_description": "L. Ragonius, cos. 299 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1264,
         "end": 1264,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "L. Ragonius, cos. 299 v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintianus 3",
@@ -7509,60 +7509,60 @@
     "previous": "Quintianus 5",
     "next": "Quintianus 7",
     "proof_read": 2,
+    "short_description": "Priester in Karthago, in einem Konflikt mit seinem Bischof",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1265,
         "end": 1265,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Priester in Karthago, in einem Konflikt mit seinem Bischof",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintianus 7",
     "previous": "Quintianus 6",
     "next": "Quintianus 8",
     "proof_read": 2,
+    "short_description": "donatistischer Bischof von Lacus Dulcis um 411 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1265,
         "end": 1265,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "donatistischer Bischof von Lacus Dulcis um 411 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintianus 8",
     "previous": "Quintianus 7",
     "next": "Quintianus 9",
     "proof_read": 2,
+    "short_description": "Bischof von Casulae, Byzacena, während Katholikenverfolgung Hunerichs",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1265,
         "end": 1265,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Casulae, Byzacena, während Katholikenverfolgung Hunerichs",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintianus 9",
     "previous": "Quintianus 8",
     "next": "Quintianus 10",
     "proof_read": 2,
+    "short_description": "Bischof von Lares, Opfer der Katholikenverfolgung Hunerichs",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1265,
         "end": 1265,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Lares, Opfer der Katholikenverfolgung Hunerichs",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintianus 10",
@@ -7614,30 +7614,30 @@
     "previous": "Quintilianus 2",
     "next": "Quintilianus 4",
     "proof_read": 2,
+    "short_description": "Zeitgenosse des Galen",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1268,
         "end": 1268,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Zeitgenosse des Galen",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintilianus 4",
     "previous": "Quintilianus 3",
     "next": "Quintilianus 5",
     "proof_read": 2,
+    "short_description": "Adressat des Reskripts von Septimius Severus und Caracalla 208 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1268,
         "end": 1268,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Adressat des Reskripts von Septimius Severus und Caracalla 208 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintilianus 5",
@@ -7681,15 +7681,15 @@
     "previous": "Quintilius",
     "next": "Quintillus",
     "proof_read": 2,
+    "short_description": "erfundener Name einer Freundin des Numitor",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1268,
         "end": 1268,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "erfundener Name einer Freundin des Numitor",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintillus",
@@ -7775,60 +7775,60 @@
     "previous": "Quintus 1",
     "next": "Quintus 3",
     "proof_read": 2,
+    "short_description": "cos. ord. 272, mit Iunius Veldumnianus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1270,
         "end": 1270,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "cos. ord. 272, mit Iunius Veldumnianus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintus 3",
     "previous": "Quintus 2",
     "next": "Quintus 4",
     "proof_read": 2,
+    "short_description": "Bischof von Urusis an der Kirchenversammlung zu Karthago 255 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1270,
         "end": 1270,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Urusis an der Kirchenversammlung zu Karthago 255 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintus 4",
     "previous": "Quintus 3",
     "next": "Quintus 5",
     "proof_read": 2,
+    "short_description": "Curiale aus Hippo, veranlaßte Symmachus zu einem Brief an Apollodorus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1270,
         "end": 1270,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Curiale aus Hippo, veranlaßte Symmachus zu einem Brief an Apollodorus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintus 5",
     "previous": "Quintus 4",
     "next": "Quintus 6",
     "proof_read": 2,
+    "short_description": "Bischof von Tagarata, am Religionsgespräch von Karthago 411 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1270,
         "end": 1270,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Tagarata, am Religionsgespräch von Karthago 411 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quintus 6",
@@ -7881,15 +7881,15 @@
     "previous": "Quintus von Smyrna",
     "next": "Quirina tribus",
     "proof_read": 2,
+    "short_description": "Diakon, Delegierter des Bischofs von Rom am Konzil von Arles 314 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1296,
         "end": 1296,
         "author": "Adolf Lippold."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Diakon, Delegierter des Bischofs von Rom am Konzil von Arles 314 n. Chr."
+    ]
   },
   {
     "lemma": "Quirinalia",
@@ -8053,15 +8053,15 @@
     "previous": "Quiris, Quiritis, Curis, Cur(r)itis",
     "next": "Quiza",
     "proof_read": 2,
+    "short_description": "Bischof von Philadelphia am Konzil von Serdica 342/43 n. Chr., Arianer(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1333,
         "end": 1333,
         "author": "Adolf Lippold."
       }
-    ],
-    "short_description": "Bischof von Philadelphia am Konzil von Serdica 342/43 n. Chr., Arianer(?)",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Quiza",
@@ -8148,15 +8148,15 @@
     "previous": "Quodvultdeus 5",
     "next": "Quodvultdeus 7",
     "proof_read": 2,
+    "short_description": "Bischof von Bulla Regia, am Konzil von Karthago 525 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1399,
         "end": 1399,
         "author": "Adolf Lippold."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Bischof von Bulla Regia, am Konzil von Karthago 525 n. Chr."
+    ]
   },
   {
     "lemma": "Quodvultdeus 7",
@@ -8174,15 +8174,15 @@
     "previous": "Quodvultdeus 7",
     "next": "Quodvultdeus 9",
     "proof_read": 2,
+    "short_description": "Episc. eccl. Numanae, unterschrieb im Dreikapitelstreit 553 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1399,
         "end": 1399,
         "author": "Adolf Lippold."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Episc. eccl. Numanae, unterschrieb im Dreikapitelstreit 553 n. Chr."
+    ]
   },
   {
     "lemma": "Quodvultdeus 9",
@@ -8211,15 +8211,15 @@
     "previous": "Quodvultdeus 10",
     "next": "Quosenus",
     "proof_read": 2,
+    "short_description": "weiblicher Name: Pescennia Qu. h(onestae) m(emoriae) f(emina)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1399,
         "end": 1399,
         "author": "Adolf Lippold."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "weiblicher Name: Pescennia Qu. h(onestae) m(emoriae) f(emina)"
+    ]
   },
   {
     "lemma": "Quosenus",
@@ -8362,15 +8362,15 @@
     "previous": "Pyrron pedion 2",
     "next": "Pyrrhos 20",
     "proof_read": 2,
+    "short_description": "Athener, Prozeß um dessen Erbschaft, 20 Jahre nach seinem Tode",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1429,
         "end": 1429,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "Athener, Prozeß um dessen Erbschaft, 20 Jahre nach seinem Tode",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pyrrhos 20",
@@ -8388,15 +8388,15 @@
     "previous": "Pyrrhos 20",
     "next": "Pytharchos 1",
     "proof_read": 2,
+    "short_description": "griechischer Poliorketiker 3. Jh. v. Chr.?",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1429,
         "end": 1429,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "griechischer Poliorketiker 3. Jh. v. Chr.?"
+    ]
   },
   {
     "lemma": "Pytharchos 1",
@@ -8414,15 +8414,15 @@
     "previous": "Pytharchos 1",
     "next": "Pythion PN 2",
     "proof_read": 2,
+    "short_description": "von Mantineia, Sieger im Stadionlauf zu Olympia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1429,
         "end": 1429,
         "author": "Konrat Ziegler."
       }
-    ],
-    "short_description": "von Mantineia, Sieger im Stadionlauf zu Olympia",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythion PN 2",
@@ -8430,14 +8430,14 @@
     "next": "Pythis akra",
     "sort_key": "Pythionpn 2",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1429,
         "end": 1429,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pythis akra",

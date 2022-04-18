@@ -33,14 +33,14 @@
     "previous": "Adule",
     "next": "Agri decumates",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 2,
         "end": 3,
         "author": "E. Littmann."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Agri decumates",
@@ -61,27 +61,27 @@
     "lemma": "Aguntum",
     "previous": "Agri decumates",
     "next": "Aischetades",
+    "short_description": "Stadt in Noricum = Aguontum",
     "chapters": [
       {
         "start": 15,
         "end": 21,
         "author": "E. Swoboda."
       }
-    ],
-    "short_description": "Stadt in Noricum = Aguontum"
+    ]
   },
   {
     "lemma": "Aischetades",
     "previous": "Aguntum",
     "next": "Alexandros 17",
+    "short_description": "Stratege von Salamis 4. Jh. v. Chr., vgl. Asketades",
     "chapters": [
       {
         "start": 21,
         "end": 21,
         "author": "Otto Walter."
       }
-    ],
-    "short_description": "Stratege von Salamis 4. Jh. v. Chr., vgl. Asketades"
+    ]
   },
   {
     "lemma": "Alexandros 17",
@@ -102,6 +102,7 @@
     "previous": "Alexandros 17",
     "next": "Amnisos 1",
     "proof_read": 3,
+    "short_description": "Pflanzenname",
     "wp_link": "w:de:Beinwell",
     "wd_link": "d:Q161566",
     "chapters": [
@@ -110,8 +111,7 @@
         "end": 26,
         "author": "Steier."
       }
-    ],
-    "short_description": "Pflanzenname"
+    ]
   },
   {
     "lemma": "Amnisos 1",
@@ -131,29 +131,29 @@
     "lemma": "Amphinomos 6",
     "previous": "Amnisos 1",
     "next": "Andron 18",
+    "short_description": "Mathematiker im 4. Jh. v. Chr.",
     "chapters": [
       {
         "start": 38,
         "end": 39,
         "author": "K. v. Fritz."
       }
-    ],
-    "short_description": "Mathematiker im 4. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Andron 18",
     "previous": "Amphinomos 6",
     "next": "Antiochos 65",
     "proof_read": 3,
+    "short_description": "Mathematiker im 5. Jh. v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 39,
         "end": 39,
         "author": "K. v. Fritz."
       }
-    ],
-    "short_description": "Mathematiker im 5. Jh. v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Antiochos 65",
@@ -214,28 +214,28 @@
     "previous": "Apollonia 7",
     "next": "Aqua, Aquae 77a",
     "proof_read": 3,
+    "short_description": "Aegypt. Steuer auf Wein- und Gartenland",
     "chapters": [
       {
         "start": 43,
         "end": 44,
         "author": "H. Kortenbeutel."
       }
-    ],
-    "short_description": "Aegypt. Steuer auf Wein- und Gartenland"
+    ]
   },
   {
     "lemma": "Aqua, Aquae 77a",
     "previous": "Apomoira",
     "next": "Arbion",
     "sort_key": "Aqua, Aquae 077a",
+    "short_description": "S[---], Ort im Gebiet der dalmat. Daesitiaten",
     "chapters": [
       {
         "start": 45,
         "end": 45,
         "author": "B. Saria."
       }
-    ],
-    "short_description": "S[---], Ort im Gebiet der dalmat. Daesitiaten"
+    ]
   },
   {
     "lemma": "Arbion",
@@ -254,14 +254,14 @@
     "previous": "Arbion",
     "next": "Architectura",
     "proof_read": 3,
+    "short_description": "Rangbezeichnung am Hof der Ptolemaier",
     "chapters": [
       {
         "start": 46,
         "end": 49,
         "author": "H. Kortenbeutel."
       }
-    ],
-    "short_description": "Rangbezeichnung am Hof der Ptolemaier"
+    ]
   },
   {
     "lemma": "Architectura",
@@ -283,35 +283,36 @@
     "previous": "Architectura",
     "next": "Arnasi(us)",
     "proof_read": 3,
+    "short_description": "Makedone im Dienste Ptolemaios' II. Philadelphos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 49,
         "end": 49,
         "author": "Fritz Heichelheim."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Makedone im Dienste Ptolemaios' II. Philadelphos"
+    ]
   },
   {
     "lemma": "Arnasi(us)",
     "previous": "Aristolaos 2",
     "next": "Arruntius 17a",
     "proof_read": 3,
+    "short_description": "Arnazi(us), Signum der Kaiser Trebonianus Gallus und Volusianus(?)",
     "chapters": [
       {
         "start": 49,
         "end": 49,
         "author": "W. Kubitschek †."
       }
-    ],
-    "short_description": "Arnazi(us), Signum der Kaiser Trebonianus Gallus und Volusianus(?)"
+    ]
   },
   {
     "lemma": "Arruntius 17a",
     "previous": "Arnasi(us)",
     "next": "Artorius 4a",
     "proof_read": 3,
+    "short_description": "M. A Frugi, ad census provinciae Ciliciae, provinciae Cappadociae",
     "wp_link": "w:de:Marcus Arruntius Frugi",
     "wd_link": "d:Q90132588",
     "chapters": [
@@ -320,14 +321,14 @@
         "end": 49,
         "author": "Stein."
       }
-    ],
-    "short_description": "M. A Frugi, ad census provinciae Ciliciae, provinciae Cappadociae"
+    ]
   },
   {
     "lemma": "Artorius 4a",
     "previous": "Arruntius 17a",
     "next": "Asidonia",
     "proof_read": 3,
+    "short_description": "L. A. Castus, richtig für L. A. Nr. 7 (II 1461. S I 146) [Iu]stus",
     "wp_link": "w:de:Lucius Artorius Castus",
     "wd_link": "d:Q529871",
     "chapters": [
@@ -336,22 +337,21 @@
         "end": 50,
         "author": "Stein."
       }
-    ],
-    "short_description": "L. A. Castus, richtig für L. A. Nr. 7 (II 1461. S I 146) [Iu]stus"
+    ]
   },
   {
     "lemma": "Asidonia",
     "previous": "Artorius 4a",
     "next": "Askese",
     "proof_read": 3,
+    "short_description": "A. Galla, Gattin des Iulius Nr. 231 Fidus Aquila",
     "chapters": [
       {
         "start": 50,
         "end": 50,
         "author": "Stein."
       }
-    ],
-    "short_description": "A. Galla, Gattin des Iulius Nr. 231 Fidus Aquila"
+    ]
   },
   {
     "lemma": "Askese",
@@ -373,30 +373,30 @@
     "previous": "Askese",
     "next": "Attributio",
     "sort_key": "Asklepiais",
+    "proof_read": 3,
+    "short_description": "Stadt auf der Insel Ikaria, späterer Name von Thermai, bei Schwefelquelle",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 64,
         "end": 65,
         "author": "Dumrese."
       }
-    ],
-    "proof_read": 3,
-    "short_description": "Stadt auf der Insel Ikaria, späterer Name von Thermai, bei Schwefelquelle",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Attributio",
     "previous": "Ἀσκληπιαις",
     "next": "Auction 1",
     "proof_read": 3,
+    "short_description": "Verwaltungsrechtlicher Begriff",
     "chapters": [
       {
         "start": 65,
         "end": 71,
         "author": "Ernst Kornemann."
       }
-    ],
-    "short_description": "Verwaltungsrechtlicher Begriff"
+    ]
   },
   {
     "lemma": "Auction 1",
@@ -417,16 +417,16 @@
     "lemma": "Aurelius 63a",
     "previous": "Auction 1",
     "next": "Aurelius 39a",
+    "proof_read": 3,
+    "short_description": "A. Augustianus, dux von Vexillationen der legion II Parthica unter Gallienus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 72,
         "end": 72,
         "author": "B. Saria."
       }
-    ],
-    "proof_read": 3,
-    "short_description": "A. Augustianus, dux von Vexillationen der legion II Parthica unter Gallienus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aurelius 39a",
@@ -434,14 +434,14 @@
     "next": "Aurelius 56b",
     "sort_key": "Aurelius 039a",
     "proof_read": 3,
+    "short_description": "A. Antinous, Vizepräfekt von Aegypten im J. 215/16 n. Chr.",
     "chapters": [
       {
         "start": 72,
         "end": 73,
         "author": "Stein."
       }
-    ],
-    "short_description": "A. Antinous, Vizepräfekt von Aegypten im J. 215/16 n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 56b",
@@ -462,14 +462,14 @@
     "previous": "Aurelius 56b",
     "next": "Aurelius 184",
     "proof_read": 3,
+    "short_description": "A. Helix, siegreicher Athlet zu Anfang des 3. Jh. n. Chr.",
     "chapters": [
       {
         "start": 73,
         "end": 74,
         "author": "Stein."
       }
-    ],
-    "short_description": "A. Helix, siegreicher Athlet zu Anfang des 3. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 184",
@@ -491,42 +491,42 @@
     "previous": "Aurelius 184",
     "next": "Aurelius 234a",
     "proof_read": 3,
+    "short_description": "M. A. Sebastenus",
     "chapters": [
       {
         "start": 74,
         "end": 75,
         "author": "Stein."
       }
-    ],
-    "short_description": "M. A. Sebastenus"
+    ]
   },
   {
     "lemma": "Aurelius 234a",
     "previous": "Aurelius 216a",
     "next": "Aurelius 244a",
     "proof_read": 3,
+    "short_description": "A. Verianus, Präfekt von Aegypten im J. 188 n. Chr.",
     "chapters": [
       {
         "start": 75,
         "end": 75,
         "author": "Stein."
       }
-    ],
-    "short_description": "A. Verianus, Präfekt von Aegypten im J. 188 n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 244a",
     "previous": "Aurelius 234a",
     "next": "Axomis",
     "proof_read": 3,
+    "short_description": "M. A. Zeno Ianuarius, Präfekt von Aegypten im J. 231 n. Chr.",
     "chapters": [
       {
         "start": 75,
         "end": 75,
         "author": "Stein."
       }
-    ],
-    "short_description": "M. A. Zeno Ianuarius, Präfekt von Aegypten im J. 231 n. Chr."
+    ]
   },
   {
     "lemma": "Axomis",
@@ -574,6 +574,7 @@
     "previous": "Brogitarus",
     "next": "Caecina 24",
     "proof_read": 3,
+    "short_description": "Q. C. Avitus, cos. suff. im J. 164 n. Chr. (L)",
     "wp_link": "w:de:Quintus Caecilius Avitus",
     "wd_link": "d:Q12282859",
     "chapters": [
@@ -582,8 +583,7 @@
         "end": 83,
         "author": "Groag."
       }
-    ],
-    "short_description": "Q. C. Avitus, cos. suff. im J. 164 n. Chr. (L)"
+    ]
   },
   {
     "lemma": "Caecina 24",
@@ -605,27 +605,27 @@
     "previous": "Caecina 24",
     "next": "Canaliclarius",
     "proof_read": 3,
+    "short_description": "C. C., cos. suff. im J. 4 v. Chr., Vater des C. C. Nr. 33 Rufus(?)",
     "chapters": [
       {
         "start": 83,
         "end": 83,
         "author": "Groag."
       }
-    ],
-    "short_description": "C. C., cos. suff. im J. 4 v. Chr., Vater des C. C. Nr. 33 Rufus(?)"
+    ]
   },
   {
     "lemma": "Canaliclarius",
     "previous": "Caelius 7a",
     "next": "Chirographum",
+    "short_description": "Röm. Militärbeamter",
     "chapters": [
       {
         "start": 83,
         "end": 84,
         "author": "B. Saria."
       }
-    ],
-    "short_description": "Röm. Militärbeamter"
+    ]
   },
   {
     "lemma": "Chirographum",
@@ -673,14 +673,14 @@
     "next": "Claudius 207",
     "sort_key": "Chrematismos",
     "proof_read": 3,
+    "short_description": "Die amtliche Urkunde in ptolem. Zt.",
     "chapters": [
       {
         "start": 90,
         "end": 90,
         "author": "Erich Ziebarth."
       }
-    ],
-    "short_description": "Die amtliche Urkunde in ptolem. Zt."
+    ]
   },
   {
     "lemma": "Claudius 207",
@@ -713,14 +713,14 @@
     "previous": "Clementius 1",
     "next": "Cocceius 3",
     "proof_read": 3,
+    "short_description": "C. Valerius Marcellinus, Praeses der Provinz Mauretania Tingit. 277-280 n. Chr.",
     "chapters": [
       {
         "start": 89,
         "end": 90,
         "author": "Stein."
       }
-    ],
-    "short_description": "C. Valerius Marcellinus, Praeses der Provinz Mauretania Tingit. 277-280 n. Chr."
+    ]
   },
   {
     "lemma": "Cocceius 3",
@@ -752,121 +752,121 @@
     "lemma": "Codicarii 2",
     "previous": "Cocceius 12",
     "next": "Contributio 2",
+    "short_description": "Militär. Rang",
     "chapters": [
       {
         "start": 90,
         "end": 91,
         "author": "B. Saria."
       }
-    ],
-    "short_description": "Militär. Rang"
+    ]
   },
   {
     "lemma": "Contributio 2",
     "previous": "Codicarii 2",
     "next": "Corona 3",
     "proof_read": 3,
+    "short_description": "Die Zusammenlegung zweier oder mehrerer Gemeinden vgl. Synoikismos",
     "chapters": [
       {
         "start": 91,
         "end": 96,
         "author": "Ernst Kornemann."
       }
-    ],
-    "short_description": "Die Zusammenlegung zweier oder mehrerer Gemeinden vgl. Synoikismos"
+    ]
   },
   {
     "lemma": "Corona 3",
     "previous": "Contributio 2",
     "next": "Dea Coryphea",
+    "short_description": "Sub c. vendere, der Verkauf von Kriegsgefangenen",
     "chapters": [
       {
         "start": 96,
         "end": 97,
         "author": "Arnold Ehrhardt."
       }
-    ],
-    "short_description": "Sub c. vendere, der Verkauf von Kriegsgefangenen"
+    ]
   },
   {
     "lemma": "Dea Coryphea",
     "previous": "Corona 3",
     "next": "Crepereius 3a",
+    "short_description": "Epitheton der karthag. Gottheit Caelestis",
     "chapters": [
       {
         "start": 97,
         "end": 98,
         "author": "B. Saria."
       }
-    ],
-    "short_description": "Epitheton der karthag. Gottheit Caelestis"
+    ]
   },
   {
     "lemma": "Crepereius 3a",
     "previous": "Dea Coryphea",
     "next": "Crepereius 5a",
     "proof_read": 3,
+    "short_description": "L. C. Fronto, amicus et proc. Augg. nicht vor Marc Aurel und Verus",
     "chapters": [
       {
         "start": 98,
         "end": 98,
         "author": "Stein."
       }
-    ],
-    "short_description": "L. C. Fronto, amicus et proc. Augg. nicht vor Marc Aurel und Verus"
+    ]
   },
   {
     "lemma": "Crepereius 5a",
     "previous": "Crepereius 3a",
     "next": "Cuspius 2a",
     "proof_read": 3,
+    "short_description": "L. C. Paulus, Prokurator der pannon. Silberbergwerke in hadrian.-antonin. Zt.",
     "chapters": [
       {
         "start": 98,
         "end": 98,
         "author": "Stein."
       }
-    ],
-    "short_description": "L. C. Paulus, Prokurator der pannon. Silberbergwerke in hadrian.-antonin. Zt."
+    ]
   },
   {
     "lemma": "Cuspius 2a",
     "previous": "Crepereius 5a",
     "next": "Daimonismos",
+    "short_description": "cos. 142, s. [3.4]).",
     "chapters": [
       {
         "start": 98,
         "end": 100,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "cos. 142, s. [3.4])."
+    ]
   },
   {
     "lemma": "Daimonismos",
     "previous": "Cuspius 2a",
     "next": "Daitos",
+    "short_description": "Die Besessenheit",
     "chapters": [
       {
         "start": 100,
         "end": 114,
         "author": "Friedrich Pfister."
       }
-    ],
-    "short_description": "Die Besessenheit"
+    ]
   },
   {
     "lemma": "Daitos",
     "previous": "Daimonismos",
     "next": "Dasumius 1",
+    "short_description": "Nachkomme des Kephalos (XI 217 Nr. 1) : streichen.",
     "chapters": [
       {
         "start": 114,
         "end": 115,
         "author": "Otto Walter."
       }
-    ],
-    "short_description": "Nachkomme des Kephalos (XI 217 Nr. 1) : streichen."
+    ]
   },
   {
     "lemma": "Dasumius 1",
@@ -941,6 +941,7 @@
     "previous": "Δειγματοκαταγωγός",
     "next": "Δεκατηλόγος",
     "proof_read": 2,
+    "short_description": "Sterne und Sternbilder zur Festlegung der Nachtstunden und der Zehntagewoche",
     "wp_link": "w:de:Dekan (Astrologie)",
     "wd_link": "d:Q639904",
     "chapters": [
@@ -949,8 +950,7 @@
         "end": 124,
         "author": "W. Gundel."
       }
-    ],
-    "short_description": "Sterne und Sternbilder zur Festlegung der Nachtstunden und der Zehntagewoche"
+    ]
   },
   {
     "lemma": "Δεκατηλόγος",
@@ -958,20 +958,21 @@
     "next": "Demetrios 100a",
     "sort_key": "Dekatelogos",
     "proof_read": 3,
+    "short_description": "Erheber der 10.tigen Steuer auf Ein- und Ausfuhr",
     "chapters": [
       {
         "start": 124,
         "end": 124,
         "author": "Erich Ziebarth."
       }
-    ],
-    "short_description": "Erheber der 10.tigen Steuer auf Ein- und Ausfuhr"
+    ]
   },
   {
     "lemma": "Demetrios 100a",
     "previous": "Δεκατηλόγος",
     "next": "δημοσίωσις",
     "proof_read": 3,
+    "short_description": "D. Chloros, ältester Kommentator des Nikandros.",
     "wp_link": "w:en:Demetrios Chloros",
     "wd_link": "d:Q5255251",
     "chapters": [
@@ -980,8 +981,7 @@
         "end": 124,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": "D. Chloros, ältester Kommentator des Nikandros."
+    ]
   },
   {
     "lemma": "δημοσίωσις",
@@ -989,14 +989,14 @@
     "next": "Derkylos 2",
     "sort_key": "demosiosis",
     "proof_read": 3,
+    "short_description": "Die Verlautbarung. vgl. Cheirographon",
     "chapters": [
       {
         "start": 123,
         "end": 123,
         "author": "E. Ziebarth."
       }
-    ],
-    "short_description": "Die Verlautbarung. vgl. Cheirographon"
+    ]
   },
   {
     "lemma": "Derkylos 2",
@@ -1016,6 +1016,7 @@
     "previous": "Derkylos 2",
     "next": "Diakrioi",
     "proof_read": 2,
+    "short_description": "Der Angehörige der untersten Rangklasse am Hof der Ptolemaier",
     "wp_link": "w:de:Diadochen",
     "wd_link": "d:Q201546",
     "chapters": [
@@ -1024,8 +1025,7 @@
         "end": 126,
         "author": "H. Kortenbeutel."
       }
-    ],
-    "short_description": "Der Angehörige der untersten Rangklasse am Hof der Ptolemaier"
+    ]
   },
   {
     "lemma": "Diakrioi",
@@ -1059,27 +1059,27 @@
     "next": "Diokles 34b",
     "sort_key": "dieramatites",
     "proof_read": 3,
+    "short_description": "Hafenbeamter im kaiserzeitl. Aegypten",
     "chapters": [
       {
         "start": 127,
         "end": 127,
         "author": "Erich Ziebarth."
       }
-    ],
-    "short_description": "Hafenbeamter im kaiserzeitl. Aegypten"
+    ]
   },
   {
     "lemma": "Diokles 34b",
     "previous": "διεραματίτης",
     "next": "Δίψιος",
+    "short_description": "Offizier des Königs Ptolemaios II. Philadelphos oder III. Euergetes",
     "chapters": [
       {
         "start": 127,
         "end": 127,
         "author": "Fritz Heichelheim."
       }
-    ],
-    "short_description": "Offizier des Königs Ptolemaios II. Philadelphos oder III. Euergetes"
+    ]
   },
   {
     "lemma": "Δίψιος",
@@ -1087,27 +1087,27 @@
     "next": "Discoduraterae",
     "sort_key": "Dipsios",
     "proof_read": 2,
+    "short_description": "Monatsname in Pharsalos",
     "chapters": [
       {
         "start": 127,
         "end": 127,
         "author": "v. Hiller."
       }
-    ],
-    "short_description": "Monatsname in Pharsalos"
+    ]
   },
   {
     "lemma": "Discoduraterae",
     "previous": "Δίψιος",
     "next": "Dreros",
+    "short_description": "Befestigtes Emporion der Stadt Augusta Traiana",
     "chapters": [
       {
         "start": 128,
         "end": 128,
         "author": "Gawril Kazarow."
       }
-    ],
-    "short_description": "Befestigtes Emporion der Stadt Augusta Traiana"
+    ]
   },
   {
     "lemma": "Dreros",
@@ -1165,14 +1165,14 @@
     "next": "Elufrius",
     "sort_key": "ekmartyresis",
     "proof_read": 2,
+    "short_description": "Das Verfahren zur Bestätigung eines Cheirographon",
     "chapters": [
       {
         "start": 173,
         "end": 174,
         "author": "Erich Ziebarth."
       }
-    ],
-    "short_description": "Das Verfahren zur Bestätigung eines Cheirographon"
+    ]
   },
   {
     "lemma": "Elufrius",
@@ -1421,6 +1421,7 @@
     "previous": "Gartibulum",
     "next": "Γῆ ἐν ἀφέσει",
     "proof_read": 3,
+    "short_description": "M. G. (Apicius), frühkaiserzeitl. Schlemmer",
     "wp_link": "w:de:Marcus Gavius Apicius",
     "ws_link": "s:it:Autore:Marco Gavio Apicio",
     "wd_link": "d:Q117841",
@@ -1430,8 +1431,7 @@
         "end": 204,
         "author": "Fiehn."
       }
-    ],
-    "short_description": "M. G. (Apicius), frühkaiserzeitl. Schlemmer"
+    ]
   },
   {
     "lemma": "Γῆ ἐν ἀφέσει",
@@ -1540,41 +1540,41 @@
     "previous": "Hegias",
     "next": "Herennius 33a",
     "proof_read": 3,
+    "short_description": "Oberlauf des maked. Baphyras (II 2850)",
     "chapters": [
       {
         "start": 277,
         "end": 277,
         "author": "E. Oberhummer."
       }
-    ],
-    "short_description": "Oberlauf des maked. Baphyras (II 2850)"
+    ]
   },
   {
     "lemma": "Herennius 33a",
     "previous": "Helikon 1a",
+    "next": "Hodoidokos",
     "proof_read": 3,
+    "short_description": "M. H. Philotas, Epistratege der Heptanomis im J. 148 n. Chr.",
     "chapters": [
       {
         "start": 277,
         "end": 278,
         "author": "Stein."
       }
-    ],
-    "short_description": "M. H. Philotas, Epistratege der Heptanomis im J. 148 n. Chr.",
-    "next": "Hodoidokos"
+    ]
   },
   {
     "lemma": "Hylas 7a",
     "next": "Hymnodoi",
     "proof_read": 3,
+    "short_description": ">4a Griech. Kultschriftsteller",
     "chapters": [
       {
         "start": 277,
         "end": 278,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": ">4a Griech. Kultschriftsteller"
+    ]
   },
   {
     "lemma": "Hymnodoi",
@@ -1607,14 +1607,14 @@
     "previous": "Herennius 33a",
     "next": "ὁμολογία γάμου",
     "proof_read": 3,
+    "short_description": "Angebliche altlokr. Sagengestalt",
     "chapters": [
       {
         "start": 278,
         "end": 278,
         "author": "G. Türk."
       }
-    ],
-    "short_description": "Angebliche altlokr. Sagengestalt"
+    ]
   },
   {
     "lemma": "ὁμολογία γάμου",
@@ -1622,14 +1622,14 @@
     "next": "Hylas 7a",
     "sort_key": "homologia gamu",
     "proof_read": 3,
+    "short_description": "Klausel in aegypt. Eheverträgen",
     "chapters": [
       {
         "start": 278,
         "end": 278,
         "author": "E. Ziebarth."
       }
-    ],
-    "short_description": "Klausel in aegypt. Eheverträgen"
+    ]
   },
   {
     "lemma": "Hyparchos 2",
@@ -1692,15 +1692,15 @@
     "previous": "Inkrustation",
     "next": "Isonomia",
     "proof_read": 2,
+    "short_description": "Oberster Hofbeamter unter Ptolemaios XI. Alexandros II., Sohn des Helenos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 293,
         "end": 293,
         "author": "Fritz Heichelheim."
       }
-    ],
-    "short_description": "Oberster Hofbeamter unter Ptolemaios XI. Alexandros II., Sohn des Helenos",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Isonomia",
@@ -1722,14 +1722,14 @@
     "next": "Iulius 80",
     "sort_key": "Iulius 062a",
     "proof_read": 2,
+    "short_description": "C. I. [Ale]xianus, Konsul, Praeses der Provinz Dalmatia unter Caracalla",
     "chapters": [
       {
         "start": 309,
         "end": 309,
         "author": "Stein."
       }
-    ],
-    "short_description": "C. I. [Ale]xianus, Konsul, Praeses der Provinz Dalmatia unter Caracalla"
+    ]
   },
   {
     "lemma": "Iulius 80",
@@ -1768,14 +1768,14 @@
     "next": "Iulius 118",
     "sort_key": "Iulius 086a",
     "proof_read": 2,
+    "short_description": "Ti. I. Aquilinus Castricius Saturnin[us] Claudius Livianus, praef. praet.",
     "chapters": [
       {
         "start": 310,
         "end": 310,
         "author": "Stein."
       }
-    ],
-    "short_description": "Ti. I. Aquilinus Castricius Saturnin[us] Claudius Livianus, praef. praet."
+    ]
   },
   {
     "lemma": "Iulius 118",
@@ -1810,14 +1810,14 @@
     "previous": "Iulius 348",
     "next": "Iulius 357",
     "proof_read": 2,
+    "short_description": "M. I. Maximianus, Iuridicus in Aegypten (im J. 137 n. Chr.?)",
     "chapters": [
       {
         "start": 310,
         "end": 311,
         "author": "Stein."
       }
-    ],
-    "short_description": "M. I. Maximianus, Iuridicus in Aegypten (im J. 137 n. Chr.?)"
+    ]
   },
   {
     "lemma": "Iulius 357",
@@ -1854,20 +1854,21 @@
     "previous": "Iulius 418",
     "next": "Iulius 425a",
     "proof_read": 3,
+    "short_description": "Iul(ius) Proculus, Prokurator und Archiereus der Provinz Asia 276 n. Chr.",
     "chapters": [
       {
         "start": 311,
         "end": 311,
         "author": "Stein."
       }
-    ],
-    "short_description": "Iul(ius) Proculus, Prokurator und Archiereus der Provinz Asia 276 n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 425a",
     "previous": "Iulius 422a",
     "next": "Iulius 462",
     "proof_read": 2,
+    "short_description": "C. I. Quadratus Bassus, cos. suff. im J. 105 n. Chr.",
     "wp_link": "w:de:Gaius Iulius Quadratus Bassus",
     "wd_link": "d:Q549880",
     "chapters": [
@@ -1876,8 +1877,7 @@
         "end": 312,
         "author": "Groag."
       }
-    ],
-    "short_description": "C. I. Quadratus Bassus, cos. suff. im J. 105 n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 462",
@@ -1897,6 +1897,7 @@
     "previous": "Iulius 462",
     "next": "Iulius 536",
     "proof_read": 3,
+    "short_description": "Ti. I. Secundus, cos. suff. im J. 116 n. Chr.",
     "wp_link": "w:de:Tiberius Iulius Secundus",
     "wd_link": "d:Q3274090",
     "chapters": [
@@ -1905,8 +1906,7 @@
         "end": 312,
         "author": "Groag."
       }
-    ],
-    "short_description": "Ti. I. Secundus, cos. suff. im J. 116 n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 536",
@@ -2106,15 +2106,15 @@
     "previous": "Korax 5",
     "next": "Korax 7",
     "proof_read": 2,
+    "short_description": "Berg im Kaukasos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 335,
         "end": 335,
         "author": "Erich Diehl."
       }
-    ],
-    "short_description": "Berg im Kaukasos",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Korax 7",
@@ -2297,15 +2297,15 @@
     "previous": "Leontios 8",
     "next": "Leptines 6a",
     "proof_read": 2,
+    "short_description": "Rechtsgelehrter und Professor in Konstantinopel",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 376,
         "end": 376,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "Rechtsgelehrter und Professor in Konstantinopel",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Leptines 6a",
@@ -2335,14 +2335,14 @@
     "next": "Lex Acilia de intercalando",
     "sort_key": "Leukosa",
     "proof_read": 2,
+    "short_description": "Maked. Fluß",
     "chapters": [
       {
         "start": 378,
         "end": 378,
         "author": "E. Oberhummer."
       }
-    ],
-    "short_description": "Maked. Fluß"
+    ]
   },
   {
     "lemma": "Lex Acilia de intercalando",
@@ -2383,15 +2383,15 @@
     "next": "Lex Antistia",
     "sort_key": "Lexaemilia 4",
     "proof_read": 2,
+    "short_description": "L. A. frumentaria",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 382,
         "end": 382,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "L. A. frumentaria",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Antistia",
@@ -2432,15 +2432,15 @@
     "next": "Lex Antonia 4",
     "sort_key": "Lexantonia 3",
     "proof_read": 2,
+    "short_description": "L. A. agraria",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 382,
         "end": 382,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "L. A. agraria",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Antonia 4",
@@ -2448,15 +2448,15 @@
     "next": "Lex Aternia Tarpeia",
     "sort_key": "Lexantonia 4",
     "proof_read": 2,
+    "short_description": "L. A. de candidatis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 382,
         "end": 382,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "L. A. de candidatis",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Aternia Tarpeia",
@@ -2508,14 +2508,14 @@
     "next": "Lex Clodia de victoriato",
     "sort_key": "Lexcicereia de sponsu",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 383,
         "end": 383,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Clodia de victoriato",
@@ -2545,15 +2545,15 @@
     "next": "Leges Corneliae Pompeiae 1",
     "sort_key": "Lex Corneliae 4",
     "proof_read": 2,
+    "short_description": "Gesetze des Cn. Cornelius Lentulus Clodianus de pecunia exigenda",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 384,
         "end": 384,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "Gesetze des Cn. Cornelius Lentulus Clodianus de pecunia exigenda",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Leges Corneliae Pompeiae 1",
@@ -2671,14 +2671,14 @@
     "next": "Lex Furia (Leges Furiae)",
     "sort_key": "Lexfufia 1",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 395,
         "end": 395,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Furia (Leges Furiae)",
@@ -2708,15 +2708,15 @@
     "next": "Lex Hirtia de Pompeianis",
     "sort_key": "Lexhelvia",
     "proof_read": 2,
+    "short_description": "Gesetz über die Absetzung der Volkstribunen L. Caesetius, Epidius, Marullus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 396,
         "end": 396,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gesetz über die Absetzung der Volkstribunen L. Caesetius, Epidius, Marullus"
+    ]
   },
   {
     "lemma": "Lex Hirtia de Pompeianis",
@@ -2724,14 +2724,14 @@
     "next": "Lex Hortensia 1",
     "sort_key": "Lexhirtia de pompeianis",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 396,
         "end": 396,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Hortensia 1",
@@ -2772,15 +2772,15 @@
     "next": "Lex Lucretia de agro Campano",
     "sort_key": "Lexiunia 7",
     "proof_read": 2,
+    "short_description": "L. I. militaris",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 398,
         "end": 398,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. I. militaris"
+    ]
   },
   {
     "lemma": "Lex Lucretia de agro Campano",
@@ -2788,15 +2788,15 @@
     "next": "Lex Lutatia de vi",
     "sort_key": "Lexlucretia de agro campano",
     "proof_read": 2,
+    "short_description": "Vgl. M. Lucretius Nr. 8. Campanus ager",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 399,
         "end": 399,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Vgl. M. Lucretius Nr. 8. Campanus ager"
+    ]
   },
   {
     "lemma": "Lex Lutatia de vi",
@@ -2859,15 +2859,15 @@
     "next": "Lex Mucia",
     "sort_key": "Lexminucia 2",
     "proof_read": 2,
+    "short_description": "Plebiszit über die Aufhebung der Provinz Iunonia (= Karthago)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 401,
         "end": 401,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Plebiszit über die Aufhebung der Provinz Iunonia (= Karthago)"
+    ]
   },
   {
     "lemma": "Lex Mucia",
@@ -2875,15 +2875,15 @@
     "next": "Lex Munatia Aemilia",
     "sort_key": "Lexmucia",
     "proof_read": 2,
+    "short_description": "L. M. de L. Hostilio Tubulo vgl. L. Hostilius Nr. 26 Tubulus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 401,
         "end": 401,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. M. de L. Hostilio Tubulo vgl. L. Hostilius Nr. 26 Tubulus"
+    ]
   },
   {
     "lemma": "Lex Munatia Aemilia",
@@ -2902,14 +2902,14 @@
     "next": "Lex Ovinia",
     "sort_key": "Lexorchia de cenis",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 402,
         "end": 402,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Ovinia",
@@ -2917,14 +2917,14 @@
     "next": "Lex Papia de Vestalium lectione",
     "sort_key": "Lexovinia",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 402,
         "end": 402,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Papia de Vestalium lectione",
@@ -3042,15 +3042,15 @@
     "next": "Lex Pompeia Licinia 2",
     "sort_key": "Lexpompeia licinia 1",
     "proof_read": 2,
+    "short_description": "Gesetz über die Wiederherstellung der tribuniz. Gewalt",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 410,
         "end": 410,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gesetz über die Wiederherstellung der tribuniz. Gewalt"
+    ]
   },
   {
     "lemma": "Lex Pompeia Licinia 2",
@@ -3058,15 +3058,15 @@
     "next": "Lex Publicia 2",
     "sort_key": "Lexpompeia licinia 2",
     "proof_read": 2,
+    "short_description": "Gesetz über die Verlängerung von Caesars Statthalterschaft",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 410,
         "end": 410,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "Gesetz über die Verlängerung von Caesars Statthalterschaft",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lex Publicia 2",
@@ -3107,15 +3107,15 @@
     "next": "Lex Scatinia",
     "sort_key": "Lexrutilia",
     "proof_read": 2,
+    "short_description": "Gesetz über die Volkstribunen",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 411,
         "end": 411,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gesetz über die Volkstribunen"
+    ]
   },
   {
     "lemma": "Lex Scatinia",
@@ -3123,15 +3123,15 @@
     "next": "Leges Semproniae 1a",
     "sort_key": "Lexscatinia",
     "proof_read": 2,
+    "short_description": "Gesetz über die Päderastie = L. Scantinia vgl. Scantinius Nr. 1",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 411,
         "end": 412,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "Gesetz über die Päderastie = L. Scantinia vgl. Scantinius Nr. 1",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Leges Semproniae 1a",
@@ -3139,15 +3139,15 @@
     "next": "Leges Semproniae 2",
     "sort_key": "Lex Semproniae 1a",
     "proof_read": 2,
+    "short_description": "Gesetz zur Aberkennung der tribuniz. Amtsgewalt des M. Octavius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 412,
         "end": 412,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gesetz zur Aberkennung der tribuniz. Amtsgewalt des M. Octavius"
+    ]
   },
   {
     "lemma": "Leges Semproniae 2",
@@ -3166,15 +3166,15 @@
     "next": "Leges Semproniae 4",
     "sort_key": "Lex Semproniae 3",
     "proof_read": 2,
+    "short_description": "L. S. militaris",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 412,
         "end": 412,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "L. S. militaris",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Leges Semproniae 4",
@@ -3215,15 +3215,15 @@
     "next": "Leges Sulpiciae 1",
     "sort_key": "Lex Serviliae 3",
     "proof_read": 2,
+    "short_description": "L. S. iudiciaria",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 413,
         "end": 413,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. S. iudiciaria"
+    ]
   },
   {
     "lemma": "Leges Sulpiciae 1",
@@ -3231,15 +3231,15 @@
     "next": "Leges Sulpiciae 2",
     "sort_key": "Lex Sulpiciae 1",
     "proof_read": 2,
+    "short_description": "L. S. de revocandis vi eiectis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 413,
         "end": 413,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. S. de revocandis vi eiectis"
+    ]
   },
   {
     "lemma": "Leges Sulpiciae 2",
@@ -3247,15 +3247,15 @@
     "next": "Leges Sulpiciae 3",
     "sort_key": "Lex Sulpiciae 2",
     "proof_read": 2,
+    "short_description": "Gesetz über die Senatorenschulden",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 413,
         "end": 413,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gesetz über die Senatorenschulden"
+    ]
   },
   {
     "lemma": "Leges Sulpiciae 3",
@@ -3274,15 +3274,15 @@
     "next": "Leges Sulpiciae 5",
     "sort_key": "Lex Sulpiciae 4",
     "proof_read": 2,
+    "short_description": "Gesetz über den Triumph für den Feldherrn C. Pomptinus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 413,
         "end": 413,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gesetz über den Triumph für den Feldherrn C. Pomptinus"
+    ]
   },
   {
     "lemma": "Leges Sulpiciae 5",
@@ -3312,14 +3312,14 @@
     "next": "Leges Valeriae 11",
     "sort_key": "Lextrebonia 1",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 414,
         "end": 414,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Leges Valeriae 11",
@@ -3360,15 +3360,15 @@
     "next": "Lex Vibia (oder Leges Vibiae) 1",
     "sort_key": "Lexvallia",
     "proof_read": 2,
+    "short_description": "L. V. de manus iniectione",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 416,
         "end": 416,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. V. de manus iniectione"
+    ]
   },
   {
     "lemma": "Lex Vibia (oder Leges Vibiae) 1",
@@ -3376,15 +3376,15 @@
     "next": "Lex Vibia (oder Leges Vibiae) 2",
     "sort_key": "Lexvibia (oder leges vibiae) 1",
     "proof_read": 2,
+    "short_description": "Gesetz über die Abschaffung der Diktatur",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 416,
         "end": 416,
         "author": "Adolf Berger."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gesetz über die Abschaffung der Diktatur"
+    ]
   },
   {
     "lemma": "Lex Vibia (oder Leges Vibiae) 2",
@@ -3427,14 +3427,14 @@
     "previous": "Licinius 151a",
     "next": "Lollianus 1a",
     "proof_read": 2,
+    "short_description": "P. L. Secundus, Prokurator der Provinz Creta-Cyrenae unter Nero",
     "chapters": [
       {
         "start": 418,
         "end": 418,
         "author": "Stein."
       }
-    ],
-    "short_description": "P. L. Secundus, Prokurator der Provinz Creta-Cyrenae unter Nero"
+    ]
   },
   {
     "lemma": "Lollianus 1a",
@@ -3518,14 +3518,14 @@
     "previous": "Mahnverfahren",
     "next": "Makedoniarches",
     "proof_read": 2,
+    "short_description": "Vater des thrak. Fürsten Seuthes Nr. 2",
     "chapters": [
       {
         "start": 437,
         "end": 437,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": "Vater des thrak. Fürsten Seuthes Nr. 2"
+    ]
   },
   {
     "lemma": "Makedoniarches",
@@ -3554,14 +3554,14 @@
     "previous": "Malla",
     "next": "Marones",
     "proof_read": 2,
+    "short_description": "Sex. M. Honoratus, cos. suff. 110 n. Chr., Sohn des Sex. M. Nr. 84",
     "chapters": [
       {
         "start": 440,
         "end": 440,
         "author": "Groag."
       }
-    ],
-    "short_description": "Sex. M. Honoratus, cos. suff. 110 n. Chr., Sohn des Sex. M. Nr. 84"
+    ]
   },
   {
     "lemma": "Marones",
@@ -3579,14 +3579,14 @@
     "previous": "Marones",
     "next": "Melankomas 1a",
     "proof_read": 2,
+    "short_description": "Schriftsteller bei Strab.",
     "chapters": [
       {
         "start": 446,
         "end": 446,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": "Schriftsteller bei Strab."
+    ]
   },
   {
     "lemma": "Melankomas 1a",
@@ -3989,90 +3989,90 @@
     "previous": "Neilammon 2",
     "next": "Neilammon 3a",
     "proof_read": 2,
+    "short_description": "Scholasticus, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Scholasticus, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilammon 3a",
     "previous": "Neilammon 3",
     "next": "Neilammon 3b",
     "proof_read": 2,
+    "short_description": "Presbyter, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Presbyter, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilammon 3b",
     "previous": "Neilammon 3a",
     "next": "Neilammon 3c",
     "proof_read": 2,
+    "short_description": "Diakon, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Diakon, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilammon 3c",
     "previous": "Neilammon 3b",
     "next": "Neilammon 3d",
     "proof_read": 2,
+    "short_description": "Diakon und Arzt, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Diakon und Arzt, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilammon 3d",
     "previous": "Neilammon 3c",
     "next": "Neilammon 3e",
     "proof_read": 2,
+    "short_description": "Mönch, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Mönch, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilammon 3e",
     "previous": "Neilammon 3d",
     "next": "Neilaras",
     "proof_read": 2,
+    "short_description": "Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilaras",
@@ -4090,30 +4090,30 @@
     "previous": "Neilaras",
     "next": "Neilon 2",
     "proof_read": 2,
+    "short_description": "Neilos(?), Diakon in Alexandreia im J. 320 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Neilos(?), Diakon in Alexandreia im J. 320 n. Chr."
+    ]
   },
   {
     "lemma": "Neilon 2",
     "previous": "Neilon 1",
     "next": "Neilos 1bis",
     "proof_read": 2,
+    "short_description": "Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Briefadressat des Isidoros von Pelusion"
+    ]
   },
   {
     "lemma": "Neilos 1bis",
@@ -4142,75 +4142,75 @@
     "previous": "Neilos 2bis",
     "next": "Neilos 3a",
     "proof_read": 2,
+    "short_description": "Scholasticus, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Scholasticus, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilos 3a",
     "previous": "Neilos 3",
     "next": "Neilos 3b",
     "proof_read": 2,
+    "short_description": "Grammatiker, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Grammatiker, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilos 3b",
     "previous": "Neilos 3a",
     "next": "Neilos 3c",
     "proof_read": 2,
+    "short_description": "Diakon, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Diakon, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilos 3c",
     "previous": "Neilos 3b",
     "next": "Neilos 3d",
     "proof_read": 2,
+    "short_description": "Mönch, Briefadressat des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Mönch, Briefadressat des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neilos 3d",
     "previous": "Neilos 3c",
     "next": "Nemea 5",
     "proof_read": 2,
+    "short_description": "Briefadressat(en?) des Isidoros von Pelusion",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 561,
         "end": 561,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Briefadressat(en?) des Isidoros von Pelusion",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Nemea 5",
@@ -4514,75 +4514,75 @@
     "previous": "Nyktophylax 2",
     "next": "Oageis",
     "proof_read": 2,
+    "short_description": "Schüler des Juristen Iulius Nr. 382 Paulus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 680,
         "end": 680,
         "author": "Adolf Berger."
       }
-    ],
-    "short_description": "Schüler des Juristen Iulius Nr. 382 Paulus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Oageis",
     "previous": "Nymphidius 5a",
     "next": "Oamer",
     "proof_read": 2,
+    "short_description": "Bruder des Hoamer = Euagees",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 680,
         "end": 680,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Bruder des Hoamer = Euagees",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Oamer",
     "previous": "Oageis",
     "next": "Oaxios",
     "proof_read": 2,
+    "short_description": "Feldherr und Neffe des Vandalenkönigs Hildericus, Bruder des Oageis = Hoamer",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 680,
         "end": 680,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Feldherr und Neffe des Vandalenkönigs Hildericus, Bruder des Oageis = Hoamer",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Oaxios",
     "previous": "Oamer",
     "next": "Obadus",
     "proof_read": 2,
+    "short_description": "Epiklese des Apollon",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 680,
         "end": 680,
         "author": "gr. Kruse."
       }
-    ],
-    "short_description": "Epiklese des Apollon",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Obadus",
     "previous": "Oaxios",
     "next": "Obbanes chorion",
     "proof_read": 2,
+    "short_description": "Praepositus regni des Vandalenkönigs Hunericus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 680,
         "end": 680,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Praepositus regni des Vandalenkönigs Hunericus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Obbanes chorion",
@@ -4611,30 +4611,30 @@
     "previous": "Obodianos",
     "next": "Obrimopatre",
     "proof_read": 2,
+    "short_description": "Epiklese der Athena",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 681,
         "end": 681,
         "author": "gr. Kruse."
       }
-    ],
-    "short_description": "Epiklese der Athena",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Obrimopatre",
     "previous": "Obrimoderkes",
     "next": "Obrimos 3",
     "proof_read": 2,
+    "short_description": "Epiklese der Athena",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 681,
         "end": 681,
         "author": "gr. Kruse."
       }
-    ],
-    "short_description": "Epiklese der Athena",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Obrimos 3",
@@ -4652,45 +4652,45 @@
     "previous": "Obrimos 3",
     "next": "Obrimothymos",
     "proof_read": 2,
+    "short_description": "Epiklese des Ares und des Ammon",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 681,
         "end": 681,
         "author": "gr. Kruse."
       }
-    ],
-    "short_description": "Epiklese des Ares und des Ammon",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Obrimothymos",
     "previous": "Obrimos 4",
     "next": "Obrimotoxos",
     "proof_read": 2,
+    "short_description": "Epiklese mehrerer Gottheiten",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 681,
         "end": 681,
         "author": "gr. Kruse."
       }
-    ],
-    "short_description": "Epiklese mehrerer Gottheiten",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Obrimotoxos",
     "previous": "Obrimothymos",
     "next": "Occaraba",
     "proof_read": 2,
+    "short_description": "Epiklese der Artemis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 681,
         "end": 681,
         "author": "gr. Kruse."
       }
-    ],
-    "short_description": "Epiklese der Artemis",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Occaraba",
@@ -4763,15 +4763,15 @@
     "previous": "Ochyroma",
     "next": "Octar",
     "proof_read": 2,
+    "short_description": "Station an der Straße Samosata-Komana",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 693,
         "end": 693,
         "author": "E. Honigmann."
       }
-    ],
-    "short_description": "Station an der Straße Samosata-Komana",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octar",
@@ -4813,15 +4813,15 @@
     "previous": "Octavianus 4",
     "next": "Octavianus 6",
     "proof_read": 2,
+    "short_description": "Furius O., curator aedium sacrarum zu Anfang des 4. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 693,
         "end": 693,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Furius O., curator aedium sacrarum zu Anfang des 4. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octavianus 6",
@@ -4839,15 +4839,15 @@
     "previous": "Octavianus 6",
     "next": "Octavianus 8",
     "proof_read": 2,
+    "short_description": "Flavius O., Praeses von Sardinien 335-337 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 694,
         "end": 694,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Flavius O., Praeses von Sardinien 335-337 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octavianus 8",
@@ -4865,15 +4865,15 @@
     "previous": "Octavianus 8",
     "next": "Octavianus 10",
     "proof_read": 2,
+    "short_description": "V. s. Mitte 5. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 694,
         "end": 694,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "V. s. Mitte 5. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octavianus 10",
@@ -4935,30 +4935,30 @@
     "previous": "Octavianus 11aaa",
     "next": "Octavianus 13",
     "proof_read": 2,
+    "short_description": "röm. Presbyter, Teilnehmer an der röm. Synode 502 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 695,
         "end": 695,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "röm. Presbyter, Teilnehmer an der röm. Synode 502 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octavianus 13",
     "previous": "Octavianus 12",
     "next": "Octavius 8a",
     "proof_read": 2,
+    "short_description": "kath. Bischof an der Synode von Karthago 525 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 695,
         "end": 695,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "kath. Bischof an der Synode von Karthago 525 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octavius 8a",
@@ -4976,45 +4976,45 @@
     "previous": "Octavius 8a",
     "next": "Octavius 47a",
     "proof_read": 2,
+    "short_description": "afrikan. Bischof, Teilnehmer an der röm. Synode 465 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 695,
         "end": 695,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "afrikan. Bischof, Teilnehmer an der röm. Synode 465 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octavius 47a",
     "previous": "Octavius 8b",
     "next": "Octavius 98",
     "proof_read": 2,
+    "short_description": "[Octa]vius Caecilianus, c.v.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 695,
         "end": 695,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "[Octa]vius Caecilianus, c.v.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Octavius 98",
     "previous": "Octavius 47a",
     "next": "ad Octavum 2",
     "proof_read": 2,
+    "short_description": "Pompeia.Oc[t] abia Attica [Ca] eciliana, c. p.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 695,
         "end": 695,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Pompeia.Oc[t] abia Attica [Ca] eciliana, c. p.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "ad Octavum 2",
@@ -5033,15 +5033,15 @@
     "next": "ad Octavum 4",
     "sort_key": "Octavum 3",
     "proof_read": 2,
+    "short_description": "Station in Kampanien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 695,
         "end": 695,
         "author": "Hans Philipp."
       }
-    ],
-    "short_description": "Station in Kampanien",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "ad Octavum 4",
@@ -5145,14 +5145,14 @@
     "previous": "Oikias dike",
     "next": "Oion 1",
     "proof_read": 2,
+    "short_description": "Wagenlenker des Troers Bianor",
     "chapters": [
       {
         "start": 787,
         "end": 787,
         "author": "Wm. A. Oldfather."
       }
-    ],
-    "short_description": "Wagenlenker des Troers Bianor"
+    ]
   },
   {
     "lemma": "Oion 1",
@@ -5203,30 +5203,30 @@
     "previous": "Olybrius 1",
     "next": "Olybrius 3",
     "proof_read": 2,
+    "short_description": "Statthalter von Tuscien, Sohn des Q. Clodius Hermogenianus O. Nr. 1",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 789,
         "end": 789,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Statthalter von Tuscien, Sohn des Q. Clodius Hermogenianus O. Nr. 1",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Olybrius 3",
     "previous": "Olybrius 2",
     "next": "Olybrius 4",
     "proof_read": 2,
+    "short_description": "Anicius Hermogenianus O., Konsul im J. 395 n. Chr., Sohn des Sex.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 789,
         "end": 789,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Anicius Hermogenianus O., Konsul im J. 395 n. Chr., Sohn des Sex.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Olybrius 4",
@@ -5299,15 +5299,15 @@
     "previous": "Olybrius 8",
     "next": "Orbelia",
     "proof_read": 2,
+    "short_description": "Bischof(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 790,
         "end": 790,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Bischof(?)",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Orbelia",
@@ -5412,14 +5412,14 @@
     "previous": "Pedion 3",
     "next": "Pedius 6b",
     "proof_read": 2,
+    "short_description": "Sex. P. Iustus, a rationibus et a memoria, Sohn des Sex. P. Nr. 6c",
     "chapters": [
       {
         "start": 832,
         "end": 832,
         "author": "Stein."
       }
-    ],
-    "short_description": "Sex. P. Iustus, a rationibus et a memoria, Sohn des Sex. P. Nr. 6c"
+    ]
   },
   {
     "lemma": "Pedius 6b",
@@ -5437,14 +5437,14 @@
     "previous": "Pedius 6b",
     "next": "Pedo 2a",
     "proof_read": 2,
+    "short_description": "Sex. P. Palpinianus, proc. Aug., Vater des Sex. P. Nr. 6a Iustus",
     "chapters": [
       {
         "start": 832,
         "end": 832,
         "author": "Stein."
       }
-    ],
-    "short_description": "Sex. P. Palpinianus, proc. Aug., Vater des Sex. P. Nr. 6a Iustus"
+    ]
   },
   {
     "lemma": "Pedo 2a",
@@ -5473,14 +5473,14 @@
     "previous": "Pedo 2b",
     "next": "Peducaeus 7a",
     "proof_read": 2,
+    "short_description": "Q. Fresidius P., Epistratege der Thebais 23 n. Chr., Inschrift aus Tentyra",
     "chapters": [
       {
         "start": 834,
         "end": 834,
         "author": "Stein."
       }
-    ],
-    "short_description": "Q. Fresidius P., Epistratege der Thebais 23 n. Chr., Inschrift aus Tentyra"
+    ]
   },
   {
     "lemma": "Peducaeus 7a",
@@ -5520,14 +5520,14 @@
     "previous": "Peithagoras 4",
     "next": "Pelagius 18a",
     "proof_read": 3,
+    "short_description": "Mathematiker, Freund des Serenos Nr. 10",
     "chapters": [
       {
         "start": 836,
         "end": 836,
         "author": "M. Krause."
       }
-    ],
-    "short_description": "Mathematiker, Freund des Serenos Nr. 10"
+    ]
   },
   {
     "lemma": "Pelagius 18a",
@@ -5611,30 +5611,30 @@
     "previous": "Pelops 1a",
     "next": "Pelops 1c",
     "proof_read": 2,
+    "short_description": "Sohn des P. Nr. 1",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 865,
         "end": 865,
         "author": "Karl Scherling."
       }
-    ],
-    "short_description": "Sohn des P. Nr. 1",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pelops 1c",
     "previous": "Pelops 1b",
     "next": "Penthesileia",
     "proof_read": 2,
+    "short_description": "Sohn des Agamemnon und der Kassandra, Zwillingsbruder des Teledamos Nr. 2",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 866,
         "end": 866,
         "author": "Karl Scherling."
       }
-    ],
-    "short_description": "Sohn des Agamemnon und der Kassandra, Zwillingsbruder des Teledamos Nr. 2",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Penthesileia",
@@ -5674,15 +5674,15 @@
     "previous": "Pereia",
     "next": "Peridobonum",
     "proof_read": 2,
+    "short_description": "Variante für Bergusia Nr. 1 (Bergusium), Ort im Gebiet der Allobroger",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 892,
         "end": 892,
         "author": "P. Goessler."
       }
-    ],
-    "short_description": "Variante für Bergusia Nr. 1 (Bergusium), Ort im Gebiet der Allobroger",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Peridobonum",
@@ -5779,14 +5779,14 @@
     "previous": "Pescennius",
     "next": "Petra 8",
     "proof_read": 3,
+    "short_description": "kappadokischer Ort",
     "chapters": [
       {
         "start": 980,
         "end": 980,
         "author": "W. Ruge."
       }
-    ],
-    "short_description": "kappadokischer Ort"
+    ]
   },
   {
     "lemma": "Petra 8",
@@ -5798,14 +5798,14 @@
     "previous": "Petra 8",
     "next": "Pfandrecht",
     "proof_read": 2,
+    "short_description": "Festung in Lazica, zwischen den Flüssen Bathys und Akinasis",
     "chapters": [
       {
         "start": 981,
         "end": 981,
         "author": "Albert Herrmann."
       }
-    ],
-    "short_description": "Festung in Lazica, zwischen den Flüssen Bathys und Akinasis"
+    ]
   },
   {
     "lemma": "Pfandrecht",
@@ -5845,15 +5845,15 @@
     "previous": "Pharmakussai",
     "next": "Phekidas 2",
     "proof_read": 2,
+    "short_description": "Presbyter, Unterzeichner des Schreibens des edess. Klerus 449 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 984,
         "end": 984,
         "author": "W. Enßlin."
       }
-    ],
-    "short_description": "Presbyter, Unterzeichner des Schreibens des edess. Klerus 449 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Phekidas 2",
@@ -5904,15 +5904,15 @@
     "previous": "Phigaleia (ON",
     "next": "Philanthropon",
     "proof_read": 2,
+    "short_description": "Stadt in Arabia felix",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1032,
         "end": 1032,
         "author": "Adolf Grohmann."
       }
-    ],
-    "short_description": "Stadt in Arabia felix",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Philanthropon",
@@ -5974,15 +5974,15 @@
     "previous": "Rhapso",
     "next": "Rhetorik",
     "proof_read": 2,
+    "short_description": "Richtig: Rhapso (s.d.), griech. Schicksalsgottheit(?).",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1037,
         "end": 1037,
         "author": "Otto Walter."
       }
-    ],
-    "short_description": "Richtig: Rhapso (s.d.), griech. Schicksalsgottheit(?).",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Rhetorik",
@@ -6044,30 +6044,30 @@
     "previous": "Rotomagus 2",
     "next": "Rotomagus 4",
     "proof_read": 2,
+    "short_description": "Ort im Gebiet der belg. Bellovaci, heute Rouen",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1194,
         "end": 1194,
         "author": "P. Goessler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Ort im Gebiet der belg. Bellovaci, heute Rouen"
+    ]
   },
   {
     "lemma": "Rotomagus 4",
     "previous": "Rotomagus 3",
     "next": "Roxolani",
     "proof_read": 2,
+    "short_description": "Rodomagus, Rotomum, Ort im Gebiet der Turoni (Turones) Nr. 1",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1194,
         "end": 1194,
         "author": "P. Goessler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Rodomagus, Rotomum, Ort im Gebiet der Turoni (Turones) Nr. 1"
+    ]
   },
   {
     "lemma": "Roxolani",
@@ -6096,14 +6096,14 @@
     "previous": "Rufellius",
     "next": "R(h)ymmoi",
     "proof_read": 2,
+    "short_description": "... im ... u ... R., procurator ad ripam Tiberis in hadrian. Zt.",
     "chapters": [
       {
         "start": 1197,
         "end": 1198,
         "author": "Stein."
       }
-    ],
-    "short_description": "... im ... u ... R., procurator ad ripam Tiberis in hadrian. Zt."
+    ]
   },
   {
     "lemma": "R(h)ymmoi",
@@ -6122,14 +6122,14 @@
     "next": "sakkophoros",
     "sort_key": "sakkegia",
     "proof_read": 2,
+    "short_description": "Die Abgabe für den Korntransport im röm. Aegypten.",
     "chapters": [
       {
         "start": 1200,
         "end": 1200,
         "author": "Erich Ziebarth."
       }
-    ],
-    "short_description": "Die Abgabe für den Korntransport im röm. Aegypten."
+    ]
   },
   {
     "lemma": "sakkophoros",
@@ -6190,14 +6190,14 @@
     "previous": "Saulakes",
     "next": "Scrutarius",
     "proof_read": 2,
+    "short_description": "Skyth. König, Bruder des Anacharsis (I 2017)",
     "chapters": [
       {
         "start": 1201,
         "end": 1201,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": "Skyth. König, Bruder des Anacharsis (I 2017)"
+    ]
   },
   {
     "lemma": "Scrutarius",
@@ -6259,15 +6259,15 @@
     "previous": "Semiramis 1",
     "next": "Skopas 6",
     "proof_read": 2,
+    "short_description": "Aitol. Stratege im J. 272/1 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1211,
         "end": 1211,
         "author": "Dumrese."
       }
-    ],
-    "short_description": "Aitol. Stratege im J. 272/1 v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Skopas 6",
@@ -6285,16 +6285,16 @@
     "previous": "Skopas 6",
     "next": "Severinius",
     "proof_read": 2,
+    "short_description": "Ingenuus, Prokurator der Provinz Dacia Porolissensis 164 n. Chr.",
+    "wp_link": "w:de:Lucius Sempronius Ingenuus",
+    "wd_link": "d:Q111433473",
     "chapters": [
       {
         "start": 1212,
         "end": 1212,
         "author": "Stein."
       }
-    ],
-    "short_description": "Ingenuus, Prokurator der Provinz Dacia Porolissensis 164 n. Chr.",
-    "wp_link": "w:de:Lucius Sempronius Ingenuus",
-    "wd_link": "d:Q111433473"
+    ]
   },
   {
     "lemma": "Severinius",
@@ -6356,15 +6356,15 @@
     "previous": "Sosibios 2a",
     "next": "Sostratos 4a",
     "proof_read": 2,
+    "short_description": "S. von Sikyon, mit Lykortas und Theodoridas Gesandter des Achai. Bundes",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1220,
         "end": 1220,
         "author": "Fritz Heichelheim."
       }
-    ],
-    "short_description": "S. von Sikyon, mit Lykortas und Theodoridas Gesandter des Achai. Bundes",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Sostratos 4a",
@@ -6448,14 +6448,14 @@
     "previous": "Spithame",
     "next": "Stiela oder Stiala",
     "proof_read": 2,
+    "short_description": "L. S. Aquila, cos. suff. im J. 116 n. Chr., Vater des L. S. Nr. 21",
     "chapters": [
       {
         "start": 1232,
         "end": 1232,
         "author": "Groag."
       }
-    ],
-    "short_description": "L. S. Aquila, cos. suff. im J. 116 n. Chr., Vater des L. S. Nr. 21"
+    ]
   },
   {
     "lemma": "Stiela oder Stiala",
@@ -6487,6 +6487,7 @@
     "previous": "Straßenraub",
     "next": "Streik",
     "proof_read": 2,
+    "short_description": "Stadt im mys.-lyd. Grenzgebiet = Hadrianopolis",
     "wp_link": "w:en:Stratonicea (Lydia)",
     "wd_link": "d:Q16330587",
     "chapters": [
@@ -6495,8 +6496,7 @@
         "end": 1250,
         "author": "Ruge."
       }
-    ],
-    "short_description": "Stadt im mys.-lyd. Grenzgebiet = Hadrianopolis"
+    ]
   },
   {
     "lemma": "Streik",
@@ -6558,14 +6558,14 @@
     "previous": "Synoikesion",
     "next": "Taschentuch",
     "proof_read": 2,
+    "short_description": "Ort in Britannia inf.",
     "chapters": [
       {
         "start": 1276,
         "end": 1276,
         "author": "G. Macdonald."
       }
-    ],
-    "short_description": "Ort in Britannia inf."
+    ]
   },
   {
     "lemma": "Taschentuch",
@@ -6638,14 +6638,14 @@
     "previous": "Teres 1b",
     "next": "Tergilla",
     "proof_read": 2,
+    "short_description": "Bundesgenosse Philippos' II., Nachfolger Amadokos' I. (I 1713 Nr. 2)(?)",
     "chapters": [
       {
         "start": 1295,
         "end": 1295,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": "Bundesgenosse Philippos' II., Nachfolger Amadokos' I. (I 1713 Nr. 2)(?)"
+    ]
   },
   {
     "lemma": "Tergilla",
@@ -6696,15 +6696,15 @@
     "previous": "Themistokleia, Theokleia",
     "next": "Theodotos 56",
     "proof_read": 2,
+    "short_description": "von Sikyon, Gesandter des Achai. Bundes bei Ptolemaios V. Epiphanes 188 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1352,
         "end": 1353,
         "author": "Fritz Heichelheim."
       }
-    ],
-    "short_description": "von Sikyon, Gesandter des Achai. Bundes bei Ptolemaios V. Epiphanes 188 v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Theodotos 56",
@@ -6722,15 +6722,15 @@
     "previous": "Theodotos 56",
     "next": "Theophrastos 3",
     "proof_read": 2,
+    "short_description": "T. von Aigai (I 944 Nr. 5?), hoher Offizier des Ptolemaios II. Philadelphos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1354,
         "end": 1354,
         "author": "Fritz Heichelheim."
       }
-    ],
-    "short_description": "T. von Aigai (I 944 Nr. 5?), hoher Offizier des Ptolemaios II. Philadelphos",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Theophrastos 3",
@@ -6768,15 +6768,15 @@
     "previous": "Thoas 6b",
     "next": "Thugga",
     "proof_read": 2,
+    "short_description": "Kommandeur der Leibgarde des maked. Königs Perseus im J. 171 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1567,
         "end": 1567,
         "author": "Paul Schoch."
       }
-    ],
-    "short_description": "Kommandeur der Leibgarde des maked. Königs Perseus im J. 171 v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Thugga",
@@ -6883,15 +6883,15 @@
     "next": "Thyraia",
     "sort_key": "Thyne 2",
     "proof_read": 2,
+    "short_description": "Afrikan. Örtlichkeit",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 1573,
         "end": 1573,
         "author": "Hans Treidler."
       }
-    ],
-    "short_description": "Afrikan. Örtlichkeit",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Thyraia",
@@ -6994,6 +6994,7 @@
     "previous": "Theodotos 56",
     "next": "Theon 1a",
     "proof_read": 2,
+    "short_description": "Griech. Veterinärschriftsteller in der 1. H. des 4. Jh. n. Chr.",
     "wp_link": "w:ca:Teomnest (veterinari)",
     "wd_link": "d:Q679536",
     "chapters": [
@@ -7002,7 +7003,6 @@
         "end": 1354,
         "author": "Karl Hoppe."
       }
-    ],
-    "short_description": "Griech. Veterinärschriftsteller in der 1. H. des 4. Jh. n. Chr."
+    ]
   }
 ]

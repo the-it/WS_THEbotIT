@@ -14,113 +14,113 @@
     "lemma": "Aelius 89a",
     "previous": "Aelius 75a",
     "next": "Aelius 96a",
+    "short_description": "A. Martinus, c.v.",
     "chapters": [
       {
         "start": 1,
         "end": 1,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Martinus, c.v."
+    ]
   },
   {
     "lemma": "Aelius 96a",
     "previous": "Aelius 89a",
     "next": "Aelius 111a",
     "sort_key": "Aelius 096a",
+    "short_description": "A. Optatus, leg. Aug. der leg. V Macedonica unter Antoninus Pius",
     "chapters": [
       {
         "start": 1,
         "end": 1,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Optatus, leg. Aug. der leg. V Macedonica unter Antoninus Pius"
+    ]
   },
   {
     "lemma": "Aelius 111a",
     "previous": "Aelius 96a",
     "next": "Aelius 116b",
+    "short_description": "P. A. Pigres, Senator, Gesandter der Stadt Philadelphia in Lydien 255 n. Chr.",
     "chapters": [
       {
         "start": 1,
         "end": 1,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "P. A. Pigres, Senator, Gesandter der Stadt Philadelphia in Lydien 255 n. Chr."
+    ]
   },
   {
     "lemma": "Aelius 116b",
     "previous": "Aelius 111a",
     "next": "Aemilianus 17",
+    "short_description": "L. A. Proculus, corrector Campaniae unter Constantin I.",
     "chapters": [
       {
         "start": 1,
         "end": 2,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "L. A. Proculus, corrector Campaniae unter Constantin I."
+    ]
   },
   {
     "lemma": "Aemilianus 17",
     "previous": "Aelius 116b",
     "next": "Aemilius 43",
+    "short_description": "Aemiliana, c.f., Gattin des [? Rufi]nus, Schwiegertochter des Flavius Fuscenillus",
     "chapters": [
       {
         "start": 2,
         "end": 2,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Aemiliana, c.f., Gattin des [? Rufi]nus, Schwiegertochter des Flavius Fuscenillus"
+    ]
   },
   {
     "lemma": "Aemilius 43",
     "previous": "Aemilianus 17",
     "next": "Aemilius 54a",
     "sort_key": "Aemilius 043",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 2,
         "end": 2,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Aemilius 54a",
     "previous": "Aemilius 43",
     "next": "Aemilius 131a",
     "sort_key": "Aemilius 054a",
+    "proof_read": 3,
+    "short_description": "L. A. Iuncus, Prokonsul, Sohn des A. Nr. 54 Iuncus(?), (Groß-)Vater des A. Nr. 53",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 2,
         "end": 2,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "L. A. Iuncus, Prokonsul, Sohn des A. Nr. 54 Iuncus(?), (Groß-)Vater des A. Nr. 53"
+    ]
   },
   {
     "lemma": "Aemilius 131a",
     "previous": "Aemilius 54a",
     "next": "Aenona",
+    "proof_read": 3,
+    "short_description": "Aemilius Ri[---]or, konsularer Legat der Provinz Germania inferior 2./3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 2,
         "end": 2,
         "author": "Werner Eck."
       }
-    ],
-    "proof_read": 3,
-    "short_description": "Aemilius Ri[---]or, konsularer Legat der Provinz Germania inferior 2./3. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aenona",
@@ -140,6 +140,9 @@
     "lemma": "Aetrius 2",
     "previous": "Aenona",
     "next": "Af(---)",
+    "proof_read": 3,
+    "short_description": "A. Severus, Statthalter der Provinz Syria, auf Inschrift aus Palmyra",
+    "no_creative_height": true,
     "wd_link": "d:Q109524332",
     "chapters": [
       {
@@ -147,25 +150,22 @@
         "end": 13,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "A. Severus, Statthalter der Provinz Syria, auf Inschrift aus Palmyra"
+    ]
   },
   {
     "lemma": "Af(---)",
     "previous": "Aetrius 2",
     "next": "Afranius 10a",
     "proof_read": 3,
+    "short_description": "L. Af[---], Senator mit Ehreninschrift aus Formiae",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 13,
         "end": 13,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. Af[---], Senator mit Ehreninschrift aus Formiae"
+    ]
   },
   {
     "lemma": "Afranius 10a",
@@ -183,69 +183,69 @@
     "lemma": "Agathon 17",
     "previous": "Afranius 10a",
     "next": "Agathon 18",
+    "short_description": "Bildhauer im 5./4. Jh. v. Chr.",
     "chapters": [
       {
         "start": 13,
         "end": 14,
         "author": "Walter H. Gross."
       }
-    ],
-    "short_description": "Bildhauer im 5./4. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Agathon 18",
     "previous": "Agathon 17",
     "next": "Aginatius 4",
+    "short_description": "Töpfer im athenischen Kerameikos 5. Jh. v. Chr.",
     "chapters": [
       {
         "start": 14,
         "end": 14,
         "author": "Walter H. Gross."
       }
-    ],
-    "short_description": "Töpfer im athenischen Kerameikos 5. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Aginatius 4",
     "previous": "Agathon 18",
     "next": "Aiacius 1",
+    "short_description": "A. Iunior, Statthalter von Kampanien im 4./5. Jh. n. Chr. (?)",
     "chapters": [
       {
         "start": 14,
         "end": 14,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Iunior, Statthalter von Kampanien im 4./5. Jh. n. Chr. (?)"
+    ]
   },
   {
     "lemma": "Aiacius 1",
     "previous": "Aginatius 4",
     "next": "Aiacius 1a",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 14,
         "end": 14,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aiacius 1a",
     "previous": "Aiacius 1",
     "next": "Aiacius 2",
     "proof_read": 3,
+    "short_description": "L. A. Modestus Aurelianus, Sohn des Q. A. Nr. 2",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 14,
         "end": 14,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. A. Modestus Aurelianus, Sohn des Q. A. Nr. 2"
+    ]
   },
   {
     "lemma": "Aiacius 2",
@@ -293,14 +293,14 @@
     "lemma": "Aius 2",
     "previous": "Aisopos 1",
     "next": "Akalissos",
+    "short_description": "T. A. Sanctus, Konsul um 184 n. Chr., Rhetoriklehrer des Commodus",
     "chapters": [
       {
         "start": 40,
         "end": 41,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "T. A. Sanctus, Konsul um 184 n. Chr., Rhetoriklehrer des Commodus"
+    ]
   },
   {
     "lemma": "Akalissos",
@@ -319,45 +319,45 @@
     "previous": "Akalissos",
     "next": "Alexandros 108",
     "proof_read": 3,
+    "short_description": "Römischer Mosaikkünstler in Thysdrus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 42,
         "end": 42,
         "author": "Walter H. Gross."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Römischer Mosaikkünstler in Thysdrus"
+    ]
   },
   {
     "lemma": "Alexandros 108",
     "previous": "Akomena",
     "next": "Alkidamos",
+    "proof_read": 3,
+    "short_description": "Pigmentarius 2. Jh. n. Chr., ließ sich einen Sarkophag herstellen",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 43,
         "end": 43,
         "author": "Walter H. Gross."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Pigmentarius 2. Jh. n. Chr., ließ sich einen Sarkophag herstellen"
+    ]
   },
   {
     "lemma": "Alkidamos",
     "previous": "Alexandros 108",
     "next": "Allius 5a",
     "proof_read": 3,
+    "short_description": "von Korinth, Bildhauer 2. Jh. v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 43,
         "end": 43,
         "author": "Walter H. Gross."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "von Korinth, Bildhauer 2. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Allius 5a",
@@ -365,20 +365,21 @@
     "next": "Allius 10",
     "sort_key": "Allius 05a",
     "proof_read": 3,
+    "short_description": "A. Fuscus, Konsular der Provinz Germania inf.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 43,
         "end": 43,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "A. Fuscus, Konsular der Provinz Germania inf."
+    ]
   },
   {
     "lemma": "Allius 10",
     "previous": "Allius 5a",
     "next": "Ameinias 19",
+    "short_description": "L. A. Volusianus, Senator 2. Jh. n. Chr.",
     "wp_link": "w:de:Lucius Allius Volusianus",
     "wd_link": "d:Q87589397",
     "chapters": [
@@ -387,60 +388,59 @@
         "end": 43,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "L. A. Volusianus, Senator 2. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Ameinias 19",
     "previous": "Allius 10",
     "next": "Amicus 1a",
+    "short_description": "Aristobulos, Arzt (2. Jh. n. Chr.?), Sohn des Aristobulos",
     "chapters": [
       {
         "start": 43,
         "end": 44,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "Aristobulos, Arzt (2. Jh. n. Chr.?), Sohn des Aristobulos"
+    ]
   },
   {
     "lemma": "Amicus 1a",
     "previous": "Ameinias 19",
     "next": "Anaxikrates 9",
+    "short_description": "Prokonsul der Provinz Asia 230/1 n. Chr.",
     "chapters": [
       {
         "start": 44,
         "end": 44,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Prokonsul der Provinz Asia 230/1 n. Chr."
+    ]
   },
   {
     "lemma": "Anaxikrates 9",
     "previous": "Amicus 1a",
     "next": "Annius 41a",
+    "short_description": "Verfasser von naut. Angaben über Arabien, Würdenträger des Seleukos I. Nikator um 300 v. Chr.",
     "chapters": [
       {
         "start": 44,
         "end": 47,
         "author": "Walter Schmitthenner."
       }
-    ],
-    "short_description": "Verfasser von naut. Angaben über Arabien, Würdenträger des Seleukos I. Nikator um 300 v. Chr."
+    ]
   },
   {
     "lemma": "Annius 41a",
     "previous": "Anaxikrates 9",
     "next": "Annius 61",
+    "short_description": "M. [A]. Faustus, cos. suff. 121 n. Chr. = M. ... [F]austus",
     "chapters": [
       {
         "start": 47,
         "end": 47,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. [A]. Faustus, cos. suff. 121 n. Chr. = M. ... [F]austus"
+    ]
   },
   {
     "lemma": "Annius 61",
@@ -461,58 +461,58 @@
     "previous": "Annius 61",
     "next": "Annius 66b",
     "sort_key": "Annius 065b",
+    "proof_read": 3,
+    "short_description": "Q. A. Maximus, Prokonsul der Provinz Macedonia 114 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 48,
         "end": 48,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Q. A. Maximus, Prokonsul der Provinz Macedonia 114 n. Chr."
+    ]
   },
   {
     "lemma": "Annius 66b",
     "previous": "Annius 65b",
     "next": "Annius 128",
     "sort_key": "Annius 066b",
+    "short_description": "M. A. Messalla, Legat des Prokonsuls der Provinz Africa cos. suff. (83 n. Chr.?)",
     "chapters": [
       {
         "start": 48,
         "end": 48,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. A. Messalla, Legat des Prokonsuls der Provinz Africa cos. suff. (83 n. Chr.?)"
+    ]
   },
   {
     "lemma": "Annius 128",
     "previous": "Annius 66b",
     "next": "Antiochis 8",
     "proof_read": 3,
+    "short_description": "Annia Stat[ilia? Satur?]nila, Gattin des Valerius Apsines",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 48,
         "end": 48,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Annia Stat[ilia? Satur?]nila, Gattin des Valerius Apsines"
+    ]
   },
   {
     "lemma": "Antiochis 8",
     "previous": "Annius 128",
     "next": "Antiphellos",
+    "short_description": "Ärztin 1. Jh. v. Chr., Tochter des Diodotos Nr. 14",
     "chapters": [
       {
         "start": 48,
         "end": 49,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "Ärztin 1. Jh. v. Chr., Tochter des Diodotos Nr. 14"
+    ]
   },
   {
     "lemma": "Antiphellos",
@@ -530,44 +530,44 @@
     "lemma": "Antius 11a",
     "previous": "Antiphellos",
     "next": "Antius 12a",
+    "proof_read": 3,
+    "short_description": "P. A. Orestes, Prokonsul der Provinz Macedonia 164/5 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 50,
         "end": 50,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "P. A. Orestes, Prokonsul der Provinz Macedonia 164/5 n. Chr."
+    ]
   },
   {
     "lemma": "Antius 12a",
     "previous": "Antius 11a",
     "next": "Antius 14a",
+    "short_description": "P. A. Reginus, v. p., Priester in einem Mithraskollegium in Pautalia 3. Jh. n. Chr.(?)",
     "chapters": [
       {
         "start": 50,
         "end": 50,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "P. A. Reginus, v. p., Priester in einem Mithraskollegium in Pautalia 3. Jh. n. Chr.(?)"
+    ]
   },
   {
     "lemma": "Antius 14a",
     "previous": "Antius 12a",
     "next": "Antonius 1a",
+    "proof_read": 3,
+    "short_description": "Publia Antia Damocratia, Gattin des Vitalius Nr. [a] Restitutus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 50,
         "end": 50,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Publia Antia Damocratia, Gattin des Vitalius Nr. [a] Restitutus"
+    ]
   },
   {
     "lemma": "Antonius 1a",
@@ -575,15 +575,15 @@
     "next": "Antonius 36",
     "sort_key": "Antonius 001a",
     "proof_read": 3,
+    "short_description": "Antoni[us---], curator operum publicorum 183 n. Chr. = M. A. Nr. 69 Iuvenis(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 50,
         "end": 50,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Antoni[us---], curator operum publicorum 183 n. Chr. = M. A. Nr. 69 Iuvenis(?)"
+    ]
   },
   {
     "lemma": "Antonius 36",
@@ -606,6 +606,8 @@
     "next": "Aperlai",
     "sort_key": "Antonius 094a",
     "proof_read": 3,
+    "short_description": "A. A. Rufus, cos. suff. 45 n. Chr. = Rufus",
+    "no_creative_height": true,
     "wp_link": "w:es:Marco Antonio Rufo",
     "wd_link": "d:Q12286053",
     "chapters": [
@@ -614,9 +616,7 @@
         "end": 51,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "A. A. Rufus, cos. suff. 45 n. Chr. = Rufus"
+    ]
   },
   {
     "lemma": "Aperlai",
@@ -634,34 +634,35 @@
     "lemma": "Apicatus",
     "previous": "Aperlai",
     "next": "Apollonides 33c",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 53,
         "end": 54,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Apollonides 33c",
     "previous": "Apicatus",
     "next": "Apsines",
+    "short_description": "A. von Herakleia Salbake, Arzt (im 2. Jh. n. Chr.?)",
     "chapters": [
       {
         "start": 53,
         "end": 53,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "A. von Herakleia Salbake, Arzt (im 2. Jh. n. Chr.?)"
+    ]
   },
   {
     "lemma": "Apsines",
     "previous": "Apollonides 33c",
     "next": "Aqua, Aquae 97",
     "proof_read": 3,
+    "no_creative_height": true,
     "wp_link": "w:en:Apsines",
     "wd_link": "d:Q649082",
     "chapters": [
@@ -670,8 +671,7 @@
         "end": 53,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aqua, Aquae 97",
@@ -690,6 +690,9 @@
     "lemma": "Aradius 1a",
     "previous": "Aqua, Aquae 97",
     "next": "Aradius 3a",
+    "proof_read": 3,
+    "short_description": "A. Paternus, leg. Aug. praeses der Provinz Cappadocia 231 n. Chr.",
+    "no_creative_height": true,
     "wp_link": "w:de:Aradius Paternus",
     "wd_link": "d:Q100234014",
     "chapters": [
@@ -698,23 +701,20 @@
         "end": 54,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "A. Paternus, leg. Aug. praeses der Provinz Cappadocia 231 n. Chr."
+    ]
   },
   {
     "lemma": "Aradius 3a",
     "previous": "Aradius 1a",
     "next": "Aratos 6",
+    "short_description": "Q. A. Rufinus Optatus, leg. Aug. pr. pr. von Galatia, Phoenice und Syria",
     "chapters": [
       {
         "start": 54,
         "end": 54,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Q. A. Rufinus Optatus, leg. Aug. pr. pr. von Galatia, Phoenice und Syria"
+    ]
   },
   {
     "lemma": "Aratos 6",
@@ -747,55 +747,55 @@
     "lemma": "Archelaos 37a",
     "previous": "Araxa",
     "next": "Aricinius",
+    "short_description": "A. von Herakleia Salbake, Arzt (im 1. Jh. n. Chr.?), Sohn des Euneikos",
     "chapters": [
       {
         "start": 56,
         "end": 56,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "A. von Herakleia Salbake, Arzt (im 1. Jh. n. Chr.?), Sohn des Euneikos"
+    ]
   },
   {
     "lemma": "Aricinius",
     "previous": "Archelaos 37a",
     "next": "Arinius",
     "proof_read": 3,
+    "short_description": "[A]ricin[ius? Ho]rtensi[an]us, Quästor der Provinz Baetica",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 56,
         "end": 56,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "[A]ricin[ius? Ho]rtensi[an]us, Quästor der Provinz Baetica"
+    ]
   },
   {
     "lemma": "Arinius",
     "previous": "Aricinius",
     "next": "Arminius 4",
+    "short_description": "C. A. Modestus, prätor. Prokonsul der Provinz Creta-Cyrenae etwa 73-75 n. Chr.",
     "chapters": [
       {
         "start": 56,
         "end": 57,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. A. Modestus, prätor. Prokonsul der Provinz Creta-Cyrenae etwa 73-75 n. Chr."
+    ]
   },
   {
     "lemma": "Arminius 4",
     "previous": "Arinius",
     "next": "Arneai",
+    "short_description": "Arminia Paullina, c.f., Tochter des A. Nr. 2 Donatus",
     "chapters": [
       {
         "start": 57,
         "end": 57,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Arminia Paullina, c.f., Tochter des A. Nr. 2 Donatus"
+    ]
   },
   {
     "lemma": "Arneai",
@@ -829,101 +829,101 @@
     "lemma": "Arrianus 9a",
     "previous": "Arrecinus 2",
     "next": "Arrius 17a",
+    "proof_read": 3,
+    "short_description": "Prokonsul der Provinz Hispania Baetica, aus dem griechischen Teil des Reiches",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 58,
         "end": 58,
         "author": "Werner Eck."
       }
-    ],
-    "proof_read": 3,
-    "short_description": "Prokonsul der Provinz Hispania Baetica, aus dem griechischen Teil des Reiches",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Arrius 17a",
     "previous": "Arrianus 9a",
     "next": "Arrius 23a",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 58,
         "end": 58,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Arrius 23a",
     "previous": "Arrius 17a",
     "next": "Arrius 43a",
+    "proof_read": 3,
+    "short_description": "Maximus, Statthalter der Provinz Syria Coele, vir clarissimus 3. Jh. n. Chr.?",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 58,
         "end": 58,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Maximus, Statthalter der Provinz Syria Coele, vir clarissimus 3. Jh. n. Chr.?"
+    ]
   },
   {
     "lemma": "Arrius 43a",
     "previous": "Arrius 23a",
     "next": "Arruntius 9a",
+    "short_description": "Ar[ria] Calp[urnia], Tochter des L. Nonius Calpurnius Asprenas Torquatus(?)",
     "chapters": [
       {
         "start": 58,
         "end": 59,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Ar[ria] Calp[urnia], Tochter des L. Nonius Calpurnius Asprenas Torquatus(?)"
+    ]
   },
   {
     "lemma": "Arruntius 9a",
     "previous": "Arrius 43a",
     "next": "Arruntius 16a",
     "sort_key": "Arruntius 09a",
+    "proof_read": 3,
+    "short_description": "M. Arru[ntius---], cos. suff. 1. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 59,
         "end": 59,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "M. Arru[ntius---], cos. suff. 1. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Arruntius 16a",
     "previous": "Arruntius 9a",
     "next": "Arsada",
+    "short_description": "M. A. Claudianus, prokonsularer Legat der Provinzen Pontus-Bithynia",
     "chapters": [
       {
         "start": 59,
         "end": 60,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. A. Claudianus, prokonsularer Legat der Provinzen Pontus-Bithynia"
+    ]
   },
   {
     "lemma": "Arsada",
     "previous": "Arruntius 16a",
     "next": "Articuleius 4",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 60,
         "end": 60,
         "author": "Shelagh Jameson."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Articuleius 4",
@@ -956,6 +956,9 @@
     "lemma": "Asinius 17b",
     "previous": "Arykanda",
     "next": "Asinius 19a",
+    "proof_read": 3,
+    "short_description": "A. Lepidus, cos. suff. vor 222 n. Chr. praeses provinciae Cappadociae",
+    "no_creative_height": true,
     "wp_link": "w:de:Asinius Lepidus",
     "wd_link": "d:Q100139457",
     "chapters": [
@@ -964,29 +967,27 @@
         "end": 62,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "A. Lepidus, cos. suff. vor 222 n. Chr. praeses provinciae Cappadociae"
+    ]
   },
   {
     "lemma": "Asinius 19a",
     "previous": "Asinius 17b",
     "next": "Asinius 28",
+    "short_description": "Q. A. Marcellus, Konsul (in frühtraian. Zt.?) = Q. A. Nr. 20 Marcellus(?)",
     "chapters": [
       {
         "start": 62,
         "end": 62,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Q. A. Marcellus, Konsul (in frühtraian. Zt.?) = Q. A. Nr. 20 Marcellus(?)"
+    ]
   },
   {
     "lemma": "Asinius 28",
     "previous": "Asinius 19a",
     "next": "Asinius 32a",
     "proof_read": 3,
+    "no_creative_height": true,
     "wp_link": "w:de:Gaius Asinius Lepidus Praetextatus",
     "wd_link": "d:Q722606",
     "chapters": [
@@ -995,8 +996,7 @@
         "end": 62,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Asinius 32a",
@@ -1014,45 +1014,45 @@
     "lemma": "Asinius 32b",
     "previous": "Asinius 32a",
     "next": "Ateius 12",
+    "proof_read": 3,
+    "short_description": "Rufinus, Sex. A. Fabianus, aus der tribus Horatia, 2./3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 63,
         "end": 63,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Rufinus, Sex. A. Fabianus, aus der tribus Horatia, 2./3. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Ateius 12",
     "previous": "Asinius 32b",
     "next": "Atilius 36a",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 63,
         "end": 63,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Atilius 36a",
     "previous": "Ateius 12",
     "next": "Attalos 18",
+    "proof_read": 3,
+    "short_description": "Clarus, P. A. proc. Augg. in antonin. Zeit? in Ephesus mit Statue geehrt",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 63,
         "end": 63,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Clarus, P. A. proc. Augg. in antonin. Zeit? in Ephesus mit Statue geehrt"
+    ]
   },
   {
     "lemma": "Attalos 18",
@@ -1070,50 +1070,51 @@
     "lemma": "Attius 11a",
     "previous": "Attalos 18",
     "next": "Attius 24a",
+    "short_description": "A. Caecilius Maximilianus signo Panchar[ius], praef. ann. im J. 357 n. Chr.",
     "chapters": [
       {
         "start": 66,
         "end": 66,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Caecilius Maximilianus signo Panchar[ius], praef. ann. im J. 357 n. Chr."
+    ]
   },
   {
     "lemma": "Attius 24a",
     "previous": "Attius 11a",
     "next": "Attius 35b",
     "proof_read": 3,
+    "short_description": "A. Philippus, Statthalter der Provinz Pamphylia im 4. Jh. n. Chr.(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 66,
         "end": 66,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Philippus, Statthalter der Provinz Pamphylia im 4. Jh. n. Chr.(?)",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Attius 35b",
     "previous": "Attius 24a",
     "next": "Aufidius 19",
     "proof_read": 3,
+    "short_description": "Attia Campanilla, c.f.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 66,
         "end": 66,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Attia Campanilla, c.f."
+    ]
   },
   {
     "lemma": "Aufidius 19",
     "previous": "Attius 35b",
     "next": "Avidius 1a",
     "proof_read": 3,
+    "no_creative_height": true,
     "wp_link": "w:de:Marcus Aufidius Fronto",
     "wd_link": "d:Q716754",
     "chapters": [
@@ -1122,26 +1123,26 @@
         "end": 67,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Avidius 1a",
     "previous": "Aufidius 19",
     "next": "Avidius 1b",
+    "short_description": "[C. Avi] dius C[eioni]us [Comm]odu[s], leg. pr. pr. der Provinz Iudaea",
     "chapters": [
       {
         "start": 67,
         "end": 67,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[C. Avi] dius C[eioni]us [Comm]odu[s], leg. pr. pr. der Provinz Iudaea"
+    ]
   },
   {
     "lemma": "Avidius 1b",
     "previous": "Avidius 1a",
     "next": "Avillius 2c",
+    "short_description": "Cn. A. Celer Fiscillinus, leg. Aug. pr. pr. der Provinz Lycia unter Vespasian",
     "wp_link": "w:de:Gnaeus Avidius Celer Fiscillinus Firmus",
     "wd_link": "d:Q110051923",
     "chapters": [
@@ -1150,78 +1151,77 @@
         "end": 67,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Cn. A. Celer Fiscillinus, leg. Aug. pr. pr. der Provinz Lycia unter Vespasian"
+    ]
   },
   {
     "lemma": "Avillius 2c",
     "previous": "Avidius 1b",
     "next": "Aurelius 5a",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 67,
         "end": 67,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aurelius 5a",
     "previous": "Avillius 2c",
     "next": "Aurelius 37b",
+    "short_description": "[---]us A. [---], Konsul (in antonin. Zt.?)",
     "chapters": [
       {
         "start": 67,
         "end": 68,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[---]us A. [---], Konsul (in antonin. Zt.?)"
+    ]
   },
   {
     "lemma": "Aurelius 37b",
     "previous": "Aurelius 5a",
     "next": "Aurelius 63aa",
     "proof_read": 3,
+    "short_description": "A. Antinous, Vizepräfekt von Aegypten im J. 215/6 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 68,
         "end": 68,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "A. Antinous, Vizepräfekt von Aegypten im J. 215/6 n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 63aa",
     "previous": "Aurelius 37b",
     "next": "Aurelius 65a",
+    "proof_read": 3,
+    "short_description": "M. A. Attinas, Prokonsul der Provinz Macedonia, geehrt 230–250 n. Chr.(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 68,
         "end": 68,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "M. A. Attinas, Prokonsul der Provinz Macedonia, geehrt 230–250 n. Chr.(?)"
+    ]
   },
   {
     "lemma": "Aurelius 65a",
     "previous": "Aurelius 63aa",
     "next": "Aurelius 136",
+    "short_description": "A. Aurelianus, leg. Augg. pr. pr. der Provinz Arabia, cos. design.",
     "chapters": [
       {
         "start": 68,
         "end": 68,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Aurelianus, leg. Augg. pr. pr. der Provinz Arabia, cos. design."
+    ]
   },
   {
     "lemma": "Aurelius 136",
@@ -1254,161 +1254,161 @@
     "previous": "Aurelius 141a",
     "next": "Aurelius 192c",
     "proof_read": 3,
+    "short_description": "A. Iustus, comes et praeses der Provinz Caria 355-359 n. Chr.(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 69,
         "end": 69,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "A. Iustus, comes et praeses der Provinz Caria 355-359 n. Chr.(?)"
+    ]
   },
   {
     "lemma": "Aurelius 192c",
     "previous": "Aurelius 158a",
     "next": "Aurelius 192d",
+    "short_description": "Q. A. Polus Terentianus, cos. suff. unter Commodus",
     "chapters": [
       {
         "start": 69,
         "end": 69,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Q. A. Polus Terentianus, cos. suff. unter Commodus"
+    ]
   },
   {
     "lemma": "Aurelius 192d",
     "previous": "Aurelius 192c",
     "next": "Aurelius 192e",
     "proof_read": 3,
+    "short_description": "Q. A. Polus Syriacus, Sohn des Q. A. Nr. 192c Polus Terentianus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 69,
         "end": 69,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Q. A. Polus Syriacus, Sohn des Q. A. Nr. 192c Polus Terentianus"
+    ]
   },
   {
     "lemma": "Aurelius 192e",
     "previous": "Aurelius 192d",
     "next": "Aurelius 221a",
+    "short_description": "A. Pompeianus, cos. ord. im J. 209 n. Chr.",
     "chapters": [
       {
         "start": 69,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Pompeianus, cos. ord. im J. 209 n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 221a",
     "previous": "Aurelius 192e",
     "next": "Aurelius 232a",
     "proof_read": 3,
+    "short_description": "A. Septimus Apollonius, Archiereus der Provinz Asia in Sardeis 3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 70,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "A. Septimus Apollonius, Archiereus der Provinz Asia in Sardeis 3. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 232a",
     "previous": "Aurelius 221a",
     "next": "Aurelius 238a",
+    "proof_read": 3,
+    "short_description": "A. Valentinus, Tribun der Bataver, Statthalter Macedonia 268/9 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 70,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "A. Valentinus, Tribun der Bataver, Statthalter Macedonia 268/9 n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 238a",
     "previous": "Aurelius 232a",
     "next": "Aurelius 262a",
     "proof_read": 3,
+    "short_description": "A. Victor, Präfekt der leg. I Pontica im J. 288 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 70,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "A. Victor, Präfekt der leg. I Pontica im J. 288 n. Chr."
+    ]
   },
   {
     "lemma": "Aurelius 262a",
     "previous": "Aurelius 238a",
     "next": "Baburius 2",
     "proof_read": 3,
+    "short_description": "Aurelia Veranilla, c. m. f., Gattin des Q. Cerellius Nr. 1 Apollinaris",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 70,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Aurelia Veranilla, c. m. f., Gattin des Q. Cerellius Nr. 1 Apollinaris"
+    ]
   },
   {
     "lemma": "Baburius 2",
     "previous": "Aurelius 262a",
     "next": "Baburius 3",
     "proof_read": 3,
+    "short_description": "C. B. Herculanius, c. p., Sohn des L. B. Nr. 3 (S XIV 70) Iuvenis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 70,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. B. Herculanius, c. p., Sohn des L. B. Nr. 3 (S XIV 70) Iuvenis",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Baburius 3",
     "previous": "Baburius 2",
     "next": "Baburius 4",
     "proof_read": 3,
+    "short_description": "L. B. Iuvenis, c.v., Vater des C. B. Nr. 2 Herculanius und L. B. Nr. 4",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 70,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "L. B. Iuvenis, c.v., Vater des C. B. Nr. 2 Herculanius und L. B. Nr. 4",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Baburius 4",
     "previous": "Baburius 3",
     "next": "Baebius 21",
     "proof_read": 3,
+    "short_description": "L. B. Iuvenis, c. p., Sohn des L. B. Nr. 3 (S XIV 70) Iuvenis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 70,
         "end": 70,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "L. B. Iuvenis, c. p., Sohn des L. B. Nr. 3 (S XIV 70) Iuvenis",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Baebius 21",
@@ -1429,20 +1429,21 @@
     "previous": "Baebius 21",
     "next": "Baienus",
     "proof_read": 3,
+    "short_description": "L. B. Celsus, c.v. im 3. oder 4. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 71,
         "end": 71,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "L. B. Celsus, c.v. im 3. oder 4. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Baienus",
     "previous": "Baebius 24a",
     "next": "Baius",
+    "short_description": "Q. B. Blassianus, Präfekt von Aegypten im J. 133 n. Chr.",
     "wp_link": "w:de:Quintus Baienus Blassianus",
     "wd_link": "d:Q2123336",
     "chapters": [
@@ -1451,8 +1452,7 @@
         "end": 72,
         "author": "Gerhard Winkler."
       }
-    ],
-    "short_description": "Q. B. Blassianus, Präfekt von Aegypten im J. 133 n. Chr."
+    ]
   },
   {
     "lemma": "Baius",
@@ -1485,57 +1485,57 @@
     "previous": "Balbura",
     "next": "Bassus 12a",
     "sort_key": "Bassus 08a",
+    "short_description": "Leg. Aug. pr. pr. der Provinz Dalmatia",
     "chapters": [
       {
         "start": 73,
         "end": 73,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Leg. Aug. pr. pr. der Provinz Dalmatia"
+    ]
   },
   {
     "lemma": "Bassus 12a",
     "previous": "Bassus 8a",
     "next": "Begi",
     "proof_read": 3,
+    "short_description": "[---]vius B., corrector regionum Lucaniae et Brittiorum 4. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 73,
         "end": 73,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[---]vius B., corrector regionum Lucaniae et Brittiorum 4. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Begi",
     "previous": "Bassus 12a",
     "next": "Bennius 2",
+    "short_description": "Liburn. Volk",
     "chapters": [
       {
         "start": 73,
         "end": 75,
         "author": "Jaroslav Šašel."
       }
-    ],
-    "short_description": "Liburn. Volk"
+    ]
   },
   {
     "lemma": "Bennius 2",
     "previous": "Begi",
     "next": "Boiodurum",
+    "proof_read": 3,
+    "short_description": "L. B. Felix Minicianus, XVvir sacris faciundis, errichtet Bennia eine Statue",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 75,
         "end": 75,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "L. B. Felix Minicianus, XVvir sacris faciundis, errichtet Bennia eine Statue"
+    ]
   },
   {
     "lemma": "Boiodurum",
@@ -1556,46 +1556,46 @@
     "previous": "Boiodurum",
     "next": "Bruttidius",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 76,
         "end": 76,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Bruttidius",
     "previous": "Bononius 2",
     "next": "Bruttius 4a",
     "sort_key": "Bruttidius",
+    "proof_read": 3,
+    "short_description": "[B]. Sabinus, Prokonsul der Provinz Creta-Cyrenae 1. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 76,
         "end": 76,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "[B]. Sabinus, Prokonsul der Provinz Creta-Cyrenae 1. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Bruttius 4a",
     "previous": "Bruttidius",
     "next": "Bruttius 5",
     "sort_key": "Bruttius 04a",
+    "proof_read": 3,
+    "short_description": "L. B. Maximus, Prokonsul von Cyprus 80/1 n. Chr., baut Heiligtum in Amathus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 77,
         "end": 77,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "L. B. Maximus, Prokonsul von Cyprus 80/1 n. Chr., baut Heiligtum in Amathus"
+    ]
   },
   {
     "lemma": "Bruttius 5",
@@ -1628,74 +1628,74 @@
     "previous": "Bubon 1",
     "next": "Caecilius 37",
     "proof_read": 3,
+    "short_description": "B. Felix, c.v., Curator von Bulla Regia kaum vor 3. Jh. n. Chr.(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 79,
         "end": 79,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "B. Felix, c.v., Curator von Bulla Regia kaum vor 3. Jh. n. Chr.(?)"
+    ]
   },
   {
     "lemma": "Caecilius 37",
     "previous": "Burennius",
     "next": "Caecilius 54b",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 79,
         "end": 79,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Caecilius 54b",
     "previous": "Caecilius 37",
     "next": "Caecilius 68a",
     "proof_read": 3,
+    "short_description": "C. Felix, (Präsidial-?) Prokurator der Provinz Cyrene 238-244 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 79,
         "end": 79,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. Felix, (Präsidial-?) Prokurator der Provinz Cyrene 238-244 n. Chr."
+    ]
   },
   {
     "lemma": "Caecilius 68a",
     "previous": "Caecilius 54b",
     "next": "Caecilius 104a",
+    "proof_read": 3,
+    "short_description": "Maximus, Sex. C. frater Arvalis unter Antoninus Pius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 79,
         "end": 79,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Maximus, Sex. C. frater Arvalis unter Antoninus Pius"
+    ]
   },
   {
     "lemma": "Caecilius 104a",
     "previous": "Caecilius 68a",
     "next": "Caecilius 117",
+    "proof_read": 3,
+    "short_description": "Redditus, Q. C. leg. Aug. der Legion V Macedonica um 156/7 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 79,
         "end": 79,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Redditus, Q. C. leg. Aug. der Legion V Macedonica um 156/7 n. Chr."
+    ]
   },
   {
     "lemma": "Caecilius 117",
@@ -1713,66 +1713,67 @@
     "lemma": "Caecilius 121a",
     "previous": "Caecilius 117",
     "next": "Caecilius 124b",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 79,
         "end": 79,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Caecilius 124b",
     "previous": "Caecilius 121a",
     "next": "Caecilius 138a",
     "proof_read": 3,
+    "short_description": "L. C. Urbanus, c. p",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 79,
         "end": 80,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. C. Urbanus, c. p"
+    ]
   },
   {
     "lemma": "Caecilius 138a",
     "previous": "Caecilius 124b",
     "next": "Caecilius 140",
     "proof_read": 3,
+    "short_description": "Caecilia Petroniana Aemiliana, Enkelin des Sex. C. Nr. 124a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 80,
         "end": 80,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Caecilia Petroniana Aemiliana, Enkelin des Sex. C. Nr. 124a"
+    ]
   },
   {
     "lemma": "Caecilius 140",
     "previous": "Caecilius 138a",
     "next": "Caelius 26a",
     "proof_read": 3,
+    "short_description": "Caecilia Tertulla, Priesterin der Livia und Dea Roma im pamphyl.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 80,
         "end": 80,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Caecilia Tertulla, Priesterin der Livia und Dea Roma im pamphyl."
+    ]
   },
   {
     "lemma": "Caelius 26a",
     "previous": "Caecilius 140",
     "next": "Caerellius 9",
     "proof_read": 3,
+    "no_creative_height": true,
     "wp_link": "w:de:Quintus Caelius Honoratus",
     "wd_link": "d:Q12282857",
     "chapters": [
@@ -1781,36 +1782,35 @@
         "end": 80,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Caerellius 9",
     "previous": "Caelius 26a",
     "next": "Caesellius 1a",
     "sort_key": "Caerellius 09",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 80,
         "end": 80,
         "author": "Gerhard Winkler."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Caesellius 1a",
     "previous": "Caerellius 9",
     "next": "Caesennius 13a",
+    "short_description": "M. C. La[elianus?], Senator um die Mitte des 3. Jh. n. Chr.",
     "chapters": [
       {
         "start": 80,
         "end": 80,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. C. La[elianus?], Senator um die Mitte des 3. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Caesennius 13a",
@@ -1831,45 +1831,45 @@
     "previous": "Caesennius 13a",
     "next": "Caesius 22a",
     "proof_read": 3,
+    "short_description": "[C]. Veiento, Prokonsul der Provinz Creta-Cyrenae 44/5 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 81,
         "end": 81,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "[C]. Veiento, Prokonsul der Provinz Creta-Cyrenae 44/5 n. Chr."
+    ]
   },
   {
     "lemma": "Caesius 22a",
     "previous": "Caesernius 6",
     "next": "Caesius 22b",
     "proof_read": 3,
+    "short_description": "L. C. Marcellus, proc. Aug., Vater des L. C. Nr. 22b Marcellus Florentinus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 81,
         "end": 81,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. C. Marcellus, proc. Aug., Vater des L. C. Nr. 22b Marcellus Florentinus"
+    ]
   },
   {
     "lemma": "Caesius 22b",
     "previous": "Caesius 22a",
     "next": "Caesonius 9",
+    "proof_read": 3,
+    "short_description": "Marcellus Florentinus, L. C. c. p., Patron der Stadt Siagu, mit Statue geehrt",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 81,
         "end": 81,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Marcellus Florentinus, L. C. c. p., Patron der Stadt Siagu, mit Statue geehrt"
+    ]
   },
   {
     "lemma": "Caesonius 9",
@@ -1890,14 +1890,14 @@
     "lemma": "Caetronius 2a",
     "previous": "Caesonius 9",
     "next": "Calestrius 3",
+    "short_description": "C. C. Miccio, kaiserzeitl. Senator",
     "chapters": [
       {
         "start": 83,
         "end": 83,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. C. Miccio, kaiserzeitl. Senator"
+    ]
   },
   {
     "lemma": "Calestrius 3",
@@ -1917,6 +1917,7 @@
     "lemma": "Calestrius 4",
     "previous": "Calestrius 3",
     "next": "Calpurnius 51a",
+    "short_description": "T. C. Tiro Orbius, cos. suff. im J. 122 n. Chr.",
     "wp_link": "w:de:Titus Calestrius Tiro Orbius Speratus",
     "wd_link": "d:Q12296380",
     "chapters": [
@@ -1925,29 +1926,31 @@
         "end": 85,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "T. C. Tiro Orbius, cos. suff. im J. 122 n. Chr."
+    ]
   },
   {
     "lemma": "Calpurnius 51a",
     "previous": "Calestrius 4",
     "next": "Calpurnius 51b",
     "proof_read": 3,
+    "short_description": "L. C. Longus, Senator 1. Jh. n. Chr., Sohn des M. C. Nr. 110a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 85,
         "end": 85,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. C. Longus, Senator 1. Jh. n. Chr., Sohn des M. C. Nr. 110a"
+    ]
   },
   {
     "lemma": "Calpurnius 51b",
     "previous": "Calpurnius 51a",
     "next": "Calpurnius 110a",
     "sort_key": "Calpurnius 051b",
+    "proof_read": 3,
+    "short_description": "L. Marcius Celer M. C. Longus, Legat des Prokonsuls der Provinz Achaia",
+    "no_creative_height": true,
     "wp_link": "w:de:Lucius Marcius Celer Marcus Calpurnius Longus",
     "wd_link": "d:Q12286091",
     "chapters": [
@@ -1956,60 +1959,60 @@
         "end": 85,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "L. Marcius Celer M. C. Longus, Legat des Prokonsuls der Provinz Achaia"
+    ]
   },
   {
     "lemma": "Calpurnius 110a",
     "previous": "Calpurnius 51b",
     "next": "Calpurnius 127a",
+    "proof_read": 3,
+    "short_description": "M. C. Rufus, leg. Aug. pr. pr. der Provinz Lycia-Pamphylia? unter Claudius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 85,
         "end": 85,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "M. C. Rufus, leg. Aug. pr. pr. der Provinz Lycia-Pamphylia? unter Claudius"
+    ]
   },
   {
     "lemma": "Calpurnius 127a",
     "previous": "Calpurnius 110a",
     "next": "Calventius 2",
     "proof_read": 3,
+    "short_description": "Calpurnia, Tochter des L. C. Nr. 74 (III 1383. S I 271) Piso augur",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 85,
         "end": 85,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Calpurnia, Tochter des L. C. Nr. 74 (III 1383. S I 271) Piso augur"
+    ]
   },
   {
     "lemma": "Calventius 2",
     "previous": "Calpurnius 127a",
     "next": "Calvisius 8a",
+    "proof_read": 3,
+    "short_description": "L. C. Vetus Carminius, Legat der Provinz Lusitanien, Konsul 51 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 85,
         "end": 85,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "L. C. Vetus Carminius, Legat der Provinz Lusitanien, Konsul 51 n. Chr."
+    ]
   },
   {
     "lemma": "Calvisius 8a",
     "previous": "Calventius 2",
     "next": "Cammius",
+    "proof_read": 3,
+    "short_description": "P. C. Ruso, cos. suff. 53 n. Chr.",
+    "no_creative_height": true,
     "wp_link": "w:pt:Públio Calvísio Rusão (cônsul em 53)",
     "wd_link": "d:Q12291690",
     "chapters": [
@@ -2018,10 +2021,7 @@
         "end": 86,
         "author": "Werner Eck."
       }
-    ],
-    "proof_read": 3,
-    "short_description": "P. C. Ruso, cos. suff. 53 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Cammius",
@@ -2039,104 +2039,104 @@
     "lemma": "Caninius 17a",
     "previous": "Cammius",
     "next": "Carminius 7a",
+    "proof_read": 3,
+    "short_description": "Caninia Gargonilla, Mutter der Claudia C. Severa 2. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 86,
         "end": 86,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Caninia Gargonilla, Mutter der Claudia C. Severa 2. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Carminius 7a",
     "previous": "Caninius 17a",
     "next": "Cassius 22a",
     "proof_read": 3,
+    "short_description": "Carminia Ammia, Gattin des M. Ulpius C. Claudianus(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 86,
         "end": 86,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Carminia Ammia, Gattin des M. Ulpius C. Claudianus(?)"
+    ]
   },
   {
     "lemma": "Cassius 22a",
     "previous": "Carminius 7a",
     "next": "Cassius 54a",
+    "short_description": "[?Cas] sius [Agrippa?], Prokonsul der Provinz Baetica.",
     "chapters": [
       {
         "start": 86,
         "end": 87,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[?Cas] sius [Agrippa?], Prokonsul der Provinz Baetica."
+    ]
   },
   {
     "lemma": "Cassius 54a",
     "previous": "Cassius 22a",
     "next": "Cassius 68a",
+    "proof_read": 3,
+    "short_description": "C. Longinus Avidius Nigrinus, Legat in Achaia, regelt Grenzstreitigkeiten",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 87,
         "end": 87,
         "author": "Werner Eck."
       }
-    ],
-    "proof_read": 3,
-    "short_description": "C. Longinus Avidius Nigrinus, Legat in Achaia, regelt Grenzstreitigkeiten",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Cassius 68a",
     "previous": "Cassius 54a",
     "next": "Cassius 94",
     "proof_read": 3,
+    "short_description": "P. C. Longinus, Prokonsul der Provinz Cyprus in traian.- hadrian. Zt.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 87,
         "end": 87,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "P. C. Longinus, Prokonsul der Provinz Cyprus in traian.- hadrian. Zt."
+    ]
   },
   {
     "lemma": "Cassius 94",
     "previous": "Cassius 68a",
     "next": "Castus 1a",
     "proof_read": 3,
+    "short_description": "Cassia Cornelia Prisca, c.f., Gattin des M. Aufidius Nr. 19 Fronto",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 87,
         "end": 87,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Cassia Cornelia Prisca, c.f., Gattin des M. Aufidius Nr. 19 Fronto"
+    ]
   },
   {
     "lemma": "Castus 1a",
     "previous": "Cassius 94",
     "next": "Catius 6",
     "proof_read": 3,
+    "short_description": "Cos. suff. (im J. 165 n. Chr.?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 87,
         "end": 87,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Cos. suff. (im J. 165 n. Chr.?)"
+    ]
   },
   {
     "lemma": "Catius 6",
@@ -2154,16 +2154,16 @@
     "lemma": "Catius 6a",
     "previous": "Catius 6",
     "next": "Catius 6b",
+    "proof_read": 3,
+    "short_description": "L. C. Celer, praetor urbanus 2. Jh. n. Chr. Inschrift für Neptunus, Castor, Pollux",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 88,
         "end": 88,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "L. C. Celer, praetor urbanus 2. Jh. n. Chr. Inschrift für Neptunus, Castor, Pollux"
+    ]
   },
   {
     "lemma": "Catius 6b",
@@ -2171,14 +2171,14 @@
     "next": "Catius 9a",
     "redirect": "Catius 9a",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 88,
         "end": 88,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Catius 9a",
@@ -2198,30 +2198,30 @@
     "previous": "Catius 9a",
     "next": "Catius 17",
     "proof_read": 3,
+    "short_description": "Catia C[lementina?], Tochter des [C. Nr. 9a (S XIV 88 [s.d.])?Lepi]dus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 88,
         "end": 88,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Catia C[lementina?], Tochter des [C. Nr. 9a (S XIV 88 [s.d.])?Lepi]dus"
+    ]
   },
   {
     "lemma": "Catius 17",
     "previous": "Catius 16",
     "next": "Ceionius 4",
     "proof_read": 3,
+    "short_description": "Catia Maximina, Tochter des [C. Nr. 9a (S XIV 88 [s.d.])?Lepi]dus I[---].",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 88,
         "end": 88,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Catia Maximina, Tochter des [C. Nr. 9a (S XIV 88 [s.d.])?Lepi]dus I[---]."
+    ]
   },
   {
     "lemma": "Ceionius 4",
@@ -2230,6 +2230,7 @@
     "sort_key": "Ceionius 04",
     "redirect": "Vettulenus 2",
     "proof_read": 3,
+    "no_creative_height": true,
     "wp_link": "w:de:Marcus Vettulenus Civica Barbarus",
     "wd_link": "d:Q334926",
     "chapters": [
@@ -2238,8 +2239,7 @@
         "end": 88,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Ceionius 24",
@@ -2259,58 +2259,58 @@
     "lemma": "Ceionius 24a",
     "previous": "Ceionius 24",
     "next": "Celer 16",
+    "short_description": "C. Rufius Volu[si]anus, vicarius Asiae vor dem J. 390 n. Chr.",
     "chapters": [
       {
         "start": 89,
         "end": 89,
         "author": "Garth Thomas."
       }
-    ],
-    "short_description": "C. Rufius Volu[si]anus, vicarius Asiae vor dem J. 390 n. Chr."
+    ]
   },
   {
     "lemma": "Celer 16",
     "previous": "Ceionius 24a",
     "next": "Cerellius 1",
+    "proof_read": 3,
+    "short_description": "Celer? [M]aximus Cornelius, Militärtribun, Quästor der Provinz Achaia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 89,
         "end": 89,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Celer? [M]aximus Cornelius, Militärtribun, Quästor der Provinz Achaia"
+    ]
   },
   {
     "lemma": "Cerellius 1",
     "previous": "Celer 16",
     "next": "Cerellius 5",
+    "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 90,
         "end": 90,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3
+    ]
   },
   {
     "lemma": "Cerellius 5",
     "previous": "Cerellius 1",
     "next": "Cetius mons",
     "proof_read": 3,
+    "short_description": "Cerellia Veranilla, c. m. f., Tochter des Q. C. Nr. 1 Apollinaris",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 90,
         "end": 90,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Cerellia Veranilla, c. m. f., Tochter des Q. C. Nr. 1 Apollinaris"
+    ]
   },
   {
     "lemma": "Cetius mons",
@@ -2331,14 +2331,14 @@
     "lemma": "Charmides 5",
     "previous": "Cetius mons",
     "next": "Choma 3",
+    "short_description": "Markos Aurelios Ch., Prytanis, Stephanophore in Herakleia Salbake 2. Jh. n. Chr.",
     "chapters": [
       {
         "start": 95,
         "end": 96,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "Markos Aurelios Ch., Prytanis, Stephanophore in Herakleia Salbake 2. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Choma 3",
@@ -2356,19 +2356,20 @@
     "lemma": "Cilnius 1a",
     "previous": "Choma 3",
     "next": "Cilnius 3a",
+    "short_description": "C. C. Ferox, trib. mil. der leg. IV Flavia nicht vor Vespasian",
     "chapters": [
       {
         "start": 96,
         "end": 97,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. C. Ferox, trib. mil. der leg. IV Flavia nicht vor Vespasian"
+    ]
   },
   {
     "lemma": "Cilnius 3a",
     "previous": "Cilnius 1a",
     "next": "Claudianus 11",
+    "short_description": "C. C. Proculus, cos. suff. im J. 100 n. Chr.",
     "wp_link": "w:de:Gaius Cilnius Proculus (Konsul 100)",
     "wd_link": "d:Q1239671",
     "chapters": [
@@ -2377,55 +2378,54 @@
         "end": 98,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. C. Proculus, cos. suff. im J. 100 n. Chr."
+    ]
   },
   {
     "lemma": "Claudianus 11",
     "previous": "Cilnius 3a",
     "next": "Claudius 21a",
+    "proof_read": 3,
+    "short_description": "Claudiana Biacliana, im Senatorenstand, von Syedra in Kilikien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 98,
         "end": 98,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Claudiana Biacliana, im Senatorenstand, von Syedra in Kilikien"
+    ]
   },
   {
     "lemma": "Claudius 21a",
     "previous": "Claudianus 11",
     "next": "Claudius 32a",
     "sort_key": "Claudius 021a",
+    "proof_read": 3,
+    "short_description": "L. Claudi[us---], cos. suff. 139 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 98,
         "end": 98,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "L. Claudi[us---], cos. suff. 139 n. Chr."
+    ]
   },
   {
     "lemma": "Claudius 32a",
     "previous": "Claudius 21a",
     "next": "Claudius 41b",
     "sort_key": "Claudius 032a",
+    "proof_read": 3,
+    "short_description": "Ti. Claudi[us---], cos. suff. unter Hadrian zwischen 128–138 n. Chr. = Nr. 334?",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 98,
         "end": 98,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Ti. Claudi[us---], cos. suff. unter Hadrian zwischen 128–138 n. Chr. = Nr. 334?"
+    ]
   },
   {
     "lemma": "Claudius 41b",
@@ -2445,16 +2445,16 @@
     "previous": "Claudius 41b",
     "next": "Claudius 89a",
     "sort_key": "Claudius 075a",
+    "proof_read": 3,
+    "short_description": "[Cl.?---]avius, c.v. (aus Dalmatien?), Vater des Cl(audius) Nr. 89a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 98,
         "end": 98,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "[Cl.?---]avius, c.v. (aus Dalmatien?), Vater des Cl(audius) Nr. 89a"
+    ]
   },
   {
     "lemma": "Claudius 89a",
@@ -2462,56 +2462,56 @@
     "next": "Claudius 107a",
     "sort_key": "Claudius 089a",
     "proof_read": 3,
+    "short_description": "Cl (audius) Ca[---], Sohn des [C1. Nr. 75a (S XIV 98)? ---]avius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 98,
         "end": 98,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Cl (audius) Ca[---], Sohn des [C1. Nr. 75a (S XIV 98)? ---]avius"
+    ]
   },
   {
     "lemma": "Claudius 107a",
     "previous": "Claudius 89a",
     "next": "Claudius 107b",
+    "short_description": "A. Cl. Charax, cos. suff. im J. 147 n. Chr.",
     "chapters": [
       {
         "start": 99,
         "end": 100,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "A. Cl. Charax, cos. suff. im J. 147 n. Chr."
+    ]
   },
   {
     "lemma": "Claudius 107b",
     "previous": "Claudius 107a",
     "next": "Claudius 147a",
+    "short_description": "Ti. Cl. Classicus, kaiserl. Freigelassener, proc. Alexandreae unter Traian",
     "chapters": [
       {
         "start": 100,
         "end": 100,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Ti. Cl. Classicus, kaiserl. Freigelassener, proc. Alexandreae unter Traian"
+    ]
   },
   {
     "lemma": "Claudius 147a",
     "previous": "Claudius 107b",
     "next": "Claudius 167",
     "proof_read": 3,
+    "short_description": "Ti. Cl. F[---] oder Ph[---], Prokonsul",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 100,
         "end": 100,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Ti. Cl. F[---] oder Ph[---], Prokonsul"
+    ]
   },
   {
     "lemma": "Claudius 167",
@@ -2530,60 +2530,60 @@
     "previous": "Claudius 167",
     "next": "Claudius 200a",
     "proof_read": 3,
+    "short_description": "Cl. Iullus, leg. pr. pr. des Prokonsuls der Provinz Asia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 101,
         "end": 101,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Cl. Iullus, leg. pr. pr. des Prokonsuls der Provinz Asia"
+    ]
   },
   {
     "lemma": "Claudius 200a",
     "previous": "Claudius 197a",
     "next": "Claudius 210a",
+    "proof_read": 3,
+    "short_description": "Ti. Cl. L[---], Legat in der Provinz Macedonia oder Achaia 1. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 101,
         "end": 101,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Ti. Cl. L[---], Legat in der Provinz Macedonia oder Achaia 1. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Claudius 210a",
     "previous": "Claudius 200a",
     "next": "Claudius 241a",
     "proof_read": 3,
+    "short_description": "Ti. Cl. M[---], cos. suff. (zu Ende des 2. Jh. n. Chr.?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 101,
         "end": 101,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Ti. Cl. M[---], cos. suff. (zu Ende des 2. Jh. n. Chr.?)"
+    ]
   },
   {
     "lemma": "Claudius 241a",
     "previous": "Claudius 210a",
     "next": "Claudius 242",
+    "proof_read": 3,
+    "short_description": "Modestus, prätorischer Statthalter der Provinz Arabia unter Marc Aurel",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 101,
         "end": 101,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Modestus, prätorischer Statthalter der Provinz Arabia unter Marc Aurel"
+    ]
   },
   {
     "lemma": "Claudius 242",
@@ -2602,88 +2602,88 @@
     "previous": "Claudius 242",
     "next": "Claudius 319",
     "proof_read": 3,
+    "short_description": "Pollio, frater arvalis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 101,
         "end": 101,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Pollio, frater arvalis"
+    ]
   },
   {
     "lemma": "Claudius 319",
     "previous": "Claudius 273a",
     "next": "Claudius 342a",
+    "proof_read": 3,
+    "short_description": "Ti. Cl. Rufus Statius, Xvir stlitibus iudicandis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 101,
         "end": 102,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Ti. Cl. Rufus Statius, Xvir stlitibus iudicandis"
+    ]
   },
   {
     "lemma": "Claudius 342a",
     "previous": "Claudius 319",
     "next": "Claudius 349a",
+    "proof_read": 3,
+    "short_description": "Ti. Cl. Sestius, Inhaber municipaler Priesterämter in Leptis Magna",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 102,
         "end": 102,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Ti. Cl. Sestius, Inhaber municipaler Priesterämter in Leptis Magna"
+    ]
   },
   {
     "lemma": "Claudius 349a",
     "previous": "Claudius 342a",
     "next": "Claudius 369a",
+    "short_description": "Ti. Cl. Severus aus Ephesos, Konsul (in sever. Zt.?)",
     "chapters": [
       {
         "start": 102,
         "end": 102,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Ti. Cl. Severus aus Ephesos, Konsul (in sever. Zt.?)"
+    ]
   },
   {
     "lemma": "Claudius 369a",
     "previous": "Claudius 349a",
     "next": "Claudius 410a",
+    "proof_read": 3,
+    "short_description": "Cl. Valerianus, Domänenprokurator in der Provinz Galatia unter Marc Aurel",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 102,
         "end": 103,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Cl. Valerianus, Domänenprokurator in der Provinz Galatia unter Marc Aurel"
+    ]
   },
   {
     "lemma": "Claudius 410a",
     "previous": "Claudius 369a",
     "next": "Claudius 412",
+    "proof_read": 3,
+    "short_description": "Claudia Basilo von Ephesos, Gattin eines Konsulars, Mutter des Iulius Piso",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 103,
         "end": 103,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Claudia Basilo von Ephesos, Gattin eines Konsulars, Mutter des Iulius Piso"
+    ]
   },
   {
     "lemma": "Claudius 412",
@@ -2701,158 +2701,158 @@
     "lemma": "Claudius 414a",
     "previous": "Claudius 412",
     "next": "Claudius 418a",
+    "proof_read": 3,
+    "short_description": "Claudia Cratia, Prytanin in Ephesos 2. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 103,
         "end": 104,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Claudia Cratia, Prytanin in Ephesos 2. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Claudius 418a",
     "previous": "Claudius 414a",
     "next": "Claudius 429a",
+    "proof_read": 3,
+    "short_description": "Claudia Galitta, c. p., Tochter des Cl. Nr. 162 Gallus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 104,
         "end": 104,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Claudia Galitta, c. p., Tochter des Cl. Nr. 162 Gallus"
+    ]
   },
   {
     "lemma": "Claudius 429a",
     "previous": "Claudius 418a",
     "next": "Claudius 433a",
+    "proof_read": 3,
+    "short_description": "(Claudia) Pacata, c. p., in der Provinz Arabia 223 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 104,
         "end": 104,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "(Claudia) Pacata, c. p., in der Provinz Arabia 223 n. Chr."
+    ]
   },
   {
     "lemma": "Claudius 433a",
     "previous": "Claudius 429a",
     "next": "Claudius 437a",
+    "proof_read": 3,
+    "short_description": "Claudia Proculina, Gattin des Pontius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 104,
         "end": 104,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Claudia Proculina, Gattin des Pontius"
+    ]
   },
   {
     "lemma": "Claudius 437a",
     "previous": "Claudius 433a",
     "next": "Claudius 440a",
     "proof_read": 3,
+    "short_description": "Claudia Rufina aus Side, Gattin eines Konsulars(?). S XIV.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 104,
         "end": 104,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Claudia Rufina aus Side, Gattin eines Konsulars(?). S XIV."
+    ]
   },
   {
     "lemma": "Claudius 440a",
     "previous": "Claudius 437a",
     "next": "Clodius 30a",
     "proof_read": 3,
+    "short_description": "s. [441a]).",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 104,
         "end": 104,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "s. [441a])."
+    ]
   },
   {
     "lemma": "Clodius 30a",
     "previous": "Claudius 440a",
     "next": "Clodius 58a",
+    "short_description": "Q. C. Flavianus, c.v., Inhaber mehrerer Priesterämter 4. Jh. n. Chr.",
     "chapters": [
       {
         "start": 104,
         "end": 105,
         "author": "Garth Thomas."
       }
-    ],
-    "short_description": "Q. C. Flavianus, c.v., Inhaber mehrerer Priesterämter 4. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Clodius 58a",
     "previous": "Clodius 30a",
     "next": "Clodius 62a",
+    "short_description": "L. C. Tineius Pupienus, c.i., Angehöriger des Priesterkollegiums curiones",
     "chapters": [
       {
         "start": 104,
         "end": 104,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "L. C. Tineius Pupienus, c.i., Angehöriger des Priesterkollegiums curiones"
+    ]
   },
   {
     "lemma": "Clodius 62a",
     "previous": "Clodius 58a",
     "next": "Cluvius 10b",
+    "proof_read": 3,
+    "short_description": "C. C. Vestalis, Prokonsul der Provinz Creta-Cyrenae 1. Jh. v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 104,
         "end": 105,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "C. C. Vestalis, Prokonsul der Provinz Creta-Cyrenae 1. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Cluvius 10b",
     "previous": "Clodius 62a",
     "next": "Cluvius 10c",
+    "short_description": "P. C. Maximus Paulinus, Konsul um das J. 138 n. Chr.",
     "chapters": [
       {
         "start": 105,
         "end": 105,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "P. C. Maximus Paulinus, Konsul um das J. 138 n. Chr."
+    ]
   },
   {
     "lemma": "Cluvius 10c",
     "previous": "Cluvius 10b",
     "next": "Coelius 19",
+    "short_description": "P. C. Maximus Paullinus, Sohn des P. C. Nr. 10b Maximus Paulinus",
     "chapters": [
       {
         "start": 105,
         "end": 105,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "P. C. Maximus Paullinus, Sohn des P. C. Nr. 10b Maximus Paulinus"
+    ]
   },
   {
     "lemma": "Coelius 19",
@@ -2873,6 +2873,7 @@
     "previous": "Coelius 19",
     "next": "Comius 2",
     "proof_read": 3,
+    "no_creative_height": true,
     "wp_link": "w:de:Marcus Cominius Secundus",
     "wd_link": "d:Q12286096",
     "chapters": [
@@ -2881,23 +2882,22 @@
         "end": 106,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Comius 2",
     "previous": "Cominius 22",
     "next": "computus",
     "proof_read": 3,
+    "short_description": "Q. C. Armiger Crescens, curul. Ädil",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 106,
         "end": 106,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Q. C. Armiger Crescens, curul. Ädil"
+    ]
   },
   {
     "lemma": "computus",
@@ -2917,49 +2917,50 @@
     "previous": "computus",
     "next": "Cordus 1a",
     "proof_read": 3,
+    "short_description": "Praef. vigilum im J. 149 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 106,
         "end": 106,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Praef. vigilum im J. 149 n. Chr."
+    ]
   },
   {
     "lemma": "Cordus 1a",
     "previous": "Concors",
     "next": "Corellius 1a",
     "proof_read": 3,
+    "short_description": "[---]lonius C., cos. suff. zwischen den J. 61(?) und 79 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 106,
         "end": 106,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "[---]lonius C., cos. suff. zwischen den J. 61(?) und 79 n. Chr."
+    ]
   },
   {
     "lemma": "Corellius 1a",
     "previous": "Cordus 1a",
     "next": "Corellius 2",
+    "short_description": "L. C. Celer Fisius, Patron von Nola, Gatte der Varia Pansina",
     "chapters": [
       {
         "start": 106,
         "end": 107,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "L. C. Celer Fisius, Patron von Nola, Gatte der Varia Pansina"
+    ]
   },
   {
     "lemma": "Corellius 2",
     "previous": "Corellius 1a",
     "next": "Cornelius 124a",
     "proof_read": 3,
+    "no_creative_height": true,
     "wp_link": "w:de:Lucius Corellius Neratius Pansa",
     "wd_link": "d:Q358939",
     "chapters": [
@@ -2968,23 +2969,22 @@
         "end": 107,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Cornelius 124a",
     "previous": "Corellius 2",
     "next": "Cornelius 146",
+    "proof_read": 3,
+    "short_description": "C. [Dex]ter, prätorischer Statthalter von Kilikien im J. 157 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 107,
         "end": 107,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "C. [Dex]ter, prätorischer Statthalter von Kilikien im J. 157 n. Chr."
+    ]
   },
   {
     "lemma": "Cornelius 146",
@@ -3005,15 +3005,15 @@
     "previous": "Cornelius 146",
     "next": "Cornelius 276",
     "proof_read": 3,
+    "short_description": "M. C. Firmus, prokonsularer Legat des L. Nonius (S IX 463 Nr.17a) Asprenas in der Provinz Africa im J. 82/3 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 107,
         "end": 107,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "M. C. Firmus, prokonsularer Legat des L. Nonius (S IX 463 Nr.17a) Asprenas in der Provinz Africa im J. 82/3 n. Chr."
+    ]
   },
   {
     "lemma": "Cornelius 276",
@@ -3034,60 +3034,60 @@
     "previous": "Cornelius 276",
     "next": "Cornelius 291a",
     "proof_read": 3,
+    "short_description": "C. Plotianus, Legat der leg. XI Claudia in Moesia inf. in den J. 162-164 n. Chr., Vater des L. C. Nr.284 (IV 1419. S IX 21) Felix Plotianus(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. Plotianus, Legat der leg. XI Claudia in Moesia inf. in den J. 162-164 n. Chr., Vater des L. C. Nr.284 (IV 1419. S IX 21) Felix Plotianus(?)"
+    ]
   },
   {
     "lemma": "Cornelius 291a",
     "previous": "Cornelius 283a",
     "next": "Cornelius 304a",
     "proof_read": 3,
+    "short_description": "C. Procl[us], Prokonsul der Provinz Asia = Q. C. Nr.294 (IV 1420. S XII 189) Proculus(?).",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 108,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. Procl[us], Prokonsul der Provinz Asia = Q. C. Nr.294 (IV 1420. S XII 189) Proculus(?)."
+    ]
   },
   {
     "lemma": "Cornelius 304a",
     "previous": "Cornelius 291a",
     "next": "Cornelius 333a",
+    "proof_read": 3,
+    "short_description": "Rufus, C. Prokonsul der Provinz Macedonia unter Marc Aurel",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 108,
         "end": 109,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Rufus, C. Prokonsul der Provinz Macedonia unter Marc Aurel"
+    ]
   },
   {
     "lemma": "Cornelius 333a",
     "previous": "Cornelius 304a",
     "next": "Cornelius 359",
+    "proof_read": 3,
+    "short_description": "P. C. Scipio, quaestor pr. pr. der Provinz Achaia 2/3 n. Chr.?",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 109,
         "end": 109,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "P. C. Scipio, quaestor pr. pr. der Provinz Achaia 2/3 n. Chr.?"
+    ]
   },
   {
     "lemma": "Cornelius 359",
@@ -3117,219 +3117,219 @@
     "lemma": "Cornelius 442a",
     "previous": "Cornelius 398a",
     "next": "Cos(s)inius 5a",
+    "proof_read": 3,
+    "short_description": "Cornelia Optata A[---] Flavia, Gattin des Claudius Sollemnius P. 223 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 109,
         "end": 109,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Cornelia Optata A[---] Flavia, Gattin des Claudius Sollemnius P. 223 n. Chr."
+    ]
   },
   {
     "lemma": "Cos(s)inius 5a",
     "previous": "Cornelius 442a",
     "next": "Crispinus 18",
     "proof_read": 3,
+    "short_description": "C. Marcianus, leg. Aug. pr. pr. der Provinz Numidia unter Gordian III",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 109,
         "end": 109,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. Marcianus, leg. Aug. pr. pr. der Provinz Numidia unter Gordian III"
+    ]
   },
   {
     "lemma": "Crispinus 18",
     "previous": "Cos(s)inius 5a",
     "next": "Curtius 36a",
     "proof_read": 3,
+    "short_description": "Crispina, Gattin des Q. (Septicius) Nr.3a = (Caepia) Nr.7 Crispina.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 109,
         "end": 109,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Crispina, Gattin des Q. (Septicius) Nr.3a = (Caepia) Nr.7 Crispina."
+    ]
   },
   {
     "lemma": "Curtius 36a",
     "previous": "Crispinus 18",
     "next": "Curvius 2",
     "proof_read": 3,
+    "short_description": "Curtia Catiana, c. p., Christin zu Anfang des 4. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 110,
         "end": 110,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Curtia Catiana, c. p., Christin zu Anfang des 4. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Curvius 2",
     "previous": "Curtius 36a",
     "next": "Cuspius 1a",
+    "short_description": "Sex. C. Silvinus, frühkaiserzeitl.(?) quaestor pr. pr. der Provinz Baetica",
     "chapters": [
       {
         "start": 110,
         "end": 110,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Sex. C. Silvinus, frühkaiserzeitl.(?) quaestor pr. pr. der Provinz Baetica"
+    ]
   },
   {
     "lemma": "Cuspius 1a",
     "previous": "Curvius 2",
     "next": "Cutius 1a",
     "proof_read": 3,
+    "short_description": "M. Cuspiu[s---], konsularer Legat der Provinz Dacia oder Legionskommandant in Moesien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 110,
         "end": 110,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "M. Cuspiu[s---], konsularer Legat der Provinz Dacia oder Legionskommandant in Moesien"
+    ]
   },
   {
     "lemma": "Cutius 1a",
     "previous": "Cuspius 1a",
     "next": "Damocharis 2",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 110,
         "end": 110,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Damocharis 2",
     "previous": "Cutius 1a",
     "next": "Damocratia",
+    "short_description": "Statthalter der Provinz Asia in der 2. H. des 4. Jh. n. Chr.(?)",
     "chapters": [
       {
         "start": 110,
         "end": 110,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Statthalter der Provinz Asia in der 2. H. des 4. Jh. n. Chr.(?)"
+    ]
   },
   {
     "lemma": "Damocratia",
     "previous": "Damocharis 2",
     "next": "Danacia",
     "proof_read": 3,
+    "short_description": "Angehörige des Senatorenstandes um 400 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 110,
         "end": 110,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Angehörige des Senatorenstandes um 400 n. Chr."
+    ]
   },
   {
     "lemma": "Danacia",
     "previous": "Damocratia",
     "next": "Decimius 10a",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 110,
         "end": 111,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Decimius 10a",
     "previous": "Danacia",
     "next": "Demetrianus 5",
     "sort_key": "Decimius 010a",
+    "short_description": "D. Quin [t---], f. l. statt D. Iunius Nr. 135) Quintianus, Konsular",
     "chapters": [
       {
         "start": 111,
         "end": 112,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "D. Quin [t---], f. l. statt D. Iunius Nr. 135) Quintianus, Konsular"
+    ]
   },
   {
     "lemma": "Demetrianus 5",
     "previous": "Decimius 10a",
     "next": "Demokrates 11a",
     "proof_read": 3,
+    "short_description": "C. m. v., Christ (um 300 n. Chr.?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 112,
         "end": 112,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. m. v., Christ (um 300 n. Chr.?)"
+    ]
   },
   {
     "lemma": "Demokrates 11a",
     "previous": "Demetrianus 5",
     "next": "Dentilianus 2",
     "proof_read": 3,
+    "short_description": "Prokonsul der Provinz Achaia im 3. Jh. n. Chr.(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 111,
         "end": 111,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Prokonsul der Provinz Achaia im 3. Jh. n. Chr.(?)"
+    ]
   },
   {
     "lemma": "Dentilianus 2",
     "previous": "Demokrates 11a",
     "next": "Dexius 4",
+    "proof_read": 3,
+    "short_description": "Statthalter in der Campania im 4. Jh. n. Chr.(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 111,
         "end": 111,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "proof_read": 3,
-    "short_description": "Statthalter in der Campania im 4. Jh. n. Chr.(?)"
+    ]
   },
   {
     "lemma": "Dexius 4",
     "previous": "Dentilianus 2",
     "next": "Didius 6",
     "proof_read": 3,
+    "short_description": "C. D. Staberianus, cos. suff. (vor dem J. 69 n. Chr.?). vgl. Venuleius Nr. 8a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 111,
         "end": 111,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. D. Staberianus, cos. suff. (vor dem J. 69 n. Chr.?). vgl. Venuleius Nr. 8a"
+    ]
   },
   {
     "lemma": "Didius 6",
@@ -3361,6 +3361,7 @@
     "lemma": "digitorum computus",
     "previous": "Didius 10a",
     "next": "Diophantos 17",
+    "short_description": "Das Fingerrechnen",
     "wp_link": "w:de:Fingerrechnen",
     "wd_link": "d:Q1417141",
     "chapters": [
@@ -3369,8 +3370,7 @@
         "end": 113,
         "author": "Hildebrecht Hommel."
       }
-    ],
-    "short_description": "Das Fingerrechnen"
+    ]
   },
   {
     "lemma": "Diophantos 17",
@@ -3389,29 +3389,29 @@
     "previous": "Diophantos 17",
     "next": "Domitius 108a",
     "sort_key": "Domitius 063a",
+    "short_description": "D. Leo Procillianus, Konsul, Statthalter Provinz Syria Phoenice 207 n. Chr.",
     "chapters": [
       {
         "start": 114,
         "end": 114,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "D. Leo Procillianus, Konsul, Statthalter Provinz Syria Phoenice 207 n. Chr."
+    ]
   },
   {
     "lemma": "Domitius 108a",
     "previous": "Domitius 63a",
     "next": "Egnatius 17a",
     "proof_read": 3,
+    "short_description": "Domitia Regina, Gattin des L. Calpurnius Nr. 101 Proclus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 115,
         "end": 115,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Domitia Regina, Gattin des L. Calpurnius Nr. 101 Proclus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Egnatius 17a",
@@ -3484,16 +3484,16 @@
     "lemma": "Fabius 49a",
     "previous": "Erucius 10",
     "next": "Fabius 147a",
+    "proof_read": 2,
+    "short_description": "Q. F. Barbarus Antonius, cos. suff. vor 68 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 117,
         "end": 117,
         "author": "Werner Eck."
       }
-    ],
-    "proof_read": 2,
-    "short_description": "Q. F. Barbarus Antonius, cos. suff. vor 68 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Fabius 147a",
@@ -4016,55 +4016,55 @@
     "previous": "Iulianus 17a",
     "next": "Iulius 105a",
     "sort_key": "Iulius 065a",
+    "short_description": "C. I. Ant. Tertullinus, Finanz-? Prokurator (der Provinz Asia?) 2. Jh. n. Chr.",
     "chapters": [
       {
         "start": 205,
         "end": 206,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. I. Ant. Tertullinus, Finanz-? Prokurator (der Provinz Asia?) 2. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 105a",
     "previous": "Iulius 65a",
     "next": "Iulius 163a",
+    "short_description": "I. Aurelianus, Statthalter der Provinz Campania (im J. 335 n. Chr.?)",
     "chapters": [
       {
         "start": 206,
         "end": 207,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "I. Aurelianus, Statthalter der Provinz Campania (im J. 335 n. Chr.?)"
+    ]
   },
   {
     "lemma": "Iulius 163a",
     "previous": "Iulius 105a",
     "next": "Iulius 164a",
     "proof_read": 3,
+    "short_description": "Ti. I. Candidus, Prätor im J. 121 n. Chr. = I. Nr. 162 (X 538) Candidus(?).",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 207,
         "end": 207,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Ti. I. Candidus, Prätor im J. 121 n. Chr. = I. Nr. 162 (X 538) Candidus(?).",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Iulius 164a",
     "previous": "Iulius 163a",
     "next": "Iulius 166",
+    "short_description": "Ti. I. Candidus Caecilius Simplex, legatus dioeceseos Ephesiacae 139 n. Chr.",
     "chapters": [
       {
         "start": 207,
         "end": 207,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Ti. I. Candidus Caecilius Simplex, legatus dioeceseos Ephesiacae 139 n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 166",
@@ -4084,27 +4084,27 @@
     "lemma": "Iulius 172a",
     "previous": "Iulius 166",
     "next": "Iulius 195a",
+    "short_description": "I. Castus(?), leg. Aug. pr. pr. der Provinz Cilicia im J. 120 n. Chr.",
     "chapters": [
       {
         "start": 207,
         "end": 207,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "I. Castus(?), leg. Aug. pr. pr. der Provinz Cilicia im J. 120 n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 195a",
     "previous": "Iulius 172a",
     "next": "Iulius 196",
+    "short_description": "Q. I. Cordus Iunius, Illvir monetalis oder capitalis(?)",
     "chapters": [
       {
         "start": 207,
         "end": 208,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Q. I. Cordus Iunius, Illvir monetalis oder capitalis(?)"
+    ]
   },
   {
     "lemma": "Iulius 196",
@@ -4140,15 +4140,15 @@
     "previous": "Iulius 243",
     "next": "Iulius 252",
     "proof_read": 3,
+    "short_description": "I. Fronto Tlepolemus, Prokonsul der Provinz Cyprus im J. 210/1 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 209,
         "end": 209,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "I. Fronto Tlepolemus, Prokonsul der Provinz Cyprus im J. 210/1 n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 252",
@@ -4168,27 +4168,27 @@
     "lemma": "Iulius 290a",
     "previous": "Iulius 252",
     "next": "Iulius 379b",
+    "short_description": "Ti. I. Iulianus, curator aedium sacrarum (unter Hadrian?) = Ti. I. Nr.61 (X 158) Alexander Iulianus(?). = I. Nr.283a (S XII 506) Iulianus(?)",
     "chapters": [
       {
         "start": 209,
         "end": 209,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Ti. I. Iulianus, curator aedium sacrarum (unter Hadrian?) = Ti. I. Nr.61 (X 158) Alexander Iulianus(?). = I. Nr.283a (S XII 506) Iulianus(?)"
+    ]
   },
   {
     "lemma": "Iulius 379b",
     "previous": "Iulius 290a",
     "next": "Iulius 425a",
+    "short_description": "I. Paullus, Senator um das J. 100 n. Chr.",
     "chapters": [
       {
         "start": 209,
         "end": 209,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "I. Paullus, Senator um das J. 100 n. Chr."
+    ]
   },
   {
     "lemma": "Iulius 425a",
@@ -4209,15 +4209,15 @@
     "previous": "Iulius 425a",
     "next": "Iulius 536",
     "proof_read": 3,
+    "short_description": "I. Sulpicius Sucessus, procurator portus Puteol(anorum) 4. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 211,
         "end": 211,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "I. Sulpicius Sucessus, procurator portus Puteol(anorum) 4. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Iulius 536",
@@ -4236,41 +4236,41 @@
     "previous": "Iulius 536",
     "next": "Iulius 595a",
     "proof_read": 3,
+    "short_description": "Iulia [Agrippina, Tochter des I. Nr. 379b (S XIV 209) Paullus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 212,
         "end": 212,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Iulia [Agrippina, Tochter des I. Nr. 379b (S XIV 209) Paullus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Iulius 595a",
     "previous": "Iulius 556a",
     "next": "Iunior 4",
+    "short_description": "Iulia Severa, Gattin des L. Luscius (XIII 1865. S XIV 265 Nr. 3) Ocrea",
     "chapters": [
       {
         "start": 212,
         "end": 212,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Iulia Severa, Gattin des L. Luscius (XIII 1865. S XIV 265 Nr. 3) Ocrea"
+    ]
   },
   {
     "lemma": "Iunior 4",
     "previous": "Iulius 595a",
     "next": "Iunius 80",
+    "short_description": "[---] Iun[i]or, c.v. im 3. Jh. n. Chr.",
     "chapters": [
       {
         "start": 212,
         "end": 212,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[---] Iun[i]or, c.v. im 3. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Iunius 80",
@@ -4505,30 +4505,30 @@
     "previous": "Maecius 15a",
     "next": "Manilius 24a",
     "proof_read": 2,
+    "short_description": "Quinta Mamilia Titiana aus Rom, c. m. f. (im 4. Jh. n. Chr.?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 273,
         "end": 273,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Quinta Mamilia Titiana aus Rom, c. m. f. (im 4. Jh. n. Chr.?)",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Manilius 24a",
     "previous": "Mamilius 17",
     "next": "Marcellus 1",
     "proof_read": 2,
+    "short_description": "M. Fuscus, Sohn des Ti. M. Nr. 25 Fuscus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 273,
         "end": 273,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. Fuscus, Sohn des Ti. M. Nr. 25 Fuscus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Marcellus 1",
@@ -4616,15 +4616,15 @@
     "previous": "Meidias 9",
     "next": "Memmius 10a",
     "proof_read": 2,
+    "short_description": "[Ma]ximus, c.v., curator alvei Tiberis et riparum um 200 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 280,
         "end": 280,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[Ma]ximus, c.v., curator alvei Tiberis et riparum um 200 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Memmius 10a",
@@ -4643,15 +4643,15 @@
     "next": "Memmius 39a",
     "sort_key": "Maximillianus",
     "proof_read": 2,
+    "short_description": "Prokonsul der Provinz Asia 250-270 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 280,
         "end": 280,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Prokonsul der Provinz Asia 250-270 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Memmius 39a",
@@ -4669,15 +4669,15 @@
     "previous": "Memmius 39a",
     "next": "Messius 5a",
     "proof_read": 2,
+    "short_description": "Memmia Nerulla",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 281,
         "end": 281,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Memmia Nerulla",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Messius 5a",
@@ -4695,15 +4695,15 @@
     "previous": "Messius 5a",
     "next": "Messius 11a",
     "proof_read": 2,
+    "short_description": "P. M. Campanus, proc. Caesaris auf Kreta im J. 84 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 281,
         "end": 281,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "P. M. Campanus, proc. Caesaris auf Kreta im J. 84 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Messius 11a",
@@ -4766,15 +4766,15 @@
     "previous": "Minucius 50a",
     "next": "Neratius 12a",
     "proof_read": 2,
+    "short_description": "C. M. Laetus Rufinianus, curator rei publicae unter Marc Aurel und Verus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 284,
         "end": 284,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. M. Laetus Rufinianus, curator rei publicae unter Marc Aurel und Verus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Neratius 12a",
@@ -4803,15 +4803,15 @@
     "previous": "Nonius 8a",
     "next": "Norbanus 1a",
     "proof_read": 2,
+    "short_description": "C. N. Var. Proculus, cos. suff. etwa in der 1. H. des 2. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 286,
         "end": 286,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. N. Var. Proculus, cos. suff. etwa in der 1. H. des 2. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Norbanus 1a",
@@ -4842,15 +4842,15 @@
     "previous": "Numisius 4a",
     "next": "Nummius 18a",
     "proof_read": 2,
+    "short_description": "Numisia Fonteia Vera",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 288,
         "end": 288,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Numisia Fonteia Vera",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Nummius 18a",
@@ -4902,15 +4902,15 @@
     "previous": "Oppius 32a",
     "next": "Orchomenos 1",
     "proof_read": 2,
+    "short_description": "Octabianus, Statthalter der Provinz Sardinia 235 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 290,
         "end": 290,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Octabianus, Statthalter der Provinz Sardinia 235 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Orchomenos 1",
@@ -4929,15 +4929,15 @@
     "previous": "Orchomenos 1",
     "next": "Ostorius 6",
     "proof_read": 2,
+    "short_description": "O. Euhodianus, cos. design. 3. Jh. n. Chr.?, Vater der Ostoria Nr. 6",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 355,
         "end": 355,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "O. Euhodianus, cos. design. 3. Jh. n. Chr.?, Vater der Ostoria Nr. 6",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Ostorius 6",
@@ -4955,15 +4955,15 @@
     "previous": "Ostorius 6",
     "next": "Ovilatus",
     "proof_read": 2,
+    "short_description": "M'. Otacilius Crassus? Prokonsul der Provinz Bithynia august. Zeit?",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 355,
         "end": 355,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M'. Otacilius Crassus? Prokonsul der Provinz Bithynia august. Zeit?",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Ovilatus",
@@ -4982,30 +4982,30 @@
     "previous": "Ovilatus",
     "next": "Pacatus 8",
     "proof_read": 2,
+    "short_description": "O., curator viae Flaminiae = L. O. Nr. 9 Rusticus Cornelianus(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 366,
         "end": 366,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "O., curator viae Flaminiae = L. O. Nr. 9 Rusticus Cornelianus(?)",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pacatus 8",
     "previous": "Ovinius 1a",
     "next": "Pacilaeus",
     "proof_read": 2,
+    "short_description": "[---]nia Pacata, Mädchen senator. Standes an Säkularspielen 204 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 366,
         "end": 366,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[---]nia Pacata, Mädchen senator. Standes an Säkularspielen 204 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pacilaeus",
@@ -5035,15 +5035,15 @@
     "previous": "Papias 7",
     "next": "Papius 13a",
     "proof_read": 2,
+    "short_description": "Cn. P. Actius, quaestor pr. pr. der Provinz Creta-Cyrenae",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 367,
         "end": 367,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Cn. P. Actius, quaestor pr. pr. der Provinz Creta-Cyrenae",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Papius 13a",
@@ -5061,15 +5061,15 @@
     "previous": "Papius 13a",
     "next": "Passer 2",
     "proof_read": 2,
+    "short_description": "[---]enus P., pr(aetor) aer(arii) 27 n. Chr., Volusenus?",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 368,
         "end": 368,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[---]enus P., pr(aetor) aer(arii) 27 n. Chr., Volusenus?",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Passer 2",
@@ -5166,15 +5166,15 @@
     "previous": "Petronius 49a",
     "next": "Pinarius 10a",
     "proof_read": 2,
+    "short_description": "att. Töpfer in spätklass. Zeit",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 383,
         "end": 383,
         "author": "Frank Brommer."
       }
-    ],
-    "short_description": "att. Töpfer in spätklass. Zeit",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pinarius 10a",
@@ -5213,15 +5213,15 @@
     "previous": "Plancius 8",
     "next": "Plorucensis statio",
     "proof_read": 2,
+    "short_description": "Plautia, Tochter des Ti. P. Nr. 47 (XXI 35) Silvanus Aelianus(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 385,
         "end": 385,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Plautia, Tochter des Ti. P. Nr. 47 (XXI 35) Silvanus Aelianus(?)",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Plorucensis statio",
@@ -5334,15 +5334,15 @@
     "previous": "Polemonion",
     "next": "Polybos 8",
     "proof_read": 2,
+    "short_description": "Pollenia Honorata, Tochter des Ti. P. Nr. 4 Armenius Peregrinus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 428,
         "end": 428,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Pollenia Honorata, Tochter des Ti. P. Nr. 4 Armenius Peregrinus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Polybos 8",
@@ -5383,15 +5383,15 @@
     "previous": "Pompeius 114a",
     "next": "Pomponius 31a",
     "proof_read": 2,
+    "short_description": "(P.), Bruder von L. P. Nr. 46a Flaccus und C. P. Nr. 46c Graecinus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 438,
         "end": 438,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "(P.), Bruder von L. P. Nr. 46a Flaccus und C. P. Nr. 46c Graecinus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pomponius 31a",
@@ -5455,15 +5455,15 @@
     "previous": "Pomponius 46a",
     "next": "Pomponius 46c",
     "proof_read": 2,
+    "short_description": "C. P. Gallus Didius, Prokonsul der Provinz Creta-Cyrenae 89 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 440,
         "end": 440,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. P. Gallus Didius, Prokonsul der Provinz Creta-Cyrenae 89 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Pomponius 46c",
@@ -5493,15 +5493,15 @@
     "previous": "Pomponius 46d",
     "next": "Pomponius 59b",
     "proof_read": 2,
+    "short_description": "L. P. Maximus Flavius, quaestor pr. pr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 441,
         "end": 441,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. P. Maximus Flavius, quaestor pr. pr."
+    ]
   },
   {
     "lemma": "Pomponius 59b",
@@ -5520,45 +5520,45 @@
     "previous": "Pomponius 59b",
     "next": "Pomponius 60b",
     "proof_read": 2,
+    "short_description": "P. Naevianus, Prokonsul Creta-Cyrenae in den J. 165-169 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 442,
         "end": 442,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "P. Naevianus, Prokonsul Creta-Cyrenae in den J. 165-169 n. Chr."
+    ]
   },
   {
     "lemma": "Pomponius 60b",
     "previous": "Pomponius 60a",
     "next": "Pomponius 72a",
     "proof_read": 2,
+    "short_description": "C. P. P[---]tus, leg. pr. pr. der Provinz Africa im J. 112/3 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 442,
         "end": 442,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. P. P[---]tus, leg. pr. pr. der Provinz Africa im J. 112/3 n. Chr."
+    ]
   },
   {
     "lemma": "Pomponius 72a",
     "previous": "Pomponius 60b",
     "next": "Pomponius 103",
     "proof_read": 2,
+    "short_description": "L. P. Silvanus, cos. suff. im J. 121 n. Chr., Vater des L. P. Nr. 59a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 442,
         "end": 442,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. P. Silvanus, cos. suff. im J. 121 n. Chr., Vater des L. P. Nr. 59a"
+    ]
   },
   {
     "lemma": "Pomponius 103",
@@ -5576,15 +5576,15 @@
     "previous": "Pomponius 103",
     "next": "Pondo",
     "proof_read": 2,
+    "short_description": "C. P. Fabius Fraternus, X vir stlitibus iudicandis",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 443,
         "end": 443,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. P. Fabius Fraternus, X vir stlitibus iudicandis"
+    ]
   },
   {
     "lemma": "Pondo",
@@ -5614,15 +5614,15 @@
     "previous": "Pontius 24a",
     "next": "Pontius 29a",
     "proof_read": 2,
+    "short_description": "L. P., Prokonsul der Provinz Cyprus unter Nero oder Vespasian",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 445,
         "end": 445,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "L. P., Prokonsul der Provinz Cyprus unter Nero oder Vespasian"
+    ]
   },
   {
     "lemma": "Pontius 29a",
@@ -5640,30 +5640,30 @@
     "previous": "Pontius 29a",
     "next": "Popillius 14a",
     "proof_read": 2,
+    "short_description": "Surus Iunianus, Sohn des (P.) Nr. 24a und der Claudia Nr. 433a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 445,
         "end": 445,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Surus Iunianus, Sohn des (P.) Nr. 24a und der Claudia Nr. 433a"
+    ]
   },
   {
     "lemma": "Popillius 14a",
     "previous": "Pontius 51a",
     "next": "Popillius 38a",
     "proof_read": 2,
+    "short_description": "P. Celer, Legat des Prokonsuls der Provinz Africa P. Valerius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 445,
         "end": 445,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "P. Celer, Legat des Prokonsuls der Provinz Africa P. Valerius"
+    ]
   },
   {
     "lemma": "Popillius 38a",
@@ -5681,15 +5681,15 @@
     "previous": "Popillius 38a",
     "next": "Porcius 38a",
     "proof_read": 2,
+    "short_description": "M. (P.) Vergilianus Pedo, cos. ord. im J. 115 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 445,
         "end": 446,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. (P.) Vergilianus Pedo, cos. ord. im J. 115 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Porcius 38a",
@@ -5936,15 +5936,15 @@
     "previous": "Prinassos",
     "next": "Rubrius 15a",
     "proof_read": 2,
+    "short_description": "Insel vor der akarnan. West-Küste",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 486,
         "end": 486,
         "author": "Ernst Meyer."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Insel vor der akarnan. West-Küste"
+    ]
   },
   {
     "lemma": "Rubrius 15a",
@@ -5962,15 +5962,15 @@
     "previous": "Rubrius 15a",
     "next": "Psyttaleia",
     "proof_read": 2,
+    "short_description": "von Theben, siegreicher Tragiker bei den Amphiaraia und Rhomaia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 562,
         "end": 562,
         "author": "Franz Stoessl."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "von Theben, siegreicher Tragiker bei den Amphiaraia und Rhomaia"
+    ]
   },
   {
     "lemma": "Psyttaleia",
@@ -6048,30 +6048,30 @@
     "previous": "Romanus 16",
     "next": "Roscius 25a",
     "proof_read": 2,
+    "short_description": "Latin. Tyrann, Gründer Roms(?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 588,
         "end": 588,
         "author": "Wilt Aden Schröder."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Latin. Tyrann, Gründer Roms(?)"
+    ]
   },
   {
     "lemma": "Roscius 25a",
     "previous": "Romis",
     "next": "Rubrenus 1a",
     "proof_read": 2,
+    "short_description": "R. Potitus Memmianus vom afrikan. Thibaris, c.v., Sohn der Seia Nr. 24",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 588,
         "end": 588,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "R. Potitus Memmianus vom afrikan. Thibaris, c.v., Sohn der Seia Nr. 24"
+    ]
   },
   {
     "lemma": "Rubrenus 1a",
@@ -6100,15 +6100,15 @@
     "previous": "Rubrenus 1b",
     "next": "Rufius 23a",
     "proof_read": 2,
+    "short_description": "C. R. (Vinicius?) Porcius Marcellus, Statthalter der Provinz Thracia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 589,
         "end": 589,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. R. (Vinicius?) Porcius Marcellus, Statthalter der Provinz Thracia"
+    ]
   },
   {
     "lemma": "Rufius 23a",
@@ -6126,30 +6126,30 @@
     "previous": "Rufius 23a",
     "next": "Rufus 6b",
     "proof_read": 2,
+    "short_description": "cos. suff. im J. 45 n. Chr. = A. Antonius (S XIV 51 Nr. 94a) R.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 589,
         "end": 589,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "cos. suff. im J. 45 n. Chr. = A. Antonius (S XIV 51 Nr. 94a) R."
+    ]
   },
   {
     "lemma": "Rufus 6b",
     "previous": "Rufus 6a",
     "next": "Rufus 6c",
     "proof_read": 2,
+    "short_description": "Senator in august. Zt.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 589,
         "end": 589,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "Senator in august. Zt.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Rufus 6c",
@@ -6168,15 +6168,15 @@
     "previous": "Rufus 6c",
     "next": "Sabinianus 4a",
     "proof_read": 2,
+    "short_description": "R. Maximus, Jurist im 3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 590,
         "end": 590,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "R. Maximus, Jurist im 3. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Sabinianus 4a",
@@ -6205,15 +6205,15 @@
     "previous": "Sabinus 10a",
     "next": "Saevinius 2",
     "proof_read": 2,
+    "short_description": "cos. ord. im J. 214 und 240 n. Chr. = C. Octavius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 591,
         "end": 591,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "cos. ord. im J. 214 und 240 n. Chr. = C. Octavius",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Saevinius 2",
@@ -6257,15 +6257,15 @@
     "previous": "Salienus",
     "next": "Salvidenus 1",
     "proof_read": 2,
+    "short_description": "Station an der Straße Virunum - Aquileia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 592,
         "end": 592,
         "author": "Jaroslav Šašel."
       }
-    ],
-    "short_description": "Station an der Straße Virunum - Aquileia",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Salvidenus 1",
@@ -6283,15 +6283,15 @@
     "previous": "Salvidenus 1",
     "next": "Salvius 6a",
     "proof_read": 2,
+    "short_description": "M. S. Proculus, Prokonsul der Provinz Pontus-Bithynia unter Vespasian",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 592,
         "end": 592,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. S. Proculus, Prokonsul der Provinz Pontus-Bithynia unter Vespasian",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Salvius 6a",
@@ -6332,15 +6332,15 @@
     "previous": "Salvius 12b",
     "next": "Salvius 23a",
     "proof_read": 2,
+    "short_description": "C. S. Domitius Rufinus, Sohn eines Senators im 2./3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 593,
         "end": 593,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "C. S. Domitius Rufinus, Sohn eines Senators im 2./3. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Salvius 23a",
@@ -6369,15 +6369,15 @@
     "previous": "Sariolenus",
     "next": "Satrius 2a",
     "proof_read": 2,
+    "short_description": "Örtlichkeit bei Phigaleia",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 656,
         "end": 656,
         "author": "Ernst Meyer."
       }
-    ],
-    "short_description": "Örtlichkeit bei Phigaleia",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Satrius 2a",
@@ -6406,15 +6406,15 @@
     "previous": "Satrius 4a",
     "next": "Saturius 5",
     "proof_read": 2,
+    "short_description": "S. Crescens, curator rei publicae Beneventanae im 3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 656,
         "end": 656,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "S. Crescens, curator rei publicae Beneventanae im 3. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Saturius 5",
@@ -6497,15 +6497,15 @@
     "previous": "Sempronius 10a",
     "next": "Sempronius 36a",
     "proof_read": 2,
+    "short_description": "Crescens, im Testament des P. Dasumius Nr. 3) Tuscus 108 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 658,
         "end": 658,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "short_description": "Crescens, im Testament des P. Dasumius Nr. 3) Tuscus 108 n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Sempronius 36a",
@@ -6589,15 +6589,15 @@
     "previous": "Septicius 3a",
     "next": "Septimius 5b",
     "proof_read": 2,
+    "short_description": "M. S. Sura, Sohn des Q. (S.) Nr. 3a (S XIV 660)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 660,
         "end": 660,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "M. S. Sura, Sohn des Q. (S.) Nr. 3a (S XIV 660)",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Septimius 5b",
@@ -6660,15 +6660,15 @@
     "previous": "Serenus",
     "next": "Sergius 21a",
     "proof_read": 2,
+    "short_description": "[---]eus S., c.v. kaum vor Ende des 2. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 662,
         "end": 662,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "[---]eus S., c.v. kaum vor Ende des 2. Jh. n. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Sergius 21a",
@@ -6741,60 +6741,60 @@
     "previous": "Servaeus 4b",
     "next": "Servaeus 9",
     "proof_read": 2,
+    "short_description": "Servaea F [l.] Statianilla Valeriana, c. p., Tochter des L. S. Nr. 4a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 664,
         "end": 664,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Servaea F [l.] Statianilla Valeriana, c. p., Tochter des L. S. Nr. 4a"
+    ]
   },
   {
     "lemma": "Servaeus 9",
     "previous": "Servaeus 8",
     "next": "Servilius 50a",
     "proof_read": 2,
+    "short_description": "Servaea Novella Rufina, c.f., Tochter des L. S. Nr. 4a, Amicus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 664,
         "end": 664,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Servaea Novella Rufina, c.f., Tochter des L. S. Nr. 4a, Amicus"
+    ]
   },
   {
     "lemma": "Servilius 50a",
     "previous": "Servaeus 9",
     "next": "Servilius 53a",
     "proof_read": 2,
+    "short_description": "P. S. Calvus, Prokonsul der Provinz Pontus-Bithynia in traian. Zt.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 664,
         "end": 664,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "P. S. Calvus, Prokonsul der Provinz Pontus-Bithynia in traian. Zt."
+    ]
   },
   {
     "lemma": "Servilius 53a",
     "previous": "Servilius 50a",
     "next": "Servilius 54a",
     "proof_read": 2,
+    "short_description": "S. Crispus, Senator im 2./3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 664,
         "end": 664,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "S. Crispus, Senator im 2./3. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Servilius 54a",
@@ -6823,45 +6823,45 @@
     "previous": "Servilius 55a",
     "next": "Servilius 68b",
     "proof_read": 2,
+    "short_description": "S. Marsus, c.i., Patron der Kolonie Salerno, Sohn des Gaius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 666,
         "end": 666,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "S. Marsus, c.i., Patron der Kolonie Salerno, Sohn des Gaius"
+    ]
   },
   {
     "lemma": "Servilius 68b",
     "previous": "Servilius 68a",
     "next": "Servilius 81a",
     "proof_read": 2,
+    "short_description": "C. S. Marsus, Konsul 3. Jh. n. Chr. = S. Nr. 68a",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 666,
         "end": 666,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. S. Marsus, Konsul 3. Jh. n. Chr. = S. Nr. 68a"
+    ]
   },
   {
     "lemma": "Servilius 81a",
     "previous": "Servilius 68b",
     "next": "Sestius 10a",
     "proof_read": 2,
+    "short_description": "C. S. Septidianus Firmus, VIIvir epulonum",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 666,
         "end": 666,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "C. S. Septidianus Firmus, VIIvir epulonum"
+    ]
   },
   {
     "lemma": "Sestius 10a",
@@ -6947,15 +6947,15 @@
     "previous": "Sibidunda",
     "next": "Silius 4a",
     "proof_read": 2,
+    "short_description": "[---]us S., Magister der sodales Augustales Claudiales im J. 64 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 677,
         "end": 677,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "[---]us S., Magister der sodales Augustales Claudiales im J. 64 n. Chr."
+    ]
   },
   {
     "lemma": "Silius 4a",
@@ -6985,15 +6985,15 @@
     "previous": "Silius 11a",
     "next": "Silius 22a",
     "proof_read": 2,
+    "short_description": "P. S. Celer, Legat des Prokonsuls der Provinz Africa Ser. Cornelius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 679,
         "end": 679,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "P. S. Celer, Legat des Prokonsuls der Provinz Africa Ser. Cornelius"
+    ]
   },
   {
     "lemma": "Silius 22a",
@@ -7011,15 +7011,15 @@
     "previous": "Silius 22a",
     "next": "Simia",
     "proof_read": 2,
+    "short_description": "S. Nicolaus, maked. Konsular (im 3. Jh. n. Chr.?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 679,
         "end": 679,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "S. Nicolaus, maked. Konsular (im 3. Jh. n. Chr.?)"
+    ]
   },
   {
     "lemma": "Simia",
@@ -7130,15 +7130,15 @@
     "previous": "Statorius 3a",
     "next": "Stertinius 13a",
     "proof_read": 2,
+    "short_description": "S. Cocceius, Vater der Stertinia Cocceia Bassula im 3. Jh. n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 746,
         "end": 746,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "S. Cocceius, Vater der Stertinia Cocceia Bassula im 3. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Stertinius 13a",
@@ -7191,15 +7191,15 @@
     "previous": "Sulpicius 117a",
     "next": "Syrus 2",
     "proof_read": 2,
+    "short_description": "Hoher Offizier um das J. 430 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 748,
         "end": 748,
         "author": "Alexander Demandt."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Hoher Offizier um das J. 430 n. Chr."
+    ]
   },
   {
     "lemma": "Syrus 2",
@@ -7240,15 +7240,15 @@
     "previous": "Tebanianus",
     "next": "Ad tertium",
     "proof_read": 2,
+    "short_description": "Terentia Hispulla, Mutter des L. Valerius (VII A 2410 Nr.125) Catullus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 758,
         "end": 758,
         "author": "Rudolf Hanslik."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Terentia Hispulla, Mutter des L. Valerius (VII A 2410 Nr.125) Catullus"
+    ]
   },
   {
     "lemma": "Ad tertium",
@@ -7312,15 +7312,15 @@
     "previous": "Thoas 11",
     "next": "Thukydides 1",
     "proof_read": 2,
+    "short_description": "T. von Sybaris, pythagor. Philosoph",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 796,
         "end": 796,
         "author": "Alexander Demandt."
       }
-    ],
-    "short_description": "T. von Sybaris, pythagor. Philosoph",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Thukydides 1",
@@ -7389,30 +7389,30 @@
     "previous": "Tineius 7a",
     "next": "Tituleia",
     "proof_read": 2,
+    "short_description": "Tineia, c.f.(?), Mutter des L. Clodius (S XIV 104 Nr.58a ) T. Pupienus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 798,
         "end": 798,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Tineia, c.f.(?), Mutter des L. Clodius (S XIV 104 Nr.58a ) T. Pupienus"
+    ]
   },
   {
     "lemma": "Tituleia",
     "previous": "Tineius 12",
     "next": "Tlepolemos 6a",
     "proof_read": 2,
+    "short_description": "T. Paula Rufina, c.f. (im 3. Jh. n. Chr.?)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 798,
         "end": 798,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "T. Paula Rufina, c.f. (im 3. Jh. n. Chr.?)"
+    ]
   },
   {
     "lemma": "Tlepolemos 6a",
@@ -7429,30 +7429,30 @@
     "previous": "Tlepolemos 6a",
     "next": "Trebonius 12a",
     "proof_read": 2,
+    "short_description": "Gattin des L. Pomponius (S XIV 438 Nr.38a) Bassus, Mutter des L. Pomponius (S XIV 438 Nr.39a?) Bassus Cascus Scribonianus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 799,
         "end": 799,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Gattin des L. Pomponius (S XIV 438 Nr.38a) Bassus, Mutter des L. Pomponius (S XIV 438 Nr.39a?) Bassus Cascus Scribonianus"
+    ]
   },
   {
     "lemma": "Trebonius 12a",
     "previous": "Torquata 2",
     "next": "Troia 1",
     "proof_read": 2,
+    "short_description": "P. T., cos. suff. im J. 53 n. Chr., Vorfahre des Appius Annius",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 809,
         "end": 810,
         "author": "Werner Eck."
       }
-    ],
-    "short_description": "P. T., cos. suff. im J. 53 n. Chr., Vorfahre des Appius Annius",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Troia 1",
@@ -7471,15 +7471,15 @@
     "previous": "Troia 1",
     "next": "Tullius 24a",
     "proof_read": 2,
+    "short_description": "Triaria Ignatia Lucilla, c.f.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 810,
         "end": 810,
         "author": "Werner Eck."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Triaria Ignatia Lucilla, c.f."
+    ]
   },
   {
     "lemma": "Tullius 24a",
@@ -7521,15 +7521,15 @@
     "previous": "Tyrrhenia",
     "next": "Ugoroi (Ogor, Urogoi",
     "proof_read": 2,
+    "short_description": "Freigelassener des Kaisers Commodus, procurator regionis Thevestinae item Pannoniae sup.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 819,
         "end": 819,
         "author": "Gerhard Winkler."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Freigelassener des Kaisers Commodus, procurator regionis Thevestinae item Pannoniae sup."
+    ]
   },
   {
     "lemma": "Ugoroi (Ogor, Urogoi",
@@ -7584,15 +7584,15 @@
     "next": "Uliades I. 2",
     "sort_key": "Vliades 3",
     "proof_read": 2,
+    "short_description": "Knabenname in drei Epigrammen des Meleagros (XV 481 Nr. 7)",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 913,
         "end": 913,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Knabenname in drei Epigrammen des Meleagros (XV 481 Nr. 7)"
+    ]
   },
   {
     "lemma": "Uliades I. 2",
@@ -7633,15 +7633,15 @@
     "next": "Uliades 4",
     "sort_key": "Vliadesii 2",
     "proof_read": 2,
+    "short_description": "U. aus Athen, Beamter im 2. Jh. v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 914,
         "end": 914,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "U. aus Athen, Beamter im 2. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Uliades 4",
@@ -7649,15 +7649,15 @@
     "next": "Uliades 5",
     "sort_key": "Vliades 4",
     "proof_read": 2,
+    "short_description": "U. aus Stratonikeia, Vater des Leonides",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 915,
         "end": 915,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "U. aus Stratonikeia, Vater des Leonides"
+    ]
   },
   {
     "lemma": "Uliades 5",
@@ -7676,15 +7676,15 @@
     "next": "Uliades II. 3",
     "sort_key": "Vliades 6",
     "proof_read": 2,
+    "short_description": "U. von Alabanda, Vater der Glykinna",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 915,
         "end": 916,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "U. von Alabanda, Vater der Glykinna",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Uliades II. 3",
@@ -7742,15 +7742,15 @@
     "next": "Uliades 7",
     "sort_key": "Vliadesiii. 3",
     "proof_read": 2,
+    "short_description": "Kaiserzeitl. Priester der Hekate in Lagina",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 915,
         "end": 915,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Kaiserzeitl. Priester der Hekate in Lagina"
+    ]
   },
   {
     "lemma": "Uliades 7",
@@ -7891,15 +7891,15 @@
     "next": "Uliades 20",
     "sort_key": "Vliades 19",
     "proof_read": 2,
+    "short_description": "U. aus Mylasa, 1. Jh. v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 919,
         "end": 919,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "U. aus Mylasa, 1. Jh. v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Uliades 20",
@@ -7986,15 +7986,15 @@
     "next": "Uliades 28",
     "sort_key": "Vliades 27",
     "proof_read": 2,
+    "short_description": "U. aus Olymos, im 1. Jh. v. Chr., Vater des Melas",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 921,
         "end": 921,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "U. aus Olymos, im 1. Jh. v. Chr., Vater des Melas",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Uliades 28",
@@ -8002,15 +8002,15 @@
     "next": "Uliades 29",
     "sort_key": "Vliades 28",
     "proof_read": 2,
+    "short_description": "Vater eines unbekannten Olymeers",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 921,
         "end": 921,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "Vater eines unbekannten Olymeers",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Uliades 29",
@@ -8063,15 +8063,15 @@
     "next": "Uliades 34",
     "sort_key": "Vliades 33",
     "proof_read": 2,
+    "short_description": "U. von Iasos, Agonothet bei den Dionysia zu Iasos im 2. Jh. v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 922,
         "end": 922,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "U. von Iasos, Agonothet bei den Dionysia zu Iasos im 2. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Uliades 34",
@@ -8079,15 +8079,15 @@
     "next": "Uliades 35",
     "sort_key": "Vliades 34",
     "proof_read": 2,
+    "short_description": "Chorege in Iasos im 2. Jh. v. Chr., Sohn des Athenagoras",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 922,
         "end": 922,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "Chorege in Iasos im 2. Jh. v. Chr., Sohn des Athenagoras",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Uliades 35",
@@ -8095,15 +8095,15 @@
     "next": "Uliades 36",
     "sort_key": "Vliades 35",
     "proof_read": 2,
+    "short_description": "U. von Iasos, im 1. Jh. n. Chr., Vater des Epaphroditos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 922,
         "end": 922,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "U. von Iasos, im 1. Jh. n. Chr., Vater des Epaphroditos"
+    ]
   },
   {
     "lemma": "Uliades 36",
@@ -8111,15 +8111,15 @@
     "next": "Uliades 37",
     "sort_key": "Vliades 36",
     "proof_read": 2,
+    "short_description": "U. aus Iasos, Sieger in einem Agon",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 922,
         "end": 922,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "U. aus Iasos, Sieger in einem Agon",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Uliades 37",
@@ -8183,15 +8183,15 @@
     "next": "Uliades 43",
     "sort_key": "Vliades 42",
     "proof_read": 2,
+    "short_description": "U. aus Halikarnassos, aus der Kaiserzeit, Vater des Dioskurides",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 923,
         "end": 923,
         "author": "Jost Benedum."
       }
-    ],
-    "short_description": "U. aus Halikarnassos, aus der Kaiserzeit, Vater des Dioskurides",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Uliades 43",
@@ -8199,15 +8199,15 @@
     "next": "Uliades 44",
     "sort_key": "Vliades 43",
     "proof_read": 2,
+    "short_description": "U. aus Halikarnassos",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 923,
         "end": 923,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "U. aus Halikarnassos"
+    ]
   },
   {
     "lemma": "Uliades 44",
@@ -8338,15 +8338,15 @@
     "next": "Uliades 56",
     "sort_key": "Vliades 55",
     "proof_read": 2,
+    "short_description": "U. von Samos, im 2. Jh. v. Chr., Sohn des Kriton",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 926,
         "end": 926,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "U. von Samos, im 2. Jh. v. Chr., Sohn des Kriton"
+    ]
   },
   {
     "lemma": "Uliades 56",
@@ -8366,15 +8366,15 @@
     "next": "Uliades 58",
     "sort_key": "Vliades 57",
     "proof_read": 2,
+    "short_description": "U. aus Samothrake, im 2. Jh. v. Chr.(?), Vater des Demokrates",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 927,
         "end": 927,
         "author": "Jost Benedum."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "U. aus Samothrake, im 2. Jh. v. Chr.(?), Vater des Demokrates"
+    ]
   },
   {
     "lemma": "Uliades 58",

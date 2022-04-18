@@ -77,14 +77,14 @@
     "next": "Libba 1",
     "sort_key": "Libaton",
     "proof_read": 3,
+    "short_description": "Libaton",
     "chapters": [
       {
         "start": 13,
         "end": 13,
         "author": "Bürchner."
       }
-    ],
-    "short_description": "Libaton"
+    ]
   },
   {
     "lemma": "Libba 1",
@@ -102,14 +102,14 @@
     "previous": "Libba 1",
     "next": "Λίβεια",
     "proof_read": 3,
+    "short_description": "Ort an der W-Seite des Tigris",
     "chapters": [
       {
         "start": 13,
         "end": 13,
         "author": "Weissbach."
       }
-    ],
-    "short_description": "Ort an der W-Seite des Tigris"
+    ]
   },
   {
     "lemma": "Λίβεια",
@@ -117,14 +117,14 @@
     "next": "Libeios",
     "sort_key": "Libeia",
     "proof_read": 3,
+    "short_description": "Libeia",
     "chapters": [
       {
         "start": 13,
         "end": 13,
         "author": "Bürchner."
       }
-    ],
-    "short_description": "Libeia"
+    ]
   },
   {
     "lemma": "Libeios",
@@ -157,28 +157,28 @@
     "previous": "Libelarius",
     "next": "Libella 2",
     "proof_read": 3,
+    "short_description": "Das Meßgerät zur Ermittlung horizontaler Flächen",
     "chapters": [
       {
         "start": 14,
         "end": 14,
         "author": "Thulin."
       }
-    ],
-    "short_description": "Das Meßgerät zur Ermittlung horizontaler Flächen"
+    ]
   },
   {
     "lemma": "Libella 2",
     "previous": "Libella 1",
     "next": "Libellaticus",
     "proof_read": 2,
+    "short_description": "Münze, Zehntel einer Silbereinheit",
     "chapters": [
       {
         "start": 14,
         "end": 15,
         "author": "Regling."
       }
-    ],
-    "short_description": "Münze, Zehntel einer Silbereinheit"
+    ]
   },
   {
     "lemma": "Libellaticus",
@@ -212,6 +212,7 @@
     "next": "Libellorum magister",
     "sort_key": "Libellis",
     "proof_read": 2,
+    "short_description": "Hofamt seit d. Kaiserzeit",
     "wp_link": "w:de:A libellis",
     "wd_link": "d:Q25392204",
     "chapters": [
@@ -220,8 +221,7 @@
         "end": 26,
         "author": "v. Premerstein."
       }
-    ],
-    "short_description": "Hofamt seit d. Kaiserzeit"
+    ]
   },
   {
     "lemma": "Libellorum magister",
@@ -276,6 +276,7 @@
     "previous": "Libentina",
     "next": "Liber glossarum",
     "proof_read": 2,
+    "short_description": "(libellus) famosus, Schmähschrift",
     "wp_link": "w:de:Invektive (Literatur)",
     "wd_link": "d:Q1054330",
     "chapters": [
@@ -284,22 +285,21 @@
         "end": 63,
         "author": "Pfaff."
       }
-    ],
-    "short_description": "(libellus) famosus, Schmähschrift"
+    ]
   },
   {
     "lemma": "Liber glossarum",
     "previous": "Liber",
     "next": "Liber pater",
     "proof_read": 2,
+    "short_description": "Enzyklopädisches Kompendium aus d. 8. Jh. n. Chr.",
     "chapters": [
       {
         "start": 63,
         "end": 67,
         "author": "Goetz."
       }
-    ],
-    "short_description": "Enzyklopädisches Kompendium aus d. 8. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Liber pater",
@@ -317,6 +317,7 @@
     "previous": "Liber pater",
     "next": "Liber pontificalis ecclesiae Ravennatis",
     "proof_read": 2,
+    "short_description": "Werk mit Biographien d. Päpste von Petrus bis Stephan V. (gest. 891)",
     "wp_link": "w:de:Liber Pontificalis",
     "wd_link": "d:Q309061",
     "chapters": [
@@ -325,14 +326,14 @@
         "end": 81,
         "author": "Lietzmann."
       }
-    ],
-    "short_description": "Werk mit Biographien d. Päpste von Petrus bis Stephan V. (gest. 891)"
+    ]
   },
   {
     "lemma": "Liber pontificalis ecclesiae Ravennatis",
     "previous": "Liber pontificalis",
     "next": "Liberalia 1",
     "proof_read": 3,
+    "short_description": "Werk d. Priesters Agnellus, 9. Jh. n. Chr.",
     "wp_link": "w:de:Liber pontificalis ecclesiae Ravennatis",
     "wd_link": "d:Q94271668",
     "chapters": [
@@ -341,8 +342,7 @@
         "end": 81,
         "author": "Lietzmann."
       }
-    ],
-    "short_description": "Werk d. Priesters Agnellus, 9. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Liberalia 1",
@@ -360,14 +360,14 @@
     "previous": "Liberalia 1",
     "next": "Liberalis",
     "proof_read": 3,
+    "short_description": "Afrikan. Ortschaft",
     "chapters": [
       {
         "start": 82,
         "end": 82,
         "author": "Dessau."
       }
-    ],
-    "short_description": "Afrikan. Ortschaft"
+    ]
   },
   {
     "lemma": "Liberalis",
@@ -435,20 +435,21 @@
     "previous": "Liberator",
     "next": "Liberius 2",
     "proof_read": 3,
+    "short_description": "Wohl Comes 6. Jh. n. Chr., Bekannter d. Ennodius",
     "chapters": [
       {
         "start": 93,
         "end": 93,
         "author": "Nagl."
       }
-    ],
-    "short_description": "Wohl Comes 6. Jh. n. Chr., Bekannter d. Ennodius"
+    ]
   },
   {
     "lemma": "Liberius 2",
     "previous": "Liberius 1",
     "next": "Liberius 3",
     "proof_read": 2,
+    "short_description": "Patricius z. Zt. der Ostgotenherrschaft",
     "wp_link": "w:de:Liberius (Patricius)",
     "wd_link": "d:Q1384848",
     "chapters": [
@@ -457,14 +458,14 @@
         "end": 98,
         "author": "Nagl."
       }
-    ],
-    "short_description": "Patricius z. Zt. der Ostgotenherrschaft"
+    ]
   },
   {
     "lemma": "Liberius 3",
     "previous": "Liberius 2",
     "next": "Liberorum ius",
     "proof_read": 2,
+    "short_description": "röm. Papst 352-366 n. Chr.",
     "wp_link": "w:de:Liberius (Bischof von Rom)",
     "ws_link": "s:en:Author:Liberius",
     "wd_link": "d:Q102105",
@@ -474,8 +475,7 @@
         "end": 101,
         "author": "Lietzmann."
       }
-    ],
-    "short_description": "röm. Papst 352-366 n. Chr."
+    ]
   },
   {
     "lemma": "Liberorum ius",
@@ -506,6 +506,7 @@
     "previous": "Libertas",
     "next": "Libertini",
     "proof_read": 2,
+    "short_description": "Gebäude in Rom nahe d. Forums",
     "wp_link": "w:de:fr:Atrium Libertatis",
     "wd_link": "d:Q3629036",
     "chapters": [
@@ -514,8 +515,7 @@
         "end": 104,
         "author": "Kroll."
       }
-    ],
-    "short_description": "Gebäude in Rom nahe d. Forums"
+    ]
   },
   {
     "lemma": "Libertini",
@@ -594,14 +594,14 @@
     "previous": "Libias",
     "next": "Libici",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 112,
         "end": 112,
         "author": "Philipp."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Libici",
@@ -715,14 +715,14 @@
     "previous": "Libitinarii",
     "next": "Libna 1",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 114,
         "end": 114,
         "author": "Philipp."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Libna 1",
@@ -740,29 +740,29 @@
     "previous": "Libna 1",
     "next": "Libnath",
     "proof_read": 2,
+    "short_description": "Angebl. Lagerstätte d. Israeliten während d. Wüstenwanderung",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 115,
         "end": 115,
         "author": "Hölscher."
       }
-    ],
-    "short_description": "Angebl. Lagerstätte d. Israeliten während d. Wüstenwanderung",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Libnath",
     "previous": "Libna 2",
     "next": "Libnius",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 115,
         "end": 115,
         "author": "Hölscher."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Libnius",
@@ -793,34 +793,35 @@
     "previous": "Libo 1",
     "next": "Libon 1",
     "proof_read": 3,
+    "short_description": "röm. Cognomen s. Annius Nr. 60f.",
     "chapters": [
       {
         "start": 115,
         "end": 115,
         "author": "Münzer."
       }
-    ],
-    "short_description": "röm. Cognomen s. Annius Nr. 60f."
+    ]
   },
   {
     "lemma": "Libon 1",
     "previous": "Libo 2",
     "next": "Libon 2",
     "proof_read": 3,
+    "short_description": "Ort in Bithynien",
     "chapters": [
       {
         "start": 116,
         "end": 116,
         "author": "Ruge."
       }
-    ],
-    "short_description": "Ort in Bithynien"
+    ]
   },
   {
     "lemma": "Libon 2",
     "previous": "Libon 1",
     "next": "Libona",
     "proof_read": 3,
+    "short_description": "Aus Elis, Erbauer d. Zeustempels in Olympia",
     "wp_link": "w:de:Libon von Elis",
     "wd_link": "d:Q1823070",
     "chapters": [
@@ -829,8 +830,7 @@
         "end": 116,
         "author": "Fabricius."
       }
-    ],
-    "short_description": "Aus Elis, Erbauer d. Zeustempels in Olympia"
+    ]
   },
   {
     "lemma": "Libona",
@@ -876,14 +876,14 @@
     "previous": "Libophoinix",
     "next": "Libra 1",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 116,
         "end": 116,
         "author": "Schulten."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Libra 1",
@@ -905,6 +905,7 @@
     "previous": "Libra 1",
     "next": "Libra 3",
     "proof_read": 2,
+    "short_description": "Pfund, Münzfuß",
     "wp_link": "w:de:Pfund",
     "wd_link": "d:Q100995",
     "chapters": [
@@ -913,14 +914,14 @@
         "end": 116,
         "author": "Regling."
       }
-    ],
-    "short_description": "Pfund, Münzfuß"
+    ]
   },
   {
     "lemma": "Libra 3",
     "previous": "Libra 2",
     "next": "Librarius",
     "proof_read": 2,
+    "short_description": "Sternbild im Tierkreis",
     "wp_link": "w:de:Libra",
     "wd_link": "d:Q224390",
     "chapters": [
@@ -929,14 +930,14 @@
         "end": 137,
         "author": "Gundel."
       }
-    ],
-    "short_description": "Sternbild im Tierkreis"
+    ]
   },
   {
     "lemma": "Librarius",
     "previous": "Libra 3",
     "next": "Librator 1",
     "proof_read": 2,
+    "short_description": "Schreiber Rechnungsführer Elementarlehrer",
     "wp_link": "w:ca:Librarius",
     "wd_link": "d:Q97194760",
     "chapters": [
@@ -945,8 +946,7 @@
         "end": 139,
         "author": "Bilabel."
       }
-    ],
-    "short_description": "Schreiber Rechnungsführer Elementarlehrer"
+    ]
   },
   {
     "lemma": "Librator 1",
@@ -1144,6 +1144,7 @@
     "previous": "Libria",
     "next": "ad Libros",
     "proof_read": 2,
+    "short_description": "Hielt d. Waage bei Geldgeschäften vor Einführung d. geprägten Münzen",
     "wp_link": "w:it:Libripens",
     "wd_link": "d:Q1114694",
     "chapters": [
@@ -1152,8 +1153,7 @@
         "end": 141,
         "author": "Kübler."
       }
-    ],
-    "short_description": "Hielt d. Waage bei Geldgeschäften vor Einführung d. geprägten Münzen"
+    ]
   },
   {
     "lemma": "ad Libros",
@@ -1176,14 +1176,14 @@
     "previous": "ad Libros",
     "next": "Libs",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 141,
         "end": 141,
         "author": "Honigmann."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Libs",
@@ -1225,14 +1225,14 @@
     "previous": "Libum",
     "next": "Liburna",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 143,
         "end": 143,
         "author": "Schulten."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Liburna",
@@ -1261,14 +1261,14 @@
     "previous": "Liburni",
     "next": "Liburnus 1",
     "proof_read": 2,
+    "short_description": "Pollio et Messala defenderunt eosdem",
     "chapters": [
       {
         "start": 145,
         "end": 145,
         "author": "Stein."
       }
-    ],
-    "short_description": "Pollio et Messala defenderunt eosdem"
+    ]
   },
   {
     "lemma": "Liburnus 1",
@@ -1319,14 +1319,14 @@
     "previous": "Libyaigyptioi",
     "next": "Libyarchai",
     "proof_read": 3,
+    "short_description": "Flavius",
     "chapters": [
       {
         "start": 148,
         "end": 148,
         "author": "Seeck."
       }
-    ],
-    "short_description": "Flavius"
+    ]
   },
   {
     "lemma": "Libyarchai",
@@ -1344,14 +1344,14 @@
     "previous": "Libyarchai",
     "next": "Libyca ostia",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 148,
         "end": 148,
         "author": "Schulten."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Libyca ostia",
@@ -1415,28 +1415,28 @@
     "previous": "Libye 2",
     "next": "Libye 4",
     "proof_read": 2,
+    "short_description": "Teil d. Kyrenaika",
     "chapters": [
       {
         "start": 202,
         "end": 202,
         "author": "Fischer."
       }
-    ],
-    "short_description": "Teil d. Kyrenaika"
+    ]
   },
   {
     "lemma": "Libye 4",
     "previous": "Libye 3",
     "next": "Libyphoinikes",
     "proof_read": 2,
+    "short_description": "Libya palus, mit Abfluß zum Nigir",
     "chapters": [
       {
         "start": 202,
         "end": 202,
         "author": "Fischer."
       }
-    ],
-    "short_description": "Libya palus, mit Abfluß zum Nigir"
+    ]
   },
   {
     "lemma": "Libyphoinikes",
@@ -1487,14 +1487,14 @@
     "previous": "Libys 2",
     "next": "Libys 4",
     "proof_read": 3,
+    "short_description": "Vater d. Lysander",
     "chapters": [
       {
         "start": 203,
         "end": 203,
         "author": "Obst."
       }
-    ],
-    "short_description": "Vater d. Lysander"
+    ]
   },
   {
     "lemma": "Libys 4",
@@ -1512,14 +1512,14 @@
     "previous": "Libys 4",
     "next": "Libyssos",
     "proof_read": 2,
+    "short_description": "Stadt Bithyniens",
     "chapters": [
       {
         "start": 203,
         "end": 203,
         "author": "Ruge."
       }
-    ],
-    "short_description": "Stadt Bithyniens"
+    ]
   },
   {
     "lemma": "Libyssos",
@@ -1540,15 +1540,15 @@
     "next": "Libystinos",
     "sort_key": "Libystinoi",
     "proof_read": 3,
+    "short_description": "Libystinoi",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 203,
         "end": 203,
         "author": "Honigmann."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Libystinoi"
+    ]
   },
   {
     "lemma": "Libystinos",
@@ -1642,14 +1642,14 @@
     "previous": "Lichades",
     "next": "Lichas 2",
     "proof_read": 2,
+    "short_description": "Herold d. Herakles",
     "chapters": [
       {
         "start": 210,
         "end": 211,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": "Herold d. Herakles"
+    ]
   },
   {
     "lemma": "Lichas 2",
@@ -1737,28 +1737,28 @@
     "previous": "Licinianus 1",
     "next": "Licinianus 3",
     "proof_read": 3,
+    "short_description": "L. Mamilianus",
     "chapters": [
       {
         "start": 213,
         "end": 214,
         "author": "Seeck."
       }
-    ],
-    "short_description": "L. Mamilianus"
+    ]
   },
   {
     "lemma": "Licinianus 3",
     "previous": "Licinianus 2",
     "next": "Licinium atrium",
     "proof_read": 3,
+    "short_description": "Q. sacri palatii unter Kaiser Iulius Nepos",
     "chapters": [
       {
         "start": 214,
         "end": 214,
         "author": "Seeck."
       }
-    ],
-    "short_description": "Q. sacri palatii unter Kaiser Iulius Nepos"
+    ]
   },
   {
     "lemma": "Licinium atrium",
@@ -1778,6 +1778,7 @@
     "previous": "Licinium atrium",
     "next": "Licinius 1",
     "proof_read": 2,
+    "short_description": "Sehr angesehenes röm. Plebeiergeschlecht",
     "wp_link": "w:de:Licinier",
     "wd_link": "d:Q636900",
     "chapters": [
@@ -1786,8 +1787,7 @@
         "end": 215,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Sehr angesehenes röm. Plebeiergeschlecht"
+    ]
   },
   {
     "lemma": "Licinius 1",
@@ -1859,15 +1859,15 @@
     "previous": "Licinius 6",
     "next": "Licinius 8",
     "proof_read": 3,
+    "short_description": "L. und sein Sohn aus der Provinz Asia, wohl Steuerpächter 59 v. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 217,
         "end": 217,
         "author": "Münzer."
       }
-    ],
-    "short_description": "L. und sein Sohn aus der Provinz Asia, wohl Steuerpächter 59 v. Chr.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Licinius 8",
@@ -1952,42 +1952,42 @@
     "previous": "Licinius 14",
     "next": "Licinius 16",
     "proof_read": 2,
+    "short_description": "C., Mag. Neptunalis auf Delos gegen Ende d. 2. Jh. v. Chr.",
     "chapters": [
       {
         "start": 219,
         "end": 219,
         "author": "Münzer."
       }
-    ],
-    "short_description": "C., Mag. Neptunalis auf Delos gegen Ende d. 2. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 16",
     "previous": "Licinius 15",
     "next": "Licinius 17",
     "proof_read": 2,
+    "short_description": "C.f., C. Senator um 74 v. Chr.",
     "chapters": [
       {
         "start": 219,
         "end": 219,
         "author": "Münzer."
       }
-    ],
-    "short_description": "C.f., C. Senator um 74 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 17",
     "previous": "Licinius 16",
     "next": "Licinius 18",
     "proof_read": 2,
+    "short_description": "L. Fälschlicherweise praet. bei Liv. im J. 209 v. Chr., s. auch Nr. 68",
     "chapters": [
       {
         "start": 219,
         "end": 219,
         "author": "Münzer."
       }
-    ],
-    "short_description": "L. Fälschlicherweise praet. bei Liv. im J. 209 v. Chr., s. auch Nr. 68"
+    ]
   },
   {
     "lemma": "Licinius 18",
@@ -2016,28 +2016,28 @@
     "previous": "Licinius 19",
     "next": "Licinius 21",
     "proof_read": 2,
+    "short_description": "M. Kriegstribun 209 v. Chr.",
     "chapters": [
       {
         "start": 220,
         "end": 220,
         "author": "Münzer."
       }
-    ],
-    "short_description": "M. Kriegstribun 209 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 21",
     "previous": "Licinius 20",
     "next": "Licinius 22",
     "proof_read": 2,
+    "short_description": "Lici(nius), M. 45 v. Chr. in Städten der Baetica Hispania",
     "chapters": [
       {
         "start": 220,
         "end": 220,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lici(nius), M. 45 v. Chr. in Städten der Baetica Hispania"
+    ]
   },
   {
     "lemma": "Licinius 22",
@@ -2066,14 +2066,14 @@
     "previous": "Licinius 23",
     "next": "Licinius 25",
     "proof_read": 2,
+    "short_description": "...., M. unter den Katalores der Pontifices und Flamines J. 101 und 102",
     "chapters": [
       {
         "start": 220,
         "end": 220,
         "author": "Groag."
       }
-    ],
-    "short_description": "...., M. unter den Katalores der Pontifices und Flamines J. 101 und 102"
+    ]
   },
   {
     "lemma": "Licinius 25",
@@ -2093,14 +2093,14 @@
     "previous": "Licinius 25",
     "next": "Licinius 27",
     "proof_read": 2,
+    "short_description": "P. Consulartribun 400 v. Chr., s. P. Licinius Calvus Esquilinus Nr. 43",
     "chapters": [
       {
         "start": 220,
         "end": 220,
         "author": "Münzer."
       }
-    ],
-    "short_description": "P. Consulartribun 400 v. Chr., s. P. Licinius Calvus Esquilinus Nr. 43"
+    ]
   },
   {
     "lemma": "Licinius 27",
@@ -2162,6 +2162,7 @@
     "previous": "Licinius 31",
     "next": "Licinius 31b",
     "proof_read": 3,
+    "short_description": "Röm. Kaiser 308-324",
     "wp_link": "w:de:Licinius",
     "ws_link": "s:la:Scriptor:Licinius",
     "wd_link": "d:Q184549",
@@ -2171,14 +2172,14 @@
         "end": 231,
         "author": "Seeck."
       }
-    ],
-    "short_description": "Röm. Kaiser 308-324"
+    ]
   },
   {
     "lemma": "Licinius 31b",
     "previous": "Licinius 31a",
     "next": "Licinius 31c",
     "proof_read": 3,
+    "short_description": "Valerius Licinianus, Kind von Nr. 31a mit einer Sklavin",
     "wp_link": "w:de:Licinianus Licinius",
     "wd_link": "d:Q166731",
     "chapters": [
@@ -2187,50 +2188,49 @@
         "end": 231,
         "author": "Seeck."
       }
-    ],
-    "short_description": "Valerius Licinianus, Kind von Nr. 31a mit einer Sklavin"
+    ]
   },
   {
     "lemma": "Licinius 31c",
     "previous": "Licinius 31b",
     "next": "Licinius 32",
     "proof_read": 3,
+    "short_description": "praef. praet. Italiae 385 n. Chr.",
     "chapters": [
       {
         "start": 231,
         "end": 231,
         "author": "Seeck."
       }
-    ],
-    "short_description": "praef. praet. Italiae 385 n. Chr."
+    ]
   },
   {
     "lemma": "Licinius 32",
     "previous": "Licinius 31c",
     "next": "Licinius 33",
     "proof_read": 2,
+    "short_description": "Ancotius Proculus, Q.",
     "chapters": [
       {
         "start": 231,
         "end": 231,
         "author": "Stein."
       }
-    ],
-    "short_description": "Ancotius Proculus, Q."
+    ]
   },
   {
     "lemma": "Licinius 33",
     "previous": "Licinius 32",
     "next": "Licinius 34",
     "proof_read": 2,
+    "short_description": "Aphrodisius, L.",
     "chapters": [
       {
         "start": 231,
         "end": 231,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Aphrodisius, L."
+    ]
   },
   {
     "lemma": "Licinius 34",
@@ -2490,20 +2490,21 @@
     "previous": "Licinius 55",
     "next": "Licinius 56",
     "proof_read": 3,
+    "short_description": "Crassus, M. 179 v. Chr. gegen Wasserleitung durch sein Grundstück",
     "chapters": [
       {
         "start": 267,
         "end": 268,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Crassus, M. 179 v. Chr. gegen Wasserleitung durch sein Grundstück"
+    ]
   },
   {
     "lemma": "Licinius 56",
     "previous": "Licinius 55a",
     "next": "Licinius 57",
     "proof_read": 2,
+    "short_description": "Crassus, M. Caesar übertrug ihm 49 v. Chr. Gallia Cisalpina",
     "wp_link": "w:de:Marcus Licinius Crassus (Quästor)",
     "wd_link": "d:Q468932",
     "chapters": [
@@ -2512,8 +2513,7 @@
         "end": 269,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Crassus, M. Caesar übertrug ihm 49 v. Chr. Gallia Cisalpina"
+    ]
   },
   {
     "lemma": "Licinius 57",
@@ -2531,6 +2531,7 @@
     "previous": "Licinius 57",
     "next": "Licinius 59",
     "proof_read": 2,
+    "short_description": "Crassus, M. cos. 30 v. Chr.",
     "wp_link": "w:de:Marcus Licinius Crassus (Konsul 30 v. Chr.)",
     "wd_link": "d:Q770792",
     "chapters": [
@@ -2539,14 +2540,14 @@
         "end": 285,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Crassus, M. cos. 30 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 59",
     "previous": "Licinius 58",
     "next": "Licinius 60",
     "proof_read": 2,
+    "short_description": "M. L. Crassus Frugi, Konsul im J. 14 v. Chr., Prokonsul Africa",
     "wp_link": "w:en:Marcus Licinius Crassus Frugi (consul 14 BC)",
     "wd_link": "d:Q3622613",
     "chapters": [
@@ -2555,8 +2556,7 @@
         "end": 286,
         "author": "Groag."
       }
-    ],
-    "short_description": "M. L. Crassus Frugi, Konsul im J. 14 v. Chr., Prokonsul Africa"
+    ]
   },
   {
     "lemma": "Licinius 60",
@@ -2596,6 +2596,7 @@
     "previous": "Licinius 62",
     "next": "Licinius 64",
     "proof_read": 2,
+    "short_description": "Crassus, Publius?. Sohn des Triumvirs M. Crassus Nr. 68, 53 v. Chr.",
     "wp_link": "w:de:Publius Licinius Crassus (Legat)",
     "wd_link": "d:Q382280",
     "chapters": [
@@ -2604,36 +2605,35 @@
         "end": 294,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Crassus, Publius?. Sohn des Triumvirs M. Crassus Nr. 68, 53 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 64",
     "previous": "Licinius 63",
     "next": "Licinius 65",
     "proof_read": 2,
+    "short_description": "Crassus, P. cos. Ende d. 1. oder Anf. d. 2. Jh. n. Chr.",
     "chapters": [
       {
         "start": 294,
         "end": 294,
         "author": "Groag."
       }
-    ],
-    "short_description": "Crassus, P. cos. Ende d. 1. oder Anf. d. 2. Jh. n. Chr."
+    ]
   },
   {
     "lemma": "Licinius 65",
     "previous": "Licinius 64",
     "next": "Licinius 66",
     "proof_read": 2,
+    "short_description": "Crassus Damasippus Senator und Parteigänger des Pompeius im Bürgerkrieg",
     "chapters": [
       {
         "start": 294,
         "end": 295,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Crassus Damasippus Senator und Parteigänger des Pompeius im Bürgerkrieg"
+    ]
   },
   {
     "lemma": "Licinius 66",
@@ -2661,6 +2661,7 @@
     "lemma": "Licinius 68",
     "previous": "Licinius 67",
     "next": "Licinius 69",
+    "short_description": "[Crassus Dives, M. cos. 70 und 55 v. Chr. + triumvir",
     "wp_link": "w:de:Marcus Licinius Crassus",
     "ws_link": "s:en:Author:Marcus Licinius Crassus",
     "wd_link": "d:Q175121",
@@ -2670,8 +2671,7 @@
         "end": 331,
         "author": "Gelzer."
       }
-    ],
-    "short_description": "[Crassus Dives, M. cos. 70 und 55 v. Chr. + triumvir"
+    ]
   },
   {
     "lemma": "Licinius 69",
@@ -2722,6 +2722,7 @@
     "previous": "Licinius 72",
     "next": "Licinius 74",
     "proof_read": 2,
+    "short_description": "M.f. Men(enia) Crassus Frugi, M. cos. 27 n. Chr.",
     "wp_link": "w:en:Marcus Licinius Crassus Frugi (consul 27)",
     "wd_link": "d:Q1233627",
     "chapters": [
@@ -2730,8 +2731,7 @@
         "end": 345,
         "author": "Groag."
       }
-    ],
-    "short_description": "M.f. Men(enia) Crassus Frugi, M. cos. 27 n. Chr."
+    ]
   },
   {
     "lemma": "Licinius 74",
@@ -2838,14 +2838,14 @@
     "previous": "Licinius 82",
     "next": "Licinius 84",
     "proof_read": 2,
+    "short_description": "Donatus",
     "chapters": [
       {
         "start": 350,
         "end": 350,
         "author": "Stein."
       }
-    ],
-    "short_description": "Donatus"
+    ]
   },
   {
     "lemma": "Licinius 84",
@@ -2907,14 +2907,14 @@
     "previous": "Licinius 88",
     "next": "Licinius 90",
     "proof_read": 2,
+    "short_description": "Hierocles",
     "chapters": [
       {
         "start": 370,
         "end": 370,
         "author": "Stein."
       }
-    ],
-    "short_description": "Hierocles"
+    ]
   },
   {
     "lemma": "Licinius 90",
@@ -2933,14 +2933,14 @@
     "next": "Licinius 92",
     "sort_key": "Licinius 091",
     "proof_read": 3,
+    "short_description": "Hoplomachus, C.",
     "chapters": [
       {
         "start": 371,
         "end": 371,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Hoplomachus, C."
+    ]
   },
   {
     "lemma": "Licinius 92",
@@ -2948,14 +2948,14 @@
     "next": "Licinius 93",
     "sort_key": "Licinius 092",
     "proof_read": 2,
+    "short_description": "Imbrex, vetus comoediarum scriptor z. Zt. des Plautus",
     "chapters": [
       {
         "start": 371,
         "end": 371,
         "author": "Diehl."
       }
-    ],
-    "short_description": "Imbrex, vetus comoediarum scriptor z. Zt. des Plautus"
+    ]
   },
   {
     "lemma": "Licinius 93",
@@ -2993,15 +2993,15 @@
     "next": "Licinius 96",
     "sort_key": "Licinius 095",
     "proof_read": 3,
+    "short_description": "Licinianus, C. Mitglied der Gemeinschaft der Sodales Augustales Claudiales 169-202 n. Chr.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 372,
         "end": 372,
         "author": "Miltner."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Licinianus, C. Mitglied der Gemeinschaft der Sodales Augustales Claudiales 169-202 n. Chr."
+    ]
   },
   {
     "lemma": "Licinius 96",
@@ -3009,15 +3009,15 @@
     "next": "Licinius 97",
     "sort_key": "Licinius 096",
     "proof_read": 3,
+    "short_description": "Patron von Canusium im J. 223",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 372,
         "end": 372,
         "author": "Miltner."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Patron von Canusium im J. 223"
+    ]
   },
   {
     "lemma": "Licinius 97",
@@ -3025,14 +3025,14 @@
     "next": "Licinius 98",
     "sort_key": "Licinius 097",
     "proof_read": 3,
+    "short_description": "T. L. Lucianus, richtig: T. L. Nr. 117a Mucianus, Statthalter",
     "chapters": [
       {
         "start": 372,
         "end": 372,
         "author": "Groag."
       }
-    ],
-    "short_description": "T. L. Lucianus, richtig: T. L. Nr. 117a Mucianus, Statthalter"
+    ]
   },
   {
     "lemma": "Licinius 98",
@@ -3040,14 +3040,14 @@
     "next": "Licinius 99ff.",
     "sort_key": "Licinius 098",
     "proof_read": 3,
+    "short_description": "C. Lucretius Censorinus M.f., M.",
     "chapters": [
       {
         "start": 372,
         "end": 372,
         "author": "Stein."
       }
-    ],
-    "short_description": "C. Lucretius Censorinus M.f., M."
+    ]
   },
   {
     "lemma": "Licinius 99ff.",
@@ -3055,14 +3055,14 @@
     "next": "Licinius 99",
     "sort_key": "Licinius 099ff.",
     "proof_read": 2,
+    "short_description": "Licinii Luculli, im 2. Jh. v. Chr. hervortretender Zweig",
     "chapters": [
       {
         "start": 372,
         "end": 372,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Licinii Luculli, im 2. Jh. v. Chr. hervortretender Zweig"
+    ]
   },
   {
     "lemma": "Licinius 99",
@@ -3070,75 +3070,76 @@
     "next": "Licinius 100",
     "sort_key": "Licinius 099",
     "proof_read": 3,
+    "short_description": "Lucullus, C.",
     "chapters": [
       {
         "start": 372,
         "end": 372,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lucullus, C."
+    ]
   },
   {
     "lemma": "Licinius 100",
     "previous": "Licinius 99",
     "next": "Licinius 101",
     "proof_read": 3,
+    "short_description": "Lucullus, Cn.",
     "chapters": [
       {
         "start": 373,
         "end": 373,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lucullus, Cn."
+    ]
   },
   {
     "lemma": "Licinius 101",
     "previous": "Licinius 100",
     "next": "Licinius 102",
     "proof_read": 3,
+    "short_description": "Lucullus, L. Cur. aed. 202 v. Chr.",
     "chapters": [
       {
         "start": 373,
         "end": 373,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lucullus, L. Cur. aed. 202 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 102",
     "previous": "Licinius 101",
     "next": "Licinius 103",
     "proof_read": 2,
+    "short_description": "Lucullus, L. cos. 151 v. Chr.",
     "chapters": [
       {
         "start": 373,
         "end": 375,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lucullus, L. cos. 151 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 103",
     "previous": "Licinius 102",
     "next": "Licinius 104",
     "proof_read": 2,
+    "short_description": "Lucullus, L. Praet. urb. 104 v. Chr., Sohn von Nr. 102",
     "chapters": [
       {
         "start": 375,
         "end": 376,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lucullus, L. Praet. urb. 104 v. Chr., Sohn von Nr. 102"
+    ]
   },
   {
     "lemma": "Licinius 104",
     "previous": "Licinius 103",
     "next": "Licinius 105",
+    "short_description": "[Lucullus, L. cos. 74 v. Chr., Sohn von Nr. 103",
     "wp_link": "w:de:Lucius Licinius Lucullus",
     "wd_link": "d:Q242819",
     "chapters": [
@@ -3147,8 +3148,7 @@
         "end": 414,
         "author": "Gelzer."
       }
-    ],
-    "short_description": "[Lucullus, L. cos. 74 v. Chr., Sohn von Nr. 103"
+    ]
   },
   {
     "lemma": "Licinius 105",
@@ -3191,14 +3191,14 @@
     "previous": "Licinius 107",
     "next": "Licinius 109",
     "proof_read": 2,
+    "short_description": "Lucullus, M. Praet. peregrinus 168 v. Chr.",
     "chapters": [
       {
         "start": 414,
         "end": 414,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lucullus, M. Praet. peregrinus 168 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 109",
@@ -3227,14 +3227,14 @@
     "previous": "Licinius 110",
     "next": "Licinius 112",
     "proof_read": 2,
+    "short_description": "Lucullus, P.",
     "chapters": [
       {
         "start": 419,
         "end": 419,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Lucullus, P."
+    ]
   },
   {
     "lemma": "Licinius 112",
@@ -3263,14 +3263,14 @@
     "previous": "Licinius 113",
     "next": "Licinius 115",
     "proof_read": 2,
+    "short_description": "Marinus Voconius Romanus, C. s. Voconius",
     "chapters": [
       {
         "start": 435,
         "end": 435,
         "author": "Groag."
       }
-    ],
-    "short_description": "Marinus Voconius Romanus, C. s. Voconius"
+    ]
   },
   {
     "lemma": "Licinius 115",
@@ -3332,14 +3332,14 @@
     "previous": "Licinius 118",
     "next": "Licinius 119",
     "proof_read": 2,
+    "short_description": "Licinii Murenae, Linie aus Lanuvium, 2. Jh. v. Chr.",
     "chapters": [
       {
         "start": 443,
         "end": 443,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Licinii Murenae, Linie aus Lanuvium, 2. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 119",
@@ -3401,14 +3401,14 @@
     "previous": "Licinius 123",
     "next": "Licinius 125",
     "proof_read": 2,
+    "short_description": "Murena, P.",
     "chapters": [
       {
         "start": 449,
         "end": 449,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Murena, P."
+    ]
   },
   {
     "lemma": "Licinius 125",
@@ -3448,15 +3448,15 @@
     "previous": "Licinius 127",
     "next": "Licinius 129",
     "proof_read": 2,
+    "short_description": "Nepos, Rhetor z. Zt. des älteren Seneca",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 452,
         "end": 452,
         "author": "Wickert."
       }
-    ],
-    "short_description": "Nepos, Rhetor z. Zt. des älteren Seneca",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Licinius 129",
@@ -3496,14 +3496,14 @@
     "previous": "Licinius 130",
     "next": "Licinius 132",
     "proof_read": 2,
+    "short_description": "Nerva, A., Praetor 166 v. Chr.",
     "chapters": [
       {
         "start": 452,
         "end": 452,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Nerva, A., Praetor 166 v. Chr."
+    ]
   },
   {
     "lemma": "Licinius 132",
@@ -3565,6 +3565,7 @@
     "previous": "Licinius 136",
     "next": "Licinius 138",
     "proof_read": 2,
+    "short_description": "Nerva Silianus, A. cos. ord. 7 n. Chr.",
     "wp_link": "w:en:Aulus Licinius Nerva Silianus",
     "wd_link": "d:Q12271118",
     "chapters": [
@@ -3573,14 +3574,14 @@
         "end": 455,
         "author": "Nagl."
       }
-    ],
-    "short_description": "Nerva Silianus, A. cos. ord. 7 n. Chr."
+    ]
   },
   {
     "lemma": "Licinius 138",
     "previous": "Licinius 137",
     "next": "Licinius 139",
     "proof_read": 3,
+    "short_description": "Nerva Silianus, A. cos. ord. 65 n. Chr.",
     "wp_link": "w:de:Aulus Licinius Nerva Silianus (Konsul 65)",
     "wd_link": "d:Q533877",
     "chapters": [
@@ -3589,8 +3590,7 @@
         "end": 455,
         "author": "Nagl."
       }
-    ],
-    "short_description": "Nerva Silianus, A. cos. ord. 65 n. Chr."
+    ]
   },
   {
     "lemma": "Licinius 139",
@@ -3619,15 +3619,15 @@
     "previous": "Licinius 140",
     "next": "Licinius 142",
     "proof_read": 2,
+    "short_description": "Petilius, M.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 455,
         "end": 455,
         "author": "Miltner."
       }
-    ],
-    "short_description": "Petilius, M.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Licinius 142",
@@ -3656,14 +3656,14 @@
     "previous": "Licinius 143",
     "next": "Licinius 145",
     "proof_read": 2,
+    "short_description": "Pollio, C.",
     "chapters": [
       {
         "start": 456,
         "end": 456,
         "author": "Groag."
       }
-    ],
-    "short_description": "Pollio, C."
+    ]
   },
   {
     "lemma": "Licinius 145",
@@ -3703,30 +3703,30 @@
     "previous": "Licinius 147",
     "next": "Licinius 149",
     "proof_read": 2,
+    "short_description": "L[ic]inius [Q]uin[t]inianus Aemilianus, M.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 457,
         "end": 457,
         "author": "Miltner."
       }
-    ],
-    "short_description": "L[ic]inius [Q]uin[t]inianus Aemilianus, M.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Licinius 149",
     "previous": "Licinius 148",
     "next": "Licinius 150",
     "proof_read": 2,
+    "short_description": "Regulus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 457,
         "end": 457,
         "author": "Miltner."
       }
-    ],
-    "short_description": "Regulus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Licinius 150",
@@ -3755,15 +3755,15 @@
     "previous": "Licinius 151",
     "next": "Licinius 153",
     "proof_read": 2,
+    "short_description": "Sabinus, L.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 458,
         "end": 458,
         "author": "Miltner."
       }
-    ],
-    "short_description": "Sabinus, L.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Licinius 153",
@@ -3792,14 +3792,14 @@
     "previous": "Licinius 154",
     "next": "Licinius 156",
     "proof_read": 2,
+    "short_description": "(Licinius?) Scribonianus Camerinus s. Nr. 2 und Licinius Nr. 74",
     "chapters": [
       {
         "start": 459,
         "end": 459,
         "author": "Groag."
       }
-    ],
-    "short_description": "(Licinius?) Scribonianus Camerinus s. Nr. 2 und Licinius Nr. 74"
+    ]
   },
   {
     "lemma": "Licinius 156",
@@ -3907,14 +3907,14 @@
     "previous": "Licinius 163",
     "next": "Licinius 164",
     "proof_read": 2,
+    "short_description": "Lic[inius Stol]o, M. Legat der legio XXI Rapax im J. 47 n. Chr.",
     "chapters": [
       {
         "start": 470,
         "end": 470,
         "author": "Groag."
       }
-    ],
-    "short_description": "Lic[inius Stol]o, M. Legat der legio XXI Rapax im J. 47 n. Chr."
+    ]
   },
   {
     "lemma": "Licinius 164",
@@ -3943,14 +3943,14 @@
     "previous": "Licinius 165",
     "next": "Licinius 167",
     "proof_read": 2,
+    "short_description": "Strabo, M.",
     "chapters": [
       {
         "start": 471,
         "end": 471,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Strabo, M."
+    ]
   },
   {
     "lemma": "Licinius 167",
@@ -3990,14 +3990,14 @@
     "previous": "Licinius 169",
     "next": "Licinius 170a",
     "proof_read": 2,
+    "short_description": "Teuda",
     "chapters": [
       {
         "start": 486,
         "end": 486,
         "author": "Fluss."
       }
-    ],
-    "short_description": "Teuda"
+    ]
   },
   {
     "lemma": "Licinius 170a",
@@ -4015,15 +4015,15 @@
     "previous": "Licinius 170a",
     "next": "Licinius 172",
     "proof_read": 2,
+    "short_description": "Trio Paulinus, C.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 486,
         "end": 486,
         "author": "Miltner."
       }
-    ],
-    "no_creative_height": true,
-    "short_description": "Trio Paulinus, C."
+    ]
   },
   {
     "lemma": "Licinius 172",
@@ -4239,14 +4239,14 @@
     "previous": "Licinius 190",
     "next": "Licinius 192",
     "proof_read": 2,
+    "short_description": "Licinia Axia",
     "chapters": [
       {
         "start": 498,
         "end": 498,
         "author": "Stein."
       }
-    ],
-    "short_description": "Licinia Axia"
+    ]
   },
   {
     "lemma": "Licinius 192",
@@ -4297,14 +4297,14 @@
     "previous": "Licinius 195",
     "next": "Licinius 197",
     "proof_read": 2,
+    "short_description": "Licinia Hieroclia",
     "chapters": [
       {
         "start": 499,
         "end": 499,
         "author": "Stein."
       }
-    ],
-    "short_description": "Licinia Hieroclia"
+    ]
   },
   {
     "lemma": "Licinius 197",
@@ -4344,14 +4344,14 @@
     "previous": "Licinius 199",
     "next": "Licinius 201",
     "proof_read": 2,
+    "short_description": "Licinia Paulina",
     "chapters": [
       {
         "start": 500,
         "end": 500,
         "author": "Stein."
       }
-    ],
-    "short_description": "Licinia Paulina"
+    ]
   },
   {
     "lemma": "Licinius 201",
@@ -4481,6 +4481,7 @@
     "previous": "Licinus 5",
     "next": "Licium 1",
     "proof_read": 2,
+    "short_description": "Das Bieten bei d. Auktion",
     "wp_link": "w:de:Auktion",
     "wd_link": "d:Q177923",
     "chapters": [
@@ -4489,8 +4490,7 @@
         "end": 505,
         "author": "W. Kroll."
       }
-    ],
-    "short_description": "Das Bieten bei d. Auktion"
+    ]
   },
   {
     "lemma": "Licium 1",
@@ -4598,14 +4598,14 @@
     "previous": "Ligarius 1",
     "next": "Ligarius 3",
     "proof_read": 2,
+    "short_description": "C., irrtümlich bei Plut. Brut.",
     "chapters": [
       {
         "start": 519,
         "end": 519,
         "author": "Münzer."
       }
-    ],
-    "short_description": "C., irrtümlich bei Plut. Brut."
+    ]
   },
   {
     "lemma": "Ligarius 3",
@@ -4824,14 +4824,14 @@
     "previous": "Ligurius 1",
     "next": "Ligus",
     "proof_read": 2,
+    "short_description": "Cn. Militärtribun 197 v. Chr.",
     "chapters": [
       {
         "start": 535,
         "end": 535,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Cn. Militärtribun 197 v. Chr."
+    ]
   },
   {
     "lemma": "Ligus",
@@ -4849,15 +4849,15 @@
     "previous": "Ligus",
     "next": "Ligustinus 2",
     "proof_read": 2,
+    "short_description": "Ligurischer pagus",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 535,
         "end": 535,
         "author": "Philipp."
       }
-    ],
-    "short_description": "Ligurischer pagus",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Ligustinus 2",
@@ -4926,6 +4926,7 @@
     "next": "Likineia",
     "sort_key": "Likias",
     "proof_read": 2,
+    "short_description": "Fluss, Lech",
     "wp_link": "w:de:Lech",
     "wd_link": "d:Q155841",
     "chapters": [
@@ -4934,8 +4935,7 @@
         "end": 536,
         "author": "Fluss."
       }
-    ],
-    "short_description": "Fluss, Lech"
+    ]
   },
   {
     "lemma": "Likineia",
@@ -4966,14 +4966,14 @@
     "previous": "Likmaie",
     "next": "Liknites",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 536,
         "end": 536,
         "author": "Ziegler."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Liknites",
@@ -5015,6 +5015,7 @@
     "previous": "Likymnia",
     "next": "Lilaia",
     "proof_read": 2,
+    "short_description": "Von Chios, Dithyrambendichter und Rhetor",
     "wp_link": "w:de:Likymnios von Chios",
     "wd_link": "d:Q3238134",
     "chapters": [
@@ -5023,14 +5024,14 @@
         "end": 541,
         "author": "Aulitzky."
       }
-    ],
-    "short_description": "Von Chios, Dithyrambendichter und Rhetor"
+    ]
   },
   {
     "lemma": "Lilaia",
     "previous": "Likymnios",
     "next": "Lilaios",
     "proof_read": 3,
+    "short_description": "Stadt in Phokis",
     "wp_link": "w:de:Lilaia (Polis)",
     "wd_link": "d:Q1267602",
     "chapters": [
@@ -5039,8 +5040,7 @@
         "end": 542,
         "author": "Geiger."
       }
-    ],
-    "short_description": "Stadt in Phokis"
+    ]
   },
   {
     "lemma": "Lilaios",
@@ -5199,14 +5199,14 @@
     "next": "Limeneion",
     "sort_key": "Limeneia",
     "proof_read": 2,
+    "short_description": "he -",
     "chapters": [
       {
         "start": 570,
         "end": 570,
         "author": "Bürchner."
       }
-    ],
-    "short_description": "he -"
+    ]
   },
   {
     "lemma": "Limeneion",
@@ -5257,14 +5257,14 @@
     "previous": "Limenia 2",
     "next": "Limenitas",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 571,
         "end": 571,
         "author": "gr. Kruse."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Limenitas",
@@ -5428,28 +5428,28 @@
     "next": "Limnades",
     "sort_key": "Limnaai",
     "proof_read": 2,
+    "short_description": "Limnaai",
     "chapters": [
       {
         "start": 701,
         "end": 701,
         "author": "Fluss."
       }
-    ],
-    "short_description": "Limnaai"
+    ]
   },
   {
     "lemma": "Limnades",
     "previous": "Λιμνααί",
     "next": "Limnai 1",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 701,
         "end": 701,
         "author": "gr. Kruse."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Limnai 1",
@@ -5612,30 +5612,30 @@
     "previous": "Limnaios 2",
     "next": "Limnaios 4",
     "proof_read": 2,
+    "short_description": "Aus Makedonien, Gesandter Philipps V.",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 708,
         "end": 708,
         "author": "Schoch."
       }
-    ],
-    "short_description": "Aus Makedonien, Gesandter Philipps V.",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Limnaios 4",
     "previous": "Limnaios 3",
     "next": "Limnastes",
     "proof_read": 2,
+    "short_description": "Sohn d. Polemokrates aus Makedonien",
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 708,
         "end": 708,
         "author": "Schoch."
       }
-    ],
-    "short_description": "Sohn d. Polemokrates aus Makedonien",
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Limnastes",
@@ -5724,14 +5724,14 @@
     "next": "Limobrama",
     "sort_key": "Limo",
     "proof_read": 2,
+    "short_description": "Limo",
     "chapters": [
       {
         "start": 710,
         "end": 710,
         "author": "Fluss."
       }
-    ],
-    "short_description": "Limo"
+    ]
   },
   {
     "lemma": "Limobrama",
@@ -5773,14 +5773,14 @@
     "previous": "Limonum",
     "next": "Limusa",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 710,
         "end": 710,
         "author": "gr. Kruse."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Limusa",
@@ -5855,14 +5855,14 @@
     "previous": "Lince",
     "next": "Lindia",
     "proof_read": 2,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 712,
         "end": 712,
         "author": "Philipp."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Lindia",
@@ -7119,6 +7119,7 @@
     "previous": "Litis denuntiatio",
     "next": "Litorius 2",
     "proof_read": 3,
+    "short_description": "Führer hunn. Hilfsvölker",
     "wp_link": "w:en:Litorius",
     "wd_link": "d:Q3256628",
     "chapters": [
@@ -7127,8 +7128,7 @@
         "end": 784,
         "author": "Seeck."
       }
-    ],
-    "short_description": "Führer hunn. Hilfsvölker"
+    ]
   },
   {
     "lemma": "Litorius 2",
@@ -7146,6 +7146,7 @@
     "previous": "Litorius 2",
     "next": "Litria",
     "proof_read": 3,
+    "short_description": "Röm. Gewichts- und Münzbezeichnung vgl. Libra Nr. 2 Pondo",
     "wp_link": "w:en:Litra",
     "wd_link": "d:Q3256634",
     "chapters": [
@@ -7154,22 +7155,21 @@
         "end": 786,
         "author": "Regling."
       }
-    ],
-    "short_description": "Röm. Gewichts- und Münzbezeichnung vgl. Libra Nr. 2 Pondo"
+    ]
   },
   {
     "lemma": "Litria",
     "previous": "Litra",
     "next": "Littamum",
     "proof_read": 3,
+    "short_description": "liburnische Insel",
     "chapters": [
       {
         "start": 786,
         "end": 786,
         "author": "Kroll."
       }
-    ],
-    "short_description": "liburnische Insel"
+    ]
   },
   {
     "lemma": "Littamum",
@@ -7235,6 +7235,7 @@
     "previous": "Liturgien",
     "next": "Lituus 2",
     "proof_read": 3,
+    "short_description": "Trompetenart",
     "wp_link": "w:de:Lituus (Musikinstrument)",
     "wd_link": "d:Q1554099",
     "chapters": [
@@ -7243,8 +7244,7 @@
         "end": 805,
         "author": "Abert."
       }
-    ],
-    "short_description": "Trompetenart"
+    ]
   },
   {
     "lemma": "Lituus 2",
@@ -7583,6 +7583,7 @@
     "previous": "Livius 13",
     "next": "Livius 15",
     "proof_read": 2,
+    "short_description": "Drusus, C. cos. 147 v. Chr.",
     "wp_link": "w:de:Gaius Livius Drusus (Konsul)",
     "wd_link": "d:Q1270114",
     "chapters": [
@@ -7591,14 +7592,14 @@
         "end": 855,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Drusus, C. cos. 147 v. Chr."
+    ]
   },
   {
     "lemma": "Livius 15",
     "previous": "Livius 14",
     "next": "Livius 16",
     "proof_read": 2,
+    "short_description": "Drusus, C. Rechtsgelehrter, Sohn von Nr. 14",
     "wp_link": "w:de:Gaius Livius Drusus (Jurist)",
     "wd_link": "d:Q20002267",
     "chapters": [
@@ -7607,28 +7608,28 @@
         "end": 856,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Drusus, C. Rechtsgelehrter, Sohn von Nr. 14"
+    ]
   },
   {
     "lemma": "Livius 16",
     "previous": "Livius 15",
     "next": "Livius 17",
     "proof_read": 2,
+    "short_description": "Drusus, M. Soll sich im Knabenalter militär. Ruhm erworben haben",
     "chapters": [
       {
         "start": 856,
         "end": 856,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Drusus, M. Soll sich im Knabenalter militär. Ruhm erworben haben"
+    ]
   },
   {
     "lemma": "Livius 17",
     "previous": "Livius 16",
     "next": "Livius 18",
     "proof_read": 2,
+    "short_description": "Drusus, M. cos. 112 v. Chr.",
     "wp_link": "w:de:Marcus Livius Drusus der Ältere",
     "wd_link": "d:Q703346",
     "chapters": [
@@ -7637,8 +7638,7 @@
         "end": 859,
         "author": "Münzer."
       }
-    ],
-    "short_description": "Drusus, M. cos. 112 v. Chr."
+    ]
   },
   {
     "lemma": "Livius 18",
@@ -7852,6 +7852,7 @@
     "previous": "Livius 36",
     "next": "Livius 38",
     "proof_read": 2,
+    "short_description": "Livia Drusilla Gattin des Augustus",
     "wp_link": "w:de:Livia Drusilla",
     "wd_link": "d:Q469701",
     "chapters": [
@@ -7860,14 +7861,14 @@
         "end": 924,
         "author": "Lotte Ollendorff."
       }
-    ],
-    "short_description": "Livia Drusilla Gattin des Augustus"
+    ]
   },
   {
     "lemma": "Livius 38",
     "previous": "Livius 37",
     "next": "Livius 39",
     "proof_read": 2,
+    "short_description": "Livia Iulia Gattin des Drusus, des Sohnes des Tiberius",
     "wp_link": "w:de:Livilla",
     "wd_link": "d:Q234665",
     "chapters": [
@@ -7876,14 +7877,14 @@
         "end": 927,
         "author": "Lotte Ollendorff."
       }
-    ],
-    "short_description": "Livia Iulia Gattin des Drusus, des Sohnes des Tiberius"
+    ]
   },
   {
     "lemma": "Livius 39",
     "previous": "Livius 38",
     "next": "Livius 40",
     "proof_read": 3,
+    "short_description": "Livia Livilla",
     "wd_link": "d:Q107217985",
     "chapters": [
       {
@@ -7891,8 +7892,7 @@
         "end": 927,
         "author": "Kroll."
       }
-    ],
-    "short_description": "Livia Livilla"
+    ]
   },
   {
     "lemma": "Livius 40",
@@ -8144,14 +8144,14 @@
     "previous": "Locanus",
     "next": "Locatio conductio",
     "proof_read": 3,
+    "short_description": "Unterbringung einer Person o. Sache gg. Entgelt, Vermietung",
     "chapters": [
       {
         "start": 933,
         "end": 938,
         "author": "Kornemann."
       }
-    ],
-    "short_description": "Unterbringung einer Person o. Sache gg. Entgelt, Vermietung"
+    ]
   },
   {
     "lemma": "Locatio conductio",
@@ -8464,6 +8464,7 @@
     "next": "Löwe",
     "sort_key": "Loffel",
     "proof_read": 2,
+    "short_description": "Eßgerät",
     "wp_link": "w:de:Löffel (Essbesteck)",
     "wd_link": "d:Q81895",
     "chapters": [
@@ -8472,8 +8473,7 @@
         "end": 968,
         "author": "Hug."
       }
-    ],
-    "short_description": "Eßgerät"
+    ]
   },
   {
     "lemma": "Löwe",
@@ -8481,6 +8481,7 @@
     "next": "Logadios",
     "sort_key": "Loewe",
     "proof_read": 3,
+    "short_description": "Tierart",
     "wp_link": "w:de:Löwe",
     "wd_link": "d:Q140",
     "chapters": [
@@ -8489,8 +8490,7 @@
         "end": 990,
         "author": "Steier."
       }
-    ],
-    "short_description": "Tierart"
+    ]
   },
   {
     "lemma": "Logadios",
@@ -8887,14 +8887,14 @@
     "previous": "Lokris 1",
     "next": "Litra",
     "proof_read": 3,
+    "short_description": "Magd einer gewissen Hypermnestra",
     "chapters": [
       {
         "start": 1288,
         "end": 1288,
         "author": "Oldfather."
       }
-    ],
-    "short_description": "Magd einer gewissen Hypermnestra"
+    ]
   },
   {
     "lemma": "Litra",

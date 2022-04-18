@@ -5,13 +5,13 @@
     "next": "Abercius b",
     "redirect": "Avircius",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 5,
         "end": 5
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Abercius b",
@@ -19,13 +19,13 @@
     "next": "Aberglaube",
     "redirect": "Avircius",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 5,
         "end": 5
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aberglaube",
@@ -118,14 +118,14 @@
     "next": "Acilius 40b",
     "redirect": "Acilius 40#Acilius 40a",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 7,
         "end": 7,
         "author": "Gärtner & Wünsch."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Acilius 40b",
@@ -133,14 +133,14 @@
     "next": "Acilius 40c",
     "redirect": "Acilius 40#Acilius 40b",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 7,
         "end": 7,
         "author": "Gärtner & Wünsch."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Acilius 40c",
@@ -148,14 +148,14 @@
     "next": "Acilius 40d",
     "redirect": "Acilius 40#Acilius 40c",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 7,
         "end": 7,
         "author": "Gärtner & Wünsch."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Acilius 40d",
@@ -163,14 +163,14 @@
     "next": "Acilius 40e",
     "redirect": "Acilius 40#Acilius 40d",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 7,
         "end": 7,
         "author": "Gärtner & Wünsch."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Acilius 40e",
@@ -178,14 +178,14 @@
     "next": "Acilius 42",
     "redirect": "Acilius 40#Acilius 40e",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 7,
         "end": 7,
         "author": "Gärtner & Wünsch."
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Acilius 42",
@@ -254,13 +254,13 @@
     "next": "Aelius 24a",
     "redirect": "Antipatros 29",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 9,
         "end": 9
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aelius 24a",
@@ -346,13 +346,13 @@
     "previous": "Aelius 76",
     "next": "Aelius 80a",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 9,
         "end": 9
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Aelius 80a",
@@ -1850,14 +1850,14 @@
     "next": "Bappo 2",
     "redirect": "Bappo",
     "proof_read": 3,
+    "no_creative_height": true,
     "wd_link": "d:Q4077528",
     "chapters": [
       {
         "start": 62,
         "end": 62
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Bappo 2",
@@ -1991,13 +1991,13 @@
     "next": "Boiskos 2",
     "redirect": "Boiskos 5",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 67,
         "end": 67
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Boiskos 2",
@@ -2094,13 +2094,13 @@
     "next": "Cassutus",
     "redirect": "Cassius 93b",
     "proof_read": 3,
+    "no_creative_height": true,
     "chapters": [
       {
         "start": 78,
         "end": 78
       }
-    ],
-    "no_creative_height": true
+    ]
   },
   {
     "lemma": "Cassutus",
@@ -2568,7 +2568,7 @@
   {
     "lemma": "Cornelius 282b",
     "previous": "Cornelius 274aa",
-    "next": "Cosius 1-3",
+    "next": "Cosius 1–3",
     "redirect": true,
     "proof_read": 3,
     "chapters": [
@@ -2579,7 +2579,7 @@
     ]
   },
   {
-    "lemma": "Cosius 1-3",
+    "lemma": "Cosius 1–3",
     "previous": "Cornelius 282b",
     "next": "Cotus 2",
     "redirect": "Cosius 3",
@@ -2593,7 +2593,7 @@
   },
   {
     "lemma": "Cotus 2",
-    "previous": "Cosius 1-3",
+    "previous": "Cosius 1–3",
     "next": "Crescens 9",
     "redirect": true,
     "proof_read": 3,
@@ -3764,7 +3764,7 @@
   },
   {
     "lemma": "Jeutz",
-    "previous": "Idaios 1–10",
+    "previous": "Idaios 1-10",
     "next": "Iligga",
     "redirect": "Iudiacus",
     "proof_read": 3,
@@ -4560,13 +4560,13 @@
     "previous": "Kydna",
     "next": "Kyros 6a",
     "proof_read": 3,
+    "short_description": "K. II. d.Gr., Begründer des pers. Weltreiches 6. Jh. v. Chr., Sohn des Kambyses I.",
     "chapters": [
       {
         "start": 148,
         "end": 148
       }
-    ],
-    "short_description": "K. II. d.Gr., Begründer des pers. Weltreiches 6. Jh. v. Chr., Sohn des Kambyses I."
+    ]
   },
   {
     "lemma": "Kyros 6a",
@@ -4961,13 +4961,13 @@
     "previous": "Likymnios a",
     "next": "Litra",
     "proof_read": 3,
+    "short_description": "Station an der Straße nach China",
     "chapters": [
       {
         "start": 157,
         "end": 157
       }
-    ],
-    "short_description": "Station an der Straße nach China"
+    ]
   },
   {
     "lemma": "Litra",
@@ -5392,13 +5392,13 @@
     "previous": "Nikostratos 18a",
     "next": "Nosokomeion",
     "proof_read": 3,
+    "short_description": "Richtig: Nikokrates (XVII 1269 Nr. 4 ), Toreut im 4. Jh. v. Chr.",
     "chapters": [
       {
         "start": 174,
         "end": 174
       }
-    ],
-    "short_description": "Richtig: Nikokrates (XVII 1269 Nr. 4 ), Toreut im 4. Jh. v. Chr."
+    ]
   },
   {
     "lemma": "Nosokomeion",
@@ -5840,13 +5840,13 @@
     "previous": "Salvitto 2",
     "next": "Simos 8a",
     "proof_read": 3,
+    "short_description": "seltener Senecio, Südgall. Sigillatatöpfer in La Graufesenque",
     "chapters": [
       {
         "start": 204,
         "end": 204
       }
-    ],
-    "short_description": "seltener Senecio, Südgall. Sigillatatöpfer in La Graufesenque"
+    ]
   },
   {
     "lemma": "Simos 8a",
@@ -6062,13 +6062,13 @@
     "previous": "Vallius a",
     "next": "Vecturiones",
     "proof_read": 3,
+    "short_description": "L. V. Tranquillus, Präsidialprokurator der Provinz Mauretania Tingit. 88 n. Chr.",
     "chapters": [
       {
         "start": 219,
         "end": 219
       }
-    ],
-    "short_description": "L. V. Tranquillus, Präsidialprokurator der Provinz Mauretania Tingit. 88 n. Chr."
+    ]
   },
   {
     "lemma": "Vecturiones",
