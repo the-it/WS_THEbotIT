@@ -392,10 +392,12 @@
     "lemma": "Nerium promunturium",
     "previous": "Neritum",
     "next": "Nerius 1",
+    "short_description": "Kap Nariga westl. von Coruña",
     "chapters": [
       {
         "start": 39,
-        "author": "Schulten"
+        "end": 39,
+        "author": "A. Schulten"
       }
     ]
   },
@@ -12062,7 +12064,7 @@
   {
     "lemma": "Nossis",
     "previous": "Nosos",
-    "next": "Nostana",
+    "next": "Νοστάνα",
     "chapters": [
       {
         "start": 1053,
@@ -12071,7 +12073,7 @@
     ]
   },
   {
-    "lemma": "Nostana",
+    "lemma": "Νοστάνα",
     "previous": "Nossis",
     "next": "Nostia",
     "sort_key": "Nostana",
@@ -12086,7 +12088,7 @@
   },
   {
     "lemma": "Nostia",
-    "previous": "Nostana",
+    "previous": "Νοστάνα",
     "next": "Nostius",
     "redirect": "Nestane",
     "proof_read": 2,
