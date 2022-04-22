@@ -13,8 +13,17 @@ from service.ws_re.template.re_page import RePage
 from tools.test import real_wiki_test
 
 
-class TaskTestWithRegister(TaskTestCase, BaseTestRegister):
-    pass
+class TaskTestWithRegister(TaskTestCase):
+    @classmethod
+    def setUpClass(cls):
+        mock_data_mock = mock.patch("service.ws_re.register.repo.MOCK_DATA", mock.Mock).start()
+        mock_data_mock.return_value = True
+        clear_tst_path()
+
+    @classmethod
+    def tearDownClass(cls):
+        clear_tst_path(renew_path=False)
+        mock.patch.stopall()
 
 @ddt
 class TestSCANTask(TaskTestWithRegister):
