@@ -13,7 +13,17 @@ from service.ws_re.template.re_page import RePage
 from tools.test import real_wiki_test
 
 
-class TaskTestWithRegister(TaskTestCase):
+
+@ddt
+class TestSCANTask(TaskTestCase):
+    # pylint: disable=arguments-differ
+    def setUp(self):
+        super().setUp()  # pylint: disable=no-value-for-parameter
+        copy_tst_data("I_1_base", "I_1")
+        copy_tst_data("authors", "authors")
+        copy_tst_data("authors_mapping", "authors_mapping")
+        self.task = SCANTask(None, self.logger)
+
     @classmethod
     def setUpClass(cls):
         mock_data_mock = mock.patch("service.ws_re.register.repo.MOCK_DATA", mock.Mock).start()
@@ -24,16 +34,6 @@ class TaskTestWithRegister(TaskTestCase):
     def tearDownClass(cls):
         clear_tst_path(renew_path=False)
         mock.patch.stopall()
-
-@ddt
-class TestSCANTask(TaskTestWithRegister):
-    # pylint: disable=arguments-differ
-    def setUp(self):
-        super().setUp()  # pylint: disable=no-value-for-parameter
-        copy_tst_data("I_1_base", "I_1")
-        copy_tst_data("authors", "authors")
-        copy_tst_data("authors_mapping", "authors_mapping")
-        self.task = SCANTask(None, self.logger)
 
     def test_pushing_nothing_to_push(self):
         with mock.patch("service.ws_re.scanner.tasks.register_scanner.Repo",
