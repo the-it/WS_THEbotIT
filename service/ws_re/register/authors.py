@@ -5,17 +5,18 @@ from typing import Dict, Generator, List
 
 from service.ws_re.register.author import Author
 from service.ws_re.register._typing import AuthorDict
-from service.ws_re.register._base import _REGISTER_PATH
+from service.ws_re.register.repo import DataRepo
 
 
 class Authors:
-    _REGISTER_PATH = _REGISTER_PATH
-
-    def __init__(self):
-        with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
+    def __init__(self, update_data=False):
+        data_repo = DataRepo()
+        if update_data:
+            data_repo.pull()
+        with open(data_repo.data_path.joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors: Dict[str, Author] = {}
-        with open(self._REGISTER_PATH.joinpath("authors.json"), "r",
+        with open(data_repo.data_path.joinpath("authors.json"), "r",
                   encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
             for author in json_dict:

@@ -61,7 +61,7 @@ class TestAuthors(BaseTestRegister):
         authors.set_mappings({"Foo": "Bar"})
         authors.set_author({"Foo Bar": {"birth": 1234}})
         authors.persist()
-        base_path = Path(__file__).parent.joinpath("test_register")
+        base_path = Path(__file__).parent.joinpath("mock_data")
         with open(str(base_path.joinpath("authors_mapping.json")), mode="r", encoding="utf8") as mapping:
             compare(True, "\"Foo\": \"Bar\"" in mapping.read())
         with open(str(base_path.joinpath("authors.json")), mode="r", encoding="utf8") as authors:

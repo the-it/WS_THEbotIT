@@ -6,29 +6,15 @@ from ddt import file_data, ddt
 from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
-from service.ws_re.register.authors import Authors
-from service.ws_re.register._base import _REGISTER_PATH
-from service.ws_re.register.register_types.volume import VolumeRegister
-from service.ws_re.register.test_base import clear_tst_path, _TEST_REGISTER_PATH, \
-    copy_tst_data
+from service.ws_re.register.test_base import clear_tst_path, copy_tst_data, BaseTestRegister
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from service.ws_re.template.re_page import RePage
 from tools.test import real_wiki_test
 
 
-class TaskTestWithRegister(TaskTestCase):
-    @classmethod
-    def setUpClass(cls):
-        clear_tst_path()
-        Authors._REGISTER_PATH = _TEST_REGISTER_PATH
-        VolumeRegister._REGISTER_PATH = _TEST_REGISTER_PATH
-
-    @classmethod
-    def tearDownClass(cls):
-        Authors._REGISTER_PATH = _REGISTER_PATH
-        VolumeRegister._REGISTER_PATH = _REGISTER_PATH
-        clear_tst_path(renew_path=False)
+class TaskTestWithRegister(TaskTestCase, BaseTestRegister):
+    pass
 
 @ddt
 class TestSCANTask(TaskTestWithRegister):

@@ -1,4 +1,6 @@
 # pylint: disable=protected-access,no-self-use
+from unittest import TestCase
+
 from testfixtures import compare
 
 from service.ws_re.register.registers import Registers
@@ -59,7 +61,6 @@ class TestRegisters(BaseTestRegister):
         register = next(author_registers)
         compare("William Abbott", register.author.name)
         compare(2, len(register))
-
 
     def test_persist(self):
         copy_tst_data("I_1_alpha", "I_1")

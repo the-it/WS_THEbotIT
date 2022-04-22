@@ -273,13 +273,3 @@ class SCANTask(ReScannerTask):
             self._strategies[strategy].append(entry)
         else:
             self._strategies[strategy] = [entry]
-
-    def _push_changes(self):
-        repo = Repo(search_parent_directories=True)
-        if repo.index.diff(None):
-            repo.git.add(str(Path(__file__).parent.parent.parent.joinpath("register").joinpath("data")))
-            now = datetime.now().strftime("%y%m%d_%H%M%S")
-            repo.index.commit(f"Updating the register at {now}")
-            repo.git.push("origin", repo.active_branch.name)
-        else:
-            self.logger.info("No Changes to push today.")

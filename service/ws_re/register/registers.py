@@ -9,6 +9,7 @@ from service.ws_re.register.register_types.author import AuthorRegister
 from service.ws_re.register.register_types.public_domain import PublicDomainRegister
 from service.ws_re.register.register_types.short import ShortRegister
 from service.ws_re.register.register_types.volume import VolumeRegister
+from service.ws_re.register.repo import DataRepo
 from service.ws_re.volumes import Volumes
 
 RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g", "h", "hi", "i", "k",
@@ -17,7 +18,10 @@ RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er"
 
 
 class Registers:
-    def __init__(self):
+    def __init__(self, update_data=False):
+        self.repo = DataRepo()
+        if update_data:
+            self.repo.pull()
         self._authors: Authors = Authors()
         self._registers: Dict[str, VolumeRegister] = OrderedDict()
         self._alphabetic_registers: Dict[str, AlphabeticRegister] = OrderedDict()
@@ -27,6 +31,11 @@ class Registers:
 
     def __getitem__(self, item) -> VolumeRegister:
         return self._registers[item]
+
+    def persist(self):
+        for register in self._registers.values():
+            register.persist()
+        self.repo.push()
 
     @property
     def alphabetic(self) -> Generator[AlphabeticRegister, None, None]:
@@ -71,7 +80,3 @@ class Registers:
     @property
     def authors(self) -> Authors:
         return self._authors
-
-    def persist(self):
-        for register in self._registers.values():
-            register.persist()
