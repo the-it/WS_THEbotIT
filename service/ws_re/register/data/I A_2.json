@@ -10715,7 +10715,7 @@
   {
     "lemma": "Samnium 2",
     "previous": "Samnium 1",
-    "next": "Samnius Priscus",
+    "next": "Samnius",
     "chapters": [
       {
         "start": 2158,
@@ -10725,18 +10725,21 @@
     ]
   },
   {
-    "lemma": "Samnius Priscus",
+    "lemma": "Samnius",
     "previous": "Samnium 2",
     "next": "Samnum",
+    "proof_read": 2,
     "chapters": [
       {
-        "start": 2159
+        "start": 2159,
+        "end": 2159,
+        "author": "Gossen."
       }
     ]
   },
   {
     "lemma": "Samnum",
-    "previous": "Samnius Priscus",
+    "previous": "Samnius",
     "next": "Samo",
     "redirect": "Samnium 2",
     "proof_read": 2,
