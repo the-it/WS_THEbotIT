@@ -11,6 +11,7 @@ from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDict, UpdaterRemoveList
 from service.ws_re.register.author_crawler import AuthorCrawler
 from service.ws_re.register.registers import Registers
+from service.ws_re.register.repo import DataRepo
 from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
@@ -22,7 +23,7 @@ class SCANTask(ReScannerTask):
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
-        self.registers = Registers()
+        self.registers = Registers(update_data=True)
         self._strategies: Dict[str, List[str]] = {}
 
     def task(self):
@@ -42,7 +43,8 @@ class SCANTask(ReScannerTask):
         authors.persist()
         self.logger.info("Persist the register data.")
         self.registers.persist()
-        self._push_changes()
+        self.logger.info("Push changes for authors and registers.")
+        self.registers.repo.push()
 
     def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]

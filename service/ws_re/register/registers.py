@@ -35,7 +35,6 @@ class Registers:
     def persist(self):
         for register in self._registers.values():
             register.persist()
-        self.repo.push()
 
     @property
     def alphabetic(self) -> Generator[AlphabeticRegister, None, None]:

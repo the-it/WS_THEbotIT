@@ -7,6 +7,7 @@ from ddt import file_data, ddt
 from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
+from service.ws_re.register.repo import DataRepo
 from service.ws_re.register.test_base import clear_tst_path, copy_tst_data, BaseTestRegister
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
@@ -26,38 +27,13 @@ class TestSCANTask(TaskTestCase):
 
     @classmethod
     def setUpClass(cls):
-        mock_data_mock = mock.patch("service.ws_re.register.repo.MOCK_DATA", mock.Mock).start()
-        mock_data_mock.return_value = True
+        DataRepo.mock_data(True)
         clear_tst_path()
 
     @classmethod
     def tearDownClass(cls):
         clear_tst_path(renew_path=False)
-        mock.patch.stopall()
-
-    def test_pushing_nothing_to_push(self):
-        with mock.patch("service.ws_re.scanner.tasks.register_scanner.Repo",
-                        mock.Mock(spec=Repo)) as repo_mock:
-            repo_mock().index.diff.return_value = []
-            self.task._push_changes()
-            compare(3, len(repo_mock.mock_calls))
-            compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[1])
-            compare("().index.diff", repo_mock.mock_calls[2][0])
-
-    def test_pushing_changes(self):
-        with LogCapture():
-            with mock.patch("service.ws_re.scanner.tasks.register_scanner.Repo",
-                            mock.Mock(spec=Repo)) as repo_mock:
-                repo_mock().index.diff.return_value = ["Something has changed"]
-                self.task._push_changes()
-                compare(6, len(repo_mock.mock_calls))
-                compare(mock.call(search_parent_directories=True), repo_mock.mock_calls[1])
-                compare("().index.diff", repo_mock.mock_calls[2][0])
-                compare("().git.add", repo_mock.mock_calls[3][0])
-                compare(StringComparison(r".*/service/ws_re/register/data"), repo_mock.mock_calls[3][1][0])
-                compare("().index.commit", repo_mock.mock_calls[4][0])
-                compare(StringComparison(r"Updating the register at \d{6}_\d{6}"), repo_mock.mock_calls[4][1][0])
-                compare("().git.push", repo_mock.mock_calls[5][0])
+        DataRepo.mock_data(False)
 
     def test_fetch_wikipedia_wikisource_link(self):
         self.page_mock.text = """{{REDaten

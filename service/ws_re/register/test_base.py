@@ -7,6 +7,7 @@ from unittest import TestCase, mock
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.volume import VolumeRegister
+from service.ws_re.register.repo import DataRepo
 
 _TEST_REGISTER_PATH = Path(__file__).parent.joinpath("mock_data")
 
@@ -27,8 +28,7 @@ def clear_tst_path(renew_path=True):
 class BaseTestRegister(TestCase):
     @classmethod
     def setUpClass(cls):
-        mock_data_mock = mock.patch("service.ws_re.register.repo.MOCK_DATA", mock.Mock).start()
-        mock_data_mock.return_value = True
+        DataRepo.mock_data(True)
         clear_tst_path()
         copy_tst_data("authors", "authors")
         copy_tst_data("authors_mapping", "authors_mapping")
@@ -37,5 +37,5 @@ class BaseTestRegister(TestCase):
 
     @classmethod
     def tearDownClass(cls):
+        DataRepo.mock_data(False)
         clear_tst_path(renew_path=False)
-        mock.patch.stopall()
