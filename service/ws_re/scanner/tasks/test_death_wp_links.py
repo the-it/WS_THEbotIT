@@ -14,11 +14,11 @@ _BASE_TASK_PYWIKIBOT_PAGE = "service.ws_re.scanner.tasks.base_task.pywikibot.Pag
 class TestDEWPTask(TaskTestCase):
     def test_link_is_missing(self):
         with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            self.text_mock.return_value = """{{REDaten
+            self.page_mock.text = """{{REDaten
 |WP=Bla
 }}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title"
+            self.page_mock.title_str = "Re:Title"
             page_mock.return_value.exists.side_effect = [False]
             re_page = RePage(self.page_mock)
             task = DEWPTask(None, self.logger)
@@ -27,11 +27,11 @@ class TestDEWPTask(TaskTestCase):
 
     def test_link_is_existend(self):
         with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            self.text_mock.return_value = """{{REDaten
+            self.page_mock.text = """{{REDaten
 |WP=Bla
 }}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title"
+            self.page_mock.title_str = "Re:Title"
             page_mock.return_value.exists.side_effect = [True]
             page_mock.return_value.isRedirectPage.side_effect = [False]
             re_page = RePage(self.page_mock)
@@ -41,11 +41,11 @@ class TestDEWPTask(TaskTestCase):
 
     def test_link_is_existend_but_redirect(self):
         with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            self.text_mock.return_value = """{{REDaten
+            self.page_mock.text = """{{REDaten
 |WP=Bla
 }}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title"
+            self.page_mock.title_str = "Re:Title"
             page_mock.return_value.exists.side_effect = [True]
             page_mock.return_value.isRedirectPage.side_effect = [True]
             re_page = RePage(self.page_mock)
@@ -55,7 +55,7 @@ class TestDEWPTask(TaskTestCase):
 
     def test_link_several_links(self):
         with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            self.text_mock.return_value = """{{REDaten|WP=Bla}}
+            self.page_mock.text = """{{REDaten|WP=Bla}}
 {{REAutor|Autor.}}
 
 {{REDaten|WP=Blub}}
@@ -69,7 +69,7 @@ class TestDEWPTask(TaskTestCase):
 
 {{REDaten|WP=Blob}}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title"
+            self.page_mock.title_str = "Re:Title"
             page_mock.return_value.exists.side_effect = [True, False, False, True]
             page_mock.return_value.isRedirectPage.side_effect = [False, True]
             re_page = RePage(self.page_mock)
@@ -77,9 +77,9 @@ class TestDEWPTask(TaskTestCase):
             compare({"success": True, "changed": False}, task.run(re_page))
             compare({"not_exists": [("Blub", "Title"), ("Blab", "Title")], "redirect":[("Blob", "Title")]}, task.data)
 
-            self.text_mock.return_value = """{{REDaten|WP=Bli}}
+            self.page_mock.text = """{{REDaten|WP=Bli}}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title2"
+            self.page_mock.title_str = "Re:Title2"
             page_mock.return_value.exists.side_effect = [False]
             re_page = RePage(self.page_mock)
             compare({"success": True, "changed": False}, task.run(re_page))
@@ -113,9 +113,9 @@ class TestDEWPTask(TaskTestCase):
 
     def test_bug_invalid_title(self):
         with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            self.text_mock.return_value = """{{REDaten|WP=<!-- Nicht Megiddo -->}}
+            self.page_mock.text = """{{REDaten|WP=<!-- Nicht Megiddo -->}}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title"
+            self.page_mock.title_str = "Re:Title"
             page_mock.return_value.exists.side_effect = \
                 pywikibot.exceptions.InvalidTitleError("contains illegal char(s) '<'")
             re_page = RePage(self.page_mock)

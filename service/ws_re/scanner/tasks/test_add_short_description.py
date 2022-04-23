@@ -62,10 +62,10 @@ class TestKURZTaskProcessSource(TaskTestCase):
                                     "achaion akte": "Fancy greek stuff"})
 
     def test_add_short_description_to_lemma(self):
-        self.text_mock.return_value = """{{REDaten}}
+        self.page_mock.text = """{{REDaten}}
 text
 {{REAutor|Autor.}}"""
-        self.title_mock.return_value = "Re:Aachen"
+        self.page_mock.title_str = "Re:Aachen"
         re_page = RePage(self.page_mock)
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
@@ -73,10 +73,10 @@ text
         compare("[[Kategorie:RE:Kurztext überprüfen]]", re_page._article_list[-1])
 
     def test_add_short_description_to_lemma_sort_key(self):
-        self.text_mock.return_value = """{{REDaten}}
+        self.page_mock.text = """{{REDaten}}
 text
 {{REAutor|Autor.}}"""
-        self.title_mock.return_value = "Re:Ἀχαιῶν akte"
+        self.page_mock.title_str = "Re:Ἀχαιῶν akte"
         re_page = RePage(self.page_mock)
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
@@ -84,33 +84,33 @@ text
         compare("[[Kategorie:RE:Kurztext überprüfen]]", re_page._article_list[-1])
 
     def test_existing_short_description_to_lemma(self):
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |KURZTEXT=Test}}
 {{REAutor|Autor.}}"""
-        self.title_mock.return_value = "Re:Aachen"
+        self.page_mock.title_str = "Re:Aachen"
         re_page = RePage(self.page_mock)
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": False}, task.run(re_page))
         compare("Test", re_page.first_article["KURZTEXT"].value)
 
     def test_existing_verweis_dont_add(self):
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |VERWEIS=ON}}
 {{REAutor|Autor.}}"""
-        self.title_mock.return_value = "Re:Aachen"
+        self.page_mock.title_str = "Re:Aachen"
         re_page = RePage(self.page_mock)
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": False}, task.run(re_page))
         compare("", re_page.first_article["KURZTEXT"].value)
 
     def test_existing_verweis_remove_short_description(self):
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |VERWEIS=ON
 |KURZTEXT=blub}}
 test
 {{REAutor|Autor.}}
 [[Kategorie:RE:Kurztext überprüfen]]"""
-        self.title_mock.return_value = "Re:Aachen"
+        self.page_mock.title_str = "Re:Aachen"
         re_page = RePage(self.page_mock)
         task = KURZTask(None, self.logger)
         compare({"success": True, "changed": True}, task.run(re_page))
