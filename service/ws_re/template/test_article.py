@@ -343,15 +343,3 @@ text
         article = Article()
         article["TODESJAHR"].value = "bla1234"
         self.assertTrue(article.common_free)
-
-    def test_remove_two_properties(self):
-        test_string = """{{REDaten
-|BAND=V,1
-|SPALTE_START=1128
-}}
-blub
-{{REAutor|Bla.}}"""
-        article = Article.from_text(test_string)
-        back_to_text = article.to_text()
-        self.assertFalse("EXTSCAN_START" in back_to_text)
-        self.assertFalse("EXTSCAN_END" in back_to_text)
