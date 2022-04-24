@@ -174,31 +174,31 @@ nightly_steps: &nightly_steps
 jobs:
   dependency:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *dependency_steps
 
   quality:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *quality_steps
 
   coverage38:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *coverage_steps
 
   wikitest:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *wiki_steps
 
   nightly:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *nightly_steps
 
