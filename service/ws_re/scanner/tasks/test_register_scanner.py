@@ -1,18 +1,15 @@
 # pylint: disable=protected-access
-from datetime import datetime
-from unittest import mock, TestCase, skip
+from unittest import mock
 
 import pywikibot
 from ddt import file_data, ddt
-from git import Repo
 from testfixtures import compare, LogCapture, StringComparison
 
 from service.ws_re.register.repo import DataRepo
-from service.ws_re.register.test_base import clear_tst_path, copy_tst_data, BaseTestRegister
+from service.ws_re.register.test_base import clear_tst_path, copy_tst_data
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
 from service.ws_re.template.re_page import RePage
-from tools.bots.pi import WikiLogger
 from tools.test import real_wiki_test
 
 

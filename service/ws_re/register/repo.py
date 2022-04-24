@@ -46,7 +46,7 @@ class DataRepo:
                 now = datetime.now().strftime("%y%m%d_%H%M%S")
                 self._git_repo.index.commit(f"Updating the register at {now}")
                 self._git_repo.git.push("origin", self._git_repo.active_branch.name)
-                return  True
+                return True
         return False
 
     @classmethod

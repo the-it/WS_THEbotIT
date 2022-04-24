@@ -3,7 +3,7 @@ import contextlib
 import os
 import shutil
 from pathlib import Path
-from unittest import TestCase, mock
+from unittest import TestCase
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.volume import VolumeRegister

@@ -1,3 +1,4 @@
+# pylint: disable=protected-access,no-self-use
 from datetime import datetime, timedelta
 from os import path
 from pathlib import Path

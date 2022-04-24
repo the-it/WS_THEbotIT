@@ -21,9 +21,10 @@ class TestCleanAuthors(BaseTestRegister):
     def test_clean_authors(self):
         cleaner = CleanAuthors()
         cleaner.delete_authors_without_mapping()
-        with open(BASE_PATH.joinpath("test_data/register_stubs/authors_clean_expection.json"), encoding="utf-8") as expection_file, \
-                open(_TEST_REGISTER_PATH.joinpath("authors.json"), encoding="utf-8") as cleaned_file:
-            compare(json.load(expection_file), json.load(cleaned_file))
+        with open(BASE_PATH.joinpath("test_data/register_stubs/authors_clean_expection.json"), encoding="utf-8") \
+                as expection_file:
+            with open(_TEST_REGISTER_PATH.joinpath("authors.json"), encoding="utf-8") as cleaned_file:
+                compare(json.load(expection_file), json.load(cleaned_file))
 
     def test_clean_mapping(self):
         cleaner = CleanAuthors()

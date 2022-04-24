@@ -14,7 +14,7 @@ class TaskTestCase(TestCase):
         self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
                                  log_to_screen=False)
 
-    class PageMock:
+    class PageMock(mock.MagicMock):
         text: str = ""
         title_str: str = ""
         def title(self):
