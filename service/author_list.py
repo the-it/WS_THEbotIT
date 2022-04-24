@@ -168,7 +168,7 @@ class AuthorList(CanonicalBot):
                         dict_author.update({"wikidata": author["q"]})
                     except KeyError:
                         self.logger.warning(f"The autor [[{author['title']}]] has no wikidata_item")
-                    self.data.pull({author["id"]: dict_author})  # pylint: disable=no-member
+                    self.data.update({author["id"]: dict_author})
             except Exception as exception:
                 self.logger.exception("Exception not catched: ", exc_info=exception)
                 self.logger.error(f"author {author['title']} have a problem")
