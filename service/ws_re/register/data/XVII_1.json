@@ -392,12 +392,15 @@
     "lemma": "Nerium promunturium",
     "previous": "Neritum",
     "next": "Nerius 1",
-    "short_description": "Kap Nariga westl. von Coruña",
+    "proof_read": 3,
+    "short_description": "Kap Nariga, westlich von Coruña",
+    "no_creative_height": true,
+    "wd_link": "d:Q23993970",
     "chapters": [
       {
         "start": 39,
         "end": 39,
-        "author": "A. Schulten"
+        "author": "A. Schulten."
       }
     ]
   },
@@ -7123,6 +7126,8 @@
     "next": "Nikon 17",
     "proof_read": 2,
     "short_description": "Dichter der attischen Komödie",
+    "wp_link": "w:ca:Nicó (poeta)",
+    "wd_link": "d:Q1218135",
     "chapters": [
       {
         "start": 506,
@@ -12064,7 +12069,7 @@
   {
     "lemma": "Nossis",
     "previous": "Nosos",
-    "next": "Nostana",
+    "next": "Νοστάνα",
     "chapters": [
       {
         "start": 1053,
@@ -12073,7 +12078,7 @@
     ]
   },
   {
-    "lemma": "Nostana",
+    "lemma": "Νοστάνα",
     "previous": "Nossis",
     "next": "Nostia",
     "sort_key": "Nostana",
@@ -12088,7 +12093,7 @@
   },
   {
     "lemma": "Nostia",
-    "previous": "Nostana",
+    "previous": "Νοστάνα",
     "next": "Nostius",
     "redirect": "Nestane",
     "proof_read": 2,
