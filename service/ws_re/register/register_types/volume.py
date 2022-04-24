@@ -15,7 +15,7 @@ class VolumeRegister(Register):
         self._authors = authors
         self._volume = volume
         self.repo = DataRepo()
-        with open(self.repo.data_path.joinpath(f"{volume.file_name}.json"),
+        with open(self.repo.get_data_path().joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
             lemma_list = json.load(json_file)
         for lemma in lemma_list:

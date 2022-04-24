@@ -18,8 +18,7 @@ class DataRepo:
         self._git_repo = self._get_git_repo()
 
     @classmethod
-    @property
-    def data_path(cls):
+    def get_data_path(cls) -> Path:
         if cls.data_is_real:
             return PATH_REAL_DATA
         return PATH_MOCK_DATA

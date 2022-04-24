@@ -21,11 +21,11 @@ class TestDataRepo(TestCase):
         clear_tst_path(renew_path=False)
 
     def test_data_path(self):
-        compare(Path(__file__).parent.joinpath("data"), DataRepo.data_path)
+        compare(Path(__file__).parent.joinpath("data"), DataRepo.get_data_path())
         DataRepo.mock_data(True)
-        compare(Path(__file__).parent.joinpath("mock_data"), DataRepo.data_path)
+        compare(Path(__file__).parent.joinpath("mock_data"), DataRepo.get_data_path())
         DataRepo.mock_data(False)
-        compare(Path(__file__).parent.joinpath("data"), DataRepo.data_path)
+        compare(Path(__file__).parent.joinpath("data"), DataRepo.get_data_path())
 
     @real_wiki_test
     def test__get_git_repo(self):

@@ -13,10 +13,10 @@ class Authors:
         data_repo = DataRepo()
         if update_data:
             data_repo.pull()
-        with open(data_repo.data_path.joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
+        with open(data_repo.get_data_path().joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors: Dict[str, Author] = {}
-        with open(data_repo.data_path.joinpath("authors.json"), "r",
+        with open(data_repo.get_data_path().joinpath("authors.json"), "r",
                   encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
             for author in json_dict:
