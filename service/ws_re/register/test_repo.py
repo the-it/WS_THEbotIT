@@ -38,7 +38,7 @@ class TestDataRepo(TestCase):
             DataRepo._get_git_repo()
             tock = datetime.now()
             diff = tock - tick  # the result is a datetime.timedelta object
-            self.assertTrue(diff > timedelta(seconds=1))
+            self.assertTrue(diff > timedelta(seconds=0.1))
             self.assertTrue(path.isfile(Path(__file__).parent.joinpath("mock_data").joinpath("I_1.json")))
             # further initiations of the git repo will only be initialised locally ... execution time should be quick
             tick = datetime.now()
