@@ -5,17 +5,18 @@ from typing import Dict, Generator, List
 
 from service.ws_re.register.author import Author
 from service.ws_re.register._typing import AuthorDict
-from service.ws_re.register._base import _REGISTER_PATH
+from service.ws_re.register.repo import DataRepo
 
 
 class Authors:
-    _REGISTER_PATH = _REGISTER_PATH
-
-    def __init__(self):
-        with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
+    def __init__(self, update_data=False):
+        self.data_repo = DataRepo()
+        if update_data:
+            self.data_repo.pull()
+        with open(self.data_repo.get_data_path().joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors: Dict[str, Author] = {}
-        with open(self._REGISTER_PATH.joinpath("authors.json"), "r",
+        with open(self.data_repo.get_data_path().joinpath("authors.json"), "r",
                   encoding="utf-8") as json_file:
             json_dict = json.load(json_file)
             for author in json_dict:
@@ -65,10 +66,10 @@ class Authors:
         return author_dict
 
     def persist(self):
-        with open(self._REGISTER_PATH.joinpath("authors_mapping.json"), "w",
+        with open(self.data_repo.get_data_path().joinpath("authors_mapping.json"), "w",
                   encoding="utf-8") as json_file:
             json.dump(self._mapping, json_file, sort_keys=True, indent=2, ensure_ascii=False)
-        with open(self._REGISTER_PATH.joinpath("authors.json"), "w",
+        with open(self.data_repo.get_data_path().joinpath("authors.json"), "w",
                   encoding="utf-8") as json_file:
             json.dump(self._to_dict(), json_file, sort_keys=True, indent=2, ensure_ascii=False)
 

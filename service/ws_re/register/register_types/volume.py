@@ -1,22 +1,21 @@
 import json
 from typing import Union, Optional, List
 
-from service.ws_re.register._base import _REGISTER_PATH
 from service.ws_re.register._typing import LemmaDict
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types._base import Register
+from service.ws_re.register.repo import DataRepo
 from service.ws_re.volumes import Volume, Volumes
 
 
 class VolumeRegister(Register):
-    _REGISTER_PATH = _REGISTER_PATH
-
     def __init__(self, volume: Volume, authors: Authors):
         super().__init__()
         self._authors = authors
         self._volume = volume
-        with open(self._REGISTER_PATH.joinpath(f"{volume.file_name}.json"),
+        self.repo = DataRepo()
+        with open(self.repo.get_data_path().joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
             lemma_list = json.load(json_file)
         for lemma in lemma_list:

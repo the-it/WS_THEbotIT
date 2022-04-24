@@ -1,7 +1,7 @@
 import contextlib
 from typing import Optional
 
-from service.ws_re.register._base import RegisterException, _REGISTER_PATH
+from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import LemmaDict, UpdaterRemoveList
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types.volume import VolumeRegister
@@ -9,8 +9,6 @@ from service.ws_re.volumes import VolumeType
 
 
 class Updater():
-    _REGISTER_PATH = _REGISTER_PATH
-
     def __init__(self, volume_register: VolumeRegister):
         self._register = volume_register
 

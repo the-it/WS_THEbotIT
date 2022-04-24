@@ -12,7 +12,7 @@ class TestCOPDTask(TaskTestCase):
         article is in public domain since this day and has no height of creation. Defined by death year.
         Expectation: article changed
         """
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |BAND=S I
 |KEINE_SCHÖPFUNGSHÖHE=ON
 |TODESJAHR=1950
@@ -29,7 +29,7 @@ bla
         article is in public domain since this day and has no height of creation. Defined by birth year.
         Expectation: article changed
         """
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |BAND=S I
 |KEINE_SCHÖPFUNGSHÖHE=ON
 |GEBURTSJAHR=1870
@@ -46,7 +46,7 @@ bla
         article is not in public domain since and has no height of creation. Defined by death year.
         Expectation: article not changed
         """
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |BAND=S I
 |KEINE_SCHÖPFUNGSHÖHE=ON
 |TODESJAHR=1951
@@ -63,7 +63,7 @@ bla
         article is not in public domain since and has no height of creation. Defined by birth year.
         Expectation: article not changed
         """
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |BAND=S I
 |KEINE_SCHÖPFUNGSHÖHE=ON
 |GEBURTSJAHR=1871
@@ -80,7 +80,7 @@ bla
         article is in public domain since but has height of creation.
         Expectation: article not changed
         """
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |BAND=S I
 |KEINE_SCHÖPFUNGSHÖHE=OFF
 |TODESJAHR=1950

@@ -14,24 +14,24 @@ BASE_TASK_PYWIKIBOT_PAGE = "service.ws_re.scanner.tasks.base_task.pywikibot.Page
 class TestDEALTask(TaskTestCase):
     def test_process_next_previous_process_two(self):
         with mock.patch(BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            self.text_mock.return_value = """{{REDaten
+            self.page_mock.text = """{{REDaten
 |VG=Bla
 |NF=Blub
 }}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title"
+            self.page_mock.title_str = "Re:Title"
             page_mock.return_value.exists.side_effect = [True, False]
             re_page = RePage(self.page_mock)
             task = DEALTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
             compare([("Blub", "Title")], task.data)
 
-            self.text_mock.return_value = """{{REDaten
+            self.page_mock.text = """{{REDaten
 |VG=Bla
 |NF=Blub
 }}
 {{REAutor|Autor.}}"""
-            self.title_mock.return_value = "Re:Title2"
+            self.page_mock.title_str = "Re:Title2"
             page_mock.return_value.exists.side_effect = [False, True]
             re_page = RePage(self.page_mock)
             compare({"success": True, "changed": False}, task.run(re_page))
@@ -40,8 +40,8 @@ class TestDEALTask(TaskTestCase):
     @file_data("test_data/test_death_re_links.yml")
     def test_process(self, text, title, exists_mocks, expect):
         with mock.patch(BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
-            self.text_mock.return_value = text
-            self.title_mock.return_value = title
+            self.page_mock.text = text
+            self.page_mock.title_str = title
             page_mock.return_value.exists.side_effect = exists_mocks
             re_page = RePage(self.page_mock)
             task = DEALTask(None, self.logger)

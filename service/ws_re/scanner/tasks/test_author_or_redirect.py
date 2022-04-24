@@ -11,7 +11,7 @@ BASE_TASK_PYWIKIBOT_PAGE = "service.ws_re.scanner.tasks.base_task.pywikibot.Page
 
 class TestREAUTask(TaskTestCase):
     def test_add_cat(self):
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |VERWEIS=OFF
 }}
 test
@@ -23,7 +23,7 @@ test
             self.assertTrue("[[Kategorie:RE:Weder Autor noch Verweis]]" in str(re_page))
 
     def test_no_cat_if_nachtrag(self):
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |VERWEIS=OFF
 |NACHTRAG=ON
 }}
@@ -36,7 +36,7 @@ test
             self.assertFalse("[[Kategorie:RE:Weder Autor noch Verweis]]" in str(re_page))
 
     def test_remove_cat(self):
-        self.text_mock.return_value = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |VERWEIS=OFF
 }}
 test

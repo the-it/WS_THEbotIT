@@ -9,20 +9,16 @@ from tools.bots.pi import WikiLogger
 
 
 class TaskTestCase(TestCase):
-    # pylint: disable=fixme
-    # Todo: I don't like this, but it's working for the moment :-(, TestReScanner looks more elegant, but needs work
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text", new_callable=mock.PropertyMock)
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.title", new_callable=mock.Mock)
-    # pylint: disable=arguments-differ
-    def setUp(self, title_mock, text_mock, page_mock):
-        self.page_mock = page_mock
-        self.text_mock = text_mock
-        self.title_mock = title_mock
-        type(self.page_mock).text = self.text_mock
-        type(self.page_mock).title = self.title_mock
+    def setUp(self):
+        self.page_mock = self.PageMock()
         self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
                                  log_to_screen=False)
+
+    class PageMock(mock.MagicMock):
+        text: str = ""
+        title_str: str = ""
+        def title(self):
+            return self.title_str
 
 
 class TestReScannerTask(TaskTestCase):
@@ -60,7 +56,7 @@ class TestReScannerTask(TaskTestCase):
             log_catcher.check(("Test", "INFO", "closing task MINI"))
 
     def test_process_task(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page = RePage(self.page_mock)
         with self.MINITask(None, self.logger) as task:
             result = task.run(re_page)
@@ -72,7 +68,7 @@ class TestReScannerTask(TaskTestCase):
             self.re_page[0].text = "text2"
 
     def test_process_task_alter_text(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page = RePage(self.page_mock)
         with self.MINIAlterTask(None, self.logger) as task:
             result = task.run(re_page)
@@ -84,7 +80,7 @@ class TestReScannerTask(TaskTestCase):
             raise Exception("Buuuh")
 
     def test_execute_with_exception(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
             with self.EXCETask(None, self.logger) as task:
@@ -100,7 +96,7 @@ class TestReScannerTask(TaskTestCase):
             raise Exception("Buuuh")
 
     def test_execute_with_exception_altered(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page = RePage(self.page_mock)
         with LogCapture():
             with self.EXCEAlteredTask(None, self.logger) as task:
@@ -109,8 +105,8 @@ class TestReScannerTask(TaskTestCase):
         self.assertTrue(result["changed"])
 
     def test_register_processed_title(self):
-        self.page_mock.title.return_value = "RE:Page"
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.page_mock.title_str = "RE:Page"
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page = RePage(self.page_mock)
         with LogCapture():
             # page successful processed
@@ -129,9 +125,9 @@ class TestReScannerTask(TaskTestCase):
             self.re_page[0].text = self.re_page[0].text.replace("text", "other stuff")
 
     def test_process_two_tasks_alter_one(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page1 = RePage(self.page_mock)
-        self.text_mock.return_value = "{{REDaten}}\nother stuff\n{{REAutor|Autor.}}"
+        self.page_mock.text = "{{REDaten}}\nother stuff\n{{REAutor|Autor.}}"
         re_page2 = RePage(self.page_mock)
         with LogCapture():
             with self.ALNAAltereNotAllTask(None, self.logger) as task:

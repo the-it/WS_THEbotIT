@@ -1,11 +1,8 @@
 import contextlib
 import re
-from datetime import datetime
-from pathlib import Path
 from typing import List, Tuple, Dict, Optional, Sequence
 
 import pywikibot
-from git import Repo
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register._typing import ChapterDict, LemmaDict, UpdaterRemoveList
@@ -22,7 +19,7 @@ class SCANTask(ReScannerTask):
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
-        self.registers = Registers()
+        self.registers = Registers(update_data=True)
         self._strategies: Dict[str, List[str]] = {}
 
     def task(self):
@@ -42,7 +39,8 @@ class SCANTask(ReScannerTask):
         authors.persist()
         self.logger.info("Persist the register data.")
         self.registers.persist()
-        self._push_changes()
+        self.logger.info("Push changes for authors and registers.")
+        self.registers.repo.push()
 
     def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
@@ -273,13 +271,3 @@ class SCANTask(ReScannerTask):
             self._strategies[strategy].append(entry)
         else:
             self._strategies[strategy] = [entry]
-
-    def _push_changes(self):
-        repo = Repo(search_parent_directories=True)
-        if repo.index.diff(None):
-            repo.git.add(str(Path(__file__).parent.parent.parent.joinpath("register").joinpath("data")))
-            now = datetime.now().strftime("%y%m%d_%H%M%S")
-            repo.index.commit(f"Updating the register at {now}")
-            repo.git.push("origin", repo.active_branch.name)
-        else:
-            self.logger.info("No Changes to push today.")

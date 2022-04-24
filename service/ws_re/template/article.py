@@ -231,10 +231,6 @@ class Article(collections.Mapping):
                     if keyword in full_keyword:
                         keyword = full_keyword
                         break
-            # todo: if the search __ insource:EXTSCAN_START __ doesn't return anything this can be removed.
-            elif keyword in ("EXTSCAN_START", "EXTSCAN_END"):
-                # this keyword fades out
-                pass
             else:
                 raise ReDatenException(f"REDaten has wrong key word. --> {template_property}")
         else:
