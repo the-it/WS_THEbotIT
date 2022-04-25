@@ -5,15 +5,15 @@ version: 2.1
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v13-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
-      - v13-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
-      - v13-dependencies-{{ .Environment.PYTHON_VERSION }}-
+      - v14-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+      - v14-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
+      - v14-dependencies-{{ .Environment.PYTHON_VERSION }}-
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v13-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+    key: v14-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
 
 install_dependencies: &install_dependencies
   run:
@@ -174,31 +174,31 @@ nightly_steps: &nightly_steps
 jobs:
   dependency:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *dependency_steps
 
   quality:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *quality_steps
 
   coverage38:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *coverage_steps
 
   wikitest:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *wiki_steps
 
   nightly:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
     working_directory: ~/repo
     <<: *nightly_steps
 

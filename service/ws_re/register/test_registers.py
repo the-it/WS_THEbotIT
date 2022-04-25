@@ -3,8 +3,8 @@
 from testfixtures import compare
 
 from service.ws_re.register.registers import Registers
-from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
-    _TEST_REGISTER_PATH
+from service.ws_re.register.repo import DataRepo
+from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.volumes import Volumes
 
 
@@ -70,7 +70,7 @@ class TestRegisters(BaseTestRegister):
         register_III_1 = registers["III,1"]
         register_III_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
         registers.persist()
-        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
+        with open(DataRepo.get_data_path().joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             self.assertTrue("Siegfried" in register_file.read())
-        with open(_TEST_REGISTER_PATH.joinpath("III_1.json"), mode="r", encoding="utf-8") as register_file:
+        with open(DataRepo.get_data_path().joinpath("III_1.json"), mode="r", encoding="utf-8") as register_file:
             self.assertTrue("Siegfried" in register_file.read())
