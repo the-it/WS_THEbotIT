@@ -5,8 +5,8 @@ from testfixtures import compare, StringComparison
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.volume import VolumeRegister
-from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data, \
-    _TEST_REGISTER_PATH
+from service.ws_re.register.repo import DataRepo
+from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.volumes import Volumes
 
 
@@ -111,7 +111,7 @@ class TestRegister(BaseTestRegister):
     ]
   }
 ]"""
-        with open(_TEST_REGISTER_PATH.joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
+        with open(DataRepo.get_data_path().joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             compare(expect, register_file.read())
 
     def test_normalize_sort_key(self):
