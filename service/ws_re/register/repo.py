@@ -6,7 +6,7 @@ from typing import Optional
 
 from git import Repo, NoSuchPathError, InvalidGitRepositoryError
 
-REPO_URL = "https://github.com/the-it/re_register_data"
+REPO_URL = "git@github.com:the-it/re_register_data.git"
 PATH_REAL_DATA = Path(__file__).parent.joinpath("data")
 PATH_MOCK_DATA = Path(__file__).parent.joinpath("mock_data")
 
