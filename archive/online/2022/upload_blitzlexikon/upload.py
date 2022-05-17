@@ -1,4 +1,6 @@
 import os
+import re
+from datetime import datetime
 from pathlib import Path
 
 import pywikibot
@@ -27,16 +29,25 @@ Author died more than 70 years ago - public domain
 
 class UploadBlitzBot(OneTimeBot):
     def task(self):
-        root_dir = Path(__file__).parent
-        file_list = list(os.listdir(root_dir))
+        root_dir = Path.home().joinpath("Dropbox/blitzlexikon")
+        date_folder = root_dir.joinpath(datetime.now().strftime("%y%m%d"))
+        try:
+            os.makedirs(date_folder)
+        except FileExistsError:
+            pass
+
+        file_list: list[str] = list(os.listdir(str(root_dir)))
         max = len(file_list)
         for idx, file in enumerate(file_list):
-            if not file.endswith(".jpg"):
+            if not re.match(r"LA2-Blitz-\d{4}_.+?\.jpg", file):
                 continue
             self.logger.debug(f"{idx}/{max} ... {root_dir.joinpath(file)}")
             imagepage = pywikibot.FilePage(self.wiki, file)  # normalizes filename
             imagepage.text = file_description
-            imagepage.upload(str(root_dir.joinpath(file)), comment="ausgeschnittenes Bild für Blitzlexikon")
+            success = imagepage.upload(str(root_dir.joinpath(file)), comment="ausgeschnittenes Bild für Blitzlexikon")
+            if success:
+                os.rename(root_dir.joinpath(file), date_folder.joinpath(file))
+
         self.logger.info("THE END")
 
 
