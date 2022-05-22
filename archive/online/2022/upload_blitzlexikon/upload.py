@@ -1,5 +1,6 @@
 import os
 import re
+from contextlib import suppress
 from datetime import datetime
 from pathlib import Path
 
@@ -31,12 +32,10 @@ class UploadBlitzBot(OneTimeBot):
     def task(self):
         root_dir = Path.home().joinpath("Dropbox/blitzlexikon")
         date_folder = root_dir.joinpath(datetime.now().strftime("%y%m%d"))
-        try:
+        with suppress(FileExistsError):
             os.makedirs(date_folder)
-        except FileExistsError:
-            pass
 
-        file_list: list[str] = list(os.listdir(str(root_dir)))
+        file_list: list[str] = sorted(list(os.listdir(str(root_dir))))
         max = len(file_list)
         for idx, file in enumerate(file_list):
             if not re.match(r"LA2-Blitz-\d{4}_.+?\.jpg", file):
@@ -47,7 +46,6 @@ class UploadBlitzBot(OneTimeBot):
             success = imagepage.upload(str(root_dir.joinpath(file)), comment="ausgeschnittenes Bild für Blitzlexikon")
             if success:
                 os.rename(root_dir.joinpath(file), date_folder.joinpath(file))
-
         self.logger.info("THE END")
 
 
