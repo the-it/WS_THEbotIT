@@ -35,11 +35,9 @@ class UploadBlitzBot(OneTimeBot):
         with suppress(FileExistsError):
             os.makedirs(date_folder)
 
-        file_list: list[str] = sorted(list(os.listdir(str(root_dir))))
+        file_list: list[str] = sorted([file for file in os.listdir(str(root_dir)) if re.match(r"LA2-Blitz-\d{4}_.+?\.jpg", file)])
         max = len(file_list)
         for idx, file in enumerate(file_list):
-            if not re.match(r"LA2-Blitz-\d{4}_.+?\.jpg", file):
-                continue
             self.logger.debug(f"{idx}/{max} ... {root_dir.joinpath(file)}")
             imagepage = pywikibot.FilePage(self.wiki, file)  # normalizes filename
             imagepage.text = file_description
