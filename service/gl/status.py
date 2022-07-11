@@ -77,11 +77,8 @@ class GlStatus(CanonicalBot):
 
     def year(self, year, temp_text):
         fertig = self.petscan(["Fertig"], year=year)
-        time.sleep(20)
         korrigiert = self.petscan(["Korrigiert"], year=year)
-        time.sleep(20)
         rest = self.petscan([], not_categories=["Fertig", "Korrigiert"], year=year)
-        time.sleep(20)
         alle = fertig + korrigiert + rest
         regex = re.compile("<!--GLStatus:" + str(year) + "-->.*?<!---->")
         if rest > 0:
