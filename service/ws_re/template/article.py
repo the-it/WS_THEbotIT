@@ -1,4 +1,4 @@
-import collections
+from collections.abc import Mapping
 import contextlib
 from datetime import datetime
 from typing import Union, Tuple, Generator, Optional, List
@@ -11,7 +11,7 @@ from tools.template_finder import TemplateFinder
 from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 
-class Article(collections.Mapping):
+class Article(Mapping):
     keywords = {
         "BD": "BAND",
         "SS": "SPALTE_START",
