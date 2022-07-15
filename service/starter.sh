@@ -11,4 +11,4 @@ git reset --hard main
 sudo /usr/local/bin/python3.10 -m pip install -r requirements.txt
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
 source /etc/environment
-/usr/local/bin/python3.8 service/runner.py
+/usr/local/bin/python3.10 service/runner.py
