@@ -1,4 +1,5 @@
 import json
+from json import JSONDecodeError
 from typing import Union, Optional, List
 
 from service.ws_re.register._typing import LemmaDict
@@ -17,7 +18,10 @@ class VolumeRegister(Register):
         self.repo = DataRepo()
         with open(self.repo.get_data_path().joinpath(f"{volume.file_name}.json"),
                   "r", encoding="utf-8") as json_file:
-            lemma_list = json.load(json_file)
+            try:
+                lemma_list = json.load(json_file)
+            except JSONDecodeError:
+                raise ValueError(f"Decoding error in file {volume.file_name}")
         for lemma in lemma_list:
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
