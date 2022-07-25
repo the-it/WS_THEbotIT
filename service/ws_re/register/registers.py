@@ -39,15 +39,18 @@ class Registers:
     @property
     def alphabetic(self) -> Generator[AlphabeticRegister, None, None]:
         for idx, start in enumerate(RE_ALPHABET):
-            end = "zzzzzz"
-            before_start = None
-            after_next_start = None
-            with contextlib.suppress(IndexError):
+            try:
                 end = RE_ALPHABET[idx + 1]
-            with contextlib.suppress(IndexError):
+            except IndexError:
+                end = "zzzzzz"
+            try:
                 before_start = RE_ALPHABET[idx - 1]
-            with contextlib.suppress(IndexError):
+            except IndexError:
+                before_start = None
+            try:
                 after_next_start = RE_ALPHABET[idx + 2]
+            except IndexError:
+                after_next_start = None
             yield AlphabeticRegister(start, end,
                                      before_start, after_next_start,
                                      self._registers)
