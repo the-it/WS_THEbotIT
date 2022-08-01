@@ -10,7 +10,7 @@ from git import Repo, NoSuchPathError, InvalidGitRepositoryError
 REPO_URL = "git@github.com:the-it/re_register_data.git"
 PATH_REAL_DATA = Path(__file__).parent.joinpath("data")
 if "REGISTER_DATA_PATH" in os.environ:
-    PATH_REAL_DATA = os.environ["REGISTER_DATA_PATH"]
+    PATH_REAL_DATA = Path(os.environ["REGISTER_DATA_PATH"])
 PATH_MOCK_DATA = Path(__file__).parent.joinpath("mock_data")
 
 
