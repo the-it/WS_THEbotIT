@@ -149,7 +149,7 @@ class TestAnalyse(TestCase):
     def test_compare_lemma(self):  # pragma: no cover
         lemma_1 = "lemma 1"
         lemma_2 = "lemma 1"
-        for i, _ in enumerate(lemma_1):
-            if lemma_1[i] != lemma_2[i]:
-                raise AssertionError(f"position {i} {lemma_1[i]}({ord(lemma_1[i])}) "
+        for i, char in enumerate(lemma_1):
+            if char != lemma_2[i]:
+                raise AssertionError(f"position {i} {char}({ord(char)}) "
                                      f"!= {lemma_2[i]}({ord(lemma_2[i])})")

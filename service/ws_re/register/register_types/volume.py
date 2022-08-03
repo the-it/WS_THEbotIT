@@ -20,8 +20,8 @@ class VolumeRegister(Register):
                   "r", encoding="utf-8") as json_file:
             try:
                 lemma_list = json.load(json_file)
-            except JSONDecodeError:
-                raise ValueError(f"Decoding error in file {volume.file_name}")
+            except JSONDecodeError as exception:
+                raise ValueError(f"Decoding error in file {volume.file_name}") from exception
         for lemma in lemma_list:
             self._lemmas.append(Lemma(lemma, self._volume, self._authors))
 
