@@ -97,7 +97,7 @@ class TestLambdaBot(TestCloudBase):
             with self.MinimalBot(wiki=None, log_to_screen=False) as bot:
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
-            self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])
+            self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])  # pylint: disable=unnecessary-dunder-call
             self.assertEqual(mock.call().save("Update of Bot MinimalBot", botflag=True),
                              mock_page.mock_calls[2])
 

@@ -23,7 +23,7 @@ class DataRepo:
     @classmethod
     def get_data_path(cls) -> Path:
         if cls.data_is_real:
-            return PATH_REAL_DATA
+            return PATH_REAL_DATA.joinpath("registers")
         return PATH_MOCK_DATA
 
     @classmethod

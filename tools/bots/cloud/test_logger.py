@@ -11,7 +11,7 @@ from tools.bots.cloud.logger import WikiLogger
 class TestWikilogger(TestCase):
     def setUp(self):
         self.logger = WikiLogger("test_bot", datetime(year=2000, month=1, day=1), log_to_screen=False)
-        self.logger.__enter__()
+        self.logger.__enter__()  # pylint: disable=unnecessary-dunder-call
 
     def tearDown(self):
         self.logger.tear_down()

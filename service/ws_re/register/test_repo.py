@@ -22,11 +22,11 @@ class TestDataRepo(TestCase):
         clear_tst_path(renew_path=False)
 
     def test_data_path(self):
-        compare(Path(__file__).parent.joinpath("data"), DataRepo.get_data_path())
+        compare(Path(__file__).parent.joinpath("data").joinpath("registers"), DataRepo.get_data_path())
         DataRepo.mock_data(True)
         compare(Path(__file__).parent.joinpath("mock_data"), DataRepo.get_data_path())
         DataRepo.mock_data(False)
-        compare(Path(__file__).parent.joinpath("data"), DataRepo.get_data_path())
+        compare(Path(__file__).parent.joinpath("data").joinpath("registers"), DataRepo.get_data_path())
 
     @real_wiki_test
     def test__get_git_repo(self):
@@ -39,7 +39,8 @@ class TestDataRepo(TestCase):
             tock = datetime.now()
             diff = tock - tick  # the result is a datetime.timedelta object
             self.assertTrue(diff > timedelta(seconds=0.1))
-            self.assertTrue(path.isfile(Path(__file__).parent.joinpath("mock_data").joinpath("I_1.json")))
+            self.assertTrue(path.isfile(Path(__file__)
+                                        .parent.joinpath("mock_data").joinpath("registers").joinpath("I_1.json")))
             # further initiations of the git repo will only be initialised locally ... execution time should be quick
             tick = datetime.now()
             for _ in range(10):
