@@ -184,7 +184,7 @@ jobs:
     working_directory: ~/repo
     <<: *quality_steps
 
-  coverage310:
+  coverage:
     docker:
       - image: cimg/python:3.10
     working_directory: ~/repo
@@ -214,7 +214,7 @@ workflows:
           context: python310
           requires:
             - dependency
-      - coverage310:
+      - coverage:
           context: python310
           requires:
             - dependency
