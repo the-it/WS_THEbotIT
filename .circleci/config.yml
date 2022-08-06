@@ -209,7 +209,7 @@ workflows:
   test-and-quality:
     jobs:
       - dependency:
-          context: python10
+          context: python310
       - quality:
           context: python310
           requires:
