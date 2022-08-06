@@ -209,7 +209,7 @@ class TestLambdaBot(TestCloudBase):
         self._make_json_file(filename="MinimalBot.data.json")
         StatusManager("MinimalBot").finish_run(success=True)
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertEqual(datetime(2000, 12, 31, 0, 2), bot.create_timestamp_for_search(offset=timedelta(days=1)))
+            self.assertEqual(datetime(2000, 12, 31, 0, 3), bot.create_timestamp_for_search(offset=timedelta(days=1)))
 
     def test_set_timestamp_for_searcher_no_successful_run(self):
         self._make_json_file(filename="MinimalBot.data.json")
