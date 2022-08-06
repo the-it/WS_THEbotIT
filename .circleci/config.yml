@@ -184,7 +184,7 @@ jobs:
     working_directory: ~/repo
     <<: *quality_steps
 
-  coverage38:
+  coverage310:
     docker:
       - image: cimg/python:3.10
     working_directory: ~/repo
