@@ -11,6 +11,7 @@ from service.ws_re.scanner.base import ReScanner
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template import ReDatenException
 from tools.bots.test_pi import setup_data_path, teardown_data_path, _DATA_PATH_TEST
+from tools.test import SearchStringChecker
 
 
 class TestReScanner(TestCase):
@@ -26,22 +27,10 @@ class TestReScanner(TestCase):
         teardown_data_path()
         mock.patch.stopall()
 
-    class SearchStringChecker:
-        def __init__(self, search_string: str):
-            self.search_string = search_string
-
-        def is_part_of_searchstring(self, part: str):
-            pre_length = len(self.search_string)
-            self.search_string = "".join(self.search_string.split(part))
-            return pre_length != len(self.search_string)
-
-        def is_empty(self):
-            return len(self.search_string) == 0
-
     def test_search_prepare_debug(self):
         mock.patch.stopall()
         with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
-            checker = self.SearchStringChecker(str(bot._prepare_searcher()))
+            checker = SearchStringChecker(str(bot._prepare_searcher()))
             self.assertTrue(checker.is_part_of_searchstring(
                 r"https://petscan.wmflabs.org/?language=de&project=wikisource"))
             self.assertTrue(checker.is_part_of_searchstring("&templates_yes=REDaten"))
@@ -51,7 +40,7 @@ class TestReScanner(TestCase):
     def test_search_prepare(self):
         mock.patch.stopall()
         with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
-            checker = self.SearchStringChecker(str(bot._prepare_searcher()))
+            checker = SearchStringChecker(str(bot._prepare_searcher()))
             self.assertTrue(checker.is_part_of_searchstring(
                 "https://petscan.wmflabs.org/?language=de&project=wikisource"))
             self.assertTrue(checker.is_part_of_searchstring(
