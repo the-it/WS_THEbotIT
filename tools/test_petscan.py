@@ -1,15 +1,19 @@
 # pylint: disable=protected-access
 from datetime import datetime
-from unittest import TestCase
+from unittest import TestCase, mock
 
 import requests_mock
+from testfixtures import compare
 
 from tools.petscan import PetScan, PetScanException
 
 
-class TestCatScan(TestCase):
+class TestPetScan(TestCase):
     def setUp(self):
         self.petscan = PetScan()
+
+    def tearDown(self):
+        mock.patch.stopall()
 
     def test_add_options(self):
         self.petscan.add_options({"max_age": "45"})
@@ -207,3 +211,28 @@ class TestCatScan(TestCase):
                      status_code=404)
             with self.assertRaises(PetScanException):
                 self.petscan.run()
+
+    result_of_searcher = [{"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
+                           "title": "RE:Lemma1", "touched": "20010101232359"},
+                          {"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
+                           "title": "RE:Lemma2", "touched": "20000101232359"},
+                          {"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
+                           "title": "RE:Lemma3", "touched": "19990101232359"}
+                          ]
+
+    def mock_searcher(self):
+        self.petscan_patcher = mock.patch("tools.petscan.PetScan.run")
+        self.petscan_mock = self.petscan_patcher.start()
+        self.addCleanup(mock.patch.stopall)
+    def test_get_combined_lemmas_no_old_lemmas(self):
+        self.mock_searcher()
+        self.petscan_mock.return_value = self.result_of_searcher
+        compare([":RE:Lemma1", ":RE:Lemma2", ":RE:Lemma3"], self.petscan.get_combined_lemma_list({}))
+
+    def test_get_combined_lemmas_old_lemmas(self):
+        self.mock_searcher()
+        self.petscan_mock.return_value = self.result_of_searcher
+        compare([":RE:Lemma2", ":RE:Lemma3", ":RE:Lemma1"],
+                self.petscan.get_combined_lemma_list({":RE:Lemma1": "20010101232359"}))
+        compare([":RE:Lemma2", ":RE:Lemma1", ":RE:Lemma3"],
+                self.petscan.get_combined_lemma_list({":RE:Lemma1": "20010101232359", ":RE:Lemma3": "20020101232359"}))

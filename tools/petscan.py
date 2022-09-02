@@ -1,6 +1,7 @@
 # pylint: disable=ungrouped-imports
 import json
 from datetime import datetime
+from operator import itemgetter
 from typing import List, Union
 from urllib.parse import quote
 
@@ -242,3 +243,23 @@ class PetScan:
         response_byte = response.content
         response_dict = json.loads(response_byte.decode("utf8"))
         return response_dict["*"][0]["a"]["*"]  # type: ignore
+
+    def get_combined_lemma_list(self, old_lemmas: dict[str, str]) -> list[str]:
+        """
+        Executes the search. Filters out all preprocessed lemmas from a provided dictionary.
+        Interlaces this two lists to a combined list sorted by:
+          * every new lemma
+          * old lemmas sorted by dictionary value (probably a timestamp)
+        """
+        raw_lemma_list = [item["nstext"] + ":" + item["title"] for item in self.run()]
+        # all items which wasn't process before
+        new_lemma_list = []
+        for lemma in raw_lemma_list:
+            try:
+                old_lemmas[lemma]
+            except KeyError:
+                new_lemma_list.append(lemma)
+        # before processed lemmas ordered by last process time
+        old_lemma_list = [x[0] for x in sorted(old_lemmas.items(), key=itemgetter(1))]
+        # first iterate new items then the old ones (oldest first)
+        return new_lemma_list + old_lemma_list
