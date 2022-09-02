@@ -16,10 +16,8 @@ from tools.test import SearchStringChecker
 
 class TestReScanner(TestCase):
     def setUp(self):
-        self.petscan_patcher = mock.patch("service.ws_re.scanner.base.PetScan")
+        self.petscan_patcher = mock.patch("service.ws_re.scanner.base.PetScan.get_combined_lemma_list")
         self.petscan_mock = self.petscan_patcher.start()
-        self.run_mock = mock.Mock()
-        self.petscan_mock.return_value = mock.Mock(run=self.run_mock)
         setup_data_path(self)
         self.addCleanup(mock.patch.stopall)
 
@@ -52,30 +50,6 @@ class TestReScanner(TestCase):
             self.assertTrue(checker.is_part_of_searchstring("&sortorder=descending"))
             self.assertTrue(checker.is_empty())
 
-    result_of_searcher = [{"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
-                           "title": "RE:Lemma1", "touched": "20010101232359"},
-                          {"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
-                           "title": "RE:Lemma2", "touched": "20000101232359"},
-                          {"id": 42, "len": 42, "n": "page", "namespace": 0, "nstext": '',
-                           "title": "RE:Lemma3", "touched": "19990101232359"}
-                          ]
-
-    def test_compile_lemmas_no_old_lemmas(self):
-        self.run_mock.return_value = self.result_of_searcher
-        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
-            self.assertEqual([":RE:Lemma1", ":RE:Lemma2", ":RE:Lemma3"], bot.compile_lemma_list())
-
-    def test_compile_lemmas_old_lemmas(self):
-        self.run_mock.return_value = self.result_of_searcher
-        with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
-            with mock.patch.dict(bot.data, {":RE:Lemma1": "20010101232359"}):
-                self.assertEqual([":RE:Lemma2", ":RE:Lemma3", ":RE:Lemma1"],
-                                 bot.compile_lemma_list())
-            with mock.patch.dict(bot.data, {":RE:Lemma1": "20010101232359",
-                                            ":RE:Lemma3": "20020101232359"}):
-                self.assertEqual([":RE:Lemma2", ":RE:Lemma1", ":RE:Lemma3"],
-                                 bot.compile_lemma_list())
-
     def test_get_oldest_processed(self):
         with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             with mock.patch.dict(bot.data, {":RE:Lemma1": "20010101000000",
@@ -102,8 +76,8 @@ class TestReScanner(TestCase):
 
     def _mock_surroundings(self):
         # pylint: disable=attribute-defined-outside-init
-        lemma_patcher = mock.patch("service.ws_re.scanner.base.ReScanner.compile_lemma_list",
-                                   mock.Mock())
+        lemma_patcher = mock.patch("service.ws_re.scanner.base.ReScanner.lemma_list",
+                                   mock.PropertyMock())
         page_patcher = mock.patch("service.ws_re.scanner.base.pywikibot.Page")
         page_patcher_error = mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page")
         re_page_patcher = mock.patch("service.ws_re.scanner.base.RePage")

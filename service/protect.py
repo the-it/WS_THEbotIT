@@ -1,9 +1,7 @@
 from datetime import datetime
-from operator import itemgetter
 
 from pywikibot import Site
 
-from tools._typing import PetscanLemma
 from tools.bots import BotException
 from tools.bots.pi import CanonicalBot
 from tools.petscan import PetScan
@@ -25,7 +23,8 @@ class Protect(CanonicalBot):
                 self.logger.warning("There isn't deprecated data to reload.")
         return self
 
-    def _prepare_searcher(self) -> PetScan:
+    @staticmethod
+    def _prepare_searcher() -> PetScan:
         searcher = PetScan()
         searcher.add_positive_category("Fertig")
         searcher.set_sort_criteria("date")
@@ -41,6 +40,7 @@ class Protect(CanonicalBot):
             print(idx, lemma)
             self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
         return True
+
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEprotectIT")

@@ -2,7 +2,7 @@
 import json
 from datetime import datetime
 from operator import itemgetter
-from typing import List, Union
+from typing import List, Union, Mapping
 from urllib.parse import quote
 
 import requests
@@ -244,7 +244,7 @@ class PetScan:
         response_dict = json.loads(response_byte.decode("utf8"))
         return response_dict["*"][0]["a"]["*"]  # type: ignore
 
-    def get_combined_lemma_list(self, old_lemmas: dict[str, str]) -> list[str]:
+    def get_combined_lemma_list(self, old_lemmas: Mapping) -> list[str]:
         """
         Executes the search. Filters out all preprocessed lemmas from a provided dictionary.
         Interlaces this two lists to a combined list sorted by:

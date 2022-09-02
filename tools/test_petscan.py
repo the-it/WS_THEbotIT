@@ -177,24 +177,24 @@ class TestPetScan(TestCase):
                          "https://petscan.wmflabs.org/?language=en&project=wikipedia&max_age=10")
 
     def test_do_positive(self):
-        with requests_mock.mock() as mock:
-            mock.get("https://petscan.wmflabs.org/"
-                     "?language=de&project=wikisource&format=json&doit=1",
-                     text='{"n": "result","a": {"querytime_sec": 1.572163,'
-                          '"query": "https://petscan.wmflabs.org/?language=de'
-                          '&project=wikisource&categories=Autoren&get_q=1'
-                          '&show_redirects=no&ns[0]=1&max_age=48'
-                          '&format=json&doit=1"},'
-                          '"*": [{"n": "combination",'
-                          '"a": {"type": "subset",'
-                          '"*": [{"id": 3279,'
-                          '"len": 10197,'
-                          '"n": "page",'
-                          '"namespace": 0,'
-                          '"nstext": "",'
-                          '"q": "Q60644",'
-                          '"title": "Friedrich_Rückert",'
-                          '"touched": "20161024211701"}]}}]}')
+        with requests_mock.mock() as request_mock:
+            request_mock.get("https://petscan.wmflabs.org/"
+                             "?language=de&project=wikisource&format=json&doit=1",
+                             text='{"n": "result","a": {"querytime_sec": 1.572163,'
+                                  '"query": "https://petscan.wmflabs.org/?language=de'
+                                  '&project=wikisource&categories=Autoren&get_q=1'
+                                  '&show_redirects=no&ns[0]=1&max_age=48'
+                                  '&format=json&doit=1"},'
+                                  '"*": [{"n": "combination",'
+                                  '"a": {"type": "subset",'
+                                  '"*": [{"id": 3279,'
+                                  '"len": 10197,'
+                                  '"n": "page",'
+                                  '"namespace": 0,'
+                                  '"nstext": "",'
+                                  '"q": "Q60644",'
+                                  '"title": "Friedrich_Rückert",'
+                                  '"touched": "20161024211701"}]}}]}')
             self.assertEqual(self.petscan.run(), [{"id": 3279,
                                                    "len": 10197,
                                                    "n": "page",
@@ -205,10 +205,10 @@ class TestPetScan(TestCase):
                                                    "touched": "20161024211701"}])
 
     def test_do_negative(self):
-        with requests_mock.mock() as mock:
-            mock.get("https://petscan.wmflabs.org/"
-                     "?language=de&project=wikisource&format=json&doit=1",
-                     status_code=404)
+        with requests_mock.mock() as request_mock:
+            request_mock.get("https://petscan.wmflabs.org/"
+                             "?language=de&project=wikisource&format=json&doit=1",
+                             status_code=404)
             with self.assertRaises(PetScanException):
                 self.petscan.run()
 
@@ -221,8 +221,8 @@ class TestPetScan(TestCase):
                           ]
 
     def mock_searcher(self):
-        self.petscan_patcher = mock.patch("tools.petscan.PetScan.run")
-        self.petscan_mock = self.petscan_patcher.start()
+        self.petscan_patcher = mock.patch("tools.petscan.PetScan.run")  # pylint: disable=attribute-defined-outside-init)
+        self.petscan_mock = self.petscan_patcher.start()  # pylint: disable=attribute-defined-outside-init)
         self.addCleanup(mock.patch.stopall)
     def test_get_combined_lemmas_no_old_lemmas(self):
         self.mock_searcher()
