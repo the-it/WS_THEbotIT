@@ -19,9 +19,7 @@ RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er"
 
 class Registers:
     def __init__(self, update_data=False):
-        self.repo = DataRepo()
-        if update_data:
-            self.repo.pull()
+        self.repo = DataRepo(update_data)
         self._authors: Authors = Authors()
         self._registers: Dict[str, VolumeRegister] = OrderedDict()
         self._alphabetic_registers: Dict[str, AlphabeticRegister] = OrderedDict()
