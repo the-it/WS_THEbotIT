@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from git import Repo, NoSuchPathError, InvalidGitRepositoryError
+from git import Repo, GitError
 
 REPO_URL = "git@github.com:the-it/re_register_data.git"
 PATH_REAL_DATA = Path(__file__).parent.joinpath("data")
@@ -17,8 +17,8 @@ PATH_MOCK_DATA = Path(__file__).parent.joinpath("mock_data")
 class DataRepo:
     data_is_real = True
 
-    def __init__(self):
-        self._git_repo = self._get_git_repo()
+    def __init__(self, update_repo: bool = False):
+        self._git_repo = self._get_git_repo(update_repo)
 
     @classmethod
     def get_data_path(cls) -> Path:
@@ -27,23 +27,22 @@ class DataRepo:
         return PATH_MOCK_DATA
 
     @classmethod
-    def _get_git_repo(cls) -> Optional[Repo]:
+    def _get_git_repo(cls, update_repo) -> Optional[Repo]:
         if cls.data_is_real:
             try:
-                return Repo(path=PATH_REAL_DATA)
-            except (NoSuchPathError, InvalidGitRepositoryError):
+                repo = Repo(path=PATH_REAL_DATA)
+                if update_repo:
+                    repo.git.reset('--hard')
+                    repo.remotes.origin.pull()
+                return repo
+            except GitError:
                 with contextlib.suppress(FileNotFoundError):
                     shutil.rmtree(PATH_REAL_DATA)
                 return Repo.clone_from(url=REPO_URL, to_path=PATH_REAL_DATA)
         return None
 
-    def pull(self):
-        if self.data_is_real:
-            self._git_repo.git.reset('--hard')
-            self._git_repo.remotes.origin.pull()
-
     def push(self) -> bool:
-        if self.data_is_real:
+        if self._git_repo:
             if self._git_repo.index.diff(None):
                 self._git_repo.git.add(str(PATH_REAL_DATA))
                 now = datetime.now().strftime("%y%m%d_%H%M%S")
