@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from pywikibot import Site
+from pywikibot import Site, Page
 
 from tools.bots import BotException
 from tools.bots.pi import CanonicalBot
@@ -32,6 +32,7 @@ class Protect(CanonicalBot):
         searcher.set_sortorder_decending()
         searcher.set_search_depth(1)
         searcher.set_timeout(120)
+        searcher.last_change_after(datetime(year=2022, month=9, day=3))
         return searcher
 
     def task(self) -> bool:
@@ -39,8 +40,13 @@ class Protect(CanonicalBot):
         self.logger.info(str(searcher))
         lemma_list = searcher.get_combined_lemma_list(self.data)
         print(len(lemma_list))
-        for idx, lemma in enumerate(lemma_list):
-            self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
+        for idx, lemma_str in enumerate(lemma_list):
+            self.data[lemma_str] = datetime.now().strftime("%Y%m%d%H%M%S")
+            lemma = Page(self.wiki, lemma_str)
+            if not lemma.protection():
+                lemma.protect(reason="Schutz fertiger Seiten",
+                              protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
+            self.wiki.user()
         return True
 
 
