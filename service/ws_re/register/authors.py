@@ -10,9 +10,7 @@ from service.ws_re.register.repo import DataRepo
 
 class Authors:
     def __init__(self, update_data=False):
-        self.data_repo = DataRepo()
-        if update_data:
-            self.data_repo.pull()
+        self.data_repo = DataRepo(update_data)
         with open(self.data_repo.get_data_path().joinpath("authors_mapping.json"), "r", encoding="utf-8") as json_file:
             self._mapping = json.load(json_file)
         self._authors: Dict[str, Author] = {}
