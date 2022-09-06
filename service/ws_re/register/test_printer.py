@@ -122,7 +122,7 @@ class TestReRegisterPrinter(BaseTestRegister):
         printer._print_pd = pd_mock
         printer.task()
         self.assertTrue(volume_mock.called)
-        self.assertFalse(alphabetic_mock.called)
+        self.assertTrue(alphabetic_mock.called)
         self.assertFalse(author_mock.called)
         self.assertFalse(short_mock.called)
         self.assertFalse(pd_mock.called)
