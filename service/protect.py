@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from pywikibot import Site, Page
 
@@ -10,6 +10,7 @@ from tools.petscan import PetScan
 class Protect(CanonicalBot):
     def __init__(self, wiki, debug):
         CanonicalBot.__init__(self, wiki, debug, log_to_wiki=False)
+        self.timeout: timedelta = timedelta(hours=2)
 
     def __enter__(self):
         super().__enter__()
@@ -43,12 +44,17 @@ class Protect(CanonicalBot):
         for idx, lemma_str in enumerate(lemma_list):
             self.data[lemma_str] = datetime.now().strftime("%Y%m%d%H%M%S")
             lemma = Page(self.wiki, lemma_str)
+            self.logger.debug(f"check lemma {lemma.title()} for protection")
             if not lemma.protection():
+                self.logger.debug(f"protect lemma {lemma.title()}")
                 lemma.protect(reason="Schutz fertiger Seiten",
                               protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
-            self.wiki.user()
+            if self._watchdog():
+                break
         return True
 
+
+# PYWIKIBOT_DIR=/home/esommer/.pywikibot_protect
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEprotectIT")
