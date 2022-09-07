@@ -50,6 +50,7 @@ class Protect(CanonicalBot):
                 lemma.protect(reason="Schutz fertiger Seiten",
                               protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
             if self._watchdog():
+                self.logger.info(f"checked {idx} lemmas")
                 break
         return True
 
@@ -58,5 +59,5 @@ class Protect(CanonicalBot):
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEprotectIT")
-    with Protect(wiki=WS_WIKI, debug=True) as bot:
+    with Protect(wiki=WS_WIKI, debug=False) as bot:
         bot.run()
