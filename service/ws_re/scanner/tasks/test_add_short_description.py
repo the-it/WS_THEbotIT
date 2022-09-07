@@ -103,20 +103,6 @@ text
         compare({"success": True, "changed": False}, task.run(re_page))
         compare("", re_page.first_article["KURZTEXT"].value)
 
-    def test_existing_verweis_remove_short_description(self):
-        self.page_mock.text = """{{REDaten
-|VERWEIS=ON
-|KURZTEXT=blub}}
-test
-{{REAutor|Autor.}}
-[[Kategorie:RE:Kurztext überprüfen]]"""
-        self.page_mock.title_str = "Re:Aachen"
-        re_page = RePage(self.page_mock)
-        task = KURZTask(None, self.logger)
-        compare({"success": True, "changed": True}, task.run(re_page))
-        compare("", re_page.first_article["KURZTEXT"].value)
-        compare(1, len(re_page._article_list))
-
 
 @skip("only for analysis")
 class TestKURZTaskProcessSourceLoadReality(TaskTestCase):
