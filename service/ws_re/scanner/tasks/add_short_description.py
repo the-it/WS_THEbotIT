@@ -49,8 +49,6 @@ class KURZTask(ReScannerTask):
     def task(self):
         article = self.re_page.first_article
         if article["VERWEIS"].value:
-            article["KURZTEXT"].value = ""
-            self.re_page.remove_error_category(category=self.MAINTENANCE_CAT)
             return
         if article["KURZTEXT"].value:
             return
