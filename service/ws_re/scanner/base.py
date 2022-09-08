@@ -1,7 +1,6 @@
 import traceback
 from contextlib import suppress
 from datetime import timedelta, datetime
-from operator import itemgetter
 from typing import List, Optional, Dict, Callable
 
 import pywikibot
@@ -17,10 +16,9 @@ from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
-from tools._typing import PetscanLemma
 from tools.bots import BotException
 from tools.bots.pi import CanonicalBot
-from tools.petscan import PetScan, PetScanException
+from tools.petscan import PetScan
 
 
 class ReScanner(CanonicalBot):
@@ -43,41 +41,6 @@ class ReScanner(CanonicalBot):
                 self.logger.warning("There isn't deprecated data to reload.")
         return self
 
-    def compile_lemma_list(self) -> List[str]:
-        self.logger.info("Compile the lemma list")
-        self.logger.info("Searching for lemmas")
-        raw_lemma_list = self._petscan_search()
-        self.statistic["len_raw_lemma_list"] = len(raw_lemma_list)
-        self.logger.info("Filter new_lemma_list")
-        # all items which wasn't process before
-        new_lemma_list = []
-        for lemma in raw_lemma_list:
-            try:
-                self.data[lemma]
-            except KeyError:
-                new_lemma_list.append(lemma)
-        self.statistic["len_new_lemma_list"] = len(new_lemma_list)
-        self.logger.info("Sort old_lemma_list")
-        # before processed lemmas ordered by last process time
-        old_lemma_list = [x[0] for x in sorted(self.data.items(), key=itemgetter(1))]
-        # first iterate new items then the old ones (oldest first)
-        self.logger.info("Add the two lists")
-        self.statistic["len_old_lemma_list"] = len(old_lemma_list)
-        self.logger.info(f"raw: {self.statistic['len_raw_lemma_list']}, "
-                         f"new: {self.statistic['len_new_lemma_list']}, "
-                         f"old: {self.statistic['len_old_lemma_list']}")
-        return new_lemma_list + old_lemma_list
-
-    def _petscan_search(self) -> List[str]:
-        searcher = self._prepare_searcher()
-        self.logger.info(f"[{searcher} {searcher}]")
-        raw_lemma_list: List[PetscanLemma] = []
-        try:
-            raw_lemma_list = searcher.run()
-        except PetScanException:
-            self.logger.error("Search timed out.")
-        return [item["nstext"] + ":" + item["title"] for item in raw_lemma_list]
-
     def _prepare_searcher(self) -> PetScan:
         searcher = PetScan()
         searcher.add_yes_template("REDaten")
@@ -94,6 +57,11 @@ class ReScanner(CanonicalBot):
             searcher.set_sortorder_decending()
             searcher.set_timeout(120)
         return searcher
+
+    @property
+    def lemma_list(self) -> list[str]:
+        searcher = self._prepare_searcher()
+        return searcher.get_combined_lemma_list(self.data)
 
     def _activate_tasks(self) -> List[ReScannerTask]:
         active_tasks = []
@@ -135,10 +103,9 @@ class ReScanner(CanonicalBot):
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
         error_task = ERROTask(wiki=self.wiki, debug=self.debug, logger=self.logger)
-        lemma_list = self.compile_lemma_list()
         self.logger.info("Start processing the lemmas.")
         processed_lemmas = 0
-        for idx, lemma in enumerate(lemma_list):
+        for idx, lemma in enumerate(self.lemma_list):
             self.logger.debug(f"Process [https://de.wikisource.org/wiki/{lemma} {lemma}]")
             list_of_done_tasks = []
             try:
