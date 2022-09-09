@@ -33,7 +33,6 @@ class Protect(CanonicalBot):
         searcher.set_sortorder_decending()
         searcher.set_search_depth(1)
         searcher.set_timeout(120)
-        searcher.last_change_after(datetime(year=2022, month=9, day=3))
         return searcher
 
     def task(self) -> bool:
