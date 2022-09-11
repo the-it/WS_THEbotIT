@@ -9,7 +9,7 @@ from tools.petscan import PetScan
 
 class Protect(CanonicalBot):
     def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug, log_to_wiki=False)
+        CanonicalBot.__init__(self, wiki, debug)
         self.timeout: timedelta = timedelta(hours=4)
 
     def __enter__(self):
@@ -53,6 +53,7 @@ class Protect(CanonicalBot):
                 self.logger.info(f"checked {idx + 1} lemmas")
                 self.logger.info(f"{protected_lemmas} lemmas protected")
                 self.logger.info(f"oldest_timestamp: {datetime.strptime(min(self.data.values()), '%Y%m%d%H%M%S')}")
+                self.logger.info(f"lemmas in storgae: {len(self.data)}")
                 break
         return True
 
