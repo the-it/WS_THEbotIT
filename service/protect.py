@@ -8,8 +8,9 @@ from tools.petscan import PetScan
 
 
 class Protect(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
+    def __init__(self, wiki: Site = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
+        CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout: timedelta = timedelta(hours=4)
 
     def __enter__(self):

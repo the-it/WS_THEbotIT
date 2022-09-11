@@ -23,14 +23,14 @@ class TestProtect(TestCase):
     def test_init(self):
         self.get_combined_lemma_list_mock.return_value = [":lemma"]
         with LogCapture():
-            with Protect(wiki=None, debug=False) as bot:
+            with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
 
     def test_page_already_protected(self):
         self.get_combined_lemma_list_mock.return_value = [":lemma"]
         self.page_mock.return_value.protection.return_value = {'move': 'autoconfirmed', 'edit': 'autoconfirmed'}
         with LogCapture():
-            with Protect(wiki=None, debug=False) as bot:
+            with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
         self.protect_mock.assert_not_called()
 
@@ -38,7 +38,7 @@ class TestProtect(TestCase):
         self.get_combined_lemma_list_mock.return_value = [":lemma"]
         self.page_mock.return_value.protection.return_value = {}  # no protection
         with LogCapture():
-            with Protect(wiki=None, debug=False) as bot:
+            with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
         self.protect_mock.assert_called_once_with(reason= "Schutz fertiger Seiten",
                                                   protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
@@ -47,7 +47,7 @@ class TestProtect(TestCase):
         self.get_combined_lemma_list_mock.return_value = [":lemma1", "Seite:lemma2", "Index:Lemma3"]
         self.page_mock.return_value.protection.side_effect = [{}, {"something": "something"}, {}]
         with LogCapture():
-            with Protect(wiki=None, debug=False) as bot:
+            with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
         compare(2, self.protect_mock.call_count)
 
@@ -55,7 +55,7 @@ class TestProtect(TestCase):
         self.get_combined_lemma_list_mock.return_value = [":lemma1", "Seite:lemma2", "Index:Lemma3"]
         self.page_mock.return_value.protection.return_value = {}  # no protection
         with LogCapture():
-            with Protect(wiki=None, debug=False) as bot:
+            with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.timeout = timedelta(milliseconds=1)
                 time.sleep(0.002)
                 bot.run()
