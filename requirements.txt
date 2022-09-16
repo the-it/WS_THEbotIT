@@ -30,7 +30,7 @@ jmespath==1.0.1
     # via
     #   boto3
     #   botocore
-oauthlib==3.2.0
+oauthlib==3.2.1
     # via
     #   -r requirements.in
     #   requests-oauthlib
