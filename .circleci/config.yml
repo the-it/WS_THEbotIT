@@ -5,15 +5,15 @@ version: 2.1
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v15-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
-      - v15-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
-      - v15-dependencies-{{ .Environment.PYTHON_VERSION }}-
+      - v16-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+      - v16-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-
+      - v16-dependencies-{{ .Environment.PYTHON_VERSION }}-
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v15-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+    key: v16-dependencies-{{ .Environment.PYTHON_VERSION }}-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
 
 install_dependencies: &install_dependencies
   run:

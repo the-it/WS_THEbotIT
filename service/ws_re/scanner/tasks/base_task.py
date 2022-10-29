@@ -29,7 +29,7 @@ class ReScannerTask:
         pass
 
     @abstractmethod
-    def task(self):
+    def task(self) -> bool:
         pass
 
     def run(self, re_page: RePage) -> Dict[str, bool]:

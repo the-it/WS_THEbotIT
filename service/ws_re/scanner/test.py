@@ -207,7 +207,7 @@ class TestReScanner(TestCase):
                 bot.run()
                 expected_logging = (("ReScanner", "DEBUG",
                                      "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
-                                    ("ReScanner", "ERROR", "Error in ONE1/[[:RE:Lemma1]], no data where altered."),
+                                    ("ReScanner", "ERROR", "Error in ONE1/[[:RE:Lemma1]], no data was altered."),
                                     ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"))
                 log_catcher.check_present(*expected_logging, order_matters=True)
 

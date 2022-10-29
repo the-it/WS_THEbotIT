@@ -4,6 +4,7 @@ from pywikibot import Site, Page
 
 from service.ws_re.register.registers import Registers
 from tools.bots.pi import CanonicalBot
+from tools.utils import save_if_changed
 
 
 class ReRegisterPrinter(CanonicalBot):
@@ -28,58 +29,58 @@ class ReRegisterPrinter(CanonicalBot):
         for register in self.registers.author:
             if register.author.last_name:
                 self.logger.debug(register)
-                self.save_if_changed(Page(self.wiki,
-                                          f"Paulys Realencyclopädie der classischen "
-                                          f"Altertumswissenschaft/Register/{register.author.name}"),
-                                     register.get_register_str(),
-                                     "Register aktualisiert")
+                save_if_changed(Page(self.wiki,
+                                     f"Paulys Realencyclopädie der classischen "
+                                     f"Altertumswissenschaft/Register/{register.author.name}"),
+                                register.get_register_str(),
+                                "Register aktualisiert")
                 overview.append(register.overview_line)
         overview.append("|}")
-        self.save_if_changed(Page(self.wiki,
-                                  "Paulys Realencyclopädie der classischen "
-                                  "Altertumswissenschaft/Register/Autorenübersicht"),
-                             "\n".join(overview),
-                             "Register aktualisiert")
+        save_if_changed(Page(self.wiki,
+                             "Paulys Realencyclopädie der classischen "
+                             "Altertumswissenschaft/Register/Autorenübersicht"),
+                        "\n".join(overview),
+                        "Register aktualisiert")
 
     def _print_alphabetic(self):
         self.logger.info("Print alphabetic register.")
         for register in self.registers.alphabetic:
             self.logger.debug(register)
-            self.save_if_changed(Page(self.wiki,
-                                      f"Paulys Realencyclopädie der classischen "
-                                      f"Altertumswissenschaft/Register/{register.start}"),
-                                 register.get_register_str(),
-                                 "Register aktualisiert")
+            save_if_changed(Page(self.wiki,
+                                 f"Paulys Realencyclopädie der classischen "
+                                 f"Altertumswissenschaft/Register/{register.start}"),
+                            register.get_register_str(),
+                            "Register aktualisiert")
 
     def _print_pd(self):
         self.logger.info("Print public domain register.")
         for register in self.registers.pd:
             self.logger.debug(register)
-            self.save_if_changed(Page(self.wiki,
-                                      f"Paulys Realencyclopädie der classischen "
-                                      f"Altertumswissenschaft/Register/PD {register.year}"),
-                                 register.get_register_str(),
-                                 "Register aktualisiert")
+            save_if_changed(Page(self.wiki,
+                                 f"Paulys Realencyclopädie der classischen "
+                                 f"Altertumswissenschaft/Register/PD {register.year}"),
+                            register.get_register_str(),
+                            "Register aktualisiert")
 
     def _print_short(self):
         self.logger.info("Print short register.")
         for register in self.registers.short:
             self.logger.debug(register)
-            self.save_if_changed(Page(self.wiki,
-                                      f"Paulys Realencyclopädie der classischen "
-                                      f"Altertumswissenschaft/Register/{register.main_issue} kurz"),
-                                 register.get_register_str(),
-                                 "Register aktualisiert")
+            save_if_changed(Page(self.wiki,
+                                 f"Paulys Realencyclopädie der classischen "
+                                 f"Altertumswissenschaft/Register/{register.main_issue} kurz"),
+                            register.get_register_str(),
+                            "Register aktualisiert")
 
     def _print_volume(self):
         self.logger.info("Print volume register.")
         for register in self.registers.volumes.values():
             self.logger.debug(register)
-            self.save_if_changed(Page(self.wiki,
-                                      f"Paulys Realencyclopädie der classischen "
-                                      f"Altertumswissenschaft/Register/{register.volume.name}"),
-                                 register.get_register_str(),
-                                 "Register aktualisiert")
+            save_if_changed(Page(self.wiki,
+                                 f"Paulys Realencyclopädie der classischen "
+                                 f"Altertumswissenschaft/Register/{register.volume.name}"),
+                            register.get_register_str(),
+                            "Register aktualisiert")
 
 
 if __name__ == "__main__":  # pragma: no cover

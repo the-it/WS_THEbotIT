@@ -3,7 +3,7 @@ import typing
 from unittest import TestCase
 
 import boto3
-from moto import mock_dynamodb2, mock_s3
+from moto import mock_dynamodb, mock_s3
 
 JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
 JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \
@@ -25,7 +25,7 @@ class TestCloudBase(TestCase):
         cls._create_data_bucket()
         cls.data_bucket = cls.s3.Bucket("wiki_bots_persisted_data")
         # mocking dynamodb
-        cls.mock_dynamo = mock_dynamodb2()
+        cls.mock_dynamo = mock_dynamodb()
         cls.mock_dynamo.start()
         cls.dynamodb = boto3.resource("dynamodb", region_name="eu-central-1")
         cls._create_manage_table()

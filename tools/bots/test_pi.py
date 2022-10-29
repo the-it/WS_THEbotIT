@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from shutil import rmtree
 from unittest import TestCase, mock
 
-from testfixtures import LogCapture, compare
+from testfixtures import LogCapture
 
 from tools.bots import BotException
 from tools.bots.pi import CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, \
@@ -284,25 +284,6 @@ class TestOneTimeBot(TestCase):
             self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])  # pylint: disable=unnecessary-dunder-call
             self.assertEqual(mock.call().save("Update of Bot MinimalBot", botflag=True),
                              mock_page.mock_calls[2])
-
-    def test_save_if_changed_positive(self):
-        page_mock = mock.Mock()
-        text_mock = mock.PropertyMock()
-        type(page_mock).text = text_mock
-        text_mock.return_value = "2"
-        self.MinimalBot.save_if_changed(page_mock, "1", "changed")
-        compare(mock.call.save("changed", botflag=True), page_mock.mock_calls[0])
-
-    def test_save_if_changed_negativ(self):
-        page_mock = mock.Mock()
-        text_mock = mock.PropertyMock()
-        type(page_mock).text = text_mock
-        text_mock.return_value = "1"
-        self.MinimalBot.save_if_changed(page_mock, "1", "changed")
-        compare(0, len(page_mock.mock_calls))
-
-        self.MinimalBot.save_if_changed(page_mock, "1 ", "changed")
-        compare(0, len(page_mock.mock_calls))
 
     class ExceptionBot(OneTimeBot):
         def task(self):
