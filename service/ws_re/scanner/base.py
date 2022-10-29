@@ -106,7 +106,7 @@ class ReScanner(CanonicalBot):
                     error_message = f"Error in {task.name}/[[{lemma}]], but altered the page ... critical"
                     self.logger.critical(error_message)
                     raise RuntimeError(error_message)
-                self.logger.error(f"Error in {task.name}/[[{lemma}]], no data where altered.")
+                self.logger.error(f"Error in {task.name}/[[{lemma}]], no data was altered.")
         return task_name
 
     def get_oldest_datetime(self) -> datetime:
