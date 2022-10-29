@@ -253,12 +253,6 @@ class OneTimeBot(ABC):
         page.text += self.logger.create_wiki_log_lines()
         page.save(f"Update of Bot {self.bot_name}", botflag=True)
 
-    @staticmethod
-    def save_if_changed(page: Page, text: str, change_msg: str):
-        if text.rstrip() != page.text:
-            page.text = text
-            page.save(change_msg, botflag=True)
-
     def get_lemma_str_from_cat(self, category: str) -> List[str]:
         page = Category(self.wiki, category)
         cat_list = [str(lemma).strip("[]")[2:] for lemma in CategorizedPageGenerator(page)]

@@ -1,3 +1,4 @@
+# pylint: disable=no-self-use
 from unittest import TestCase, mock
 
 import pywikibot
@@ -6,6 +7,7 @@ from testfixtures import compare
 from service.ws_re.template import ReDatenException, ARTICLE_TEMPLATE
 from service.ws_re.template.article import Article
 from service.ws_re.template.re_page import RePage
+from tools.test import real_wiki_test
 
 
 class TestRePage(TestCase):
@@ -322,3 +324,11 @@ text
         re_page = RePage(self.page_mock)
         just_articles = re_page.only_articles
         compare(2, len(just_articles))
+
+    @real_wiki_test
+    def test_get_redirects(self):
+        wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+        re_page = RePage(pywikibot.Page(wiki, "RE:Ἀναυμαχίου γραφή"))
+        redirect_list = re_page.get_redirects()
+        compare("RE:Anaumachiu graphe", redirect_list[0].title())
+        compare(1, len(redirect_list))

@@ -196,3 +196,6 @@ class RePage:
                                             self._article_list[-1]).strip()
             if not self._article_list[-1]:
                 del self._article_list[-1]
+
+    def get_redirects(self) -> list[pywikibot.Page]:
+        return list(self.page.redirects())
