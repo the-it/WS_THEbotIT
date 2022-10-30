@@ -132,13 +132,13 @@ class TestReArticle(TestCase):
     def test_from_text_two_REDaten_templates(self):
         article_text = "{{REDaten}}{{REDaten}}\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
-                                                      "There must one start template"):
+                                                      "There must be one start template"):
             Article.from_text(article_text)
 
     def test_from_text_no_REDaten_templates(self):
         article_text = "\ntext\n{{REAutor|Some Author.}}"
         with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
-                                                      "There must one start template"):
+                                                      "There must be one start template"):
             Article.from_text(article_text)
 
     def test_from_text_two_REAuthor_templates(self):

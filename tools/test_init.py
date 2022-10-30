@@ -3,10 +3,10 @@ from unittest import TestCase, mock
 
 from testfixtures import compare
 
-from tools.utils import save_if_changed
+from tools import save_if_changed, add_category
 
 
-class TestUtils(TestCase):
+class TestTools(TestCase):
     def test_save_if_changed_positive(self):
         page_mock = mock.Mock()
         text_mock = mock.PropertyMock()
@@ -25,3 +25,9 @@ class TestUtils(TestCase):
 
         save_if_changed(page_mock, "1 ", "changed")
         compare(0, len(page_mock.mock_calls))
+
+    def test_add_category(self):
+        compare("test\n[[Kategorie:new_cat]]", add_category("test", "new_cat"))
+
+    def test_add_category_already_there(self):
+        compare("test\n[[Kategorie:new_cat]]", add_category("test\n[[Kategorie:new_cat]]", "new_cat"))
