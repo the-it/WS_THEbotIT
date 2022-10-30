@@ -157,7 +157,7 @@ class Article(Mapping):
         find_re_abschnitt = finder.get_positions(RE_ABSCHNITT)
         # only one start template can be present
         if len(find_re_daten) + len(find_re_abschnitt) != 1:
-            raise ReDatenException("Article has the wrong structure. There must one start template")
+            raise ReDatenException("Article has the wrong structure. There must be one start template")
         if find_re_daten:
             find_re_start = find_re_daten
         else:
@@ -169,7 +169,7 @@ class Article(Mapping):
         # the templates must have the right order
         if find_re_start[0]["pos"][0] > find_re_author[0]["pos"][0]:
             raise ReDatenException("Article has the wrong structure. Wrong order of templates.")
-        # it can only exists text between the start and the end template.
+        # it can only exist text between the start and the end template.
         if find_re_start[0]["pos"][0] != 0:
             raise ReDatenException("Article has the wrong structure. There is text in front of the article.")
         if find_re_author[0]["pos"][1] != len(article_text):

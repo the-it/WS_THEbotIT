@@ -4,7 +4,7 @@ from pywikibot import Site, Page
 
 from service.ws_re.register.registers import Registers
 from tools.bots.pi import CanonicalBot
-from tools.utils import save_if_changed
+from tools import save_if_changed
 
 
 class ReRegisterPrinter(CanonicalBot):

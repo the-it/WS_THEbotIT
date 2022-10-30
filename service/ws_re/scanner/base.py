@@ -9,6 +9,7 @@ from service.ws_re.scanner.tasks.add_short_description import KURZTask
 from service.ws_re.scanner.tasks.author_or_redirect import REAUTask
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.categorize_redirects import CARETask
+from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
@@ -37,6 +38,7 @@ class ReScanner(CanonicalBot):
             REAUTask,  # check for integrity article must have an author, or it is a soft redirect
             PDKSTask,  # removes properties after article is in common domain
             CARETask,  # put hard redirects to lemma in a category
+            CHRETask,  # check if backlinks go over redirect pages
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
         ]
