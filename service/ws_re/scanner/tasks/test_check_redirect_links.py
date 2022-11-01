@@ -11,7 +11,7 @@ from tools.test import real_wiki_test
 
 
 @ddt
-class TestCHRETask(TaskTestCase):
+class TestCHRETaskUnit(TaskTestCase):
     @real_wiki_test
     def test_get_backlinks(self):
         WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
@@ -36,9 +36,11 @@ class TestCHRETask(TaskTestCase):
     def test_integration(self):
         WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
         task = CHRETask(WS_WIKI, self.logger)
-        task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Abgar, Abgaros 9"))
+        task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Ulpius 1a"))
         task.task()
 
+@ddt
+class TestCHRETaskData(TaskTestCase):
     @file_data("test_data/test_check_redirect_links.yml")
     def test_replace_redirect_links(self, text, redirect, target, expect):
         task = CHRETask(None, self.logger)

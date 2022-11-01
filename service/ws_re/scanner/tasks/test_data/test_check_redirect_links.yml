@@ -23,3 +23,16 @@ replace_re_siehe:
   expect: |
     {{RE siehe|Target|Redirect}}
     {{RE siehe|Target|Something else}}
+replace_braces:
+  text: |
+    {{RE siehe|Redirect (test)}}
+    {{RE siehe|Redirect (test)|Something else}}
+    [[RE:Redirect (test)|Redirect]]
+    [[RE:Redirect (test)]]
+  redirect: "Redirect (test)"
+  target: "Target"
+  expect: |
+    {{RE siehe|Target|Redirect (test)}}
+    {{RE siehe|Target|Something else}}
+    [[RE:Target|Redirect]]
+    [[RE:Target]]
