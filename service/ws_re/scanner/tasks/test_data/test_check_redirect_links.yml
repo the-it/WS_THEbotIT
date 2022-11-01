@@ -1,0 +1,25 @@
+replace_nothing:
+  text: |
+    [[RE:Target|Target]]
+  redirect: "Redirect"
+  target: "Target"
+  expect: |
+    [[RE:Target|Target]]
+replace_simple_link:
+  text: |
+    [[RE:Redirect|Redirect]]
+    [[RE:Redirect]]
+  redirect: "Redirect"
+  target: "Target"
+  expect: |
+    [[RE:Target|Redirect]]
+    [[RE:Target]]
+replace_re_siehe:
+  text: |
+    {{RE siehe|Redirect}}
+    {{RE siehe|Redirect|Something else}}
+  redirect: "Redirect"
+  target: "Target"
+  expect: |
+    {{RE siehe|Target|Redirect}}
+    {{RE siehe|Target|Something else}}
