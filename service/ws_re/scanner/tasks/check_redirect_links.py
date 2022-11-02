@@ -57,4 +57,6 @@ class CHRETask(ReScannerTask):
         temp_text = re.sub(rf"{{RE siehe\|{redirect_re}}}", f"{{RE siehe|{target}|{redirect}}}", temp_text)
         # {{RE siehe|Redirect|Something}} -> {{RE siehe|Target|Something}}
         temp_text = re.sub(rf"{{RE siehe\|{redirect_re}\|(.+?)}}", rf"{{RE siehe|{target}|\g<1>}}", temp_text)
+        # VORGÄNGER=Redirect -> VORGÄNGER=Target
+        temp_text = re.sub(rf"(VORGÄNGER|NACHFOLGER)={redirect_re}\n", rf"\g<1>={target}\n", temp_text)
         return temp_text

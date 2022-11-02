@@ -36,3 +36,29 @@ replace_braces:
     {{RE siehe|Target|Something else}}
     [[RE:Target|Redirect]]
     [[RE:Target]]
+replace_vorgänger:
+  text: |
+    {{REDaten
+    |VORGÄNGER=Redirect (with braces)
+    |NACHFOLGER=Something
+    }}
+  redirect: "Redirect (with braces)"
+  target: "Target"
+  expect: |
+    {{REDaten
+    |VORGÄNGER=Target
+    |NACHFOLGER=Something
+    }}
+replace_nachfolger:
+  text: |
+    {{REDaten
+    |VORGÄNGER=Something
+    |NACHFOLGER=Redirect (with braces)
+    }}
+  redirect: "Redirect (with braces)"
+  target: "Target"
+  expect: |
+    {{REDaten
+    |VORGÄNGER=Something
+    |NACHFOLGER=Target
+    }}
