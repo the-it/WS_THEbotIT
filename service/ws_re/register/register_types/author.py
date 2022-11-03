@@ -44,10 +44,11 @@ class AuthorRegister(Register):
         header.append(f"AUTHOR={self._author.name}")
         header.append(f"SUM={len(self)}")
         # calculate proof_read status
-        fer, kor, unk = self.proof_read
-        header.append(f"UNK={unk}")
-        header.append(f"KOR={kor}")
+        fer, kor, nge, unk = self.proof_read
         header.append(f"FER={fer}")
+        header.append(f"KOR={kor}")
+        header.append(f"NGE={nge}")
+        header.append(f"UNK={unk}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def _get_footer(self) -> str:
@@ -62,7 +63,7 @@ class AuthorRegister(Register):
         line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
                     f"{self.author.name}|{self.author.name}]]\n")
         line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}\n")
-        fer, kor, _ = self.proof_read
+        fer, kor, _, _ = self.proof_read
         parts_fertig, parts_korrigiert, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor)
         line.append("|data-sort-value=\"{percent:05.1f}\"|{percent:.1f}%\n"
                     .format(percent=((fer + kor) / len(self)) * 100))

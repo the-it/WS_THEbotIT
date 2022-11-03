@@ -57,10 +57,11 @@ class AlphabeticRegister(Register):
             header.append(f"NFNF={self._after_next_start}")
         header.append(f"SUM={len(self._lemmas)}")
         # calculate proof_read status
-        fer, kor, unk = self.proof_read
-        header.append(f"UNK={unk}")
-        header.append(f"KOR={kor}")
+        fer, kor, nge, unk = self.proof_read
         header.append(f"FER={fer}")
+        header.append(f"KOR={kor}")
+        header.append(f"NGE={nge}")
+        header.append(f"UNK={unk}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def get_register_str(self) -> str:

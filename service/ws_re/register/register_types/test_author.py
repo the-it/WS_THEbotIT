@@ -29,9 +29,10 @@ class TestAuthorRegister(BaseTestRegister):
         expected_table = """{{RERegister
 |AUTHOR=Herman Abel
 |SUM=4
-|UNK=1
-|KOR=1
 |FER=2
+|KOR=1
+|NGE=0
+|UNK=1
 }}
 
 {|class="wikitable sortable"

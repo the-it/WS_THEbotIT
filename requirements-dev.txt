@@ -12,19 +12,19 @@ beautifulsoup4==4.11.1
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.25.4
+boto3==1.26.1
     # via
     #   -c requirements.txt
     #   moto
-boto3-stubs[essential]==1.25.4
+boto3-stubs[essential]==1.26.1
     # via -r requirements-dev.in
-botocore==1.28.4
+botocore==1.29.1
     # via
     #   -c requirements.txt
     #   boto3
     #   moto
     #   s3transfer
-botocore-stubs==1.28.4
+botocore-stubs==1.29.1
     # via boto3-stubs
 certifi==2022.9.24
     # via
@@ -46,7 +46,7 @@ coverage==6.5.0
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==38.0.1
+cryptography==38.0.3
     # via moto
 ddt==1.6.0
     # via -r requirements-dev.in
@@ -98,23 +98,23 @@ mccabe==0.7.0
     # via
     #   flake8
     #   pylint
-moto==4.0.8
+moto==4.0.9
     # via -r requirements-dev.in
 mypy==0.982
     # via -r requirements-dev.in
-mypy-boto3-cloudformation==1.25.4
+mypy-boto3-cloudformation==1.26.0.post1
     # via boto3-stubs
-mypy-boto3-dynamodb==1.25.0
+mypy-boto3-dynamodb==1.26.0.post1
     # via boto3-stubs
-mypy-boto3-ec2==1.25.3
+mypy-boto3-ec2==1.26.0.post1
     # via boto3-stubs
-mypy-boto3-lambda==1.25.0
+mypy-boto3-lambda==1.26.0.post1
     # via boto3-stubs
-mypy-boto3-rds==1.25.1
+mypy-boto3-rds==1.26.0.post1
     # via boto3-stubs
-mypy-boto3-s3==1.25.0
+mypy-boto3-s3==1.26.0.post1
     # via boto3-stubs
-mypy-boto3-sqs==1.25.0
+mypy-boto3-sqs==1.26.0.post1
     # via boto3-stubs
 mypy-extensions==0.4.3
     # via mypy
@@ -148,7 +148,7 @@ python-dateutil==2.8.2
     #   botocore
     #   freezegun
     #   moto
-pytz==2022.5
+pytz==2022.6
     # via moto
 pyyaml==6.0
     # via
@@ -194,7 +194,7 @@ soupsieve==2.3.2.post1
     #   beautifulsoup4
 stevedore==4.1.0
     # via bandit
-testfixtures==7.0.0
+testfixtures==7.0.2
     # via -r requirements-dev.in
 toml==0.10.2
     # via
@@ -208,7 +208,7 @@ tomlkit==0.11.6
     # via pylint
 tqdm==4.64.1
     # via internetarchive
-types-awscrt==0.15.1
+types-awscrt==0.15.2
     # via botocore-stubs
 types-freezegun==1.1.10
     # via -r requirements-dev.in

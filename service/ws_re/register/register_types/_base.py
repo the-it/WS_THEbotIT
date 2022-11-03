@@ -74,14 +74,16 @@ class Register(ABC):
         return "\n".join(table)
 
     @property
-    def proof_read(self) -> Tuple[int, int, int]:
-        fer = kor = unk = 0
+    def proof_read(self) -> Tuple[int, int, int, int]:
+        fer = kor = nge = unk = 0
         for lemma in self.lemmas:
             status, _ = lemma.status
             if status == "FER":
                 fer += 1
             elif status == "KOR":
                 kor += 1
+            elif status.isdecimal():
+                nge += 1
             else:
                 unk += 1
-        return fer, kor, unk
+        return fer, kor, nge, unk
