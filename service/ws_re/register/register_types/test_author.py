@@ -91,16 +91,19 @@ class TestAuthorRegister(BaseTestRegister):
                 "|data-sort-value=\"075.0\"|75.0%\n"
                 "|<span style=\"color:#669966\">██████████</span>"
                 "<span style=\"color:#556B2F\">█████</span>"
+                "<span style=\"color:#FFCBCB\"></span>"
                 "<span style=\"color:#AA0000\">█████</span>",
                 abel_register.overview_line)
 
     def test_proofread_parts_of_20(self):
-        compare((10, 5, 5), AuthorRegister.proofread_parts_of_20(4, 2, 1))
-        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(40, 1, 1))
-        compare((1, 0, 19), AuthorRegister.proofread_parts_of_20(45, 2, 1))
-        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(45, 1, 2))
-        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(79, 1, 1))
-        compare((0, 0, 20), AuthorRegister.proofread_parts_of_20(80, 1, 1))
+        compare((10, 5, 0, 5), AuthorRegister.proofread_parts_of_20(4, 2, 1, 0))
+        compare((10, 0, 5, 5), AuthorRegister.proofread_parts_of_20(4, 2, 0, 1))
+        compare((5, 5, 5, 5), AuthorRegister.proofread_parts_of_20(4, 1, 1, 1))
+        compare((0, 1, 0, 19), AuthorRegister.proofread_parts_of_20(40, 1, 1, 0))
+        compare((1, 0, 0, 19), AuthorRegister.proofread_parts_of_20(45, 2, 1, 0))
+        compare((0, 1, 0, 19), AuthorRegister.proofread_parts_of_20(45, 1, 2, 0))
+        compare((0, 1, 0, 19), AuthorRegister.proofread_parts_of_20(79, 1, 1, 0))
+        compare((0, 0, 0, 20), AuthorRegister.proofread_parts_of_20(80, 1, 1, 0))
 
     def test_bug_to_much_percent(self):
         copy_tst_data("I_1_author_bug_percent", "I_1")
@@ -116,5 +119,6 @@ class TestAuthorRegister(BaseTestRegister):
                 "|data-sort-value=\"100.0\"|100.0%\n"
                 "|<span style=\"color:#669966\">████████████████████</span>"
                 "<span style=\"color:#556B2F\"></span>"
+                "<span style=\"color:#FFCBCB\"></span>"
                 "<span style=\"color:#AA0000\"></span>",
                 abel_register.overview_line)
