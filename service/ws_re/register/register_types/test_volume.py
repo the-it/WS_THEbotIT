@@ -47,9 +47,10 @@ class TestRegister(BaseTestRegister):
 |VG=
 |NF=I,2
 |SUM=2
-|UNK=1
-|KOR=1
 |FER=0
+|KOR=1
+|NGE=1
+|UNK=0
 }}
 
 {|class="wikitable sortable"

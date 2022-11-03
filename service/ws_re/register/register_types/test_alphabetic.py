@@ -61,9 +61,10 @@ class TestAlphabeticRegister(BaseTestRegister):
 |NF=be
 |NFNF=c
 |SUM=5
-|UNK=3
-|KOR=1
 |FER=1
+|KOR=1
+|NGE=0
+|UNK=3
 }}
 """
         compare(expected_header, a_register._get_header())
@@ -73,9 +74,10 @@ class TestAlphabeticRegister(BaseTestRegister):
 |NF=c
 |NFNF=zzzzzz
 |SUM=2
-|UNK=1
-|KOR=0
 |FER=1
+|KOR=0
+|NGE=0
+|UNK=1
 }}
 """
         compare(expected_header, b_register._get_header())
@@ -84,9 +86,10 @@ class TestAlphabeticRegister(BaseTestRegister):
 |VG=be
 |NF=zzzzzz
 |SUM=4
-|UNK=1
-|KOR=1
 |FER=2
+|KOR=1
+|NGE=0
+|UNK=1
 }}
 """
         compare(expected_header, c_register._get_header())
@@ -98,9 +101,10 @@ class TestAlphabeticRegister(BaseTestRegister):
 |VG=a
 |NF=zzzzzz
 |SUM=6
-|UNK=2
-|KOR=1
 |FER=3
+|KOR=1
+|NGE=0
+|UNK=2
 }}
 
 {|class="wikitable sortable"
