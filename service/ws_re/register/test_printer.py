@@ -87,8 +87,7 @@ class TestReRegisterPrinter(BaseTestRegister):
                 call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Autorenübersicht'),
                 page_mock.call_args_list[3])
 
-    @freeze_time("2021-12-06")
-    def test_task_on_monday(self):
+    def test_task(self):
         printer = ReRegisterPrinter()
         volume_mock: mock.Mock = mock.Mock()
         alphabetic_mock = mock.Mock()
@@ -106,23 +105,3 @@ class TestReRegisterPrinter(BaseTestRegister):
         self.assertTrue(author_mock.called)
         self.assertTrue(short_mock.called)
         self.assertTrue(pd_mock.called)
-
-    @freeze_time("2021-12-07")
-    def test_task_other_day(self):
-        printer = ReRegisterPrinter()
-        volume_mock: mock.Mock = mock.Mock()
-        alphabetic_mock = mock.Mock()
-        author_mock = mock.Mock()
-        short_mock = mock.Mock()
-        pd_mock = mock.Mock()
-        printer._print_volume = volume_mock
-        printer._print_alphabetic = alphabetic_mock
-        printer._print_author = author_mock
-        printer._print_short = short_mock
-        printer._print_pd = pd_mock
-        printer.task()
-        self.assertTrue(volume_mock.called)
-        self.assertTrue(alphabetic_mock.called)
-        self.assertFalse(author_mock.called)
-        self.assertFalse(short_mock.called)
-        self.assertFalse(pd_mock.called)
