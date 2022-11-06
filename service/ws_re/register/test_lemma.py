@@ -335,3 +335,8 @@ class TestLemma(BaseTestRegister):
         compare([{"start": 1, "end": 3, "author": "Abel"},
                  {"start": 3, "end": 3, "author": "Abbott"}],
                 update_lemma.lemma_dict["chapters"])
+
+    @file_data("test_data/test_lemma_exists.yml")
+    def test_exists(self, input, expect):
+        lemma = Lemma(input, self.volumes["I,1"], self.authors)
+        compare(expect, lemma.exists)

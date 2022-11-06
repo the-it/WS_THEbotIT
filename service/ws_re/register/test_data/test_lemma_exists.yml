@@ -1,0 +1,25 @@
+basic:
+  input:
+    lemma: Lemma
+    proof_read: 4
+    chapters:
+      - author: Someone.
+        start: 10
+  expect: true
+
+basic_false:
+  input:
+    lemma: Lemma
+    chapters:
+      - author: Someone
+        start: 10
+  expect: false
+
+has_only_proof_read:
+  input:
+    lemma: Lemma
+    proof_read: 4
+    chapters:
+      - author: Someone
+        start: 10
+  expect: true

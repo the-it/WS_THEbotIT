@@ -344,3 +344,14 @@ class Lemma:
                 if item in self._lemma_dict:
                     del self._lemma_dict[item]  # type: ignore
         self._recalc_lemma()
+
+    @property
+    def exists(self) -> bool:
+        if chapters:=self._chapters:
+            if author:=chapters[0].author:
+                if author.endswith("."):
+                    return True
+        if self["proof_read"]:
+            if self["proof_read"] > 1:
+                return True
+        return False
