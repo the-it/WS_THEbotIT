@@ -64,7 +64,8 @@ class AuthorRegister(Register):
                     f"{self.author.name}|{self.author.name}]]\n")
         line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}\n")
         fer, kor, nge, _ = self.proof_read
-        parts_fertig, parts_korrigiert, parts_nicht_gemeinfrei, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor, nge)
+        parts_fertig, parts_korrigiert, parts_nicht_gemeinfrei, parts_unkorrigiert = \
+            self.proofread_parts_of_20(len(self), fer, kor, nge)
         line.append("|data-sort-value=\"{percent:05.1f}\"|{percent:.1f}%\n"
                     .format(percent=((fer + kor) / len(self)) * 100))
         line.append(f"|<span style=\"color:#669966\">{parts_fertig * '█'}</span>")

@@ -3,7 +3,6 @@ from datetime import datetime
 from unittest import mock
 from unittest.mock import call
 
-from freezegun import freeze_time
 from testfixtures import compare
 
 from service.ws_re.register.printer import ReRegisterPrinter

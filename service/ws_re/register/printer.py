@@ -1,5 +1,3 @@
-import datetime
-
 from pywikibot import Site, Page
 
 from service.ws_re.register.registers import Registers
