@@ -41,6 +41,7 @@ class TestCHRETaskUnittests(TaskTestCase):
             "RE:Querverweis",
             "Wikisource:RE-Werkstatt/Zeug in der Werkstatt",
             "Benutzer:S8w4/Spielwiese/Lemmata06kurz",
+            "Benutzer Diskussion:S8w4",
             "Benutzer:THEbotIT/some_logging_page"
             "Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/PD 2013",
         ]

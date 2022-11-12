@@ -1,4 +1,5 @@
 import re
+import time
 
 import pywikibot
 
@@ -13,7 +14,7 @@ class CHRETask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.filter_regex = re.compile(
-            r"(Benutzer:|"
+            r"(Benutzer|"
             r"Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/|"
             r"Wikisource:RE-Werkstatt/"
             r").*"
@@ -30,6 +31,7 @@ class CHRETask(ReScannerTask):
             if filtered_list:
                 if repair:
                     self.rename_redirects_to_target(filtered_list, redirect)
+                    time.sleep(2)
                 if report:
                     self.re_page.add_error_category(self.error_category)
                     return
