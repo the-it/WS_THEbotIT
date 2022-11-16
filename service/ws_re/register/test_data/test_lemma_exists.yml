@@ -1,5 +1,5 @@
 basic:
-  input:
+  given:
     lemma: Lemma
     proof_read: 4
     chapters:
@@ -8,7 +8,7 @@ basic:
   expect: true
 
 basic_false:
-  input:
+  given:
     lemma: Lemma
     chapters:
       - author: Someone
@@ -16,7 +16,7 @@ basic_false:
   expect: false
 
 has_only_proof_read:
-  input:
+  given:
     lemma: Lemma
     proof_read: 4
     chapters:

@@ -65,7 +65,8 @@ class AuthorRegister(Register):
                     f"{self.author.name}|{self.author.name}]]\n")
         line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}\n")
         fer, kor, nge, vor, _ = self.proof_read
-        parts_fertig, parts_korrigiert, parts_nicht_gemeinfrei, parts_vorbereitet, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor, nge, vor)
+        parts_fertig, parts_korrigiert, parts_nicht_gemeinfrei, parts_vorbereitet, parts_unkorrigiert = \
+            self.proofread_parts_of_20(len(self), fer, kor, nge, vor)
         line.append("|data-sort-value=\"{percent:05.1f}\"|{percent:.1f}%\n"
                     .format(percent=((fer + kor) / len(self)) * 100))
         line.append(f"|<span style=\"color:#669966\">{parts_fertig * '█'}</span>")
@@ -77,7 +78,7 @@ class AuthorRegister(Register):
 
     @staticmethod
     def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int, nge: int, vor: int) \
-        -> Tuple[int, int, int, int, int]:
+            -> Tuple[int, int, int, int, int]:
         part_fer = round(fer / sum_lemmas * 20)
         part_kor = round((kor + fer) / sum_lemmas * 20) - part_fer
         part_nge = round((kor + fer + nge) / sum_lemmas * 20) - (part_fer + part_kor)

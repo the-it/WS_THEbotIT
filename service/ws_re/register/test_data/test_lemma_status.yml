@@ -1,12 +1,12 @@
 no_proof_read:
-  input:
+  given:
     lemma: lemma
   expect:
     label: "UNK"
     color: "#AA0000"
 
 proof_read_1:
-  input:
+  given:
     lemma: lemma
     proof_read: 1
   expect:
@@ -14,7 +14,7 @@ proof_read_1:
     color: "#AA0000"
 
 proof_read_2:
-  input:
+  given:
     lemma: lemma
     proof_read: 2
   expect:
@@ -22,7 +22,7 @@ proof_read_2:
     color: "#556B2F"
 
 proof_read_3:
-  input:
+  given:
     lemma: lemma
     proof_read: 3
   expect:
@@ -30,7 +30,7 @@ proof_read_3:
     color: "#669966"
 
 no_public_domain:
-  input:
+  given:
     lemma: lemma
     chapters:
       - start: 1
@@ -40,7 +40,7 @@ no_public_domain:
     color: "#FFCBCB"
 
 no_public_domain_no_creative_height:
-  input:
+  given:
     lemma: lemma
     proof_read: 3
     no_creative_height: true
@@ -52,7 +52,7 @@ no_public_domain_no_creative_height:
     color: "#669966"
 
 no_public_domain_but_already_ready:
-  input:
+  given:
     lemma: lemma
     proof_read: 3
     chapters:

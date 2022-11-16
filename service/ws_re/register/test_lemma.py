@@ -177,8 +177,8 @@ class TestLemma(BaseTestRegister):
         compare(2058, re_register_lemma._get_public_domain_year())
 
     @file_data("test_data/test_lemma_status.yml")
-    def test_get_lemma_status(self, input, expect):
-        small_dict = input
+    def test_get_lemma_status(self, given, expect):
+        small_dict = given
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
         compare((expect["label"], expect["color"]), lemma.status)
 
@@ -315,6 +315,6 @@ class TestLemma(BaseTestRegister):
                 update_lemma.lemma_dict["chapters"])
 
     @file_data("test_data/test_lemma_exists.yml")
-    def test_exists(self, input, expect):
-        lemma = Lemma(input, self.volumes["I,1"], self.authors)
+    def test_exists(self, given, expect):
+        lemma = Lemma(given, self.volumes["I,1"], self.authors)
         compare(expect, lemma.exists)
