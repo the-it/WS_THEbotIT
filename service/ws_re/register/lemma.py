@@ -320,12 +320,15 @@ class Lemma:
         fertig = "#669966"
         korrigiert = "#556B2F"
         light_red = "#FFCBCB"
+        light_yellow = "#9FC859"
         # gray = "#CBCBCB"
 
         if pd_year := self._get_public_domain_year():
             current_year = datetime.now().year
             if pd_year > current_year:
                 if not self["no_creative_height"]:
+                    if self.exists:
+                        return str(pd_year), light_yellow
                     return str(pd_year), light_red
 
         if self["proof_read"] == 2:

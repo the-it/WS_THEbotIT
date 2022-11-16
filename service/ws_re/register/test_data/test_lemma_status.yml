@@ -1,0 +1,63 @@
+no_proof_read:
+  input:
+    lemma: lemma
+  expect:
+    label: "UNK"
+    color: "#AA0000"
+
+proof_read_1:
+  input:
+    lemma: lemma
+    proof_read: 1
+  expect:
+    label: "UNK"
+    color: "#AA0000"
+
+proof_read_2:
+  input:
+    lemma: lemma
+    proof_read: 2
+  expect:
+    label: "KOR"
+    color: "#556B2F"
+
+proof_read_3:
+  input:
+    lemma: lemma
+    proof_read: 3
+  expect:
+    label: "FER"
+    color: "#669966"
+
+no_public_domain:
+  input:
+    lemma: lemma
+    chapters:
+      - start: 1
+        author: Abel
+  expect:
+    label: "2069"
+    color: "#FFCBCB"
+
+no_public_domain_no_creative_height:
+  input:
+    lemma: lemma
+    proof_read: 3
+    no_creative_height: true
+    chapters:
+      - start: 1
+        author: Abel
+  expect:
+    label: "FER"
+    color: "#669966"
+
+no_public_domain_but_already_ready:
+  input:
+    lemma: lemma
+    proof_read: 3
+    chapters:
+      - start: 1
+        author: Abel
+  expect:
+    label: "2069"
+    color: "#9FC859"
