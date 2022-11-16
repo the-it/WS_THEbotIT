@@ -53,10 +53,11 @@ class VolumeRegister(Register):
         header.append(f"NF={nf}")
         header.append(f"SUM={len(self.lemmas)}")
         # calculate proof_read status
-        fer, kor, nge, unk = self.proof_read
+        fer, kor, nge, vor, unk = self.proof_read
         header.append(f"FER={fer}")
         header.append(f"KOR={kor}")
         header.append(f"NGE={nge}")
+        header.append(f"VOR={vor}")
         header.append(f"UNK={unk}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 

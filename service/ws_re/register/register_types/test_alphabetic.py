@@ -64,6 +64,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |FER=1
 |KOR=1
 |NGE=0
+|VOR=0
 |UNK=3
 }}
 """
@@ -77,6 +78,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |FER=1
 |KOR=0
 |NGE=0
+|VOR=0
 |UNK=1
 }}
 """
@@ -89,6 +91,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |FER=2
 |KOR=1
 |NGE=0
+|VOR=0
 |UNK=1
 }}
 """
@@ -104,6 +107,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |FER=3
 |KOR=1
 |NGE=0
+|VOR=0
 |UNK=2
 }}
 

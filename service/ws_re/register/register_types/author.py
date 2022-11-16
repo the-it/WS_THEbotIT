@@ -44,10 +44,11 @@ class AuthorRegister(Register):
         header.append(f"AUTHOR={self._author.name}")
         header.append(f"SUM={len(self)}")
         # calculate proof_read status
-        fer, kor, nge, unk = self.proof_read
+        fer, kor, nge, vor, unk = self.proof_read
         header.append(f"FER={fer}")
         header.append(f"KOR={kor}")
         header.append(f"NGE={nge}")
+        header.append(f"VOR={vor}")
         header.append(f"UNK={unk}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
@@ -63,21 +64,23 @@ class AuthorRegister(Register):
         line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
                     f"{self.author.name}|{self.author.name}]]\n")
         line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}\n")
-        fer, kor, nge, _ = self.proof_read
-        parts_fertig, parts_korrigiert, parts_nicht_gemeinfrei, parts_unkorrigiert = \
-            self.proofread_parts_of_20(len(self), fer, kor, nge)
+        fer, kor, nge, vor, _ = self.proof_read
+        parts_fertig, parts_korrigiert, parts_nicht_gemeinfrei, parts_vorbereitet, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor, nge, vor)
         line.append("|data-sort-value=\"{percent:05.1f}\"|{percent:.1f}%\n"
                     .format(percent=((fer + kor) / len(self)) * 100))
         line.append(f"|<span style=\"color:#669966\">{parts_fertig * '█'}</span>")
         line.append(f"<span style=\"color:#556B2F\">{parts_korrigiert * '█'}</span>")
         line.append(f"<span style=\"color:#FFCBCB\">{parts_nicht_gemeinfrei * '█'}</span>")
+        line.append(f"<span style=\"color:#9FC859\">{parts_vorbereitet * '█'}</span>")
         line.append(f"<span style=\"color:#AA0000\">{parts_unkorrigiert * '█'}</span>")
         return "".join(line)
 
     @staticmethod
-    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int, nge: int) -> Tuple[int, int, int, int]:
+    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int, nge: int, vor: int) \
+        -> Tuple[int, int, int, int, int]:
         part_fer = round(fer / sum_lemmas * 20)
         part_kor = round((kor + fer) / sum_lemmas * 20) - part_fer
         part_nge = round((kor + fer + nge) / sum_lemmas * 20) - (part_fer + part_kor)
-        part_unk = 20 - (part_fer + part_kor + part_nge)
-        return part_fer, part_kor, part_nge, part_unk
+        part_vor = round((kor + fer + nge + vor) / sum_lemmas * 20) - (part_fer + part_kor + part_nge)
+        part_unk = 20 - (part_fer + part_kor + part_nge + part_vor)
+        return part_fer, part_kor, part_nge, part_vor, part_unk
