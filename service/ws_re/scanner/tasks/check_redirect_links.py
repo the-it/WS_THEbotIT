@@ -8,6 +8,10 @@ from tools import save_if_changed
 from tools.bots.pi import WikiLogger
 
 
+REGEX_TRANSLATION = str.maketrans({"(": r"\(",
+                                   ")": r"\)",
+                                   "?": r"\?"})
+
 class CHRETask(ReScannerTask):
     error_category = "RE:Links führen auf Redirects"
 
@@ -16,7 +20,7 @@ class CHRETask(ReScannerTask):
         self.filter_regex = re.compile(
             r"(Benutzer|"
             r"Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/|"
-            r"Wikisource:RE-Werkstatt/"
+            r"Wikisource:"
             r").*"
         )
 
@@ -50,9 +54,11 @@ class CHRETask(ReScannerTask):
     def filter_link_list(self, link_list: list[str]) -> list[str]:
         return [link for link in link_list if self.filter_regex.search(link) is None]
 
+
+
     @staticmethod
     def replace_redirect_links(text: str, redirect: str, target: str):
-        redirect_re = redirect.replace(")", r"\)").replace("(", r"\(")
+        redirect_re = redirect.translate(REGEX_TRANSLATION)
         # [[RE:Redirect]] -> [[RE:Target]], [[RE:Redirect|Something]] -> [[RE:Target|Something]]
         temp_text = re.sub(rf"\[\[RE:{redirect_re}(\||\]\])", rf"[[RE:{target}\g<1>", text)
         # {{RE siehe|Redirect}} -> {{RE siehe|Target|Redirect}}
