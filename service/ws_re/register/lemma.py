@@ -320,12 +320,15 @@ class Lemma:
         fertig = "#669966"
         korrigiert = "#556B2F"
         light_red = "#FFCBCB"
+        light_yellow = "#9FC859"
         # gray = "#CBCBCB"
 
         if pd_year := self._get_public_domain_year():
             current_year = datetime.now().year
             if pd_year > current_year:
                 if not self["no_creative_height"]:
+                    if self.exists:
+                        return str(pd_year), light_yellow
                     return str(pd_year), light_red
 
         if self["proof_read"] == 2:
@@ -344,3 +347,14 @@ class Lemma:
                 if item in self._lemma_dict:
                     del self._lemma_dict[item]  # type: ignore
         self._recalc_lemma()
+
+    @property
+    def exists(self) -> bool:
+        if chapters := self._chapters:
+            if author := chapters[0].author:
+                if author.endswith("."):
+                    return True
+        if self["proof_read"]:
+            if self._lemma_dict["proof_read"] > 1:
+                return True
+        return False

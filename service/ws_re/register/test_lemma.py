@@ -176,33 +176,11 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma(small_dict, self.volumes["XVI,1"], self.authors)
         compare(2058, re_register_lemma._get_public_domain_year())
 
-    def test_get_lemma_status(self):
-        # basics
-        small_dict = {"lemma": "lemma"}
+    @file_data("test_data/test_lemma_status.yml")
+    def test_get_lemma_status(self, given, expect):
+        small_dict = given
         lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("UNK", "#AA0000"), lemma.status)
-
-        small_dict = {"lemma": "lemma", "proof_read": 1}
-        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("UNK", "#AA0000"), lemma.status)
-
-        small_dict = {"lemma": "lemma", "proof_read": 2}
-        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("KOR", "#556B2F"), lemma.status)
-
-        small_dict = {"lemma": "lemma", "proof_read": 3}
-        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("FER", "#669966"), lemma.status)
-
-        # author (not) public domain
-        small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "author": "Abel"}]}
-        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("2069", "#FFCBCB"), lemma.status)
-
-        small_dict = {"lemma": "lemma", "proof_read": 3, "no_creative_height": True,
-                      "chapters": [{"start": 1, "author": "Abel"}]}
-        lemma = Lemma(small_dict, Volumes()["I,1"], self.authors)
-        compare(("FER", "#669966"), lemma.status)
+        compare((expect["label"], expect["color"]), lemma.status)
 
     def test_is_valid(self):
         no_chapter_dict = {"lemma": "lemma", "chapters": []}
@@ -335,3 +313,8 @@ class TestLemma(BaseTestRegister):
         compare([{"start": 1, "end": 3, "author": "Abel"},
                  {"start": 3, "end": 3, "author": "Abbott"}],
                 update_lemma.lemma_dict["chapters"])
+
+    @file_data("test_data/test_lemma_exists.yml")
+    def test_exists(self, given, expect):
+        lemma = Lemma(given, self.volumes["I,1"], self.authors)
+        compare(expect, lemma.exists)

@@ -49,7 +49,8 @@ class TestRegister(BaseTestRegister):
 |SUM=2
 |FER=0
 |KOR=1
-|NGE=1
+|NGE=0
+|VOR=1
 |UNK=0
 }}
 
@@ -67,7 +68,7 @@ class TestRegister(BaseTestRegister):
 ||
 |[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
 |Herman Abel
-|style="background:#FFCBCB"|2069
+|style="background:#9FC859"|2069
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
