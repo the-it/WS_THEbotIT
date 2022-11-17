@@ -12,6 +12,7 @@ REGEX_TRANSLATION = str.maketrans({"(": r"\(",
                                    ")": r"\)",
                                    "?": r"\?"})
 
+
 class CHRETask(ReScannerTask):
     error_category = "RE:Links führen auf Redirects"
 
@@ -53,8 +54,6 @@ class CHRETask(ReScannerTask):
 
     def filter_link_list(self, link_list: list[str]) -> list[str]:
         return [link for link in link_list if self.filter_regex.search(link) is None]
-
-
 
     @staticmethod
     def replace_redirect_links(text: str, redirect: str, target: str):
