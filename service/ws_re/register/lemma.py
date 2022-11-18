@@ -350,10 +350,6 @@ class Lemma:
 
     @property
     def exists(self) -> bool:
-        if chapters := self._chapters:
-            if author := chapters[0].author:
-                if author.endswith("."):
-                    return True
         if self["proof_read"]:
             if self._lemma_dict["proof_read"] > 1:
                 return True

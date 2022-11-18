@@ -153,10 +153,3 @@ class TestAnalyse(TestCase):
             if char != lemma_2[i]:
                 raise AssertionError(f"position {i} {char}({ord(char)}) "
                                      f"!= {lemma_2[i]}({ord(lemma_2[i])})")
-
-    def test_lemma_exists(self):  # pragma: no cover
-        registers = Registers()
-        for register_str, register in registers.volumes.items():
-            for lemma in register.lemmas:
-                if lemma.chapters[0].author and lemma.chapters[0].author.endswith("."):
-                    print(register_str, lemma, lemma.chapters[0].author)

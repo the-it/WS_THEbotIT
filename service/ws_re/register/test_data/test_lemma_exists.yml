@@ -1,13 +1,4 @@
-basic:
-  given:
-    lemma: Lemma
-    proof_read: 4
-    chapters:
-      - author: Someone.
-        start: 10
-  expect: true
-
-basic_false:
+no_proof_read:
   given:
     lemma: Lemma
     chapters:
@@ -15,7 +6,16 @@ basic_false:
         start: 10
   expect: false
 
-has_only_proof_read:
+proof_read_too_low:
+  given:
+    lemma: Lemma
+    proof_read: 1
+    chapters:
+      - author: Someone
+        start: 10
+  expect: false
+
+proof_read:
   given:
     lemma: Lemma
     proof_read: 4
