@@ -42,7 +42,8 @@ class TestCHRETaskUnittests(TaskTestCase):
             "Wikisource:RE-Werkstatt/Zeug in der Werkstatt",
             "Benutzer:S8w4/Spielwiese/Lemmata06kurz",
             "Benutzer Diskussion:S8w4",
-            "Benutzer:THEbotIT/some_logging_page"
+            "Benutzer:THEbotIT/some_logging_page",
+            "RE:Wartung:Strukturfehler",
             "Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/PD 2013",
         ]
         task = CHRETask(None, self.logger)

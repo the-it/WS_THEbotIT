@@ -21,7 +21,8 @@ class CHRETask(ReScannerTask):
         self.filter_regex = re.compile(
             r"(Benutzer|"
             r"Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/|"
-            r"Wikisource:"
+            r"Wikisource:|"
+            r"RE:Wartung:"
             r").*"
         )
 
