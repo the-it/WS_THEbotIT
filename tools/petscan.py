@@ -1,6 +1,6 @@
 # pylint: disable=ungrouped-imports
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from operator import itemgetter
 from typing import List, Union, Mapping
 from urllib.parse import quote
@@ -248,7 +248,7 @@ class PetScan:
         response_dict = json.loads(response_byte.decode("utf8"))
         return response_dict["*"][0]["a"]["*"]  # type: ignore
 
-    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: int=None) -> list[str]:
+    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: int = None) -> list[str]:
         """
         Executes the search. Filters out all preprocessed lemmas from a provided dictionary.
         Interlaces this two lists to a combined list sorted by:
