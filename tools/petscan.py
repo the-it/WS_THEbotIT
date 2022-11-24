@@ -1,6 +1,6 @@
 # pylint: disable=ungrouped-imports
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from operator import itemgetter
 from typing import List, Union, Mapping
 from urllib.parse import quote
@@ -228,6 +228,10 @@ class PetScan:
         question_string.append("&format=json&doit=1")
         return "".join(question_string)
 
+    @staticmethod
+    def _make_plain_list(lemma_list: List[PetscanLemma]) -> List[str]:
+        return [item["nstext"] + ":" + item["title"] for item in lemma_list]
+
     def run(self) -> List[PetscanLemma]:
         """
         Execute the search query und returns the results as a list.
@@ -244,14 +248,20 @@ class PetScan:
         response_dict = json.loads(response_byte.decode("utf8"))
         return response_dict["*"][0]["a"]["*"]  # type: ignore
 
-    def get_combined_lemma_list(self, old_lemmas: Mapping) -> list[str]:
+    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: int=None) -> list[str]:
         """
         Executes the search. Filters out all preprocessed lemmas from a provided dictionary.
         Interlaces this two lists to a combined list sorted by:
+          * processed lemmas in past timeframe
           * every new lemma
           * old lemmas sorted by dictionary value (probably a timestamp)
         """
-        raw_lemma_list = [item["nstext"] + ":" + item["title"] for item in self.run()]
+        raw_lemma_list = self._make_plain_list(self.run())
+        if timeframe:
+            self.max_age(timeframe)
+            timeframe_list = self._make_plain_list(self.run())
+        else:
+            timeframe_list = []
         # all items which wasn't process before
         new_lemma_list = []
         for lemma in raw_lemma_list:
@@ -262,4 +272,4 @@ class PetScan:
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(old_lemmas.items(), key=itemgetter(1))]
         # first iterate new items then the old ones (oldest first)
-        return new_lemma_list + old_lemma_list
+        return timeframe_list + new_lemma_list + old_lemma_list
