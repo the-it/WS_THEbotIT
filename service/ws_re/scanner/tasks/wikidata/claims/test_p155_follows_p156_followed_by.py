@@ -7,7 +7,7 @@ from tools.test import real_wiki_test
 
 
 @real_wiki_test
-class TestP155Follows(BaseTestClaimFactory):
+class TestNeighbours(BaseTestClaimFactory):
     def test__get_claim_json_no_follows_exists(self):
         re_page = self._create_mock_page(text="{{REDaten\n|VORGÄNGER=OFF}}\ntext\n{{REAutor|Blub}}", title="RE:Bla")
         factory = P155Follows(re_page, self.logger)
