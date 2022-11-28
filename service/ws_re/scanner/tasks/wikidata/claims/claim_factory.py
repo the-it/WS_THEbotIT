@@ -56,7 +56,7 @@ class ClaimFactory:
         """
         if regex_hit := re.search(r"^P\d{1,6}", cls.__name__):
             return regex_hit.group(0)
-        raise ValueError("Class name doesn't match regex r'P\d{1,6}'")
+        raise ValueError("Class name doesn't match regex")
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList,
