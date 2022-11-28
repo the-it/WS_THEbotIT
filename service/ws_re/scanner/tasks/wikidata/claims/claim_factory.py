@@ -33,9 +33,6 @@ class ClaimFactory:
     def _get_claim_json(self) -> List[JsonClaimDict]:
         raise NotImplementedError
 
-    def execute_pre_action(self):
-        pass
-
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
         Every claim that is updated can possible add new claims, but can also remove existing claims at the item.
@@ -59,7 +56,7 @@ class ClaimFactory:
         """
         if regex_hit := re.search(r"^P\d{1,6}", cls.__name__):
             return regex_hit.group(0)
-        return ""
+        raise ValueError("Class name doesn't match regex r'P\d{1,6}'")
 
     @staticmethod
     def _filter_new_vs_old_claim_list(new_claim_list: ClaimList,
