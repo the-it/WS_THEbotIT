@@ -33,7 +33,7 @@ class Article(Mapping):
 
     def __init__(self,
                  article_type: str = RE_DATEN,
-                 re_daten_properties: ArticleProperties = None,
+                 re_daten_properties: Optional[ArticleProperties] = None,
                  text: str = "",
                  author: Tuple[str, str] = ("", "")):
         self._article_type = ""
