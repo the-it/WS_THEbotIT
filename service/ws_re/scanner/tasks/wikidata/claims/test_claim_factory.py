@@ -1,6 +1,6 @@
 # pylint: disable=protected-access,no-self-use
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 from unittest import TestCase
 from unittest.mock import MagicMock, PropertyMock, Mock
 
@@ -29,7 +29,7 @@ class BaseTestClaimFactory(TestCase):
                                  log_to_screen=False)
 
     @staticmethod
-    def _create_mock_page(text: str = None, title: str = None):
+    def _create_mock_page(text: Optional[str] = None, title: Optional[str] = None):
         mock_item = MagicMock()
         if text:
             text_mock = PropertyMock(return_value=text)

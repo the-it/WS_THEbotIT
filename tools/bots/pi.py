@@ -189,7 +189,7 @@ class OneTimeBot(ABC):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
-        if not self.task:
+        if not hasattr(self, "task"):
             raise NotImplementedError("The class function \"task\" must be implemented!\n"
                                       "Example:\n"
                                       "class DoSomethingBot(OneTimeBot):\n"

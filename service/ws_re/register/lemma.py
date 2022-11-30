@@ -338,7 +338,7 @@ class Lemma:
 
         return "UNK", unkorrigiert
 
-    def update_lemma_dict(self, update_dict: LemmaDict, remove_items: List[str] = None):
+    def update_lemma_dict(self, update_dict: LemmaDict, remove_items: Optional[List[str]] = None):
         for item_key in update_dict:
             # TypedDict only works with string literals
             self._lemma_dict[item_key] = update_dict[item_key]  # type: ignore
