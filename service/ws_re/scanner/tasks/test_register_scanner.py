@@ -64,17 +64,25 @@ text.
 |SORTIERUNG=Abalas limen
 }}
 text.
+{{REAutor|OFF}}
+{{REDaten
+|BAND=S I
+|SORTIERUNG=
+}}
+text.
 {{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"sort_key": "Abalas limen"}, []), SCANTask._fetch_sort_key(article))
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        compare(({"sort_key": "Abalas limen"}, []), self.task._fetch_sort_key(re_page.splitted_article_list[1]))
 
         self.page_mock.text = """{{REDaten
 |BAND=I,1
 }}
 text.
 {{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({}, ["sort_key"]), SCANTask._fetch_sort_key(article))
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        compare(({}, ["sort_key"]), self.task._fetch_sort_key(re_page.splitted_article_list[0]))
 
     def test_lemma(self):
         self.page_mock.title_str = "RE:Aal"
@@ -119,10 +127,11 @@ text.
         compare(result, SCANTask._fetch_next(article))
 
     @file_data("test_data/register_scanner/test_short_description.yml")
-    def test_short_description(self, text, result):
+    def test_short_description(self, text, test_number, result):
         self.page_mock.text = text
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(result, SCANTask._fetch_short_description(article))
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        compare(result, self.task._fetch_short_description(re_page.splitted_article_list[test_number]))
 
     @file_data("test_data/register_scanner/test_no_creative_height.yml")
     def test_no_creative_height(self, text, result):
