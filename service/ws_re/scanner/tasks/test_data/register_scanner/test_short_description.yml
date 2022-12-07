@@ -6,6 +6,7 @@ short_descrition_found:
     }}
     text.
     {{REAutor|OFF}}
+  test_number: 0
   result:
     - short_description: "kurzer Text"
     - []
@@ -18,6 +19,26 @@ no_short_descrition:
     }}
     text.
     {{REAutor|OFF}}
+  test_number: 0
   result:
     - {}
     - ["short_description"]
+
+with_appendix:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |KURZTEXT=Blub
+    }}
+    text.
+    {{REAutor|OFF}}
+    {{REDaten
+    |BAND=S I
+    |KURZTEXT=
+    }}
+    text.
+    {{REAutor|OFF}}
+  test_number: 1
+  result:
+    - short_description: "Blub"
+    - []
