@@ -101,14 +101,14 @@ class SCANTask(ReScannerTask):
             self.logger.debug(f"No WD target, because of timeout at {self.re_page.lemma_as_link}")
             raise exception
 
-    def _fetch_sort_key(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_sort_key(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list[0][0]
         sort_key = str(article["SORTIERUNG"].value)
         if sort_key:
             return {"sort_key": sort_key}, []
         return {}, ["sort_key"]
 
-    def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:  # pylint: disable=unused-argument
+    def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
     _REGEX_REDIRECT = re.compile(r"(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
@@ -139,7 +139,7 @@ class SCANTask(ReScannerTask):
             return {"next": next_lemma}, []
         return {}, ["next"]
 
-    def _fetch_short_description(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_short_description(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list[0][0]
         short_description = str(article["KURZTEXT"].value)
         if short_description:
