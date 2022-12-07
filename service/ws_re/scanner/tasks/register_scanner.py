@@ -103,7 +103,10 @@ class SCANTask(ReScannerTask):
 
     def _fetch_sort_key(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list[0][0]
-        assert isinstance(article, Article)
+        if not isinstance(article, Article):
+            self.logger.error(f"Type of first entry in splitted article list is wrong "
+                              f"for lemma: {self.re_page.lemma_without_prefix}")
+            return {}, ["sort_key"]
         sort_key = str(article["SORTIERUNG"].value)
         if sort_key:
             return {"sort_key": sort_key}, []
@@ -142,7 +145,10 @@ class SCANTask(ReScannerTask):
 
     def _fetch_short_description(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list[0][0]
-        assert isinstance(article, Article)
+        if not isinstance(article, Article):
+            self.logger.error(f"Type of first entry in splitted article list is wrong "
+                              f"for lemma: {self.re_page.lemma_without_prefix}")
+            return {}, ["short_description"]
         short_description = str(article["KURZTEXT"].value)
         if short_description:
             return {"short_description": short_description}, []
