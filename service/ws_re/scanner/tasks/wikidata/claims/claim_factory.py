@@ -9,6 +9,7 @@ from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ChangedClaimsDict, JsonDataValue, \
     JsonSnakDict, ReferencesList, JsonClaimDict
+from service.ws_re.template.article import Article
 from service.ws_re.template.re_page import RePage
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
@@ -202,8 +203,13 @@ class ClaimFactory:
     @property
     def _authors_of_first_article(self) -> List[Author]:
         author_list: List[Author] = []
-        for article_part in self.re_page.splitted_article_list[0]:
-            author = article_part.author.identification
+        article_list_dict = self.re_page.splitted_article_list[0]
+        first_articles = [article_list_dict["first"]] + \
+                         [article for article in article_list_dict["rest"] if isinstance(article, Article)]
+        for article_part in first_articles:
+            if isinstance(article_part, str):
+                continue
+            author = article_part.author[0]
             band = self.re_page.first_article["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)
             if len(possible_authors) == 1:
