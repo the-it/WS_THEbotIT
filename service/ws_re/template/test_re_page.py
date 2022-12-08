@@ -237,12 +237,12 @@ text
         re_page = RePage(self.page_mock)
         splitted_list = re_page.splitted_article_list
         compare(3, len(splitted_list))
-        compare(1, len(splitted_list[0]))
-        compare(3, len(splitted_list[1]))
-        compare(4, len(splitted_list[2]))
-        self.assertTrue(isinstance(splitted_list[1][1], str))
-        self.assertTrue(isinstance(splitted_list[2][1], str))
-        self.assertTrue(isinstance(splitted_list[2][3], str))
+        compare(0, len(splitted_list[0]["rest"]))
+        compare(2, len(splitted_list[1]["rest"]))
+        compare(3, len(splitted_list[2]["rest"]))
+        self.assertTrue(isinstance(splitted_list[1]["rest"][0], str))
+        self.assertTrue(isinstance(splitted_list[2]["rest"][0], str))
+        self.assertTrue(isinstance(splitted_list[2]["rest"][2], str))
 
     def test_get_splitted_article_list_pre_text(self):
         before = """text{{REDaten}}\ntext\n{{REAutor|Some Author.}}text"""
@@ -250,10 +250,11 @@ text
         re_page = RePage(self.page_mock)
         splitted_list = re_page.splitted_article_list
         compare(2, len(splitted_list))
-        compare(1, len(splitted_list[0]))
-        compare(2, len(splitted_list[1]))
-        self.assertTrue(isinstance(splitted_list[0][0], str))
-        self.assertTrue(isinstance(splitted_list[1][1], str))
+        compare(1, len(splitted_list[0]["rest"]))
+        compare(1, len(splitted_list[1]["rest"]))
+        self.assertTrue(isinstance(splitted_list[0]["rest"][0], str))
+        compare(None, splitted_list[0]["first"])
+        self.assertTrue(isinstance(splitted_list[1]["rest"][0], str))
 
     def test_complex_page(self):
         complex_article = """{{REDaten}}\n{{#lst:RE:Plinius 5/I}}

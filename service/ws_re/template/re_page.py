@@ -1,11 +1,16 @@
 import re
-from typing import Union, List, Optional
+from typing import Union, List, Optional, TypedDict
 
 import pywikibot
 
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, RE_AUTHOR, ReDatenException
 from service.ws_re.template.article import Article
 from tools.template_finder import TemplateFinderException, TemplateFinder
+
+
+class SplittedArticleListDict(TypedDict):
+    first: Optional[Article]
+    rest: List[Union[Article, str]]
 
 
 class RePage:
@@ -141,24 +146,26 @@ class RePage:
         return self.only_articles[0]
 
     @property
-    def splitted_article_list(self) -> List[List[Union[Article, str]]]:
+    def splitted_article_list(self) -> List[SplittedArticleListDict]:
         """
         For some tasks it is helpful to group the list of articles to groups of articles splitted at header articles.
 
         Example: [RE_Daten, RE_Abschnitt, str, RE_Daten, RE_Daten, str, RE_Abschnitt] ->
-                 [[RE_Daten, RE_Abschnitt, str], [RE_Daten], [RE_Daten, str, RE_Abschnitt]]
+                 [{first: RE_Daten, rest: [RE_Abschnitt, str]},
+                  {first: RE_Daten, rest: []},
+                  {first: RE_Daten, rest: [RE_Abschnitt, str]}]
 
         :return: a list with lists of articles/strings.
         """
-        splitted_list: List[List[Union[Article, str]]] = []
+        splitted_list: List[SplittedArticleListDict] = []
         for article in self._article_list:
             if isinstance(article, Article) and article.article_type == RE_DATEN:
-                splitted_list.append([article])
+                splitted_list.append({"first": article, "rest": []})
             else:
                 try:
-                    splitted_list[-1].append(article)
+                    splitted_list[-1]["rest"].append(article)
                 except IndexError:
-                    splitted_list.append([article])
+                    splitted_list.append({"first": None, "rest": [article]})
         return splitted_list
 
     @property

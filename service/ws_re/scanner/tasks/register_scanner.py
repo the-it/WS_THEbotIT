@@ -11,6 +11,7 @@ from service.ws_re.register.registers import Registers
 from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
+from service.ws_re.template.re_page import SplittedArticleListDict
 from tools.bots.pi import WikiLogger
 
 
@@ -42,8 +43,8 @@ class SCANTask(ReScannerTask):
         self.logger.info("Push changes for authors and registers.")
         self.registers.repo.push()
 
-    def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _fetch_wp_link(self, article_list: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list["first"]
         if article['WIKIPEDIA'].value:
             wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
         else:
@@ -56,8 +57,8 @@ class SCANTask(ReScannerTask):
             return {"wp_link": wp_link}, []
         return {}, ["wp_link"]
 
-    def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _fetch_ws_link(self, article_list: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list["first"]
         if article['WIKISOURCE'].value:
             ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
         else:
@@ -102,7 +103,7 @@ class SCANTask(ReScannerTask):
             raise exception
 
     def _fetch_sort_key(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = self.re_page.splitted_article_list[0][0]
+        article = self.re_page.splitted_article_list[0]["first"]
         if not isinstance(article, Article):
             self.logger.error(f"Type of first entry in splitted article list is wrong "
                               f"for lemma: {self.re_page.lemma_without_prefix}")
@@ -117,8 +118,8 @@ class SCANTask(ReScannerTask):
 
     _REGEX_REDIRECT = re.compile(r"(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
 
-    def _fetch_redirect(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _fetch_redirect(self, article_list: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list["first"]
         redirect = article["VERWEIS"].value
         if redirect:
             match = self._REGEX_REDIRECT.search(article.text)
@@ -128,23 +129,23 @@ class SCANTask(ReScannerTask):
         return {}, ["redirect"]
 
     @staticmethod
-    def _fetch_previous(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _fetch_previous(article_list: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list["first"]
         previous = str(article["VORGÄNGER"].value)
         if previous and previous != "OFF":
             return {"previous": previous}, []
         return {}, ["previous"]
 
     @staticmethod
-    def _fetch_next(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _fetch_next(article_list: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list["first"]
         next_lemma = str(article["NACHFOLGER"].value)
         if next_lemma and next_lemma != "OFF":
             return {"next": next_lemma}, []
         return {}, ["next"]
 
     def _fetch_short_description(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = self.re_page.splitted_article_list[0][0]
+        article = self.re_page.splitted_article_list[0]["first"]
         if not isinstance(article, Article):
             self.logger.error(f"Type of first entry in splitted article list is wrong "
                               f"for lemma: {self.re_page.lemma_without_prefix}")
@@ -155,16 +156,17 @@ class SCANTask(ReScannerTask):
         return {}, ["short_description"]
 
     @staticmethod
-    def _fetch_no_creative_height(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _fetch_no_creative_height(article_list: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list["first"]
         no_creative_height = bool(article["KEINE_SCHÖPFUNGSHÖHE"].value)
         if no_creative_height:
             return {"no_creative_height": no_creative_height}, []
         return {}, ["no_creative_height"]
 
-    def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_pages(self, article_list_dict: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
         # if there is something outside an article ignore it
-        article_list = [article for article in article_list if isinstance(article, Article)]
+        article_list = [article_list_dict["first"]] + \
+                       [article for article in article_list_dict["rest"] if isinstance(article, Article)]
         if len(article_list) == 1:
             chapter_dict = self._analyse_simple_article_list(article_list)
             if chapter_dict:
@@ -222,8 +224,8 @@ class SCANTask(ReScannerTask):
         return single_article_dict
 
     @staticmethod
-    def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _fetch_proof_read(article_list: SplittedArticleListDict) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list["first"]
         proof_read = str(article["KORREKTURSTAND"].value).lower().strip()
         if article.common_free:
             if proof_read:
@@ -241,14 +243,14 @@ class SCANTask(ReScannerTask):
         issues_in_articles = set()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
-            if isinstance(article_list[0], Article):
+            if isinstance(article_list["first"], Article):
                 update_dict = {}
                 delete_list = []
                 for fetch_function in function_list_properties:
                     function_dict, function_list = fetch_function(article_list)
                     update_dict.update(function_dict)
                     delete_list += function_list
-                band_info = article_list[0]["BAND"].value
+                band_info = article_list["first"]["BAND"].value
                 self_supplement = band_info in issues_in_articles
                 issues_in_articles.add(band_info)
                 self._update_lemma(band_info, delete_list, self_supplement, update_dict)
