@@ -69,7 +69,7 @@ class TestIntegrationRegister(parent_class):
     def test_length_of_volumes(self):
         for register in self.registers.volumes.values():
             size = len(register.get_register_str())
-            print(f"Register {register.volume} has length: {size}")
+            print(f"Register {register.volume.name} has length: {size}")
             self.assertGreater(_MAX_SIZE_WIKI_PAGE, size,
                                f"register {register} is now to big.")
 
