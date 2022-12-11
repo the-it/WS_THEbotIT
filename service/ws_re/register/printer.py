@@ -13,10 +13,10 @@ class ReRegisterPrinter(CanonicalBot):
 
     def task(self):
         self._print_volume()
-        self._print_alphabetic()
-        self._print_author()
-        self._print_short()
-        self._print_pd()
+        # self._print_alphabetic()
+        # self._print_author()
+        # self._print_short()
+        # self._print_pd()
         return True
 
     def _print_author(self):
@@ -73,11 +73,12 @@ class ReRegisterPrinter(CanonicalBot):
         self.logger.info("Print volume register.")
         for register in self.registers.volumes.values():
             self.logger.debug(register)
-            save_if_changed(Page(self.wiki,
-                                 f"Paulys Realencyclopädie der classischen "
-                                 f"Altertumswissenschaft/Register/{register.volume.name}"),
-                            register.get_register_str(),
-                            "Register aktualisiert")
+            if register.volume.name == "R":
+                save_if_changed(Page(self.wiki,
+                                     f"Paulys Realencyclopädie der classischen "
+                                     f"Altertumswissenschaft/Register/{register.volume.name}/new"),
+                                register.get_register_str(),
+                                "Register aktualisiert")
 
 
 if __name__ == "__main__":  # pragma: no cover

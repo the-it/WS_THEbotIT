@@ -64,11 +64,12 @@ class Register(ABC):
             if chapter_sum > 1:
                 multi_chapter = f"rowspan={chapter_sum}"
             interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
-            table.append("".join(("|-\n|",
-                                  f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip(),
-                                  f"\n|{multi_chapter}|{lemma.short_description}",
-                                  f"\n|{multi_chapter + '' if multi_chapter else ''}"
-                                  f"{interwiki_sort_key}|{interwiki_links}")))
+            row_list = ["|-\n|",
+                        f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip()]
+            row_list.append(f"\n|{multi_chapter}|{lemma.short_description}")
+            row_list += [f"\n|{multi_chapter + '' if multi_chapter else ''}"
+                         f"{interwiki_sort_key}|{interwiki_links}"]
+            table.append("".join(row_list))
             table += table_rows
         table.append("|}")
         return "\n".join(table)
