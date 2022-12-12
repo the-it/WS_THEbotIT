@@ -6,9 +6,45 @@ from testfixtures import compare
 
 from service.ws_re.template import ReDatenException, ARTICLE_TEMPLATE
 from service.ws_re.template.article import Article
-from service.ws_re.template.re_page import RePage
+from service.ws_re.template.re_page import RePage, SplittedArticleList
 from tools.test import real_wiki_test
 
+
+class TestSplittedArticleList(TestCase):
+    @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
+    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text",
+                new_callable=mock.PropertyMock)
+    # pylint: disable=arguments-differ
+    def setUp(self, text_mock, page_mock):
+        self.page_mock = page_mock
+        self.text_mock = text_mock
+        type(self.page_mock).text = self.text_mock
+
+    def test_get_splitted_article_list(self):
+        before = """{{REDaten}}\ntext\n{{REAutor|Some Author.}}
+{{REDaten}}\ntext\n{{REAutor|Some Author.}}text{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}
+{{REDaten}}\ntext\n{{REAutor|Some Author.}}text{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}text"""
+        self.text_mock.return_value = before
+        re_page = RePage(self.page_mock)
+        splitted_list = SplittedArticleList(re_page._article_list)
+        compare(3, len(splitted_list))
+        compare(1, len(splitted_list[0]))
+        compare(3, len(splitted_list[1]))
+        compare(4, len(splitted_list[2]))
+        self.assertTrue(isinstance(splitted_list[1][1], str))
+        self.assertTrue(isinstance(splitted_list[2][1], str))
+        self.assertTrue(isinstance(splitted_list[2][3], str))
+
+    def test_get_splitted_article_list_pre_text(self):
+        before = """text{{REDaten}}\ntext\n{{REAutor|Some Author.}}text"""
+        self.text_mock.return_value = before
+        re_page = RePage(self.page_mock)
+        splitted_list = SplittedArticleList(re_page._article_list)
+        compare(2, len(splitted_list))
+        compare(1, len(splitted_list[0]))
+        compare(2, len(splitted_list[1]))
+        self.assertTrue(isinstance(splitted_list[0][0], str))
+        self.assertTrue(isinstance(splitted_list[1][1], str))
 
 class TestRePage(TestCase):
     @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
@@ -228,32 +264,6 @@ text
 {{REAutor|Oberhummer.}}
 <u>Anmerkung WS:</u><br /><references/>"""
         self.assertEqual(after, str(RePage(self.page_mock)))
-
-    def test_get_splitted_article_list(self):
-        before = """{{REDaten}}\ntext\n{{REAutor|Some Author.}}
-{{REDaten}}\ntext\n{{REAutor|Some Author.}}text{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}
-{{REDaten}}\ntext\n{{REAutor|Some Author.}}text{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}text"""
-        self.text_mock.return_value = before
-        re_page = RePage(self.page_mock)
-        splitted_list = re_page.splitted_article_list
-        compare(3, len(splitted_list))
-        compare(1, len(splitted_list[0]))
-        compare(3, len(splitted_list[1]))
-        compare(4, len(splitted_list[2]))
-        self.assertTrue(isinstance(splitted_list[1][1], str))
-        self.assertTrue(isinstance(splitted_list[2][1], str))
-        self.assertTrue(isinstance(splitted_list[2][3], str))
-
-    def test_get_splitted_article_list_pre_text(self):
-        before = """text{{REDaten}}\ntext\n{{REAutor|Some Author.}}text"""
-        self.text_mock.return_value = before
-        re_page = RePage(self.page_mock)
-        splitted_list = re_page.splitted_article_list
-        compare(2, len(splitted_list))
-        compare(1, len(splitted_list[0]))
-        compare(2, len(splitted_list[1]))
-        self.assertTrue(isinstance(splitted_list[0][0], str))
-        self.assertTrue(isinstance(splitted_list[1][1], str))
 
     def test_complex_page(self):
         complex_article = """{{REDaten}}\n{{#lst:RE:Plinius 5/I}}
