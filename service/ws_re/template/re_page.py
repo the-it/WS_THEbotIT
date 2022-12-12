@@ -40,12 +40,23 @@ class SplittedArticleList:
     def __getitem__(self,index: int):
         return self._splitted_list[index]
 
+    @property
+    def raw(self):
+        return self._splitted_list
+
+    @property
+    def first_article(self):
+        for item in self._article_list:
+            if isinstance(item, Article):
+                return item
+
 
 class RePage:
     def __init__(self, wiki_page: pywikibot.Page):
         self.page: pywikibot.Page = wiki_page
         self.pre_text: str = self.page.text
         self._article_list: List[Union[Article, str]] = []
+        self.splitted_article_list = SplittedArticleList(self._article_list)
         self._init_page_dict()
 
     def _init_page_dict(self):
@@ -174,10 +185,6 @@ class RePage:
     @property
     def first_article(self) -> Article:
         return self.only_articles[0]
-
-    @property
-    def splitted_article_list(self) -> List:
-        pass
 
     @property
     def complex_construction(self) -> bool:
