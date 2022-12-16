@@ -66,14 +66,14 @@ class TestRegister(BaseTestRegister):
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||Ein Fisch
 ||
-|[https://elexikon.ch/meyers/RE/I,1_1.png 1]-4
+|[http://elexikon.ch/RE/I,1_1.png 1]-4
 |Herman Abel
 |style="background:#9FC859"|2069
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
 ||
-|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5.png 4]
 |Abert
 |style="background:#556B2F"|KOR
 |}
