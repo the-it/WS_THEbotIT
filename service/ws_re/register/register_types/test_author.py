@@ -49,7 +49,7 @@ class TestAuthorRegister(BaseTestRegister):
 ||This is Aba 1
 ||
 ||I,1
-|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5.png 4]
 |Herman Abel
 |style="background:#AA0000"|UNK
 |-
@@ -57,7 +57,7 @@ class TestAuthorRegister(BaseTestRegister):
 ||
 ||
 ||I,1
-|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5.png 4]
 |Herman Abel
 |style="background:#556B2F"|KOR
 |-
@@ -65,18 +65,18 @@ class TestAuthorRegister(BaseTestRegister):
 |rowspan=2|This is Beta
 |rowspan=2|
 |rowspan=2|I,1
-|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5.png 4]
 |Abert
 |rowspan=2 style="background:#669966"|FER
 |-
-|[https://elexikon.ch/meyers/RE/I,1_5.png 4]-5
+|[http://elexikon.ch/RE/I,1_5.png 4]-5
 |Herman Abel
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||
 ||
 ||III,1
-|[https://elexikon.ch/meyers/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5.png 4]
 |Herman Abel
 |style="background:#669966"|FER
 |}

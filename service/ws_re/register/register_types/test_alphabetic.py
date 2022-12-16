@@ -124,11 +124,11 @@ class TestAlphabeticRegister(BaseTestRegister):
 |rowspan=3|This is Beta
 |rowspan=3|
 |rowspan=2|I,1
-|[https://elexikon.ch/meyers/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5.png 4]
 |Abert
 |rowspan=2 style="background:#669966"|FER
 |-
-|[https://elexikon.ch/meyers/RE/I,1_5.png 4]-5
+|[http://elexikon.ch/RE/I,1_5.png 4]-5
 |Herman Abel
 |-
 ||III,1
@@ -140,7 +140,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[https://elexikon.ch/meyers/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5.png 4]
 |Herman Abel
 |style="background:#669966"|FER
 |-
@@ -148,7 +148,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[https://elexikon.ch/meyers/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5.png 4]
 |Abert
 |style="background:#556B2F"|KOR
 |-
@@ -156,7 +156,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[https://elexikon.ch/meyers/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5.png 4]
 |Abert
 |style="background:#669966"|FER
 |-
@@ -164,7 +164,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[https://elexikon.ch/meyers/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5.png 4]
 |Abert
 |style="background:#AA0000"|UNK
 |}

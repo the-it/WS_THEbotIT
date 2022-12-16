@@ -284,7 +284,7 @@ class Lemma:
         return ((math.ceil((lemma_chapter.start + (columns_on_page / 2)) / columns_on_page) - 1) * columns_on_page) + 1
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
-        pages_str = f"[https://elexikon.ch/meyers/RE/{self._volume.name.replace(' ', '')}_" \
+        pages_str = f"[http://elexikon.ch/RE/{self._volume.name.replace(' ', '')}_" \
                     f"{self._get_start_column(lemma_chapter)}.png {lemma_chapter.start}]"
         if lemma_chapter.end and lemma_chapter.start != lemma_chapter.end:
             pages_str += f"-{lemma_chapter.end}"
