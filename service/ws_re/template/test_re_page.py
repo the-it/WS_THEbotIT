@@ -87,6 +87,11 @@ class TestRePage(TestCase):
         with self.assertRaises(ReDatenException):
             RePage(self.page_mock)
 
+    def test_wrong_start_template(self):
+        self.text_mock.return_value = "{{REAbschnitt}}\ntext0\n{{REAutor|Autor1.}}"
+        with self.assertRaises(ReDatenException):
+            RePage(self.page_mock)
+
     def test_back_to_str(self):
         before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         self.text_mock.return_value = before
@@ -218,14 +223,10 @@ class TestRePage(TestCase):
         re_page.save("reason")
 
     def test_bug_too_much_blanks(self):
-        before = """{{REAbschnitt}}
-text
-{{REAutor|Oberhummer.}}
+        before = f"""{ARTICLE_TEMPLATE}
 <u>Anmerkung WS:</u><br /><references/>"""
         self.text_mock.return_value = before
-        after = """{{REAbschnitt}}
-text
-{{REAutor|Oberhummer.}}
+        after = f"""{ARTICLE_TEMPLATE}
 <u>Anmerkung WS:</u><br /><references/>"""
         self.assertEqual(after, str(RePage(self.page_mock)))
 
