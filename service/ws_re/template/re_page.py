@@ -28,7 +28,7 @@ class RePage:
         re_starts.sort(key=lambda x: x["pos"][0])
         if not re_starts:
             raise ReDatenException("No single start template found.")
-        if not RE_DATEN in re_starts[0]["text"]:
+        if RE_DATEN not in re_starts[0]["text"]:
             raise ReDatenException("First template isn't of type REDaten. Corrupt structure.")
         if len(re_starts) != len(re_author_pos):
             raise ReDatenException(
@@ -156,14 +156,13 @@ class RePage:
         for article in self._article_list:
             if isinstance(article, str):
                 continue
+            if article.article_type == RE_DATEN:
+                splitted_list.append([article])
             else:
-                if article.article_type == RE_DATEN:
-                    splitted_list.append([article])
-                else:
-                    try:
-                        splitted_list[-1].append(article)
-                    except IndexError:
-                        continue
+                try:
+                    splitted_list[-1].append(article)
+                except IndexError:
+                    continue
         return splitted_list
 
     @property
