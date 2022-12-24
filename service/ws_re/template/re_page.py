@@ -121,15 +121,15 @@ class RePage:
         return hash_value
 
     @property
-    def lemma(self):
-        return self.page.title()
+    def lemma(self) -> str:
+        return str(self.page.title())
 
     @property
-    def lemma_without_prefix(self):
+    def lemma_without_prefix(self) -> str:
         return self.lemma[3:]
 
     @property
-    def lemma_as_link(self):
+    def lemma_as_link(self) -> str:
         return f"[[{self.lemma}|{self.lemma_without_prefix}]]"
 
     @property
@@ -141,24 +141,27 @@ class RePage:
         return self.only_articles[0]
 
     @property
-    def splitted_article_list(self) -> List[List[Union[Article, str]]]:
+    def splitted_article_list(self) -> List[List[Article]]:
         """
         For some tasks it is helpful to group the list of articles to groups of articles splitted at header articles.
 
         Example: [RE_Daten, RE_Abschnitt, str, RE_Daten, RE_Daten, str, RE_Abschnitt] ->
-                 [[RE_Daten, RE_Abschnitt, str], [RE_Daten], [RE_Daten, str, RE_Abschnitt]]
+                 [[RE_Daten, RE_Abschnitt], [RE_Daten], [RE_Daten, RE_Abschnitt]]
 
         :return: a list with lists of articles/strings.
         """
-        splitted_list: List[List[Union[Article, str]]] = []
+        splitted_list: List[List[Article]] = []
         for article in self._article_list:
-            if isinstance(article, Article) and article.article_type == RE_DATEN:
-                splitted_list.append([article])
-            else:
-                try:
-                    splitted_list[-1].append(article)
-                except IndexError:
+            if isinstance(article, Article):
+                if article.article_type == RE_DATEN:
                     splitted_list.append([article])
+                else:
+                    try:
+                        splitted_list[-1].append(article)
+                    except IndexError:
+                        continue
+            else:
+                continue
         return splitted_list
 
     @property

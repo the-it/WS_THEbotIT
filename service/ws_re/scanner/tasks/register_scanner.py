@@ -103,10 +103,6 @@ class SCANTask(ReScannerTask):
 
     def _fetch_sort_key(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list[0][0]
-        if not isinstance(article, Article):
-            self.logger.error(f"Type of first entry in splitted article list is wrong "
-                              f"for lemma: {self.re_page.lemma_without_prefix}")
-            return {}, ["sort_key"]
         sort_key = str(article["SORTIERUNG"].value)
         if sort_key:
             return {"sort_key": sort_key}, []
@@ -145,10 +141,6 @@ class SCANTask(ReScannerTask):
 
     def _fetch_short_description(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list[0][0]
-        if not isinstance(article, Article):
-            self.logger.error(f"Type of first entry in splitted article list is wrong "
-                              f"for lemma: {self.re_page.lemma_without_prefix}")
-            return {}, ["short_description"]
         short_description = str(article["KURZTEXT"].value)
         if short_description:
             return {"short_description": short_description}, []
@@ -241,17 +233,16 @@ class SCANTask(ReScannerTask):
         issues_in_articles = set()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
-            if isinstance(article_list[0], Article):
-                update_dict = {}
-                delete_list = []
-                for fetch_function in function_list_properties:
-                    function_dict, function_list = fetch_function(article_list)
-                    update_dict.update(function_dict)
-                    delete_list += function_list
-                band_info = article_list[0]["BAND"].value
-                self_supplement = band_info in issues_in_articles
-                issues_in_articles.add(band_info)
-                self._update_lemma(band_info, delete_list, self_supplement, update_dict)
+            update_dict = {}
+            delete_list = []
+            for fetch_function in function_list_properties:
+                function_dict, function_list = fetch_function(article_list)
+                update_dict.update(function_dict)
+                delete_list += function_list
+            band_info = article_list[0]["BAND"].value
+            self_supplement = band_info in issues_in_articles
+            issues_in_articles.add(band_info)
+            self._update_lemma(band_info, delete_list, self_supplement, update_dict)
 
     def _update_lemma(self,
                       band_info: str,

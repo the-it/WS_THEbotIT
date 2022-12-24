@@ -40,9 +40,9 @@ class TestSCANTask(TaskTestCase):
 }}
 text.
 {{REAutor|OFF}}"""
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(({"wp_link": "w:de:Lemma"}, []), self.task._fetch_wp_link(article))
-        compare(({"ws_link": "s:de:WsLemma"}, []), self.task._fetch_ws_link(article))
+        article_list = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"wp_link": "w:de:Lemma"}, []), self.task._fetch_wp_link(article_list))
+        compare(({"ws_link": "s:de:WsLemma"}, []), self.task._fetch_ws_link(article_list))
 
     def test_fetch_wikipedia_link_no_link(self):
         with mock.patch("service.ws_re.scanner.tasks.register_scanner.SCANTask._get_link_from_wd",
@@ -54,9 +54,9 @@ text.
 {{REAutor|OFF}}"""
             re_page = RePage(self.page_mock)
             self.task.re_page = re_page
-            article = re_page.splitted_article_list[0]
-            compare(({}, ["wp_link"]), self.task._fetch_wp_link(article))
-            compare(({}, ["ws_link"]), self.task._fetch_ws_link(article))
+            article_list = re_page.splitted_article_list[0]
+            compare(({}, ["wp_link"]), self.task._fetch_wp_link(article_list))
+            compare(({}, ["ws_link"]), self.task._fetch_ws_link(article_list))
 
     def test_sortkey(self):
         self.page_mock.text = """{{REDaten
@@ -92,39 +92,39 @@ text.
 text.
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        article = re_page.splitted_article_list[0]
+        article_list = re_page.splitted_article_list[0]
         task = SCANTask(None, self.logger)
         task.re_page = re_page
-        compare(({"lemma": "Aal"}, []), task._fetch_lemma(article))
+        compare(({"lemma": "Aal"}, []), task._fetch_lemma(article_list))
 
     @file_data("test_data/register_scanner/test_proof_read.yml")
     def test_proof_read(self, text, result):
         self.page_mock.title_str = "RE:Aal"
         self.page_mock.text = text
         re_page = RePage(self.page_mock)
-        article = re_page.splitted_article_list[0]
+        article_list = re_page.splitted_article_list[0]
         task = SCANTask(None, self.logger)
         task.re_page = re_page
-        compare(result, task._fetch_proof_read(article))
+        compare(result, task._fetch_proof_read(article_list))
 
     @file_data("test_data/register_scanner/test_redirect.yml")
     def test_redirect(self, text, result):
         task = SCANTask(None, self.logger)
         self.page_mock.text = text
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(result, task._fetch_redirect(article))
+        article_list = RePage(self.page_mock).splitted_article_list[0]
+        compare(result, task._fetch_redirect(article_list))
 
     @file_data("test_data/register_scanner/test_previous.yml")
     def test_previous(self, text, result):
         self.page_mock.text = text
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(result, SCANTask._fetch_previous(article))
+        article_list = RePage(self.page_mock).splitted_article_list[0]
+        compare(result, SCANTask._fetch_previous(article_list))
 
     @file_data("test_data/register_scanner/test_next.yml")
     def test_next(self, text, result):
         self.page_mock.text = text
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(result, SCANTask._fetch_next(article))
+        article_list = RePage(self.page_mock).splitted_article_list[0]
+        compare(result, SCANTask._fetch_next(article_list))
 
     @file_data("test_data/register_scanner/test_short_description.yml")
     def test_short_description(self, text, test_number, result):
@@ -136,8 +136,8 @@ text.
     @file_data("test_data/register_scanner/test_no_creative_height.yml")
     def test_no_creative_height(self, text, result):
         self.page_mock.text = text
-        article = RePage(self.page_mock).splitted_article_list[0]
-        compare(result, SCANTask._fetch_no_creative_height(article))
+        article_list = RePage(self.page_mock).splitted_article_list[0]
+        compare(result, SCANTask._fetch_no_creative_height(article_list))
 
     @file_data("test_data/register_scanner/test_pages_simple.yml")
     def test_pages(self, text, expect):
@@ -146,8 +146,8 @@ text.
         self.page_mock.text = text
         re_page = RePage(self.page_mock)
         task.re_page = re_page
-        article = re_page.splitted_article_list[0]
-        compare(expect, task._fetch_pages(article))
+        article_list = re_page.splitted_article_list[0]
+        compare(expect, task._fetch_pages(article_list))
 
     @file_data("test_data/register_scanner/test_pages_complex.yml")
     def test_pages_complex(self, text, expect):
@@ -157,8 +157,8 @@ text.
             self.page_mock.text = text
             re_page = RePage(self.page_mock)
             task.re_page = re_page
-            article = re_page.splitted_article_list[0]
-            compare(expect, task._fetch_pages(article))
+            article_list = re_page.splitted_article_list[0]
+            compare(expect, task._fetch_pages(article_list))
 
     def test_fetch_from_properties(self):
         with LogCapture():
