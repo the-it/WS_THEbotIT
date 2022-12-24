@@ -203,8 +203,6 @@ class ClaimFactory:
     def _authors_of_first_article(self) -> List[Author]:
         author_list: List[Author] = []
         for article_part in self.re_page.splitted_article_list[0]:
-            if isinstance(article_part, str):
-                continue
             author = article_part.author[0]
             band = self.re_page.first_article["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)

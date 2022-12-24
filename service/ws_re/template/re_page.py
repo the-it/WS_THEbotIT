@@ -28,6 +28,8 @@ class RePage:
         re_starts.sort(key=lambda x: x["pos"][0])
         if not re_starts:
             raise ReDatenException("No single start template found.")
+        if RE_DATEN not in re_starts[0]["text"]:
+            raise ReDatenException("First template isn't of type REDaten. Corrupt structure.")
         if len(re_starts) != len(re_author_pos):
             raise ReDatenException(
                 "The count of start templates doesn't match the count of end templates.")
@@ -121,15 +123,15 @@ class RePage:
         return hash_value
 
     @property
-    def lemma(self):
-        return self.page.title()
+    def lemma(self) -> str:
+        return str(self.page.title())
 
     @property
-    def lemma_without_prefix(self):
+    def lemma_without_prefix(self) -> str:
         return self.lemma[3:]
 
     @property
-    def lemma_as_link(self):
+    def lemma_as_link(self) -> str:
         return f"[[{self.lemma}|{self.lemma_without_prefix}]]"
 
     @property
@@ -141,24 +143,24 @@ class RePage:
         return self.only_articles[0]
 
     @property
-    def splitted_article_list(self) -> List[List[Union[Article, str]]]:
+    def splitted_article_list(self) -> List[List[Article]]:
         """
         For some tasks it is helpful to group the list of articles to groups of articles splitted at header articles.
 
         Example: [RE_Daten, RE_Abschnitt, str, RE_Daten, RE_Daten, str, RE_Abschnitt] ->
-                 [[RE_Daten, RE_Abschnitt, str], [RE_Daten], [RE_Daten, str, RE_Abschnitt]]
+                 [[RE_Daten, RE_Abschnitt], [RE_Daten], [RE_Daten, RE_Abschnitt]]
 
         :return: a list with lists of articles/strings.
         """
-        splitted_list: List[List[Union[Article, str]]] = []
+        splitted_list: List[List[Article]] = []
         for article in self._article_list:
-            if isinstance(article, Article) and article.article_type == RE_DATEN:
+            if isinstance(article, str):
+                continue
+            if article.article_type == RE_DATEN:
                 splitted_list.append([article])
             else:
-                try:
-                    splitted_list[-1].append(article)
-                except IndexError:
-                    splitted_list.append([article])
+                # not a string or a REDaten template append to last added sublist
+                splitted_list[-1].append(article)
         return splitted_list
 
     @property
