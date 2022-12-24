@@ -159,10 +159,8 @@ class RePage:
             if article.article_type == RE_DATEN:
                 splitted_list.append([article])
             else:
-                try:
-                    splitted_list[-1].append(article)
-                except IndexError:
-                    continue
+                # not a string or a REDaten template append to last added sublist
+                splitted_list[-1].append(article)
         return splitted_list
 
     @property
