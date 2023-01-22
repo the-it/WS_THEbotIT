@@ -72,6 +72,8 @@ class ReRegisterPrinter(CanonicalBot):
     def _print_volume(self):
         self.logger.info("Print volume register.")
         for register in self.registers.volumes.values():
+            if register.volume.name == "R":
+                continue
             self.logger.debug(register)
             save_if_changed(Page(self.wiki,
                                  f"Paulys Realencyclopädie der classischen "
