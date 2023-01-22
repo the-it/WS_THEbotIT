@@ -26,11 +26,12 @@ class ReRegisterPrinter(CanonicalBot):
         for register in self.registers.author:
             if register.author.last_name:
                 self.logger.debug(register)
-                save_if_changed(Page(self.wiki,
-                                     f"Paulys Realencyclopädie der classischen "
-                                     f"Altertumswissenschaft/Register/{register.author.name}"),
-                                register.get_register_str(),
-                                "Register aktualisiert")
+                if register.author.name != "Hans Gärtner":
+                    save_if_changed(Page(self.wiki,
+                                         f"Paulys Realencyclopädie der classischen "
+                                         f"Altertumswissenschaft/Register/{register.author.name}"),
+                                    register.get_register_str(),
+                                    "Register aktualisiert")
                 overview.append(register.overview_line)
         overview.append("|}")
         save_if_changed(Page(self.wiki,
