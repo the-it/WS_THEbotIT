@@ -82,6 +82,53 @@ class TestAuthorRegister(BaseTestRegister):
 |}
 [[Kategorie:RE:Register|Abel, Herman]]"""
         compare(expected_table, abel_register.get_register_str())
+        expected_table_less_details = """{{RERegister
+|AUTHOR=Herman Abel
+|SUM=4
+|FER=2
+|KOR=1
+|NGE=0
+|VOR=0
+|UNK=1
+}}
+
+{|class="wikitable sortable"
+!Artikel
+
+!Wikilinks
+!Band
+!Seite
+
+!Stat
+|-
+|data-sort-value="aba 001"|[[RE:Aba 1|'''{{Anker2|Aba 1}}''']]
+||
+||I,1
+|[http://elexikon.ch/RE/I,1_5.png 4]
+|style="background:#AA0000"|UNK
+|-
+|data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
+||
+||I,1
+|[http://elexikon.ch/RE/I,1_5.png 4]
+|style="background:#556B2F"|KOR
+|-
+|rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
+|rowspan=2|
+|rowspan=2|I,1
+|[http://elexikon.ch/RE/I,1_5.png 4]
+|rowspan=2 style="background:#669966"|FER
+|-
+|[http://elexikon.ch/RE/I,1_5.png 4]-5
+|-
+|data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
+||
+||III,1
+|[http://elexikon.ch/RE/III,1_5.png 4]
+|style="background:#669966"|FER
+|}
+[[Kategorie:RE:Register|Abel, Herman]]"""
+        compare(expected_table_less_details, abel_register.get_register_str(print_details=False))
 
     def test_overview_line(self):
         abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)

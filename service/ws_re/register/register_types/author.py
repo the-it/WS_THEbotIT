@@ -55,8 +55,10 @@ class AuthorRegister(Register):
     def _get_footer(self) -> str:
         return f"[[Kategorie:RE:Register|{self.author.last_name}, {self.author.first_name}]]"
 
-    def get_register_str(self) -> str:
-        return f"{self._get_header()}\n{self._get_table()}\n{self._get_footer()}"
+    def get_register_str(self, print_details: bool = True) -> str:
+        return f"{self._get_header()}" \
+               f"\n{self._get_table(print_description=print_details, print_author=print_details)}" \
+               f"\n{self._get_footer()}"
 
     @property
     def overview_line(self):

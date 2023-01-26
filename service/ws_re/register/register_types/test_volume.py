@@ -80,6 +80,41 @@ class TestRegister(BaseTestRegister):
 [[Kategorie:RE:Register|!]]"""
         compare(expected_table, register.get_register_str())
 
+        expected_table_less_details = """{{RERegister
+|BAND=I,1
+|VG=
+|NF=I,2
+|SUM=2
+|FER=0
+|KOR=1
+|NGE=0
+|VOR=1
+|UNK=0
+}}
+
+{|class="wikitable sortable"
+!Artikel
+
+!Wikilinks
+
+!Seite
+
+!Stat
+|-
+|data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
+||
+|[http://elexikon.ch/RE/I,1_1.png 1]-4
+|style="background:#9FC859"|2069
+|-
+|data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
+||
+|[http://elexikon.ch/RE/I,1_5.png 4]
+|style="background:#556B2F"|KOR
+|}
+[[Kategorie:RE:Register|!]]"""
+
+        compare(expected_table_less_details, register.get_register_str(print_details=False))
+
     def test_persist(self):
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())

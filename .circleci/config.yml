@@ -5,6 +5,7 @@ version: 2.1
 restore_cache: &restore_cache
   restore_cache:
     keys:
+      - v17-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
       - v17-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
       - v17-dependencies-{{ .Environment.CIRCLE_BRANCH }}-
 
@@ -12,7 +13,7 @@ save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v17-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+    key: v17-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
 
 install_dependencies: &install_dependencies
   run:
