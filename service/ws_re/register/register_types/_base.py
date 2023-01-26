@@ -39,14 +39,14 @@ class Register(ABC):
             return_lemmas.append(last_lemmas)
         return return_lemmas
 
-    def _get_table(self, print_volume: bool = True) -> str:
+    def _get_table(self, print_volume: bool = True, print_description: bool = True, print_author: bool = True) -> str:
         header = f"""{{|class="wikitable sortable"
 !Artikel
-!Kurztext
+{'!Kurztext' if print_description else ''}
 !Wikilinks
 {'!Band' if print_volume else ''}
 !Seite
-!Autor
+{'!Autor' if print_author else ''}
 !Stat"""
         table = [header]
         for lemmas in self.squash_lemmas(self._lemmas):
@@ -55,7 +55,7 @@ class Register(ABC):
             for lemma in lemmas:
                 # if there are no chapters ... one line must be added no madder what
                 chapter_sum += max(len(lemma.chapters), 1)
-                table_rows.append(lemma.get_table_row(print_volume=print_volume))
+                table_rows.append(lemma.get_table_row(print_volume=print_volume, print_author=print_author))
             # strip |-/n form the first line it is later replaced by the lemma line
             table_rows[0] = table_rows[0][3:]
             # take generell information from first template (no supplement)
@@ -63,12 +63,15 @@ class Register(ABC):
             multi_chapter = ""
             if chapter_sum > 1:
                 multi_chapter = f"rowspan={chapter_sum}"
+            multi_chapter_items = ["|-\n|"]
+            multi_chapter_items.append(
+                f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip())
+            if print_description:
+                multi_chapter_items.append(f"\n|{multi_chapter}|{lemma.short_description}")
             interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
-            table.append("".join(("|-\n|",
-                                  f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip(),
-                                  f"\n|{multi_chapter}|{lemma.short_description}",
-                                  f"\n|{multi_chapter + '' if multi_chapter else ''}"
-                                  f"{interwiki_sort_key}|{interwiki_links}")))
+            multi_chapter_items.append(
+                f"\n|{multi_chapter + '' if multi_chapter else ''}{interwiki_sort_key}|{interwiki_links}")
+            table.append("".join(multi_chapter_items))
             table += table_rows
         table.append("|}")
         return "\n".join(table)

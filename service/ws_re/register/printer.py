@@ -25,13 +25,11 @@ class ReRegisterPrinter(CanonicalBot):
                     "\n!Autor\n!Artikel\n!colspan=\"2\"|Erschließungsgrad"]
         for register in self.registers.author:
             if register.author.last_name:
-                self.logger.debug(register)
-                if register.author.name != "Hans Gärtner":
-                    save_if_changed(Page(self.wiki,
-                                         f"Paulys Realencyclopädie der classischen "
-                                         f"Altertumswissenschaft/Register/{register.author.name}"),
-                                    register.get_register_str(),
-                                    "Register aktualisiert")
+                save_if_changed(Page(self.wiki,
+                                     f"Paulys Realencyclopädie der classischen "
+                                     f"Altertumswissenschaft/Register/{register.author.name}"),
+                                register.get_register_str(print_details=(register.author.name != "Hans Gärtner")),
+                                "Register aktualisiert")
                 overview.append(register.overview_line)
         overview.append("|}")
         save_if_changed(Page(self.wiki,
@@ -73,13 +71,11 @@ class ReRegisterPrinter(CanonicalBot):
     def _print_volume(self):
         self.logger.info("Print volume register.")
         for register in self.registers.volumes.values():
-            if register.volume.name == "R":
-                continue
             self.logger.debug(register)
             save_if_changed(Page(self.wiki,
                                  f"Paulys Realencyclopädie der classischen "
                                  f"Altertumswissenschaft/Register/{register.volume.name}"),
-                            register.get_register_str(),
+                            register.get_register_str(print_details=(register.volume.name != "R")),
                             "Register aktualisiert")
 
 

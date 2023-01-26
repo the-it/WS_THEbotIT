@@ -211,7 +211,7 @@ class Lemma:
                     return False
         return True
 
-    def get_table_row(self, print_volume: bool = False) -> str:
+    def get_table_row(self, print_volume: bool = False, print_author: bool = True) -> str:
         row_string = ["|-"]
         multi_row = ""
         if len(self._chapters) > 1:
@@ -222,7 +222,8 @@ class Lemma:
         if self._chapters:
             for idx, chapter in enumerate(self._chapters):
                 row_string.append(self._get_pages(chapter))
-                row_string.append(self._get_author_str(chapter))
+                if print_author:
+                    row_string.append(self._get_author_str(chapter))
                 if idx == 0:
                     row_string.append(f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip())
                 row_string.append("-")
