@@ -7,22 +7,20 @@ clean-pyc :
 
 # dependency management
 
-install_pip :
+install_pip_tools :
 	echo "########## UPDATE PIP ##########"
-	pip install --upgrade pip
+	pip install --upgrade pip pip-tools setuptools wheel
 
-pip3 : install_pip
+pip3 : install_pip_tools
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt
 
-pip3-dev : install_pip
+pip3-dev : install_pip_tools
 	echo "##### INSTALL REQUIREMENTS #####"
 	pip3 install -r requirements.txt -r requirements-dev.txt
 
-update_pip3 : install_pip
+update_pip3 : install_pip_tools
 	echo "##### UPDATE REQUIREMENTS ######"
-	pip install pip-tools -U
-	pip install wheel -U
 	rm requirements.txt requirements-dev.txt || true
 	pip-compile --output-file requirements.txt requirements.in
 	pip-compile --output-file requirements-dev.txt requirements-dev.in
