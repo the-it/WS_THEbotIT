@@ -4,27 +4,27 @@
 #
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
-astroid==2.13.3
+astroid==2.14.1
     # via pylint
 bandit==1.7.4
     # via -r requirements-dev.in
-beautifulsoup4==4.11.1
+beautifulsoup4==4.11.2
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.26.57
+boto3==1.26.66
     # via
     #   -c requirements.txt
     #   moto
-boto3-stubs[essential]==1.26.57
+boto3-stubs[essential]==1.26.66
     # via -r requirements-dev.in
-botocore==1.29.57
+botocore==1.29.66
     # via
     #   -c requirements.txt
     #   boto3
     #   moto
     #   s3transfer
-botocore-stubs==1.29.57
+botocore-stubs==1.29.66
     # via boto3-stubs
 certifi==2022.12.7
     # via
@@ -46,7 +46,7 @@ coverage==7.1.0
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==39.0.0
+cryptography==39.0.1
     # via moto
 ddt==1.6.0
     # via -r requirements-dev.in
@@ -72,9 +72,9 @@ idna==3.4
     # via
     #   -c requirements.txt
     #   requests
-internetarchive==3.2.0
+internetarchive==3.3.0
     # via -r requirements-dev.in
-isort==5.11.4
+isort==5.12.0
     # via pylint
 jinja2==3.1.2
     # via moto
@@ -97,25 +97,25 @@ mccabe==0.7.0
     # via
     #   flake8
     #   pylint
-moto==4.1.1
+moto==4.1.2
     # via -r requirements-dev.in
-mypy==0.991
+mypy==1.0.0
     # via -r requirements-dev.in
-mypy-boto3-cloudformation==1.26.57
+mypy-boto3-cloudformation==1.26.60
     # via boto3-stubs
 mypy-boto3-dynamodb==1.26.24
     # via boto3-stubs
-mypy-boto3-ec2==1.26.57
+mypy-boto3-ec2==1.26.63
     # via boto3-stubs
 mypy-boto3-lambda==1.26.55
     # via boto3-stubs
 mypy-boto3-rds==1.26.47
     # via boto3-stubs
-mypy-boto3-s3==1.26.0.post1
+mypy-boto3-s3==1.26.62
     # via boto3-stubs
 mypy-boto3-sqs==1.26.0.post1
     # via boto3-stubs
-mypy-extensions==0.4.3
+mypy-extensions==1.0.0
     # via mypy
 nose2==0.12.0
     # via -r requirements-dev.in
@@ -127,7 +127,7 @@ patool==1.12
     # via -r requirements-dev.in
 pbr==5.11.1
     # via stevedore
-platformdirs==2.6.2
+platformdirs==3.0.0
     # via pylint
 pycodestyle==2.10.0
     # via flake8
@@ -137,7 +137,7 @@ pyfiglet==0.8.post1
     # via -r requirements-dev.in
 pyflakes==3.0.1
     # via flake8
-pylint==2.15.10
+pylint==2.16.1
     # via -r requirements-dev.in
 pyparsing==3.0.9
     # via packaging
@@ -189,7 +189,7 @@ soupsieve==2.3.2.post1
     #   beautifulsoup4
 stevedore==4.1.1
     # via bandit
-testfixtures==7.0.4
+testfixtures==7.1.0
     # via -r requirements-dev.in
 toml==0.10.2
     # via
@@ -205,13 +205,13 @@ types-awscrt==0.16.4
     #   types-s3transfer
 types-freezegun==1.1.10
     # via -r requirements-dev.in
-types-requests==2.28.11.8
+types-requests==2.28.11.12
     # via -r requirements-dev.in
 types-s3transfer==0.6.0.post5
     # via boto3-stubs
-types-toml==0.10.8.1
+types-toml==0.10.8.3
     # via responses
-types-urllib3==1.26.25.4
+types-urllib3==1.26.25.5
     # via types-requests
 typing-extensions==4.4.0
     # via
