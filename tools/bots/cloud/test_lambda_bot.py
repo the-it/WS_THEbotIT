@@ -1,4 +1,4 @@
-# pylint: disable=protected-access,no-member,no-self-use
+# pylint: disable=protected-access,no-member,no-self-use,broad-exception-raised
 import time
 from datetime import timedelta, datetime
 from unittest import mock

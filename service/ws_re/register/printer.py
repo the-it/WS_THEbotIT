@@ -28,7 +28,7 @@ class ReRegisterPrinter(CanonicalBot):
                 save_if_changed(Page(self.wiki,
                                      f"Paulys Realencyclopädie der classischen "
                                      f"Altertumswissenschaft/Register/{register.author.name}"),
-                                register.get_register_str(print_details=(register.author.name != "Hans Gärtner")),
+                                register.get_register_str(print_details=register.author.name != "Hans Gärtner"),
                                 "Register aktualisiert")
                 overview.append(register.overview_line)
         overview.append("|}")
@@ -75,7 +75,7 @@ class ReRegisterPrinter(CanonicalBot):
             save_if_changed(Page(self.wiki,
                                  f"Paulys Realencyclopädie der classischen "
                                  f"Altertumswissenschaft/Register/{register.volume.name}"),
-                            register.get_register_str(print_details=(register.volume.name != "R")),
+                            register.get_register_str(print_details=register.volume.name != "R"),
                             "Register aktualisiert")
 
 

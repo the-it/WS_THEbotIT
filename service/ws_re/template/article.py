@@ -184,6 +184,10 @@ class Article(Mapping):
             raise ReDatenException("Author-Template has the wrong structure.") from error
         properties_dict = cls._extract_properties(re_start.parameters)
         author_name = re_author.parameters[0]["value"]
+        # template has 3rd parameter for absolute name assignment
+        with contextlib.suppress(IndexError):
+            if re_author.parameters[2]["value"]:
+                author_name = re_author.parameters[2]["value"]
         try:
             author_issue = re_author.parameters[1]["value"]
         except IndexError:

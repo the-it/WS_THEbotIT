@@ -49,3 +49,16 @@ start_end_same:
   expect:
     - chapters: [{"start": 264, "end": 264, "author": "Autor."}]
     - []
+
+author_absolut:
+  text: |
+    {{REDaten
+    |BAND=S I
+    |SPALTE_START=264
+    |SPALTE_END=264
+    }}
+    text.
+    {{REAutor|Autor.||Absolute Name}}
+  expect:
+    - chapters: [{"start": 264, "end": 264, "author": "Absolute Name"}]
+    - []

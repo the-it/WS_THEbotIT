@@ -1,4 +1,4 @@
-# pylint: disable=protected-access
+# pylint: disable=protected-access,broad-exception-raised
 import json
 import os
 import time

@@ -1,3 +1,4 @@
+# pylint: disable=broad-exception-raised
 from datetime import datetime
 from unittest import TestCase, mock
 
