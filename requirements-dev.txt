@@ -46,7 +46,7 @@ coverage==7.1.0
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==39.0.0
+cryptography==39.0.1
     # via moto
 ddt==1.6.0
     # via -r requirements-dev.in
