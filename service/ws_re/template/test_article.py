@@ -343,3 +343,8 @@ text
         article = Article()
         article["TODESJAHR"].value = "bla1234"
         self.assertTrue(article.common_free)
+
+    def test_absolute_author_name(self):
+        article_text = "{{REDaten\n|Nachtrag=OFF|Ksch=OFF\n}}\ntext\n{{REAutor|Autor.||Absolute Name}}"
+        article = Article.from_text(article_text)
+        self.assertEqual("Absolute Name", article.author[0])
