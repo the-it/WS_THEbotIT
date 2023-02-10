@@ -208,7 +208,7 @@ class SCANTask(ReScannerTask):
     @staticmethod
     def _create_chapter_dict(article: Article, spalte_end: int, spalte_start: int) -> ChapterDict:
         single_article_dict: ChapterDict = {"start": spalte_start, "end": spalte_end}
-        author = article.author[0]
+        author = article.author.identification
         if author.lower().strip() != "off":
             single_article_dict["author"] = author
         return single_article_dict

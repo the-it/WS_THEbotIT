@@ -6,6 +6,7 @@ from testfixtures import compare
 
 from service.ws_re.template import ReDatenException, ARTICLE_TEMPLATE
 from service.ws_re.template.article import Article
+from service.ws_re.template.re_author import REAuthor
 
 
 class TestReArticle(TestCase):
@@ -35,15 +36,12 @@ class TestReArticle(TestCase):
             Article(text=1)
 
     def test_set_author(self):
-        self.assertEqual(self.article.author, ("", ""))
-        self.article.author = "bla"
-        self.assertEqual(self.article.author, ("bla", ""))
-        article = Article(author=("blub", "II,2"))
-        self.assertEqual(article.author, ("blub", "II,2"))
-
-    def test_wrong_type_author(self):
-        with self.assertRaises(ReDatenException):
-            Article(author=1)
+        self.assertEqual(self.article.author, REAuthor(""))
+        self.article.author.short_string = "bla"
+        self.assertEqual(self.article.author, REAuthor("bla"))
+        article = Article(author=REAuthor("blub", "II,2"))
+        compare(article.author.short_string, "blub")
+        compare(article.author.issue, "II,2")
 
     def test_properties_access(self):
         self.assertFalse(self.article["NACHTRAG"].value)
@@ -89,7 +87,7 @@ class TestReArticle(TestCase):
     def test_from_text(self):
         article_text = "{{REDaten\n|BAND=III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
         article = Article.from_text(article_text)
-        self.assertEqual(article.author, ("Some Author.", ""))
+        self.assertEqual(article.author, REAuthor("Some Author."))
         self.assertEqual(article.text, "text")
         self.assertEqual(article.article_type, "REDaten")
         self.assertEqual(article["BAND"].value, "III")
@@ -188,7 +186,7 @@ class TestReArticle(TestCase):
         self.assertEqual(article.article_type, "REDaten")
 
     def test_to_text_simple(self):
-        self.article.author = "Autor."
+        self.article.author = REAuthor("Autor.")
         self.article.text = "text"
         self.assertEqual(ARTICLE_TEMPLATE, self.article.to_text())
 
@@ -196,7 +194,7 @@ class TestReArticle(TestCase):
         text = """{{REAbschnitt}}
 text
 {{REAutor|Autor.}}"""
-        self.article.author = "Autor."
+        self.article.author = REAuthor("Autor.")
         self.article.text = "text"
         self.article.article_type = "REAbschnitt"
         self.assertEqual(text, self.article.to_text())
@@ -206,7 +204,7 @@ text
                                .replace("SPALTE_START=", "SPALTE_START=1000")\
                                .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
         self.article.text = "text"
-        self.article.author = "Autor."
+        self.article.author = REAuthor("Autor.")
         self.article["BAND"].value = "II"
         self.article["SPALTE_START"].value = "1000"
         self.article["WIKIPEDIA"].value = "Test"
@@ -299,7 +297,7 @@ text
     def test_bug_issue_number_deleted_from_author(self):
         article_text = "{{REAbschnitt}}\ntext\n{{REAutor|Some Author.|I,1}}"
         article = Article.from_text(article_text)
-        compare("I,1", article.author[1])
+        compare("I,1", article.author.issue)
         self.assertIn("{{REAutor|Some Author.|I,1}}", article.to_text())
 
     def test_bug_issue_OFF_deleted_from_author(self):
@@ -347,5 +345,5 @@ text
     def test_absolute_author_name(self):
         article_text = "{{REDaten\n|Nachtrag=OFF|Ksch=OFF\n}}\ntext\n{{REAutor|Autor.||Absolute Name}}"
         article = Article.from_text(article_text)
-        self.assertEqual("Absolute Name", article.author[0])
+        self.assertEqual("Absolute Name", article.author.full_identification)
         self.assertTrue("{{REAutor|Autor.||Absolute Name}}" in article.to_text())

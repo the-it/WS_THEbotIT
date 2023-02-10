@@ -1,10 +1,11 @@
 from contextlib import suppress
 from dataclasses import dataclass
 
+from service.ws_re.template import RE_AUTHOR
 from tools.template_handler import TemplateHandler
 
 
-@dataclass
+@dataclass(unsafe_hash=True)
 class REAuthor:
     short_string: str
     issue: str = ""
@@ -21,10 +22,16 @@ class REAuthor:
             full_identification = handler.parameters[2]["value"]
         return cls(short_string, issue, full_identification)
 
+    @property
+    def identification(self):
+        if self.full_identification:
+            return self.full_identification
+        return self.short_string
+
     def __str__(self):
         if self.full_identification:
-            return f"{{{{REAutor|{self.short_string}|{self.issue}|{self.full_identification}}}}}"
+            return f"{{{{{RE_AUTHOR}|{self.short_string}|{self.issue}|{self.full_identification}}}}}"
         if self.issue:
-            return f"{{{{REAutor|{self.short_string}|{self.issue}}}}}"
-        return f"{{{{REAutor|{self.short_string}}}}}"
+            return f"{{{{{RE_AUTHOR}|{self.short_string}|{self.issue}}}}}"
+        return f"{{{{{RE_AUTHOR}|{self.short_string}}}}}"
 
