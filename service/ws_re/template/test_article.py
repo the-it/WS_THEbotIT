@@ -348,3 +348,4 @@ text
         article_text = "{{REDaten\n|Nachtrag=OFF|Ksch=OFF\n}}\ntext\n{{REAutor|Autor.||Absolute Name}}"
         article = Article.from_text(article_text)
         self.assertEqual("Absolute Name", article.author[0])
+        self.assertTrue("{{REAutor|Autor.||Absolute Name}}" in article.to_text())
