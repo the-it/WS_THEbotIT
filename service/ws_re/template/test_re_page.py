@@ -6,6 +6,7 @@ from testfixtures import compare
 
 from service.ws_re.template import ReDatenException, ARTICLE_TEMPLATE
 from service.ws_re.template.article import Article
+from service.ws_re.template.re_author import REAuthor
 from service.ws_re.template.re_page import RePage
 from tools.test import real_wiki_test
 
@@ -29,7 +30,7 @@ class TestRePage(TestCase):
         self.assertTrue(isinstance(re_article, Article))
         self.assertEqual("text", re_article.text)
         self.assertEqual("REDaten", re_article.article_type)
-        self.assertEqual(("Autor.", ""), re_article.author)
+        self.assertEqual(REAuthor("Autor."), re_article.author)
 
     def test_double_article(self):
         self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\n" \

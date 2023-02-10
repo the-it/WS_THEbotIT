@@ -1,12 +1,13 @@
 from collections.abc import Mapping
 import contextlib
 from datetime import datetime
-from typing import Union, Tuple, Generator, Optional, List
+from typing import Generator, Optional, List
 
 from service.ws_re import public_domain
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
 from service.ws_re.template._typing import KeyValuePair, ArticleProperties
 from service.ws_re.template.property import Property
+from service.ws_re.template.re_author import REAuthor
 from tools.template_finder import TemplateFinder
 from tools.template_handler import TemplateHandler, TemplateHandlerException
 
@@ -35,12 +36,11 @@ class Article(Mapping):
                  article_type: str = RE_DATEN,
                  re_daten_properties: Optional[ArticleProperties] = None,
                  text: str = "",
-                 author: Tuple[str, str] = ("", "")):
+                 author: REAuthor = REAuthor("")):
         self._article_type = ""
         self.article_type = article_type
         self._text = ""
         self.text = text
-        self._author = ("", "")
         self.author = author
         self._properties = (Property("BAND", ""),
                             Property("SPALTE_START", ""),
@@ -62,7 +62,7 @@ class Article(Mapping):
         self._init_properties(re_daten_properties)
 
     def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} - type:{self._article_type}, author:{self._author}, issue:{self['BAND']}>"
+        return f"<{self.__class__.__name__} - type:{self._article_type}, author:{self.author}, issue:{self['BAND']}>"
 
     @property
     def article_type(self) -> str:
@@ -86,20 +86,6 @@ class Article(Mapping):
             self._text = new_value
         else:
             raise ReDatenException("Property text must be a string.")
-
-    @property
-    def author(self) -> Tuple[str, str]:
-        return self._author
-
-    @author.setter
-    def author(self, new_value: Union[Tuple[str, str], str]):
-        if isinstance(new_value, str):
-            self._author = (new_value, "")
-        elif isinstance(new_value, tuple) and (len(new_value) == 2) and \
-                isinstance(new_value[0], str) and isinstance(new_value[1], str):
-            self._author = new_value
-        else:
-            raise ReDatenException("Property author must be a tuple of strings or one string.")
 
     @property
     def common_free(self) -> bool:
@@ -142,7 +128,7 @@ class Article(Mapping):
         return hash(self._article_type) \
             + (hash(self._properties) << 1) \
             + (hash(self._text) << 2) \
-            + (hash(self._author) << 3)
+            + (hash(self.author) << 3)
 
     @classmethod
     def from_text(cls, article_text):
@@ -179,24 +165,15 @@ class Article(Mapping):
         except TemplateHandlerException as error:
             raise ReDatenException("Start-Template has the wrong structure.") from error
         try:
-            re_author = TemplateHandler(find_re_author[0]["text"])
+            re_author = REAuthor.from_template(find_re_author[0]["text"])
         except TemplateHandlerException as error:
             raise ReDatenException("Author-Template has the wrong structure.") from error
         properties_dict = cls._extract_properties(re_start.parameters)
-        author_name = re_author.parameters[0]["value"]
-        # template has 3rd parameter for absolute name assignment
-        with contextlib.suppress(IndexError):
-            if re_author.parameters[2]["value"]:
-                author_name = re_author.parameters[2]["value"]
-        try:
-            author_issue = re_author.parameters[1]["value"]
-        except IndexError:
-            author_issue = ""
         return Article(article_type=re_start.title,
                        re_daten_properties=properties_dict,
                        text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]]
                        .strip(),
-                       author=(author_name, author_issue))
+                       author=re_author)
 
     @classmethod
     def _extract_properties(cls, parameters: List[KeyValuePair]) -> ArticleProperties:
@@ -259,11 +236,5 @@ class Article(Mapping):
         else:
             content.append(f"{{{{{RE_ABSCHNITT}}}}}")
         content.append(self.text)
-        if self.author[0] == "OFF":
-            author = f"{{{{{RE_AUTHOR}|{self.author[0]}}}}}"
-        elif self.author[1]:
-            author = f"{{{{{RE_AUTHOR}|{self.author[0]}|{self.author[1]}}}}}"
-        else:
-            author = f"{{{{{RE_AUTHOR}|{self.author[0]}}}}}"
-        content.append(author)
+        content.append(str(self.author))
         return "\n".join(content)
