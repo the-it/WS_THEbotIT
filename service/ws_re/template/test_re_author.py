@@ -12,6 +12,7 @@ class TestREAuthor(TestCase):
         compare("Nagl.", author_template.short_string)
         compare("", author_template.issue)
         compare("", author_template.full_identification)
+        compare("Nagl.", author_template.identification)
         compare(string_template, str(author_template))
 
     def test_from_template_issue(self):
@@ -20,6 +21,7 @@ class TestREAuthor(TestCase):
         compare("Nagl.", author_template.short_string)
         compare("IV,1", author_template.issue)
         compare("", author_template.full_identification)
+        compare("Nagl.", author_template.identification)
         compare(string_template, str(author_template))
 
     def test_from_template_full_identification(self):
@@ -28,6 +30,7 @@ class TestREAuthor(TestCase):
         compare("Nagl.", author_template.short_string)
         compare("", author_template.issue)
         compare("Albert_Nagl", author_template.full_identification)
+        compare("Albert_Nagl", author_template.identification)
         compare(string_template, str(author_template))
 
     def test_from_template_full(self):
@@ -36,4 +39,5 @@ class TestREAuthor(TestCase):
         compare("Nagl.", author_template.short_string)
         compare("IV,1", author_template.issue)
         compare("Albert_Nagl", author_template.full_identification)
+        compare("Albert_Nagl", author_template.identification)
         compare(string_template, str(author_template))
