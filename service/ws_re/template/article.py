@@ -1,7 +1,7 @@
 from collections.abc import Mapping
 import contextlib
 from datetime import datetime
-from typing import Union, Tuple, Generator, Optional, List
+from typing import Generator, Optional, List
 
 from service.ws_re import public_domain
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
@@ -62,7 +62,7 @@ class Article(Mapping):
         self._init_properties(re_daten_properties)
 
     def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} - type:{self._article_type}, author:{self._author}, issue:{self['BAND']}>"
+        return f"<{self.__class__.__name__} - type:{self._article_type}, author:{self.author}, issue:{self['BAND']}>"
 
     @property
     def article_type(self) -> str:

@@ -34,4 +34,3 @@ class REAuthor:
         if self.issue:
             return f"{{{{{RE_AUTHOR}|{self.short_string}|{self.issue}}}}}"
         return f"{{{{{RE_AUTHOR}|{self.short_string}}}}}"
-
