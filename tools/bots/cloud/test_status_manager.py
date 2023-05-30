@@ -31,7 +31,7 @@ class TestStatusManager(TestCloudBase):
         status_manager_last_runs = StatusManager("TestBot")
         compare(2, len(status_manager_last_runs.last_runs))
         # newest entry first in array
-        compare(datetime(year=2001, month=1, day=1, minute=4), status_manager_last_runs.last_runs[0].start_time)
+        compare(datetime(year=2001, month=1, day=1, minute=6), status_manager_last_runs.last_runs[0].start_time)
         compare(datetime(year=2001, month=1, day=1, minute=0), status_manager_last_runs.last_runs[1].start_time)
 
     @freeze_time("2001-01-01", auto_tick_seconds=60)
@@ -52,7 +52,7 @@ class TestStatusManager(TestCloudBase):
         status_manager_last_runs = StatusManager("TestBot")
         compare(2, len(status_manager_last_runs.last_finished_runs))
         # newest entry first in array
-        compare(datetime(year=2001, month=1, day=1, minute=6),
+        compare(datetime(year=2001, month=1, day=1, minute=9),
                 status_manager_last_runs.last_finished_runs[0].start_time)
         compare(datetime(year=2001, month=1, day=1, minute=0),
                 status_manager_last_runs.last_finished_runs[1].start_time)
@@ -68,7 +68,7 @@ class TestStatusManager(TestCloudBase):
         status_manager_last_runs = StatusManager("TestBot")
         compare(2, len(status_manager_last_runs.last_successful_runs))
         # newest entry first in array
-        compare(datetime(year=2001, month=1, day=1, minute=8),
+        compare(datetime(year=2001, month=1, day=1, minute=12),
                 status_manager_last_runs.last_successful_runs[0].start_time)
         compare(datetime(year=2001, month=1, day=1, minute=0),
                 status_manager_last_runs.last_successful_runs[1].start_time)
