@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from pywikibot import Site, Page
+from pywikibot import Site, Page, exceptions
 
 from tools.bots import BotException
 from tools.bots.pi import CanonicalBot
@@ -47,9 +47,12 @@ class Protect(CanonicalBot):
             self.logger.debug(f"check lemma {lemma.title()} for protection")
             if not lemma.protection():
                 self.logger.debug(f"protect lemma {lemma.title()}")
-                protected_lemmas += 1
-                lemma.protect(reason="Schutz fertiger Seiten",
-                              protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
+                try:
+                    lemma.protect(reason="Schutz fertiger Seiten",
+                                  protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
+                    protected_lemmas += 1
+                except exceptions.APIError as error:
+                    self.logger.error(f"Wasn't able to protect {lemma.title()}, error was {error}")
             if self._watchdog():
                 self.logger.info(f"checked {idx + 1} lemmas")
                 self.logger.info(f"{protected_lemmas} lemmas protected")
