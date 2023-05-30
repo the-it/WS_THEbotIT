@@ -1,4 +1,3 @@
-from datetime import datetime
 from typing import Dict, List, Optional
 
 import pywikibot
@@ -47,46 +46,35 @@ class DATATask(ReScannerTask):
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
 
     def task(self):
-        start_time = datetime.now()
         try:
-            try:
-                # edit existing wikidata item
-                data_item: pywikibot.ItemPage = self.re_page.page.data_item()
-                data_item.get()
-                item_dict_add = {}
-                # process claims, if they differ
-                claims_to_change = self._get_claimes_to_change(data_item)
-                if claims_to_change["add"]:
-                    item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
-                # process if non claims differ
-                non_claims = NonClaims(self.re_page)
-                if non_claims.labels_and_sitelinks_has_changed(data_item.toJSON()):
-                    item_dict_add.update(non_claims.dict)
-                # if a diff exists alter the wikidata item
-                if item_dict_add:
-                    data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
-                    self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
-                claims_to_remove = claims_to_change["remove"]
-                if claims_to_remove:
-                    # if there are claims, that aren't up to date remove them
-                    data_item.removeClaims(claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
-            except pywikibot.exceptions.NoPageError:
-                # create a new one from scratch
-                data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
-                claims_to_change = self._get_claimes_to_change(None)
-                item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
-                item_dict_add.update(NonClaims(self.re_page).dict)
-                data_item.editEntity(item_dict_add)
-                self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
-        except pywikibot.exceptions.MaxlagTimeoutError:
-            self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
-                              f", after {datetime.now() - start_time}")
-        except pywikibot.exceptions.OtherPageSaveError as exception:
-            if isinstance(exception.reason, pywikibot.exceptions.MaxlagTimeoutError):
-                self.logger.debug(f"MaxlagTimeoutError for {self.re_page.lemma_as_link}"
-                                  f", after {datetime.now() - start_time}")
-            else:
-                raise
+            # edit existing wikidata item
+            data_item: pywikibot.ItemPage = self.re_page.page.data_item()
+            data_item.get()
+            item_dict_add = {}
+            # process claims, if they differ
+            claims_to_change = self._get_claimes_to_change(data_item)
+            if claims_to_change["add"]:
+                item_dict_add.update({"claims": self._serialize_claims_to_add(claims_to_change["add"])})
+            # process if non claims differ
+            non_claims = NonClaims(self.re_page)
+            if non_claims.labels_and_sitelinks_has_changed(data_item.toJSON()):
+                item_dict_add.update(non_claims.dict)
+            # if a diff exists alter the wikidata item
+            if item_dict_add:
+                data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
+                self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
+            claims_to_remove = claims_to_change["remove"]
+            if claims_to_remove:
+                # if there are claims, that aren't up to date remove them
+                data_item.removeClaims(claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
+        except pywikibot.exceptions.NoPageError:
+            # create a new one from scratch
+            data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
+            claims_to_change = self._get_claimes_to_change(None)
+            item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
+            item_dict_add.update(NonClaims(self.re_page).dict)
+            data_item.editEntity(item_dict_add)
+            self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:

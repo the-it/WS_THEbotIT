@@ -48,12 +48,9 @@ class SCANTask(ReScannerTask):
         if article['WIKIPEDIA'].value:
             wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
         else:
-            try:
-                wp_link = self._get_link_from_wd(("dewikipedia", "enwikipedia", "frwikipedia", "itwikipedia",
-                                                  "eswikipedia", "ptwikipedia", "sewikipedia", "cawikipedia",
-                                                  "lawikipedia", "arwikipedia", "trwikipedia", "elwikipedia"))
-            except pywikibot.exceptions.MaxlagTimeoutError:
-                return {}, []
+            wp_link = self._get_link_from_wd(("dewikipedia", "enwikipedia", "frwikipedia", "itwikipedia",
+                                              "eswikipedia", "ptwikipedia", "sewikipedia", "cawikipedia",
+                                              "lawikipedia", "arwikipedia", "trwikipedia", "elwikipedia"))
         if wp_link:
             return {"wp_link": wp_link}, []
         return {}, ["wp_link"]
@@ -63,22 +60,15 @@ class SCANTask(ReScannerTask):
         if article['WIKISOURCE'].value:
             ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
         else:
-            try:
-                ws_link = self._get_link_from_wd(("dewikisource", "enwikisource", "frwikisource", "itwikisource",
-                                                  "eswikisource", "ptwikisource", "sewikisource", "cawikisource",
-                                                  "lawikisource", "arwikisource", "trwikisource", "elwikisource"))
-            except pywikibot.exceptions.MaxlagTimeoutError:
-                return {}, []
+            ws_link = self._get_link_from_wd(("dewikisource", "enwikisource", "frwikisource", "itwikisource",
+                                              "eswikisource", "ptwikisource", "sewikisource", "cawikisource",
+                                              "lawikisource", "arwikisource", "trwikisource", "elwikisource"))
         if ws_link:
             return {"ws_link": ws_link}, []
         return {}, ["ws_link"]
 
     def _fetch_wd_link(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
-        try:
-            target = self._get_target_from_wd()
-        except pywikibot.exceptions.MaxlagTimeoutError:
-            return {}, []
-        if target:
+        if target := self._get_target_from_wd():
             return {"wd_link": f"d:{target.id}"}, []
         return {}, ["wd_link"]
 
@@ -101,15 +91,11 @@ class SCANTask(ReScannerTask):
         return pywikibot.Site(site_link_str)
 
     def _get_target_from_wd(self) -> Optional[pywikibot.ItemPage]:
-        try:
-            with contextlib.suppress(pywikibot.exceptions.NoPageError):
-                wp_item = self.re_page.page.data_item()
-                with contextlib.suppress(KeyError):
-                    return wp_item.claims["P921"][0].target
-            return None
-        except pywikibot.exceptions.MaxlagTimeoutError as exception:
-            self.logger.debug(f"No WD target, because of timeout at {self.re_page.lemma_as_link}")
-            raise exception
+        with contextlib.suppress(pywikibot.exceptions.NoPageError):
+            wp_item = self.re_page.page.data_item()
+            with contextlib.suppress(KeyError):
+                return wp_item.claims["P921"][0].target
+        return None
 
     def _fetch_sort_key(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list[0][0]
