@@ -42,43 +42,43 @@ class SCANTask(ReScannerTask):
         self.logger.info("Push changes for authors and registers.")
         self.registers.repo.push()
 
-    # def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-    #     article = article_list[0]
-    #     if article['WIKIPEDIA'].value:
-    #         wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
-    #     else:
-    #         try:
-    #             wp_link = self._get_link_from_wd(("dewiki", "enwiki", "frwiki", "itwiki", "eswiki", "ptwiki", "sewiki",
-    #                                               "cawiki", "lawiki", "arwiki", "trwiki", "elwiki"))
-    #         except pywikibot.exceptions.MaxlagTimeoutError:
-    #             return {}, []
-    #     if wp_link:
-    #         return {"wp_link": wp_link}, []
-    #     return {}, ["wp_link"]
-    #
-    # def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
-    #     article = article_list[0]
-    #     if article['WIKISOURCE'].value:
-    #         ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
-    #     else:
-    #         try:
-    #             ws_link = self._get_link_from_wd(("dewikisource", "enwikisource", "frwikisource", "itwikisource",
-    #                                               "eswikisource", "ptwikisource", "sewikisource", "cawikisource",
-    #                                               "lawikisource", "arwikisource", "trwikisource", "elwikisource"))
-    #         except pywikibot.exceptions.MaxlagTimeoutError:
-    #             return {}, []
-    #     if ws_link:
-    #         return {"ws_link": ws_link}, []
-    #     return {}, ["ws_link"]
-    #
-    # def _fetch_wd_link(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
-    #     try:
-    #         target = self._get_target_from_wd()
-    #     except pywikibot.exceptions.MaxlagTimeoutError:
-    #         return {}, []
-    #     if target:
-    #         return {"wd_link": f"d:{target.id}"}, []
-    #     return {}, ["wd_link"]
+    def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list[0]
+        if article['WIKIPEDIA'].value:
+            wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
+        else:
+            try:
+                wp_link = self._get_link_from_wd(("dewiki", "enwiki", "frwiki", "itwiki", "eswiki", "ptwiki", "sewiki",
+                                                  "cawiki", "lawiki", "arwiki", "trwiki", "elwiki"))
+            except pywikibot.exceptions.MaxlagTimeoutError:
+                return {}, []
+        if wp_link:
+            return {"wp_link": wp_link}, []
+        return {}, ["wp_link"]
+
+    def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list[0]
+        if article['WIKISOURCE'].value:
+            ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
+        else:
+            try:
+                ws_link = self._get_link_from_wd(("dewikisource", "enwikisource", "frwikisource", "itwikisource",
+                                                  "eswikisource", "ptwikisource", "sewikisource", "cawikisource",
+                                                  "lawikisource", "arwikisource", "trwikisource", "elwikisource"))
+            except pywikibot.exceptions.MaxlagTimeoutError:
+                return {}, []
+        if ws_link:
+            return {"ws_link": ws_link}, []
+        return {}, ["ws_link"]
+
+    def _fetch_wd_link(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
+        try:
+            target = self._get_target_from_wd()
+        except pywikibot.exceptions.MaxlagTimeoutError:
+            return {}, []
+        if target:
+            return {"wd_link": f"d:{target.id}"}, []
+        return {}, ["wd_link"]
 
     def _get_link_from_wd(self, possible_source_wikis: Sequence) -> Optional[str]:
         target = self._get_target_from_wd()

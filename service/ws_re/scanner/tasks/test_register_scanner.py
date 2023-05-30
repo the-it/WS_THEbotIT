@@ -32,6 +32,32 @@ class TestSCANTask(TaskTestCase):
         clear_tst_path(renew_path=False)
         DataRepo.mock_data(False)
 
+    def test_fetch_wikipedia_wikisource_link(self):
+        self.page_mock.text = """{{REDaten
+|BAND=I,1
+|WP=Lemma
+|WS=WsLemma
+}}
+text.
+{{REAutor|OFF}}"""
+        article_list = RePage(self.page_mock).splitted_article_list[0]
+        compare(({"wp_link": "w:de:Lemma"}, []), self.task._fetch_wp_link(article_list))
+        compare(({"ws_link": "s:de:WsLemma"}, []), self.task._fetch_ws_link(article_list))
+
+    def test_fetch_wikipedia_link_no_link(self):
+        with mock.patch("service.ws_re.scanner.tasks.register_scanner.SCANTask._get_link_from_wd",
+                        mock.Mock(return_value=None)):
+            self.page_mock.text = """{{REDaten
+|BAND=I,1
+}}
+text.
+{{REAutor|OFF}}"""
+            re_page = RePage(self.page_mock)
+            self.task.re_page = re_page
+            article_list = re_page.splitted_article_list[0]
+            compare(({}, ["wp_link"]), self.task._fetch_wp_link(article_list))
+            compare(({}, ["ws_link"]), self.task._fetch_ws_link(article_list))
+
     def test_sortkey(self):
         self.page_mock.text = """{{REDaten
 |BAND=I,1
@@ -155,6 +181,8 @@ text.
             task.re_page = RePage(self.page_mock)
             task._process_from_article_list()
             post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
+            compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
+            compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
             compare("Aal", post_lemma.lemma_dict["sort_key"])
             compare(2, post_lemma.lemma_dict["proof_read"])
             compare(True, post_lemma.lemma_dict["redirect"])
@@ -189,6 +217,8 @@ text.
             task.re_page = RePage(self.page_mock)
             task._process_from_article_list()
             post_lemma = task.registers["I,1"].get_lemma_by_name("Aal")
+            compare("w:de:Aal_wp_link", post_lemma.lemma_dict["wp_link"])
+            compare("s:de:Aal_ws_link", post_lemma.lemma_dict["ws_link"])
             compare("Aal", post_lemma.lemma_dict["sort_key"])
             compare(True, post_lemma.lemma_dict["redirect"])
             compare("Lemma Previous", post_lemma.lemma_dict["previous"])
@@ -213,3 +243,14 @@ text.
             log_catcher.check(mock.ANY, ("Test", "ERROR",
                                          StringComparison("No available Lemma in Registers for issue I,1 "
                                                           ".* Reason is:.*")))
+
+    @real_wiki_test
+    def test_get_wd_sitelink(self):
+        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+        self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Demetrios 79"))
+        compare(({'wp_link': 'w:en:Demetrius the Chronographer'}, []),
+                self.task._fetch_wp_link(self.task.re_page.splitted_article_list[0]))
+        compare(({'ws_link': 's:de:Apokryphen/Demetrius der Chronograph'}, []),
+                self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]))
+        compare(({'wd_link': 'd:Q3705296'}, []),
+                self.task._fetch_wd_link(self.task.re_page.splitted_article_list[0]))
