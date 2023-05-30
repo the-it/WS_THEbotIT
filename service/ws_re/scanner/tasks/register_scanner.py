@@ -1,5 +1,6 @@
 import contextlib
 import re
+from functools import lru_cache
 from typing import List, Tuple, Dict, Optional, Sequence
 
 import pywikibot
@@ -48,8 +49,9 @@ class SCANTask(ReScannerTask):
             wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
         else:
             try:
-                wp_link = self._get_link_from_wd(("dewiki", "enwiki", "frwiki", "itwiki", "eswiki", "ptwiki", "sewiki",
-                                                  "cawiki", "lawiki", "arwiki", "trwiki", "elwiki"))
+                wp_link = self._get_link_from_wd(("dewikipedia", "enwikipedia", "frwikipedia", "itwikipedia",
+                                                  "eswikipedia", "ptwikipedia", "sewikipedia", "cawikipedia",
+                                                  "lawikipedia", "arwikipedia", "trwikipedia", "elwikipedia"))
             except pywikibot.exceptions.MaxlagTimeoutError:
                 return {}, []
         if wp_link:
@@ -80,15 +82,23 @@ class SCANTask(ReScannerTask):
             return {"wd_link": f"d:{target.id}"}, []
         return {}, ["wd_link"]
 
-    def _get_link_from_wd(self, possible_source_wikis: Sequence) -> Optional[str]:
+    def _get_link_from_wd(self, possible_source_wikis: Sequence[str]) -> Optional[str]:
         target = self._get_target_from_wd()
         if target:
-            for sitelink in possible_source_wikis:
-                with contextlib.suppress(pywikibot.exceptions.NoPageError):
-                    wiki_prefix = "s" if sitelink.find("wikisource") > 0 else "w"
-                    link = f"{wiki_prefix}:{sitelink[0:2]}:{target.getSitelink(sitelink)}"
+            for site_str in possible_source_wikis:
+                with contextlib.suppress(pywikibot.exceptions.NoSiteLinkError):
+                    language = site_str[0:2]
+                    wiki = site_str[2:]
+                    wiki_prefix = "s" if wiki == "wikisource" else "w"
+                    site = self._get_site_from_str(f"{wiki}:{language}")
+                    link = f"{wiki_prefix}:{language}:{target.getSitelink(site)}"
                     return link
         return None
+
+    @staticmethod
+    @lru_cache()
+    def _get_site_from_str(site_link_str: str) -> pywikibot.Site:
+        return pywikibot.Site(site_link_str)
 
     def _get_target_from_wd(self) -> Optional[pywikibot.ItemPage]:
         try:
