@@ -26,7 +26,7 @@ class TestNonClaims(BaseTestClaimFactory):
     def test_crossref(self):
         re_page = self._create_mock_page(text="{{REDaten|VERWEIS=ON}}\ntext\n{{REAutor|Blub}}", title="RE:BLA")
         non_claim = NonClaims(re_page).dict
-        compare("cross-reference en Paulys Realencyclopädie der classischen Altertumswissenschaft (RE)",
+        compare("référence dans Paulys Realencyclopädie der classischen Altertumswissenschaft (RE)",
                 non_claim["descriptions"]["fr"]["value"])
         compare(["de", "da", "el", "en", "es", "fr", "it", "nl", "pt", "sv"], non_claim["descriptions"].keys())
 
