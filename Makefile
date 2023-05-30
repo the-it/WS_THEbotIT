@@ -22,8 +22,8 @@ pip3-dev : install_pip_tools
 update_pip3 : install_pip_tools
 	echo "##### UPDATE REQUIREMENTS ######"
 	rm requirements.txt requirements-dev.txt || true
-	pip-compile --output-file requirements.txt requirements.in
-	pip-compile --output-file requirements-dev.txt requirements-dev.in
+	pip-compile --resolver=backtracking --output-file requirements.txt requirements.in
+	pip-compile --resolver=backtracking --output-file requirements-dev.txt requirements-dev.in
 	pip-sync requirements.txt requirements-dev.txt
 
 ###############
