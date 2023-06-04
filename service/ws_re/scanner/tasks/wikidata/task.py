@@ -102,9 +102,6 @@ class DATATask(ReScannerTask):
     def _serialize_claims_to_add(claims_to_add: ClaimDictionary) -> SerializedClaimDictionary:
         claims_to_add_serialized = {}
         for key, claim_list in claims_to_add.items():
-            claim_list_serialized = []
-            for claim in claim_list:
-                claim_list_serialized.append(claim.toJSON())
             claims_to_add_serialized[key] = [claim.toJSON() for claim in claim_list]
         return claims_to_add_serialized
 
