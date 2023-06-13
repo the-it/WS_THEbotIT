@@ -8,6 +8,9 @@ from typing import Optional
 from git import Repo, GitError
 
 REPO_URL = "git@github.com:the-it/re_register_data.git"
+if "GITHUB_TOKEN" in os.environ:
+    REPO_URL = f"https://the-it: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@github.com/the-it/re_register_data.git"
+
 PATH_REAL_DATA = Path(__file__).parent.joinpath("data")
 if "REGISTER_DATA_PATH" in os.environ:
     PATH_REAL_DATA = Path(os.environ["REGISTER_DATA_PATH"])
