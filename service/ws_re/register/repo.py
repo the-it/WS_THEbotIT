@@ -9,7 +9,7 @@ from git import Repo, GitError
 
 REPO_URL = "git@github.com:the-it/re_register_data.git"
 if "GITHUB_TOKEN" in os.environ:
-    REPO_URL = f"https://the-it:{os.environ['GITHUB_TOKEN']}@github.com/the-it/re_register_data.git"
+    REPO_URL = f"https://{os.environ['GITHUB_TOKEN']}@github.com/the-it/re_register_data.git"
 
 PATH_REAL_DATA = Path(__file__).parent.joinpath("data")
 if "REGISTER_DATA_PATH" in os.environ:
