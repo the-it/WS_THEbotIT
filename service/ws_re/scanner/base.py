@@ -27,19 +27,19 @@ class ReScanner(CanonicalBot):
     def __init__(self, wiki: pywikibot.Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(minutes=2)
+        self.timeout = timedelta(hours=4)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
         # Wikidata and the Registers.
         self.tasks: List[Callable] = [
-            # KURZTask,  # add short description
-            # DEALTask,  # check for dead links RE internal
-            # DEWPTask,  # check for dead links to Wikipedia
-            # REAUTask,  # check for integrity article must have an author, or it is a soft redirect
-            # PDKSTask,  # removes properties after article is in common domain
-            # CARETask,  # put hard redirects to lemma in a category
-            # CHRETask,  # check if backlinks go over redirect pages
-            # DATATask,  # write out to Wikidata
+            KURZTask,  # add short description
+            DEALTask,  # check for dead links RE internal
+            DEWPTask,  # check for dead links to Wikipedia
+            REAUTask,  # check for integrity article must have an author, or it is a soft redirect
+            PDKSTask,  # removes properties after article is in common domain
+            CARETask,  # put hard redirects to lemma in a category
+            CHRETask,  # check if backlinks go over redirect pages
+            DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
         ]
         if self.debug:
