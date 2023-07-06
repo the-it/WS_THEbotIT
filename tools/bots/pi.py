@@ -118,7 +118,7 @@ class WikiLogger():
                 + f"=={self._start_time.strftime(self._wiki_timestamp_format)}==" \
                 + "\n\n" \
                 + "\n\n".join(line_list) \
-                + "\n--~~~~"
+                + "\n\n{{Erledigt|~~~~}}"
             return log_lines
 
 

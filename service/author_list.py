@@ -95,7 +95,7 @@ class AuthorList(CanonicalBot):
                 del self.data[str(author["id"])]
             except KeyError:
                 if self.last_run_successful:
-                    self.logger.info(f"Can't delete old entry of [[{author['title']}]]")
+                    self.logger.debug(f"Can't delete old entry of [[{author['title']}]]")
 
             dict_author = {"title": author["title"]}
             # extract the Personendaten-block form the wikisource page

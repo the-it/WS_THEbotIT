@@ -92,14 +92,14 @@ class TestWikilogger(TestCase):
                           r"\[\d\d:\d\d:\d\d\]\s\[INFO\s*?\]\s\[info\]\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[WARNING\s*?\]\s\[warning\]\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[error\]\n\n" \
-                          r"\[\d\d:\d\d:\d\d\]\s\[CRITICAL\s*?\]\s\[critical\]\n--~~~~"
+                          r"\[\d\d:\d\d:\d\d\]\s\[CRITICAL\s*?\]\s\[critical\]\n\n{{Erledigt|~~~~}}"
         self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
 
     def test_exception(self):
         self.logger.exception("exception", Exception("test"))
         expected_output = r"==00-01-01_00:00:00==\n\n" \
                           r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[exception\]\n\n" \
-                          r"Exception: test\n--~~~~"
+                          r"Exception: test\n\n{{Erledigt|~~~~}}"
         self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
 
 
