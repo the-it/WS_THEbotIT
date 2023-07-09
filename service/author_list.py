@@ -231,7 +231,8 @@ class AuthorList(CanonicalBot):
         self.string_list.append("Sollten daher Fehler vorhanden sein, "
                                 "sollten diese jeweils dort korrigiert werden.")
         self.string_list.append("-->")
-        self.string_list.append("{|class=\"wikitable sortable\"")
+        self.string_list.append("{{Tabellenstile}}")
+        self.string_list.append("{|class=\"wikitable sortable tabelle-kopf-fixiert\"")
         self.string_list.append("!style=\"width:20%\"| Name")
         self.string_list.append("!data-sort-type=\"text\" style=\"width:15%\"| Geb.-datum")
         self.string_list.append("!data-sort-type=\"text\" style=\"width:15%\"| Tod.-datum")

@@ -156,8 +156,8 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 *[[:Datei:Pauly-Wissowa VII A,2,2 X02.jpg|Viten der Mitarbeiter]] (Stand: 1948, 27 Mitarbeiter mit Geburtsdaten)
 
 {{TOC}}
-
-{|class="wikitable sortable"
+{{Tabellenstile}}
+{|class="wikitable sortable tabelle-kopf-fixiert"
 
 ! Name/Sigel !! * !! † !! Mitarbeit !! Artikel
 |-
@@ -249,7 +249,7 @@ nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
                                        "wp_lemma": "Johannes Zwicker"}}
         compare(expect, author_mapping)
 
-    table_head = "{|class=\"wikitable sortable\"\n! Name/Sigel !! Leben !! Mitarbeit !! Artikel"
+    table_head = "{|class=\"wikitable sortable tabelle-kopf-fixiert\"\n! Name/Sigel !! Leben !! Mitarbeit !! Artikel"
     table_bottom = "\n|}}\n\n[[Kategorie:RE:Autoren|!]]"
 
     def test_bug_kazarow(self):

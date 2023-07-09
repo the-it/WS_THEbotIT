@@ -36,7 +36,8 @@ class TestAuthorRegister(BaseTestRegister):
 |UNK=1
 }}
 
-{|class="wikitable sortable"
+{{Tabellenstile}}
+{|class="wikitable sortable tabelle-kopf-fixiert"
 !Artikel
 !Kurztext
 !Wikilinks
@@ -92,7 +93,8 @@ class TestAuthorRegister(BaseTestRegister):
 |UNK=1
 }}
 
-{|class="wikitable sortable"
+{{Tabellenstile}}
+{|class="wikitable sortable tabelle-kopf-fixiert"
 !Artikel
 
 !Wikilinks

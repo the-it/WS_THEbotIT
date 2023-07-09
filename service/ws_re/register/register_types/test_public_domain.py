@@ -31,7 +31,8 @@ class TestPublicDomainRegister(BaseTestRegister):
 
     def test_make_table(self):
         pd_2021_register = PublicDomainRegister(2021, self.authors, self.registers)
-        expected_table = """{|class="wikitable sortable"
+        expected_table = """{{Tabellenstile}}
+{|class="wikitable sortable tabelle-kopf-fixiert"
 !Artikel
 !Kurztext
 !Wikilinks

@@ -63,7 +63,7 @@ class AuthorCrawler:
 
     @staticmethod
     def _split_author_table(raw_table: str) -> List[str]:
-        hit = re.search(r"\{\|class=\"wikitable sortable\"[^\|]*?\|-\s+(.*)\s+\|\}",
+        hit = re.search(r"\{\|class=\"wikitable sortable tabelle-kopf-fixiert\"[^\|]*?\|-\s+(.*)\s+\|\}",
                         raw_table, re.DOTALL)
         if hit:
             table = hit.group(1)
