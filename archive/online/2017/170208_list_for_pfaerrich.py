@@ -39,7 +39,7 @@ for idx_lem, lemma in enumerate(lemma_list):
 
 report_page = Page(wiki, 'Benutzer:THEbotIT/List_for_Pfaerrich')
 
-header = '{|class="wikitable sortable"\n! Lemma\n! Größe\n! geändert von dir'
+header = '{|class="wikitable sortable tabelle-kopf-fixiert"\n! Lemma\n! Größe\n! geändert von dir'
 text = []
 for line in list_for_pfaerrich:
     text.append('|-\n|[[{lemma}]]\n|{size}\n|{changes}'.format(lemma=line[0], size=line[2], changes=line[1]))

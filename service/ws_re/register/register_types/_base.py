@@ -40,7 +40,8 @@ class Register(ABC):
         return return_lemmas
 
     def _get_table(self, print_volume: bool = True, print_description: bool = True, print_author: bool = True) -> str:
-        header = f"""{{|class="wikitable sortable"
+        header = f"""{{{{Tabellenstile}}}}
+{{|class="wikitable sortable tabelle-kopf-fixiert"
 !Artikel
 {'!Kurztext' if print_description else ''}
 !Wikilinks

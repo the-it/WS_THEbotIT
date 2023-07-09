@@ -111,7 +111,8 @@ class TestAlphabeticRegister(BaseTestRegister):
 |UNK=2
 }}
 
-{|class="wikitable sortable"
+{{Tabellenstile}}
+{|class="wikitable sortable tabelle-kopf-fixiert"
 !Artikel
 !Kurztext
 !Wikilinks
