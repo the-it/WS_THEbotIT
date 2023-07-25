@@ -21,7 +21,7 @@ class ReRegisterPrinter(CanonicalBot):
 
     def _print_author(self):
         self.logger.info("Print author register.")
-        overview = ["{{{{Tabellenstile}}}}\n{|class =\"wikitable sortable tabelle-kopf-fixiert\" "
+        overview = ["{{Tabellenstile}}\n{|class =\"wikitable sortable tabelle-kopf-fixiert\" "
                     "style=\"text-align:right;\""
                     "\n!Autor\n!Artikel\n!colspan=\"2\"|Erschließungsgrad"]
         for register in self.registers.author:
