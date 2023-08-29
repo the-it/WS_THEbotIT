@@ -41,7 +41,7 @@ class GlCreateMagazine(CanonicalBot):
             re.compile(r"((?:Heft|Halbheft) (?:\{\{0\}\})?\d{1,2}:.*?(?:\n\n|\Z))", re.DOTALL)
         self.regex_page_in_magazine = re.compile(r"_([_\w]{1,9}).(?:jpg|JPG)")
         self.regex_number_in_index = re.compile(r"(?:Heft|Halbheft) (?:\{\{0\}\})?(\d{1,2}):?")
-        self.new_data_model = datetime(year=2018, month=7, day=1, hour=14)
+        self.new_data_model = datetime(year=2023, month=8, day=29, hour=12)
         self.lemmas = None
 
     def __enter__(self):
