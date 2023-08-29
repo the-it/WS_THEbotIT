@@ -75,6 +75,7 @@ class DATATask(ReScannerTask):
             item_dict_add.update(NonClaims(self.re_page).dict)
             data_item.editEntity(item_dict_add)
             self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
+        self.logger.info()
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:

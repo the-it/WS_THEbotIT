@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 import pywikibot
 
@@ -58,3 +58,22 @@ class P921MainSubject(ClaimFactory):
         else:
             self.re_page.remove_error_category(self.ERROR_CAT)
         return self._create_claim_dictionary([], [])
+
+    @classmethod
+    def backlink_main_subject(cls, re_item: pywikibot.ItemPage) -> bool:
+        try:
+            item_to_backlink = re_item.claim[cls.get_property_string()]
+        except AttributeError:
+            # nothing to backlink
+            return False
+
+    @classmethod
+    def _get_main_subject(cls, re_item: pywikibot.ItemPage) -> Optional[pywikibot.Claim]:
+        try:
+            main_item_list = re_item.claims[cls.get_property_string()]
+            if len(main_item_list) == 1:
+                return main_item_list[0]
+            return None
+        except KeyError:
+            # nothing to backlink
+            return None

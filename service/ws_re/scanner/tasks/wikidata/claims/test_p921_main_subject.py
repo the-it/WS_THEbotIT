@@ -69,3 +69,18 @@ class TestP921MainSubject(BaseTestClaimFactory):
         add_remove = factory.get_claims_to_update(data_item)
         compare({'add': {}, 'remove': []}, add_remove)
         compare("[[Kategorie:RE:Wartung Wikidata (WD!=WS)]]", re_page[1]) #  error is persisted in re_page
+
+    def test__get_main_subject_return_main_subject(self):
+        repo = pywikibot.Site("wikidata", "wikidata", user="THEbotIT").data_repository()
+        # Aal (Pauly-Wissowa) (Q19979634)
+        re_item = pywikibot.ItemPage(repo, "Q19979634")
+        claim = P921MainSubject._get_main_subject(re_item)
+        # Anguillidae (Q212239)
+        compare(212239, claim.toJSON()["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+    def test__get_main_subject_no_main_subject(self):
+        repo = pywikibot.Site("wikidata", "wikidata", user="THEbotIT").data_repository()
+        # Aba 1 (Pauly-Wissowa) (Q19979638)
+        re_item = pywikibot.ItemPage(repo, "Q19979638")
+        claim = P921MainSubject._get_main_subject(re_item)
+        self.assertIsNone(claim)
