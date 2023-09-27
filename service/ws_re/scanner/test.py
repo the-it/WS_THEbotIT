@@ -78,11 +78,11 @@ class TestReScanner(TestCase):
         # pylint: disable=attribute-defined-outside-init
         lemma_patcher = mock.patch("service.ws_re.scanner.base.ReScanner.lemma_list",
                                    mock.PropertyMock())
-        page_patcher = mock.patch("service.ws_re.scanner.base.pywikibot.Page")
+        # page_patcher = mock.patch("service.ws_re.scanner.base.pywikibot.Page")
         page_patcher_error = mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page")
         re_page_patcher = mock.patch("service.ws_re.scanner.base.RePage")
         self.lemma_mock = lemma_patcher.start()
-        self.page_mock = page_patcher.start()
+        # self.page_mock = page_patcher.start()
         self.page_error_mock = page_patcher_error.start()
         self.re_page_mock = re_page_patcher.start()
 
@@ -136,6 +136,7 @@ class TestReScanner(TestCase):
         self._mock_surroundings()
         self.lemma_mock.return_value = [":RE:Lemma1"]
         self.re_page_mock.side_effect = ReDatenException
+        #self.page_mock.return_value.isRedirectPage.side_effect = [False]
         with LogCapture() as log_catcher:
             with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
                 log_catcher.clear()
