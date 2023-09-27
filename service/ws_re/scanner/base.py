@@ -123,12 +123,14 @@ class ReScanner(CanonicalBot):
         for idx, lemma in enumerate(self.lemma_list):
             self.logger.debug(f"Process [https://de.wikisource.org/wiki/{lemma} {lemma}]")
             list_of_done_tasks = []
+            raw_page = pywikibot.Page(self.wiki, lemma)
             try:
-                re_page = RePage(pywikibot.Page(self.wiki, lemma))
+                re_page = RePage(raw_page)
             except ReDatenException:
                 error = traceback.format_exc().splitlines()[-1]
-                self.logger.error(f"The initiation of [[{lemma}]] went wrong: {error}")
-                error_task.append_error(lemma, error)
+                if not raw_page.isRedirectPage():
+                    self.logger.error(f"The initiation of [[{lemma}]] went wrong: {error}")
+                    error_task.append_error(lemma, error)
                 # remove Key from database if it was saved before
                 with suppress(KeyError):
                     del self.data[lemma]
