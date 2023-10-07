@@ -1,3 +1,4 @@
+from contextlib import suppress
 from datetime import datetime, timedelta
 
 from pywikibot import Site, Page, exceptions
@@ -42,8 +43,18 @@ class Protect(CanonicalBot):
         lemma_list = searcher.get_combined_lemma_list(self.data)
         protected_lemmas = 0
         for idx, lemma_str in enumerate(lemma_list):
-            self.data[lemma_str] = datetime.now().strftime("%Y%m%d%H%M%S")
             lemma = Page(self.wiki, lemma_str)
+            categories: list[str] = list(lemma.categories())
+            fertig_cat = False
+            for category in categories:
+                if category.find("Fertig"):
+                    fertig_cat = True
+                    break
+            if not fertig_cat:
+                with suppress(KeyError):
+                    del self.data[lemma_str]
+                continue
+            self.data[lemma_str] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.logger.debug(f"check lemma {lemma.title()} for protection")
             if not lemma.protection():
                 self.logger.debug(f"protect lemma {lemma.title()}")
