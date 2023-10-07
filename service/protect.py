@@ -59,8 +59,8 @@ class Protect(CanonicalBot):
             if not lemma.protection():
                 self.logger.debug(f"protect lemma {lemma.title()}")
                 try:
-                    # lemma.protect(reason="Schutz fertiger Seiten",
-                    #               protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
+                    lemma.protect(reason="Schutz fertiger Seiten",
+                                  protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
                     protected_lemmas += 1
                 except exceptions.APIError as error:
                     self.logger.error(f"Wasn't able to protect {lemma.title()}, error was {error}")

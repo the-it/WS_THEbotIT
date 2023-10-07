@@ -22,6 +22,7 @@ class TestProtect(TestCase):
 
     def test_init(self):
         self.get_combined_lemma_list_mock.return_value = [":lemma"]
+        self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
         with LogCapture():
             with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
@@ -29,6 +30,7 @@ class TestProtect(TestCase):
     def test_page_already_protected(self):
         self.get_combined_lemma_list_mock.return_value = [":lemma"]
         self.page_mock.return_value.protection.return_value = {'move': 'autoconfirmed', 'edit': 'autoconfirmed'}
+        self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
         with LogCapture():
             with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
@@ -37,6 +39,7 @@ class TestProtect(TestCase):
     def test_page_not_protected(self):
         self.get_combined_lemma_list_mock.return_value = [":lemma"]
         self.page_mock.return_value.protection.return_value = {}  # no protection
+        self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
         with LogCapture():
             with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
@@ -46,14 +49,27 @@ class TestProtect(TestCase):
     def test_3_pages_one_is_protected(self):
         self.get_combined_lemma_list_mock.return_value = [":lemma1", "Seite:lemma2", "Index:Lemma3"]
         self.page_mock.return_value.protection.side_effect = [{}, {"something": "something"}, {}]
+        self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
         with LogCapture():
             with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.run()
         compare(2, self.protect_mock.call_count)
 
+    def test_3_pages_one_isnt_fertig_anymore(self):
+        self.get_combined_lemma_list_mock.return_value = [":lemma1", "Seite:lemma2", "Index:Lemma3"]
+        self.page_mock.return_value.protection.return_value = {}
+        self.page_mock.return_value.categories.side_effect = [[], ["Kategorie:Fertig"], ["Kategorie:Fertig"]]
+        with LogCapture():
+            with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
+                bot.data.assign_dict({":lemma1": "20110101010101", "Seite:lemma2": "20110101010101"})
+                bot.run()
+        compare(["Seite:lemma2", "Index:Lemma3"], list(bot.data.keys()))
+        compare(2, self.protect_mock.call_count)
+
     def test_timeout(self):
         self.get_combined_lemma_list_mock.return_value = [":lemma1", "Seite:lemma2", "Index:Lemma3"]
         self.page_mock.return_value.protection.return_value = {}  # no protection
+        self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
         with LogCapture():
             with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
                 bot.timeout = timedelta(milliseconds=1)
