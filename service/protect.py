@@ -76,8 +76,6 @@ class Protect(CanonicalBot):
 # PYWIKIBOT_DIR=/home/esommer/.pywikibot_protect
 
 if __name__ == "__main__":
-    import os
-    print(os.environ["PYWIKIBOT_DIR"])
-    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEprotectIT")
     with Protect(wiki=WS_WIKI, debug=False) as bot:
         bot.run()
