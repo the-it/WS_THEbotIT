@@ -2,9 +2,11 @@ import time
 from datetime import timedelta
 from unittest import TestCase, mock
 
+import pywikibot
 from testfixtures import compare, LogCapture
 
 from service.protect import Protect
+from tools.test import real_wiki_test
 
 
 class TestProtect(TestCase):
@@ -76,3 +78,12 @@ class TestProtect(TestCase):
                 time.sleep(0.002)
                 bot.run()
         compare(1, self.protect_mock.call_count)  # only first lemma was protected, after that timeout hit
+
+    @real_wiki_test
+    def test_has_fertig_cat(self):
+        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+        lemma = pywikibot.Page(WS_WIKI, "Benutzter:THEprotectIT")
+        compare(False, Protect._has_fertig_cat(lemma))
+        lemma = pywikibot.Page(WS_WIKI, "Seite:Die Gartenlaube (1855) 465.jpg")
+        compare(True, Protect._has_fertig_cat(lemma))
+

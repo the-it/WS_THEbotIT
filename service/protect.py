@@ -1,6 +1,7 @@
 from contextlib import suppress
 from datetime import datetime, timedelta
 
+import pywikibot
 from pywikibot import Site, Page, exceptions
 
 from tools.bots import BotException
@@ -44,12 +45,7 @@ class Protect(CanonicalBot):
         protected_lemmas = 0
         for idx, lemma_str in enumerate(lemma_list):
             lemma = Page(self.wiki, lemma_str)
-            categories: list[str] = list(lemma.categories())
-            fertig_cat = False
-            for category in categories:
-                if category.find("Fertig"):
-                    fertig_cat = True
-                    break
+            fertig_cat = self._has_fertig_cat(lemma)
             if not fertig_cat:
                 with suppress(KeyError):
                     del self.data[lemma_str]
@@ -72,8 +68,18 @@ class Protect(CanonicalBot):
                 break
         return True
 
+    @staticmethod
+    def _has_fertig_cat(lemma: pywikibot.Page) -> bool:
+        categories: list[str] = [category.title() for category in lemma.categories()]
+        fertig_cat = False
+        for category in categories:
+            if not category.find("Fertig") < 0:
+                fertig_cat = True
+                break
+        return fertig_cat
 
-# PYWIKIBOT_DIR=/home/esommer/.pywikibot_protect
+
+# PYWIKIBOT_DIR=/home/erik/.pywikibot_protect
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEprotectIT")
