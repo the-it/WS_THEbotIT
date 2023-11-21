@@ -32,6 +32,7 @@ class Protect(CanonicalBot):
         searcher.add_negative_category("Korrigiert")
         searcher.add_negative_category("Unkorrigiert")
         searcher.add_negative_category("Unvollständig")
+        searcher.add_namespace(["Article", "Seite"])
         searcher.set_sort_criteria("date")
         searcher.set_sortorder_decending()
         searcher.set_search_depth(1)

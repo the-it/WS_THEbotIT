@@ -35,6 +35,11 @@ class TestPetScan(TestCase):
         self.petscan.add_namespace([2, 10])
         self.assertDictEqual({"ns[0]": "1", "ns[2]": "1", "ns[10]": "1"}, self.petscan.options)
 
+    def test_add_namespace_strings(self):
+        self.petscan.add_namespace("Seite")
+        self.petscan.add_namespace(["Vorlage", "Hilfe"])
+        self.assertDictEqual({"ns[102]": "1", "ns[10]": "1", "ns[12]": "1"}, self.petscan.options)
+
     def test_activate_redirects(self):
         self.petscan.activate_redirects()
         self.assertDictEqual({"show_redirects": "yes"}, self.petscan.options)
