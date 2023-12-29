@@ -1,5 +1,6 @@
 # pylint: disable=ungrouped-imports
 import json
+import time
 from datetime import datetime
 from operator import itemgetter
 from typing import List, Union, Mapping, Optional
@@ -301,15 +302,20 @@ class PetScan:
         @return: list of result dicionaries.
         @rtype: list
         """
-        try:
-            response = requests.get(url=self._construct_string(), headers=self.header, timeout=self._timeout)
-        except requests.exceptions.RequestException as error:
-            raise PetScanException("Get request didn't return correctly") from error
-        if response.status_code != 200:
-            raise PetScanException("Request wasn't a success")
-        response_byte = response.content
-        response_dict = json.loads(response_byte.decode("utf8"))
-        return response_dict["*"][0]["a"]["*"]  # type: ignore
+        for wait in [1, 2, 3, 5, 8]:
+            try:
+                response = requests.get(url=self._construct_string(), headers=self.header, timeout=self._timeout)
+            except requests.exceptions.RequestException as error:
+                raise PetScanException("Get request didn't return correctly") from error
+            if response.status_code != 200:
+                raise PetScanException("Request wasn't a success")
+            response_byte = response.content
+            response_dict = json.loads(response_byte.decode("utf8"))
+            try:
+                return response_dict["*"][0]["a"]["*"]  # type: ignore
+            except KeyError:
+                time.sleep(float(60 * wait))
+        raise PetScanException("Tried Petscan services 6 times. No valid answer from service.s")
 
     def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: Optional[int] = None) -> list[str]:
         """
