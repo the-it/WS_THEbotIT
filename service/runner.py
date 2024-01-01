@@ -10,12 +10,13 @@ from service.ws_re.register.printer import ReRegisterPrinter
 from service.ws_re.scanner.base import ReScanner
 from service.ws_re.status import ReStatus
 from tools.bot_scheduler import BotScheduler
+from tools.bots.cloud.poc_bot import Poc
 
 if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())  # type: ignore
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
-    SCHEDULER.daily_bots = [AuthorList, ReScanner, ReRegisterPrinter]
+    SCHEDULER.daily_bots = [AuthorList, ReScanner, ReRegisterPrinter, Poc]
     SCHEDULER.weekly_bots = {
         0: [],  # monday
         1: [],
