@@ -1,14 +1,15 @@
 import contextlib
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, Optional, List, Type
+from typing import Dict, Optional, List, Type, Union
 
 from pywikibot import Site
 
 from tools.bots import BotException
+from tools.bots.cloud.lambda_bot import LambdaBot
 from tools.bots.pi import CanonicalBot, OneTimeBot
 
-BotList = Optional[List[Type[CanonicalBot]]]
+BotList = Optional[List[Type[Union[CanonicalBot, LambdaBot]]]]
 
 
 class BotScheduler(CanonicalBot):
