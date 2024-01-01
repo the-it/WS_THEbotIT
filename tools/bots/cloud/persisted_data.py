@@ -8,16 +8,18 @@ import boto3
 from botocore import exceptions
 
 from tools.bots import BotException
+from tools.bots.cloud.base import get_aws_credentials, is_aws_test_env
 
 
 class PersistedData(Mapping):
     def __init__(self, bot_name: str):
         self._data: Dict = {}
-        self._bucket_name = "wiki_bots_persisted_data"
-        self.s3_client = boto3.client("s3")
-        self.s3_resource = boto3.resource("s3")
+        self._bucket_name = f"wiki-bots-persisted-data-{'tst' if is_aws_test_env() else 'prd'}"
+        key, secret = get_aws_credentials()
+        self.s3_client = boto3.client("s3", aws_access_key_id=key, aws_secret_access_key=secret)
+        self.s3_resource = boto3.resource("s3", aws_access_key_id=key, aws_secret_access_key=secret)
         self.bot_name: str = bot_name
-        self.key_name: str = bot_name + ".data.json"
+        self.key_name: str = f"{bot_name}.data.json"
 
     def __getitem__(self, item) -> Any:
         return self._data[item]
@@ -62,7 +64,7 @@ class PersistedData(Mapping):
             raise
 
     def _copy_to_deprecated(self):
-        self.s3_resource.Object(self._bucket_name, f"{self.key_name}.deprecated")\
+        self.s3_resource.Object(self._bucket_name, f"{self.bot_name}.data.deprecated.json")\
             .copy_from(CopySource={'Bucket': self._bucket_name, 'Key': self.key_name})  # pylint: disable=no-member
 
     def load(self):

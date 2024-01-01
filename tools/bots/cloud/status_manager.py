@@ -5,14 +5,17 @@ import boto3
 from boto3.dynamodb.conditions import Key
 from mypy_boto3_dynamodb import DynamoDBServiceResource
 
+from tools.bots.cloud.base import is_aws_test_env, get_aws_credentials
 from tools.bots.cloud.status import Status
 
-MANAGE_TABLE = "wiki_bots_manage_table"
+MANAGE_TABLE = f"wiki_bots_manage_table_{'tst' if is_aws_test_env() else 'prd'}"
 
 
 class StatusManager:
     def __init__(self, bot_name: str):
-        self._dynamodb: DynamoDBServiceResource = boto3.resource('dynamodb', region_name='eu-central-1')
+        key, secret = get_aws_credentials()
+        self._dynamodb: DynamoDBServiceResource = boto3.resource('dynamodb', region_name='eu-central-1',
+                                                                 aws_access_key_id=key, aws_secret_access_key=secret)
         self._manage_table = self._dynamodb.Table(MANAGE_TABLE)  # pylint: disable=no-member
         self.current_run = Status(bot_name)
         self.bot_name = bot_name

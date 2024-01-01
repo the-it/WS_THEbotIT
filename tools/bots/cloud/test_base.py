@@ -5,12 +5,15 @@ from unittest import TestCase
 import boto3
 from moto import mock_dynamodb, mock_s3
 
+from tools.bots.cloud.base import is_aws_test_env
+
 JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
 JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \
                    '\n  "time": "2020-01-14 00:00:00"\n}'
 DATA_TEST = {'data': {'a': [1, 2]}, 'time': '2020-01-14 00:00:00'}
 DATA_TEST_EXTEND = {'data': {'a': [1, 2], 'b': 2}, 'time': '2020-01-14 00:00:00'}
-BUCKET_NAME = "wiki_bots_persisted_data"
+BUCKET_NAME = f"wiki-bots-persisted-data-{'tst' if is_aws_test_env() else 'prd'}"
+TABLE_NAME = f"wiki_bots_manage_table_{'tst' if is_aws_test_env() else 'prd'}"
 
 
 class TestCloudBase(TestCase):
@@ -23,13 +26,13 @@ class TestCloudBase(TestCase):
         cls.s3_client = boto3.client("s3")
         cls.s3 = boto3.resource("s3")
         cls._create_data_bucket()
-        cls.data_bucket = cls.s3.Bucket("wiki_bots_persisted_data")
+        cls.data_bucket = cls.s3.Bucket(BUCKET_NAME)
         # mocking dynamodb
         cls.mock_dynamo = mock_dynamodb()
         cls.mock_dynamo.start()
         cls.dynamodb = boto3.resource("dynamodb", region_name="eu-central-1")
         cls._create_manage_table()
-        cls.manage_table = cls.dynamodb.Table("wiki_bots_manage_table")
+        cls.manage_table = cls.dynamodb.Table(TABLE_NAME)
 
     @classmethod
     @typing.no_type_check
@@ -48,12 +51,12 @@ class TestCloudBase(TestCase):
     @classmethod
     @typing.no_type_check
     def _create_data_bucket(cls) -> None:
-        cls.s3.create_bucket(Bucket="wiki_bots_persisted_data")
+        cls.s3.create_bucket(Bucket=BUCKET_NAME)
 
     @classmethod
     def _create_manage_table(cls):
         cls.dynamodb.create_table(
-            TableName="wiki_bots_manage_table",
+            TableName=TABLE_NAME,
             KeySchema=[
                 {
                     "AttributeName": "bot_name",
