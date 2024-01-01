@@ -13,6 +13,7 @@ class Poc(LambdaBot):
         self.status.current_run.output = {"blug": "something"}
         return False
 
+
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with Poc(wiki=WS_WIKI, debug=False) as bot:

@@ -45,7 +45,7 @@ class PersistedData(Mapping):
     def dump(self, success: bool = True):
         key_name = self.key_name
         if not success:
-            key_name += ".broken"
+            key_name = f"{self.bot_name}.data.broken.json"
         self.s3_client.put_object(Bucket=self._bucket_name,
                                   Key=key_name,
                                   Body=BytesIO(json.dumps({"time": str(datetime.now()),
@@ -56,7 +56,7 @@ class PersistedData(Mapping):
     def _load_from_bucket(self, key_appendix: str = ""):
         try:
             self._data = json.loads(
-                self.s3_client.get_object(Bucket=self._bucket_name, Key=self.key_name + key_appendix)
+                self.s3_client.get_object(Bucket=self._bucket_name, Key=f"{self.bot_name}.data{key_appendix}.json")
                 ["Body"].read().decode("utf-8"))["data"]  # type: ignore
         except exceptions.ClientError as error:
             if error.response['Error']['Code'] == 'NoSuchKey':

@@ -3,7 +3,8 @@ from typing import Tuple
 
 
 def is_aws_test_env() -> bool:
-    return True if "WS_AWS_TST_ENV" in os.environ else False
+    return "WS_AWS_TST_ENV" in os.environ
+
 
 def get_aws_credentials() -> Tuple[str, str]:
     if "WS_AWS_TST_ENV" in os.environ:
