@@ -8,7 +8,7 @@ from tools.bots.cloud.persisted_data import PersistedData
 from tools.bots.cloud.status_manager import StatusManager
 
 
-class LambdaBot(ABC):
+class CloudBot(ABC):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen

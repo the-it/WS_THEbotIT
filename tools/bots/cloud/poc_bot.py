@@ -3,10 +3,10 @@ import time
 
 from pywikibot import Site
 
-from tools.bots.cloud.lambda_bot import LambdaBot
+from tools.bots.cloud.cloud_bot import CloudBot
 
 
-class Poc(LambdaBot):
+class Poc(CloudBot):
     def task(self) -> bool:
         self.data["time"] = datetime.now(UTC).isoformat()
         time.sleep(5)
