@@ -1,5 +1,6 @@
 from datetime import datetime, UTC
 import time
+import random
 
 from pywikibot import Site
 
@@ -9,9 +10,10 @@ from tools.bots.cloud.cloud_bot import CloudBot
 class Poc(CloudBot):
     def task(self) -> bool:
         self.data["time"] = datetime.now(UTC).isoformat()
-        time.sleep(5)
-        self.status.current_run.output = {"blug": "something"}
-        return False
+        time.sleep(2)
+        if random.random() > 0.5:
+            raise RuntimeError("Something went wrong by chance ;-)")
+        return random.choice([True, False])
 
 
 if __name__ == "__main__":
