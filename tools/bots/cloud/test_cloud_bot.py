@@ -6,20 +6,20 @@ from unittest import mock
 from freezegun import freeze_time
 from testfixtures import LogCapture, compare
 
-from tools.bots.cloud.lambda_bot import LambdaBot
+from tools.bots.cloud.cloud_bot import CloudBot
 from tools.bots.cloud.logger import WikiLogger
 from tools.bots.cloud.status_manager import StatusManager
 from tools.bots.cloud.test_base import TestCloudBase
 
 
-class TestLambdaBot(TestCloudBase):
+class TestCloudBot(TestCloudBase):
     def setUp(self):
         super().setUp()
         self.addCleanup(mock.patch.stopall)
         self.log_patcher = mock.patch.object(WikiLogger, "debug")
         self.wiki_logger_mock = self.log_patcher.start()
 
-    class MinimalBot(LambdaBot):
+    class MinimalBot(CloudBot):
         def task(self):
             return True
 
@@ -28,7 +28,7 @@ class TestLambdaBot(TestCloudBase):
         self.assertEqual("MinimalBot", self.MinimalBot().bot_name)
 
     # pylint: disable=abstract-method
-    class NoTaskBot(LambdaBot):
+    class NoTaskBot(CloudBot):
         pass
 
     def test_not_implemented(self):
@@ -40,12 +40,12 @@ class TestLambdaBot(TestCloudBase):
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             bot.run()
 
-    class LogBot(LambdaBot):
+    class LogBot(CloudBot):
         def task(self):
             self.logger.info("Test")
             time.sleep(0.001)
 
-    class SuccessBot(LambdaBot):
+    class SuccessBot(CloudBot):
         def __init__(self, success=True, **kwargs):
             super().__init__(**kwargs)
             self.success_to_return = success
@@ -75,7 +75,7 @@ class TestLambdaBot(TestCloudBase):
             self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.\d{6}.")
 
     def test_watchdog(self):
-        class WatchdogBot(LambdaBot):
+        class WatchdogBot(CloudBot):
             def __init__(self, **kwargs):
                 super().__init__(**kwargs)
                 self.timeout = timedelta(seconds=0.3)
@@ -93,7 +93,7 @@ class TestLambdaBot(TestCloudBase):
             self.assertTrue(bot.run())
 
     def test_send_log_to_wiki(self):
-        with mock.patch("tools.bots.cloud.lambda_bot.Page") as mock_page:
+        with mock.patch("tools.bots.cloud.cloud_bot.Page") as mock_page:
             with self.MinimalBot(wiki=None, log_to_screen=False) as bot:
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
@@ -120,7 +120,7 @@ class TestLambdaBot(TestCloudBase):
         self.MinimalBot.save_if_changed(page_mock, "1 ", "changed")
         compare(0, len(page_mock.mock_calls))
 
-    class ExceptionBot(LambdaBot):
+    class ExceptionBot(CloudBot):
         def task(self):
             raise Exception("Exception")
 
@@ -132,7 +132,7 @@ class TestLambdaBot(TestCloudBase):
                 log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
                 self.assertFalse(bot.success)
 
-    class AddDataBot(LambdaBot):
+    class AddDataBot(CloudBot):
         def task(self):
             self.data["b"] = 2
             return True
@@ -152,7 +152,7 @@ class TestLambdaBot(TestCloudBase):
         with self.AddDataBot(log_to_screen=False, log_to_wiki=False) as bot:
             compare({}, bot.data._data)
 
-    class DataOutdatedBot(LambdaBot):
+    class DataOutdatedBot(CloudBot):
         def __init__(self, **kwargs):
             super().__init__(**kwargs)
             self.new_data_model = datetime(2001, 1, 1)
@@ -186,7 +186,7 @@ class TestLambdaBot(TestCloudBase):
             self.assertTrue(bot.data_outdated())
             self.assertDictEqual({}, bot.data._data)
 
-    class DataThrowException(LambdaBot):
+    class DataThrowException(CloudBot):
         def task(self):
             raise Exception
 
@@ -194,7 +194,7 @@ class TestLambdaBot(TestCloudBase):
         self._make_json_file(filename="DataThrowException.data.json")
         StatusManager("DataThrowException").finish_run(success=True)
         with LogCapture() as log_catcher:
-            with mock.patch("tools.bots.cloud.lambda_bot.PersistedData.dump") as mock_dump:
+            with mock.patch("tools.bots.cloud.cloud_bot.PersistedData.dump") as mock_dump:
                 with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
                     log_catcher.clear()
                     bot.run()
