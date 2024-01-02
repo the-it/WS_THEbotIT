@@ -1,8 +1,10 @@
+import os
 from abc import ABC, abstractmethod
 from datetime import datetime, timedelta
 
 from pywikibot import Site, Page
 
+from tools.bots.cloud.base import is_aws_test_env
 from tools.bots.cloud.logger import WikiLogger
 from tools.bots.cloud.persisted_data import PersistedData
 from tools.bots.cloud.status_manager import StatusManager
@@ -13,14 +15,18 @@ class CloudBot(ABC):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
+        print(f"Running {'tst' if is_aws_test_env() else 'prd'} environment")
+        for name, _ in os.environ.items():
+            if "WS" in name:
+                print(f"env variable {name} present")
         self.status: StatusManager = StatusManager(bot_name=self.bot_name)
         self.data: PersistedData = PersistedData(bot_name=self.bot_name)
+        self.logger: WikiLogger = WikiLogger(bot_name=self.bot_name,
+                                             start_time=self.status.current_run.start_time,
+                                             log_to_screen=self.log_to_screen)
         self.wiki: Page = wiki
         self.debug: bool = debug
         self.timeout: timedelta = timedelta(days=1)
-        self.logger: WikiLogger = WikiLogger(self.bot_name,
-                                             self.status.current_run.start_time,
-                                             log_to_screen=self.log_to_screen)
         self.new_data_model = datetime.min
 
     def __enter__(self):
