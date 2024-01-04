@@ -15,10 +15,6 @@ class CloudBot(ABC):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
-        print(f"Running {'tst' if is_aws_test_env() else 'prd'} environment")
-        for name, _ in os.environ.items():
-            if "WS" in name:
-                print(f"env variable {name} present")
         self.status: StatusManager = StatusManager(bot_name=self.bot_name)
         self.data: PersistedData = PersistedData(bot_name=self.bot_name)
         self.logger: WikiLogger = WikiLogger(bot_name=self.bot_name,

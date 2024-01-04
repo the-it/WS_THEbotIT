@@ -64,8 +64,12 @@ class BotScheduler(CanonicalBot):
         with bot_to_run:
             success = bot_to_run.run()
         path_to_log = f"{self.wiki.username()}/Logs/{bot_to_run.bot_name}"
+        if isinstance(bot_to_run, OneTimeBot):
+            start_run = bot_to_run.timestamp.start_of_run
+        else:
+            start_run = bot_to_run.status.current_run.start_time
         self.logger.info(f"Log @ [https://de.wikisource.org/wiki/Benutzer:{path_to_log}"
-                         f"#{bot_to_run.timestamp.start_of_run:%y-%m-%d_%H:%M:%S} {path_to_log}]")
+                         f"#{start_run:%y-%m-%d_%H:%M:%S} {path_to_log}]")
         if not success:
             self.logger.error(f"<span style=\"background:#FF0000\">"
                               f"The bot {bot_to_run.bot_name} wasn't successful.</span>")
