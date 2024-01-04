@@ -11,7 +11,6 @@ git reset --hard main
 sudo /usr/local/bin/python3 -m pip install -r requirements.txt
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
 source /etc/profile
-env | grep WS
 /usr/local/bin/python3 service/runner.py
 export PYWIKIBOT_DIR=/home/pi/.pywikibot_protect/
 /usr/local/bin/python3 service/protect.py
