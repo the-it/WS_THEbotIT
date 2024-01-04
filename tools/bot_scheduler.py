@@ -59,9 +59,7 @@ class BotScheduler(CanonicalBot):
     def bots_on_last_day_of_month(self, new_config: BotList):
         self._bots_on_last_day_of_month = new_config
 
-    def run_bot(self, bot_to_run: OneTimeBot) -> bool:
-        if not isinstance(bot_to_run, OneTimeBot):
-            raise BotException(f"{bot_to_run} is not an instance of CanonicalBot or OneTimeBot")
+    def run_bot(self, bot_to_run: Union[OneTimeBot, CloudBot]) -> bool:
         self.logger.info(f"The bot {bot_to_run.bot_name} is scheduled for start.")
         with bot_to_run:
             success = bot_to_run.run()
