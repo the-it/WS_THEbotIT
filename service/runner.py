@@ -17,7 +17,7 @@ if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
     # SCHEDULER.daily_bots = [AuthorList, ReScanner, ReRegisterPrinter, Poc]
-    SCHEDULER.daily_bots = [Poc]
+    SCHEDULER.daily_bots = [AuthorList, Poc]
     SCHEDULER.weekly_bots = {
         0: [],  # monday
         1: [],
