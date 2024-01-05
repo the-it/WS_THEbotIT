@@ -122,6 +122,6 @@ clean : clean-pyc clean-coverage
 
 pre-commit : update_pip3 quality unittest
 
-quality : flake8 pycodestyle pylint mypy
+quality : flake8 pycodestyle pylint mypy unittest
 
 .PHONY : clean, quality, pre-commit

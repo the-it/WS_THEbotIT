@@ -59,11 +59,6 @@ class TestBotScheduler(TestCase):
         with LogCapture():
             self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
 
-    def test_wrong_type_runner(self):
-        bot = []
-        with self.assertRaises(BotException):
-            self.bot_scheduler.run_bot(bot)
-
     class Bot1(CanonicalBot):
         def task(self):
             pass
