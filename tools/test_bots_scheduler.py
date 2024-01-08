@@ -5,7 +5,6 @@ from unittest import TestCase, mock
 from testfixtures import LogCapture, compare
 
 from tools.bot_scheduler import BotScheduler
-from tools.bots import BotException
 from tools.bots.pi import CanonicalBot, PersistedTimestamp
 
 
