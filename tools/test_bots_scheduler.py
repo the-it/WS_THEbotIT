@@ -5,7 +5,6 @@ from unittest import TestCase, mock
 from testfixtures import LogCapture, compare
 
 from tools.bot_scheduler import BotScheduler
-from tools.bots import BotException
 from tools.bots.pi import CanonicalBot, PersistedTimestamp
 
 
@@ -58,11 +57,6 @@ class TestBotScheduler(TestCase):
         bot_mock.run.return_value = False
         with LogCapture():
             self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
-
-    def test_wrong_type_runner(self):
-        bot = []
-        with self.assertRaises(BotException):
-            self.bot_scheduler.run_bot(bot)
 
     class Bot1(CanonicalBot):
         def task(self):

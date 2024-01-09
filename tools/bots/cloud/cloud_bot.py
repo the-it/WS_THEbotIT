@@ -1,10 +1,8 @@
-import os
 from abc import ABC, abstractmethod
 from datetime import datetime, timedelta
 
 from pywikibot import Site, Page
 
-from tools.bots.cloud.base import is_aws_test_env
 from tools.bots.cloud.logger import WikiLogger
 from tools.bots.cloud.persisted_data import PersistedData
 from tools.bots.cloud.status_manager import StatusManager
@@ -26,7 +24,6 @@ class CloudBot(ABC):
         self.new_data_model = datetime.min
 
     def __enter__(self):
-        # self.timestamp.__enter__()
         self.logger.__enter__()
         self.logger.info(f"Start the bot {self.bot_name}.")
         self._load_data()

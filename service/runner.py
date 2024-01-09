@@ -24,7 +24,7 @@ if __name__ == "__main__":
         3: [],
         4: [],
         5: [],
-        6: [ReStatus, GlCreateMagazine] # sunday
+        6: [ReStatus, GlCreateMagazine]  # sunday
     }
     SCHEDULER.monthly_bots = {1: [GlStatus]}
     SCHEDULER.bots_on_last_day_of_month = []

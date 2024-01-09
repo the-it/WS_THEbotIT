@@ -5,7 +5,6 @@ from typing import Dict, Optional, List, Type, Union
 
 from pywikibot import Site
 
-from tools.bots import BotException
 from tools.bots.cloud.cloud_bot import CloudBot
 from tools.bots.pi import CanonicalBot, OneTimeBot
 
