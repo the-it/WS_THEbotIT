@@ -2,9 +2,9 @@
 export DISPLAY=:0
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASE_DIR=${DIR}/..
-echo ${BASE_DIR}
-cd ${BASE_DIR}
-# reset your current branch (master) to origin's master
+echo "${BASE_DIR}"
+cd "${BASE_DIR}" || exit
+# reset your current branch (main) to origin's main
 git checkout main
 git pull
 git reset --hard main
