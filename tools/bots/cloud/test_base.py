@@ -3,7 +3,7 @@ import typing
 from unittest import TestCase
 
 import boto3
-from moto import mock_dynamodb, mock_s3
+from moto import mock_aws
 
 from tools.bots.cloud.base import is_aws_test_env
 
@@ -20,16 +20,14 @@ class TestCloudBase(TestCase):
     @classmethod
     @typing.no_type_check
     def setUpClass(cls) -> None:
-        # mocking s3
-        cls.mock_s3 = mock_s3()
-        cls.mock_s3.start()
+        # mocking aws
+        cls.mock_aws = mock_aws()
+        cls.mock_aws.start()
         cls.s3_client = boto3.client("s3")
         cls.s3 = boto3.resource("s3")
         cls._create_data_bucket()
         cls.data_bucket = cls.s3.Bucket(BUCKET_NAME)
         # mocking dynamodb
-        cls.mock_dynamo = mock_dynamodb()
-        cls.mock_dynamo.start()
         cls.dynamodb = boto3.resource("dynamodb", region_name="eu-central-1")
         cls._create_manage_table()
         cls.manage_table = cls.dynamodb.Table(TABLE_NAME)
@@ -37,8 +35,7 @@ class TestCloudBase(TestCase):
     @classmethod
     @typing.no_type_check
     def tearDownClass(cls) -> None:
-        cls.mock_s3.stop()
-        cls.mock_dynamo.stop()
+        cls.mock_aws.stop()
 
     @typing.no_type_check
     def _make_json_file(self, filename: str = "TestBot.data.json", data: str = JSON_TEST):

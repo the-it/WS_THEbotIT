@@ -14,11 +14,11 @@ beautifulsoup4==4.12.3
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.34.68
+boto3==1.34.69
     # via
     #   -c requirements.txt
     #   moto
-botocore==1.34.68
+botocore==1.34.69
     # via
     #   -c requirements.txt
     #   boto3
@@ -197,7 +197,7 @@ tomlkit==0.12.4
     # via pylint
 tqdm==4.66.2
     # via internetarchive
-typer==0.9.0
+typer==0.10.0
     # via safety
 types-freezegun==1.1.10
     # via -r requirements-dev.in

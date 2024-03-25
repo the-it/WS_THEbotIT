@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from typing import Dict, Any, Iterator, List
 from typing import TypedDict  # pylint: disable=no-name-in-module
 
-from pywikibot import Page, Site, Category, BaseSite
+from pywikibot import Page, Site, Category
 from pywikibot.pagegenerators import CategorizedPageGenerator
 
 from tools.bots import BotException
@@ -196,7 +196,7 @@ class OneTimeBot(ABC):
                                       "    def task(self):\n"
                                       "        do_stuff()")
         self.timestamp: PersistedTimestamp = PersistedTimestamp(bot_name=self.bot_name)
-        self.wiki: BaseSite = wiki
+        self.wiki: Site = wiki
         self.debug: bool = debug
         self.timeout: timedelta = timedelta(days=1)
         self.logger: WikiLogger = WikiLogger(self.bot_name,
