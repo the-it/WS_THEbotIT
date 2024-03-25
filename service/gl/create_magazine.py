@@ -162,8 +162,7 @@ class GlCreateMagazine(CanonicalBot):
                     page_quality = 4
                 else:
                     page_quality = self.data["pages"][year][page]["q"]
-                if page_quality < quality:
-                    quality = page_quality
+                quality = min(quality, page_quality)
                 if quality < 3:
                     self.logger.debug(f"The quality of {year}/{magazine} is too poor.")
                     return None

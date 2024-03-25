@@ -105,8 +105,7 @@ class Article(Mapping):
         return len(self._properties)
 
     def __iter__(self) -> Generator[Property, None, None]:
-        for re_property in self._properties:
-            yield re_property
+        yield from self._properties
 
     def __getitem__(self, item: str) -> Property:
         for re_property in self._properties:

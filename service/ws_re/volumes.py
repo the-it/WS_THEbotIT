@@ -124,8 +124,7 @@ class Volumes(OrderedDict):
         return len(self._volume_mapping.keys())
 
     def __iter__(self) -> Iterator[str]:
-        for key in self._volume_mapping:
-            yield key
+        yield from self._volume_mapping
 
     def special_volume_iterator(self, volume_type: VolumeType) -> Generator[Volume, None, None]:
         for volume_key in self:
@@ -135,23 +134,19 @@ class Volumes(OrderedDict):
 
     @property
     def first_series(self) -> Generator[Volume, None, None]:
-        for volume in self.special_volume_iterator(VolumeType.FIRST_SERIES):
-            yield volume
+        yield from self.special_volume_iterator(VolumeType.FIRST_SERIES)
 
     @property
     def second_series(self) -> Generator[Volume, None, None]:
-        for volume in self.special_volume_iterator(VolumeType.SECOND_SERIES):
-            yield volume
+        yield from self.special_volume_iterator(VolumeType.SECOND_SERIES)
 
     @property
     def supplements(self) -> Generator[Volume, None, None]:
-        for volume in self.special_volume_iterator(VolumeType.SUPPLEMENTS):
-            yield volume
+        yield from self.special_volume_iterator(VolumeType.SUPPLEMENTS)
 
     @property
     def register(self) -> Generator[Volume, None, None]:
-        for volume in self.special_volume_iterator(VolumeType.REGISTER):
-            yield volume
+        yield from self.special_volume_iterator(VolumeType.REGISTER)
 
     @property
     def all_volumes(self) -> Generator[Volume, None, None]:
@@ -165,8 +160,7 @@ class Volumes(OrderedDict):
             main_volume = self._main_volume_of_volume(volume_key)
             if main_volume not in main_volumes:
                 main_volumes.append(main_volume)
-        for volume_key in main_volumes:
-            yield volume_key
+        yield from main_volumes
 
     @staticmethod
     def _main_volume_of_volume(volume_key):
