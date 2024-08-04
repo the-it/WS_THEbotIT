@@ -8,6 +8,7 @@ cd ${BASE_DIR}
 git checkout main
 git pull
 git reset --hard main
+sudo /usr/local/bin/python3 -m pip install --upgrade pip
 sudo /usr/local/bin/python3 -m pip install -r requirements.txt
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
 source /etc/profile
