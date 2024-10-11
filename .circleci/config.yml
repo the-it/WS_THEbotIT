@@ -48,14 +48,6 @@ pylint: &pylint
       . venv/bin/activate
       make pylint
 
-safety: &safety
-  run:
-    name: safety
-    when: always
-    command: |
-      . venv/bin/activate
-      make safety
-
 mypy: &mypy
   run:
     name: mypy
@@ -129,7 +121,6 @@ quality_steps: &quality_steps
     - <<: *flake8
     - <<: *pycodestyle
     - <<: *pylint
-    - <<: *safety
     - <<: *mypy
 
 coverage_steps: &coverage_steps

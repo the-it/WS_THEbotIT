@@ -4,33 +4,35 @@
 #
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
-astroid==3.1.0
+annotated-types==0.7.0
+    # via pydantic
+astroid==3.3.5
     # via pylint
-authlib==1.3.0
+authlib==1.3.2
     # via safety
-bandit==1.7.8
+bandit==1.7.10
     # via -r requirements-dev.in
 beautifulsoup4==4.12.3
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.34.69
+boto3==1.35.38
     # via
     #   -c requirements.txt
     #   moto
-botocore==1.34.69
+botocore==1.35.38
     # via
     #   -c requirements.txt
     #   boto3
     #   moto
     #   s3transfer
-certifi==2024.2.2
+certifi==2024.8.30
     # via
     #   -c requirements.txt
     #   requests
-cffi==1.16.0
+cffi==1.17.1
     # via cryptography
-charset-normalizer==3.3.2
+charset-normalizer==3.4.0
     # via
     #   -c requirements.txt
     #   requests
@@ -40,19 +42,17 @@ click==8.1.7
     #   typer
 codecov==2.1.13
     # via -r requirements-dev.in
-contextlib2==21.6.0
-    # via schema
-coverage==7.4.4
+coverage==7.6.2
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==42.0.5
+cryptography==43.0.1
     # via
     #   authlib
     #   moto
 ddt==1.7.2
     # via -r requirements-dev.in
-dill==0.3.8
+dill==0.3.9
     # via pylint
 docopt==0.6.2
     # via internetarchive
@@ -60,19 +60,21 @@ dparse==0.6.4b0
     # via
     #   safety
     #   safety-schemas
-flake8==7.0.0
+filelock==3.12.4
+    # via safety
+flake8==7.1.1
     # via -r requirements-dev.in
-freezegun==1.4.0
+freezegun==1.5.1
     # via -r requirements-dev.in
-idna==3.6
+idna==3.10
     # via
     #   -c requirements.txt
     #   requests
-internetarchive==3.7.0
+internetarchive==4.1.0
     # via -r requirements-dev.in
 isort==5.13.2
     # via pylint
-jinja2==3.1.3
+jinja2==3.1.4
     # via
     #   moto
     #   safety
@@ -83,15 +85,15 @@ jmespath==1.0.1
     #   botocore
 jsonpatch==1.33
     # via internetarchive
-jsonpointer==2.4
+jsonpointer==3.0.0
     # via jsonpatch
 markdown-it-py==3.0.0
     # via rich
-markupsafe==2.1.5
+markupsafe==3.0.1
     # via
     #   jinja2
     #   werkzeug
-marshmallow==3.21.1
+marshmallow==3.22.0
     # via safety
 mccabe==0.7.0
     # via
@@ -99,42 +101,46 @@ mccabe==0.7.0
     #   pylint
 mdurl==0.1.2
     # via markdown-it-py
-moto==5.0.3
+moto==5.0.16
     # via -r requirements-dev.in
-mypy==1.9.0
+mypy==1.11.2
     # via -r requirements-dev.in
 mypy-extensions==1.0.0
     # via mypy
-nose2==0.14.1
+nose2==0.15.1
     # via -r requirements-dev.in
-packaging==24.0
+packaging==24.1
     # via
     #   -c requirements.txt
     #   dparse
     #   marshmallow
     #   safety
     #   safety-schemas
-patool==2.2.0
+patool==3.0.1
     # via -r requirements-dev.in
-pbr==6.0.0
+pbr==6.1.0
     # via stevedore
-platformdirs==4.2.0
+platformdirs==4.3.6
     # via pylint
-pycodestyle==2.11.1
+psutil==6.0.0
+    # via safety
+pycodestyle==2.12.1
     # via flake8
-pycparser==2.21
+pycparser==2.22
     # via cffi
-pydantic==1.10.14
+pydantic==2.9.2
     # via
     #   safety
     #   safety-schemas
+pydantic-core==2.23.4
+    # via pydantic
 pyfiglet==1.0.2
     # via -r requirements-dev.in
 pyflakes==3.2.0
     # via flake8
-pygments==2.17.2
+pygments==2.18.0
     # via rich
-pylint==3.1.0
+pylint==3.3.1
     # via -r requirements-dev.in
 python-dateutil==2.9.0.post0
     # via
@@ -142,12 +148,12 @@ python-dateutil==2.9.0.post0
     #   botocore
     #   freezegun
     #   moto
-pyyaml==6.0.1
+pyyaml==6.0.2
     # via
     #   -r requirements-dev.in
     #   bandit
     #   responses
-requests==2.31.0
+requests==2.32.3
     # via
     #   -c requirements.txt
     #   codecov
@@ -156,61 +162,64 @@ requests==2.31.0
     #   requests-mock
     #   responses
     #   safety
-requests-mock==1.11.0
+requests-mock==1.12.1
     # via -r requirements-dev.in
-responses==0.25.0
+responses==0.25.3
     # via moto
-rich==13.7.1
+rich==13.9.2
     # via
     #   bandit
     #   safety
+    #   typer
 ruamel-yaml==0.18.6
     # via
     #   safety
     #   safety-schemas
 ruamel-yaml-clib==0.2.8
     # via ruamel-yaml
-s3transfer==0.10.1
+s3transfer==0.10.3
     # via
     #   -c requirements.txt
     #   boto3
-safety==3.0.1
+safety==3.2.8
     # via -r requirements-dev.in
-safety-schemas==0.0.2
+safety-schemas==0.0.5
     # via safety
-schema==0.7.5
+schema==0.7.7
     # via internetarchive
+shellingham==1.5.4
+    # via typer
 six==1.16.0
     # via
     #   -c requirements.txt
     #   python-dateutil
-    #   requests-mock
-soupsieve==2.5
+soupsieve==2.6
     # via
     #   -c requirements.txt
     #   beautifulsoup4
-stevedore==5.2.0
+stevedore==5.3.0
     # via bandit
-testfixtures==8.1.0
+testfixtures==8.3.0
     # via -r requirements-dev.in
-tomlkit==0.12.4
+tomlkit==0.13.2
     # via pylint
-tqdm==4.66.2
+tqdm==4.66.5
     # via internetarchive
-typer==0.10.0
+typer==0.12.5
     # via safety
 types-freezegun==1.1.10
     # via -r requirements-dev.in
-types-requests==2.31.0.20240311
+types-requests==2.32.0.20240914
     # via -r requirements-dev.in
-typing-extensions==4.10.0
+typing-extensions==4.12.2
     # via
     #   mypy
     #   pydantic
+    #   pydantic-core
     #   safety
     #   safety-schemas
     #   typer
-urllib3==2.2.1
+urllib3==2.2.3
     # via
     #   -c requirements.txt
     #   botocore
@@ -219,9 +228,9 @@ urllib3==2.2.1
     #   responses
     #   safety
     #   types-requests
-werkzeug==3.0.1
+werkzeug==3.0.4
     # via moto
-xmltodict==0.13.0
+xmltodict==0.14.1
     # via moto
 
 # The following packages are considered to be unsafe in a requirements file:

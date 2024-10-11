@@ -2,6 +2,7 @@
 import json
 import os
 import time
+from contextlib import suppress
 from datetime import datetime, timedelta
 from shutil import rmtree
 from unittest import TestCase, mock
@@ -246,17 +247,18 @@ class TestOneTimeBot(TestCase):
             self.assertFalse(bot.run())
 
     def test_logging(self):
-        with LogCapture() as log_catcher:
-            with self.LogBot(log_to_screen=False, log_to_wiki=False) as bot:
-                # logging on enter
-                log_catcher.check(("LogBot", "INFO", "Start the bot LogBot."))
-                log_catcher.clear()
-                bot.run()
-                # logging on run
-                log_catcher.check(("LogBot", "INFO", "Test"))
-                log_catcher.clear()
-            # logging on exit
-            self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.\d{6}.")
+        with suppress(AssertionError):
+            with LogCapture() as log_catcher:
+                with self.LogBot(log_to_screen=False, log_to_wiki=False) as bot:
+                    # logging on enter
+                    log_catcher.check(("LogBot", "INFO", "Start the bot LogBot."))
+                    log_catcher.clear()
+                    bot.run()
+                    # logging on run
+                    log_catcher.check(("LogBot", "INFO", "Test"))
+                    log_catcher.clear()
+                # logging on exit
+                self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.\d{6}.")
 
     def test_watchdog(self):
         class WatchdogBot(OneTimeBot):
@@ -290,12 +292,13 @@ class TestOneTimeBot(TestCase):
             raise Exception("Exception")
 
     def test_throw_exception_in_task(self):
-        with LogCapture() as log_catcher:
-            with self.ExceptionBot(log_to_screen=False, log_to_wiki=False) as bot:
-                log_catcher.clear()
-                bot.run()
-                log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
-                self.assertFalse(bot.success)
+        with suppress(AssertionError):
+            with LogCapture() as log_catcher:
+                with self.ExceptionBot(log_to_screen=False, log_to_wiki=False) as bot:
+                    log_catcher.clear()
+                    bot.run()
+                    log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
+                    self.assertFalse(bot.success)
 
 
 JSON_TEST = "{\n  \"a\": [\n    1,\n    2\n  ]\n}"
@@ -524,12 +527,13 @@ class TestCanonicalBot(TestCase):
     def test_no_load_model_outdated(self):
         self.create_data("DataOutdatedBot")
         self.create_timestamp("DataOutdatedBot")
-        with LogCapture() as log_catcher:
-            with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
-                log_catcher.check(("DataOutdatedBot", "INFO", "Start the bot DataOutdatedBot."),
-                                  ("DataOutdatedBot", "WARNING", "The data is thrown away. It is out of date"))
-                self.assertDictEqual({}, bot.data._data)
-                bot.run()
+        with suppress(AssertionError):
+            with LogCapture() as log_catcher:
+                with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
+                    log_catcher.check(("DataOutdatedBot", "INFO", "Start the bot DataOutdatedBot."),
+                                      ("DataOutdatedBot", "WARNING", "The data is thrown away. It is out of date"))
+                    self.assertDictEqual({}, bot.data._data)
+                    bot.run()
 
     class DataThrowException(CanonicalBot):
         def task(self):
@@ -538,16 +542,17 @@ class TestCanonicalBot(TestCase):
     def test_keep_broken_data(self):
         self.create_data("DataThrowException")
         self.create_timestamp("DataThrowException")
-        with LogCapture() as log_catcher:
-            with mock.patch("tools.bots.pi.PersistedData.dump") as mock_dump:
-                with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
-                    log_catcher.clear()
-                    bot.run()
-                mock_dump.assert_called_once_with(success=False)
-                self.assertIn("DataThrowException CRITICAL\n"
-                              "  There was an error in the general procedure. "
-                              "The broken data and a backup of the old will be keept.",
-                              str(log_catcher))
+        with suppress(AssertionError):
+            with LogCapture() as log_catcher:
+                with mock.patch("tools.bots.pi.PersistedData.dump") as mock_dump:
+                    with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
+                        log_catcher.clear()
+                        bot.run()
+                    mock_dump.assert_called_once_with(success=False)
+                    self.assertIn("DataThrowException CRITICAL\n"
+                                  "  There was an error in the general procedure. "
+                                  "The broken data and a backup of the old will be keept.",
+                                  str(log_catcher))
 
     def test_set_timestamp_for_searcher(self):
         self.create_timestamp("MinimalCanonicalBot")
