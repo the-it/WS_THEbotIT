@@ -4,7 +4,7 @@ from datetime import timedelta
 from unittest import TestCase, mock
 
 import pywikibot
-from testfixtures import compare, LogCapture
+from testfixtures import compare
 
 from service.protect import Protect
 from tools.test import real_wiki_test

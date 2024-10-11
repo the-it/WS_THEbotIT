@@ -199,7 +199,8 @@ class TestReScanner(TestCase):
                     bot.run()
                     expected_logging = (("ReScanner", "DEBUG",
                                          "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
-                                        ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1"))
+                                        ("ReScanner", "DEBUG",
+                                         "ReScanner hat folgende Aufgaben bearbeitet: BASE, ONE1"))
                     log_catcher.check_present(*expected_logging, order_matters=True)
 
     def test_re_page_return_no_success_nothing_changed(self):
@@ -334,5 +335,6 @@ class TestReScanner(TestCase):
             with LogCapture() as log_catcher:
                 with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False):
                     log_catcher.check(("ReScanner", "INFO", "Start the bot ReScanner."),
-                                      ("ReScanner", "WARNING", "The last run wasn't successful. The data is thrown away."),
+                                      ("ReScanner", "WARNING",
+                                       "The last run wasn't successful. The data is thrown away."),
                                       ("ReScanner", "WARNING", "Try to get the deprecated data back."))
