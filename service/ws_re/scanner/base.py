@@ -32,7 +32,7 @@ class ReScanner(CanonicalBot):
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
         # Wikidata and the Registers.
         self.tasks: List[Callable] = [
-            # KURZTask,  # add short description
+            KURZTask,  # add short description
             DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia
             REAUTask,  # check for integrity article must have an author, or it is a soft redirect
