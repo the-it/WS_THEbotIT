@@ -57,3 +57,15 @@ bug_no_s_provided:
   result:
     - redirect: "Akanthos 1"
     - []
+
+bug_two_links:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    '''2)''' Laco ([[RE:Cornelius 395|Tac.]] ann. VI 18) s. C. {{RE siehe|Iulius 309|{{SperrSchrift|Iulius}} Laco}} (o. Bd. X S. 658f.).
+    {{REAutor|OFF}}
+  result:
+    - redirect: "Iulius 309"
+    - []
