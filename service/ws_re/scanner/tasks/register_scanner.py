@@ -107,15 +107,26 @@ class SCANTask(ReScannerTask):
     def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
-    _REGEX_REDIRECT = re.compile(r"(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)")
+    _REGEX_REDIRECT_RAW = r"(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)"
+    _REGEX_REDIRECT = re.compile(_REGEX_REDIRECT_RAW)
+    _REGEX_REDIRECT_PICKY = re.compile(r"s\..*?" + _REGEX_REDIRECT_RAW)
 
     def _fetch_redirect(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         redirect = article["VERWEIS"].value
         if redirect:
-            match = self._REGEX_REDIRECT.search(article.text)
+            match = self._REGEX_REDIRECT.findall(article.text)
             if match:
-                redirect = match.group(1)
+                # if there are more then one result get more picky
+                if len(match) == 1:
+                    redirect = match[0]
+                # be more picky and look for a s. ...
+                else:
+                    match = self._REGEX_REDIRECT_PICKY.findall(article.text)
+                    # if there are still too much results, we return just the truth value
+                    if len(match) == 1:
+                        redirect = match[0]
+
             return {"redirect": redirect}, []
         return {}, ["redirect"]
 
