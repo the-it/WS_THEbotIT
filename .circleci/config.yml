@@ -5,22 +5,22 @@ version: 2.1
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - v18-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
-      - v18-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
-      - v18-dependencies-{{ .Environment.CIRCLE_BRANCH }}-
+      - v19-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
+      - v19-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
+      - v19-dependencies-{{ .Environment.CIRCLE_BRANCH }}-
 
 save_cache: &save_cache
   save_cache:
     paths:
       - ./venv
-    key: v18-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
+    key: v19-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
 
 install_dependencies: &install_dependencies
   run:
     name: install dependencies
     command: |
       python3 -m venv venv
-      . venv/bin/activate
+      source venv/bin/activate
       make pip3-dev
       pip list
 
@@ -29,7 +29,7 @@ flake8: &flake8
     name: flake8
     when: always
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       make flake8
 
 pycodestyle: &pycodestyle
@@ -37,7 +37,7 @@ pycodestyle: &pycodestyle
     name: pycodestyle
     when: always
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       make pycodestyle
 
 pylint: &pylint
@@ -45,7 +45,7 @@ pylint: &pylint
     name: pylint
     when: always
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       make pylint
 
 mypy: &mypy
@@ -53,14 +53,14 @@ mypy: &mypy
     name: mypy
     when: always
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       make mypy
 
 run_coverage: &run_coverage
   run:
     name: run coverage
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       make coverage
 
 create_pywikibot_file: &create_pywikibot_file
@@ -74,14 +74,14 @@ run_wikitest: &run_wikitest
   run:
     name: run wikitest
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       make wikitest
 
 run_integrationtest: &run_integrationtest
   run:
     name: run integration test
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       make integrationtest
 
 report_codecov: &report_codecov
@@ -89,7 +89,7 @@ report_codecov: &report_codecov
     name: report codecov
     when: always
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       codecov -F unittest
 
 report_codecov_wikitest: &report_codecov_wikitest
@@ -97,7 +97,7 @@ report_codecov_wikitest: &report_codecov_wikitest
     name: report codecov
     when: always
     command: |
-      . venv/bin/activate
+      source venv/bin/activate
       codecov -F wikitest
 
 show_python_version: &show_python_version
