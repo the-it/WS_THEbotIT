@@ -8,6 +8,7 @@ restore_cache: &restore_cache
       - v19-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
       - v19-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
       - v19-dependencies-{{ .Environment.CIRCLE_BRANCH }}-
+      - v19-dependencies-main-
 
 save_cache: &save_cache
   save_cache:
