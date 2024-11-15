@@ -17,7 +17,7 @@ def fetch_text_from_wiki_site(wiki: Site, lemma: str) -> str:  # pragma: no cove
 def save_if_changed(page: Page, text: str, change_msg: str):
     if text.rstrip() != page.text:
         page.text = text
-        page.save(change_msg, botflag=True)
+        page.save(change_msg, bot=True)
 
 
 def add_category(text: str, category: str) -> str:

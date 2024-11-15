@@ -32,7 +32,7 @@ class GlStatus(CanonicalBot):
             temp_text = self.year(year, temp_text)
 
         page.text = temp_text
-        page.save("Ein neuer Datensatz wurde eingefügt.", botflag=True)
+        page.save("Ein neuer Datensatz wurde eingefügt.", bot=True)
         return True
 
     @staticmethod

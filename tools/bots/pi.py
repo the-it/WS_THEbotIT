@@ -251,7 +251,7 @@ class OneTimeBot(ABC):
         wiki_log_page = f"Benutzer:THEbotIT/Logs/{self.bot_name}"
         page = Page(self.wiki, wiki_log_page)
         page.text += self.logger.create_wiki_log_lines()
-        page.save(f"Update of Bot {self.bot_name}", botflag=True)
+        page.save(f"Update of Bot {self.bot_name}", bot=True)
 
     def get_lemma_str_from_cat(self, category: str) -> List[str]:
         page = Category(self.wiki, category)

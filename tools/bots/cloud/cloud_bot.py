@@ -89,13 +89,13 @@ class CloudBot(ABC):
         wiki_log_page = f"Benutzer:THEbotIT/Logs/{self.bot_name}"
         page = Page(self.wiki, wiki_log_page)
         page.text += self.logger.create_wiki_log_lines()
-        page.save(f"Update of Bot {self.bot_name}", botflag=True)
+        page.save(f"Update of Bot {self.bot_name}", bot=True)
 
     @staticmethod
     def save_if_changed(page: Page, text: str, change_msg: str):
         if text.rstrip() != page.text:
             page.text = text
-            page.save(change_msg, botflag=True)
+            page.save(change_msg, bot=True)
 
     def data_outdated(self) -> bool:
         outdated = False

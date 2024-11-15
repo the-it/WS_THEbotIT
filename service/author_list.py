@@ -4,6 +4,7 @@ from math import ceil
 
 from pywikibot import ItemPage, Page, Site
 
+from tools.bots.cloud.cloud_bot import CloudBot
 from tools.bots.pi import CanonicalBot
 from tools.date_conversion import DateConversion
 from tools.petscan import PetScan
@@ -49,7 +50,7 @@ class AuthorList(CanonicalBot):
         new_text = self._convert_to_table()
         if new_text[150:] != old_text[150:]:  # compare all but the date
             dump.text = new_text
-            dump.save("Die Liste wurde auf den aktuellen Stand gebracht.", botflag=True)
+            dump.save("Die Liste wurde auf den aktuellen Stand gebracht.", bot=True)
         else:
             self.logger.info("Heute gab es keine Änderungen, "
                              "daher wird die Seite nicht überschrieben.")
@@ -303,7 +304,11 @@ class AuthorList(CanonicalBot):
             return author_dict[event]  # 4,6
 
 
+class AuthorListNew(CloudBot):
+    def task(self) -> bool:
+        return True
+
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
-    with AuthorList(wiki=WS_WIKI, debug=True) as bot:
+    with AuthorListNew(wiki=WS_WIKI, debug=True) as bot:
         bot.run()
