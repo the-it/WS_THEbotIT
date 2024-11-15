@@ -317,7 +317,7 @@ class PetScan:
                 time.sleep(float(60 * wait))
         raise PetScanException("Tried Petscan services 6 times. No valid answer from service.s")
 
-    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: Optional[int] = None) -> list[str]:
+    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: Optional[int] = None) -> (list[str], int):
         """
         Executes the search. Filters out all preprocessed lemmas from a provided dictionary.
         Interlaces this two lists to a combined list sorted by:
@@ -341,4 +341,5 @@ class PetScan:
         # before processed lemmas ordered by last process time
         old_lemma_list = [x[0] for x in sorted(old_lemmas.items(), key=itemgetter(1))]
         # first iterate new items then the old ones (oldest first)
-        return timeframe_list + new_lemma_list + old_lemma_list
+        unprocessed_lemmas = timeframe_list + new_lemma_list
+        return unprocessed_lemmas + old_lemma_list, len(unprocessed_lemmas)

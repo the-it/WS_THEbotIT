@@ -76,7 +76,8 @@ class ReScanner(CanonicalBot):
     @property
     def lemma_list(self) -> list[str]:
         searcher = self._prepare_searcher()
-        return searcher.get_combined_lemma_list(self.data, timeframe=480)
+        result, _ = searcher.get_combined_lemma_list(self.data, timeframe=480)
+        return result
 
     def _activate_tasks(self) -> List[ReScannerTask]:
         active_tasks = []
