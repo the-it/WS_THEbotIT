@@ -1,6 +1,7 @@
 import re
 from datetime import timedelta, datetime
 from math import ceil
+from typing import TypedDict
 
 from pywikibot import ItemPage, Page, Site
 
@@ -134,7 +135,7 @@ class AuthorList(CanonicalBot):
                     try:
                         dict_author.update(
                             {"description":
-                             template_extractor.get_parameter("KURZBESCHREIBUNG")["value"]})
+                                 template_extractor.get_parameter("KURZBESCHREIBUNG")["value"]})
                     except Exception:
                         dict_author.update({"description": ""})
                         self.logger.warning(
@@ -143,7 +144,7 @@ class AuthorList(CanonicalBot):
                     try:
                         dict_author.update(
                             {"synonyms":
-                             template_extractor.get_parameter("ALTERNATIVNAMEN")["value"]})
+                                 template_extractor.get_parameter("ALTERNATIVNAMEN")["value"]})
                     except Exception:
                         dict_author.update({"synonyms": ""})
                         self.logger.warning(f"Templatehandler couldn't find synonyms for: "
@@ -288,11 +289,11 @@ class AuthorList(CanonicalBot):
                     date_from_data = str(date_from_data.year)
                 elif date_from_data.precision < 11:
                     date_from_data = self.number_to_month[date_from_data.month] + " " + \
-                        str(date_from_data.year)
+                                     str(date_from_data.year)
                 else:
                     date_from_data = f"{date_from_data.day}. " \
-                        f"{self.number_to_month[date_from_data.month]} " \
-                        f"{date_from_data.year}"
+                                     f"{self.number_to_month[date_from_data.month]} " \
+                                     f"{date_from_data.year}"
                 if re.search("-", date_from_data):
                     date_from_data = date_from_data.replace("-", "") + " v. Chr."
                 self.logger.debug(f"Found {date_from_data} @ wikidata for {event}")
@@ -304,9 +305,38 @@ class AuthorList(CanonicalBot):
             return author_dict[event]  # 4,6
 
 
+AuthorDataDict = TypedDict("AuthorDataDict",
+                           {
+                            },
+                           total=False)
+
+
 class AuthorListNew(CloudBot):
+    def __enter__(self):
+        super().__enter__()
+        if "checked" not in self.data:
+            self.data.assign_dict({"checked": {}})
+        return self
+
+
     def task(self) -> bool:
+        lemma_list = list(self.lemma_list)
+        for idx, lemma in enumerate(lemma_list):
+            print(lemma)
+            self.data["checked"][lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
+            if idx > 100:
+                break
         return True
+
+    @property
+    def lemma_list(self) -> (list[str], int):
+        searcher = PetScan()
+        searcher.add_namespace(0)  # search in main namespace
+        searcher.add_positive_category("Autoren")
+        searcher.add_yes_template("Personendaten")
+        result, _ = searcher.get_combined_lemma_list(self.data["checked"], timeframe=72)
+        return result
+
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
