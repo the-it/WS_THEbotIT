@@ -3,7 +3,7 @@ import json
 import time
 from datetime import datetime
 from operator import itemgetter
-from typing import List, Union, Mapping, Optional
+from typing import List, Union, Mapping, Optional, Tuple
 from urllib.parse import quote
 
 import requests
@@ -317,7 +317,7 @@ class PetScan:
                 time.sleep(float(60 * wait))
         raise PetScanException("Tried Petscan services 6 times. No valid answer from service.s")
 
-    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: Optional[int] = None) -> (list[str], int):
+    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: Optional[int] = None) -> Tuple[list[str], int]:
         """
         Executes the search. Filters out all preprocessed lemmas from a provided dictionary.
         Interlaces this two lists to a combined list sorted by:

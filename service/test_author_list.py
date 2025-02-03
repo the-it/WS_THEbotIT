@@ -1,6 +1,4 @@
 # pylint: disable=protected-access
-import time
-from datetime import timedelta
 from unittest import TestCase, mock
 
 from ddt import file_data, ddt
@@ -11,7 +9,8 @@ from tools.test import real_wiki_test
 
 @ddt
 class TestProtect(TestCase):
-    # def setUp(self):
+    def setUp(self):
+        self.author_list = AuthorListNew()
     #     self.petscan_mock = mock.patch("service.protect.PetScan").start()
     #     self.get_combined_lemma_list_mock = mock.Mock()
     #     self.petscan_mock.return_value = mock.Mock(get_combined_lemma_list=self.get_combined_lemma_list_mock)
@@ -64,8 +63,7 @@ class TestProtect(TestCase):
 
     @file_data("test_data/test_get_page_infos.yml")
     def test_get_page_infos(self, given, expect):
-        author_list = AuthorListNew()
-        compare(expect, author_list.get_page_infos(given))
+        compare(expect, self.author_list.get_page_infos(given))
 
     # @real_wiki_test
     # @staticmethod

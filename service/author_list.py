@@ -1,7 +1,7 @@
 import re
 from datetime import timedelta, datetime
 from math import ceil
-from typing import TypedDict, Literal
+from typing import TypedDict, Literal, Tuple
 
 from pywikibot import ItemPage, Page, Site
 
@@ -135,8 +135,7 @@ class AuthorList(CanonicalBot):
                                             f"[[{author['title']}]]")
                     try:
                         dict_author.update(
-                            {"description":
-                                 template_extractor.get_parameter("KURZBESCHREIBUNG")["value"]})
+                            {"description": template_extractor.get_parameter("KURZBESCHREIBUNG")["value"]})
                     except Exception:
                         dict_author.update({"description": ""})
                         self.logger.warning(
@@ -144,8 +143,7 @@ class AuthorList(CanonicalBot):
                             f"[[{author['title']}]]")
                     try:
                         dict_author.update(
-                            {"synonyms":
-                                 template_extractor.get_parameter("ALTERNATIVNAMEN")["value"]})
+                            {"synonyms": template_extractor.get_parameter("ALTERNATIVNAMEN")["value"]})
                     except Exception:
                         dict_author.update({"synonyms": ""})
                         self.logger.warning(f"Templatehandler couldn't find synonyms for: "
@@ -289,8 +287,7 @@ class AuthorList(CanonicalBot):
                 elif date_from_data.precision < 10:
                     date_from_data = str(date_from_data.year)
                 elif date_from_data.precision < 11:
-                    date_from_data = self.number_to_month[date_from_data.month] + " " + \
-                                     str(date_from_data.year)
+                    date_from_data = self.number_to_month[date_from_data.month] + " " + str(date_from_data.year)
                 else:
                     date_from_data = f"{date_from_data.day}. " \
                                      f"{self.number_to_month[date_from_data.month]} " \
@@ -315,10 +312,11 @@ class AuthorDict(TypedDict, total=False):
     description: str
     sortkey: str
 
+
 AuthorInfos = Literal["title", "first_name", "last_name", "birth", "death", "description", "sortkey"]
 
-
 _SPACE_REGEX = re.compile(r"\s+")
+
 
 class AuthorListNew(CloudBot):
     def __enter__(self):
@@ -340,7 +338,6 @@ class AuthorListNew(CloudBot):
             if idx > 100:
                 break
         return True
-
 
     @staticmethod
     def _strip_spaces(raw_string: str):
@@ -364,8 +361,8 @@ class AuthorListNew(CloudBot):
         self.get_single_page_info("sortkey", "SORTIERUNG", template_extractor, author_dict)
         return author_dict
 
-
-    def get_single_page_info(self, info: AuthorInfos, template_str: str, extractor: TemplateHandler, author_dict: AuthorDict):
+    def get_single_page_info(self, info: AuthorInfos, template_str: str, extractor: TemplateHandler,
+                             author_dict: AuthorDict):
         try:
             template_value = self._strip_spaces(extractor.get_parameter(template_str)["value"])
         except TemplateHandlerException:
@@ -373,10 +370,8 @@ class AuthorListNew(CloudBot):
         if template_value:
             author_dict[info] = template_value
 
-
-
     @property
-    def lemma_list(self) -> (list[str], int):
+    def lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Autoren")
