@@ -1,7 +1,7 @@
 import re
 from datetime import timedelta, datetime
 from math import ceil
-from typing import TypedDict
+from typing import TypedDict, Literal
 
 from pywikibot import ItemPage, Page, Site
 
@@ -9,7 +9,8 @@ from tools.bots.cloud.cloud_bot import CloudBot
 from tools.bots.pi import CanonicalBot
 from tools.date_conversion import DateConversion
 from tools.petscan import PetScan
-from tools.template_handler import TemplateHandler
+from tools.template_finder import TemplateFinder, TemplateFinderException
+from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 
 class AuthorList(CanonicalBot):
@@ -305,28 +306,74 @@ class AuthorList(CanonicalBot):
             return author_dict[event]  # 4,6
 
 
-AuthorDataDict = TypedDict("AuthorDataDict",
-                           {
-                            },
-                           total=False)
+class AuthorDict(TypedDict, total=False):
+    title: str
+    first_name: str
+    last_name: str
+    birth: str
+    death: str
+    description: str
+    sortkey: str
 
+AuthorInfos = Literal["title", "first_name", "last_name", "birth", "death", "description", "sortkey"]
+
+
+_SPACE_REGEX = re.compile(r"\s+")
 
 class AuthorListNew(CloudBot):
     def __enter__(self):
         super().__enter__()
         if "checked" not in self.data:
-            self.data.assign_dict({"checked": {}})
+            self.data.assign_dict({"checked": {}, "authors": {}})
         return self
 
-
     def task(self) -> bool:
-        lemma_list = list(self.lemma_list)
+        lemma_list, unprocessed_lemmas = self.lemma_list
         for idx, lemma in enumerate(lemma_list):
-            print(lemma)
+            lemma = lemma.strip(":")
+            self.logger.debug(lemma)
+            page = Page(self.wiki, lemma)
+            author_dict = self.get_page_infos(page.text)
+            author_dict["title"] = lemma
+            self.data["authors"][lemma] = author_dict
             self.data["checked"][lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
             if idx > 100:
                 break
         return True
+
+
+    @staticmethod
+    def _strip_spaces(raw_string: str):
+        return _SPACE_REGEX.subn(raw_string.strip(), " ")[0]
+
+    def get_page_infos(self, text: str) -> AuthorDict:
+        template_finder = TemplateFinder(text)
+        try:
+            personendaten = template_finder.get_positions("Personendaten")
+        except TemplateFinderException as error:
+            raise ValueError("No template was found for Personendaten.") from error
+        if len(personendaten) > 1:
+            raise ValueError("Too many Personendaten templates")
+        template_extractor = TemplateHandler(personendaten[0]["text"])
+        author_dict: AuthorDict = {}
+        self.get_single_page_info("first_name", "VORNAMEN", template_extractor, author_dict)
+        self.get_single_page_info("last_name", "NACHNAME", template_extractor, author_dict)
+        self.get_single_page_info("birth", "GEBURTSDATUM", template_extractor, author_dict)
+        self.get_single_page_info("death", "STERBEDATUM", template_extractor, author_dict)
+        self.get_single_page_info("description", "KURZBESCHREIBUNG", template_extractor, author_dict)
+        self.get_single_page_info("sortkey", "SORTIERUNG", template_extractor, author_dict)
+        return author_dict
+
+
+    def get_single_page_info(self, info: AuthorInfos, template_str: str, extractor: TemplateHandler, author_dict: AuthorDict):
+        try:
+            template_value = self._strip_spaces(extractor.get_parameter(template_str)["value"])
+        except TemplateHandlerException:
+            return
+        if template_value:
+            author_dict[info] = template_value
+
+
 
     @property
     def lemma_list(self) -> (list[str], int):
@@ -334,8 +381,7 @@ class AuthorListNew(CloudBot):
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Autoren")
         searcher.add_yes_template("Personendaten")
-        result, _ = searcher.get_combined_lemma_list(self.data["checked"], timeframe=72)
-        return result
+        return searcher.get_combined_lemma_list(self.data["checked"], timeframe=72)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,41 @@
+no_content:
+  given: |
+      {{Personendaten
+
+      }}
+      text after template really doesn't matter
+  expect: {}
+complete_template:
+  given: |
+    {{Personendaten
+    |VORNAMEN=Erika
+    |NACHNAME=Mustermann
+    |GEBURTSDATUM=1.1.1900
+    |STERBEDATUM=31.12.2999
+    |KURZBESCHREIBUNG=placeholder
+    |SORTIERUNG=Ich will es aber anders sortiert haben
+    }}
+    text after template really doesn't matter
+  expect:
+    first_name: Erika
+    last_name: Mustermann
+    birth: 1.1.1900
+    death: 31.12.2999
+    description: placeholder
+    sortkey: Ich will es aber anders sortiert haben
+random_white_spaces:
+  given: |
+    {{Personendaten
+    |VORNAMEN=      Erika
+    |NACHNAME=Mustermann
+
+
+
+    |SORTIERUNG=Ich will es aber
+     anders sortiert haben
+    }}
+    text after template really doesn't matter
+  expect:
+    first_name: Erika
+    last_name: Mustermann
+    sortkey: Ich will es aber anders sortiert haben
