@@ -5,10 +5,11 @@ from ddt import file_data, ddt
 from testfixtures import compare
 
 from service.author_list import AuthorListNew
+from tools.bots.cloud.test_base import TestCloudBase
 from tools.test import real_wiki_test
 
 @ddt
-class TestProtect(TestCase):
+class TestProtect(TestCloudBase):
     def setUp(self):
         self.author_list = AuthorListNew()
     #     self.petscan_mock = mock.patch("service.protect.PetScan").start()
