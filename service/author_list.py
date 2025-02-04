@@ -1,9 +1,11 @@
 import re
+from contextlib import suppress
 from datetime import timedelta, datetime
 from math import ceil
-from typing import TypedDict, Literal, Tuple
+from typing import TypedDict, Literal, Tuple, Optional
 
-from pywikibot import ItemPage, Page, Site
+import pywikibot
+from pywikibot import ItemPage, Page, Site, Claim
 
 from tools.bots.cloud.cloud_bot import CloudBot
 from tools.bots.pi import CanonicalBot
@@ -11,6 +13,19 @@ from tools.date_conversion import DateConversion
 from tools.petscan import PetScan
 from tools.template_finder import TemplateFinder, TemplateFinderException
 from tools.template_handler import TemplateHandler, TemplateHandlerException
+
+number_to_month = {1: "Januar",
+                   2: "Februar",
+                   3: "März",
+                   4: "April",
+                   5: "Mai",
+                   6: "Juni",
+                   7: "Juli",
+                   8: "August",
+                   9: "September",
+                   10: "Oktober",
+                   11: "November",
+                   12: "Dezember"}
 
 
 class AuthorList(CanonicalBot):
@@ -328,15 +343,14 @@ class AuthorListNew(CloudBot):
     def task(self) -> bool:
         lemma_list, unprocessed_lemmas = self.lemma_list
         for idx, lemma in enumerate(lemma_list):
-            lemma = lemma.strip(":")
+            lemma = lemma.strip(":").replace("_", " ")
             self.logger.debug(lemma)
             page = Page(self.wiki, lemma)
             author_dict = self.get_page_infos(page.text)
             author_dict["title"] = lemma
+            self.enrich_author_dict(author_dict, page.data_item())
             self.data["authors"][lemma] = author_dict
             self.data["checked"][lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
-            if idx > 100:
-                break
         return True
 
     @staticmethod
@@ -348,9 +362,9 @@ class AuthorListNew(CloudBot):
         try:
             personendaten = template_finder.get_positions("Personendaten")
         except TemplateFinderException as error:
-            raise ValueError("No template was found for Personendaten.") from error
-        if len(personendaten) > 1:
-            raise ValueError("Too many Personendaten templates")
+            raise ValueError("Error in processing Personendaten template.") from error
+        if len(personendaten) != 1:
+            raise ValueError("No or more then one Personendaten template found.")
         template_extractor = TemplateHandler(personendaten[0]["text"])
         author_dict: AuthorDict = {}
         self.get_single_page_info("first_name", "VORNAMEN", template_extractor, author_dict)
@@ -377,6 +391,66 @@ class AuthorListNew(CloudBot):
         searcher.add_positive_category("Autoren")
         searcher.add_yes_template("Personendaten")
         return searcher.get_combined_lemma_list(self.data["checked"], timeframe=72)
+
+    def enrich_author_dict(self, author_dict: AuthorDict, data_item: ItemPage):
+        if "first_name" not in author_dict and "last_name" not in author_dict:
+            self.logger.debug(f"https://www.wikidata.org/wiki/{data_item.getID()}")
+            author_dict.pop("first_name", None)
+            author_dict.pop("last_name", None)
+            claim = self.get_highest_claim(data_item, "P735")
+            value = self.get_value_from_claim(claim)
+            if value:
+                author_dict["first_name"] = value
+            claim = self.get_highest_claim(data_item, "P734")
+            value = self.get_value_from_claim(claim)
+            if value:
+                author_dict["last_name"] = value
+        if "birth" not in author_dict:
+            claim = self.get_highest_claim(data_item, "P569")
+            value = self.get_value_from_claim(claim)
+            if value:
+                author_dict["birth"] = value
+        if "death" not in author_dict:
+            claim = self.get_highest_claim(data_item, "P570")
+            value = self.get_value_from_claim(claim)
+            if value:
+                author_dict["death"] = value
+
+    @staticmethod
+    def get_highest_claim(data_item: ItemPage, property: str) -> Claim:
+        claims: list[Claim] = data_item.text["claims"][property]
+        filtered_claims = []
+        for claim in claims:
+            if claim.rank == "normal":
+                filtered_claims.append(claim)
+            elif claim.rank == "preferred":
+                return claim
+        return filtered_claims[0]
+
+    def get_value_from_claim(self, claim: Claim) -> Optional[str]:
+        if claim.type == "wikibase-item":
+            target = claim.getTarget()
+            if target:
+                return claim.getTarget().get()["labels"]["de"]
+            return None
+        if claim.type == "time":
+            claim_date = claim.getTarget()
+            if claim_date.precision < 7:
+                self.logger.error(f"Precison is to low for [[{claim_date}]]")
+                return None
+            elif claim_date.precision < 8:
+                date_from_claim = str(int(ceil(float(claim_date.year) / 100.0))) + ". Jh."
+            elif claim_date.precision < 10:
+                date_from_claim = str(claim_date.year)
+            elif claim_date.precision < 11:
+                date_from_claim = number_to_month[claim_date.month] + " " + str(claim_date.year)
+            else:
+                date_from_claim = f"{claim_date.day}. " \
+                                  f"{number_to_month[claim_date.month]} " \
+                                  f"{claim_date.year}"
+            if re.search("-", date_from_claim):
+                date_from_claim = date_from_claim.replace("-", "") + " v. Chr."
+            return date_from_claim
 
 
 if __name__ == "__main__":
