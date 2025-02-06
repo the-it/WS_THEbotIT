@@ -1,6 +1,4 @@
-# pylint: disable=protected-access
-from unittest import TestCase, mock
-
+# pylint: disable=protected-access,line-too-long
 from ddt import file_data, ddt
 from pywikibot.scripts.generate_user_files import pywikibot
 from testfixtures import compare
@@ -11,7 +9,9 @@ from tools.test import real_wiki_test
 
 
 @ddt
-class TestProtect(TestCloudBase):
+class TestAuthorList(TestCloudBase):
+    wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+
     def setUp(self):
         self.author_list = AuthorListNew()
 
@@ -41,60 +41,87 @@ class TestProtect(TestCloudBase):
 
     @real_wiki_test
     def test_enrich(self):
-        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        lemma = pywikibot.Page(WS_WIKI, "Willy Stöwer")
+        lemma = pywikibot.Page(self.wiki, "Willy Stöwer")
         data_item = lemma.data_item()
         author_dict = {}
         self.author_list.enrich_author_dict(author_dict, data_item)
-        compare({"first_name": "Willy",
-                 "last_name": "Stöwer",
-                 "birth": "22. Mai 1864",
-                 "death": "31. Mai 1931"}, author_dict)
+        compare(
+            {
+                "first_name": "Willy",
+                "last_name": "Stöwer",
+                "birth": "22. Mai 1864",
+                "death": "31. Mai 1931",
+                "sortkey": "Stöwer, Willy",
+                "description": "deutscher Marinemaler der Kaiserzeit"
+            },
+            author_dict)
+
+    @real_wiki_test
+    def test_enrich_eschenbach(self):
+        lemma = pywikibot.Page(self.wiki, "Wolfram von Eschenbach")
+        data_item = lemma.data_item()
+        author_dict = {"first_name": "Wolfram", "last_name": "von Eschenbach",}
+        self.author_list.enrich_author_dict(author_dict, data_item)
+        compare("Eschenbach, Wolfram", author_dict["sortkey"])
 
     @real_wiki_test
     def test_enrich_both_names_must_be_missing(self):
-        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        lemma = pywikibot.Page(WS_WIKI, "Willy Stöwer")
+        lemma = pywikibot.Page(self.wiki, "Willy Stöwer")
         data_item = lemma.data_item()
         author_dict = {"last_name": "Stöwer"}
         self.author_list.enrich_author_dict(author_dict, data_item)
-        compare({"last_name": "Stöwer",
-                       "birth": "22. Mai 1864",
-                       "death": "31. Mai 1931"}, author_dict)
+        compare(
+            {
+                "last_name": "Stöwer",
+                "birth": "22. Mai 1864",
+                "death": "31. Mai 1931",
+                "sortkey": "Stöwer",
+                "description": "deutscher Marinemaler der Kaiserzeit"
+            },
+            author_dict)
 
         author_dict = {"first_name": "Willy"}
         self.author_list.enrich_author_dict(author_dict, data_item)
-        compare({"first_name": "Willy",
-                       "birth": "22. Mai 1864",
-                       "death": "31. Mai 1931"}, author_dict)
+        compare(
+            {
+                "first_name": "Willy",
+                "birth": "22. Mai 1864",
+                "death": "31. Mai 1931",
+                "sortkey": "Willy",
+                "description": "deutscher Marinemaler der Kaiserzeit"
+            },
+            author_dict)
 
         author_dict = {}
         self.author_list.enrich_author_dict(author_dict, data_item)
-        compare({"first_name": "Willy",
-                       "last_name": "Stöwer",
-                       "birth": "22. Mai 1864",
-                       "death": "31. Mai 1931"}, author_dict)
+        compare(
+            {
+                "first_name": "Willy",
+                "last_name": "Stöwer",
+                "birth": "22. Mai 1864",
+                "death": "31. Mai 1931",
+                "sortkey": "Stöwer, Willy",
+                "description": "deutscher Marinemaler der Kaiserzeit"
+            },
+            author_dict)
 
     @real_wiki_test
     def test_get_highest_claim_filter_out(self):
-        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        lemma = pywikibot.Page(WS_WIKI, "Aristoteles")
+        lemma = pywikibot.Page(self.wiki, "Aristoteles")
         data_item = lemma.data_item()
         claim = self.author_list.get_highest_claim(data_item, "P735")
         compare(claim.getTarget().get()["labels"]["de"], "Aristoteles")
 
     @real_wiki_test
     def test_get_highest_claim_get_preferred(self):
-        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        lemma = pywikibot.Page(WS_WIKI, "Aristoteles")
+        lemma = pywikibot.Page(self.wiki, "Aristoteles")
         data_item = lemma.data_item()
         claim = self.author_list.get_highest_claim(data_item, "P106")
         compare(claim.getTarget().get()["labels"]["de"], "Philosoph")
 
     @real_wiki_test
     def test_get_value_aristoteles(self):
-        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        data_item = pywikibot.Page(WS_WIKI, "Aristoteles").data_item()
+        data_item = pywikibot.Page(self.wiki, "Aristoteles").data_item()
 
         claim = data_item.text["claims"]["P734"][0]
         value = self.author_list.get_value_from_claim(claim)
@@ -105,9 +132,46 @@ class TestProtect(TestCloudBase):
         compare(value, "Aristoteles")
 
     @real_wiki_test
+    def test_get_value_hartung(self):
+        data_item = pywikibot.Page(self.wiki, "Johannes Hartung").data_item()
+
+        claim = data_item.text["claims"]["P570"][0]
+        value = self.author_list.get_value_from_claim(claim)
+        compare(value, None)
+
+    @real_wiki_test
+    def test_get_value_achenwall(self):
+        data_item = pywikibot.Page(self.wiki, "Gottfried Achenwall").data_item()
+
+        claim = data_item.text["claims"]["P734"][0]
+        value = self.author_list.get_value_from_claim(claim)
+        compare(value, "Achenwall")
+
+    @real_wiki_test
+    def test_get_value_waldemar(self):
+        data_item = pywikibot.Page(self.wiki, "Falscher Waldemar").data_item()
+
+        claim = data_item.text["claims"]["P569"][0]
+        value = self.author_list.get_value_from_claim(claim)
+        compare(value, None)
+
+    @real_wiki_test
+    def test_enrisch_wunschmann(self):
+        data_item = pywikibot.Page(self.wiki, "Ernst Wunschmann").data_item()
+        author_dict = {}
+        self.author_list.enrich_author_dict(author_dict, data_item)
+        compare(
+            "",
+            author_dict["death"])
+
+    @real_wiki_test
+    def test_get_highest_claim_Reizer(self):
+        data_item = pywikibot.Page(self.wiki, "Johann Georg Reizer").data_item()
+        compare(None, self.author_list.get_highest_claim(data_item, "P570"))
+
+    @real_wiki_test
     def test_get_value_dates(self):
-        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        data_item = pywikibot.Page(WS_WIKI, "Aristoteles").data_item()
+        data_item = pywikibot.Page(self.wiki, "Aristoteles").data_item()
 
         claim = data_item.text["claims"]["P570"][0]
         value = self.author_list.get_value_from_claim(claim)
@@ -117,17 +181,146 @@ class TestProtect(TestCloudBase):
         value = self.author_list.get_value_from_claim(claim)
         compare(value, "7. März 322 v. Chr.")
 
-        data_item = pywikibot.Page(WS_WIKI, "Walther von der Vogelweide").data_item()
+        data_item = pywikibot.Page(self.wiki, "Walther von der Vogelweide").data_item()
         claim = data_item.text["claims"]["P569"][0]
         value = self.author_list.get_value_from_claim(claim)
         compare(value, "1170")
 
-        data_item = pywikibot.Page(WS_WIKI, "Theokrit").data_item()
+        data_item = pywikibot.Page(self.wiki, "Theokrit").data_item()
         claim = data_item.text["claims"]["P569"][0]
         value = self.author_list.get_value_from_claim(claim)
         compare(value, "4. Jh. v. Chr.")
 
-        data_item = pywikibot.Page(WS_WIKI, "Fritz Herbert Alma").data_item()
+        data_item = pywikibot.Page(self.wiki, "Fritz Herbert Alma").data_item()
         claim = data_item.text["claims"]["P570"][0]
         value = self.author_list.get_value_from_claim(claim)
         compare(value, "Dezember 1981")
+
+    def test_sorting(self):
+        self.author_list.data.assign_dict(
+            {"authors":
+                {
+                    "A (second one)": {
+                        "title": "A (second one)",
+                        "sortkey": "A",
+                        "birth": "2.1.1900",
+                        "death": "2.1.2000"
+                    },
+                    "B": {
+                        "title": "B",
+                        "sortkey": "B",
+                        "birth": "3.3.2000"
+                        ,
+                        "death": "3.3.2100"
+                    },
+                    "A (first one)": {
+                        "title": "A (first one)",
+                        "sortkey": "A",
+                        "birth": "1.1.1900",
+                        "death": "1.1.2000"
+                    }
+                }
+            }
+        )
+        compare(
+            [
+                {
+                    "title": "A (first one)",
+                    "sortkey": "A",
+                    "birth": "1.1.1900",
+                    "birth_sort": "1900-01-01",
+                    "death": "1.1.2000",
+                    "death_sort": "2000-01-01",
+                },
+                {
+                    "title": "A (second one)",
+                    "sortkey": "A",
+                    "birth": "2.1.1900",
+                    "birth_sort": "1900-01-02",
+                    "death": "2.1.2000",
+                    "death_sort": "2000-01-02",
+                },
+                {
+                    "title": "B",
+                    "sortkey": "B",
+                    "birth": "3.3.2000",
+                    "birth_sort": "2000-03-03",
+                    "death": "3.3.2100",
+                    "death_sort": "2100-03-03",
+                }
+            ],
+            self.author_list.sort_to_list()
+        )
+
+    def test_printing(self):
+        self.author_list.data.assign_dict({"authors": {}})
+        test_list = [
+            {
+                "title": "A (first one)",
+                "sortkey": "A",
+                "first_name": "A",
+                "last_name": "AA",
+                "birth": "1.1.1900",
+                "birth_sort": "1900-01-01",
+                "death": "1.1.2000",
+                "death_sort": "2000-01-01",
+                "description": "A (first one)",
+            },
+            {
+                "title": "A (second one)",
+                "sortkey": "A",
+                "first_name": "A",
+                "birth": "2.1.1900",
+                "birth_sort": "1900-01-02",
+                "death": "2.1.2000",
+                "death_sort": "2000-01-02",
+                "description": "A (second one)"
+            },
+            {
+                "title": "B",
+                "sortkey": "B",
+                "last_name": "BB",
+                "birth": "3.3.2000",
+                "birth_sort": "2000-03-03",
+                "death": "3.3.2100",
+                "death_sort": "2100-03-03",
+                "description": "B",
+            }
+        ]
+
+        compare(
+            """Die Liste kann mit den Buttons neben den Spaltenüberschriften nach der jeweiligen Spalte sortiert werden.
+<!--
+Diese Liste wurde durch ein Computerprogramm erstellt, das die Daten verwendet, die aus den Infoboxen auf den Autorenseiten stammen.
+Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werden.
+-->
+{{Tabellenstile}}
+{|class="wikitable sortable tabelle-kopf-fixiert"
+!style="width:20%"| Name
+!data-sort-type="text" style="width:15%"| Geb.-datum
+!data-sort-type="text" style="width:15%"| Tod.-datum
+!class="unsortable" style="width:50%"| Beschreibung
+|-
+|data-sort-value="A"|[[A (first one)|AA, A]]
+|data-sort-value="1900-01-01"|1.1.1900
+|data-sort-value="2000-01-01"|1.1.2000
+|A (first one)
+|-
+|data-sort-value="A"|[[A (second one)|A]]
+|data-sort-value="1900-01-02"|2.1.1900
+|data-sort-value="2000-01-02"|2.1.2000
+|A (second one)
+|-
+|data-sort-value="B"|[[B|BB]]
+|data-sort-value="2000-03-03"|3.3.2000
+|data-sort-value="2100-03-03"|3.3.2100
+|B
+|}
+
+== Anmerkungen ==
+<references/>
+
+{{SORTIERUNG:Autoren #Liste der}}
+[[Kategorie:Listen]]
+[[Kategorie:Autoren|!]]""" in self.author_list.print_author_list(test_list),
+            True)
