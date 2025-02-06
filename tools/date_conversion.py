@@ -89,7 +89,7 @@ class DateConversion:
             return_str = "".join([li_str[0], "-", "00", "-", "00"])
         elif str_re_form == "" or self.regex_dont_know.search(str_re_form):
             # Case: empty rawstring
-            return_str = "!-00-00"
+            return_str = "Z-00-00"
         else:
             raise ValueError(str_re_form)
 
