@@ -1,7 +1,9 @@
 # pylint: disable=protected-access,line-too-long
+from unittest import mock
+
 from ddt import file_data, ddt
 from pywikibot.scripts.generate_user_files import pywikibot
-from testfixtures import compare
+from testfixtures import compare, LogCapture
 
 from service.author_list import AuthorListNew
 from tools.bots.cloud.test_base import TestCloudBase
@@ -15,18 +17,6 @@ class TestAuthorList(TestCloudBase):
     def setUp(self):
         self.author_list = AuthorListNew()
 
-    #     self.petscan_mock = mock.patch("service.protect.PetScan").start()
-    #     self.get_combined_lemma_list_mock = mock.Mock()
-    #     self.petscan_mock.return_value = mock.Mock(get_combined_lemma_list=self.get_combined_lemma_list_mock)
-    #     self.page_mock = mock.patch("service.protect.Page", new_callable=mock.MagicMock).start()
-    #     self.protect_mock = mock.Mock()
-    #     self.page_mock.return_value = mock.Mock(protect=self.protect_mock)
-    #     self.addCleanup(mock.patch.stopall)
-
-    # def tearDown(self):
-    #     mock.patch.stopall()
-    #
-
     @file_data("test_data/test_get_page_infos.yml")
     def test_get_page_infos(self, given, expect):
         compare(expect, self.author_list.get_page_infos(given))
@@ -38,6 +28,33 @@ class TestAuthorList(TestCloudBase):
             self.author_list.get_page_infos("{{Personendaten")
         with self.assertRaises(ValueError):
             self.author_list.get_page_infos("{{Personendaten}}\n{{Personendaten}}")
+
+    @real_wiki_test
+    def test_integration(self):
+        lemma_mock = mock.patch("service.author_list.AuthorListNew.get_lemma_list",
+                                new_callable=mock.MagicMock).start()
+        mock.patch("service.author_list.Page.save").start()
+        lemma_mock.return_value = ([":Willy_Stöwer"], 1)
+        self.addCleanup(mock.patch.stopall)
+        with AuthorListNew(self.wiki) as bot:
+            bot.data.assign_dict({"checked": {}, "authors": {}})
+            bot.run()
+            compare(
+                {":Willy_Stöwer":
+                    {
+                        "title": "Willy Stöwer",
+                        "first_name": "Willy",
+                        "last_name": "Stöwer",
+                        "birth": "22. Mai 1864",
+                        "birth_sort": "1864-05-22",
+                        "death": "31. Mai 1931",
+                        "death_sort": "1931-05-31",
+                        "sortkey": "Stöwer, Willy",
+                        "description": "Maler, Illustrator"
+                    }
+                },
+                bot.data._data["authors"]
+            )
 
     @real_wiki_test
     def test_enrich(self):
@@ -60,7 +77,7 @@ class TestAuthorList(TestCloudBase):
     def test_enrich_eschenbach(self):
         lemma = pywikibot.Page(self.wiki, "Wolfram von Eschenbach")
         data_item = lemma.data_item()
-        author_dict = {"first_name": "Wolfram", "last_name": "von Eschenbach",}
+        author_dict = {"first_name": "Wolfram", "last_name": "von Eschenbach", }
         self.author_list.enrich_author_dict(author_dict, data_item)
         compare("Eschenbach, Wolfram", author_dict["sortkey"])
 

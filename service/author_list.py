@@ -376,10 +376,10 @@ class AuthorListNew(CloudBot):
         return True
 
     def process_lemmas(self):
-        lemma_list, unprocessed_lemmas = self.lemma_list
+        lemma_list, unprocessed_lemmas = self.get_lemma_list()
         for idx, lemma in enumerate(lemma_list):
             clean_lemma = lemma.strip(":").replace("_", " ")
-            self.logger.debug(f"{idx}/{unprocessed_lemmas} {clean_lemma}")
+            self.logger.debug(f"{idx+1}/{unprocessed_lemmas} {clean_lemma}")
             page = Page(self.wiki, lemma)
             author_dict = self.get_page_infos(page.text)
             author_dict["title"] = clean_lemma
@@ -420,8 +420,7 @@ class AuthorListNew(CloudBot):
         if template_value:
             author_dict[info] = template_value
 
-    @property
-    def lemma_list(self) -> Tuple[list[str], int]:
+    def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Autoren")
