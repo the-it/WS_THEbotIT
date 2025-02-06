@@ -80,4 +80,4 @@ class ReporterMixin:
         if self._data_exists():
             page = pywikibot.Page(self.report_wiki, self._wiki_page)
             page.text = page.text + self._build_entry()
-            page.save(self._reason, botflag=True)
+            page.save(self._reason, bot=True)

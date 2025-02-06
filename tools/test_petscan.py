@@ -302,21 +302,21 @@ class TestPetScan(TestCase):
     def test_get_combined_lemmas_no_old_lemmas(self):
         petscan_mock = self.mock_searcher()
         petscan_mock.return_value = self.result_of_searcher
-        compare([":RE:Lemma1", ":RE:Lemma2", ":RE:Lemma3"], self.petscan.get_combined_lemma_list({}))
+        compare(([":RE:Lemma1", ":RE:Lemma2", ":RE:Lemma3"], 3), self.petscan.get_combined_lemma_list({}))
 
     def test_get_combined_lemmas_old_lemmas(self):
         petscan_mock = self.mock_searcher()
         petscan_mock.return_value = self.result_of_searcher
-        compare([":RE:Lemma2", ":RE:Lemma3", ":RE:Lemma1"],
+        compare(([":RE:Lemma2", ":RE:Lemma3", ":RE:Lemma1"], 2),
                 self.petscan.get_combined_lemma_list({":RE:Lemma1": "20010101232359"}))
-        compare([":RE:Lemma2", ":RE:Lemma1", ":RE:Lemma3"],
+        compare(([":RE:Lemma2", ":RE:Lemma1", ":RE:Lemma3"], 1),
                 self.petscan.get_combined_lemma_list({":RE:Lemma1": "20010101232359", ":RE:Lemma3": "20020101232359"}))
 
     def test_get_combined_with_max_age(self):
         petscan_mock = self.mock_searcher()
         petscan_mock.side_effect = [self.result_of_searcher, self.result_of_searcher_max_age]
-        compare([":RE:Lemma4", ":RE:Lemma1", ":RE:Lemma2", ":RE:Lemma3"],
+        compare(([":RE:Lemma4", ":RE:Lemma1", ":RE:Lemma2", ":RE:Lemma3"], 4),
                 self.petscan.get_combined_lemma_list({}, timeframe=42))
         petscan_mock.side_effect = [self.result_of_searcher, self.result_of_searcher_max_age]
-        compare([":RE:Lemma4", ":RE:Lemma2", ":RE:Lemma3", ":RE:Lemma1"],
+        compare(([":RE:Lemma4", ":RE:Lemma2", ":RE:Lemma3", ":RE:Lemma1"], 3),
                 self.petscan.get_combined_lemma_list({":RE:Lemma1": "20010101232359"}, timeframe=42))

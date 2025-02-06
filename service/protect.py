@@ -42,7 +42,7 @@ class Protect(CanonicalBot):
     def task(self) -> bool:
         searcher = self._prepare_searcher()
         self.logger.info(str(searcher))
-        lemma_list = searcher.get_combined_lemma_list(self.data)
+        lemma_list, _ = searcher.get_combined_lemma_list(self.data)
         protected_lemmas = 0
         for idx, lemma_str in enumerate(lemma_list):
             lemma = Page(self.wiki, lemma_str)

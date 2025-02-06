@@ -100,7 +100,7 @@ class TestCloudBot(TestCloudBase):
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
             self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])  # pylint: disable=unnecessary-dunder-call
-            self.assertEqual(mock.call().save("Update of Bot MinimalBot", botflag=True),
+            self.assertEqual(mock.call().save("Update of Bot MinimalBot", bot=True),
                              mock_page.mock_calls[2])
 
     def test_save_if_changed_positive(self):
@@ -109,7 +109,7 @@ class TestCloudBot(TestCloudBase):
         type(page_mock).text = text_mock
         text_mock.return_value = "2"
         self.MinimalBot.save_if_changed(page_mock, "1", "changed")
-        compare(mock.call.save("changed", botflag=True), page_mock.mock_calls[0])
+        compare(mock.call.save("changed", bot=True), page_mock.mock_calls[0])
 
     def test_save_if_changed_negativ(self):
         page_mock = mock.Mock()

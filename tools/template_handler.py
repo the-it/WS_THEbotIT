@@ -54,7 +54,10 @@ class TemplateHandler:
         return self.parameters
 
     def get_parameter(self, key) -> TemplateParameterDict:
-        return [item for item in self.parameters if item["key"] == key][0]
+        try:
+            return [item for item in self.parameters if item["key"] == key][0]
+        except IndexError as error:
+            raise TemplateHandlerException("Parameter key not found") from error
 
     def get_str(self, str_complex: bool = True) -> str:
         list_for_template: List[str] = ["{{" + self.title]

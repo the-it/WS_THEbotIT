@@ -61,7 +61,7 @@ class ReStatus(CanonicalBot):
                                  "\n<!--new line-->"])
         temp_text = re.sub("<!--new line-->", composed_text, temp_text)
         page.text = temp_text
-        page.save("RE Statistik aktualisiert", botflag=True)
+        page.save("RE Statistik aktualisiert", bot=True)
 
     def get_sum_of_cat(self, cats: List[str], negacats: List[str]) -> Tuple[int, int]:
         list_of_lemmas = self.petscan(cats, negacats)

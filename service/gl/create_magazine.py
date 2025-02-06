@@ -133,10 +133,10 @@ class GlCreateMagazine(CanonicalBot):
                         self.logger.debug(f"Print [[Die Gartenlaube ({year})/Heft {magazine}]].")
                         if lemma.text != '':
                             lemma.text = new_text
-                            lemma.save("Automatische Aktualisierung des Heftes", botflag=True)
+                            lemma.save("Automatische Aktualisierung des Heftes", bot=True)
                         else:
                             lemma.text = new_text
-                            lemma.save("automatische Hefterstellung", botflag=True)
+                            lemma.save("automatische Hefterstellung", bot=True)
                     else:
                         self.logger.debug(f"Keine Änderung im Text ({year}/{magazine}).")
 

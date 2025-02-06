@@ -120,7 +120,7 @@ class TestRePage(TestCase):
         re_page = RePage(self.page_mock)
         re_page.save("reason")
         self.text_mock.assert_called_with(ARTICLE_TEMPLATE)
-        self.page_mock.save.assert_called_once_with(summary="reason", botflag=True)
+        self.page_mock.save.assert_called_once_with(summary="reason", bot=True)
 
     def test_dont_save_because_no_changes(self):
         self.text_mock.return_value = ARTICLE_TEMPLATE
@@ -197,7 +197,7 @@ class TestRePage(TestCase):
     def test_page_is_locked(self):
         self.text_mock.return_value = ARTICLE_TEMPLATE
 
-        def side_effect(summary, botflag):
+        def side_effect(summary, bot):
             raise pywikibot.exceptions.LockedPageError(self.page_mock)
         self.page_mock.save.side_effect = side_effect
         re_page = RePage(self.page_mock)
