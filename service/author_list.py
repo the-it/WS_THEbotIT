@@ -1,10 +1,12 @@
 import re
 from contextlib import suppress
+from copy import deepcopy
 from datetime import timedelta, datetime
 from math import ceil
 from typing import TypedDict, Literal, Tuple, Optional
 
 from pywikibot import ItemPage, Page, Site, Claim
+from pywikibot.exceptions import NoPageError
 
 from tools.bots import BotException
 from tools.bots.cloud.cloud_bot import CloudBot
@@ -344,17 +346,17 @@ class AuthorListNew(CloudBot):
     def __enter__(self):
         super().__enter__()
         if not self.data:
-            self.logger.warning("Try to get the deprecated data back.")
-            try:
-                self.data.get_deprecated()
-            except BotException:
-                self.logger.warning("There isn't deprecated data to reload.")
-        if not self.data:
             self.logger.warning("Try to get the broken data back.")
             try:
                 self.data.get_broken()
             except BotException:
                 self.logger.warning("There isn't broken data to reload.")
+        if not self.data:
+            self.logger.warning("Try to get the deprecated data back.")
+            try:
+                self.data.get_deprecated()
+            except BotException:
+                self.logger.warning("There isn't deprecated data to reload.")
         if not self.data or self.data_outdated():
             self.data.assign_dict({"checked": {}, "authors": {}})
         return self
@@ -368,7 +370,7 @@ class AuthorListNew(CloudBot):
         new_text = self.print_author_list(author_list)
         author_list_page = Page(self.wiki, "Liste der Autoren/New")
         old_text = author_list_page.text
-        if new_text[150:] in old_text:  # compare all but the date
+        if new_text[150:] not in old_text:  # compare all but the date
             author_list_page.text = new_text
             author_list_page.save("Die Liste wurde auf den aktuellen Stand gebracht.", bot=True)
         else:
@@ -379,11 +381,11 @@ class AuthorListNew(CloudBot):
         lemma_list, unprocessed_lemmas = self.get_lemma_list()
         for idx, lemma in enumerate(lemma_list):
             clean_lemma = lemma.strip(":").replace("_", " ")
-            self.logger.debug(f"{idx+1}/{unprocessed_lemmas} {clean_lemma}")
+            self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} {clean_lemma}")
             page = Page(self.wiki, lemma)
             author_dict = self.get_page_infos(page.text)
             author_dict["title"] = clean_lemma
-            self.enrich_author_dict(author_dict, page.data_item())
+            self.enrich_author_dict(author_dict, page)
             self.data["authors"][lemma] = author_dict
             self.data["checked"][lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
             if (idx + 10 > unprocessed_lemmas) and self._watchdog():
@@ -427,32 +429,39 @@ class AuthorListNew(CloudBot):
         searcher.add_yes_template("Personendaten")
         return searcher.get_combined_lemma_list(self.data["checked"], timeframe=72)
 
-    def enrich_author_dict(self, author_dict: AuthorDict, data_item: ItemPage):
-        if "first_name" not in author_dict and "last_name" not in author_dict:
-            author_dict.pop("first_name", None)
-            author_dict.pop("last_name", None)
-            claim = self.get_highest_claim(data_item, "P735")
-            value = self.get_value_from_claim(claim)
-            if value:
-                author_dict["first_name"] = value
-            claim = self.get_highest_claim(data_item, "P734")
-            value = self.get_value_from_claim(claim)
-            if value:
-                author_dict["last_name"] = value
-        if "birth" not in author_dict:
-            claim = self.get_highest_claim(data_item, "P569")
-            value = self.get_value_from_claim(claim)
-            if value:
-                author_dict["birth"] = value
-            else:
-                author_dict["birth"] = ""
-        if "death" not in author_dict:
-            claim = self.get_highest_claim(data_item, "P570")
-            value = self.get_value_from_claim(claim)
-            if value:
-                author_dict["death"] = value
-            else:
-                author_dict["death"] = ""
+    def enrich_author_dict(self, author_dict: AuthorDict, page: Page):
+        with suppress(NoPageError):
+            data_item = page.data_item()
+            if "first_name" not in author_dict and "last_name" not in author_dict:
+                author_dict.pop("first_name", None)
+                author_dict.pop("last_name", None)
+                claim = self.get_highest_claim(data_item, "P735")
+                value = self.get_value_from_claim(claim)
+                if value:
+                    author_dict["first_name"] = value
+                claim = self.get_highest_claim(data_item, "P734")
+                value = self.get_value_from_claim(claim)
+                if value:
+                    author_dict["last_name"] = value
+            if "birth" not in author_dict:
+                claim = self.get_highest_claim(data_item, "P569")
+                value = self.get_value_from_claim(claim)
+                if value:
+                    author_dict["birth"] = value
+                else:
+                    author_dict["birth"] = ""
+            if "death" not in author_dict:
+                claim = self.get_highest_claim(data_item, "P570")
+                value = self.get_value_from_claim(claim)
+                if value:
+                    author_dict["death"] = value
+                else:
+                    author_dict["death"] = ""
+            if "description" not in author_dict:
+                try:
+                    author_dict["description"] = data_item.get()["descriptions"]["de"]
+                except KeyError:
+                    author_dict["description"] = ""
         if "sortkey" not in author_dict:
             if "last_name" not in author_dict:
                 sortkey = author_dict["first_name"]
@@ -463,11 +472,6 @@ class AuthorListNew(CloudBot):
                     author_dict["last_name"] + ", " + author_dict["first_name"]
             sortkey = sortkey.replace("von ", "")
             author_dict["sortkey"] = sortkey
-        if "description" not in author_dict:
-            try:
-                author_dict["description"] = data_item.get()["descriptions"]["de"]
-            except KeyError:
-                author_dict["description"] = ""
 
     @staticmethod
     def get_highest_claim(data_item: ItemPage, property_str: str) -> Optional[Claim]:
@@ -524,6 +528,7 @@ class AuthorListNew(CloudBot):
     def sort_to_list(self) -> list[AuthorDict]:
         author_list = []
         for author in self.data["authors"].values():
+            author = deepcopy(author)
             author["birth_sort"] = str(DateConversion(author["birth"]))
             author["death_sort"] = str(DateConversion(author["death"]))
             author_list.append(author)

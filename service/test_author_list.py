@@ -3,7 +3,7 @@ from unittest import mock
 
 from ddt import file_data, ddt
 from pywikibot.scripts.generate_user_files import pywikibot
-from testfixtures import compare, LogCapture
+from testfixtures import compare
 
 from service.author_list import AuthorListNew
 from tools.bots.cloud.test_base import TestCloudBase
@@ -46,9 +46,7 @@ class TestAuthorList(TestCloudBase):
                         "first_name": "Willy",
                         "last_name": "Stöwer",
                         "birth": "22. Mai 1864",
-                        "birth_sort": "1864-05-22",
                         "death": "31. Mai 1931",
-                        "death_sort": "1931-05-31",
                         "sortkey": "Stöwer, Willy",
                         "description": "Maler, Illustrator"
                     }
@@ -59,9 +57,8 @@ class TestAuthorList(TestCloudBase):
     @real_wiki_test
     def test_enrich(self):
         lemma = pywikibot.Page(self.wiki, "Willy Stöwer")
-        data_item = lemma.data_item()
         author_dict = {}
-        self.author_list.enrich_author_dict(author_dict, data_item)
+        self.author_list.enrich_author_dict(author_dict, lemma)
         compare(
             {
                 "first_name": "Willy",
@@ -82,11 +79,17 @@ class TestAuthorList(TestCloudBase):
         compare("Eschenbach, Wolfram", author_dict["sortkey"])
 
     @real_wiki_test
+    def test_enrich_zinke_has_no_data_item(self):
+        lemma = pywikibot.Page(self.wiki, "Gustav Zinke")
+        author_dict = {"last_name": "Zinke", }
+        self.author_list.enrich_author_dict(author_dict, lemma)
+        compare("Zinke", author_dict["sortkey"])
+
+    @real_wiki_test
     def test_enrich_both_names_must_be_missing(self):
         lemma = pywikibot.Page(self.wiki, "Willy Stöwer")
-        data_item = lemma.data_item()
         author_dict = {"last_name": "Stöwer"}
-        self.author_list.enrich_author_dict(author_dict, data_item)
+        self.author_list.enrich_author_dict(author_dict, lemma)
         compare(
             {
                 "last_name": "Stöwer",
@@ -98,7 +101,7 @@ class TestAuthorList(TestCloudBase):
             author_dict)
 
         author_dict = {"first_name": "Willy"}
-        self.author_list.enrich_author_dict(author_dict, data_item)
+        self.author_list.enrich_author_dict(author_dict, lemma)
         compare(
             {
                 "first_name": "Willy",
@@ -110,7 +113,7 @@ class TestAuthorList(TestCloudBase):
             author_dict)
 
         author_dict = {}
-        self.author_list.enrich_author_dict(author_dict, data_item)
+        self.author_list.enrich_author_dict(author_dict, lemma)
         compare(
             {
                 "first_name": "Willy",
@@ -174,9 +177,9 @@ class TestAuthorList(TestCloudBase):
 
     @real_wiki_test
     def test_enrisch_wunschmann(self):
-        data_item = pywikibot.Page(self.wiki, "Ernst Wunschmann").data_item()
+        lemma = pywikibot.Page(self.wiki, "Ernst Wunschmann")
         author_dict = {}
-        self.author_list.enrich_author_dict(author_dict, data_item)
+        self.author_list.enrich_author_dict(author_dict, lemma)
         compare(
             "",
             author_dict["death"])
