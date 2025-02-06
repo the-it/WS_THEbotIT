@@ -15,7 +15,7 @@
         ["1856", "1856-00-00"]
     ],
     "empty_date": [
-        ["", "!-00-00"]
+        ["", "Z-00-00"]
     ],
     "unimportent_words": [
         ["nach 1856", "1856-00-00"],
@@ -54,9 +54,9 @@
         ["unsicher: 13. Juli 100 v. Chr.", "-9899-07-13"]
     ],
     "date_dont_known": [
-        ["unbekannt", "!-00-00"],
-        ["Unbekannt", "!-00-00"],
-        ["?", "!-00-00"],
+        ["unbekannt", "Z-00-00"],
+        ["Unbekannt", "Z-00-00"],
+        ["?", "Z-00-00"],
         ["unbekannt (getauft 25. Dezember 1616)", "1616-12-25"]
     ],
     "authorlist": [
