@@ -4,29 +4,29 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-beautifulsoup4==4.12.3
+beautifulsoup4==4.13.3
     # via -r requirements.in
-boto3==1.35.38
+boto3==1.36.14
     # via -r requirements.in
-boto3-stubs[essential]==1.35.38
+boto3-stubs[essential]==1.36.14
     # via -r requirements.in
-botocore==1.35.38
+botocore==1.36.14
     # via
     #   boto3
     #   s3transfer
-botocore-stubs==1.35.38
+botocore-stubs==1.36.14
     # via boto3-stubs
-certifi==2024.8.30
+certifi==2025.1.31
     # via requests
-charset-normalizer==3.4.0
+charset-normalizer==3.4.1
     # via requests
 defusedxml==0.7.1
     # via -r requirements.in
 dictdiffer==0.9.0
     # via -r requirements.in
-gitdb==4.0.11
+gitdb==4.0.12
     # via gitpython
-gitpython==3.1.43
+gitpython==3.1.44
     # via -r requirements.in
 idna==3.10
     # via requests
@@ -36,31 +36,31 @@ jmespath==1.0.1
     #   botocore
 mwparserfromhell==0.6.6
     # via pywikibot
-mypy-boto3-cloudformation==1.35.0
+mypy-boto3-cloudformation==1.36.0
     # via boto3-stubs
-mypy-boto3-dynamodb==1.35.24
+mypy-boto3-dynamodb==1.36.0
     # via boto3-stubs
-mypy-boto3-ec2==1.35.38
+mypy-boto3-ec2==1.36.8
     # via boto3-stubs
-mypy-boto3-lambda==1.35.28
+mypy-boto3-lambda==1.36.0
     # via boto3-stubs
-mypy-boto3-rds==1.35.31
+mypy-boto3-rds==1.36.14
     # via boto3-stubs
-mypy-boto3-s3==1.35.32
+mypy-boto3-s3==1.36.9
     # via boto3-stubs
-mypy-boto3-sqs==1.35.0
+mypy-boto3-sqs==1.36.0
     # via boto3-stubs
 oauthlib==3.2.2
     # via
     #   -r requirements.in
     #   requests-oauthlib
-packaging==24.1
+packaging==24.2
     # via pywikibot
 python-dateutil==2.9.0.post0
     # via botocore
-pywikibot==9.4.0
+pywikibot==9.6.2
     # via -r requirements.in
-regex==2024.9.11
+regex==2024.11.6
     # via wikitextparser
 requests==2.32.3
     # via
@@ -69,25 +69,27 @@ requests==2.32.3
     #   requests-oauthlib
 requests-oauthlib==2.0.0
     # via -r requirements.in
-roman==4.2
+roman==5.0
     # via -r requirements.in
-s3transfer==0.10.3
+s3transfer==0.11.2
     # via boto3
-six==1.16.0
+six==1.17.0
     # via python-dateutil
-smmap==5.0.1
+smmap==5.0.2
     # via gitdb
 soupsieve==2.6
     # via beautifulsoup4
-types-awscrt==0.22.0
+types-awscrt==0.23.9
     # via botocore-stubs
-types-s3transfer==0.10.3
+types-s3transfer==0.11.2
     # via boto3-stubs
-urllib3==2.2.3
+typing-extensions==4.12.2
+    # via beautifulsoup4
+urllib3==2.3.0
     # via
     #   botocore
     #   requests
 wcwidth==0.2.13
     # via wikitextparser
-wikitextparser==0.56.2
+wikitextparser==0.56.3
     # via -r requirements.in
