@@ -109,7 +109,7 @@ class DateConversion:
 
     @staticmethod
     def _chop_jul(rawstring):
-        str_re_value = re.sub("(?:\(jul.\)|\(greg.\)) ?", "", rawstring)
+        str_re_value = re.sub(r"(?:\(jul.\)|\(greg.\)) ?", "", rawstring)
         return str_re_value
 
     @staticmethod
