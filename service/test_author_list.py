@@ -29,6 +29,22 @@ class TestAuthorList(TestCloudBase):
         with self.assertRaises(ValueError):
             self.author_list.get_page_infos("{{Personendaten}}\n{{Personendaten}}")
 
+    def test_manual_date_sort(self):
+        template = """{{Personendaten
+        |GEBURTSDATUM=4. Dezember zwischen 1825 und 1850<!--1837-00-00-->
+        |STERBEDATUM=frühestens 1916, spätestens 1921<!--1918-00-00-->}}"""
+        result = {
+            "birth": "4. Dezember zwischen 1825 und 1850<!--1837-00-00-->",
+            "death": "frühestens 1916, spätestens 1921<!--1918-00-00-->"
+        }
+        compare(result, self.author_list.get_page_infos(template))
+
+        result["sortkey"] = "Emilie Schröder"
+        self.author_list.data.assign_dict({"authors": {"Emilie Schröder": result}})
+        sorted_list = self.author_list.sort_to_list()
+        compare("1837-00-00", sorted_list[0]["birth_sort"])
+        compare("1918-00-00", sorted_list[0]["death_sort"])
+
     @real_wiki_test
     def test_integration(self):
         lemma_mock = mock.patch("service.author_list.AuthorListNew.get_lemma_list",
