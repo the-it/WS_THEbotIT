@@ -333,7 +333,7 @@ class AuthorDict(TypedDict, total=False):
     check: str
 
 
-AuthorInfos = Literal["title", "first_name", "last_name", "birth", "death", "description", "sortkey"]
+AuthorInfos = Literal["title", "first_name", "last_name", "birth", "death", "description", "sortkey", "check"]
 
 _SPACE_REGEX = re.compile(r"\s+")
 
