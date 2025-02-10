@@ -12,5 +12,7 @@ runs:
         cache: 'pip'
     - name: Install dependencies
       run: make pip3-dev
+      shell: sh
     - name: Display Python version and Dependencies
       run: python -c "import sys; print(sys.version)" && pip list
+      shell: sh
