@@ -40,7 +40,7 @@ class TestAuthorList(TestCloudBase):
         compare(result, self.author_list.get_page_infos(template))
 
         result["sortkey"] = "Emilie Schröder"
-        self.author_list.data.assign_dict({"authors": {"Emilie Schröder": result}})
+        self.author_list.data.assign_dict({"Emilie Schröder": result})
         sorted_list = self.author_list.sort_to_list()
         compare("1837-00-00", sorted_list[0]["birth_sort"])
         compare("1918-00-00", sorted_list[0]["death_sort"])
@@ -53,8 +53,9 @@ class TestAuthorList(TestCloudBase):
         lemma_mock.return_value = ([":Willy_Stöwer"], 1)
         self.addCleanup(mock.patch.stopall)
         with AuthorListNew(self.wiki) as bot:
-            bot.data.assign_dict({"checked": {}, "authors": {}})
+            bot.data.assign_dict({})
             bot.run()
+            del bot.data._data[":Willy_Stöwer"]["check"]
             compare(
                 {":Willy_Stöwer":
                     {
@@ -67,7 +68,7 @@ class TestAuthorList(TestCloudBase):
                         "description": "Maler, Illustrator"
                     }
                 },
-                bot.data._data["authors"]
+                bot.data._data
             )
 
     @real_wiki_test
@@ -234,8 +235,7 @@ class TestAuthorList(TestCloudBase):
 
     def test_sorting(self):
         self.author_list.data.assign_dict(
-            {"authors":
-                {
+            {
                     "A (second one)": {
                         "title": "A (second one)",
                         "sortkey": "A",
@@ -255,7 +255,6 @@ class TestAuthorList(TestCloudBase):
                         "birth": "1.1.1900",
                         "death": "1.1.2000"
                     }
-                }
             }
         )
         compare(
@@ -289,7 +288,7 @@ class TestAuthorList(TestCloudBase):
         )
 
     def test_printing(self):
-        self.author_list.data.assign_dict({"authors": {}})
+        self.author_list.data.assign_dict({})
         test_list = [
             {
                 "title": "A (first one)",
@@ -360,3 +359,7 @@ Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werde
 [[Kategorie:Listen]]
 [[Kategorie:Autoren|!]]""" in self.author_list.print_author_list(test_list),
             True)
+
+    def test_get_check_list(self):
+        self.author_list.data.assign_dict({"A": {"check": "2024"}, "B": {"check": "2023"}})
+        compare({"A": "2024", "B": "2023"}, self.author_list.get_check_dict())

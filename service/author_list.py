@@ -330,6 +330,7 @@ class AuthorDict(TypedDict, total=False):
     death_sort: str
     description: str
     sortkey: str
+    check: str
 
 
 AuthorInfos = Literal["title", "first_name", "last_name", "birth", "death", "description", "sortkey"]
@@ -340,7 +341,7 @@ _SPACE_REGEX = re.compile(r"\s+")
 class AuthorListNew(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 7, 9)
+        self.new_data_model = datetime(2025, 2, 10, 9)
         self.timeout = timedelta(minutes=2)
 
     def __enter__(self):
@@ -358,7 +359,7 @@ class AuthorListNew(CloudBot):
             except BotException:
                 self.logger.warning("There isn't deprecated data to reload.")
         if not self.data or self.data_outdated():
-            self.data.assign_dict({"checked": {}, "authors": {}})
+            self.data.assign_dict({})
         return self
 
     def task(self) -> bool:
@@ -386,8 +387,8 @@ class AuthorListNew(CloudBot):
             author_dict = self.get_page_infos(page.text)
             author_dict["title"] = clean_lemma
             self.enrich_author_dict(author_dict, page)
-            self.data["authors"][lemma] = author_dict
-            self.data["checked"][lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
+            author_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
+            self.data[lemma] = author_dict
             if (idx + 10 > unprocessed_lemmas) and self._watchdog():
                 break
 
@@ -422,12 +423,16 @@ class AuthorListNew(CloudBot):
         if template_value:
             author_dict[info] = template_value
 
+    def get_check_dict(self):
+        return {author: self.data[author]["check"] for author in self.data}
+
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Autoren")
         searcher.add_yes_template("Personendaten")
-        return searcher.get_combined_lemma_list(self.data["checked"], timeframe=72)
+        self.logger.info(f"Searching for lemmas with {searcher}")
+        return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)
 
     def enrich_author_dict(self, author_dict: AuthorDict, page: Page):
         with suppress(NoPageError):
@@ -527,7 +532,7 @@ class AuthorListNew(CloudBot):
 
     def sort_to_list(self) -> list[AuthorDict]:
         author_list = []
-        for author in self.data["authors"].values():
+        for author in self.data.values():
             author = deepcopy(author)
             author["birth_sort"] = str(DateConversion(author["birth"]))
             author["death_sort"] = str(DateConversion(author["death"]))
@@ -537,7 +542,7 @@ class AuthorListNew(CloudBot):
     def print_author_list(self, author_list: list[AuthorDict]) -> str:
         start_of_run = self.status.current_run.start_time
         string_list = []
-        string_list.append(f"Diese Liste der Autoren enthält alle {len(self.data['authors'])}<ref>Stand: "
+        string_list.append(f"Diese Liste der Autoren enthält alle {len(self.data)}<ref>Stand: "
                            f"{start_of_run.day}.{start_of_run.month}.{start_of_run.year}, "
                            f"{start_of_run.strftime('%H:%M')} (UTC)</ref> Autoren, "
                            f"zu denen in Wikisource eine Autorenseite existiert.")
