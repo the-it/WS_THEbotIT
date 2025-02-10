@@ -7,21 +7,26 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  quality:
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
-        # This is the version of the action for setting up Python, not the Python version.
         uses: actions/setup-python@v5
         with:
-          # Semantic version range syntax or exact version of a Python version
           python-version: '3.12'
-          cache: 'pip' # caching pip dependencies
-      # You can test your matrix by printing the current Python version
+          cache: 'pip'
       - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+        run: make pip3-dev
+      - name: Display Python version and Dependencies
+        run: python -c "import sys; print(sys.version)" && pip list
+      - name: flake8
+        run: make flake8
+      - name: pycodestyle
+        run: make pycodestyle
+      - name: pylint
+        run: make pylint
+      - name: mypy
+        run: make mypy
