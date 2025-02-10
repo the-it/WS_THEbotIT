@@ -341,8 +341,8 @@ _SPACE_REGEX = re.compile(r"\s+")
 class AuthorListNew(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 10, 9)
-        self.timeout = timedelta(minutes=2)
+        self.new_data_model = datetime(2025, 2, 10, 23)
+        self.timeout = timedelta(minutes=1)
 
     def __enter__(self):
         super().__enter__()
