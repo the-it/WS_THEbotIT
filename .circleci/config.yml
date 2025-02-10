@@ -20,6 +20,7 @@ install_dependencies: &install_dependencies
   run:
     name: install dependencies
     command: |
+      ls -lisah
       python3 -m venv venv
       source venv/bin/activate
       make pip3-dev
