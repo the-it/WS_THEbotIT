@@ -21,9 +21,13 @@ install_dependencies: &install_dependencies
     name: install dependencies
     command: |
       ls -lisah venv/bin
+      echo 1
       python3 -m venv venv
+      echo 2
       source venv/bin/activate
+      echo 3
       make pip3-dev
+      echo 4
       pip list
 
 flake8: &flake8
