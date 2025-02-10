@@ -8,7 +8,7 @@ restore_cache: &restore_cache
       - v20-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
       - v20-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "requirements.txt" }}
       - v20-dependencies-{{ .Environment.CIRCLE_BRANCH }}-
-      - v19-dependencies-main-
+      - v20-dependencies-main-
 
 save_cache: &save_cache
   save_cache:
@@ -20,16 +20,9 @@ install_dependencies: &install_dependencies
   run:
     name: install dependencies
     command: |
-      ls -lisah venv/bin
-      echo 1
-      whereis python3
-      echo 11
       python3 -m venv venv
-      echo 2
       source venv/bin/activate
-      echo 3
       make pip3-dev
-      echo 4
       pip list
 
 flake8: &flake8
