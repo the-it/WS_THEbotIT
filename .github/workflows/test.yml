@@ -28,7 +28,9 @@ jobs:
       - name: Dependencies
         uses: "./.github/actions/dependencies"
       - name: wikitest
-        run: make wikitest
+        env:
+          WS_REAL_WIKI: 1
+        run: nose2 -v --with-coverage && coverage xml
       - name: Codecov
         uses: codecov/codecov-action@v5
         with:
