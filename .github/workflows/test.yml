@@ -12,16 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: 'pip'
-      - name: Install dependencies
-        run: make pip3-dev
-      - name: Display Python version and Dependencies
-        run: python -c "import sys; print(sys.version)" && pip list
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
       - name: flake8
         run: make flake8
       - name: pycodestyle

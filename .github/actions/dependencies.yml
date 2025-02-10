@@ -1,0 +1,17 @@
+name: Dependencies
+description: Prepares Python and downloads dependencies
+
+runs:
+  using: composite
+
+  steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+    - name: Install dependencies
+      run: make pip3-dev
+    - name: Display Python version and Dependencies
+      run: python -c "import sys; print(sys.version)" && pip list
