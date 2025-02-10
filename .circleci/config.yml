@@ -70,6 +70,7 @@ create_pywikibot_file: &create_pywikibot_file
     command: |
       mkdir -p ~/.pywikibot
       echo $PYWIKIBOT_FILE > ~/.pywikibot/user-config.py
+      cat ~/.pywikibot/user-config.py
 
 run_wikitest: &run_wikitest
   run:

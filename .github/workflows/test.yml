@@ -8,9 +8,7 @@ permissions:
 
 jobs:
   quality:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
@@ -23,3 +21,15 @@ jobs:
         run: make pylint
       - name: mypy
         run: make mypy
+  wikitest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
+      - name: wikitest
+        run: make wikitest
+      - name: Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          use_oidc: true
