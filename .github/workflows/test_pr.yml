@@ -2,6 +2,9 @@ name: Python lint and test
 
 on:
   pull_request:
+  schedule:
+    - cron: '0 0 * * *'  # This runs the workflow every day at midnight UTC
+
 
 permissions:
   contents: read
@@ -45,12 +48,11 @@ jobs:
 
   integration_test:
     runs-on: ubuntu-latest
+    if: "${{ github.event_name == 'schedule' }}"
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
         uses: "./.github/actions/dependencies"
-      - name: create pywikibot file
-        run: mkdir ~/.pywikibot && touch ~/.pywikibot/user-config.py
       - name: integration test
         env:
           WS_REAL_DATA: 1
