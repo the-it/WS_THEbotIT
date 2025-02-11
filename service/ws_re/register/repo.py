@@ -12,7 +12,7 @@ if "GITHUB_TOKEN" in os.environ:
     REPO_URL = f"https://{os.environ['GITHUB_TOKEN']}@github.com/the-it/re_register_data.git"
 else:
     # read only access for CI
-    REPO_URL = f"https://github.com/the-it/re_register_data.git"
+    REPO_URL = "https://github.com/the-it/re_register_data.git"
 
 PATH_REAL_DATA = Path(__file__).parent.joinpath("data")
 if "REGISTER_DATA_PATH" in os.environ:
