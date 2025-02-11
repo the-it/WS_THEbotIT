@@ -47,7 +47,7 @@ class TestAuthorList(TestCloudBase):
 
     @real_wiki_test
     def test_integration(self):
-        lemma_mock = mock.patch("service.author_list.AuthorListNew.get_lemma_list",
+        lemma_mock = mock.patch("service.author_list.AuthorListClean.get_lemma_list",
                                 new_callable=mock.MagicMock).start()
         mock.patch("service.author_list.Page.save").start()
         lemma_mock.return_value = ([":Willy_Stöwer"], 1)
