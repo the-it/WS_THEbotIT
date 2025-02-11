@@ -27,6 +27,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Dependencies
         uses: "./.github/actions/dependencies"
+      - name: create pywikibot file
+        run: touch ~/.pywikibot/user-config.py
       - name: wikitest
         env:
           WS_REAL_WIKI: 1
