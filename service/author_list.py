@@ -390,7 +390,7 @@ class AuthorListClean(CloudBot):
             self.enrich_author_dict(author_dict, page)
             author_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.data[lemma] = author_dict
-            if (idx + 10 > unprocessed_lemmas) and self._watchdog():
+            if (idx + 50 > unprocessed_lemmas) and self._watchdog():
                 break
 
     @staticmethod
