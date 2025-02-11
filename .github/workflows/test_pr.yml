@@ -34,12 +34,14 @@ jobs:
       - name: wikitest
         env:
           WS_REAL_WIKI: 1
+          PYTHONUNBUFFERED: 1
         run: nose2 -v --with-coverage && coverage xml
       - name: Codecov
         uses: codecov/codecov-action@v5
         with:
           use_oidc: true
           flags: wiki
+        if: always()
 
   integration_test:
     runs-on: ubuntu-latest
@@ -49,12 +51,14 @@ jobs:
         uses: "./.github/actions/dependencies"
       - name: create pywikibot file
         run: mkdir ~/.pywikibot && touch ~/.pywikibot/user-config.py
-      - name: wikitest
+      - name: integration test
         env:
           WS_REAL_DATA: 1
+          PYTHONUNBUFFERED: 1
         run: nose2 -v --with-coverage -s service/ws_re/integration_test && coverage xml
       - name: Codecov
         uses: codecov/codecov-action@v5
         with:
           use_oidc: true
           flags: integration
+        if: always()
