@@ -338,7 +338,7 @@ AuthorInfos = Literal["title", "first_name", "last_name", "birth", "death", "des
 _SPACE_REGEX = re.compile(r"\s+")
 
 
-class AuthorListNew(CloudBot):
+class AuthorListClean(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 2, 10, 23)
@@ -589,5 +589,5 @@ class AuthorListNew(CloudBot):
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
-    with AuthorListNew(wiki=WS_WIKI, debug=True) as bot:
+    with AuthorListClean(wiki=WS_WIKI, debug=True) as bot:
         bot.run()
