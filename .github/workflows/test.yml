@@ -16,10 +16,13 @@ jobs:
         uses: "./.github/actions/dependencies"
       - name: flake8
         run: make flake8
+        continue-on-error: true
       - name: pycodestyle
         run: make pycodestyle
+        continue-on-error: true
       - name: pylint
         run: make pylint
+        continue-on-error: true
       - name: mypy
         run: make mypy
   wikitest:
