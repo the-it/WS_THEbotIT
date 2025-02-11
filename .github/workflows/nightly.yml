@@ -1,7 +1,8 @@
-name: Python lint and test
+name: Nightly Integration Test
 
 on:
-  pull_request:
+  schedule:
+    - cron: '0 0 * * *'  # This runs the workflow every day at midnight UTC
 
 permissions:
   contents: read

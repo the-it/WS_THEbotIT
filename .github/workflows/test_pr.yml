@@ -1,0 +1,60 @@
+name: Python lint and test
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
+      - name: flake8
+        run: make flake8
+      - name: pycodestyle
+        run: make pycodestyle
+        if: always()
+      - name: pylint
+        run: make pylint
+        if: always()
+      - name: mypy
+        run: make mypy
+        if: always()
+  wikitest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
+      - name: wikitest
+        env:
+          WS_REAL_WIKI: 1
+        run: nose2 -v --with-coverage && coverage xml
+      - name: Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          use_oidc: true
+          flags: wiki
+
+  integration_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
+      - name: create pywikibot file
+        run: mkdir ~/.pywikibot && touch ~/.pywikibot/user-config.py
+      - name: wikitest
+        env:
+          WS_REAL_DATA: 1
+        run: nose2 -v --with-coverage -s service/ws_re/integration_test && coverage xml
+      - name: Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          use_oidc: true
+          flags: integration
