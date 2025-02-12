@@ -51,7 +51,6 @@ jobs:
 
   integration_test:
     runs-on: ubuntu-latest
-    if: "${{ github.event_name == 'schedule' }}"
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
