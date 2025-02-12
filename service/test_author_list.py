@@ -5,7 +5,7 @@ from ddt import file_data, ddt
 from pywikibot.scripts.generate_user_files import pywikibot
 from testfixtures import compare
 
-from service.author_list import AuthorListNew
+from service.author_list import AuthorList
 from tools.bots.cloud.test_base import TestCloudBase
 from tools.test import real_wiki_test
 
@@ -15,7 +15,7 @@ class TestAuthorList(TestCloudBase):
     wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
 
     def setUp(self):
-        self.author_list = AuthorListNew()
+        self.author_list = AuthorList()
 
     @file_data("test_data/test_get_page_infos.yml")
     def test_get_page_infos(self, given, expect):
@@ -47,12 +47,12 @@ class TestAuthorList(TestCloudBase):
 
     @real_wiki_test
     def test_integration(self):
-        lemma_mock = mock.patch("service.author_list.AuthorListNew.get_lemma_list",
+        lemma_mock = mock.patch("service.author_list.AuthorList.get_lemma_list",
                                 new_callable=mock.MagicMock).start()
         mock.patch("service.author_list.Page.save").start()
         lemma_mock.return_value = ([":Willy_Stöwer"], 1)
         self.addCleanup(mock.patch.stopall)
-        with AuthorListNew(self.wiki) as bot:
+        with AuthorList(self.wiki) as bot:
             bot.data.assign_dict({})
             bot.run()
             del bot.data._data[":Willy_Stöwer"]["check"]
