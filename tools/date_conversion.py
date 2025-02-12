@@ -56,6 +56,7 @@ class DateConversion:
         # chop the unused parts of the string
         str_re_form = self._chop_ref(self.rawstring)
         str_re_form = self._chop_jul(str_re_form)
+        str_re_form = self._chop_unsure(str_re_form)
         # sort for structure of the information and interpred it
         if self.regex_preset.search(str_re_form):
             return_str = self.regex_preset.search(str_re_form).group(1)
@@ -110,6 +111,11 @@ class DateConversion:
     @staticmethod
     def _chop_jul(rawstring):
         str_re_value = re.sub(r"(?:\(jul.\)|\(greg.\)) ?", "", rawstring)
+        return str_re_value
+
+    @staticmethod
+    def _chop_unsure(rawstring):
+        str_re_value = re.sub(r"\(\?\) ?", "", rawstring)
         return str_re_value
 
     @staticmethod
