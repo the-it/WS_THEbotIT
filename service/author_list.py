@@ -56,18 +56,12 @@ class AuthorList(CloudBot):
     def __enter__(self):
         super().__enter__()
         if not self.data:
-            self.logger.warning("Try to get the broken data back.")
-            try:
-                self.data.get_broken()
-            except BotException:
-                self.logger.warning("There isn't broken data to reload.")
-        if not self.data:
             self.logger.warning("Try to get the deprecated data back.")
             try:
                 self.data.get_deprecated()
             except BotException:
                 self.logger.warning("There isn't deprecated data to reload.")
-        if not self.data or self.data_outdated():
+        if self.data_outdated():
             self.data.assign_dict({})
         return self
 
