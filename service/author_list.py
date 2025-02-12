@@ -78,7 +78,7 @@ class AuthorList(CloudBot):
         author_list = self.sort_to_list()
         self.logger.info("Printing text.")
         new_text = self.print_author_list(author_list)
-        author_list_page = Page(self.wiki, "Liste der Autoren/New")
+        author_list_page = Page(self.wiki, "Liste der Autoren")
         old_text = author_list_page.text
         if new_text[150:] not in old_text:  # compare all but the date
             author_list_page.text = new_text
