@@ -16,11 +16,11 @@ beautifulsoup4==4.13.3
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   -r requirements-dev.in
-boto3==1.36.14
+boto3==1.36.18
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   moto
-botocore==1.36.14
+botocore==1.36.18
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   boto3
@@ -42,11 +42,11 @@ click==8.1.8
     #   typer
 codecov==2.1.13
     # via -r requirements-dev.in
-coverage==7.6.10
+coverage==7.6.12
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==44.0.0
+cryptography==44.0.1
     # via
     #   authlib
     #   moto
@@ -68,7 +68,7 @@ idna==3.10
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   requests
-internetarchive==5.2.0
+internetarchive==5.2.1
     # via -r requirements-dev.in
 isort==6.0.0
     # via pylint
