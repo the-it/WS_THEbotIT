@@ -14,27 +14,27 @@ bandit==1.8.2
     # via -r requirements-dev.in
 beautifulsoup4==4.13.3
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   -r requirements-dev.in
 boto3==1.36.14
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   moto
 botocore==1.36.14
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   boto3
     #   moto
     #   s3transfer
 certifi==2025.1.31
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   requests
 cffi==1.17.1
     # via cryptography
 charset-normalizer==3.4.1
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   requests
 click==8.1.8
     # via
@@ -46,7 +46,7 @@ coverage==7.6.10
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==44.0.0
+cryptography==44.0.1
     # via
     #   authlib
     #   moto
@@ -66,7 +66,7 @@ freezegun==1.5.1
     # via -r requirements-dev.in
 idna==3.10
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   requests
 internetarchive==5.2.0
     # via -r requirements-dev.in
@@ -78,7 +78,7 @@ jinja2==3.1.5
     #   safety
 jmespath==1.0.1
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   boto3
     #   botocore
 jsonpatch==1.33
@@ -109,7 +109,7 @@ nose2==0.15.1
     # via -r requirements-dev.in
 packaging==24.2
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   dparse
     #   marshmallow
     #   safety
@@ -142,7 +142,7 @@ pylint==3.3.4
     # via -r requirements-dev.in
 python-dateutil==2.9.0.post0
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   botocore
     #   freezegun
     #   moto
@@ -153,7 +153,7 @@ pyyaml==6.0.2
     #   responses
 requests==2.32.3
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   codecov
     #   internetarchive
     #   moto
@@ -177,7 +177,7 @@ ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
 s3transfer==0.11.2
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   boto3
 safety==3.2.14
     # via -r requirements-dev.in
@@ -187,11 +187,11 @@ shellingham==1.5.4
     # via typer
 six==1.17.0
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   python-dateutil
 soupsieve==2.6
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   beautifulsoup4
 stevedore==5.4.0
     # via bandit
@@ -209,7 +209,7 @@ types-requests==2.32.0.20241016
     # via -r requirements-dev.in
 typing-extensions==4.12.2
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   beautifulsoup4
     #   mypy
     #   pydantic
@@ -219,7 +219,7 @@ typing-extensions==4.12.2
     #   typer
 urllib3==2.3.0
     # via
-    #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
+    #   -c requirements.txt
     #   botocore
     #   internetarchive
     #   requests
