@@ -89,7 +89,6 @@ class AuthorList(CloudBot):
 
     def process_lemmas(self):
         lemma_list, unprocessed_lemmas = self.get_lemma_list()
-        self.logger.info(str(lemma_list))
         for idx, lemma in enumerate(lemma_list):
             clean_lemma = lemma.strip(":").replace("_", " ")
             self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} {clean_lemma}")
