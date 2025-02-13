@@ -3,7 +3,7 @@ import sys
 
 from pywikibot import Site
 
-from service.author_list import AuthorList
+from service.list_bots.author_list import AuthorList
 from service.gl.create_magazine import GlCreateMagazine
 from service.gl.status import GlStatus
 from service.ws_re.register.printer import ReRegisterPrinter
