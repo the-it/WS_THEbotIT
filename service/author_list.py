@@ -50,8 +50,8 @@ _SPACE_REGEX = re.compile(r"\s+")
 class AuthorList(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 13, 23)
-        self.timeout = timedelta(minutes=1)
+        self.new_data_model = datetime(2025, 2, 13, 9)
+        self.timeout = timedelta(minutes=3)
 
     def __enter__(self):
         super().__enter__()
@@ -98,7 +98,7 @@ class AuthorList(CloudBot):
             self.enrich_author_dict(author_dict, page)
             author_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.data[lemma] = author_dict
-            if (idx + 50 > unprocessed_lemmas) and self._watchdog():
+            if (idx - 10 > unprocessed_lemmas) and self._watchdog():
                 break
 
     @staticmethod
