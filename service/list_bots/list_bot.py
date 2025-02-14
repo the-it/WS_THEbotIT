@@ -52,7 +52,12 @@ class ListBot(CloudBot):
             clean_lemma = lemma.strip(":").replace("_", " ")
             self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} {clean_lemma}")
             page = Page(self.wiki, lemma)
-            item_dict = self.get_page_infos(page)
+            try:
+                item_dict = self.get_page_infos(page)
+            except ValueError:
+                item_dict = {}
+                self.logger.error(f"lemma {clean_lemma} was not parsed correctly.")
+            self.enrich_dict(page, item_dict)
             item_dict["lemma"] = clean_lemma
             item_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.data[lemma] = item_dict
@@ -62,6 +67,9 @@ class ListBot(CloudBot):
 
     def get_check_dict(self):
         return {item: self.data[item]["check"] for item in self.data}
+
+    def enrich_dict(self, page: Page, item_dict: dict[str, str]) -> None:
+        pass
 
     def get_page_infos(self, page: Page) -> dict:
         template_finder = TemplateFinder(page.text)
