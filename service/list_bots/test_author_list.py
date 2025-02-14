@@ -40,7 +40,7 @@ class TestAuthorList(TestCloudBase):
             compare(
                 {":Willy_Stöwer":
                     {
-                        "title": "Willy Stöwer",
+                        "lemma": "Willy Stöwer",
                         "first_name": "Willy",
                         "last_name": "Stöwer",
                         "birth": "22. Mai 1864",
@@ -111,7 +111,7 @@ class TestAuthorList(TestCloudBase):
         self.author_list.data.assign_dict({})
         test_list = [
             {
-                "title": "A (first one)",
+                "lemma": "A (first one)",
                 "sortkey": "A",
                 "first_name": "A",
                 "last_name": "AA",
@@ -122,7 +122,7 @@ class TestAuthorList(TestCloudBase):
                 "description": "A (first one)",
             },
             {
-                "title": "A (second one)",
+                "lemma": "A (second one)",
                 "sortkey": "A",
                 "first_name": "A",
                 "birth": "2.1.1900",
@@ -132,7 +132,7 @@ class TestAuthorList(TestCloudBase):
                 "description": "A (second one)"
             },
             {
-                "title": "B",
+                "lemma": "B",
                 "sortkey": "B",
                 "last_name": "BB",
                 "birth": "3.3.2000",
@@ -177,7 +177,7 @@ Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werde
 
 {{SORTIERUNG:Autoren #Liste der}}
 [[Kategorie:Listen]]
-[[Kategorie:Autoren|!]]""" in self.author_list.print_author_list(test_list),
+[[Kategorie:Autoren|!]]""" in self.author_list.print_list(test_list),
             True)
 
     def test_get_check_list(self):

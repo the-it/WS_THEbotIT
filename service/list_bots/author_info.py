@@ -3,7 +3,7 @@ from contextlib import suppress
 from math import ceil
 from typing import TypedDict, Literal, Optional
 
-from pywikibot import Page, ItemPage, Claim, Site
+from pywikibot import Page, ItemPage, Claim
 from pywikibot.exceptions import NoPageError
 
 from tools.template_finder import TemplateFinderException, TemplateFinder
@@ -23,20 +23,11 @@ NUMBER_TO_MONTH = {1: "Januar",
                    11: "November",
                    12: "Dezember"}
 
-class AuthorDict(TypedDict, total=False):
-    title: str
-    first_name: str
-    last_name: str
-    birth: str
-    birth_sort: str
-    death: str
-    death_sort: str
-    description: str
-    sortkey: str
-    check: str
 
 
-AuthorInfos = Literal["title", "first_name", "last_name", "birth", "death", "description", "sortkey", "check"]
+
+
+
 
 _SPACE_REGEX = re.compile(r"\s+")
 
@@ -45,7 +36,7 @@ class AuthorInfo:
     def __init__(self, page: Page):
         self.page = page
 
-    def get_author_dict(self) -> AuthorDict:
+    def get_author_dict(self) -> dict[str, str]:
         author_dict = self.get_page_infos(self.page.text)
         self.enrich_author_dict(author_dict, self.page)
         return author_dict
@@ -54,7 +45,7 @@ class AuthorInfo:
     def _strip_spaces(raw_string: str):
         return _SPACE_REGEX.subn(raw_string.strip(), " ")[0]
 
-    def get_page_infos(self, text: str) -> AuthorDict:
+    def get_page_infos(self, text: str) -> dict[str, str]:
         template_finder = TemplateFinder(text)
         try:
             personendaten = template_finder.get_positions("Personendaten")
@@ -63,7 +54,7 @@ class AuthorInfo:
         if len(personendaten) != 1:
             raise ValueError("No or more then one Personendaten template found.")
         template_extractor = TemplateHandler(personendaten[0]["text"])
-        author_dict: AuthorDict = {}
+        author_dict: dict[str, str] = {}
         self.get_single_page_info("first_name", "VORNAMEN", template_extractor, author_dict)
         self.get_single_page_info("last_name", "NACHNAME", template_extractor, author_dict)
         self.get_single_page_info("birth", "GEBURTSDATUM", template_extractor, author_dict)
@@ -72,8 +63,8 @@ class AuthorInfo:
         self.get_single_page_info("sortkey", "SORTIERUNG", template_extractor, author_dict)
         return author_dict
 
-    def get_single_page_info(self, info: AuthorInfos, template_str: str, extractor: TemplateHandler,
-                             author_dict: AuthorDict):
+    def get_single_page_info(self, info: str, template_str: str, extractor: TemplateHandler,
+                             author_dict: dict[str, str]):
         try:
             template_value = self._strip_spaces(extractor.get_parameter(template_str)["value"])
         except TemplateHandlerException:
@@ -81,7 +72,7 @@ class AuthorInfo:
         if template_value:
             author_dict[info] = template_value
 
-    def enrich_author_dict(self, author_dict: AuthorDict, page: Page):
+    def enrich_author_dict(self, author_dict: dict[str, str], page: Page):
         with suppress(NoPageError):
             data_item = page.data_item()
             if "first_name" not in author_dict and "last_name" not in author_dict:
