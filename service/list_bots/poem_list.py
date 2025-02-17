@@ -81,7 +81,7 @@ class PoemList(ListBot):
         return "\n".join(string_list)
 
     @staticmethod
-    def get_print_title(poem_dict) -> str:
+    def get_print_title(poem_dict: dict[str, str]) -> str:
         if "title" in poem_dict:
             if poem_dict["title"] != poem_dict["lemma"]:
                 return f"{poem_dict['lemma']}|{poem_dict['title']}"
