@@ -5,12 +5,9 @@ from typing import Tuple
 
 from pywikibot import Page
 
+from service.list_bots._base import get_page_infos
 from tools.bots import BotException
 from tools.bots.cloud.cloud_bot import CloudBot
-from tools.template_finder import TemplateFinder, TemplateFinderException
-from tools.template_handler import TemplateHandler, TemplateHandlerException
-
-_SPACE_REGEX = re.compile(r"\s+")
 
 
 class ListBot(CloudBot):
@@ -46,6 +43,9 @@ class ListBot(CloudBot):
             self.logger.info("Heute gab es keine Änderungen, daher wird die Seite nicht überschrieben.")
         return True
 
+    def get_page_infos(self, page):
+        get_page_infos(page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
+
     def process_lemmas(self):
         lemma_list, unprocessed_lemmas = self.get_lemma_list()
         for idx, lemma in enumerate(lemma_list):
@@ -71,32 +71,10 @@ class ListBot(CloudBot):
     def enrich_dict(self, page: Page, item_dict: dict[str, str]) -> None:
         pass
 
-    def get_page_infos(self, page: Page) -> dict:
-        template_finder = TemplateFinder(page.text)
-        try:
-            text_daten = template_finder.get_positions(self.PROPERTY_TEMPLATE)
-        except TemplateFinderException as error:
-            raise ValueError("Error in processing Textdaten template.") from error
-        if len(text_daten) != 1:
-            raise ValueError("No or more then one Textdaten template found.")
-        template_extractor = TemplateHandler(text_daten[0]["text"])
-        return_dict: dict[str, str] = {}
-        for key, value in self.PROPERTY_MAPPING.items():
-            self.get_single_page_info(key, value, template_extractor, return_dict)
-        return return_dict
 
-    def get_single_page_info(self, info: str, template_str: str, extractor: TemplateHandler,
-                             info_dict: dict):
-        try:
-            template_value = self._strip_spaces(extractor.get_parameter(template_str)["value"])
-        except TemplateHandlerException:
-            return
-        if template_value:
-            info_dict[info] = template_value
 
     @staticmethod
-    def _strip_spaces(raw_string: str):
-        return _SPACE_REGEX.subn(raw_string.strip(), " ")[0]
+
 
     @abstractmethod
     def sort_to_list(self) -> list[dict[str, str]]:

@@ -8,24 +8,11 @@ from service.list_bots.author_info import AuthorInfo
 from tools.test import real_wiki_test
 
 
-@ddt
 class TestAuthorInfo(TestCase):
     wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
 
     def setUp(self):
         self.author_info = AuthorInfo(None)
-
-    @file_data("test_data/test_get_page_infos.yml")
-    def test_get_page_infos(self, given, expect):
-        compare(expect, self.author_info.get_page_infos(given))
-
-    def test_get_page_infos_errors(self):
-        with self.assertRaises(ValueError):
-            self.author_info.get_page_infos("")
-        with self.assertRaises(ValueError):
-            self.author_info.get_page_infos("{{Personendaten")
-        with self.assertRaises(ValueError):
-            self.author_info.get_page_infos("{{Personendaten}}\n{{Personendaten}}")
 
     @real_wiki_test
     def test_enrich(self):
