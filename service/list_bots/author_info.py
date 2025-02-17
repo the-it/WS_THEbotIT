@@ -6,9 +6,7 @@ from typing import Optional
 from pywikibot import Page, ItemPage, Claim
 from pywikibot.exceptions import NoPageError
 
-from tools.template_finder import TemplateFinderException, TemplateFinder
-from tools.template_handler import TemplateHandlerException, TemplateHandler
-
+from service.list_bots._base import get_page_infos, is_empty_value, assign_value
 
 NUMBER_TO_MONTH = {1: "Januar",
                    2: "Februar",
@@ -23,86 +21,52 @@ NUMBER_TO_MONTH = {1: "Januar",
                    11: "November",
                    12: "Dezember"}
 
-_SPACE_REGEX = re.compile(r"\s+")
-
 
 class AuthorInfo:
+    PROPERTY_MAPPING = {
+        "first_name": "VORNAMEN",
+        "last_name": "NACHNAME",
+        "birth": "GEBURTSDATUM",
+        "death": "STERBEDATUM",
+        "description": "KURZBESCHREIBUNG",
+        "sortkey": "SORTIERUNG",
+    }
+
     def __init__(self, page: Page):
         self.page = page
 
     def get_author_dict(self) -> dict[str, str]:
-        author_dict = self.get_page_infos(self.page.text)
+        author_dict = get_page_infos(self.page.text, "Personendaten", self.PROPERTY_MAPPING)
         self.enrich_author_dict(author_dict, self.page)
         return author_dict
-
-    @staticmethod
-    def _strip_spaces(raw_string: str):
-        return _SPACE_REGEX.subn(raw_string.strip(), " ")[0]
-
-    def get_page_infos(self, text: str) -> dict[str, str]:
-        template_finder = TemplateFinder(text)
-        try:
-            personendaten = template_finder.get_positions("Personendaten")
-        except TemplateFinderException as error:
-            raise ValueError("Error in processing Personendaten template.") from error
-        if len(personendaten) != 1:
-            raise ValueError("No or more then one Personendaten template found.")
-        template_extractor = TemplateHandler(personendaten[0]["text"])
-        author_dict: dict[str, str] = {}
-        self.get_single_page_info("first_name", "VORNAMEN", template_extractor, author_dict)
-        self.get_single_page_info("last_name", "NACHNAME", template_extractor, author_dict)
-        self.get_single_page_info("birth", "GEBURTSDATUM", template_extractor, author_dict)
-        self.get_single_page_info("death", "STERBEDATUM", template_extractor, author_dict)
-        self.get_single_page_info("description", "KURZBESCHREIBUNG", template_extractor, author_dict)
-        self.get_single_page_info("sortkey", "SORTIERUNG", template_extractor, author_dict)
-        return author_dict
-
-    def get_single_page_info(self, info: str, template_str: str, extractor: TemplateHandler,
-                             author_dict: dict[str, str]):
-        try:
-            template_value = self._strip_spaces(extractor.get_parameter(template_str)["value"])
-        except TemplateHandlerException:
-            return
-        if template_value:
-            author_dict[info] = template_value
 
     def enrich_author_dict(self, author_dict: dict[str, str], page: Page):
         with suppress(NoPageError):
             data_item = page.data_item()
-            if "first_name" not in author_dict and "last_name" not in author_dict:
-                author_dict.pop("first_name", None)
-                author_dict.pop("last_name", None)
+            if is_empty_value("first_name", author_dict) and is_empty_value("last_name", author_dict):
                 claim = self.get_highest_claim(data_item, "P735")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["first_name"] = value
+                assign_value("first_name", value, author_dict)
                 claim = self.get_highest_claim(data_item, "P734")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["last_name"] = value
-            if "birth" not in author_dict:
+                assign_value("last_name", value, author_dict)
+            if is_empty_value("birth", author_dict):
                 claim = self.get_highest_claim(data_item, "P569")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["birth"] = value
-                else:
-                    author_dict["birth"] = ""
-            if "death" not in author_dict:
+                assign_value("birth", value, author_dict)
+            if is_empty_value("death", author_dict):
                 claim = self.get_highest_claim(data_item, "P570")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["death"] = value
-                else:
-                    author_dict["death"] = ""
-            if "description" not in author_dict:
+                assign_value("death", value, author_dict)
+            if is_empty_value("description", author_dict):
                 try:
                     author_dict["description"] = data_item.get()["descriptions"]["de"]
                 except KeyError:
                     author_dict["description"] = ""
-        if "sortkey" not in author_dict:
-            if "last_name" not in author_dict:
+        if is_empty_value("sortkey", author_dict):
+            if is_empty_value("last_name", author_dict):
                 sortkey = author_dict["first_name"]
-            elif "first_name" not in author_dict:
+            elif is_empty_value("first_name", author_dict):
                 sortkey = author_dict["last_name"]
             else:
                 sortkey = \

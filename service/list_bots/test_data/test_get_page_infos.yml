@@ -1,21 +1,35 @@
 no_content:
-  given: |
+  given:
+    text: |
       {{Personendaten
 
       }}
       text after template really doesn't matter
-  expect: {}
+    name: Personendaten
+    mapping:
+      first_name: VORNAMEN
+  expect:
+    first_name: ""
 complete_template:
-  given: |
-    {{Personendaten
-    |VORNAMEN=Erika
-    |NACHNAME=Mustermann
-    |GEBURTSDATUM=1.1.1900
-    |STERBEDATUM=31.12.2999
-    |KURZBESCHREIBUNG=placeholder
-    |SORTIERUNG=Ich will es aber anders sortiert haben
-    }}
-    text after template really doesn't matter
+  given:
+    text: |
+      {{Personendaten
+      |VORNAMEN=Erika
+      |NACHNAME=Mustermann
+      |GEBURTSDATUM=1.1.1900
+      |STERBEDATUM=31.12.2999
+      |KURZBESCHREIBUNG=placeholder
+      |SORTIERUNG=Ich will es aber anders sortiert haben
+      }}
+      text after template really doesn't matter
+    name: Personendaten
+    mapping:
+      first_name: VORNAMEN
+      last_name: NACHNAME
+      birth: GEBURTSDATUM
+      death: STERBEDATUM
+      description: KURZBESCHREIBUNG
+      sortkey: SORTIERUNG
   expect:
     first_name: Erika
     last_name: Mustermann
@@ -24,17 +38,23 @@ complete_template:
     description: placeholder
     sortkey: Ich will es aber anders sortiert haben
 random_white_spaces:
-  given: |
-    {{Personendaten
-    |VORNAMEN=      Erika
-    |NACHNAME=Mustermann
+  given:
+    text: |
+      {{Personendaten
+      |VORNAMEN=      Erika
+      |NACHNAME=Mustermann
 
 
 
-    |SORTIERUNG=Ich will es aber
-     anders sortiert haben
-    }}
-    text after template really doesn't matter
+      |SORTIERUNG=Ich will es aber
+       anders sortiert haben
+      }}
+      text after template really doesn't matter
+    name: Personendaten
+    mapping:
+      first_name: VORNAMEN
+      last_name: NACHNAME
+      sortkey: SORTIERUNG
   expect:
     first_name: Erika
     last_name: Mustermann

@@ -1,6 +1,5 @@
 from unittest import TestCase
 
-from ddt import file_data, ddt
 import pywikibot
 from testfixtures import compare
 
@@ -8,24 +7,11 @@ from service.list_bots.author_info import AuthorInfo
 from tools.test import real_wiki_test
 
 
-@ddt
 class TestAuthorInfo(TestCase):
     wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
 
     def setUp(self):
         self.author_info = AuthorInfo(None)
-
-    @file_data("test_data/test_get_page_infos.yml")
-    def test_get_page_infos(self, given, expect):
-        compare(expect, self.author_info.get_page_infos(given))
-
-    def test_get_page_infos_errors(self):
-        with self.assertRaises(ValueError):
-            self.author_info.get_page_infos("")
-        with self.assertRaises(ValueError):
-            self.author_info.get_page_infos("{{Personendaten")
-        with self.assertRaises(ValueError):
-            self.author_info.get_page_infos("{{Personendaten}}\n{{Personendaten}}")
 
     @real_wiki_test
     def test_enrich(self):
@@ -158,6 +144,14 @@ class TestAuthorInfo(TestCase):
             author_dict["death"])
 
     @real_wiki_test
+    def test_enrich_aristoteles(self):
+        lemma = pywikibot.Page(self.wiki, "Aristoteles")
+        author_dict = {}
+        self.author_info.enrich_author_dict(author_dict, lemma)
+        compare("Aristoteles", author_dict["sortkey"])
+        compare("", author_dict["last_name"])
+
+    @real_wiki_test
     def test_get_highest_claim_Reizer(self):
         data_item = pywikibot.Page(self.wiki, "Johann Georg Reizer").data_item()
         compare(None, self.author_info.get_highest_claim(data_item, "P570"))
@@ -188,3 +182,17 @@ class TestAuthorInfo(TestCase):
         claim = data_item.text["claims"]["P570"][0]
         value = self.author_info.get_value_from_claim(claim)
         compare(value, "Dezember 1981")
+
+    @real_wiki_test
+    def test_end_to_end(self):
+        lemma = pywikibot.Page(self.wiki, "Willy Stöwer")
+        compare(
+            {
+                "first_name": "Willy",
+                "last_name": "Stöwer",
+                "birth": "22. Mai 1864",
+                "death": "31. Mai 1931",
+                "sortkey": "Stöwer, Willy",
+                "description": "Maler, Illustrator",
+            },
+            AuthorInfo(lemma).get_author_dict())
