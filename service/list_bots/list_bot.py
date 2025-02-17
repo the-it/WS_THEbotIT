@@ -61,7 +61,7 @@ class ListBot(CloudBot):
             item_dict["lemma"] = clean_lemma
             item_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.data[lemma] = item_dict
-            if (idx + 50 > unprocessed_lemmas) and self._watchdog():
+            if (idx - 50 > unprocessed_lemmas) and self._watchdog():
                 break
 
     def get_check_dict(self):
