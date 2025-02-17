@@ -41,7 +41,7 @@ class AuthorList(ListBot):
             author_list.append(author)
         return sorted(author_list, key=lambda author_dict: (author_dict["sortkey"], author_dict["birth_sort"]))
 
-    def print_list(self, author_list: list[dict[str, str]]) -> str:
+    def print_list(self, item_list: list[dict[str, str]]) -> str:
         start_of_run = self.status.current_run.start_time
         string_list = []
         string_list.append(f"Diese Liste der Autoren enthält alle {len(self.data)}<ref>Stand: "
@@ -63,7 +63,7 @@ class AuthorList(ListBot):
         string_list.append("!data-sort-type=\"text\" style=\"width:15%\"| Geb.-datum")
         string_list.append("!data-sort-type=\"text\" style=\"width:15%\"| Tod.-datum")
         string_list.append("!class=\"unsortable\" style=\"width:50%\"| Beschreibung")
-        for author_dict in author_list:
+        for author_dict in item_list:
             string_list.append("|-")
             string_list.append(f"|data-sort-value=\"{author_dict['sortkey']}\"|"
                                f"[[{author_dict['lemma']}|{self.get_author_line(author_dict)}]]")

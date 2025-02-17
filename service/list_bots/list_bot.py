@@ -81,8 +81,8 @@ class ListBot(CloudBot):
             raise ValueError("No or more then one Textdaten template found.")
         template_extractor = TemplateHandler(text_daten[0]["text"])
         return_dict: dict[str, str] = {}
-        for item in self.PROPERTY_MAPPING:
-            self.get_single_page_info(item, self.PROPERTY_MAPPING[item], template_extractor, return_dict)
+        for key, value in self.PROPERTY_MAPPING.items():
+            self.get_single_page_info(key, value, template_extractor, return_dict)
         return return_dict
 
     def get_single_page_info(self, info: str, template_str: str, extractor: TemplateHandler,

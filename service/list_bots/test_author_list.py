@@ -1,7 +1,6 @@
 # pylint: disable=protected-access,line-too-long
 from unittest import mock
 
-from ddt import file_data, ddt
 from pywikibot.scripts.generate_user_files import pywikibot
 from testfixtures import compare
 
@@ -10,7 +9,6 @@ from tools.bots.cloud.test_base import TestCloudBase
 from tools.test import real_wiki_test
 
 
-@ddt
 class TestAuthorList(TestCloudBase):
     wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
 

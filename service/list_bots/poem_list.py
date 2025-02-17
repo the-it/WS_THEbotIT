@@ -32,7 +32,7 @@ class PoemList(ListBot):
         return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)
 
     def sort_to_list(self) -> list[dict[str, str]]:
-        poem_list = [poem for poem in self.data.values()]
+        poem_list = list(self.data.values())
         return sorted(poem_list, key=lambda poem_dict: (poem_dict["title"], poem_dict["lemma"]))
 
     def enrich_dict(self, page: Page, item_dict: dict[str, str]) -> None:
@@ -85,12 +85,11 @@ class PoemList(ListBot):
         if "title" in poem_dict:
             if poem_dict["title"] != poem_dict["lemma"]:
                 return f"{poem_dict['lemma']}|{poem_dict['title']}"
-            else:
-                return poem_dict['lemma']
+            return poem_dict['lemma']
         return f"{poem_dict['lemma']}|{poem_dict['lemma']} NO TITLE"
 
     @staticmethod
-    def get_print_author(poem_dict:dict[str, str]) -> str:
+    def get_print_author(poem_dict: dict[str, str]) -> str:
         show_author = f"{poem_dict['last_name']}, {poem_dict['first_name']}"
         if not poem_dict["last_name"] and not poem_dict["first_name"]:
             show_author = poem_dict["author"]

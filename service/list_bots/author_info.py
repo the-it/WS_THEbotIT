@@ -1,7 +1,7 @@
 import re
 from contextlib import suppress
 from math import ceil
-from typing import TypedDict, Literal, Optional
+from typing import Optional
 
 from pywikibot import Page, ItemPage, Claim
 from pywikibot.exceptions import NoPageError
@@ -22,12 +22,6 @@ NUMBER_TO_MONTH = {1: "Januar",
                    10: "Oktober",
                    11: "November",
                    12: "Dezember"}
-
-
-
-
-
-
 
 _SPACE_REGEX = re.compile(r"\s+")
 
