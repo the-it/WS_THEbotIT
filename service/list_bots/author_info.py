@@ -6,10 +6,7 @@ from typing import Optional
 from pywikibot import Page, ItemPage, Claim
 from pywikibot.exceptions import NoPageError
 
-from service.list_bots._base import get_single_page_info, get_page_infos, is_empty_value
-from tools.template_finder import TemplateFinderException, TemplateFinder
-from tools.template_handler import TemplateHandlerException, TemplateHandler
-
+from service.list_bots._base import get_page_infos, is_empty_value, assign_value
 
 NUMBER_TO_MONTH = {1: "Januar",
                    2: "Februar",
@@ -49,35 +46,27 @@ class AuthorInfo:
             if is_empty_value("first_name", author_dict) and is_empty_value("last_name", author_dict):
                 claim = self.get_highest_claim(data_item, "P735")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["first_name"] = value
+                assign_value("first_name", value, author_dict)
                 claim = self.get_highest_claim(data_item, "P734")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["last_name"] = value
+                assign_value("last_name", value, author_dict)
             if is_empty_value("birth", author_dict):
                 claim = self.get_highest_claim(data_item, "P569")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["birth"] = value
-                else:
-                    author_dict["birth"] = ""
+                assign_value("birth", value, author_dict)
             if is_empty_value("death", author_dict):
                 claim = self.get_highest_claim(data_item, "P570")
                 value = self.get_value_from_claim(claim)
-                if value:
-                    author_dict["death"] = value
-                else:
-                    author_dict["death"] = ""
+                assign_value("death", value, author_dict)
             if is_empty_value("description", author_dict):
                 try:
                     author_dict["description"] = data_item.get()["descriptions"]["de"]
                 except KeyError:
                     author_dict["description"] = ""
         if is_empty_value("sortkey", author_dict):
-            if "last_name" not in author_dict:
+            if is_empty_value("last_name", author_dict):
                 sortkey = author_dict["first_name"]
-            elif "first_name" not in author_dict:
+            elif is_empty_value("first_name", author_dict):
                 sortkey = author_dict["last_name"]
             else:
                 sortkey = \

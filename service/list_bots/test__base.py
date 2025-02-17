@@ -1,9 +1,10 @@
+# pylint: disable=protected-access,line-too-long,no-self-use
 from unittest import TestCase
 
 from ddt import ddt, file_data
 from testfixtures import compare
 
-from service.list_bots._base import get_page_infos, is_empty_value
+from service.list_bots._base import get_page_infos, is_empty_value, assign_value
 
 
 @ddt
@@ -24,3 +25,16 @@ class Test(TestCase):
         compare(True, is_empty_value("key", {"other_key": "1"}))
         compare(True, is_empty_value("key", {"key": ""}))
         compare(False, is_empty_value("key", {"key": "1"}))
+
+    def test_assign_value(self):
+        foo = {}
+        assign_value("key", None, foo)
+        compare({"key": ""}, foo)
+
+        foo = {}
+        assign_value("key", "", foo)
+        compare({"key": ""}, foo)
+
+        foo = {}
+        assign_value("key", "something", foo)
+        compare({"key": "something"}, foo)

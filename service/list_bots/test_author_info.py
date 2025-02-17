@@ -1,6 +1,5 @@
 from unittest import TestCase
 
-from ddt import file_data, ddt
 import pywikibot
 from testfixtures import compare
 
@@ -143,6 +142,14 @@ class TestAuthorInfo(TestCase):
         compare(
             "",
             author_dict["death"])
+
+    @real_wiki_test
+    def test_enrich_aristoteles(self):
+        lemma = pywikibot.Page(self.wiki, "Aristoteles")
+        author_dict = {}
+        self.author_info.enrich_author_dict(author_dict, lemma)
+        compare("Aristoteles", author_dict["sortkey"])
+        compare("", author_dict["last_name"])
 
     @real_wiki_test
     def test_get_highest_claim_Reizer(self):

@@ -1,4 +1,3 @@
-import re
 from abc import abstractmethod
 from datetime import datetime
 from typing import Tuple
@@ -44,8 +43,8 @@ class ListBot(CloudBot):
             self.logger.info("Heute gab es keine Änderungen, daher wird die Seite nicht überschrieben.")
         return True
 
-    def get_page_infos(self, page):
-        get_page_infos(page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
+    def get_page_infos(self, page) -> dict[str, str]:
+        return get_page_infos(page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
 
     def process_lemmas(self):
         lemma_list, unprocessed_lemmas = self.get_lemma_list()
@@ -70,11 +69,6 @@ class ListBot(CloudBot):
 
     def enrich_dict(self, page: Page, item_dict: dict[str, str]) -> None:
         pass
-
-
-
-    @staticmethod
-
 
     @abstractmethod
     def sort_to_list(self) -> list[dict[str, str]]:
