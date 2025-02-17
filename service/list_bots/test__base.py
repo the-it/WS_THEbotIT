@@ -27,14 +27,14 @@ class Test(TestCase):
         compare(False, is_empty_value("key", {"key": "1"}))
 
     def test_assign_value(self):
-        foo = {}
-        assign_value("key", None, foo)
-        compare({"key": ""}, foo)
+        add_here = {}
+        assign_value("key", None, add_here)
+        compare({"key": ""}, add_here)
 
-        foo = {}
-        assign_value("key", "", foo)
-        compare({"key": ""}, foo)
+        add_here = {}
+        assign_value("key", "", add_here)
+        compare({"key": ""}, add_here)
 
-        foo = {}
-        assign_value("key", "something", foo)
-        compare({"key": "something"}, foo)
+        add_here = {}
+        assign_value("key", "something", add_here)
+        compare({"key": "something"}, add_here)
