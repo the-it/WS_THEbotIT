@@ -24,6 +24,7 @@ class ListBot(CloudBot):
             except BotException:
                 self.logger.warning("There isn't deprecated data to reload.")
         if self.data_outdated():
+            self.logger.warning("The data is thrown away. It is out of date")
             self.data.assign_dict({})
         return self
 
@@ -61,8 +62,7 @@ class ListBot(CloudBot):
             item_dict["lemma"] = clean_lemma
             item_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.data[lemma] = item_dict
-            # if (idx + 50 > unprocessed_lemmas) and self._watchdog():
-            if self._watchdog():
+            if (idx + 50 > unprocessed_lemmas) and self._watchdog():
                 break
 
     def get_check_dict(self):

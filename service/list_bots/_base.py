@@ -30,4 +30,7 @@ def get_page_infos(text: str, template_name: str, property_mapping: dict[str, st
     return return_dict
 
 def is_empty_value(key: str, dict_to_check: dict) -> bool:
-    return (key not in dict_to_check) or (dict_to_check[key] == "")
+    return (key not in dict_to_check) or (not dict_to_check[key])
+
+def has_value(key: str, dict_to_check: dict) -> bool:
+    return not is_empty_value(key, dict_to_check)

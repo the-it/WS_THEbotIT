@@ -181,3 +181,8 @@ Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werde
     def test_get_check_list(self):
         self.author_list.data.assign_dict({"A": {"check": "2024"}, "B": {"check": "2023"}})
         compare({"A": "2024", "B": "2023"}, self.author_list.get_check_dict())
+
+    def test_get_author_line(self):
+        compare("B, A", self.author_list.get_author_line({"first_name": "A", "last_name": "B"}))
+        compare("B", self.author_list.get_author_line({"first_name": "", "last_name": "B"}))
+        compare("A", self.author_list.get_author_line({"first_name": "A", "last_name": ""}))

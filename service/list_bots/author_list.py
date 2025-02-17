@@ -4,6 +4,7 @@ from typing import Tuple
 
 from pywikibot import Page, Site
 
+from service.list_bots._base import has_value
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
 from tools.date_conversion import DateConversion
@@ -15,7 +16,7 @@ class AuthorList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 17, 9)
+        self.new_data_model = datetime(2025, 2, 17, 23)
         self.timeout = timedelta(minutes=2)
 
     def get_page_infos(self, page: Page) -> dict:
@@ -82,9 +83,9 @@ class AuthorList(ListBot):
 
     @staticmethod
     def get_author_line(author_dict: dict[str, str]) -> str:
-        if 'last_name' in author_dict and 'first_name' in author_dict:
+        if has_value("last_name", author_dict) and has_value("first_name", author_dict):
             return f"{author_dict['last_name']}, {author_dict['first_name']}"
-        if 'first_name' in author_dict:
+        if has_value("first_name", author_dict):
             return author_dict['first_name']
         return author_dict['last_name']
 

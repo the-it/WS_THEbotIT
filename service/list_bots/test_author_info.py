@@ -175,3 +175,17 @@ class TestAuthorInfo(TestCase):
         claim = data_item.text["claims"]["P570"][0]
         value = self.author_info.get_value_from_claim(claim)
         compare(value, "Dezember 1981")
+
+    @real_wiki_test
+    def test_end_to_end(self):
+        lemma = pywikibot.Page(self.wiki, "Willy Stöwer")
+        compare(
+            {
+                "first_name": "Willy",
+                "last_name": "Stöwer",
+                "birth": "22. Mai 1864",
+                "death": "31. Mai 1931",
+                "sortkey": "Stöwer, Willy",
+                "description": "Maler, Illustrator",
+            },
+            AuthorInfo(lemma).get_author_dict())
