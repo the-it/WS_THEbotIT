@@ -85,6 +85,7 @@ class TestPoemList(TestCloudBase):
                         'first_name': 'Friedrich',
                         'last_name': 'Schiller',
                         'lemma': 'An die Freude (Schiller)',
+                        'sortkey': 'An die Freude.',
                         'publish': '1786',
                         'sortkey_auth': 'Schiller, Friedrich',
                         'title': 'An die Freude.'
