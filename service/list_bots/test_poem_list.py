@@ -1,3 +1,4 @@
+# pylint: disable=protected-access,line-too-long
 from unittest import mock
 
 import pywikibot
@@ -49,17 +50,26 @@ class TestPoemList(TestCloudBase):
             self.poem_list.sort_to_list()
         )
 
-    def test_enrich_dict(self):
-        self.fail()
-
     def test_print_list(self):
         self.fail()
 
     def test_get_print_title(self):
-        self.fail()
+        compare("lemma", self.poem_list.get_print_title({"title": "lemma", "lemma": "lemma"}))
+        compare("lemma|title", self.poem_list.get_print_title({"title": "title", "lemma": "lemma"}))
+        compare("lemma|lemma NO TITLE", self.poem_list.get_print_title({"title": "", "lemma": "lemma"}))
+
 
     def test_get_print_author(self):
-        self.fail()
+        given = {"author": "Karl Marx"}
+        compare("[[Karl Marx]]", self.poem_list.get_print_author(given))
+        given = {"author": "Karl Marx", "first_name": "Karl"}
+        compare("[[Karl Marx|Karl]]", self.poem_list.get_print_author(given))
+        given = {"author": "Karl Marx", "last_name": "Marx"}
+        compare("[[Karl Marx|Marx]]", self.poem_list.get_print_author(given))
+        given = {"author": "Karl Marx", "last_name": "Marx", "first_name": "Karl"}
+        compare("[[Karl Marx|Marx, Karl]]", self.poem_list.get_print_author(given))
+        given = {"author": "Karl Marx", "sortkey_auth": "Kommunismus"}
+        compare("data-sort-value=\"Kommunismus\"|[[Karl Marx|Karl Marx]]", self.poem_list.get_print_author(given))
 
     def test_get_print_year(self):
         compare("1920", self.poem_list.get_print_year({"creation": "1920", "publish": "1930"}))
@@ -93,3 +103,41 @@ class TestPoemList(TestCloudBase):
                 },
                 bot.data._data
             )
+
+    @real_wiki_test
+    def test_enrich_author(self):
+        lemma = pywikibot.Page(self.wiki, "Mayfest (Johann Wolfgang von Goethe)")
+        poem_list = PoemList(self.wiki)
+        poem_dict = {"lemma": lemma.title(), "author": "Johann Wolfgang von Goethe"}
+        poem_list.enrich_dict(lemma, poem_dict)
+        compare(
+            {
+                'author': 'Johann Wolfgang von Goethe',
+                'creation': '',
+                'first_name': 'Johann Wolfgang',
+                'last_name': 'von Goethe',
+                'lemma': 'Mayfest (Johann Wolfgang von Goethe)',
+                'publish': '',
+                'sortkey': 'Mayfest (Johann Wolfgang von Goethe)',
+                'sortkey_auth': 'Goethe, Johann Wolfgang von',
+                'title': ''
+            }, poem_dict)
+
+        poem_dict = {
+            "lemma": lemma.title(),
+            "title": "Mayfest",
+            "author": "Johann Wolfgang von Goethe"
+        }
+        poem_list.enrich_dict(lemma, poem_dict)
+        compare(
+            {
+                'author': 'Johann Wolfgang von Goethe',
+                'creation': '',
+                'first_name': 'Johann Wolfgang',
+                'last_name': 'von Goethe',
+                'lemma': 'Mayfest (Johann Wolfgang von Goethe)',
+                'publish': '',
+                'sortkey': 'Mayfest',
+                'sortkey_auth': 'Goethe, Johann Wolfgang von',
+                'title': 'Mayfest'
+            }, poem_dict)

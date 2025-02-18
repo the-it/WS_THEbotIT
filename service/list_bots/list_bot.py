@@ -57,8 +57,8 @@ class ListBot(CloudBot):
             except ValueError:
                 item_dict = {}
                 self.logger.error(f"lemma {clean_lemma} was not parsed correctly.")
-            self.enrich_dict(page, item_dict)
             item_dict["lemma"] = clean_lemma
+            self.enrich_dict(page, item_dict)
             item_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.data[lemma] = item_dict
             if (idx - 50 > unprocessed_lemmas) and self._watchdog():

@@ -44,7 +44,10 @@ class PoemList(ListBot):
             item_dict["last_name"] = author_dict["last_name"]
             item_dict["sortkey_auth"] = author_dict["sortkey"]
         if is_empty_value("sortkey", item_dict):
-            item_dict["sortkey"] = item_dict["title"]
+            if has_value("title", item_dict):
+                item_dict["sortkey"] = item_dict["title"]
+            else:
+                item_dict["sortkey"] = item_dict["lemma"]
         for item in ["title", "author", "first_name", "last_name", "sortkey_auth", "creation", "publish", "sortkey"]:
             if item not in item_dict:
                 item_dict[item] = ""
@@ -87,7 +90,7 @@ class PoemList(ListBot):
 
     @staticmethod
     def get_print_title(poem_dict: dict[str, str]) -> str:
-        if "title" in poem_dict:
+        if has_value("title", poem_dict):
             if poem_dict["title"] != poem_dict["lemma"]:
                 return f"{poem_dict['lemma']}|{poem_dict['title']}"
             return poem_dict['lemma']
@@ -95,13 +98,14 @@ class PoemList(ListBot):
 
     @staticmethod
     def get_print_author(poem_dict: dict[str, str]) -> str:
-        show_author = f"{poem_dict['last_name']}, {poem_dict['first_name']}"
         if is_empty_value("last_name", poem_dict) and is_empty_value("first_name", poem_dict):
             show_author = poem_dict["author"]
         elif is_empty_value("last_name", poem_dict):
             show_author = poem_dict["first_name"]
         elif is_empty_value("first_name", poem_dict):
             show_author = poem_dict["last_name"]
+        else:
+            show_author = f"{poem_dict['last_name']}, {poem_dict['first_name']}"
         if has_value("sortkey_auth", poem_dict) and poem_dict["sortkey_auth"] != show_author:
             return f"data-sort-value=\"{poem_dict['sortkey_auth']}\"|[[{poem_dict['author']}|{show_author}]]"
         if has_value("author", poem_dict) and show_author != poem_dict["author"]:
