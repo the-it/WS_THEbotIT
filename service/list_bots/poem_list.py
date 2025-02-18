@@ -3,6 +3,7 @@ from typing import Tuple
 
 from pywikibot import Site, Page
 
+from service.list_bots._base import is_empty_value, has_value
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
 from tools.petscan import PetScan
@@ -33,16 +34,18 @@ class PoemList(ListBot):
 
     def sort_to_list(self) -> list[dict[str, str]]:
         poem_list = list(self.data.values())
-        return sorted(poem_list, key=lambda poem_dict: (poem_dict["title"], poem_dict["lemma"]))
+        return sorted(poem_list, key=lambda poem_dict: (poem_dict["sortkey"], poem_dict["lemma"]))
 
     def enrich_dict(self, page: Page, item_dict: dict[str, str]) -> None:
-        if item_dict["author"]:
+        if has_value("author", item_dict):
             item_dict["author"] = item_dict["author"].strip("[]")
             author_dict = AuthorInfo(Page(self.wiki, item_dict["author"])).get_author_dict()
             item_dict["first_name"] = author_dict["first_name"]
             item_dict["last_name"] = author_dict["last_name"]
-            item_dict["sortkey"] = author_dict["sortkey"]
-        for item in ["title", "author", "first_name", "last_name", "sortkey", "creation", "publish"]:
+            item_dict["sortkey_auth"] = author_dict["sortkey"]
+        if is_empty_value("sortkey", item_dict):
+            item_dict["sortkey"] = item_dict["title"]
+        for item in ["title", "author", "first_name", "last_name", "sortkey_auth", "creation", "publish", "sortkey"]:
             if item not in item_dict:
                 item_dict[item] = ""
 
@@ -71,6 +74,8 @@ class PoemList(ListBot):
             string_list.append("|-")
             string_list.append(f"|{self.get_print_author(poem_dict)}")
             string_list.append(f"|[[{self.get_print_title(poem_dict)}]]")
+            string_list.append("|")
+            string_list.append(f"|{self.get_print_year(poem_dict)}")
         string_list.append("|}")
         string_list.append('')
         string_list.append("== Fußnoten ==")
@@ -91,17 +96,25 @@ class PoemList(ListBot):
     @staticmethod
     def get_print_author(poem_dict: dict[str, str]) -> str:
         show_author = f"{poem_dict['last_name']}, {poem_dict['first_name']}"
-        if not poem_dict["last_name"] and not poem_dict["first_name"]:
+        if is_empty_value("last_name", poem_dict) and is_empty_value("first_name", poem_dict):
             show_author = poem_dict["author"]
-        elif not poem_dict["last_name"]:
+        elif is_empty_value("last_name", poem_dict):
             show_author = poem_dict["first_name"]
-        elif not poem_dict["first_name"]:
+        elif is_empty_value("first_name", poem_dict):
             show_author = poem_dict["last_name"]
-        if poem_dict["sortkey"] != show_author:
-            return f"data-sort-value=\"{poem_dict['sortkey']}\"|[[{poem_dict['author']}|{show_author}]]"
-        if show_author != poem_dict["author"]:
+        if has_value("sortkey_auth", poem_dict) and poem_dict["sortkey_auth"] != show_author:
+            return f"data-sort-value=\"{poem_dict['sortkey_auth']}\"|[[{poem_dict['author']}|{show_author}]]"
+        if has_value("author", poem_dict) and show_author != poem_dict["author"]:
             return f"[[{poem_dict['author']}|{show_author}]]"
         return f"[[{poem_dict['author']}]]"
+
+    @staticmethod
+    def get_print_year(poem_dict: dict[str, str]) -> str:
+        if has_value("creation", poem_dict):
+            return poem_dict["creation"]
+        if has_value("publish", poem_dict):
+            return f"{poem_dict['publish']} (veröff.)"
+        return ""
 
 
 if __name__ == "__main__":
