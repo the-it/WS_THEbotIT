@@ -57,7 +57,6 @@ class TestPoemList(TestCloudBase):
         compare("lemma|title", self.poem_list.get_print_title({"title": "title", "lemma": "lemma"}))
         compare("lemma|lemma NO TITLE", self.poem_list.get_print_title({"title": "", "lemma": "lemma"}))
 
-
     def test_get_print_author(self):
         given = {"author": "Karl Marx"}
         compare("[[Karl Marx]]", self.poem_list.get_print_author(given))
@@ -98,7 +97,7 @@ class TestPoemList(TestCloudBase):
                         'publish': '1786',
                         'sortkey_auth': 'Schiller, Friedrich',
                         'title': 'An die Freude.',
-                        'first_line': ''
+                        'first_line': 'Freude, schöner Götterfunken,'
                     }
                 },
                 bot.data._data
@@ -148,7 +147,8 @@ class TestPoemList(TestCloudBase):
     def test_enrich_trash_in_author(self):
         lemma = pywikibot.Page(self.wiki, "Die wilden Gänse (Fallersleben)")
         poem_list = PoemList(self.wiki)
-        poem_dict = {"lemma": lemma.title(), "author": "[[August Heinrich Hoffmann von Fallersleben]] (Henricus Custos)"}
+        poem_dict = {"lemma": lemma.title(),
+                     "author": "[[August Heinrich Hoffmann von Fallersleben]] (Henricus Custos)"}
         poem_list.enrich_dict(lemma, poem_dict)
         compare('August Heinrich Hoffmann von Fallersleben', poem_dict["author"])
 
@@ -239,3 +239,14 @@ Abgemalt und aufgeschrieben.
             bot.data.assign_dict({})
             bot.run()
             print(bot.data._data)
+
+    def test_get_sortkey(self):
+        compare("Zahnfleischkranke #Der",
+                self.poem_list.get_sortkey({"lemma": "A", "title": "B"},
+                                           "{{SORTIERUNG:Zahnfleischkranke #Der}}\n[[Kategorie:Joachim Ringelnatz]]"))
+        compare("Zahnfleischkranke #Der",
+                self.poem_list.get_sortkey({"lemma": "Der Zahnfleischkranke", "title": ""},
+                                           "[[Kategorie:Joachim Ringelnatz]]"))
+        compare("Zahnfleischkranke #Der",
+                self.poem_list.get_sortkey({"lemma": "Die Zahnfleischkranke", "title": "Der Zahnfleischkranke"},
+                                           "[[Kategorie:Joachim Ringelnatz]]"))

@@ -3,11 +3,13 @@ from datetime import timedelta, datetime
 from typing import Tuple
 
 from pywikibot import Site, Page
+from pywikibot.exceptions import InvalidTitleError
 
 from service.list_bots._base import is_empty_value, has_value
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
 from tools.petscan import PetScan
+from tools.template_expansion import TemplateExpansion
 
 
 class PoemList(ListBot):
@@ -49,18 +51,27 @@ class PoemList(ListBot):
                 item_dict["first_name"] = author_dict["first_name"]
                 item_dict["last_name"] = author_dict["last_name"]
                 item_dict["sortkey_auth"] = author_dict["sortkey"]
-            except ValueError:
-                self.logger.error(f"Can't process author {item_dict['author']}")
-        if is_empty_value("sortkey", item_dict):
-            if has_value("title", item_dict):
-                item_dict["sortkey"] = item_dict["title"]
-            else:
-                item_dict["sortkey"] = item_dict["lemma"]
+            except (ValueError, InvalidTitleError):
+                self.logger.error(f"Can't process author {item_dict['author']} of lemma {item_dict['lemma']}")
+        item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
         for item in ["title", "author", "first_name", "last_name",
                      "sortkey_auth", "creation", "publish", "sortkey", "first_line"]:
             if item not in item_dict:
                 item_dict[item] = ""
+
+    SORTIERUNG_REGEX = re.compile(r"\{\{SORTIERUNG:(.*?)\}\}")
+    ARTIKEL_REGEX = re.compile(r"(Das|Die|Der) (.*)$")
+
+    def get_sortkey(self, item_dict: dict[str, str], text: str) -> str:
+        if match := self.SORTIERUNG_REGEX.search(text):
+            return match.group(1)
+        alternative_sortkey = item_dict["lemma"]
+        if has_value("title", item_dict):
+            alternative_sortkey = item_dict["title"]
+        if match := self.ARTIKEL_REGEX.search(alternative_sortkey):
+            return f"{match.group(2)} #{match.group(1)}"
+        return alternative_sortkey
 
     def print_list(self, item_list: list[dict[str, str]]) -> str:
         start_of_run = self.status.current_run.start_time
@@ -136,6 +147,7 @@ class PoemList(ListBot):
     FIRST_LINE_REGEX = re.compile(r"<!-- ?first_line ?-->")
 
     def get_first_line(self, text):
+        text = TemplateExpansion(text, self.wiki).expand()
         if self.FIRST_LINE_REGEX.search(text):
             for line in self._split_lines(text):
                 if self.FIRST_LINE_REGEX.search(line):
