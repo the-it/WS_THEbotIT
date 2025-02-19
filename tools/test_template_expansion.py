@@ -10,7 +10,7 @@ class TestTemplateExpansion(TestCase):
     wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
 
     def test_expand_simple(self):
-        input = """{{Textdaten
+        input_text = """{{Textdaten
 |AUTOR=[[Friedrich Schiller]]
 |TITEL=Das Glück und die Weisheit
 |SUBTITEL=
@@ -51,7 +51,7 @@ class TestTemplateExpansion(TestCase):
 
 [[fr:La Fortune et la Sagesse]]
 [[ru:С временщиком Фортуна в споре (Шиллер/Тютчев)/ПСС 2002 (СО)]]"""
-        expander = TemplateExpansion(input, self.wiki)
+        expander = TemplateExpansion(input_text, self.wiki)
         expect = """{{Textdaten
 |AUTOR=[[Friedrich Schiller]]
 |TITEL=Das Glück und die Weisheit
@@ -120,12 +120,12 @@ Die Weisheit läßt die Schaufel sinken
         compare(expect, expander.expand())
 
     def test_expand_nothing_to_do(self):
-        input = """{{Textdaten
+        text_input = """{{Textdaten
 |AUTOR=[[Friedrich Schiller]]
 |TITEL=Das Glück und die Weisheit
 }}
 {{BlockSatzStart}}"""
-        expander = TemplateExpansion(input, self.wiki)
+        expander = TemplateExpansion(text_input, self.wiki)
         expect = """{{Textdaten
 |AUTOR=[[Friedrich Schiller]]
 |TITEL=Das Glück und die Weisheit

@@ -71,6 +71,7 @@ class PoemList(ListBot):
             alternative_sortkey = item_dict["title"]
         if match := self.ARTIKEL_REGEX.search(alternative_sortkey):
             return f"{match.group(2)} #{match.group(1)}"
+        return alternative_sortkey
 
     def print_list(self, item_list: list[dict[str, str]]) -> str:
         start_of_run = self.status.current_run.start_time

@@ -1,5 +1,5 @@
 # pylint: disable=protected-access,line-too-long
-from unittest import mock, skip, TestCase
+from unittest import mock, skip
 
 import pywikibot
 from ddt import ddt, file_data
@@ -97,7 +97,7 @@ class TestPoemList(TestCloudBase):
                         'publish': '1786',
                         'sortkey_auth': 'Schiller, Friedrich',
                         'title': 'An die Freude.',
-                        'first_line': ''
+                        'first_line': 'Freude, schöner Götterfunken,'
                     }
                 },
                 bot.data._data

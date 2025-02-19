@@ -15,7 +15,7 @@ class TemplateExpansion:
     def expand(self) -> str:
         text_in_flight = self.raw
         for template in ["SeitePR", "PoemPR"]:
-            if template in text_in_flight:
+            if f"{template}|" in text_in_flight:
                 lemma_parts = self.split_by_template(text_in_flight, template)
                 text_in_flight = self.replace_templates(lemma_parts, template)
         return text_in_flight
@@ -47,14 +47,13 @@ class TemplateExpansion:
         return text
 
     @staticmethod
-    def split_by_template(input: str, template_name: str) -> list[str]:
-        positions = TemplateFinder(input).get_positions(template_name)
-        lemma_parts = [input[0:positions[0]['pos'][0]]]
+    def split_by_template(text_input: str, template_name: str) -> list[str]:
+        positions = TemplateFinder(text_input).get_positions(template_name)
+        lemma_parts = [text_input[0:positions[0]['pos'][0]]]
         for idx, position in enumerate(positions):
-            lemma_parts.append(input[position['pos'][0]:position['pos'][1]])
+            lemma_parts.append(text_input[position['pos'][0]:position['pos'][1]])
             with suppress(IndexError):
                 if position['pos'][1] != positions[idx + 1]['pos'][0]:
-                    lemma_parts.append(input[position['pos'][1]:positions[idx + 1]['pos'][0]])
-        lemma_parts.append(input[positions[-1]['pos'][1]:])
+                    lemma_parts.append(text_input[position['pos'][1]:positions[idx + 1]['pos'][0]])
+        lemma_parts.append(text_input[positions[-1]['pos'][1]:])
         return lemma_parts
-
