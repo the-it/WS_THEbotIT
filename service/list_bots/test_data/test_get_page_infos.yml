@@ -59,3 +59,44 @@ random_white_spaces:
     first_name: Erika
     last_name: Mustermann
     sortkey: Ich will es aber anders sortiert haben
+bug_kehlkopf:
+  given:
+    text: |
+      {{Textdaten
+      |AUTOR=[[Hans Bötticher]]<br />(Joachim Ringelnatz)
+      |TITEL=[Ein Kehlkopf litt an Migräne]
+      |SUBTITEL=
+      |HERKUNFT=[[Die Schnupftabaksdose (Sammelband)|Die Schnupftabaksdose]]. Stumpfsinn in Versen und Bildern von Hans Bötticher und [[w:Richard Seewald|Richard Seewald]] (1889-1976). S. 43
+      |HERAUSGEBER=
+      |AUFLAGE=1. Auflage
+      |ENTSTEHUNGSJAHR=
+      |ERSCHEINUNGSJAHR=1912
+      |ERSCHEINUNGSORT=München
+      |VERLAG=R. Piper & Co.
+      |ÜBERSETZER=
+      |ORIGINALTITEL=
+      |ORIGINALSUBTITEL=
+      |ORIGINALHERKUNFT=
+      |BILD=
+      |QUELLE=[[commons:category:Die Schnupftabaksdose|Scans auf Commons]]
+      |KURZBESCHREIBUNG=
+      |SONSTIGES=Auch in: Joachim Ringelnatz, Das Gesamtwerk in sieben Bänden. Herausgegeben von Walter Pape, 1994, Bd. 1, S. 79
+      |WIKIPEDIA=
+      |BEARBEITUNGSSTAND=fertig
+      }}
+      {{ProofRead|Die Schnupftabaksdose 043.jpg}}
+
+
+      <poem>{{SeitePR1|43|Die Schnupftabaksdose 043.jpg}}Ein Kehlkopf litt an Migräne
+      Und schrie wie eine Hyäne,
+      Er schrie sich wund.
+      Doch als ihm niemand zu Hilfe kam
+      {{Zeile|5}}Und niemand sein Geschrei vernahm,
+      War er auf einmal – – gesund.
+      </poem>
+    name: Textdaten
+    mapping:
+      author: AUTOR
+  expect:
+    author: |
+      [[Hans Bötticher]]<br />(Joachim Ringelnatz)

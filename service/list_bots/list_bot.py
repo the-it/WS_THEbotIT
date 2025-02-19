@@ -1,3 +1,4 @@
+import urllib.parse
 from abc import abstractmethod
 from datetime import datetime
 from typing import Tuple
@@ -50,15 +51,16 @@ class ListBot(CloudBot):
         lemma_list, unprocessed_lemmas = self.get_lemma_list()
         for idx, lemma in enumerate(lemma_list):
             clean_lemma = lemma.strip(":").replace("_", " ")
-            self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} {clean_lemma}")
+            self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} "
+                              f"https://de.wikisource.org/wiki/{urllib.parse.quote(clean_lemma)}")
             page = Page(self.wiki, lemma)
             try:
                 item_dict = self.get_page_infos(page)
             except ValueError:
                 item_dict = {}
                 self.logger.error(f"lemma {clean_lemma} was not parsed correctly.")
-            self.enrich_dict(page, item_dict)
             item_dict["lemma"] = clean_lemma
+            self.enrich_dict(page, item_dict)
             item_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
             self.data[lemma] = item_dict
             if (idx - 50 > unprocessed_lemmas) and self._watchdog():

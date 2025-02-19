@@ -25,9 +25,9 @@ def get_page_infos(text: str, template_name: str, property_mapping: dict[str, st
     try:
         text_daten = template_finder.get_positions(template_name)
     except TemplateFinderException as error:
-        raise ValueError("Error in processing Textdaten template.") from error
+        raise ValueError(f"Error in processing {template_name} template.") from error
     if len(text_daten) != 1:
-        raise ValueError("No or more then one Textdaten template found.")
+        raise ValueError(f"No or more then one {template_name} template found.")
     template_extractor = TemplateHandler(text_daten[0]["text"])
     return_dict: dict[str, str] = {}
     for key, value in property_mapping.items():
