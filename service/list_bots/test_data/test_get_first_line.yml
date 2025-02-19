@@ -1,0 +1,130 @@
+find_by_line_5:
+  given: |
+    <poem>
+    {{Seite|81||De Goethe Werke LH 02 081.jpg}} '''Gränzen der Menschheit.'''
+
+    Wenn der uralte
+    Heilige Vater
+    Mit gelassener Hand
+    Aus rollenden Wolken
+    {{Zeile|5}}Segnende Blitze
+    Ueber die Erde sä’t,
+    Küss’ ich den letzten
+    Saum seines Kleides,
+    Kindliche Schauer
+    {{Zeile|10}}Treu in der Brust.
+
+    Denn mit Göttern
+    Soll sich nicht messen
+    Irgend ein Mensch.
+    Hebt er sich aufwärts,
+    {{Zeile|15}}Und berührt
+    </poem>
+  expect: Wenn der uralte
+short:
+  given: |
+    |QUELLE= {{GBS|SuYFAAAAIAAJ|PA2}}
+    |KURZBESCHREIBUNG=
+    |SONSTIGES=
+    |BEARBEITUNGSSTAND=fertig
+    }}
+
+    <poem>
+    {{Seite|8}} '''An den Marull.'''
+
+    Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
+    Marull, was artig ist, ist klein.
+    </poem>
+
+
+    {{references|x}}
+  expect: Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
+new_lines_in_the_way:
+  given: |
+    }}
+    {{ProofRead|De Goethe Werke LH 02 001.jpg}}
+
+    <poem>
+    {{SeitePR1|1|De Goethe Werke LH 02 001.jpg}} '''Mächtiges Ueberraschen.'''
+
+    Ein Strom entrauscht umwölktem Felsensaale
+    {{idt}}Dem Ocean sich eilig zu verbinden;
+    {{idt}}Was auch sich spiegeln mag von Grund zu Gründen,
+    {{idt}}Er wandelt unaufhaltsam fort zu Thale.
+
+    {{Zeile|5}}Dämonisch aber stürzt mit einem Male –
+    {{idt}}Ihr folgten Berg und Wald in Wirbelwinden –
+    {{idt}}Sich Oreas, Behagen dort zu finden,
+    {{idt}}Und hemmt den Lauf, begränzt die weite Schale.
+
+    Die Welle sprüht, und staunt zurück und weichet,
+    {{Zeile|10}}{{idt}}Und schwillt bergan, sich immer selbst zu trinken;
+    {{idt}}Gehemmt ist nun zum Vater hin das Streben.
+
+    Sie schwankt und ruht, zum See zurückgedeichet;
+    {{idt}}Gestirne, spiegelnd sich, beschaun das Blinken
+    {{idt}}Des Wellenschlags am Fels, ein neues Leben.
+    </poem>
+
+    {{SORTIERUNG:Machtiges Uberraschen}}
+  expect: Ein Strom entrauscht umwölktem Felsensaale
+indicate_by_comment:
+  given: |
+    {{LineCenterSize|140|22|'''Vorwort'''}}
+
+
+
+    <center>
+    {|
+    |colspan="3"|
+    |-
+    |{{idt}}
+    |
+    <poem>
+    Ach, was muß man oft von bösen<!-- first_line -->
+    Kindern hören oder lesen!!
+    Wie zum Beispiel hier von diesen,
+    Welche Max und Moritz hießen;
+    </poem>
+    |
+    |-
+    |colspan="3"|
+    [[Bild:Max und Moritz (Busch) 001.png|300px|center]]
+    |-
+    |
+    |align="left"|
+    <poem>
+    {{Zeile|5}}Die, anstatt durch weise Lehren
+    Sich zum Guten zu bekehren,
+    Oftmals noch darüber lachten
+    Und sich heimlich lustig machten. –
+    – Ja, zur Übeltätigkeit,
+    {{Zeile|10}}Ja, dazu ist man bereit! –
+    – Menschen necken, Tiere quälen,
+    Äpfel, Birnen, Zwetschen stehlen – –
+    Das ist freilich angenehmer
+    Und dazu auch viel bequemer,
+    {{Zeile|15}}Als in Kirche oder Schule
+    Festzusitzen auf dem Stuhle. –
+    – Aber wehe, wehe, wehe!
+    Wenn ich, auf das Ende sehe!! –
+    – Ach, das war ein schlimmes Ding,
+    {{Zeile|20}}Wie es Max und Moritz ging.
+    – Drum ist hier, was sie getrieben,
+    Abgemalt und aufgeschrieben.
+    </poem>
+    |}
+    </center>
+
+    == Inhalt ==
+    * '''[[Max und Moritz/Erster Streich|Erster Streich]]'''
+    * '''[[Max und Moritz/Zweiter Streich|Zweiter Streich]]'''
+    * '''[[Max und Moritz/Dritter Streich|Dritter Streich]]'''
+    * '''[[Max und Moritz/Vierter Streich|Vierter Streich]]'''
+    * '''[[Max und Moritz/Fünfter Streich|Fünfter Streich]]'''
+    * '''[[Max und Moritz/Sechster Streich|Sechster Streich]]'''
+    * '''[[Max und Moritz/Letzter Streich|Letzter Streich]]'''
+
+    [[Kategorie:Kinderlyrik]]
+    [[Kategorie:Neuhochdeutsch]]
+  expect: Ach, was muß man oft von bösen<!-- first_line -->

@@ -1,3 +1,4 @@
+import urllib.parse
 from abc import abstractmethod
 from datetime import datetime
 from typing import Tuple
@@ -50,7 +51,8 @@ class ListBot(CloudBot):
         lemma_list, unprocessed_lemmas = self.get_lemma_list()
         for idx, lemma in enumerate(lemma_list):
             clean_lemma = lemma.strip(":").replace("_", " ")
-            self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} {clean_lemma}")
+            self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} "
+                              f"https://de.wikisource.org/wiki/{urllib.parse.quote(clean_lemma)}")
             page = Page(self.wiki, lemma)
             try:
                 item_dict = self.get_page_infos(page)
