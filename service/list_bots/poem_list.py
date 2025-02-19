@@ -8,6 +8,7 @@ from service.list_bots._base import is_empty_value, has_value
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
 from tools.petscan import PetScan
+from tools.template_expansion import TemplateExpansion
 
 
 class PoemList(ListBot):
@@ -136,6 +137,7 @@ class PoemList(ListBot):
     FIRST_LINE_REGEX = re.compile(r"<!-- ?first_line ?-->")
 
     def get_first_line(self, text):
+        text = TemplateExpansion(text, self.wiki).expand()
         if self.FIRST_LINE_REGEX.search(text):
             for line in self._split_lines(text):
                 if self.FIRST_LINE_REGEX.search(line):

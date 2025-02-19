@@ -15,8 +15,9 @@ class TemplateExpansion:
     def expand(self) -> str:
         text_in_flight = self.raw
         for template in ["SeitePR", "PoemPR"]:
-            lemma_parts = self.split_by_template(text_in_flight, template)
-            text_in_flight = self.replace_templates(lemma_parts, template)
+            if template in text_in_flight:
+                lemma_parts = self.split_by_template(text_in_flight, template)
+                text_in_flight = self.replace_templates(lemma_parts, template)
         return text_in_flight
 
     def replace_templates(self, lemma_parts: list[str], template_handler: str) -> str:

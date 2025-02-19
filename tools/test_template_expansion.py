@@ -118,3 +118,17 @@ Die Weisheit läßt die Schaufel sinken
 [[fr:La Fortune et la Sagesse]]
 [[ru:С временщиком Фортуна в споре (Шиллер/Тютчев)/ПСС 2002 (СО)]]"""
         compare(expect, expander.expand())
+
+    def test_expand_nothing_to_do(self):
+        input = """{{Textdaten
+|AUTOR=[[Friedrich Schiller]]
+|TITEL=Das Glück und die Weisheit
+}}
+{{BlockSatzStart}}"""
+        expander = TemplateExpansion(input, self.wiki)
+        expect = """{{Textdaten
+|AUTOR=[[Friedrich Schiller]]
+|TITEL=Das Glück und die Weisheit
+}}
+{{BlockSatzStart}}"""
+        compare(expect, expander.expand())
