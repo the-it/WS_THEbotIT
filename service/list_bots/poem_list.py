@@ -8,6 +8,7 @@ from pywikibot.exceptions import InvalidTitleError
 from service.list_bots._base import is_empty_value, has_value
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
+from tools.bots import BotException
 from tools.petscan import PetScan
 from tools.template_expansion import TemplateExpansion
 
@@ -26,6 +27,17 @@ class PoemList(ListBot):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 2, 15, 23)
         self.timeout = timedelta(seconds=240)
+
+    def __enter__(self):
+        ################# REMOVE ####################
+        super().__enter__()
+        if not self.data:
+            self.logger.warning("Try to get the broken data back.")
+            try:
+                self.data.get_broken()
+            except BotException:
+                self.logger.warning("There isn't broken data to reload.")
+        return self
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
