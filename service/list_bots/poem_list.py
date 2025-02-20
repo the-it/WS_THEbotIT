@@ -28,17 +28,6 @@ class PoemList(ListBot):
         self.new_data_model = datetime(2025, 2, 15, 23)
         self.timeout = timedelta(seconds=240)
 
-    def __enter__(self):
-        ################# REMOVE ####################
-        super().__enter__()
-        if not self.data:
-            self.logger.warning("Try to get the broken data back.")
-            try:
-                self.data.get_broken()
-            except BotException:
-                self.logger.warning("There isn't broken data to reload.")
-        return self
-
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
