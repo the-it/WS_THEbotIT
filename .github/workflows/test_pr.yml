@@ -61,9 +61,4 @@ jobs:
           WS_REAL_DATA: 1
           PYTHONUNBUFFERED: 1
         run: nose2 -v --with-coverage -s service/ws_re/integration_test && coverage xml
-      - name: Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          use_oidc: true
-          flags: integration
         if: always()
