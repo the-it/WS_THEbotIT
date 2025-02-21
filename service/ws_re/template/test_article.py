@@ -265,7 +265,7 @@ text
 |SPALTE_END=OFF
 }}
 '''6)'''  Zu unterscheiden von diesem D. ist Dioskorides von Nikopolis, von welchem Anth. Pal. VII 178 (ausserhalb der Reihen) ein Epigramm erhalten ist. Unsicher ist VII 167.
-{{REAutor|[Reitzenstein.}}"""
+{{REAuto|[Reitzenstein.}}"""
             Article.from_text(test_string)
 
     def test_bug_corrupt_start_template(self):

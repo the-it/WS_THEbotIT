@@ -49,11 +49,11 @@ class TemplateExpansion:
     @staticmethod
     def split_by_template(text_input: str, template_name: str) -> list[str]:
         positions = TemplateFinder(text_input).get_positions(template_name)
-        lemma_parts = [text_input[0:positions[0]['pos'][0]]]
+        lemma_parts = [text_input[0:positions[0].start]]
         for idx, position in enumerate(positions):
-            lemma_parts.append(text_input[position['pos'][0]:position['pos'][1]])
+            lemma_parts.append(position.text)
             with suppress(IndexError):
-                if position['pos'][1] != positions[idx + 1]['pos'][0]:
-                    lemma_parts.append(text_input[position['pos'][1]:positions[idx + 1]['pos'][0]])
-        lemma_parts.append(text_input[positions[-1]['pos'][1]:])
+                if position.end != positions[idx + 1].start:
+                    lemma_parts.append(text_input[position.end:positions[idx + 1].start])
+        lemma_parts.append(text_input[positions[-1].end:])
         return lemma_parts

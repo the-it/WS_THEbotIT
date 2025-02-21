@@ -1,19 +1,25 @@
 import re
+from dataclasses import dataclass
 from typing import List
-
-from tools._typing import TemplatePositionDict
 
 
 class TemplateFinderException(Exception):
     pass
 
 
+@dataclass
+class TemplatePosition:
+    start: int
+    end: int
+    text: str
+
+
 class TemplateFinder():
     def __init__(self, text_to_search: str):
         self.text = text_to_search
 
-    def get_positions(self, template_name: str) -> List[TemplatePositionDict]:
-        templates: List[TemplatePositionDict] = []
+    def get_positions(self, template_name: str) -> List[TemplatePosition]:
+        templates: List[TemplatePosition] = []
         for start_position_template in \
                 self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
             pos_start_brackets = \
@@ -36,9 +42,9 @@ class TemplateFinder():
                         end_position_template += 4
                         # add start position (end only searched after)
                         end_position_template += start_position_template
-                        templates.append({"pos": (start_position_template, end_position_template),
-                                          "text": self.text[start_position_template:
-                                                            end_position_template]})
+                        templates.append(TemplatePosition(start_position_template,
+                                                          end_position_template,
+                                                          self.text[start_position_template:end_position_template]))
                         break
                     pos_end_brackets.pop(-1)
             else:

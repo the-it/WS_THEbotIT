@@ -5,7 +5,7 @@ import pywikibot
 
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, RE_AUTHOR, ReDatenException
 from service.ws_re.template.article import Article
-from tools.template_finder import TemplateFinderException, TemplateFinder
+from tools.template_finder import TemplateFinderException, TemplateFinder, TemplatePosition
 
 
 class RePage:
@@ -24,11 +24,11 @@ class RePage:
             re_author_pos = template_finder.get_positions(RE_AUTHOR)
         except TemplateFinderException as error:
             raise ReDatenException("There are corrupt templates.") from error
-        re_starts = re_daten_pos + re_abschnitt_pos
-        re_starts.sort(key=lambda x: x["pos"][0])
+        re_starts: list[TemplatePosition] = re_daten_pos + re_abschnitt_pos
+        re_starts.sort(key=lambda x: x.start)
         if not re_starts:
             raise ReDatenException("No single start template found.")
-        if RE_DATEN not in re_starts[0]["text"]:
+        if RE_DATEN not in re_starts[0].text:
             raise ReDatenException("First template isn't of type REDaten. Corrupt structure.")
         if len(re_starts) != len(re_author_pos):
             raise ReDatenException(
@@ -36,15 +36,15 @@ class RePage:
         # iterate over start and end templates of the articles and create ReArticles of them
         last_handled_char = 0
         for pos_daten, pos_author in zip(re_starts, re_author_pos):
-            if last_handled_char < pos_daten["pos"][0]:
+            if last_handled_char < pos_daten.start:
                 # there is plain text in front of the article
-                text_to_handle = self.pre_text[last_handled_char:pos_daten["pos"][0]].strip()
+                text_to_handle = self.pre_text[last_handled_char:pos_daten.start].strip()
                 if text_to_handle:
                     # not just whitespaces
                     self._article_list.append(text_to_handle)
             self._article_list.append(
-                Article.from_text(self.pre_text[pos_daten["pos"][0]:pos_author["pos"][1]]))
-            last_handled_char = pos_author["pos"][1]
+                Article.from_text(self.pre_text[pos_daten.start:pos_author.end]))
+            last_handled_char = pos_author.end
         # handle text after the last complete article
         if last_handled_char < len(self.pre_text):
             self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)].strip())
