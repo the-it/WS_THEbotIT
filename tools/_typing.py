@@ -1,9 +1,4 @@
-from typing import TypedDict, Tuple, Optional, List
-
-
-class TemplatePositionDict(TypedDict):
-    pos: Tuple[int, int]
-    text: str
+from typing import TypedDict, Optional, List
 
 
 class TemplateParameterDict(TypedDict):

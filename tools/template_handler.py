@@ -38,7 +38,7 @@ class TemplateHandler:
         while template_str:  # analyse the arguments
             if template_str[0] == "{":  # argument is a template itself
                 template_str = self._save_argument(REGEX_TEMPLATE, template_str, False)
-            elif template_str[0] == "[":  # argument is a link in the wiki
+            elif template_str[0:2] == "[[":  # argument is a link in the wiki
                 template_str = self._save_argument(REGEX_INTERWIKI, template_str, False)
             elif re.match(REGEX_KEY, template_str):  # argument with a key
                 # an embedded template or link with a key

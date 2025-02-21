@@ -7,7 +7,7 @@ from testfixtures import compare
 
 from service.list_bots.poem_list import PoemList
 from tools.bots.cloud.test_base import TestCloudBase
-from tools.test import real_wiki_test
+from tools.test import real_wiki_test, PageMock
 
 
 @ddt
@@ -68,6 +68,10 @@ class TestPoemList(TestCloudBase):
         compare("[[Karl Marx|Marx, Karl]]", self.poem_list.get_print_author(given))
         given = {"author": "Karl Marx", "sortkey_auth": "Kommunismus"}
         compare("data-sort-value=\"Kommunismus\"|[[Karl Marx|Karl Marx]]", self.poem_list.get_print_author(given))
+        given = {"author": "", "sortkey_auth": ""}
+        compare("", self.poem_list.get_print_author(given))
+        given = {"author": "Someone", "sortkey_auth": "Someone", "no_lemma_auth": "yes"}
+        compare("Someone", self.poem_list.get_print_author(given))
 
     def test_get_print_year(self):
         compare("1920", self.poem_list.get_print_year({"creation": "1920", "publish": "1930"}))
@@ -250,3 +254,85 @@ Abgemalt und aufgeschrieben.
         compare("Zahnfleischkranke #Der",
                 self.poem_list.get_sortkey({"lemma": "Die Zahnfleischkranke", "title": "Der Zahnfleischkranke"},
                                            "[[Kategorie:Joachim Ringelnatz]]"))
+
+    def test_get_page_info_gartenlaube(self):
+        text = """{{GartenlaubenArtikel
+|VORIGER=
+|TITEL=1870
+|NÄCHSTER=Frühlingsboten
+|AUTOR=[[Friedrich Hofmann]]
+|JAHR=1880
+|Heft=33
+|Seite=529
+|BILD=
+|KURZBESCHREIBUNG=
+|WIKIPEDIA=
+|SONSTIGES=
+|BEARBEITUNGSSTAND=fertig
+}}
+
+{{BlockSatzStart}}
+{{SeitePR|529|Die Gartenlaube (1880) 529.jpg|1}}
+{{BlockSatzEnd}}
+
+[[Kategorie:Friedrich Hofmann]]
+[[Kategorie:Gedicht]]"""
+        page = PageMock()
+        page.text = text
+        compare(
+            {
+                "title": "1870",
+                "author": "[[Friedrich Hofmann]]",
+                "publish": "1880",
+            },
+            self.poem_list.get_page_infos(page))
+
+    @real_wiki_test
+    def test_get_page_info_kapitel(self):
+        poem_list = PoemList(self.wiki)
+        page = pywikibot.Page(self.wiki, "Hände (Březina)/*")
+        compare(
+            {
+                "title": "*",
+                "author": "[[Otokar Březina]]",
+                "publish": "1908",
+                "creation": "",
+            },
+            poem_list.get_page_infos(page))
+
+    def test_get_page_info_kapitel_wrong_slash(self):
+        text = """{{Kapitel
+|ANMERKUNG=Origninaltitel: *
+|HERKUNFT=Hände (Březina)
+|VORIGER=Orte der Harmonie und der Versöhnung
+|NÄCHSTER=Frauen
+|TITELTEIL=2
+|WIKIPEDIA=
+|BEARBEITUNGSSTAND=fertig
+|KATEGORIE=Brezina Hände 1908
+|SEITE=57
+}}"""
+        page = PageMock()
+        page.text = text
+        page.title_str = "Something_without_a_slash"
+        with self.assertRaisesRegex(ValueError, "Referenced part of the title doesn't exists for Something_without_a_slash"):
+            self.poem_list.get_page_infos(page)
+
+    def test_get_page_info_kapitel_parent_does_not_exist(self):
+        text = """{{Kapitel
+|ANMERKUNG=Origninaltitel: *
+|HERKUNFT=Hände (Březina)
+|VORIGER=Orte der Harmonie und der Versöhnung
+|NÄCHSTER=Frauen
+|TITELTEIL=2
+|WIKIPEDIA=
+|BEARBEITUNGSSTAND=fertig
+|KATEGORIE=Brezina Hände 1908
+|SEITE=57
+}}"""
+        page = PageMock()
+        page.text = text
+        page.title_str = "Parent/chapter"
+        poem_list = PoemList(self.wiki)
+        with self.assertRaisesRegex(ValueError, "Page Parent as parent page for Parent/chapter does not exist"):
+            poem_list.get_page_infos(page)

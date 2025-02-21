@@ -1,5 +1,5 @@
 import os
-from unittest import skipUnless
+from unittest import skipUnless, mock
 
 REAL_DATA_TEST = "WS_REAL_DATA" in os.environ
 REAL_WIKI_TEST = "WS_REAL_WIKI" in os.environ
@@ -8,6 +8,14 @@ REAL_WIKI_TEST = "WS_REAL_WIKI" in os.environ
 def real_wiki_test(func):
     wrapper = skipUnless(REAL_WIKI_TEST, "only execute in test against real wiki")(func)
     return wrapper
+
+
+class PageMock(mock.MagicMock):
+    text: str = ""
+    title_str: str = ""
+
+    def title(self):
+        return self.title_str
 
 
 class SearchStringChecker:

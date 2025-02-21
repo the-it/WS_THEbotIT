@@ -128,3 +128,45 @@ indicate_by_comment:
     [[Kategorie:Kinderlyrik]]
     [[Kategorie:Neuhochdeutsch]]
   expect: Ach, was muß man oft von bösen<!-- first_line -->
+small_caps_zeile:
+  given: |
+    |KURZBESCHREIBUNG=
+    |SONSTIGES=
+    |BEARBEITUNGSSTAND=fertig
+    |BENUTZERHILFE=on
+    |VORIGER=Nordische Königsnamen
+    |NÄCHSTER=Gorm Grymme (Fontane)
+    }}
+
+    <poem>
+    {{SeitePR1|89|Fontane_Gedichte_089.jpg}} '''Hakon Borkenbart.'''
+    <small>(Fragment.)</small>
+
+    {{idt}}Der König Hakon Borkenbart
+    Hat Roß und Ruhm, hat Waff’ und Wehr
+    Und hat allzeit zu Krieg und Fahrt
+    Viel hohe Schiff auf hohem Meer;
+    {{zeile|5}}Es prangt sein Feld in Garben,
+    Er aber prangt in Narben,
+    In Narben von den Dänen her.
+
+    {{idt}}Es wallt im Wind sein graues Haar,
+    Er liebt die Schlacht und liebt den Wein,
+    {{zeile|10}}Doch nie, trotz seiner siebzig Jahr,
+    Ward ihm zu Sinn als müss’ er frein;
+    ''Heut'' zieht er aus in Sorgen:
+    Er liebt schön Ingeborgen,
+    Des Königs Sala Töchterlein.
+
+    {{zeile|15}}{{idt}}Schon grüßt ihn fern so Thurm wie Schloß,
+    Und lächelnd plötzlich blickt er drein;
+    Er spricht herab von seinem Roß:
+    „Und bin ich alt, so mag ich’s sein!
+    Und wär ich alt zum Sterben,
+    {{zeile|20}}Auch Ruhm und Narben werben,
+    Und werben gut wie Jugendschein.“
+    </poem>
+
+    [[Kategorie:Theodor Fontane]]
+  expect: |
+    {{idt}}Der König Hakon Borkenbart

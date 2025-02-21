@@ -1,3 +1,4 @@
+# pylint: disable=protected-access,line-too-long
 from unittest import TestCase
 
 from tools.template_handler import TemplateHandler
@@ -205,3 +206,8 @@ class TestTemplateHandler(TestCase):
         handler = TemplateHandler(test_string_bug)
         real_dict = handler.get_parameterlist()
         self.assertEqual(test_list_bug, real_dict)
+
+    def test_bug_poemlist(self):
+        handler = TemplateHandler("{{SeitePR|[I] Schmutztitel|Mittelalterliches Hausbuch 1887 0001.jpg}}")
+        real_dict = handler.get_parameterlist()
+        self.assertEqual([{'key': None, 'value': '[I] Schmutztitel'}, {'key': None, 'value': 'Mittelalterliches Hausbuch 1887 0001.jpg'}], real_dict)

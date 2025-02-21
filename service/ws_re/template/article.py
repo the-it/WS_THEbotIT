@@ -152,25 +152,25 @@ class Article(Mapping):
         if len(find_re_author) != 1:
             raise ReDatenException("Article has the wrong structure. There must one stop template")
         # the templates must have the right order
-        if find_re_start[0]["pos"][0] > find_re_author[0]["pos"][0]:
+        if find_re_start[0].start > find_re_author[0].start:
             raise ReDatenException("Article has the wrong structure. Wrong order of templates.")
         # it can only exist text between the start and the end template.
-        if find_re_start[0]["pos"][0] != 0:
+        if find_re_start[0].start != 0:
             raise ReDatenException("Article has the wrong structure. There is text in front of the article.")
-        if find_re_author[0]["pos"][1] != len(article_text):
+        if find_re_author[0].end != len(article_text):
             raise ReDatenException("Article has the wrong structure. There is text after the article.")
         try:
-            re_start = TemplateHandler(find_re_start[0]["text"])
+            re_start = TemplateHandler(find_re_start[0].text)
         except TemplateHandlerException as error:
             raise ReDatenException("Start-Template has the wrong structure.") from error
         try:
-            re_author = REAuthor.from_template(find_re_author[0]["text"])
+            re_author = REAuthor.from_template(find_re_author[0].text)
         except TemplateHandlerException as error:
             raise ReDatenException("Author-Template has the wrong structure.") from error
         properties_dict = cls._extract_properties(re_start.parameters)
         return Article(article_type=re_start.title,
                        re_daten_properties=properties_dict,
-                       text=article_text[find_re_start[0]["pos"][1]:find_re_author[0]["pos"][0]]
+                       text=article_text[find_re_start[0].end:find_re_author[0].start]
                        .strip(),
                        author=re_author)
 

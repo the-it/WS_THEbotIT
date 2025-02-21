@@ -1,25 +1,20 @@
 # pylint: disable=broad-exception-raised
 from datetime import datetime
-from unittest import TestCase, mock
+from unittest import TestCase
 
 from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.base import ReScannerTask
 from service.ws_re.template.re_page import RePage
 from tools.bots.pi import WikiLogger
+from tools.test import PageMock
 
 
 class TaskTestCase(TestCase):
     def setUp(self):
-        self.page_mock = self.PageMock()
+        self.page_mock = PageMock()
         self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
                                  log_to_screen=False)
-
-    class PageMock(mock.MagicMock):
-        text: str = ""
-        title_str: str = ""
-        def title(self):
-            return self.title_str
 
 
 class TestReScannerTask(TaskTestCase):

@@ -28,7 +28,7 @@ def get_page_infos(text: str, template_name: str, property_mapping: dict[str, st
         raise ValueError(f"Error in processing {template_name} template.") from error
     if len(text_daten) != 1:
         raise ValueError(f"No or more then one {template_name} template found.")
-    template_extractor = TemplateHandler(text_daten[0]["text"])
+    template_extractor = TemplateHandler(text_daten[0].text)
     return_dict: dict[str, str] = {}
     for key, value in property_mapping.items():
         get_single_page_info(key, value, template_extractor, return_dict)

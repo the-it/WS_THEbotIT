@@ -31,7 +31,7 @@ class ListBot(CloudBot):
     def task(self) -> bool:
         self.logger.info("Processing lemmas.")
         self.process_lemmas()
-        self.logger.info("Sorting author list.")
+        self.logger.info("Sorting list.")
         item_list = self.sort_to_list()
         self.logger.info("Printing text.")
         new_text = self.print_list(item_list)
