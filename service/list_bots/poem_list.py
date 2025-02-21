@@ -143,16 +143,12 @@ class PoemList(ListBot):
         return ""
 
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
-    ZEILE_REGEX = re.compile(r"\{\{Zeile\|5\}\}")
+    ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
     HEADLINE_REGEX = re.compile(r"'''.+?'''")
     FIRST_LINE_REGEX = re.compile(r"<!-- ?first_line ?-->")
 
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
-        if self.FIRST_LINE_REGEX.search(text):
-            for line in self._split_lines(text):
-                if self.FIRST_LINE_REGEX.search(line):
-                    return line
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
             lines_list = self._split_lines(lines)
@@ -168,6 +164,10 @@ class PoemList(ListBot):
                         continue
                     if found:
                         return line
+        if self.FIRST_LINE_REGEX.search(text):
+            for line in self._split_lines(text):
+                if self.FIRST_LINE_REGEX.search(line):
+                    return line
         return ""
 
     @staticmethod
