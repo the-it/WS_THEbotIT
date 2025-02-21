@@ -254,3 +254,55 @@ Abgemalt und aufgeschrieben.
         compare("Zahnfleischkranke #Der",
                 self.poem_list.get_sortkey({"lemma": "Die Zahnfleischkranke", "title": "Der Zahnfleischkranke"},
                                            "[[Kategorie:Joachim Ringelnatz]]"))
+
+    class PageMock(mock.MagicMock):
+        text: str = ""
+        title_str: str = ""
+
+        def title(self):
+            return self.title_str
+
+    def test_get_page_info_gartenlaube(self):
+        text = """{{GartenlaubenArtikel
+|VORIGER=
+|TITEL=1870
+|NÄCHSTER=Frühlingsboten
+|AUTOR=[[Friedrich Hofmann]]
+|JAHR=1880
+|Heft=33
+|Seite=529
+|BILD=
+|KURZBESCHREIBUNG=
+|WIKIPEDIA=
+|SONSTIGES=
+|BEARBEITUNGSSTAND=fertig
+}}
+
+{{BlockSatzStart}}
+{{SeitePR|529|Die Gartenlaube (1880) 529.jpg|1}}
+{{BlockSatzEnd}}
+
+[[Kategorie:Friedrich Hofmann]]
+[[Kategorie:Gedicht]]"""
+        page = self.PageMock()
+        page.text = text
+        compare(
+            {
+                "title": "1870",
+                "author": "[[Friedrich Hofmann]]",
+                "publish": "1880",
+            },
+            self.poem_list.get_page_infos(page))
+
+    @real_wiki_test
+    def test_get_page_info_kapitel(self):
+        poem_list = PoemList(self.wiki)
+        page = pywikibot.Page(self.wiki, "Hände (Březina)/*")
+        compare(
+            {
+                "title": "*",
+                "author": "[[Otokar Březina]]",
+                "publish": "1908",
+                "creation": "",
+            },
+            poem_list.get_page_infos(page))

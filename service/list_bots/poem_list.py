@@ -5,10 +5,9 @@ from typing import Tuple
 from pywikibot import Site, Page
 from pywikibot.exceptions import InvalidTitleError
 
-from service.list_bots._base import is_empty_value, has_value
+from service.list_bots._base import is_empty_value, has_value, get_page_infos
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
-from tools.bots import BotException
 from tools.petscan import PetScan
 from tools.template_expansion import TemplateExpansion
 
@@ -26,7 +25,7 @@ class PoemList(ListBot):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 2, 15, 23)
-        self.timeout = timedelta(seconds=240)
+        self.timeout = timedelta(hours=8)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
@@ -39,6 +38,47 @@ class PoemList(ListBot):
     def sort_to_list(self) -> list[dict[str, str]]:
         poem_list = list(self.data.values())
         return sorted(poem_list, key=lambda poem_dict: (poem_dict["sortkey"], poem_dict["lemma"]))
+
+    def get_page_infos(self, page: Page) -> dict[str, str]:
+        if "{{GartenlaubenArtikel" in page.text:
+            return get_page_infos(
+                page.text,
+                "GartenlaubenArtikel",
+                {
+                    "title": "TITEL",
+                    "author": "AUTOR",
+                    "publish": "JAHR",
+                }
+            )
+        if "{{Kapitel" in page.text:
+            return_dict = self.get_kapitel_page_infos(page)
+            return return_dict
+
+        # default processing of the Textdaten template
+        return get_page_infos(page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
+
+    def get_kapitel_page_infos(self, page):
+        kapitel_dict = get_page_infos(
+            page.text,
+            "Kapitel",
+            {
+                "part": "TITELTEIL",
+            }
+        )
+        part = 2
+        if has_value("part", kapitel_dict):
+            part = int(kapitel_dict["part"])
+        title_parts = page.title().split("/")
+        try:
+            page_dict = {"title": title_parts[part - 1]}
+        except IndexError as err:
+            raise ValueError from err
+        parent_page = Page(page.site, title_parts[0])
+        if not parent_page.exists():
+            raise ValueError(f"Page {title_parts[0]} as parent page for {page.title()} does not exist")
+        return_dict = get_page_infos(parent_page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
+        return_dict["title"] = page_dict["title"]
+        return return_dict
 
     def enrich_dict(self, page: Page, item_dict: dict[str, str]) -> None:
         if has_value("author", item_dict):
