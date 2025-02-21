@@ -7,7 +7,7 @@ from testfixtures import compare
 
 from service.list_bots.poem_list import PoemList
 from tools.bots.cloud.test_base import TestCloudBase
-from tools.test import real_wiki_test
+from tools.test import real_wiki_test, PageMock
 
 
 @ddt
@@ -255,13 +255,6 @@ Abgemalt und aufgeschrieben.
                 self.poem_list.get_sortkey({"lemma": "Die Zahnfleischkranke", "title": "Der Zahnfleischkranke"},
                                            "[[Kategorie:Joachim Ringelnatz]]"))
 
-    class PageMock(mock.MagicMock):
-        text: str = ""
-        title_str: str = ""
-
-        def title(self):
-            return self.title_str
-
     def test_get_page_info_gartenlaube(self):
         text = """{{GartenlaubenArtikel
 |VORIGER=
@@ -284,7 +277,7 @@ Abgemalt und aufgeschrieben.
 
 [[Kategorie:Friedrich Hofmann]]
 [[Kategorie:Gedicht]]"""
-        page = self.PageMock()
+        page = PageMock()
         page.text = text
         compare(
             {
@@ -306,3 +299,40 @@ Abgemalt und aufgeschrieben.
                 "creation": "",
             },
             poem_list.get_page_infos(page))
+
+    def test_get_page_info_kapitel_wrong_slash(self):
+        text = """{{Kapitel
+|ANMERKUNG=Origninaltitel: *
+|HERKUNFT=Hände (Březina)
+|VORIGER=Orte der Harmonie und der Versöhnung
+|NÄCHSTER=Frauen
+|TITELTEIL=2
+|WIKIPEDIA=
+|BEARBEITUNGSSTAND=fertig
+|KATEGORIE=Brezina Hände 1908
+|SEITE=57
+}}"""
+        page = PageMock()
+        page.text = text
+        page.title_str = "Something_without_a_slash"
+        with self.assertRaisesRegex(ValueError, "Referenced part of the title doesn't exists for Something_without_a_slash"):
+            self.poem_list.get_page_infos(page)
+
+    def test_get_page_info_kapitel_parent_does_not_exist(self):
+        text = """{{Kapitel
+|ANMERKUNG=Origninaltitel: *
+|HERKUNFT=Hände (Březina)
+|VORIGER=Orte der Harmonie und der Versöhnung
+|NÄCHSTER=Frauen
+|TITELTEIL=2
+|WIKIPEDIA=
+|BEARBEITUNGSSTAND=fertig
+|KATEGORIE=Brezina Hände 1908
+|SEITE=57
+}}"""
+        page = PageMock()
+        page.text = text
+        page.title_str = "Parent/chapter"
+        poem_list = PoemList(self.wiki)
+        with self.assertRaisesRegex(ValueError, "Page Parent as parent page for Parent/chapter does not exist"):
+            poem_list.get_page_infos(page)

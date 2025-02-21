@@ -72,8 +72,8 @@ class PoemList(ListBot):
         try:
             page_dict = {"title": title_parts[part - 1]}
         except IndexError as err:
-            raise ValueError from err
-        parent_page = Page(page.site, title_parts[0])
+            raise ValueError(f"Referenced part of the title doesn't exists for {page.title()}") from err
+        parent_page = Page(self.wiki, title_parts[0])
         if not parent_page.exists():
             raise ValueError(f"Page {title_parts[0]} as parent page for {page.title()} does not exist")
         return_dict = get_page_infos(parent_page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
