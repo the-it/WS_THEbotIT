@@ -1,3 +1,4 @@
+# pylint: disable=protected-access,line-too-long
 from unittest import TestCase
 
 from tools.template_handler import TemplateHandler

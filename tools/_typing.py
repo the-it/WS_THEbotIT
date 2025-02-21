@@ -1,4 +1,4 @@
-from typing import TypedDict, Tuple, Optional, List
+from typing import TypedDict, Optional, List
 
 
 class TemplateParameterDict(TypedDict):

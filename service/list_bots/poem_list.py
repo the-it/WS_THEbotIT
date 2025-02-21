@@ -57,7 +57,7 @@ class PoemList(ListBot):
         # default processing of the Textdaten template
         return get_page_infos(page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
 
-    def get_kapitel_page_infos(self, page):
+    def get_kapitel_page_infos(self, page) -> dict[str, str]:
         kapitel_dict = get_page_infos(
             page.text,
             "Kapitel",
