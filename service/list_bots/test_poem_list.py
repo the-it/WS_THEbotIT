@@ -68,6 +68,10 @@ class TestPoemList(TestCloudBase):
         compare("[[Karl Marx|Marx, Karl]]", self.poem_list.get_print_author(given))
         given = {"author": "Karl Marx", "sortkey_auth": "Kommunismus"}
         compare("data-sort-value=\"Kommunismus\"|[[Karl Marx|Karl Marx]]", self.poem_list.get_print_author(given))
+        given = {"author": "", "sortkey_auth": ""}
+        compare("", self.poem_list.get_print_author(given))
+        given = {"author": "Someone", "sortkey_auth": "Someone", "no_lemma_auth": "yes"}
+        compare("Someone", self.poem_list.get_print_author(given))
 
     def test_get_print_year(self):
         compare("1920", self.poem_list.get_print_year({"creation": "1920", "publish": "1930"}))

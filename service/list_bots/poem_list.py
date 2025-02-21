@@ -54,6 +54,7 @@ class PoemList(ListBot):
                 item_dict["sortkey_auth"] = author_dict["sortkey"]
             except (ValueError, InvalidTitleError):
                 self.logger.error(f"Can't process author {item_dict['author']} of lemma {item_dict['lemma']}")
+                item_dict["no_lemma_auth"] = "yes"
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
         for item in ["title", "author", "first_name", "last_name",
@@ -130,6 +131,10 @@ class PoemList(ListBot):
             show_author = f"{poem_dict['last_name']}, {poem_dict['first_name']}"
         if has_value("sortkey_auth", poem_dict) and poem_dict["sortkey_auth"] != show_author:
             return f"data-sort-value=\"{poem_dict['sortkey_auth']}\"|[[{poem_dict['author']}|{show_author}]]"
+        if not show_author and not poem_dict["author"]:
+            return ""
+        if has_value("no_lemma_auth", poem_dict):
+            return poem_dict["author"]
         if has_value("author", poem_dict) and show_author != poem_dict["author"]:
             return f"[[{poem_dict['author']}|{show_author}]]"
         return f"[[{poem_dict['author']}]]"
