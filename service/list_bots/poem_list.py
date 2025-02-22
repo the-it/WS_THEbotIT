@@ -200,6 +200,15 @@ class PoemList(ListBot):
 
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
+        if self.FIRST_LINE_REGEX.search(text):
+            for line in self._split_lines(text):
+                if self.FIRST_LINE_REGEX.search(line):
+                    return line
+        lines_list = self._split_lines(text)
+        if self.ZEILE_REGEX.search(text):
+            for idx, line in enumerate(lines_list):
+                if self.ZEILE_REGEX.search(line):
+                    return lines_list[idx - 4]
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
             lines_list = self._split_lines(lines)
@@ -215,10 +224,6 @@ class PoemList(ListBot):
                         continue
                     if found:
                         return line
-        if self.FIRST_LINE_REGEX.search(text):
-            for line in self._split_lines(text):
-                if self.FIRST_LINE_REGEX.search(line):
-                    return line
         return ""
 
     @staticmethod

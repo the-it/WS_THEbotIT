@@ -167,68 +167,55 @@ class TestPoemList(TestCloudBase):
     def test_get_first_line(self, given, expect):
         compare(expect, self.poem_list.get_first_line(given))
 
-    @skip("only for testing")
+    #@skip("only for testing")
     def test_get_first_line_develop(self):
-        text = """
-{{LineCenterSize|140|22|'''Vorwort'''}}
+        text = """|ORIGINALSUBTITEL=
+|ORIGINALHERKUNFT=
+|BILD=
+|QUELLE={{Bielefeld|1660345}}
+|KURZBESCHREIBUNG=
+|SONSTIGES=
+|WIKIPEDIA=
+|VORIGER=Räte-Marseillaise
+|NÄCHSTER=Der Gefangene (Mühsam)
+|BEARBEITUNGSSTAND=fertig
+}}
 
+:{{Seite|75}} '''1919'''
+:<span style="font-size:90%">Dem Andenken Gustav Landauers</span>
+::Mai 1919
 
+:Die das Volk bisher geleitet,
+:folgend dem gewohnten Lichte,
+:waren nicht drauf vorbereitet:
+:es begibt sich Weltgeschichte.
+:{{Zeile|5}}Wild schlägt der Empörung Welle
+:an des Staates morsche Fugen.
+:Krachend bersten die Gestelle,
+:die die alte Ordnung trugen.
+:{{idt}}Ja, ja, ihr Herrn, so geht's,
+:{{Zeile|10}}{{idt}}hört man die Demokraten.
+:{{idt}}Wir sagten es ja stets:
+:{{idt}}es kann nicht wohl geraten,
+:{{idt}}wenn man nach eignem Willen tut
+:{{idt}}und fragt nicht das Parteistatut.
 
-<center>
-{|
-|colspan="3"|
-|-
-|{{idt}}
-|
-<poem>
-Ach, was muß man oft von bösen<!-- first_line -->
-Kindern hören oder lesen!!
-Wie zum Beispiel hier von diesen,
-Welche Max und Moritz hießen;
-</poem>
-|
-|-
-|colspan="3"|
-[[Bild:Max und Moritz (Busch) 001.png|300px|center]]
-|-
-|
-|align="left"|
-<poem>
-{{Zeile|5}}Die, anstatt durch weise Lehren
-Sich zum Guten zu bekehren,
-Oftmals noch darüber lachten
-Und sich heimlich lustig machten. –
-– Ja, zur Übeltätigkeit,
-{{Zeile|10}}Ja, dazu ist man bereit! –
-– Menschen necken, Tiere quälen,
-Äpfel, Birnen, Zwetschen stehlen – –
-Das ist freilich angenehmer
-Und dazu auch viel bequemer,
-{{Zeile|15}}Als in Kirche oder Schule
-Festzusitzen auf dem Stuhle. –
-– Aber wehe, wehe, wehe!
-Wenn ich, auf das Ende sehe!! –
-– Ach, das war ein schlimmes Ding,
-{{Zeile|20}}Wie es Max und Moritz ging.
-– Drum ist hier, was sie getrieben,
-Abgemalt und aufgeschrieben.
-</poem>
-|}
-</center>
-
-== Inhalt ==
-* '''[[Max und Moritz/Erster Streich|Erster Streich]]'''
-* '''[[Max und Moritz/Zweiter Streich|Zweiter Streich]]'''
-* '''[[Max und Moritz/Dritter Streich|Dritter Streich]]'''
-* '''[[Max und Moritz/Vierter Streich|Vierter Streich]]'''
-* '''[[Max und Moritz/Fünfter Streich|Fünfter Streich]]'''
-* '''[[Max und Moritz/Sechster Streich|Sechster Streich]]'''
-* '''[[Max und Moritz/Letzter Streich|Letzter Streich]]'''
-
-[[Kategorie:Kinderlyrik]]
-[[Kategorie:Neuhochdeutsch]]
+:{{Zeile|15}}Fürsten gleiten von den Thronen,
+:Völker lösen ihre Bande,
+:und es reiben sich Millionen
+:aus den Augen Schmerz und Schande.
+:Sie erwachen und begreifen
+:{{Zeile|20}}Gegenwart und Zukunft — beides,
+:und sie sehn Befreiung reifen
+:aus den Wurzeln ihres Leides.
+:{{idt}}Halt, liebe Leute, halt!
+:{{idt}}Vertraut bewährten Führern.
+:{{Zeile|25}}{{idt}}Sonst kommt ihr in Gewalt
+:{{idt}}von skrupellosen Schürern.
+:{{idt}}Folgt uns, so hilft euch gern der Staat,
+:{{idt}}wie er euch stets geholfen hat.
         """
-        compare("Ach, was muß man oft von bösen<!-- first_line -->", self.poem_list.get_first_line(text))
+        compare(":Die das Volk bisher geleitet,", self.poem_list.get_first_line(text))
 
     @skip("only for testing")
     @real_wiki_test
