@@ -212,11 +212,7 @@ class PoemList(ListBot):
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
             lines_list = self._split_lines(lines)
-            if self.ZEILE_REGEX.search(lines):
-                for idx, line in enumerate(lines_list):
-                    if self.ZEILE_REGEX.search(line):
-                        return lines_list[idx - 4]
-            elif self.HEADLINE_REGEX.search(lines):
+            if self.HEADLINE_REGEX.search(lines):
                 found = False
                 for idx, line in enumerate(lines_list):
                     if self.HEADLINE_REGEX.search(line):
@@ -224,6 +220,8 @@ class PoemList(ListBot):
                         continue
                     if found:
                         return line
+            else:
+                return lines_list[0]
         return ""
 
     @staticmethod

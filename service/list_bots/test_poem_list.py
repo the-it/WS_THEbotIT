@@ -169,53 +169,26 @@ class TestPoemList(TestCloudBase):
 
     #@skip("only for testing")
     def test_get_first_line_develop(self):
-        text = """|ORIGINALSUBTITEL=
-|ORIGINALHERKUNFT=
-|BILD=
-|QUELLE={{Bielefeld|1660345}}
-|KURZBESCHREIBUNG=
-|SONSTIGES=
-|WIKIPEDIA=
-|VORIGER=Räte-Marseillaise
-|NÄCHSTER=Der Gefangene (Mühsam)
-|BEARBEITUNGSSTAND=fertig
-}}
+        text = """{{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
 
-:{{Seite|75}} '''1919'''
-:<span style="font-size:90%">Dem Andenken Gustav Landauers</span>
-::Mai 1919
 
-:Die das Volk bisher geleitet,
-:folgend dem gewohnten Lichte,
-:waren nicht drauf vorbereitet:
-:es begibt sich Weltgeschichte.
-:{{Zeile|5}}Wild schlägt der Empörung Welle
-:an des Staates morsche Fugen.
-:Krachend bersten die Gestelle,
-:die die alte Ordnung trugen.
-:{{idt}}Ja, ja, ihr Herrn, so geht's,
-:{{Zeile|10}}{{idt}}hört man die Demokraten.
-:{{idt}}Wir sagten es ja stets:
-:{{idt}}es kann nicht wohl geraten,
-:{{idt}}wenn man nach eignem Willen tut
-:{{idt}}und fragt nicht das Parteistatut.
+{{center|'''Abendlandschaft.'''}}
 
-:{{Zeile|15}}Fürsten gleiten von den Thronen,
-:Völker lösen ihre Bande,
-:und es reiben sich Millionen
-:aus den Augen Schmerz und Schande.
-:Sie erwachen und begreifen
-:{{Zeile|20}}Gegenwart und Zukunft — beides,
-:und sie sehn Befreiung reifen
-:aus den Wurzeln ihres Leides.
-:{{idt}}Halt, liebe Leute, halt!
-:{{idt}}Vertraut bewährten Führern.
-:{{Zeile|25}}{{idt}}Sonst kommt ihr in Gewalt
-:{{idt}}von skrupellosen Schürern.
-:{{idt}}Folgt uns, so hilft euch gern der Staat,
-:{{idt}}wie er euch stets geholfen hat.
+
+<poem>
+Der Hirt bläst seine Weise,
+Von fern ein Schuß noch fällt,
+Die Wälder rauschen leise
+Und Ströme tief im Feld.
+
+Nur hinter jenem Hügel
+Noch spielt der Abendschein –
+O hätt’ ich, hätt’ ich Flügel,
+Zu fliegen da hinein!
+</poem>
+{{AlR|'''J. v. Eichendorff.'''}}
         """
-        compare(":Die das Volk bisher geleitet,", self.poem_list.get_first_line(text))
+        compare("Der Hirt bläst seine Weise,", self.poem_list.get_first_line(text))
 
     @skip("only for testing")
     @real_wiki_test

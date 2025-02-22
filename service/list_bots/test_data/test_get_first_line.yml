@@ -216,5 +216,26 @@ no_poem_tags:
     :{{idt}}von skrupellosen Schürern.
     :{{idt}}Folgt uns, so hilft euch gern der Staat,
     :{{idt}}wie er euch stets geholfen hat.
+  expect: ":Die das Volk bisher geleitet,"
+title_not_in_poem_tags:
+  given: |
+    {{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
+
+
+    {{center|'''Abendlandschaft.'''}}
+
+
+    <poem>
+    Der Hirt bläst seine Weise,
+    Von fern ein Schuß noch fällt,
+    Die Wälder rauschen leise
+    Und Ströme tief im Feld.
+
+    Nur hinter jenem Hügel
+    Noch spielt der Abendschein –
+    O hätt’ ich, hätt’ ich Flügel,
+    Zu fliegen da hinein!
+    </poem>
+    {{AlR|'''J. v. Eichendorff.'''}}
   expect: |
-    :Die das Volk bisher geleitet,
+    Der Hirt bläst seine Weise,
