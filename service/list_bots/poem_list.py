@@ -1,4 +1,5 @@
 import re
+from contextlib import suppress
 from datetime import timedelta, datetime
 from typing import Tuple
 
@@ -8,6 +9,7 @@ from pywikibot.exceptions import InvalidTitleError
 from service.list_bots._base import is_empty_value, has_value, get_page_infos
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
+from tools.date_conversion import DateConversion
 from tools.petscan import PetScan
 from tools.template_expansion import TemplateExpansion
 
@@ -98,6 +100,10 @@ class PoemList(ListBot):
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
         item_dict["year"] = self.get_year(item_dict)
+        with suppress(KeyError):
+            item_dict.pop("creation")
+        with suppress(KeyError):
+            item_dict.pop("publish")
         for item in ["title", "author", "first_name", "last_name",
                      "sortkey_auth", "year", "sortkey", "first_line"]:
             if item not in item_dict:
@@ -228,12 +234,18 @@ class PoemList(ListBot):
             return match.group(1)
         return author
 
+    YEAR_REGEX = re.compile(r"^\d{4}$")
+
     def get_year(self, item_dict: dict[str, str]) -> str:
         year = ""
         if has_value("creation", item_dict):
-            year =  item_dict["creation"]
+            year = item_dict["creation"]
         elif has_value("publish", item_dict):
-            year =  f"{item_dict['publish']} (veröff.)"
+            year = item_dict['publish']
+        year = year.strip("[]")
+        if year and not self.YEAR_REGEX.search(year):
+            year = f"data-sort-value=\"{DateConversion(year)}\"|{year}"
+        return year
 
 
 if __name__ == "__main__":

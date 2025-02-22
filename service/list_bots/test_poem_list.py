@@ -73,10 +73,12 @@ class TestPoemList(TestCloudBase):
         given = {"author": "Someone", "sortkey_auth": "Someone", "no_lemma_auth": "yes"}
         compare("Someone", self.poem_list.get_print_author(given))
 
-    def test_get_print_year(self):
-        compare("1920", self.poem_list.get_print_year({"creation": "1920", "publish": "1930"}))
-        compare("1930 (veröff.)", self.poem_list.get_print_year({"creation": "", "publish": "1930"}))
-        compare("", self.poem_list.get_print_year({"creation": "", "publish": ""}))
+    def test_get_year(self):
+        compare("1920", self.poem_list.get_year({"creation": "1920", "publish": "1930"}))
+        compare("1930", self.poem_list.get_year({"creation": "", "publish": "1930"}))
+        compare("", self.poem_list.get_year({"creation": "", "publish": ""}))
+        compare("1234", self.poem_list.get_year({"creation": "[1234]"}))
+        compare("data-sort-value=\"1919-12-12\"|12. Dezember 1919", self.poem_list.get_year({"creation": "12. Dezember 1919"}))
 
     @real_wiki_test
     def test_integration(self):
@@ -93,12 +95,11 @@ class TestPoemList(TestCloudBase):
                 {":An_die_Freude_(Schiller)":
                     {
                         'author': 'Friedrich Schiller',
-                        'creation': 'November 1785',
+                        'year': 'data-sort-value="1785-11-00"|November 1785',
                         'first_name': 'Friedrich',
                         'last_name': 'Schiller',
                         'lemma': 'An die Freude (Schiller)',
                         'sortkey': 'An die Freude.',
-                        'publish': '1786',
                         'sortkey_auth': 'Schiller, Friedrich',
                         'title': 'An die Freude.',
                         'first_line': 'Freude, schöner Götterfunken,'
@@ -116,11 +117,10 @@ class TestPoemList(TestCloudBase):
         compare(
             {
                 'author': 'Johann Wolfgang von Goethe',
-                'creation': '',
+                'year': '',
                 'first_name': 'Johann Wolfgang',
                 'last_name': 'von Goethe',
                 'lemma': 'Mayfest (Johann Wolfgang von Goethe)',
-                'publish': '',
                 'sortkey': 'Mayfest (Johann Wolfgang von Goethe)',
                 'sortkey_auth': 'Goethe, Johann Wolfgang von',
                 'title': '',
@@ -136,11 +136,10 @@ class TestPoemList(TestCloudBase):
         compare(
             {
                 'author': 'Johann Wolfgang von Goethe',
-                'creation': '',
+                'year': '',
                 'first_name': 'Johann Wolfgang',
                 'last_name': 'von Goethe',
                 'lemma': 'Mayfest (Johann Wolfgang von Goethe)',
-                'publish': '',
                 'sortkey': 'Mayfest',
                 'sortkey_auth': 'Goethe, Johann Wolfgang von',
                 'first_line': 'Wie herrlich leuchtet',
