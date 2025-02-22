@@ -53,9 +53,9 @@ class TestPoemList(TestCloudBase):
         )
 
     def test_get_print_title(self):
-        compare("lemma", self.poem_list.get_print_title({"title": "lemma", "lemma": "lemma"}))
-        compare("lemma|title", self.poem_list.get_print_title({"title": "title", "lemma": "lemma"}))
-        compare("lemma|lemma NO TITLE", self.poem_list.get_print_title({"title": "", "lemma": "lemma"}))
+        compare("[[lemma]]", self.poem_list.get_print_title({"title": "lemma", "lemma": "lemma"}))
+        compare("[[lemma|title]]", self.poem_list.get_print_title({"title": "title", "lemma": "lemma"}))
+        compare("data-sort-value=\"lemma #Das\"|[[lemma|Das lemma]]", self.poem_list.get_print_title({"title": "Das lemma", "lemma": "lemma", "sortkey": "lemma #Das"}))
 
     def test_get_print_author(self):
         given = {"author": "Karl Marx"}

@@ -97,8 +97,9 @@ class PoemList(ListBot):
                 item_dict["no_lemma_auth"] = "yes"
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
+        item_dict["year"] = self.get_year(item_dict)
         for item in ["title", "author", "first_name", "last_name",
-                     "sortkey_auth", "creation", "publish", "sortkey", "first_line"]:
+                     "sortkey_auth", "year", "sortkey", "first_line"]:
             if item not in item_dict:
                 item_dict[item] = ""
 
@@ -139,9 +140,9 @@ class PoemList(ListBot):
         for poem_dict in item_list:
             string_list.append("|-")
             string_list.append(f"|{self.get_print_author(poem_dict)}")
-            string_list.append(f"|[[{self.get_print_title(poem_dict)}]]")
+            string_list.append(f"|{self.get_print_title(poem_dict)}")
             string_list.append(f"|{poem_dict['first_line']}")
-            string_list.append(f"|{self.get_print_year(poem_dict)}")
+            string_list.append(f"|{poem_dict['year']}")
         string_list.append("|}")
         string_list.append('')
         string_list.append("== Fußnoten ==")
@@ -153,11 +154,16 @@ class PoemList(ListBot):
 
     @staticmethod
     def get_print_title(poem_dict: dict[str, str]) -> str:
-        if has_value("title", poem_dict):
-            if poem_dict["title"] != poem_dict["lemma"]:
-                return f"{poem_dict['lemma']}|{poem_dict['title']}"
-            return poem_dict['lemma']
-        return f"{poem_dict['lemma']}|{poem_dict['lemma']} NO TITLE"
+        title = poem_dict["lemma"]
+        link = f"{title}"
+        if has_value("title", poem_dict) and poem_dict["title"] != poem_dict["lemma"]:
+            title = poem_dict['title']
+            link = f"{poem_dict['lemma']}|{title}"
+        sortkey = ""
+        if has_value("sortkey", poem_dict) and poem_dict['sortkey'] != title:
+            sortkey = f"data-sort-value=\"{poem_dict['sortkey']}\"|"
+
+        return f"{sortkey}[[{link}]]"
 
     @staticmethod
     def get_print_author(poem_dict: dict[str, str]) -> str:
@@ -178,14 +184,6 @@ class PoemList(ListBot):
         if has_value("author", poem_dict) and show_author != poem_dict["author"]:
             return f"[[{poem_dict['author']}|{show_author}]]"
         return f"[[{poem_dict['author']}]]"
-
-    @staticmethod
-    def get_print_year(poem_dict: dict[str, str]) -> str:
-        if has_value("creation", poem_dict):
-            return poem_dict["creation"]
-        if has_value("publish", poem_dict):
-            return f"{poem_dict['publish']} (veröff.)"
-        return ""
 
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
     ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
@@ -229,6 +227,13 @@ class PoemList(ListBot):
         if match := self.LINK_REGEX.search(author):
             return match.group(1)
         return author
+
+    def get_year(self, item_dict: dict[str, str]) -> str:
+        year = ""
+        if has_value("creation", item_dict):
+            year =  item_dict["creation"]
+        elif has_value("publish", item_dict):
+            year =  f"{item_dict['publish']} (veröff.)"
 
 
 if __name__ == "__main__":
