@@ -33,6 +33,8 @@ class PoemList(ListBot):
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Gedicht")
+        searcher.add_negative_category("Unkorrigiert")
+        searcher.add_negative_category("Unvollständig")
         searcher.set_search_depth(3)
         self.logger.info(f"Searching for lemmas with {searcher}")
         return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)
