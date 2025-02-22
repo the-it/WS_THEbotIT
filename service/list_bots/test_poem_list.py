@@ -169,13 +169,13 @@ class TestPoemList(TestCloudBase):
 
     #@skip("only for testing")
     def test_get_first_line_develop(self):
-        text = """<poem>
-{{Center|''Der Aufpasser.''}}
-Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
-{{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
-</poem>
-{{Right|''Schiller.''}}"""
-        compare("Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;", self.poem_list.get_first_line(text))
+        text = """<poem>'''Aus dem Stammbuche eines Freundes.'''
+
+'''U'''nd wird dir einst die Nachricht zugesandt,
+Daß zu den Vätern ich versammelt wäre,
+So trink und sprich: „Ich hab’ ihn auch gekannt“,
+Mach hier ein Kreuz – und gib mir eine Zähre.</poem>"""
+        compare("'''U'''nd wird dir einst die Nachricht zugesandt,", self.poem_list.get_first_line(text))
 
     @skip("only for testing")
     @real_wiki_test

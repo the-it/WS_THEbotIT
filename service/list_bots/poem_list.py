@@ -215,7 +215,7 @@ class PoemList(ListBot):
             if self.HEADLINE_REGEX.search(lines):
                 found = False
                 for idx, line in enumerate(lines_list):
-                    if self.HEADLINE_REGEX.search(line):
+                    if self.HEADLINE_REGEX.search(line) and not found:
                         found = True
                         continue
                     if found:

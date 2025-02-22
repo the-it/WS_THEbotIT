@@ -247,3 +247,13 @@ italic_headline:
     </poem>
     {{Right|''Schiller.''}}
   expect: Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+more_bold_letters:
+  given: |
+    <poem>'''Aus dem Stammbuche eines Freundes.'''
+
+    '''U'''nd wird dir einst die Nachricht zugesandt,
+    Daß zu den Vätern ich versammelt wäre,
+    So trink und sprich: „Ich hab’ ihn auch gekannt“,
+    Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
+  expect: |
+    '''U'''nd wird dir einst die Nachricht zugesandt,
