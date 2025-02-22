@@ -258,7 +258,8 @@ class PoemList(ListBot):
         for poem in self.data.values():
             if poem["first_line"]:
                 has_first_line += 1
-        self.logger.info(f"{(has_first_line/len(self.data))*100:.2f}% of poems have a first line.")
+        self.logger.info(f"{(has_first_line / len(self.data)) * 100:.2f}% of poems have a first line.")
+
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
