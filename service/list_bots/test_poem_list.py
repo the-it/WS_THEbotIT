@@ -169,26 +169,13 @@ class TestPoemList(TestCloudBase):
 
     #@skip("only for testing")
     def test_get_first_line_develop(self):
-        text = """{{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
-
-
-{{center|'''Abendlandschaft.'''}}
-
-
-<poem>
-Der Hirt bläst seine Weise,
-Von fern ein Schuß noch fällt,
-Die Wälder rauschen leise
-Und Ströme tief im Feld.
-
-Nur hinter jenem Hügel
-Noch spielt der Abendschein –
-O hätt’ ich, hätt’ ich Flügel,
-Zu fliegen da hinein!
+        text = """<poem>
+{{Center|''Der Aufpasser.''}}
+Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+{{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
 </poem>
-{{AlR|'''J. v. Eichendorff.'''}}
-        """
-        compare("Der Hirt bläst seine Weise,", self.poem_list.get_first_line(text))
+{{Right|''Schiller.''}}"""
+        compare("Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;", self.poem_list.get_first_line(text))
 
     @skip("only for testing")
     @real_wiki_test

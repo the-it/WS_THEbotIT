@@ -237,5 +237,13 @@ title_not_in_poem_tags:
     Zu fliegen da hinein!
     </poem>
     {{AlR|'''J. v. Eichendorff.'''}}
-  expect: |
-    Der Hirt bläst seine Weise,
+  expect: Der Hirt bläst seine Weise,
+italic_headline:
+  given: |
+    <poem>
+    {{Center|''Der Aufpasser.''}}
+    Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+    {{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
+    </poem>
+    {{Right|''Schiller.''}}
+  expect: Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;

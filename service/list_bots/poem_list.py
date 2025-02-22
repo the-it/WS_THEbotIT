@@ -195,7 +195,7 @@ class PoemList(ListBot):
 
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
     ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
-    HEADLINE_REGEX = re.compile(r"'''.+?'''")
+    HEADLINE_REGEX = re.compile(r"'''?.+?'''?")
     FIRST_LINE_REGEX = re.compile(r"<!-- ?first_line ?-->")
 
     def get_first_line(self, text):
