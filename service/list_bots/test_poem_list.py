@@ -53,9 +53,9 @@ class TestPoemList(TestCloudBase):
         )
 
     def test_get_print_title(self):
-        compare("lemma", self.poem_list.get_print_title({"title": "lemma", "lemma": "lemma"}))
-        compare("lemma|title", self.poem_list.get_print_title({"title": "title", "lemma": "lemma"}))
-        compare("lemma|lemma NO TITLE", self.poem_list.get_print_title({"title": "", "lemma": "lemma"}))
+        compare("[[lemma]]", self.poem_list.get_print_title({"title": "lemma", "lemma": "lemma"}))
+        compare("[[lemma|title]]", self.poem_list.get_print_title({"title": "title", "lemma": "lemma"}))
+        compare("data-sort-value=\"lemma #Das\"|[[lemma|Das lemma]]", self.poem_list.get_print_title({"title": "Das lemma", "lemma": "lemma", "sortkey": "lemma #Das"}))
 
     def test_get_print_author(self):
         given = {"author": "Karl Marx"}
@@ -73,10 +73,13 @@ class TestPoemList(TestCloudBase):
         given = {"author": "Someone", "sortkey_auth": "Someone", "no_lemma_auth": "yes"}
         compare("Someone", self.poem_list.get_print_author(given))
 
-    def test_get_print_year(self):
-        compare("1920", self.poem_list.get_print_year({"creation": "1920", "publish": "1930"}))
-        compare("1930 (veröff.)", self.poem_list.get_print_year({"creation": "", "publish": "1930"}))
-        compare("", self.poem_list.get_print_year({"creation": "", "publish": ""}))
+    def test_get_year(self):
+        compare("1920", self.poem_list.get_year({"creation": "1920", "publish": "1930"}))
+        compare("1930", self.poem_list.get_year({"creation": "", "publish": "1930"}))
+        compare("", self.poem_list.get_year({"creation": "", "publish": ""}))
+        compare("1234", self.poem_list.get_year({"creation": "[1234]"}))
+        compare("data-sort-value=\"1919-12-12\"|12. Dezember 1919", self.poem_list.get_year({"creation": "12. Dezember 1919"}))
+        compare("off", self.poem_list.get_year({"creation": "off"}))
 
     @real_wiki_test
     def test_integration(self):
@@ -93,12 +96,11 @@ class TestPoemList(TestCloudBase):
                 {":An_die_Freude_(Schiller)":
                     {
                         'author': 'Friedrich Schiller',
-                        'creation': 'November 1785',
+                        'year': 'data-sort-value="1785-11-00"|November 1785',
                         'first_name': 'Friedrich',
                         'last_name': 'Schiller',
                         'lemma': 'An die Freude (Schiller)',
                         'sortkey': 'An die Freude.',
-                        'publish': '1786',
                         'sortkey_auth': 'Schiller, Friedrich',
                         'title': 'An die Freude.',
                         'first_line': 'Freude, schöner Götterfunken,'
@@ -116,11 +118,10 @@ class TestPoemList(TestCloudBase):
         compare(
             {
                 'author': 'Johann Wolfgang von Goethe',
-                'creation': '',
+                'year': '',
                 'first_name': 'Johann Wolfgang',
                 'last_name': 'von Goethe',
                 'lemma': 'Mayfest (Johann Wolfgang von Goethe)',
-                'publish': '',
                 'sortkey': 'Mayfest (Johann Wolfgang von Goethe)',
                 'sortkey_auth': 'Goethe, Johann Wolfgang von',
                 'title': '',
@@ -136,11 +137,10 @@ class TestPoemList(TestCloudBase):
         compare(
             {
                 'author': 'Johann Wolfgang von Goethe',
-                'creation': '',
+                'year': '',
                 'first_name': 'Johann Wolfgang',
                 'last_name': 'von Goethe',
                 'lemma': 'Mayfest (Johann Wolfgang von Goethe)',
-                'publish': '',
                 'sortkey': 'Mayfest',
                 'sortkey_auth': 'Goethe, Johann Wolfgang von',
                 'first_line': 'Wie herrlich leuchtet',
@@ -168,68 +168,15 @@ class TestPoemList(TestCloudBase):
     def test_get_first_line(self, given, expect):
         compare(expect, self.poem_list.get_first_line(given))
 
-    @skip("only for testing")
+    #@skip("only for testing")
     def test_get_first_line_develop(self):
-        text = """
-{{LineCenterSize|140|22|'''Vorwort'''}}
+        text = """<poem>'''Aus dem Stammbuche eines Freundes.'''
 
-
-
-<center>
-{|
-|colspan="3"|
-|-
-|{{idt}}
-|
-<poem>
-Ach, was muß man oft von bösen<!-- first_line -->
-Kindern hören oder lesen!!
-Wie zum Beispiel hier von diesen,
-Welche Max und Moritz hießen;
-</poem>
-|
-|-
-|colspan="3"|
-[[Bild:Max und Moritz (Busch) 001.png|300px|center]]
-|-
-|
-|align="left"|
-<poem>
-{{Zeile|5}}Die, anstatt durch weise Lehren
-Sich zum Guten zu bekehren,
-Oftmals noch darüber lachten
-Und sich heimlich lustig machten. –
-– Ja, zur Übeltätigkeit,
-{{Zeile|10}}Ja, dazu ist man bereit! –
-– Menschen necken, Tiere quälen,
-Äpfel, Birnen, Zwetschen stehlen – –
-Das ist freilich angenehmer
-Und dazu auch viel bequemer,
-{{Zeile|15}}Als in Kirche oder Schule
-Festzusitzen auf dem Stuhle. –
-– Aber wehe, wehe, wehe!
-Wenn ich, auf das Ende sehe!! –
-– Ach, das war ein schlimmes Ding,
-{{Zeile|20}}Wie es Max und Moritz ging.
-– Drum ist hier, was sie getrieben,
-Abgemalt und aufgeschrieben.
-</poem>
-|}
-</center>
-
-== Inhalt ==
-* '''[[Max und Moritz/Erster Streich|Erster Streich]]'''
-* '''[[Max und Moritz/Zweiter Streich|Zweiter Streich]]'''
-* '''[[Max und Moritz/Dritter Streich|Dritter Streich]]'''
-* '''[[Max und Moritz/Vierter Streich|Vierter Streich]]'''
-* '''[[Max und Moritz/Fünfter Streich|Fünfter Streich]]'''
-* '''[[Max und Moritz/Sechster Streich|Sechster Streich]]'''
-* '''[[Max und Moritz/Letzter Streich|Letzter Streich]]'''
-
-[[Kategorie:Kinderlyrik]]
-[[Kategorie:Neuhochdeutsch]]
-        """
-        compare("Ach, was muß man oft von bösen<!-- first_line -->", self.poem_list.get_first_line(text))
+'''U'''nd wird dir einst die Nachricht zugesandt,
+Daß zu den Vätern ich versammelt wäre,
+So trink und sprich: „Ich hab’ ihn auch gekannt“,
+Mach hier ein Kreuz – und gib mir eine Zähre.</poem>"""
+        compare("'''U'''nd wird dir einst die Nachricht zugesandt,", self.poem_list.get_first_line(text))
 
     @skip("only for testing")
     @real_wiki_test

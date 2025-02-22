@@ -168,5 +168,92 @@ small_caps_zeile:
     </poem>
 
     [[Kategorie:Theodor Fontane]]
+  expect: "{{idt}}Der König Hakon Borkenbart"
+no_poem_tags:
+  given: |
+    |ORIGINALSUBTITEL=
+    |ORIGINALHERKUNFT=
+    |BILD=
+    |QUELLE={{Bielefeld|1660345}}
+    |KURZBESCHREIBUNG=
+    |SONSTIGES=
+    |WIKIPEDIA=
+    |VORIGER=Räte-Marseillaise
+    |NÄCHSTER=Der Gefangene (Mühsam)
+    |BEARBEITUNGSSTAND=fertig
+    }}
+
+    :{{Seite|75}} '''1919'''
+    :<span style="font-size:90%">Dem Andenken Gustav Landauers</span>
+    ::Mai 1919
+
+    :Die das Volk bisher geleitet,
+    :folgend dem gewohnten Lichte,
+    :waren nicht drauf vorbereitet:
+    :es begibt sich Weltgeschichte.
+    :{{Zeile|5}}Wild schlägt der Empörung Welle
+    :an des Staates morsche Fugen.
+    :Krachend bersten die Gestelle,
+    :die die alte Ordnung trugen.
+    :{{idt}}Ja, ja, ihr Herrn, so geht's,
+    :{{Zeile|10}}{{idt}}hört man die Demokraten.
+    :{{idt}}Wir sagten es ja stets:
+    :{{idt}}es kann nicht wohl geraten,
+    :{{idt}}wenn man nach eignem Willen tut
+    :{{idt}}und fragt nicht das Parteistatut.
+
+    :{{Zeile|15}}Fürsten gleiten von den Thronen,
+    :Völker lösen ihre Bande,
+    :und es reiben sich Millionen
+    :aus den Augen Schmerz und Schande.
+    :Sie erwachen und begreifen
+    :{{Zeile|20}}Gegenwart und Zukunft — beides,
+    :und sie sehn Befreiung reifen
+    :aus den Wurzeln ihres Leides.
+    :{{idt}}Halt, liebe Leute, halt!
+    :{{idt}}Vertraut bewährten Führern.
+    :{{Zeile|25}}{{idt}}Sonst kommt ihr in Gewalt
+    :{{idt}}von skrupellosen Schürern.
+    :{{idt}}Folgt uns, so hilft euch gern der Staat,
+    :{{idt}}wie er euch stets geholfen hat.
+  expect: ":Die das Volk bisher geleitet,"
+title_not_in_poem_tags:
+  given: |
+    {{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
+
+
+    {{center|'''Abendlandschaft.'''}}
+
+
+    <poem>
+    Der Hirt bläst seine Weise,
+    Von fern ein Schuß noch fällt,
+    Die Wälder rauschen leise
+    Und Ströme tief im Feld.
+
+    Nur hinter jenem Hügel
+    Noch spielt der Abendschein –
+    O hätt’ ich, hätt’ ich Flügel,
+    Zu fliegen da hinein!
+    </poem>
+    {{AlR|'''J. v. Eichendorff.'''}}
+  expect: Der Hirt bläst seine Weise,
+italic_headline:
+  given: |
+    <poem>
+    {{Center|''Der Aufpasser.''}}
+    Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+    {{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
+    </poem>
+    {{Right|''Schiller.''}}
+  expect: Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+more_bold_letters:
+  given: |
+    <poem>'''Aus dem Stammbuche eines Freundes.'''
+
+    '''U'''nd wird dir einst die Nachricht zugesandt,
+    Daß zu den Vätern ich versammelt wäre,
+    So trink und sprich: „Ich hab’ ihn auch gekannt“,
+    Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
   expect: |
-    {{idt}}Der König Hakon Borkenbart
+    '''U'''nd wird dir einst die Nachricht zugesandt,

@@ -1,4 +1,5 @@
 import re
+from contextlib import suppress
 from datetime import timedelta, datetime
 from typing import Tuple
 
@@ -8,6 +9,7 @@ from pywikibot.exceptions import InvalidTitleError
 from service.list_bots._base import is_empty_value, has_value, get_page_infos
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
+from tools.date_conversion import DateConversion
 from tools.petscan import PetScan
 from tools.template_expansion import TemplateExpansion
 
@@ -24,13 +26,15 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 15, 23)
-        self.timeout = timedelta(hours=8)
+        self.new_data_model = datetime(2025, 2, 22, 23)
+        self.timeout = timedelta(minutes=8)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Gedicht")
+        searcher.add_negative_category("Unkorrigiert")
+        searcher.add_negative_category("Unvollständig")
         searcher.set_search_depth(3)
         self.logger.info(f"Searching for lemmas with {searcher}")
         return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)
@@ -97,8 +101,13 @@ class PoemList(ListBot):
                 item_dict["no_lemma_auth"] = "yes"
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
+        item_dict["year"] = self.get_year(item_dict)
+        with suppress(KeyError):
+            item_dict.pop("creation")
+        with suppress(KeyError):
+            item_dict.pop("publish")
         for item in ["title", "author", "first_name", "last_name",
-                     "sortkey_auth", "creation", "publish", "sortkey", "first_line"]:
+                     "sortkey_auth", "year", "sortkey", "first_line"]:
             if item not in item_dict:
                 item_dict[item] = ""
 
@@ -139,9 +148,9 @@ class PoemList(ListBot):
         for poem_dict in item_list:
             string_list.append("|-")
             string_list.append(f"|{self.get_print_author(poem_dict)}")
-            string_list.append(f"|[[{self.get_print_title(poem_dict)}]]")
+            string_list.append(f"|{self.get_print_title(poem_dict)}")
             string_list.append(f"|{poem_dict['first_line']}")
-            string_list.append(f"|{self.get_print_year(poem_dict)}")
+            string_list.append(f"|{poem_dict['year']}")
         string_list.append("|}")
         string_list.append('')
         string_list.append("== Fußnoten ==")
@@ -153,11 +162,16 @@ class PoemList(ListBot):
 
     @staticmethod
     def get_print_title(poem_dict: dict[str, str]) -> str:
-        if has_value("title", poem_dict):
-            if poem_dict["title"] != poem_dict["lemma"]:
-                return f"{poem_dict['lemma']}|{poem_dict['title']}"
-            return poem_dict['lemma']
-        return f"{poem_dict['lemma']}|{poem_dict['lemma']} NO TITLE"
+        title = poem_dict["lemma"]
+        link = f"{title}"
+        if has_value("title", poem_dict) and poem_dict["title"] != poem_dict["lemma"]:
+            title = poem_dict['title']
+            link = f"{poem_dict['lemma']}|{title}"
+        sortkey = ""
+        if has_value("sortkey", poem_dict) and poem_dict['sortkey'] != title:
+            sortkey = f"data-sort-value=\"{poem_dict['sortkey']}\"|"
+
+        return f"{sortkey}[[{link}]]"
 
     @staticmethod
     def get_print_author(poem_dict: dict[str, str]) -> str:
@@ -179,40 +193,35 @@ class PoemList(ListBot):
             return f"[[{poem_dict['author']}|{show_author}]]"
         return f"[[{poem_dict['author']}]]"
 
-    @staticmethod
-    def get_print_year(poem_dict: dict[str, str]) -> str:
-        if has_value("creation", poem_dict):
-            return poem_dict["creation"]
-        if has_value("publish", poem_dict):
-            return f"{poem_dict['publish']} (veröff.)"
-        return ""
-
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
     ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
-    HEADLINE_REGEX = re.compile(r"'''.+?'''")
+    HEADLINE_REGEX = re.compile(r"'''?.+?'''?")
     FIRST_LINE_REGEX = re.compile(r"<!-- ?first_line ?-->")
 
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
-        if match := self.POEM_REGEX.search(text):
-            lines: str = match.group(1)
-            lines_list = self._split_lines(lines)
-            if self.ZEILE_REGEX.search(lines):
-                for idx, line in enumerate(lines_list):
-                    if self.ZEILE_REGEX.search(line):
-                        return lines_list[idx - 4]
-            elif self.HEADLINE_REGEX.search(lines):
-                found = False
-                for idx, line in enumerate(lines_list):
-                    if self.HEADLINE_REGEX.search(line):
-                        found = True
-                        continue
-                    if found:
-                        return line
         if self.FIRST_LINE_REGEX.search(text):
             for line in self._split_lines(text):
                 if self.FIRST_LINE_REGEX.search(line):
                     return line
+        lines_list = self._split_lines(text)
+        if self.ZEILE_REGEX.search(text):
+            for idx, line in enumerate(lines_list):
+                if self.ZEILE_REGEX.search(line):
+                    return lines_list[idx - 4]
+        if match := self.POEM_REGEX.search(text):
+            lines: str = match.group(1)
+            lines_list = self._split_lines(lines)
+            if self.HEADLINE_REGEX.search(lines):
+                found = False
+                for idx, line in enumerate(lines_list):
+                    if self.HEADLINE_REGEX.search(line) and not found:
+                        found = True
+                        continue
+                    if found:
+                        return line
+            else:
+                return lines_list[0]
         return ""
 
     @staticmethod
@@ -229,6 +238,27 @@ class PoemList(ListBot):
         if match := self.LINK_REGEX.search(author):
             return match.group(1)
         return author
+
+    YEAR_REGEX = re.compile(r"^\d{4}$")
+
+    def get_year(self, item_dict: dict[str, str]) -> str:
+        year = ""
+        if has_value("creation", item_dict):
+            year = item_dict["creation"]
+        elif has_value("publish", item_dict):
+            year = item_dict['publish']
+        year = year.strip("[]")
+        if year and not self.YEAR_REGEX.search(year):
+            with suppress(ValueError):
+                year = f"data-sort-value=\"{DateConversion(year)}\"|{year}"
+        return year
+
+    def post_infos(self):
+        has_first_line = 0
+        for poem in self.data.values():
+            if poem["first_line"]:
+                has_first_line += 1
+        self.logger.info(f"{(has_first_line / len(self.data)) * 100:.2f}% of poems have a first line.")
 
 
 if __name__ == "__main__":
