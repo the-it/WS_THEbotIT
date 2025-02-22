@@ -26,8 +26,8 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 15, 23)
-        self.timeout = timedelta(hours=8)
+        self.new_data_model = datetime(2025, 2, 22, 23)
+        self.timeout = timedelta(minutes=8)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
@@ -249,9 +249,16 @@ class PoemList(ListBot):
             year = item_dict['publish']
         year = year.strip("[]")
         if year and not self.YEAR_REGEX.search(year):
-            year = f"data-sort-value=\"{DateConversion(year)}\"|{year}"
+            with suppress(ValueError):
+                year = f"data-sort-value=\"{DateConversion(year)}\"|{year}"
         return year
 
+    def post_infos(self):
+        has_first_line = 0
+        for poem in self.data.values():
+            if poem["first_line"]:
+                has_first_line += 1
+        self.logger.info(f"{(has_first_line/len(self.data))*100:.2f}% of poems have a first line.")
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")

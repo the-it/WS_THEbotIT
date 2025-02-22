@@ -42,6 +42,8 @@ class ListBot(CloudBot):
             author_list_page.save("Die Liste wurde auf den aktuellen Stand gebracht.", bot=True)
         else:
             self.logger.info("Heute gab es keine Änderungen, daher wird die Seite nicht überschrieben.")
+        self.logger.info("Post Infos.")
+        self.post_infos()
         return True
 
     def get_page_infos(self, page) -> dict[str, str]:
@@ -82,4 +84,7 @@ class ListBot(CloudBot):
 
     @abstractmethod
     def get_lemma_list(self) -> Tuple[list[str], int]:
+        pass
+
+    def post_infos(self):
         pass

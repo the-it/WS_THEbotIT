@@ -79,6 +79,7 @@ class TestPoemList(TestCloudBase):
         compare("", self.poem_list.get_year({"creation": "", "publish": ""}))
         compare("1234", self.poem_list.get_year({"creation": "[1234]"}))
         compare("data-sort-value=\"1919-12-12\"|12. Dezember 1919", self.poem_list.get_year({"creation": "12. Dezember 1919"}))
+        compare("off", self.poem_list.get_year({"creation": "off"}))
 
     @real_wiki_test
     def test_integration(self):
