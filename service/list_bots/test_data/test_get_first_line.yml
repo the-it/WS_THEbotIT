@@ -255,5 +255,82 @@ more_bold_letters:
     Daß zu den Vätern ich versammelt wäre,
     So trink und sprich: „Ich hab’ ihn auch gekannt“,
     Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
-  expect: |
+  expect: |-
     '''U'''nd wird dir einst die Nachricht zugesandt,
+bug_dont_pick_middle_line:
+  given: |
+    {{LineCenterSize|120|20|'''Der Treiber.'''}}
+
+    <div align="center">(Oberbayrisch.)</div>
+
+
+    [[Datei:Fliegende Blätter 2 078 b1.png|400px|center]]
+
+
+    <poem>Der Forstner sagt: Hast du nix g’segn
+    {{idt}}Beim Durchgeh’ in dem Bogn?
+
+    Der Treiber sagt: San Thier’ und Hirsch
+    {{idt}}Leicht ''fufzgi'' füra ’zogn.
+
+    „Geh weiter Narr, was denkst dir denn?“
+
+    {{idt}}„„Was denk’ i’, i’ glaabs fest,
+    {{idt}}„„Und wann i’ ebbas handln laß’
+    {{idt}}„„San’s fünfazwanzgi g’west.““
+
+    „’Ko’ aa’ nit sey’, da hat's dir ’traamt!“
+
+    {{idt}}„„Herr Forstner, g‘irrt is glei’,
+    {{idt}}„„Was ''rauschn'' aber hon i’ g’hört,
+    {{idt}}„„Scho’ g’wiß, da bleibt´s dabei.“</poem>
+
+
+    <div align="right">[[Franz von Kobell|Fr. .v. Kobell.]]</div>
+  expect: |-
+    Der Forstner sagt: Hast du nix g’segn
+bug_dont_add_poem_tag:
+  given: |
+    {{LineCenterSize|120|20|'''Schauderhafte und gräuliche Morithat,'''}}
+
+    <div align="center">welche sich den 5. November 1835 zwischen Pfingsten und dem Klinkerthore zu Augsburg wirklich zugetragen hat.</div>
+
+
+    {{Linie|10|center}}
+
+
+    <poem>O kommt ihr Leute all’ herbei,
+    Vernehmt die Morithaterei,
+    Wie sich ein Mägdlein, ganz scharmant,
+    Bedeckt mit Grausamkeit und Schand;
+    {{Zeile|5}}Ein’ Jed’ nehm ein Exemplum dran,
+    Studir’ es wohl und wend’ es an.
+
+    Es war einmal ein Schwalangscheer,
+    Der litt an großem Herzenweh;
+    Ein Mägdlein liebt er lange schon,
+    {{Zeile|10}}Allein sie wußte nichts davon;
+    Der Schwalangscheer litt fürchterlicht,
+    Das ist eine traurige Geschicht.
+
+    Doch einstens an dem Klinkerthor,
+    Als sie ging aus der Stadt hervor,
+    {{Zeile|15}}Macht er vor ihr sein Positur,
+    Und spricht: o Schönste der Natur!
+    Wirst Du nicht bald heirathen mich,
+    Verschieß’ ich mich elendiglich.
+
+
+    [[Datei:Fliegende Blätter 2 078 b3.png|400px|center]]
+
+
+    Ei schieße Du nur immer zu,
+    {{Zeile|20}}Das ist mir ganz und gar <tt>partout,</tt>
+    Ich lieb Dich nicht, ich mag Dich nicht,
+    Ich heirath’ nicht, bleib lediglicht,
+    Denn mich gelüstets gar nicht sehr,
+    Zu heißen Madam Schwalangscheer.</poem>
+
+    {{PRZU}}
+  expect: |-
+    O kommt ihr Leute all’ herbei,
