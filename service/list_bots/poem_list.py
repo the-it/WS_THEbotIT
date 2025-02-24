@@ -196,16 +196,15 @@ class PoemList(ListBot):
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
     ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
     HEADLINE_REGEX = re.compile(r"'''?.+?'''?")
-    FIRST_LINE_REGEX = re.compile(r"<!-- ?first_line ?-->")
-    CLEAN_POEM_REGEX = re.compile(r"<poem>")
+    FIRST_LINE_REGEX = re.compile(r"<!-- ?(?:first_line|[eE]rste ?[zZ]eile) ?-->")
 
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
+        lines_list = self._split_lines(text)
         if self.FIRST_LINE_REGEX.search(text):
-            for line in self._split_lines(text):
+            for line in lines_list:
                 if self.FIRST_LINE_REGEX.search(line):
                     return self._clean_first_line(line)
-        lines_list = self._split_lines(text)
         if self.ZEILE_REGEX.search(text):
             for idx, line in enumerate(lines_list):
                 if self.ZEILE_REGEX.search(line):
@@ -226,9 +225,14 @@ class PoemList(ListBot):
             return self._clean_first_line(lines_list[0])
         return ""
 
+    CLEAN_POEM_REGEX = re.compile(r"<poem>")
+    CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite\|[^\}]*?\}\}")
+    CLEAN_IDT = re.compile(r"^\{\{idt2?\}\}")
+
     def _clean_first_line(self, line: str) -> str:
-        line = self.CLEAN_POEM_REGEX.sub("", line)
-        return line
+        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT]:
+            line = regex.sub("", line)
+        return line.strip(" :")
 
     @staticmethod
     def _split_lines(lines: str) -> list[str]:
