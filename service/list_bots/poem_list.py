@@ -26,7 +26,7 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 22, 23)
+        self.new_data_model = datetime(2025, 2, 24, 23)
         self.timeout = timedelta(minutes=8)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
@@ -196,33 +196,43 @@ class PoemList(ListBot):
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
     ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
     HEADLINE_REGEX = re.compile(r"'''?.+?'''?")
-    FIRST_LINE_REGEX = re.compile(r"<!-- ?first_line ?-->")
+    FIRST_LINE_REGEX = re.compile(r"<!-- ?(?:first_line|[eE]rste ?[zZ]eile) ?-->")
 
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
-        if self.FIRST_LINE_REGEX.search(text):
-            for line in self._split_lines(text):
-                if self.FIRST_LINE_REGEX.search(line):
-                    return line
         lines_list = self._split_lines(text)
+        if self.FIRST_LINE_REGEX.search(text):
+            for line in lines_list:
+                if self.FIRST_LINE_REGEX.search(line):
+                    return self._clean_first_line(line)
         if self.ZEILE_REGEX.search(text):
             for idx, line in enumerate(lines_list):
                 if self.ZEILE_REGEX.search(line):
-                    return lines_list[idx - 4]
+                    return self._clean_first_line(lines_list[idx - 4])
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
             lines_list = self._split_lines(lines)
             if self.HEADLINE_REGEX.search(lines):
                 found = False
                 for idx, line in enumerate(lines_list):
+                    if idx > 3:
+                        break
                     if self.HEADLINE_REGEX.search(line) and not found:
                         found = True
                         continue
                     if found:
-                        return line
-            else:
-                return lines_list[0]
+                        return self._clean_first_line(line)
+            return self._clean_first_line(lines_list[0])
         return ""
+
+    CLEAN_POEM_REGEX = re.compile(r"<poem>")
+    CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite\|[^\}]*?\}\}")
+    CLEAN_IDT = re.compile(r"^\{\{idt2?\}\}")
+
+    def _clean_first_line(self, line: str) -> str:
+        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT]:
+            line = regex.sub("", line)
+        return line.strip(" :")
 
     @staticmethod
     def _split_lines(lines: str) -> list[str]:

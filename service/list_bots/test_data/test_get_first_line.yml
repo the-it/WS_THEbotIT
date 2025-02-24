@@ -168,7 +168,7 @@ small_caps_zeile:
     </poem>
 
     [[Kategorie:Theodor Fontane]]
-  expect: "{{idt}}Der König Hakon Borkenbart"
+  expect: "Der König Hakon Borkenbart"
 no_poem_tags:
   given: |
     |ORIGINALSUBTITEL=
@@ -216,7 +216,7 @@ no_poem_tags:
     :{{idt}}von skrupellosen Schürern.
     :{{idt}}Folgt uns, so hilft euch gern der Staat,
     :{{idt}}wie er euch stets geholfen hat.
-  expect: ":Die das Volk bisher geleitet,"
+  expect: "Die das Volk bisher geleitet,"
 title_not_in_poem_tags:
   given: |
     {{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
@@ -255,5 +255,209 @@ more_bold_letters:
     Daß zu den Vätern ich versammelt wäre,
     So trink und sprich: „Ich hab’ ihn auch gekannt“,
     Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
-  expect: |
+  expect: |-
     '''U'''nd wird dir einst die Nachricht zugesandt,
+bug_dont_pick_middle_line:
+  given: |
+    {{LineCenterSize|120|20|'''Der Treiber.'''}}
+
+    <div align="center">(Oberbayrisch.)</div>
+
+
+    [[Datei:Fliegende Blätter 2 078 b1.png|400px|center]]
+
+
+    <poem>Der Forstner sagt: Hast du nix g’segn
+    {{idt}}Beim Durchgeh’ in dem Bogn?
+
+    Der Treiber sagt: San Thier’ und Hirsch
+    {{idt}}Leicht ''fufzgi'' füra ’zogn.
+
+    „Geh weiter Narr, was denkst dir denn?“
+
+    {{idt}}„„Was denk’ i’, i’ glaabs fest,
+    {{idt}}„„Und wann i’ ebbas handln laß’
+    {{idt}}„„San’s fünfazwanzgi g’west.““
+
+    „’Ko’ aa’ nit sey’, da hat's dir ’traamt!“
+
+    {{idt}}„„Herr Forstner, g‘irrt is glei’,
+    {{idt}}„„Was ''rauschn'' aber hon i’ g’hört,
+    {{idt}}„„Scho’ g’wiß, da bleibt´s dabei.“</poem>
+
+
+    <div align="right">[[Franz von Kobell|Fr. .v. Kobell.]]</div>
+  expect: |-
+    Der Forstner sagt: Hast du nix g’segn
+bug_dont_add_poem_tag:
+  given: |
+    {{LineCenterSize|120|20|'''Schauderhafte und gräuliche Morithat,'''}}
+
+    <div align="center">welche sich den 5. November 1835 zwischen Pfingsten und dem Klinkerthore zu Augsburg wirklich zugetragen hat.</div>
+
+
+    {{Linie|10|center}}
+
+
+    <poem>O kommt ihr Leute all’ herbei,
+    Vernehmt die Morithaterei,
+    Wie sich ein Mägdlein, ganz scharmant,
+    Bedeckt mit Grausamkeit und Schand;
+    {{Zeile|5}}Ein’ Jed’ nehm ein Exemplum dran,
+    Studir’ es wohl und wend’ es an.
+
+    Es war einmal ein Schwalangscheer,
+    Der litt an großem Herzenweh;
+    Ein Mägdlein liebt er lange schon,
+    {{Zeile|10}}Allein sie wußte nichts davon;
+    Der Schwalangscheer litt fürchterlicht,
+    Das ist eine traurige Geschicht.
+
+    Doch einstens an dem Klinkerthor,
+    Als sie ging aus der Stadt hervor,
+    {{Zeile|15}}Macht er vor ihr sein Positur,
+    Und spricht: o Schönste der Natur!
+    Wirst Du nicht bald heirathen mich,
+    Verschieß’ ich mich elendiglich.
+
+
+    [[Datei:Fliegende Blätter 2 078 b3.png|400px|center]]
+
+
+    Ei schieße Du nur immer zu,
+    {{Zeile|20}}Das ist mir ganz und gar <tt>partout,</tt>
+    Ich lieb Dich nicht, ich mag Dich nicht,
+    Ich heirath’ nicht, bleib lediglicht,
+    Denn mich gelüstets gar nicht sehr,
+    Zu heißen Madam Schwalangscheer.</poem>
+
+    {{PRZU}}
+  expect: |-
+    O kommt ihr Leute all’ herbei,
+erste_zeile:
+  given: |
+    {{BRU|Die Gartenlaube (1895) b 485 1.jpg|center|550|||center}}
+    {{GLÜberschrift||140|1870.}}
+    {{Headline|115||Zur 25jährigen Erinnerung.}}
+    {{Headline|110||Von Ernst von Wildenbruch.}}
+
+    <poem>
+    '''I'''ch senke mein träumendes Haupt in die Nacht, <!-- erste Zeile -->
+    {{0}} In die lautlose Nacht der Vergangenheit –
+    Die Tiefe regt sich und es erwacht
+    {{0}} Die alte Zeit, die gestorbene Zeit.
+
+    Ich höre noch einmal den Tigerschrei,
+    {{0}} Mit dem sich Frankreich zum Sprung erhebt,
+    Die Raben krächzen zum Mahle herbei,
+    {{0}} Zum Leichenmahle, die Welt erbebt.
+
+    Ich höre den Ton, der die Welt durchzückt,
+    {{0}} Wie Deutschlands Volk auf die Füße springt,
+    Wie es dröhnend den Helm in die Locken drückt
+    {{0}} Und um die Lenden den Schwertgurt schlingt.
+
+    Die Hörner rufen, die Trommeln gehn,
+    {{0}} Die Rosse stampfen durch Korn und Sand,
+    Auf wallenden Fahnen geschrieben stehn
+    {{0}} Zwei heilige Worte – „Fürs Vaterland“.
+
+    Fürs Vaterland, dem der Zwietrachtswurm
+    {{0}} Die lähmende Tatze aufs Herz gelegt –
+    Meine Seele geht auf, vom Frühlingssturm
+    {{0}} Durchrauscht, der die Zwietracht hinweggefegt.
+
+    Mein Auge wird sehend, mein Auge sieht
+    {{0}} Noch einmal das, was da herrlich war,
+    Vor meinem Auge vorüberzieht,
+    {{0}} Wie stürmende Adler, Schar auf Schar.
+
+    An den Rhein, an den Rhein und hinüber den Rhein
+    {{0}} Mit schweigendem Groll in die kreischende Wut –
+    Kanonen brüllen, es sinken die Reihn –
+    {{0}} Rot schäumen die Bäche von rotem Blut.
+
+    Auf steigenden Rossen die Führer voran,
+    {{0}} Die Schwerter gezogen, voran ins Feld,
+    Ganz Deutschland dahinter, ein einziger Mann,
+    {{0}} Ein einziger Mann und ein einziger Held.
+
+    So zogst du hinaus für Heimat und Recht
+    {{0}} In den heiligen Streit, in den heiligen Tod,
+    Mit den Jünglingsherzen, du Männergeschlecht,
+    {{0}} Du Deutschlands siegendes Morgenrot!
+
+    So hast du geschlagen den schmetternden Schlag,
+    {{0}} Der den Feind zerbrach und uns baute das Reich,
+    O, du Deutschland, wie sahst du am herrlichen Tag
+    {{0}} Dem Drachentöter, dem Siegfried gleich!
+
+    Die Jahre wandeln, die Stunde fliegt,
+    {{0}} Geschlechter der Menschen kommen und gehn –
+    Wo einer von jenen begraben liegt
+    {{0}} Du Deutscher von heute, da bleibe stehn.
+
+    Da lüfte den Hut und führ’ an der Hand
+    {{0}} Deinen Sohn und heiße ihn beugen sich
+    Und sprich zu ihm: „Für dein Vaterland
+    {{0}} Ließ dieser sein Leben, er starb für dich.“</poem>
+
+    {{BRU|Die Gartenlaube (1895) b 485 2.jpg|center|550|||center}}
+  expect: |-
+    '''I'''ch senke mein träumendes Haupt in die Nacht, <!-- erste Zeile -->
+clean_seite:
+  given: |
+    |BILD=
+    |QUELLE={{Bielefeld|1660345}}
+    |KURZBESCHREIBUNG=
+    |SONSTIGES=
+    |WIKIPEDIA=
+    |VORIGER=Räte-Marseillaise
+    |NÄCHSTER=Der Gefangene (Mühsam)
+    |BEARBEITUNGSSTAND=fertig
+    }}
+
+    :{{Seite|75}} '''1919'''
+    :<span style="font-size:90%">Dem Andenken Gustav Landauers</span>
+    ::Mai 1919
+
+    :{{Seite|36}} Die das Volk bisher geleitet,
+    :folgend dem gewohnten Lichte,
+    :waren nicht drauf vorbereitet:
+    :es begibt sich Weltgeschichte.
+    :{{Zeile|5}}Wild schlägt der Empörung Welle
+    :an des Staates morsche Fugen.
+    :Krachend bersten die Gestelle,
+    :die die alte Ordnung trugen.
+    :{{idt}}Ja, ja, ihr Herrn, so geht's,
+    :{{Zeile|10}}{{idt}}hört man die Demokraten.
+  expect: |-
+    Die das Volk bisher geleitet,
+clean_idt:
+  given: |
+    '''A. Traeger.''' Den vielen Lesern und Leserinnen der Gartenlaube glauben wir durch die Nachricht, daß ''[[Albert Traeger]]’s'' Gedichte nunmehr gesammelt erschienen sind, eine angenehme Mittheilung zu machen. Durch seine Beiträge, namentlich durch die eben so sinnigen wie tief gefühlten Lieder: „Wenn Du noch eine Heimath hast – Das Mutterherz – Wie stirbt es schön sich in der Kindheit Tagen – Wenn Dich die Welt an’s Kreuz geschlagen etc. etc.“ hat sich Traeger rasch die Gunst der vielen tausend Leser unserer Zeitschrift gewonnen und die meisten dieser Lieder sind bereits mehrere Mal in Musik gesetzt. Die in eleganter Ausstattung erschienene Sammlung enthält noch viele schöne Gaben, die sich durch Tiefe des Gemüths und eine edle vollendete Form auszeichnen. Wir führen unter den vielen nur eins an:
+
+    <poem>
+    {{idt2}}Einst wirst Du schlummern.
+
+    Ist Nachts auch thränenfeucht Dein Pfühl,
+    Und heiß die ruhelosen Lider,
+    Einst wirst Du schlummern sanft und kühl,
+    Und keine Sorge weckt Dich wieder.
+
+    Vergehe nicht in Angst und Qual,
+    Es eilt die Stunde, Dich zu retten;
+    Vier Breter nur braucht’s dünn und schmal,
+    Ein müdes Menschenherz zu betten.
+
+    Und Du auch findest eine Hand,
+    Die Augen sanft Dir zuzudrücken,
+    Mit einer Blume, einem Band
+    Dir Deinen Sarg noch auszuschmücken.
+
+    Der Tod bringt Ruhe Deinem Harm,
+    Die Dir das Leben nie vergönnte;
+    Halt’ aus: es ist kein Mensch so arm,
+    Daß er nicht endlich sterben könnte.</poem>
+  expect: |-
+    Einst wirst Du schlummern.
