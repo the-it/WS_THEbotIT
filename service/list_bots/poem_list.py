@@ -26,8 +26,8 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 24, 23)
-        self.timeout = timedelta(minutes=8)
+        self.new_data_model = datetime(2025, 2, 25, 23)
+        self.timeout = timedelta(minutes=2)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
@@ -116,7 +116,7 @@ class PoemList(ListBot):
 
     def get_sortkey(self, item_dict: dict[str, str], text: str) -> str:
         if match := self.SORTIERUNG_REGEX.search(text):
-            return match.group(1)
+            return match.group(1).strip()
         alternative_sortkey = item_dict["lemma"]
         if has_value("title", item_dict):
             alternative_sortkey = item_dict["title"]

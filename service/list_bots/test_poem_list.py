@@ -168,7 +168,6 @@ class TestPoemList(TestCloudBase):
     def test_get_first_line(self, given, expect):
         compare(expect, self.poem_list.get_first_line(given))
 
-    #@skip("only for testing")
     def test_get_first_line_develop(self):
         text = """<poem>'''Aus dem Stammbuche eines Freundes.'''
 
@@ -201,6 +200,9 @@ Mach hier ein Kreuz – und gib mir eine Zähre.</poem>"""
         compare("Zahnfleischkranke #Der",
                 self.poem_list.get_sortkey({"lemma": "Die Zahnfleischkranke", "title": "Der Zahnfleischkranke"},
                                            "[[Kategorie:Joachim Ringelnatz]]"))
+        compare("Morithat #Schauderhafte und gräuliche",
+                self.poem_list.get_sortkey({"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
+                                           "{{SORTIERUNG: Morithat #Schauderhafte und gräuliche}}"))
 
     def test_get_page_info_gartenlaube(self):
         text = """{{GartenlaubenArtikel
