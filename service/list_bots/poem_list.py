@@ -201,28 +201,31 @@ class PoemList(ListBot):
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
         lines_list = self._split_lines(text)
+        # if a first line is annotated, this take precedent
         if self.FIRST_LINE_REGEX.search(text):
             for line in lines_list:
                 if self.FIRST_LINE_REGEX.search(line):
                     return self._clean_first_line(line)
+        # identifying the first line by searching for the Zeile annotation of the 5th line is the most reliable method
         if self.ZEILE_REGEX.search(text):
             for idx, line in enumerate(lines_list):
                 if self.ZEILE_REGEX.search(line):
                     return self._clean_first_line(lines_list[idx - 4])
-        if match := self.POEM_REGEX.search(text):
-            lines: str = match.group(1)
-            lines_list = self._split_lines(lines)
-            if self.HEADLINE_REGEX.search(lines):
-                found = False
-                for idx, line in enumerate(lines_list):
-                    if idx > 3:
-                        break
-                    if self.HEADLINE_REGEX.search(line) and not found:
-                        found = True
-                        continue
-                    if found:
-                        return self._clean_first_line(line)
-            return self._clean_first_line(lines_list[0])
+        # don't do this for this nights run ... let's see how many empty lines we will get
+        # if match := self.POEM_REGEX.search(text):
+        #     lines: str = match.group(1)
+        #     lines_list = self._split_lines(lines)
+        #     if self.HEADLINE_REGEX.search(lines):
+        #         found = False
+        #         for idx, line in enumerate(lines_list):
+        #             if idx > 3:
+        #                 break
+        #             if self.HEADLINE_REGEX.search(line) and not found:
+        #                 found = True
+        #                 continue
+        #             if found:
+        #                 return self._clean_first_line(line)
+        #     return self._clean_first_line(lines_list[0])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<poem>")
