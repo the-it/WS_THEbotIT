@@ -43,7 +43,7 @@ class CloudBot(ABC):
             self.data.assign_dict({})
             self.logger.warning("The last run wasn\'t successful. The data is thrown away.")
         elif self.data_outdated():
-            self.data.assign_dict({})
+            self.data.clean_data()
             self.logger.warning("The data is thrown away. It is out of date")
         else:
             self.data.load()

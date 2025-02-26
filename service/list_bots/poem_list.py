@@ -26,8 +26,8 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 24, 23)
-        self.timeout = timedelta(minutes=8)
+        self.new_data_model = datetime(2025, 2, 26, 23)
+        self.timeout = timedelta(minutes=2)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
         searcher = PetScan()
@@ -102,6 +102,8 @@ class PoemList(ListBot):
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
         item_dict["year"] = self.get_year(item_dict)
+        if has_value("title", item_dict):
+            item_dict["title"] = self.clean_lemma_link(item_dict["title"])
         with suppress(KeyError):
             item_dict.pop("creation")
         with suppress(KeyError):
@@ -111,12 +113,12 @@ class PoemList(ListBot):
             if item not in item_dict:
                 item_dict[item] = ""
 
-    SORTIERUNG_REGEX = re.compile(r"\{\{SORTIERUNG:(.*?)\}\}")
+    SORTIERUNG_REGEX = re.compile(r"\{\{(?:SORTIERUNG|DEFAULTSORT):(.*?)\}\}")
     ARTIKEL_REGEX = re.compile(r"(Das|Die|Der) (.*)$")
 
     def get_sortkey(self, item_dict: dict[str, str], text: str) -> str:
         if match := self.SORTIERUNG_REGEX.search(text):
-            return match.group(1)
+            return match.group(1).strip()
         alternative_sortkey = item_dict["lemma"]
         if has_value("title", item_dict):
             alternative_sortkey = item_dict["title"]
@@ -155,6 +157,7 @@ class PoemList(ListBot):
         string_list.append('')
         string_list.append("== Fußnoten ==")
         string_list.append("<references/>")
+        string_list.append("<references group=\"WS\"/>")
         string_list.append('')
         string_list.append("{{SORTIERUNG:Gedichte #Liste der}}")
         string_list.append("[[Kategorie:Listen]]")
@@ -201,37 +204,42 @@ class PoemList(ListBot):
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
         lines_list = self._split_lines(text)
+        # if a first line is annotated, this take precedent
         if self.FIRST_LINE_REGEX.search(text):
             for line in lines_list:
                 if self.FIRST_LINE_REGEX.search(line):
                     return self._clean_first_line(line)
+        # identifying the first line by searching for the Zeile annotation of the 5th line is the most reliable method
         if self.ZEILE_REGEX.search(text):
             for idx, line in enumerate(lines_list):
                 if self.ZEILE_REGEX.search(line):
                     return self._clean_first_line(lines_list[idx - 4])
-        if match := self.POEM_REGEX.search(text):
-            lines: str = match.group(1)
-            lines_list = self._split_lines(lines)
-            if self.HEADLINE_REGEX.search(lines):
-                found = False
-                for idx, line in enumerate(lines_list):
-                    if idx > 3:
-                        break
-                    if self.HEADLINE_REGEX.search(line) and not found:
-                        found = True
-                        continue
-                    if found:
-                        return self._clean_first_line(line)
-            return self._clean_first_line(lines_list[0])
+        # don't do this for this nights run ... let's see how many empty lines we will get
+        # if match := self.POEM_REGEX.search(text):
+        #     lines: str = match.group(1)
+        #     lines_list = self._split_lines(lines)
+        #     if self.HEADLINE_REGEX.search(lines):
+        #         found = False
+        #         for idx, line in enumerate(lines_list):
+        #             if idx > 3:
+        #                 break
+        #             if self.HEADLINE_REGEX.search(line) and not found:
+        #                 found = True
+        #                 continue
+        #             if found:
+        #                 return self._clean_first_line(line)
+        #     return self._clean_first_line(lines_list[0])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<poem>")
-    CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite\|[^\}]*?\}\}")
-    CLEAN_IDT = re.compile(r"^\{\{idt2?\}\}")
+    CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
+    CLEAN_IDT = re.compile(r"^\{\{idt2?[^\}]*?\}\}")
 
     def _clean_first_line(self, line: str) -> str:
         for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT]:
             line = regex.sub("", line)
+        if line == "}}":
+            return ""
         return line.strip(" :")
 
     @staticmethod
@@ -269,6 +277,13 @@ class PoemList(ListBot):
             if poem["first_line"]:
                 has_first_line += 1
         self.logger.info(f"{(has_first_line / len(self.data)) * 100:.2f}% of poems have a first line.")
+
+    TITLE_LINK_REGEX = re.compile(r"\[\[([^\]\|]*?)(?:\|.*?)?\]\]")
+
+    def clean_lemma_link(self, potential_link: str) -> str:
+        if match := self.TITLE_LINK_REGEX.search(potential_link):
+            return match.group(1)
+        return potential_link
 
 
 if __name__ == "__main__":

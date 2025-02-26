@@ -21,24 +21,24 @@ find_by_line_5:
     {{Zeile|15}}Und berührt
     </poem>
   expect: Wenn der uralte
-short:
-  given: |
-    |QUELLE= {{GBS|SuYFAAAAIAAJ|PA2}}
-    |KURZBESCHREIBUNG=
-    |SONSTIGES=
-    |BEARBEITUNGSSTAND=fertig
-    }}
-
-    <poem>
-    {{Seite|8}} '''An den Marull.'''
-
-    Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
-    Marull, was artig ist, ist klein.
-    </poem>
-
-
-    {{references|x}}
-  expect: Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
+#short:
+#  given: |
+#    |QUELLE= {{GBS|SuYFAAAAIAAJ|PA2}}
+#    |KURZBESCHREIBUNG=
+#    |SONSTIGES=
+#    |BEARBEITUNGSSTAND=fertig
+#    }}
+#
+#    <poem>
+#    {{Seite|8}} '''An den Marull.'''
+#
+#    Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
+#    Marull, was artig ist, ist klein.
+#    </poem>
+#
+#
+#    {{references|x}}
+#  expect: Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
 new_lines_in_the_way:
   given: |
     }}
@@ -217,78 +217,78 @@ no_poem_tags:
     :{{idt}}Folgt uns, so hilft euch gern der Staat,
     :{{idt}}wie er euch stets geholfen hat.
   expect: "Die das Volk bisher geleitet,"
-title_not_in_poem_tags:
-  given: |
-    {{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
-
-
-    {{center|'''Abendlandschaft.'''}}
-
-
-    <poem>
-    Der Hirt bläst seine Weise,
-    Von fern ein Schuß noch fällt,
-    Die Wälder rauschen leise
-    Und Ströme tief im Feld.
-
-    Nur hinter jenem Hügel
-    Noch spielt der Abendschein –
-    O hätt’ ich, hätt’ ich Flügel,
-    Zu fliegen da hinein!
-    </poem>
-    {{AlR|'''J. v. Eichendorff.'''}}
-  expect: Der Hirt bläst seine Weise,
-italic_headline:
-  given: |
-    <poem>
-    {{Center|''Der Aufpasser.''}}
-    Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
-    {{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
-    </poem>
-    {{Right|''Schiller.''}}
-  expect: Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
-more_bold_letters:
-  given: |
-    <poem>'''Aus dem Stammbuche eines Freundes.'''
-
-    '''U'''nd wird dir einst die Nachricht zugesandt,
-    Daß zu den Vätern ich versammelt wäre,
-    So trink und sprich: „Ich hab’ ihn auch gekannt“,
-    Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
-  expect: |-
-    '''U'''nd wird dir einst die Nachricht zugesandt,
-bug_dont_pick_middle_line:
-  given: |
-    {{LineCenterSize|120|20|'''Der Treiber.'''}}
-
-    <div align="center">(Oberbayrisch.)</div>
-
-
-    [[Datei:Fliegende Blätter 2 078 b1.png|400px|center]]
-
-
-    <poem>Der Forstner sagt: Hast du nix g’segn
-    {{idt}}Beim Durchgeh’ in dem Bogn?
-
-    Der Treiber sagt: San Thier’ und Hirsch
-    {{idt}}Leicht ''fufzgi'' füra ’zogn.
-
-    „Geh weiter Narr, was denkst dir denn?“
-
-    {{idt}}„„Was denk’ i’, i’ glaabs fest,
-    {{idt}}„„Und wann i’ ebbas handln laß’
-    {{idt}}„„San’s fünfazwanzgi g’west.““
-
-    „’Ko’ aa’ nit sey’, da hat's dir ’traamt!“
-
-    {{idt}}„„Herr Forstner, g‘irrt is glei’,
-    {{idt}}„„Was ''rauschn'' aber hon i’ g’hört,
-    {{idt}}„„Scho’ g’wiß, da bleibt´s dabei.“</poem>
-
-
-    <div align="right">[[Franz von Kobell|Fr. .v. Kobell.]]</div>
-  expect: |-
-    Der Forstner sagt: Hast du nix g’segn
+#title_not_in_poem_tags:
+#  given: |
+#    {{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
+#
+#
+#    {{center|'''Abendlandschaft.'''}}
+#
+#
+#    <poem>
+#    Der Hirt bläst seine Weise,
+#    Von fern ein Schuß noch fällt,
+#    Die Wälder rauschen leise
+#    Und Ströme tief im Feld.
+#
+#    Nur hinter jenem Hügel
+#    Noch spielt der Abendschein –
+#    O hätt’ ich, hätt’ ich Flügel,
+#    Zu fliegen da hinein!
+#    </poem>
+#    {{AlR|'''J. v. Eichendorff.'''}}
+#  expect: Der Hirt bläst seine Weise,
+#italic_headline:
+#  given: |
+#    <poem>
+#    {{Center|''Der Aufpasser.''}}
+#    Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+#    {{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
+#    </poem>
+#    {{Right|''Schiller.''}}
+#  expect: Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+#more_bold_letters:
+#  given: |
+#    <poem>'''Aus dem Stammbuche eines Freundes.'''
+#
+#    '''U'''nd wird dir einst die Nachricht zugesandt,
+#    Daß zu den Vätern ich versammelt wäre,
+#    So trink und sprich: „Ich hab’ ihn auch gekannt“,
+#    Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
+#  expect: |-
+#    '''U'''nd wird dir einst die Nachricht zugesandt,
+#bug_dont_pick_middle_line:
+#  given: |
+#    {{LineCenterSize|120|20|'''Der Treiber.'''}}
+#
+#    <div align="center">(Oberbayrisch.)</div>
+#
+#
+#    [[Datei:Fliegende Blätter 2 078 b1.png|400px|center]]
+#
+#
+#    <poem>Der Forstner sagt: Hast du nix g’segn
+#    {{idt}}Beim Durchgeh’ in dem Bogn?
+#
+#    Der Treiber sagt: San Thier’ und Hirsch
+#    {{idt}}Leicht ''fufzgi'' füra ’zogn.
+#
+#    „Geh weiter Narr, was denkst dir denn?“
+#
+#    {{idt}}„„Was denk’ i’, i’ glaabs fest,
+#    {{idt}}„„Und wann i’ ebbas handln laß’
+#    {{idt}}„„San’s fünfazwanzgi g’west.““
+#
+#    „’Ko’ aa’ nit sey’, da hat's dir ’traamt!“
+#
+#    {{idt}}„„Herr Forstner, g‘irrt is glei’,
+#    {{idt}}„„Was ''rauschn'' aber hon i’ g’hört,
+#    {{idt}}„„Scho’ g’wiß, da bleibt´s dabei.“</poem>
+#
+#
+#    <div align="right">[[Franz von Kobell|Fr. .v. Kobell.]]</div>
+#  expect: |-
+#    Der Forstner sagt: Hast du nix g’segn
 bug_dont_add_poem_tag:
   given: |
     {{LineCenterSize|120|20|'''Schauderhafte und gräuliche Morithat,'''}}
@@ -438,12 +438,75 @@ clean_idt:
     '''A. Traeger.''' Den vielen Lesern und Leserinnen der Gartenlaube glauben wir durch die Nachricht, daß ''[[Albert Traeger]]’s'' Gedichte nunmehr gesammelt erschienen sind, eine angenehme Mittheilung zu machen. Durch seine Beiträge, namentlich durch die eben so sinnigen wie tief gefühlten Lieder: „Wenn Du noch eine Heimath hast – Das Mutterherz – Wie stirbt es schön sich in der Kindheit Tagen – Wenn Dich die Welt an’s Kreuz geschlagen etc. etc.“ hat sich Traeger rasch die Gunst der vielen tausend Leser unserer Zeitschrift gewonnen und die meisten dieser Lieder sind bereits mehrere Mal in Musik gesetzt. Die in eleganter Ausstattung erschienene Sammlung enthält noch viele schöne Gaben, die sich durch Tiefe des Gemüths und eine edle vollendete Form auszeichnen. Wir führen unter den vielen nur eins an:
 
     <poem>
-    {{idt2}}Einst wirst Du schlummern.
+    {{idt2|120}}Einst wirst Du schlummern.
 
     Ist Nachts auch thränenfeucht Dein Pfühl,
     Und heiß die ruhelosen Lider,
     Einst wirst Du schlummern sanft und kühl,
-    Und keine Sorge weckt Dich wieder.
+    {{Zeile|5}}Und keine Sorge weckt Dich wieder.
+
+    Vergehe nicht in Angst und Qual,
+    Es eilt die Stunde, Dich zu retten;
+    Vier Breter nur braucht’s dünn und schmal,
+    Ein müdes Menschenherz zu betten.
+
+    Und Du auch findest eine Hand,
+    Die Augen sanft Dir zuzudrücken,
+    Mit einer Blume, einem Band
+    Dir Deinen Sarg noch auszuschmücken.
+
+    Der Tod bringt Ruhe Deinem Harm,
+    Die Dir das Leben nie vergönnte;
+    Halt’ aus: es ist kein Mensch so arm,
+    Daß er nicht endlich sterben könnte.</poem>
+  expect: |-
+    Einst wirst Du schlummern.
+clean_broken_first_line:
+  given: |
+    |ORIGINALTITEL=
+    |ORIGINALSUBTITEL=
+    |ORIGINALHERKUNFT=
+    |WIKIPEDIA=
+    |BILD=Schnitz ond Zwetschga (Otto Keller).pdf{{!}}page=12
+    |QUELLE=[[:File:Schnitz ond Zwetschga (Otto Keller).pdf|Scan auf Commons]]
+    |KURZBESCHREIBUNG=
+    |SONSTIGES=
+    |BENUTZERHILFE=ON
+    |INDEXSEITE=Schnitz ond Zwetschga (Otto Keller).pdf
+    |BEARBEITUNGSSTAND=fertig
+    }}
+
+    {{BlockSatzStart}}
+    <poem>
+    {{idt2|40}}'''Uf d’r Poscht.'''
+
+    {{Zeile|5}}A Bauraweible kommt uf d’ Poscht
+    Ond frogt, was a Paketle koscht,
+    ’s isch groß ond au a bisle schwer,
+    So gibt se ’s dem Beamta her.
+    Der wiegt glei des Paketle g’nau
+    Ond secht no zu der Baurafrau:
+    „So koscht ’s zwoi Mark, es isch halt schwer,
+    Drom ganget er am beschta her,
+    Ond machet ''zwoi'' Paketla draus,
+    {{Zeile|10}}Des macht am Porto viel glei aus!“
+    „Ha,“ secht des Bauraweible no,
+    „I woiß net, wia-n-e dees soll do,
+    Vielleicht, daß ihr mir ’s kennet sa:
+    ’s isch drenn a Ziahharmonika!“
+    </poem>
+  expect: ""
+clean_pr1:
+  given: |
+    '''A. Traeger.''' Den vielen Lesern und Leserinnen der Gartenlaube glauben wir durch die Nachricht, daß ''[[Albert Traeger]]’s'' Gedichte nunmehr gesammelt erschienen sind, eine angenehme Mittheilung zu machen. Durch seine Beiträge, namentlich durch die eben so sinnigen wie tief gefühlten Lieder: „Wenn Du noch eine Heimath hast – Das Mutterherz – Wie stirbt es schön sich in der Kindheit Tagen – Wenn Dich die Welt an’s Kreuz geschlagen etc. etc.“ hat sich Traeger rasch die Gunst der vielen tausend Leser unserer Zeitschrift gewonnen und die meisten dieser Lieder sind bereits mehrere Mal in Musik gesetzt. Die in eleganter Ausstattung erschienene Sammlung enthält noch viele schöne Gaben, die sich durch Tiefe des Gemüths und eine edle vollendete Form auszeichnen. Wir führen unter den vielen nur eins an:
+
+    <poem>
+    {{SeitePR1|751|Franko I. Vol. 52. P. 751.png}}Einst wirst Du schlummern.
+
+    Ist Nachts auch thränenfeucht Dein Pfühl,
+    Und heiß die ruhelosen Lider,
+    Einst wirst Du schlummern sanft und kühl,
+    {{Zeile|5}}Und keine Sorge weckt Dich wieder.
 
     Vergehe nicht in Angst und Qual,
     Es eilt die Stunde, Dich zu retten;

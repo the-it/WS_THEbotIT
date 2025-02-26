@@ -117,6 +117,19 @@ class TestPersistedData(TestCloudBase):
         new_run_data.get_deprecated()
         self.assertDictEqual({"a": [1, 2]}, new_run_data._data)
 
+    def test_clean_data(self):
+        self._make_json_file()
+        self.data.load()
+        self.data["b"] = 2
+        self.data.dump(success=False)
+        new_run_data = PersistedData("TestBot")
+        self.assertDictEqual({}, new_run_data._data)
+        new_run_data["c"] = 3
+        new_run_data.clean_data()
+        with self.assertRaises(BotException):
+            new_run_data.get_deprecated()
+        self.assertDictEqual({}, new_run_data._data)
+
     def test_get_back_data_no_data_there(self):
         self._make_json_file()
         with self.assertRaises(BotException):
