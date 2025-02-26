@@ -157,6 +157,7 @@ class PoemList(ListBot):
         string_list.append('')
         string_list.append("== Fußnoten ==")
         string_list.append("<references/>")
+        string_list.append("<references group=\"WS\"/>")
         string_list.append('')
         string_list.append("{{SORTIERUNG:Gedichte #Liste der}}")
         string_list.append("[[Kategorie:Listen]]")
