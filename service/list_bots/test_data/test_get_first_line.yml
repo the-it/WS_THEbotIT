@@ -496,3 +496,31 @@ clean_broken_first_line:
     ’s isch drenn a Ziahharmonika!“
     </poem>
   expect: ""
+clean_pr1:
+  given: |
+    '''A. Traeger.''' Den vielen Lesern und Leserinnen der Gartenlaube glauben wir durch die Nachricht, daß ''[[Albert Traeger]]’s'' Gedichte nunmehr gesammelt erschienen sind, eine angenehme Mittheilung zu machen. Durch seine Beiträge, namentlich durch die eben so sinnigen wie tief gefühlten Lieder: „Wenn Du noch eine Heimath hast – Das Mutterherz – Wie stirbt es schön sich in der Kindheit Tagen – Wenn Dich die Welt an’s Kreuz geschlagen etc. etc.“ hat sich Traeger rasch die Gunst der vielen tausend Leser unserer Zeitschrift gewonnen und die meisten dieser Lieder sind bereits mehrere Mal in Musik gesetzt. Die in eleganter Ausstattung erschienene Sammlung enthält noch viele schöne Gaben, die sich durch Tiefe des Gemüths und eine edle vollendete Form auszeichnen. Wir führen unter den vielen nur eins an:
+
+    <poem>
+    {{SeitePR1|751|Franko I. Vol. 52. P. 751.png}}Einst wirst Du schlummern.
+
+    Ist Nachts auch thränenfeucht Dein Pfühl,
+    Und heiß die ruhelosen Lider,
+    Einst wirst Du schlummern sanft und kühl,
+    {{Zeile|5}}Und keine Sorge weckt Dich wieder.
+
+    Vergehe nicht in Angst und Qual,
+    Es eilt die Stunde, Dich zu retten;
+    Vier Breter nur braucht’s dünn und schmal,
+    Ein müdes Menschenherz zu betten.
+
+    Und Du auch findest eine Hand,
+    Die Augen sanft Dir zuzudrücken,
+    Mit einer Blume, einem Band
+    Dir Deinen Sarg noch auszuschmücken.
+
+    Der Tod bringt Ruhe Deinem Harm,
+    Die Dir das Leben nie vergönnte;
+    Halt’ aus: es ist kein Mensch so arm,
+    Daß er nicht endlich sterben könnte.</poem>
+  expect: |-
+    Einst wirst Du schlummern.

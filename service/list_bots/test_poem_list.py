@@ -274,3 +274,8 @@ class TestPoemList(TestCloudBase):
         poem_list = PoemList(self.wiki)
         with self.assertRaisesRegex(ValueError, "Page Parent as parent page for Parent/chapter does not exist"):
             poem_list.get_page_infos(page)
+
+    def test_clean_lemma_link(self):
+        compare("B", self.poem_list.clean_lemma_link("B"))
+        compare("B", self.poem_list.clean_lemma_link("[[B]]"))
+        compare("B", self.poem_list.clean_lemma_link("[[B|A]]"))

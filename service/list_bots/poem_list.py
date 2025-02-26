@@ -102,6 +102,8 @@ class PoemList(ListBot):
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
         item_dict["year"] = self.get_year(item_dict)
+        if has_value("title", item_dict):
+            item_dict["title"] = self.clean_lemma_link(item_dict["title"])
         with suppress(KeyError):
             item_dict.pop("creation")
         with suppress(KeyError):
@@ -229,7 +231,7 @@ class PoemList(ListBot):
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<poem>")
-    CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite\|[^\}]*?\}\}")
+    CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
     CLEAN_IDT = re.compile(r"^\{\{idt2?[^\}]*?\}\}")
 
     def _clean_first_line(self, line: str) -> str:
@@ -274,6 +276,13 @@ class PoemList(ListBot):
             if poem["first_line"]:
                 has_first_line += 1
         self.logger.info(f"{(has_first_line / len(self.data)) * 100:.2f}% of poems have a first line.")
+
+    TITLE_LINK_REGEX = re.compile(r"\[\[([^\]\|]*?)(?:\|.*?)?\]\]")
+
+    def clean_lemma_link(self, potential_link) -> str:
+        if match := self.TITLE_LINK_REGEX.search(potential_link):
+            return match.group(1)
+        return potential_link
 
 
 if __name__ == "__main__":
