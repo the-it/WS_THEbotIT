@@ -111,7 +111,7 @@ class PoemList(ListBot):
             if item not in item_dict:
                 item_dict[item] = ""
 
-    SORTIERUNG_REGEX = re.compile(r"\{\{SORTIERUNG:(.*?)\}\}")
+    SORTIERUNG_REGEX = re.compile(r"\{\{(?:SORTIERUNG|DEFAULTSORT):(.*?)\}\}")
     ARTIKEL_REGEX = re.compile(r"(Das|Die|Der) (.*)$")
 
     def get_sortkey(self, item_dict: dict[str, str], text: str) -> str:

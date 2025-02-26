@@ -189,6 +189,9 @@ class TestPoemList(TestCloudBase):
         compare("Morithat #Schauderhafte und gräuliche",
                 self.poem_list.get_sortkey({"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
                                            "{{SORTIERUNG: Morithat #Schauderhafte und gräuliche}}"))
+        compare("Asthetik des Kriegs",
+                self.poem_list.get_sortkey({"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
+                                           "{{DEFAULTSORT:Asthetik des Kriegs}}"))
 
     def test_get_page_info_gartenlaube(self):
         text = """{{GartenlaubenArtikel
