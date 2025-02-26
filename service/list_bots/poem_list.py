@@ -280,7 +280,7 @@ class PoemList(ListBot):
 
     TITLE_LINK_REGEX = re.compile(r"\[\[([^\]\|]*?)(?:\|.*?)?\]\]")
 
-    def clean_lemma_link(self, potential_link) -> str:
+    def clean_lemma_link(self, potential_link: str) -> str:
         if match := self.TITLE_LINK_REGEX.search(potential_link):
             return match.group(1)
         return potential_link

@@ -1,7 +1,6 @@
 # pylint: disable=protected-access,no-member,no-self-use
 import json
 
-from botocore import exceptions
 from freezegun import freeze_time
 from testfixtures import compare
 
