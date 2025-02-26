@@ -25,7 +25,7 @@ class ListBot(CloudBot):
                 self.logger.warning("There isn't deprecated data to reload.")
         if self.data_outdated():
             self.logger.warning("The data is thrown away. It is out of date")
-            self.data.assign_dict({})
+            self.data.clean_data()
         return self
 
     def task(self) -> bool:

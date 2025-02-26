@@ -1,5 +1,6 @@
 import json
 from collections.abc import Mapping
+from contextlib import suppress
 from datetime import datetime
 from io import BytesIO
 from typing import Dict, Any, Iterator
@@ -60,8 +61,12 @@ class PersistedData(Mapping):
                 ["Body"].read().decode("utf-8"))["data"]  # type: ignore
         except exceptions.ClientError as error:
             if error.response['Error']['Code'] == 'NoSuchKey':
-                raise BotException(f"The data for {self.key_name + key_appendix} doesn't exists") from error
+                raise BotException(f"The data for {self.bot_name}.data{key_appendix}.json doesn't exists") from error
             raise
+
+    def _delete_from_bucket(self, key_appendix: str = ""):
+        with suppress(exceptions.ClientError):
+            self.s3_resource.Object(self._bucket_name, f"{self.bot_name}.data{key_appendix}.json").delete()
 
     def _copy_to_deprecated(self):
         self.s3_resource.Object(self._bucket_name, f"{self.bot_name}.data.deprecated.json")\
@@ -79,3 +84,8 @@ class PersistedData(Mapping):
 
     def get_deprecated(self):
         self._load_from_bucket(key_appendix=".deprecated")
+
+    def clean_data(self):
+        self._delete_from_bucket(key_appendix=".deprecated")
+        self._delete_from_bucket(key_appendix=".broken")
+        self._data = {}
