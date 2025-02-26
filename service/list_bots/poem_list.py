@@ -26,7 +26,7 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 25, 23)
+        self.new_data_model = datetime(2025, 2, 24, 23)
         self.timeout = timedelta(minutes=2)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
@@ -235,6 +235,8 @@ class PoemList(ListBot):
     def _clean_first_line(self, line: str) -> str:
         for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT]:
             line = regex.sub("", line)
+        if line == "}}":
+            return ""
         return line.strip(" :")
 
     @staticmethod

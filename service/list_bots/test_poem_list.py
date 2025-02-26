@@ -1,5 +1,5 @@
 # pylint: disable=protected-access,line-too-long
-from unittest import mock, skip
+from unittest import mock
 
 import pywikibot
 from ddt import ddt, file_data
@@ -169,26 +169,12 @@ class TestPoemList(TestCloudBase):
         compare(expect, self.poem_list.get_first_line(given))
 
     def test_get_first_line_develop(self):
-        text = """<poem>'''Aus dem Stammbuche eines Freundes.'''
-
-'''U'''nd wird dir einst die Nachricht zugesandt,
-Daß zu den Vätern ich versammelt wäre,
-So trink und sprich: „Ich hab’ ihn auch gekannt“,
-Mach hier ein Kreuz – und gib mir eine Zähre.</poem>"""
-        compare("'''U'''nd wird dir einst die Nachricht zugesandt,", self.poem_list.get_first_line(text))
-
-    @skip("only for testing")
-    @real_wiki_test
-    def test_integration_testing(self):
-        lemma_mock = mock.patch("service.list_bots.poem_list.PoemList.get_lemma_list",
-                                new_callable=mock.MagicMock).start()
-        mock.patch("service.list_bots.author_list.Page.save").start()
-        lemma_mock.return_value = ([":Ein Kehlkopf"], 1)
-        self.addCleanup(mock.patch.stopall)
-        with PoemList(self.wiki) as bot:
-            bot.data.assign_dict({})
-            bot.run()
-            print(bot.data._data)
+        text = """Wenn der uralte
+    Heilige Vater
+    Mit gelassener Hand
+    Aus rollenden Wolken
+    {{Zeile|5}}Segnende Blitze"""
+        compare("Wenn der uralte", self.poem_list.get_first_line(text))
 
     def test_get_sortkey(self):
         compare("Zahnfleischkranke #Der",
