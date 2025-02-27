@@ -542,3 +542,7 @@ erste_Zeile_split_by_page_break:
     </poem>
   expect: |-
     Abendstern, du goldenes Licht der lieblichen Cypris!
+erste_Zeile_nothing_tofind:
+  given: |
+    blub
+  expect: ""

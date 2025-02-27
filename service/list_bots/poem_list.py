@@ -238,7 +238,7 @@ class PoemList(ListBot):
         #     return self._clean_first_line(lines_list[0])
         return ""
 
-    CLEAN_POEM_REGEX = re.compile(r"<poem>")
+    CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
     CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
     CLEAN_IDT = re.compile(r"^\{\{idt2?[^\}]*?\}\}")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
@@ -250,12 +250,10 @@ class PoemList(ListBot):
             return ""
         return line.strip(" :")
 
-    POEM_TAG_REGEX = re.compile(r"<\/?poem>")
-
     def _split_lines(self, lines: str) -> list[str]:
         lines_list = []
         for line in lines.splitlines():
-            line = self.POEM_TAG_REGEX.sub("", line)
+            line = self.CLEAN_POEM_REGEX.sub("", line)
             if line.strip():
                 lines_list.append(line)
         return lines_list
