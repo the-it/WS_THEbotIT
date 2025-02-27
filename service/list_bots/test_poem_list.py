@@ -288,4 +288,5 @@ Sondern ich lieb’; und Liebende mitzulieben, ist artig.
     def test_clean_lemma_link(self):
         compare("B", self.poem_list.clean_lemma_link("B"))
         compare("B", self.poem_list.clean_lemma_link("[[B]]"))
-        compare("B", self.poem_list.clean_lemma_link("[[B|A]]"))
+        compare("A", self.poem_list.clean_lemma_link("[[B|A]]"))
+        compare("A C", self.poem_list.clean_lemma_link("A [[B|C]]"))

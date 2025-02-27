@@ -287,11 +287,11 @@ class PoemList(ListBot):
                 has_first_line += 1
         self.logger.info(f"{(has_first_line / len(self.data)) * 100:.2f}% of poems have a first line.")
 
-    TITLE_LINK_REGEX = re.compile(r"\[\[([^\]\|]*?)(?:\|.*?)?\]\]")
+    TITLE_LINK_REGEX = re.compile(r"\[\[(?:[^\]\|]*?\|)?(.*?)\]\]")
 
     def clean_lemma_link(self, potential_link: str) -> str:
         if match := self.TITLE_LINK_REGEX.search(potential_link):
-            return match.group(1)
+            return self.TITLE_LINK_REGEX.sub(r"\1", potential_link)
         return potential_link
 
 
