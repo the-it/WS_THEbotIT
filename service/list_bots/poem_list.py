@@ -100,11 +100,11 @@ class PoemList(ListBot):
             except (ValueError, InvalidTitleError):
                 self.logger.error(f"Can't process author {item_dict['author']} of lemma {item_dict['lemma']}")
                 item_dict["no_lemma_auth"] = "yes"
+        if has_value("title", item_dict):
+            item_dict["title"] = self.clean_lemma_link(item_dict["title"])
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
         item_dict["year"] = self.get_year(item_dict)
-        if has_value("title", item_dict):
-            item_dict["title"] = self.clean_lemma_link(item_dict["title"])
         with suppress(KeyError):
             item_dict.pop("creation")
         with suppress(KeyError):
