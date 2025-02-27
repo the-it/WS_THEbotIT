@@ -114,8 +114,9 @@ class PoemList(ListBot):
             if item not in item_dict:
                 item_dict[item] = ""
 
+    @staticmethod
     @lru_cache(maxsize=1000)
-    def get_author_dict(self, author_page):
+    def get_author_dict(author_page):
         author_dict = AuthorInfo(author_page).get_author_dict()
         return author_dict
 
@@ -290,9 +291,7 @@ class PoemList(ListBot):
     TITLE_LINK_REGEX = re.compile(r"\[\[(?:[^\]\|]*?\|)?(.*?)\]\]")
 
     def clean_lemma_link(self, potential_link: str) -> str:
-        if match := self.TITLE_LINK_REGEX.search(potential_link):
-            return self.TITLE_LINK_REGEX.sub(r"\1", potential_link)
-        return potential_link
+        return self.TITLE_LINK_REGEX.sub(r"\1", potential_link)
 
 
 if __name__ == "__main__":
