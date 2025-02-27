@@ -524,3 +524,21 @@ clean_pr1:
     Daß er nicht endlich sterben könnte.</poem>
   expect: |-
     Einst wirst Du schlummern.
+erste_Zeile_split_by_page_break:
+  given: |
+    <poem>
+    {{idt2|100}}'''An den Abendstern.'''
+
+    Abendstern, du goldenes Licht der lieblichen Cypris!
+    Abendstern, der dunkelen Nacht ein heiliger Glanzschmuck;
+    </poem>
+    <poem>
+    Wie vom Mond’ überglänzt, so überglänzend die Sterne.
+    Heil dir, Lieber! Und da ich anjetzt zum Schmause des Hirten
+    {{Zeile|5}}Geh: so leuchte du mir an statt des freundlichen Mondes,
+    Der, heut neu, gar zeitig hinabsteigt. Geh’ ich zum Diebstal
+    Ja doch nicht, noch daß ich den nächtlichen Wandrer beraube;
+    Sondern ich lieb’; und Liebende mitzulieben, ist artig.
+    </poem>
+  expect: |-
+    Abendstern, du goldenes Licht der lieblichen Cypris!

@@ -169,12 +169,22 @@ class TestPoemList(TestCloudBase):
         compare(expect, self.poem_list.get_first_line(given))
 
     def test_get_first_line_develop(self):
-        text = """Wenn der uralte
-    Heilige Vater
-    Mit gelassener Hand
-    Aus rollenden Wolken
-    {{Zeile|5}}Segnende Blitze"""
-        compare("Wenn der uralte", self.poem_list.get_first_line(text))
+        text = """<poem>
+{{idt2|100}}'''An den Abendstern.'''
+
+Abendstern, du goldenes Licht der lieblichen Cypris!
+Abendstern, der dunkelen Nacht ein heiliger Glanzschmuck;
+</poem>
+<poem>
+Wie vom Mond’ überglänzt, so überglänzend die Sterne.
+Heil dir, Lieber! Und da ich anjetzt zum Schmause des Hirten
+{{Zeile|5}}Geh: so leuchte du mir an statt des freundlichen Mondes,
+Der, heut neu, gar zeitig hinabsteigt. Geh’ ich zum Diebstal
+Ja doch nicht, noch daß ich den nächtlichen Wandrer beraube;
+Sondern ich lieb’; und Liebende mitzulieben, ist artig.
+</poem>
+"""
+        compare("Abendstern, du goldenes Licht der lieblichen Cypris!", self.poem_list.get_first_line(text))
 
     def test_get_sortkey(self):
         compare("Zahnfleischkranke #Der",
