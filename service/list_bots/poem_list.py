@@ -222,25 +222,17 @@ class PoemList(ListBot):
                 if self.ZEILE_REGEX.search(line):
                     return self._clean_first_line(lines_list[idx - 4])
         # don't do this for this nights run ... let's see how many empty lines we will get
-        # if match := self.POEM_REGEX.search(text):
-        #     lines: str = match.group(1)
-        #     lines_list = self._split_lines(lines)
-        #     if self.HEADLINE_REGEX.search(lines):
-        #         found = False
-        #         for idx, line in enumerate(lines_list):
-        #             if idx > 3:
-        #                 break
-        #             if self.HEADLINE_REGEX.search(line) and not found:
-        #                 found = True
-        #                 continue
-        #             if found:
-        #                 return self._clean_first_line(line)
-        #     return self._clean_first_line(lines_list[0])
+        if match := self.POEM_REGEX.search(text):
+            lines: str = match.group(1)
+            lines_list = self._split_lines(lines)
+            if not self.HEADLINE_REGEX.search(lines_list[0]):
+                if lines_list[1].strip():
+                    return self._clean_first_line(lines_list[0])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
     CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
-    CLEAN_IDT = re.compile(r"^\{\{idt2?[^\}]*?\}\}")
+    CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
 
     def _clean_first_line(self, line: str) -> str:

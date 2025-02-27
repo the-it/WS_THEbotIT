@@ -1,5 +1,5 @@
 # pylint: disable=protected-access,line-too-long
-from unittest import mock, TestCase
+from unittest import mock
 
 import pywikibot
 from ddt import ddt, file_data
@@ -324,4 +324,3 @@ Sondern ich lieb’; und Liebende mitzulieben, ist artig.
         compare("rest", self.poem_list._clean_first_line("{{idt}}rest"))
         compare("rest", self.poem_list._clean_first_line("{{idt2|120}}rest"))
         compare("", self.poem_list._clean_first_line("|BEARBEITUNGSSTAND=fertig"))
-

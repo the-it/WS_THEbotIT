@@ -21,24 +21,24 @@ find_by_line_5:
     {{Zeile|15}}Und berührt
     </poem>
   expect: Wenn der uralte
-#short:
-#  given: |
-#    |QUELLE= {{GBS|SuYFAAAAIAAJ|PA2}}
-#    |KURZBESCHREIBUNG=
-#    |SONSTIGES=
-#    |BEARBEITUNGSSTAND=fertig
-#    }}
-#
-#    <poem>
-#    {{Seite|8}} '''An den Marull.'''
-#
-#    Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
-#    Marull, was artig ist, ist klein.
-#    </poem>
-#
-#
-#    {{references|x}}
-#  expect: Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
+short:
+  given: |
+    |QUELLE= {{GBS|SuYFAAAAIAAJ|PA2}}
+    |KURZBESCHREIBUNG=
+    |SONSTIGES=
+    |BEARBEITUNGSSTAND=fertig
+    }}
+
+    <poem>
+    {{Seite|8}} '''An den Marull.'''
+
+    Groß willst du, und auch artig seyn? *)<ref>*) Du willst gleich groß als artig seyn?{{idt}}1753.</ref>
+    Marull, was artig ist, ist klein.
+    </poem>
+
+
+    {{references|x}}
+  expect: ""
 new_lines_in_the_way:
   given: |
     }}
@@ -217,78 +217,77 @@ no_poem_tags:
     :{{idt}}Folgt uns, so hilft euch gern der Staat,
     :{{idt}}wie er euch stets geholfen hat.
   expect: "Die das Volk bisher geleitet,"
-#title_not_in_poem_tags:
-#  given: |
-#    {{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
-#
-#
-#    {{center|'''Abendlandschaft.'''}}
-#
-#
-#    <poem>
-#    Der Hirt bläst seine Weise,
-#    Von fern ein Schuß noch fällt,
-#    Die Wälder rauschen leise
-#    Und Ströme tief im Feld.
-#
-#    Nur hinter jenem Hügel
-#    Noch spielt der Abendschein –
-#    O hätt’ ich, hätt’ ich Flügel,
-#    Zu fliegen da hinein!
-#    </poem>
-#    {{AlR|'''J. v. Eichendorff.'''}}
-#  expect: Der Hirt bläst seine Weise,
-#italic_headline:
-#  given: |
-#    <poem>
-#    {{Center|''Der Aufpasser.''}}
-#    Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
-#    {{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
-#    </poem>
-#    {{Right|''Schiller.''}}
-#  expect: Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
-#more_bold_letters:
-#  given: |
-#    <poem>'''Aus dem Stammbuche eines Freundes.'''
-#
-#    '''U'''nd wird dir einst die Nachricht zugesandt,
-#    Daß zu den Vätern ich versammelt wäre,
-#    So trink und sprich: „Ich hab’ ihn auch gekannt“,
-#    Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
-#  expect: |-
-#    '''U'''nd wird dir einst die Nachricht zugesandt,
-#bug_dont_pick_middle_line:
-#  given: |
-#    {{LineCenterSize|120|20|'''Der Treiber.'''}}
-#
-#    <div align="center">(Oberbayrisch.)</div>
-#
-#
-#    [[Datei:Fliegende Blätter 2 078 b1.png|400px|center]]
-#
-#
-#    <poem>Der Forstner sagt: Hast du nix g’segn
-#    {{idt}}Beim Durchgeh’ in dem Bogn?
-#
-#    Der Treiber sagt: San Thier’ und Hirsch
-#    {{idt}}Leicht ''fufzgi'' füra ’zogn.
-#
-#    „Geh weiter Narr, was denkst dir denn?“
-#
-#    {{idt}}„„Was denk’ i’, i’ glaabs fest,
-#    {{idt}}„„Und wann i’ ebbas handln laß’
-#    {{idt}}„„San’s fünfazwanzgi g’west.““
-#
-#    „’Ko’ aa’ nit sey’, da hat's dir ’traamt!“
-#
-#    {{idt}}„„Herr Forstner, g‘irrt is glei’,
-#    {{idt}}„„Was ''rauschn'' aber hon i’ g’hört,
-#    {{idt}}„„Scho’ g’wiß, da bleibt´s dabei.“</poem>
-#
-#
-#    <div align="right">[[Franz von Kobell|Fr. .v. Kobell.]]</div>
-#  expect: |-
-#    Der Forstner sagt: Hast du nix g’segn
+title_not_in_poem_tags:
+  given: |
+    {{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
+
+
+    {{center|'''Abendlandschaft.'''}}
+
+
+    <poem>
+    Der Hirt bläst seine Weise,
+    Von fern ein Schuß noch fällt,
+    Die Wälder rauschen leise
+    Und Ströme tief im Feld.
+
+    Nur hinter jenem Hügel
+    Noch spielt der Abendschein –
+    O hätt’ ich, hätt’ ich Flügel,
+    Zu fliegen da hinein!
+    </poem>
+    {{AlR|'''J. v. Eichendorff.'''}}
+  expect: Der Hirt bläst seine Weise,
+italic_headline:
+  given: |
+    <poem>
+    {{Center|''Der Aufpasser.''}}
+    Strenge wie mein Gewissen bemerkst du, wo ich gefehlet;
+    {{Idt}}Darum hab ich dich stets wie – mein Gewissen geliebt.
+    </poem>
+    {{Right|''Schiller.''}}
+  expect: ""
+more_bold_letters:
+  given: |
+    <poem>'''Aus dem Stammbuche eines Freundes.'''
+
+    '''U'''nd wird dir einst die Nachricht zugesandt,
+    Daß zu den Vätern ich versammelt wäre,
+    So trink und sprich: „Ich hab’ ihn auch gekannt“,
+    Mach hier ein Kreuz – und gib mir eine Zähre.</poem>
+  expect: ""
+bug_dont_pick_middle_line:
+  given: |
+    {{LineCenterSize|120|20|'''Der Treiber.'''}}
+
+    <div align="center">(Oberbayrisch.)</div>
+
+
+    [[Datei:Fliegende Blätter 2 078 b1.png|400px|center]]
+
+
+    <poem>Der Forstner sagt: Hast du nix g’segn
+    {{idt}}Beim Durchgeh’ in dem Bogn?
+
+    Der Treiber sagt: San Thier’ und Hirsch
+    {{idt}}Leicht ''fufzgi'' füra ’zogn.
+
+    „Geh weiter Narr, was denkst dir denn?“
+
+    {{idt}}„„Was denk’ i’, i’ glaabs fest,
+    {{idt}}„„Und wann i’ ebbas handln laß’
+    {{idt}}„„San’s fünfazwanzgi g’west.““
+
+    „’Ko’ aa’ nit sey’, da hat's dir ’traamt!“
+
+    {{idt}}„„Herr Forstner, g‘irrt is glei’,
+    {{idt}}„„Was ''rauschn'' aber hon i’ g’hört,
+    {{idt}}„„Scho’ g’wiß, da bleibt´s dabei.“</poem>
+
+
+    <div align="right">[[Franz von Kobell|Fr. .v. Kobell.]]</div>
+  expect: |-
+    Der Forstner sagt: Hast du nix g’segn
 bug_dont_add_poem_tag:
   given: |
     {{LineCenterSize|120|20|'''Schauderhafte und gräuliche Morithat,'''}}
@@ -542,7 +541,26 @@ erste_Zeile_split_by_page_break:
     </poem>
   expect: |-
     Abendstern, du goldenes Licht der lieblichen Cypris!
-erste_Zeile_nothing_tofind:
+erste_Zeile_nothing_to_find:
   given: |
     blub
   expect: ""
+erste_Zeile_split_by_page_break_2:
+  given: |
+    <poem>
+    {{idt2|80}}'''Sils-Maria.'''
+
+    Hier sass ich, wartend, wartend, – doch auf Nichts,
+    Jenseits von Gut und Böse, bald des Lichts</poem>
+    <poem>
+    Geniessend, bald des Schattens, ganz nur Spiel,
+    Ganz See, ganz Mittag, ganz Zeit ohne Ziel.
+
+    {{Zeile|5}}Da, plötzlich, Freundin! wurde Eins zu Zwei –
+    – Und Zarathustra gieng an mir vorbei …
+
+
+    {{idt2|40}}*{{idt}}*{{idt}}*
+    </poem>
+  expect: |-
+    Hier sass ich, wartend, wartend, – doch auf Nichts,
