@@ -6,15 +6,15 @@
 #
 beautifulsoup4==4.13.3
     # via -r requirements.in
-boto3==1.36.22
+boto3==1.37.3
     # via -r requirements.in
-boto3-stubs[essential]==1.36.22
+boto3-stubs[essential]==1.37.2
     # via -r requirements.in
-botocore==1.36.22
+botocore==1.37.3
     # via
     #   boto3
     #   s3transfer
-botocore-stubs==1.36.22
+botocore-stubs==1.37.1
     # via boto3-stubs
 certifi==2025.1.31
     # via requests
@@ -36,19 +36,19 @@ jmespath==1.0.1
     #   botocore
 mwparserfromhell==0.6.6
     # via pywikibot
-mypy-boto3-cloudformation==1.36.15
+mypy-boto3-cloudformation==1.37.0
     # via boto3-stubs
-mypy-boto3-dynamodb==1.36.0
+mypy-boto3-dynamodb==1.37.0
     # via boto3-stubs
-mypy-boto3-ec2==1.36.18
+mypy-boto3-ec2==1.37.2
     # via boto3-stubs
-mypy-boto3-lambda==1.36.0
+mypy-boto3-lambda==1.37.0
     # via boto3-stubs
-mypy-boto3-rds==1.36.14
+mypy-boto3-rds==1.37.0
     # via boto3-stubs
-mypy-boto3-s3==1.36.21
+mypy-boto3-s3==1.37.0
     # via boto3-stubs
-mypy-boto3-sqs==1.36.0
+mypy-boto3-sqs==1.37.0
     # via boto3-stubs
 oauthlib==3.2.2
     # via
@@ -58,7 +58,7 @@ packaging==24.2
     # via pywikibot
 python-dateutil==2.9.0.post0
     # via botocore
-pywikibot==9.6.2
+pywikibot==9.6.3
     # via -r requirements.in
 regex==2024.11.6
     # via wikitextparser
@@ -71,7 +71,7 @@ requests-oauthlib==2.0.0
     # via -r requirements.in
 roman==5.0
     # via -r requirements.in
-s3transfer==0.11.2
+s3transfer==0.11.3
     # via boto3
 six==1.17.0
     # via python-dateutil
@@ -81,7 +81,7 @@ soupsieve==2.6
     # via beautifulsoup4
 types-awscrt==0.23.10
     # via botocore-stubs
-types-s3transfer==0.11.2
+types-s3transfer==0.11.3
     # via boto3-stubs
 typing-extensions==4.12.2
     # via beautifulsoup4
