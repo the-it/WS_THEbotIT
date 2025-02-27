@@ -1,6 +1,7 @@
 import re
 from contextlib import suppress
 from datetime import timedelta, datetime
+from functools import lru_cache
 from typing import Tuple
 
 from pywikibot import Site, Page
@@ -92,18 +93,18 @@ class PoemList(ListBot):
                 if author_page.isRedirectPage():
                     author_page = author_page.getRedirectTarget()
                     item_dict["author"] = author_page.title()
-                author_dict = AuthorInfo(author_page).get_author_dict()
+                author_dict = self.get_author_dict(author_page)
                 item_dict["first_name"] = author_dict["first_name"]
                 item_dict["last_name"] = author_dict["last_name"]
                 item_dict["sortkey_auth"] = author_dict["sortkey"]
             except (ValueError, InvalidTitleError):
                 self.logger.error(f"Can't process author {item_dict['author']} of lemma {item_dict['lemma']}")
                 item_dict["no_lemma_auth"] = "yes"
+        if has_value("title", item_dict):
+            item_dict["title"] = self.clean_lemma_link(item_dict["title"])
         item_dict["sortkey"] = self.get_sortkey(item_dict, page.text)
         item_dict["first_line"] = self.get_first_line(page.text)
         item_dict["year"] = self.get_year(item_dict)
-        if has_value("title", item_dict):
-            item_dict["title"] = self.clean_lemma_link(item_dict["title"])
         with suppress(KeyError):
             item_dict.pop("creation")
         with suppress(KeyError):
@@ -112,6 +113,12 @@ class PoemList(ListBot):
                      "sortkey_auth", "year", "sortkey", "first_line"]:
             if item not in item_dict:
                 item_dict[item] = ""
+
+    @staticmethod
+    @lru_cache(maxsize=1000)
+    def get_author_dict(author_page):
+        author_dict = AuthorInfo(author_page).get_author_dict()
+        return author_dict
 
     SORTIERUNG_REGEX = re.compile(r"\{\{(?:SORTIERUNG|DEFAULTSORT):(.*?)\}\}")
     ARTIKEL_REGEX = re.compile(r"(Das|Die|Der) (.*)$")
@@ -215,37 +222,30 @@ class PoemList(ListBot):
                 if self.ZEILE_REGEX.search(line):
                     return self._clean_first_line(lines_list[idx - 4])
         # don't do this for this nights run ... let's see how many empty lines we will get
-        # if match := self.POEM_REGEX.search(text):
-        #     lines: str = match.group(1)
-        #     lines_list = self._split_lines(lines)
-        #     if self.HEADLINE_REGEX.search(lines):
-        #         found = False
-        #         for idx, line in enumerate(lines_list):
-        #             if idx > 3:
-        #                 break
-        #             if self.HEADLINE_REGEX.search(line) and not found:
-        #                 found = True
-        #                 continue
-        #             if found:
-        #                 return self._clean_first_line(line)
-        #     return self._clean_first_line(lines_list[0])
+        if match := self.POEM_REGEX.search(text):
+            lines: str = match.group(1)
+            lines_list = self._split_lines(lines)
+            if not self.HEADLINE_REGEX.search(lines_list[0]):
+                if lines_list[1].strip():
+                    return self._clean_first_line(lines_list[0])
         return ""
 
-    CLEAN_POEM_REGEX = re.compile(r"<poem>")
+    CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
     CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
-    CLEAN_IDT = re.compile(r"^\{\{idt2?[^\}]*?\}\}")
+    CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
+    CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
 
     def _clean_first_line(self, line: str) -> str:
-        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT]:
+        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT, self.CLEAN_INFO_BOX]:
             line = regex.sub("", line)
         if line == "}}":
             return ""
         return line.strip(" :")
 
-    @staticmethod
-    def _split_lines(lines: str) -> list[str]:
+    def _split_lines(self, lines: str) -> list[str]:
         lines_list = []
         for line in lines.splitlines():
+            line = self.CLEAN_POEM_REGEX.sub("", line)
             if line.strip():
                 lines_list.append(line)
         return lines_list
@@ -278,12 +278,10 @@ class PoemList(ListBot):
                 has_first_line += 1
         self.logger.info(f"{(has_first_line / len(self.data)) * 100:.2f}% of poems have a first line.")
 
-    TITLE_LINK_REGEX = re.compile(r"\[\[([^\]\|]*?)(?:\|.*?)?\]\]")
+    TITLE_LINK_REGEX = re.compile(r"\[\[(?:[^\]\|]*?\|)?(.*?)\]\]")
 
     def clean_lemma_link(self, potential_link: str) -> str:
-        if match := self.TITLE_LINK_REGEX.search(potential_link):
-            return match.group(1)
-        return potential_link
+        return self.TITLE_LINK_REGEX.sub(r"\1", potential_link)
 
 
 if __name__ == "__main__":

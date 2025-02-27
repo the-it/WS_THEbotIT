@@ -55,7 +55,8 @@ class TestPoemList(TestCloudBase):
     def test_get_print_title(self):
         compare("[[lemma]]", self.poem_list.get_print_title({"title": "lemma", "lemma": "lemma"}))
         compare("[[lemma|title]]", self.poem_list.get_print_title({"title": "title", "lemma": "lemma"}))
-        compare("data-sort-value=\"lemma #Das\"|[[lemma|Das lemma]]", self.poem_list.get_print_title({"title": "Das lemma", "lemma": "lemma", "sortkey": "lemma #Das"}))
+        compare("data-sort-value=\"lemma #Das\"|[[lemma|Das lemma]]",
+                self.poem_list.get_print_title({"title": "Das lemma", "lemma": "lemma", "sortkey": "lemma #Das"}))
 
     def test_get_print_author(self):
         given = {"author": "Karl Marx"}
@@ -78,7 +79,8 @@ class TestPoemList(TestCloudBase):
         compare("1930", self.poem_list.get_year({"creation": "", "publish": "1930"}))
         compare("", self.poem_list.get_year({"creation": "", "publish": ""}))
         compare("1234", self.poem_list.get_year({"creation": "[1234]"}))
-        compare("data-sort-value=\"1919-12-12\"|12. Dezember 1919", self.poem_list.get_year({"creation": "12. Dezember 1919"}))
+        compare("data-sort-value=\"1919-12-12\"|12. Dezember 1919",
+                self.poem_list.get_year({"creation": "12. Dezember 1919"}))
         compare("off", self.poem_list.get_year({"creation": "off"}))
 
     @real_wiki_test
@@ -146,6 +148,25 @@ class TestPoemList(TestCloudBase):
                 'first_line': 'Wie herrlich leuchtet',
                 'title': 'Mayfest'
             }, poem_dict)
+        poem_dict = {
+            "lemma": lemma.title(),
+            "title": "Mayfest",
+            "author": "Bogus"
+        }
+        poem_list.enrich_dict(lemma, poem_dict)
+        compare(
+            {
+                'author': 'Bogus',
+                'year': '',
+                'first_name': '',
+                'last_name': '',
+                'no_lemma_auth': 'yes',
+                'lemma': 'Mayfest (Johann Wolfgang von Goethe)',
+                'sortkey': 'Mayfest',
+                'sortkey_auth': '',
+                'first_line': 'Wie herrlich leuchtet',
+                'title': 'Mayfest'
+            }, poem_dict)
 
     @real_wiki_test
     def test_enrich_trash_in_author(self):
@@ -169,12 +190,22 @@ class TestPoemList(TestCloudBase):
         compare(expect, self.poem_list.get_first_line(given))
 
     def test_get_first_line_develop(self):
-        text = """Wenn der uralte
-    Heilige Vater
-    Mit gelassener Hand
-    Aus rollenden Wolken
-    {{Zeile|5}}Segnende Blitze"""
-        compare("Wenn der uralte", self.poem_list.get_first_line(text))
+        text = """<poem>
+{{idt2|100}}'''An den Abendstern.'''
+
+Abendstern, du goldenes Licht der lieblichen Cypris!
+Abendstern, der dunkelen Nacht ein heiliger Glanzschmuck;
+</poem>
+<poem>
+Wie vom Mond’ überglänzt, so überglänzend die Sterne.
+Heil dir, Lieber! Und da ich anjetzt zum Schmause des Hirten
+{{Zeile|5}}Geh: so leuchte du mir an statt des freundlichen Mondes,
+Der, heut neu, gar zeitig hinabsteigt. Geh’ ich zum Diebstal
+Ja doch nicht, noch daß ich den nächtlichen Wandrer beraube;
+Sondern ich lieb’; und Liebende mitzulieben, ist artig.
+</poem>
+"""
+        compare("Abendstern, du goldenes Licht der lieblichen Cypris!", self.poem_list.get_first_line(text))
 
     def test_get_sortkey(self):
         compare("Zahnfleischkranke #Der",
@@ -187,11 +218,13 @@ class TestPoemList(TestCloudBase):
                 self.poem_list.get_sortkey({"lemma": "Die Zahnfleischkranke", "title": "Der Zahnfleischkranke"},
                                            "[[Kategorie:Joachim Ringelnatz]]"))
         compare("Morithat #Schauderhafte und gräuliche",
-                self.poem_list.get_sortkey({"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
-                                           "{{SORTIERUNG: Morithat #Schauderhafte und gräuliche}}"))
+                self.poem_list.get_sortkey(
+                    {"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
+                    "{{SORTIERUNG: Morithat #Schauderhafte und gräuliche}}"))
         compare("Asthetik des Kriegs",
-                self.poem_list.get_sortkey({"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
-                                           "{{DEFAULTSORT:Asthetik des Kriegs}}"))
+                self.poem_list.get_sortkey(
+                    {"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
+                    "{{DEFAULTSORT:Asthetik des Kriegs}}"))
 
     def test_get_page_info_gartenlaube(self):
         text = """{{GartenlaubenArtikel
@@ -253,7 +286,8 @@ class TestPoemList(TestCloudBase):
         page = PageMock()
         page.text = text
         page.title_str = "Something_without_a_slash"
-        with self.assertRaisesRegex(ValueError, "Referenced part of the title doesn't exists for Something_without_a_slash"):
+        with self.assertRaisesRegex(ValueError,
+                                    "Referenced part of the title doesn't exists for Something_without_a_slash"):
             self.poem_list.get_page_infos(page)
 
     def test_get_page_info_kapitel_parent_does_not_exist(self):
@@ -278,4 +312,15 @@ class TestPoemList(TestCloudBase):
     def test_clean_lemma_link(self):
         compare("B", self.poem_list.clean_lemma_link("B"))
         compare("B", self.poem_list.clean_lemma_link("[[B]]"))
-        compare("B", self.poem_list.clean_lemma_link("[[B|A]]"))
+        compare("A", self.poem_list.clean_lemma_link("[[B|A]]"))
+        compare("A C", self.poem_list.clean_lemma_link("A [[B|C]]"))
+
+    def test__clean_first_line(self):
+        compare("", self.poem_list._clean_first_line("}}"))
+        compare("", self.poem_list._clean_first_line("<poem>"))
+        compare("", self.poem_list._clean_first_line("</poem>"))
+        compare("rest", self.poem_list._clean_first_line("{{Seite|12}}rest"))
+        compare("rest", self.poem_list._clean_first_line("{{SeitePR1|12}}rest"))
+        compare("rest", self.poem_list._clean_first_line("{{idt}}rest"))
+        compare("rest", self.poem_list._clean_first_line("{{idt2|120}}rest"))
+        compare("", self.poem_list._clean_first_line("|BEARBEITUNGSSTAND=fertig"))
