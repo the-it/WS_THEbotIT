@@ -27,7 +27,7 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 27, 23)
+        self.new_data_model = datetime(2025, 2, 28, 23)
         self.timeout = timedelta(minutes=2)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
@@ -205,8 +205,9 @@ class PoemList(ListBot):
 
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
     ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
-    HEADLINE_REGEX = re.compile(r"'''?.+?'''?")
+    HEADLINE_REGEX = re.compile(r"(?:'''?..+'''?|\{\{Headline|\{\{LineCenterSize|<big>..+</big>)")
     FIRST_LINE_REGEX = re.compile(r"<!-- ?(?:first_line|[eE]rste ?[zZ]eile) ?-->")
+    DOUBLE_NEW_LINE_REGEX = re.compile(r"\n\n")
 
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
@@ -224,19 +225,24 @@ class PoemList(ListBot):
         # don't do this for this nights run ... let's see how many empty lines we will get
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
+            lines = self.DOUBLE_NEW_LINE_REGEX.sub("\n<EMPTY_LINE>\n", lines)
             lines_list = self._split_lines(lines)
-            if not self.HEADLINE_REGEX.search(lines_list[0]):
-                if lines_list[1].strip():
-                    return self._clean_first_line(lines_list[0])
+            with suppress(IndexError):
+                if not self.HEADLINE_REGEX.search(lines_list[0]):
+                    if lines_list[1] != "<EMPTY_LINE>":
+                        return self._clean_first_line(lines_list[0])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
+    CLEAN_PRZU_REGEX = re.compile(r"\{\{PRZU\}\}")
     CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
     CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
+    CLEAN_0 = re.compile(r"^\{\{0\}\}")
 
     def _clean_first_line(self, line: str) -> str:
-        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT, self.CLEAN_INFO_BOX]:
+        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT,
+                      self.CLEAN_INFO_BOX, self.CLEAN_PRZU_REGEX, self.CLEAN_0]:
             line = regex.sub("", line)
         if line == "}}":
             return ""
@@ -245,7 +251,8 @@ class PoemList(ListBot):
     def _split_lines(self, lines: str) -> list[str]:
         lines_list = []
         for line in lines.splitlines():
-            line = self.CLEAN_POEM_REGEX.sub("", line)
+            for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_PRZU_REGEX]:
+                line = regex.sub("", line)
             if line.strip():
                 lines_list.append(line)
         return lines_list

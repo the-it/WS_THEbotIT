@@ -4,8 +4,10 @@ import pywikibot
 from testfixtures import compare
 
 from tools.template_expansion import TemplateExpansion
+from tools.test import real_wiki_test
 
 
+@real_wiki_test
 class TestTemplateExpansion(TestCase):
     wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
 
@@ -131,4 +133,15 @@ Die Weisheit läßt die Schaufel sinken
 |TITEL=Das Glück und die Weisheit
 }}
 {{BlockSatzStart}}"""
+        compare(expect, expander.expand())
+
+    def test_expand_bug_herder(self):
+        # the target lemma for the inclusion has incomplete tags, don't handle such cases
+        text_input = """{{BlockSatzStart}}
+{{SeitePR|30|THEbotIT/tests/template expansion/2|B}}
+{{BlockSatzEnd}}"""
+        expander = TemplateExpansion(text_input, self.wiki)
+        expect = """{{BlockSatzStart}}
+
+{{BlockSatzEnd}}"""
         compare(expect, expander.expand())

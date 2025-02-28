@@ -190,22 +190,26 @@ class TestPoemList(TestCloudBase):
         compare(expect, self.poem_list.get_first_line(given))
 
     def test_get_first_line_develop(self):
-        text = """<poem>
-{{idt2|100}}'''An den Abendstern.'''
+        text = """{{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
 
-Abendstern, du goldenes Licht der lieblichen Cypris!
-Abendstern, der dunkelen Nacht ein heiliger Glanzschmuck;
-</poem>
-<poem>
-Wie vom Mond’ überglänzt, so überglänzend die Sterne.
-Heil dir, Lieber! Und da ich anjetzt zum Schmause des Hirten
-{{Zeile|5}}Geh: so leuchte du mir an statt des freundlichen Mondes,
-Der, heut neu, gar zeitig hinabsteigt. Geh’ ich zum Diebstal
-Ja doch nicht, noch daß ich den nächtlichen Wandrer beraube;
-Sondern ich lieb’; und Liebende mitzulieben, ist artig.
-</poem>
+
+    {{center|'''Abendlandschaft.'''}}
+
+
+    <poem>
+    Der Hirt bläst seine Weise,
+    Von fern ein Schuß noch fällt,
+    Die Wälder rauschen leise
+    Und Ströme tief im Feld.
+
+    Nur hinter jenem Hügel
+    Noch spielt der Abendschein –
+    O hätt’ ich, hätt’ ich Flügel,
+    Zu fliegen da hinein!
+    </poem>
+    {{AlR|'''J. v. Eichendorff.'''}}
 """
-        compare("Abendstern, du goldenes Licht der lieblichen Cypris!", self.poem_list.get_first_line(text))
+        compare("Der Hirt bläst seine Weise,", self.poem_list.get_first_line(text))
 
     def test_get_sortkey(self):
         compare("Zahnfleischkranke #Der",
