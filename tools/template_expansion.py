@@ -32,10 +32,14 @@ class TemplateExpansion:
                 text_to_insert = self.sanitize_included_lemma(
                     pywikibot.Page(self.wiki, f"Seite:{lemma_to_insert}").text)
                 if section:
-                    if match := re.search(rf"<section begin={section} ?/>(.*?)<section end={section} ?/>",
+                    if match := re.search(rf"<section begin=\"?{section}\"? ?/>(.*?)<section end=\"?{section}\"? ?/>",
                                           text_to_insert,
                                           re.DOTALL):
                         text_to_insert = match.group(1)
+                    else:
+                        # if we have a referenced section,
+                        # which isn't present in the target lemma set the text_to_insert empty.
+                        text_to_insert = ""
                 new_parts.append(text_to_insert)
             else:
                 new_parts.append(part)

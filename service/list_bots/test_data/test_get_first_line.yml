@@ -574,3 +574,117 @@ erste_Zeile_to_short_to_analyse:
     </poem>
     {{AlR|Karl Leopold Mayer.}}
   expect: ""
+erste_Zeile_bug_should_be_skipped:
+  given: |
+    <poem>
+    {{idt2}}Einst wirst Du schlummern.
+
+    Ist Nachts auch thränenfeucht Dein Pfühl,
+    Und heiß die ruhelosen Lider,
+    Einst wirst Du schlummern sanft und kühl,
+    Und keine Sorge weckt Dich wieder.
+
+    Vergehe nicht in Angst und Qual,
+    Es eilt die Stunde, Dich zu retten;
+    Vier Breter nur braucht’s dünn und schmal,
+    Ein müdes Menschenherz zu betten.
+
+    Und Du auch findest eine Hand,
+    Die Augen sanft Dir zuzudrücken,
+    Mit einer Blume, einem Band
+    Dir Deinen Sarg noch auszuschmücken.
+
+    Der Tod bringt Ruhe Deinem Harm,
+    Die Dir das Leben nie vergönnte;
+    Halt’ aus: es ist kein Mensch so arm,
+    Daß er nicht endlich sterben könnte.</poem>
+  expect: ""
+erste_Zeile_annoying_lines_in_between:
+  given: |
+    <poem>'''Ach, wenn es nun die Mutter wüsst’.'''
+
+
+    Ach, wenn es nun die Mutter wüsst’,
+    Wie du so wild mich hast geküsst,
+    Sie würde beten ohne Ende,
+    Dass Gott der Herr das Unglück wende.
+    {{PRZU}}</poem>
+    <poem>
+    {{Zeile|5}}Und wenn das mein Herr Bruder wüsst’,
+    Wie du so wild mich hast geküsst,
+    Er eilte wohl mit Windesschnelle
+    Und schlüge tot dich auf der Stelle.
+
+    Doch wenn es meine Schwester wüsst’,
+    {{Zeile|10}}Wie du so wild mich hast geküsst,
+    Auch ''ihr'' Herz würd’ in Sehnsucht schlagen
+    Und Glück und Sünde gern ertragen …
+    </poem>
+    {{AlR|Paul Remer.}}
+  expect: |-
+    Ach, wenn es nun die Mutter wüsst’,
+erste_Zeile_headline:
+  given: |
+    <poem>
+    {{Headline|120|0.15|Achill.}}
+
+    {{Headline|100|0.1|1.}}
+    Durch der Schlachten Gewühl bist du stets sicher gewandelt,
+    Aus Skamanders Gewog tratst du gerettet hervor;
+    Als du der Jungfrau Hand empfiengst im Tempel des Friedens,
+    Göttergleicher Achill! traf dich der tödtliche Pfeil.
+
+    {{Headline|100|0.1|2.}}
+    Dort nun thronet Achill, ein Gott, in der Seligen Lande,
+    Wogen umschlingen es; du, Göttin der Wogen, den Sohn.
+    </poem>
+  expect: ""
+erste_Zeile_big:
+  given: |
+    <poem>{{idt}}<big>{{SperrSchrift|Blühende Dornen.|.2}}</big>
+
+    Am Wege steht ein Strauch,
+    Dem Dornen nur beschieden,
+    Weßhalb er in der Welt
+    Verlassen und gemieden.
+
+    Des Vogels Fittig eilt,
+    An ihm vorbei zu schweifen,
+    Damit die Aeste nicht
+    Den Glanz der Federn streifen.
+
+    Es rauscht an ihm dahin
+    So kalt des Baches Welle;
+    Zum Ort der Ruhe wählt
+    Kein Wand’rer diese Stelle.
+
+    So steht er lange Zeit,
+    Von Trauer übergossen;
+    Da ist ihm über Nacht
+    Ein Blüthenmeer entsprossen.
+
+    Noch mahnt des Winters Spur
+    An Welken und Verblühen,
+    Indeß schon hell an ihm
+    Des Lenzes Herzen glühen.
+
+    Was giebt’s, das seiner Pracht,
+    Dem Schmelz der Blüthen gleiche?
+    Ein König, steht er da
+    Im großen Schöpfungsreiche.
+
+    Es strömt sein Wohlgeruch
+    Empor gleich Opferdüften;
+    Der Lerche Morgenpsalm
+    Erklingt ihm aus den Lüften.
+
+    So ist der Dornenstrauch
+    Zuerst bestimmt auf Erden,
+    Im weiten Frühlingsdom
+    Altar des Herrn zu werden.
+
+    {{idt2|150}}'''Karl Schäfer.'''</poem>
+
+
+    {{line}}
+  expect: ""
