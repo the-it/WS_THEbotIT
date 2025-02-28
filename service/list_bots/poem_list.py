@@ -225,9 +225,10 @@ class PoemList(ListBot):
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
             lines_list = self._split_lines(lines)
-            if not self.HEADLINE_REGEX.search(lines_list[0]):
-                if lines_list[1].strip():
-                    return self._clean_first_line(lines_list[0])
+            with suppress(IndexError):
+                if not self.HEADLINE_REGEX.search(lines_list[0]):
+                    if lines_list[1].strip():
+                        return self._clean_first_line(lines_list[0])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")

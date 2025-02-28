@@ -564,3 +564,13 @@ erste_Zeile_split_by_page_break_2:
     </poem>
   expect: |-
     Hier sass ich, wartend, wartend, – doch auf Nichts,
+erste_Zeile_to_short_to_analyse:
+  given: |
+    {{center|'''Einschlafen.'''}}
+
+
+    <poem>
+    {{Ag|1965}}
+    </poem>
+    {{AlR|Karl Leopold Mayer.}}
+  expect: ""
