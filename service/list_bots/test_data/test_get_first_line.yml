@@ -688,3 +688,16 @@ erste_Zeile_big:
 
     {{line}}
   expect: ""
+clean_0:
+  given: |
+    <poem>{{idt2|50}}'''In Verlegenheit.''' {{0}}(Zu dem Bilde S. 189.)
+    {{0}} A Hochzeit is z’ Ramsau und vom ganz’n Ort
+    San Buab’n und Mad’ln am Tanzbod’n dort.
+    {{0}} ’as Resei und ’s Nannei kema aa her verstohl’n,
+    Zum Tanz’n san s’ z’ jung – aba seh’n hab’n sie ’s woll’n;
+    {{Zeile|5}}Voll Sehnsucht steh’n s’ da und wispern mit’nand
+    Und diam druckt die Oane der Andern die Hand.
+    A’ mei’! Junge Herzen! Was fallt denen all’s ein?
+    Die zwoa möcht’n jedenfalls „älter“ heut’ sein. –
+  expect: |-
+    A Hochzeit is z’ Ramsau und vom ganz’n Ort

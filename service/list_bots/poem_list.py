@@ -238,9 +238,11 @@ class PoemList(ListBot):
     CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
     CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
+    CLEAN_0 = re.compile(r"^\{\{0\}\}")
 
     def _clean_first_line(self, line: str) -> str:
-        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT, self.CLEAN_INFO_BOX, self.CLEAN_PRZU_REGEX]:
+        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT,
+                      self.CLEAN_INFO_BOX, self.CLEAN_PRZU_REGEX, self.CLEAN_0]:
             line = regex.sub("", line)
         if line == "}}":
             return ""
