@@ -701,3 +701,15 @@ clean_0:
     Die zwoa möcht’n jedenfalls „älter“ heut’ sein. –
   expect: |-
     A Hochzeit is z’ Ramsau und vom ganz’n Ort
+skip_first_empty_line:
+  given: |
+    <poem>
+
+    Die Schwesternstädte an dem Strand’ des Rheins,
+    Köln, Bonn und Koblenz, Bingen, gold’nes Mainz,
+    Auch Oppenheim, Worms, Speyer, die gefunden
+    Man vor Jahrhunderten im Städtebund verbunden,
+
+    </poem>
+  expect: |-
+    Die Schwesternstädte an dem Strand’ des Rheins,

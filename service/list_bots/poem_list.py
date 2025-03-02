@@ -130,8 +130,8 @@ class PoemList(ListBot):
         if has_value("title", item_dict):
             alternative_sortkey = item_dict["title"]
         if match := self.ARTIKEL_REGEX.search(alternative_sortkey):
-            return f"{match.group(2)} #{match.group(1)}"
-        return alternative_sortkey
+            alternative_sortkey =  f"{match.group(2)} #{match.group(1)}"
+        return alternative_sortkey.strip("\"")
 
     def print_list(self, item_list: list[dict[str, str]]) -> str:
         start_of_run = self.status.current_run.start_time
@@ -208,6 +208,7 @@ class PoemList(ListBot):
     HEADLINE_REGEX = re.compile(r"(?:'''?..+'''?|\{\{Headline|\{\{LineCenterSize|<big>..+</big>)")
     FIRST_LINE_REGEX = re.compile(r"<!-- ?(?:first_line|[eE]rste ?[zZ]eile) ?-->")
     DOUBLE_NEW_LINE_REGEX = re.compile(r"\n\n")
+    EMPTY_LINE = "<EMPTY_LINE>"
 
     def get_first_line(self, text):
         text = TemplateExpansion(text, self.wiki).expand()
@@ -225,12 +226,16 @@ class PoemList(ListBot):
         # don't do this for this nights run ... let's see how many empty lines we will get
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
-            lines = self.DOUBLE_NEW_LINE_REGEX.sub("\n<EMPTY_LINE>\n", lines)
+            lines = self.DOUBLE_NEW_LINE_REGEX.sub(f"\n{self.EMPTY_LINE}\n", lines)
             lines_list = self._split_lines(lines)
+            # find first non empty line
+            for idx, line in enumerate(lines_list):
+                if line != self.EMPTY_LINE:
+                    break
             with suppress(IndexError):
-                if not self.HEADLINE_REGEX.search(lines_list[0]):
-                    if lines_list[1] != "<EMPTY_LINE>":
-                        return self._clean_first_line(lines_list[0])
+                if not self.HEADLINE_REGEX.search(lines_list[idx]):
+                    if lines_list[idx + 1] != self.EMPTY_LINE:
+                        return self._clean_first_line(lines_list[idx])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
