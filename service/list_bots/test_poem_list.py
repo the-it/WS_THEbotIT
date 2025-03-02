@@ -189,27 +189,17 @@ class TestPoemList(TestCloudBase):
     def test_get_first_line(self, given, expect):
         compare(expect, self.poem_list.get_first_line(given))
 
+    def test_bad_expansion(self):
+        poem_list = PoemList(self.wiki)
+        text_input = """{{BlockSatzStart}}
+    {{SeitePR|30|THEbotIT/tests/template expansion/2|B}}
+    {{BlockSatzEnd}}"""
+        compare("", poem_list.get_first_line(text_input))
+
     def test_get_first_line_develop(self):
-        text = """{{BRU|Die Gartenlaube (1888) b 153.jpg|center|500|||center}}
-
-
-    {{center|'''Abendlandschaft.'''}}
-
-
-    <poem>
-    Der Hirt bläst seine Weise,
-    Von fern ein Schuß noch fällt,
-    Die Wälder rauschen leise
-    Und Ströme tief im Feld.
-
-    Nur hinter jenem Hügel
-    Noch spielt der Abendschein –
-    O hätt’ ich, hätt’ ich Flügel,
-    Zu fliegen da hinein!
-    </poem>
-    {{AlR|'''J. v. Eichendorff.'''}}
+        text = """
 """
-        compare("Der Hirt bläst seine Weise,", self.poem_list.get_first_line(text))
+        compare("", self.poem_list.get_first_line(text))
 
     def test_get_sortkey(self):
         compare("Zahnfleischkranke #Der",
@@ -229,6 +219,10 @@ class TestPoemList(TestCloudBase):
                 self.poem_list.get_sortkey(
                     {"lemma": "Schauderhafte und gräuliche Morithat", "title": "Schauderhafte und gräuliche Morithat"},
                     "{{DEFAULTSORT:Asthetik des Kriegs}}"))
+        compare("Er",
+                self.poem_list.get_sortkey(
+                    {"lemma": "Er (Kämpchen)", "title": "\"Er\""},
+                    ""))
 
     def test_get_page_info_gartenlaube(self):
         text = """{{GartenlaubenArtikel

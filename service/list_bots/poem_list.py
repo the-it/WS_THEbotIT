@@ -27,7 +27,7 @@ class PoemList(ListBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 2, 28, 23)
+        self.new_data_model = datetime(2025, 3, 2, 23)
         self.timeout = timedelta(minutes=2)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
@@ -130,8 +130,8 @@ class PoemList(ListBot):
         if has_value("title", item_dict):
             alternative_sortkey = item_dict["title"]
         if match := self.ARTIKEL_REGEX.search(alternative_sortkey):
-            return f"{match.group(2)} #{match.group(1)}"
-        return alternative_sortkey
+            alternative_sortkey = f"{match.group(2)} #{match.group(1)}"
+        return alternative_sortkey.strip("\"")
 
     def print_list(self, item_list: list[dict[str, str]]) -> str:
         start_of_run = self.status.current_run.start_time
@@ -163,8 +163,8 @@ class PoemList(ListBot):
         string_list.append("|}")
         string_list.append('')
         string_list.append("== Fußnoten ==")
-        string_list.append("<references/>")
-        string_list.append("<references group=\"WS\"/>")
+        string_list.append("{{References|LIN}}")
+        string_list.append("{{References|TIT|WS}}")
         string_list.append('')
         string_list.append("{{SORTIERUNG:Gedichte #Liste der}}")
         string_list.append("[[Kategorie:Listen]]")
@@ -208,9 +208,14 @@ class PoemList(ListBot):
     HEADLINE_REGEX = re.compile(r"(?:'''?..+'''?|\{\{Headline|\{\{LineCenterSize|<big>..+</big>)")
     FIRST_LINE_REGEX = re.compile(r"<!-- ?(?:first_line|[eE]rste ?[zZ]eile) ?-->")
     DOUBLE_NEW_LINE_REGEX = re.compile(r"\n\n")
+    EMPTY_LINE = "<EMPTY_LINE>"
 
     def get_first_line(self, text):
-        text = TemplateExpansion(text, self.wiki).expand()
+        try:
+            text = TemplateExpansion(text, self.wiki).expand()
+        except ValueError as e:
+            self.logger.error(f"Couldn't expand lemma. {e}")
+            return ""
         lines_list = self._split_lines(text)
         # if a first line is annotated, this take precedent
         if self.FIRST_LINE_REGEX.search(text):
@@ -225,12 +230,16 @@ class PoemList(ListBot):
         # don't do this for this nights run ... let's see how many empty lines we will get
         if match := self.POEM_REGEX.search(text):
             lines: str = match.group(1)
-            lines = self.DOUBLE_NEW_LINE_REGEX.sub("\n<EMPTY_LINE>\n", lines)
+            lines = self.DOUBLE_NEW_LINE_REGEX.sub(f"\n{self.EMPTY_LINE}\n", lines)
             lines_list = self._split_lines(lines)
+            # find first non empty line
+            for idx, line in enumerate(lines_list):
+                if line != self.EMPTY_LINE:
+                    break
             with suppress(IndexError):
-                if not self.HEADLINE_REGEX.search(lines_list[0]):
-                    if lines_list[1] != "<EMPTY_LINE>":
-                        return self._clean_first_line(lines_list[0])
+                if not self.HEADLINE_REGEX.search(lines_list[idx]):
+                    if lines_list[idx + 1] != self.EMPTY_LINE:
+                        return self._clean_first_line(lines_list[idx])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
@@ -239,10 +248,11 @@ class PoemList(ListBot):
     CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
     CLEAN_0 = re.compile(r"^\{\{0\}\}")
+    CLEAN_CENTER_1 = re.compile(r"\{\{Center\|<small>1\.<\/small>\}\}")
 
     def _clean_first_line(self, line: str) -> str:
-        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT,
-                      self.CLEAN_INFO_BOX, self.CLEAN_PRZU_REGEX, self.CLEAN_0]:
+        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT, self.CLEAN_INFO_BOX,
+                      self.CLEAN_PRZU_REGEX, self.CLEAN_0, self.CLEAN_CENTER_1]:
             line = regex.sub("", line)
         if line == "}}":
             return ""
