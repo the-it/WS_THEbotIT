@@ -140,8 +140,5 @@ Die Weisheit läßt die Schaufel sinken
         text_input = """{{BlockSatzStart}}
 {{SeitePR|30|THEbotIT/tests/template expansion/2|B}}
 {{BlockSatzEnd}}"""
-        expander = TemplateExpansion(text_input, self.wiki)
-        expect = """{{BlockSatzStart}}
-
-{{BlockSatzEnd}}"""
-        compare(expect, expander.expand())
+        with self.assertRaises(ValueError):
+            TemplateExpansion(text_input, self.wiki).expand()

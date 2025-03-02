@@ -130,7 +130,7 @@ class PoemList(ListBot):
         if has_value("title", item_dict):
             alternative_sortkey = item_dict["title"]
         if match := self.ARTIKEL_REGEX.search(alternative_sortkey):
-            alternative_sortkey =  f"{match.group(2)} #{match.group(1)}"
+            alternative_sortkey = f"{match.group(2)} #{match.group(1)}"
         return alternative_sortkey.strip("\"")
 
     def print_list(self, item_list: list[dict[str, str]]) -> str:
@@ -211,7 +211,11 @@ class PoemList(ListBot):
     EMPTY_LINE = "<EMPTY_LINE>"
 
     def get_first_line(self, text):
-        text = TemplateExpansion(text, self.wiki).expand()
+        try:
+            text = TemplateExpansion(text, self.wiki).expand()
+        except ValueError as e:
+            self.logger.error(f"Couldn't expand lemma. {e}")
+            return ""
         lines_list = self._split_lines(text)
         # if a first line is annotated, this take precedent
         if self.FIRST_LINE_REGEX.search(text):
@@ -244,10 +248,11 @@ class PoemList(ListBot):
     CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
     CLEAN_0 = re.compile(r"^\{\{0\}\}")
+    CLEAN_CENTER_1 = re.compile(r"\{\{Center\|<small>1\.<\/small>\}\}")
 
     def _clean_first_line(self, line: str) -> str:
-        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT,
-                      self.CLEAN_INFO_BOX, self.CLEAN_PRZU_REGEX, self.CLEAN_0]:
+        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT, self.CLEAN_INFO_BOX,
+                      self.CLEAN_PRZU_REGEX, self.CLEAN_0, self.CLEAN_CENTER_1]:
             line = regex.sub("", line)
         if line == "}}":
             return ""

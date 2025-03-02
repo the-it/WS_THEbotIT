@@ -189,6 +189,13 @@ class TestPoemList(TestCloudBase):
     def test_get_first_line(self, given, expect):
         compare(expect, self.poem_list.get_first_line(given))
 
+    def test_bad_expansion(self):
+        poem_list = PoemList(self.wiki)
+        text_input = """{{BlockSatzStart}}
+    {{SeitePR|30|THEbotIT/tests/template expansion/2|B}}
+    {{BlockSatzEnd}}"""
+        compare("", poem_list.get_first_line(text_input))
+
     def test_get_first_line_develop(self):
         text = """
 """

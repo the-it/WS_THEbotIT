@@ -713,3 +713,18 @@ skip_first_empty_line:
     </poem>
   expect: |-
     Die Schwesternstädte an dem Strand’ des Rheins,
+center_first_line:
+  given: |
+    {{Center|<big>{{SperrSchrift|'''DIE JUNGE MAGD'''|0.1}}</big>}}
+    {{Center|{{SperrSchrift|Ludwig von Ficker zugeeignet}}}}
+    {{Center|<small>1.</small>}}Oft am Brunnen, wenn es dämmert,
+    Sieht man sie verzaubert stehen
+    Wasser schöpfen, wenn es dämmert.
+    Eimer auf und niedergehen.
+
+    {{Zeile|5}}In den Buchen Dohlen flattern
+    Und sie gleichet einem Schatten.
+    Ihre gelben Haare flattern
+    Und im Hofe schrein die Ratten.
+  expect: |-
+    Oft am Brunnen, wenn es dämmert,
