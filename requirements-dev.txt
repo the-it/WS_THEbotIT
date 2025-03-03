@@ -8,7 +8,7 @@ annotated-types==0.7.0
     # via pydantic
 astroid==3.3.8
     # via pylint
-authlib==1.5.0
+authlib==1.5.1
     # via safety
 bandit==1.8.3
     # via -r requirements-dev.in
@@ -16,11 +16,11 @@ beautifulsoup4==4.13.3
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   -r requirements-dev.in
-boto3==1.37.3
+boto3==1.37.5
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   moto
-botocore==1.37.3
+botocore==1.37.5
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   boto3
@@ -47,7 +47,7 @@ coverage==7.6.12
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==44.0.1
+cryptography==44.0.2
     # via
     #   authlib
     #   moto
@@ -102,7 +102,7 @@ mccabe==0.7.0
     #   pylint
 mdurl==0.1.2
     # via markdown-it-py
-moto==5.1.0
+moto==5.1.1
     # via -r requirements-dev.in
 mypy==1.15.0
     # via -r requirements-dev.in
@@ -119,7 +119,7 @@ packaging==24.2
     #   marshmallow
     #   safety
     #   safety-schemas
-patool==3.1.3
+patool==4.0.0
     # via -r requirements-dev.in
 pbr==6.1.1
     # via stevedore
@@ -213,7 +213,7 @@ typer==0.15.2
     # via safety
 types-freezegun==1.1.10
     # via -r requirements-dev.in
-types-requests==2.32.0.20241016
+types-requests==2.32.0.20250301
     # via -r requirements-dev.in
 typing-extensions==4.12.2
     # via
