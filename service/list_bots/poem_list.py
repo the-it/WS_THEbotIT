@@ -142,13 +142,13 @@ class PoemList(ListBot):
                            f"die in Wikisource digitalisiert wurden.")
         string_list.append("Die Liste kann mit den Buttons neben den Spaltenüberschriften"
                            " nach der jeweiligen Spalte sortiert werden.")
-        string_list.append("<!--")
         string_list.append("Diese Liste wurde durch ein Computerprogramm erstellt, "
                            "das die Daten verwendet, "
                            "die aus den Infoboxen auf den Gedichtseiten stammen.")
-        string_list.append("Sollten daher Fehler vorhanden sein, "
-                           "sollten diese jeweils dort korrigiert werden.")
-        string_list.append("-->")
+        string_list.append("Fehler in der Liste müssen auf der Gedichtseiten korrigiert werden.")
+        string_list.append("Sollte eine erste Zeile falsch erkannt worden sein vom Algorithmus, "
+                           "kann man dies korrigieren, indem man in der Quellseite der ersten Zeile "
+                           "<code><nowiki><!-- erste Zeile --></nowiki></code> hinzufügt:")
         string_list.append("{|class=\"prettytable sortable tabelle-kopf-fixiert\" {{prettytable}}")
         string_list.append("! Autor")
         string_list.append("! Titel")
