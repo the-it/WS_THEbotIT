@@ -23,11 +23,11 @@ class PoemList(ListBot):
         "creation": "ENTSTEHUNGSJAHR",
         "publish": "ERSCHEINUNGSJAHR",
     }
-    LIST_LEMMA = "Liste der Gedichte/New"
+    LIST_LEMMA = "Liste der Gedichte"
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.new_data_model = datetime(2025, 3, 2, 23)
+        self.new_data_model = datetime(2025, 3, 3, 23)
         self.timeout = timedelta(minutes=2)
 
     def get_lemma_list(self) -> Tuple[list[str], int]:
@@ -142,13 +142,13 @@ class PoemList(ListBot):
                            f"die in Wikisource digitalisiert wurden.")
         string_list.append("Die Liste kann mit den Buttons neben den Spaltenüberschriften"
                            " nach der jeweiligen Spalte sortiert werden.")
-        string_list.append("<!--")
         string_list.append("Diese Liste wurde durch ein Computerprogramm erstellt, "
                            "das die Daten verwendet, "
                            "die aus den Infoboxen auf den Gedichtseiten stammen.")
-        string_list.append("Sollten daher Fehler vorhanden sein, "
-                           "sollten diese jeweils dort korrigiert werden.")
-        string_list.append("-->")
+        string_list.append("Fehler in der Liste müssen auf der Gedichtseiten korrigiert werden.")
+        string_list.append("Sollte eine erste Zeile falsch erkannt worden sein vom Algorithmus, "
+                           "kann man dies korrigieren, indem man in der Quellseite der ersten Zeile "
+                           "<code><nowiki><!-- erste Zeile --></nowiki></code> hinzufügt:")
         string_list.append("{|class=\"prettytable sortable tabelle-kopf-fixiert\" {{prettytable}}")
         string_list.append("! Autor")
         string_list.append("! Titel")
@@ -245,7 +245,7 @@ class PoemList(ListBot):
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
     CLEAN_PRZU_REGEX = re.compile(r"\{\{PRZU\}\}")
     CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
-    CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
+    CLEAN_IDT = re.compile(r"^(?:\{\{[Ii][Dd][Tt]2?[^\}]*?\}\})+")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
     CLEAN_0 = re.compile(r"^\{\{0\}\}")
     CLEAN_CENTER_1 = re.compile(r"\{\{Center\|<small>1\.<\/small>\}\}")
