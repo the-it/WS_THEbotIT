@@ -245,7 +245,7 @@ class PoemList(ListBot):
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")
     CLEAN_PRZU_REGEX = re.compile(r"\{\{PRZU\}\}")
     CLEAN_SEITE_REGEX = re.compile(r"\{\{Seite(?:PR1)?\|[^\}]*?\}\}")
-    CLEAN_IDT = re.compile(r"^\{\{[Ii][Dd][Tt]2?[^\}]*?\}\}")
+    CLEAN_IDT = re.compile(r"^(?:\{\{[Ii][Dd][Tt]2?[^\}]*?\}\})+")
     CLEAN_INFO_BOX = re.compile(r"\|[A-Z]+ ?= ?[a-z]+")
     CLEAN_0 = re.compile(r"^\{\{0\}\}")
     CLEAN_CENTER_1 = re.compile(r"\{\{Center\|<small>1\.<\/small>\}\}")
