@@ -1,10 +1,6 @@
-name: Python lint and test
+name: Integration test
 
 on:
-  pull_request:
-  push:
-    branches:
-      - main
   schedule:
     - cron: '0 0 * * *'  # This runs the workflow every day at midnight UTC
 
