@@ -45,7 +45,7 @@ jobs:
       - name: wikitest
         env:
           WS_REAL_WIKI: 1
-          WS_REAL_WIKI_PART: matrix.partition
+          WS_REAL_WIKI_PART: "${{ matrix.partition }}"
           WS_REAL_WIKI_PARTITIONS: 4
           PYTHONUNBUFFERED: 1
         run: nose2 -v --with-coverage && coverage xml
