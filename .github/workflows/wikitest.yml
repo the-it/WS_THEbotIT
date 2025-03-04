@@ -1,0 +1,36 @@
+name: Wikitests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  wikitest:
+    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        partition: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
+      - name: wikitest
+        env:
+          WS_REAL_WIKI: 1
+#          WS_REAL_WIKI_PART: "${{ matrix.partition }}"
+#          WS_REAL_WIKI_PARTITIONS: 4
+          PYTHONUNBUFFERED: 1
+        run: nose2 -v --with-coverage && coverage xml
+      - name: Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          use_oidc: true
+#          flags: "wiki${{ matrix.partition }}"
+          flags: wiki
+        if: always()
