@@ -13,9 +13,9 @@ permissions:
 jobs:
   wikitest:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        partition: [0, 1, 2, 3]
+#    strategy:
+#      matrix:
+#        partition: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
@@ -23,13 +23,14 @@ jobs:
       - name: wikitest
         env:
           WS_REAL_WIKI: 1
-          WS_REAL_WIKI_PART: "${{ matrix.partition }}"
-          WS_REAL_WIKI_PARTITIONS: 4
+#          WS_REAL_WIKI_PART: "${{ matrix.partition }}"
+#          WS_REAL_WIKI_PARTITIONS: 4
           PYTHONUNBUFFERED: 1
         run: nose2 -v --with-coverage && coverage xml
       - name: Codecov
         uses: codecov/codecov-action@v5
         with:
           use_oidc: true
-          flags: "wiki${{ matrix.partition }}"
+#          flags: "wiki${{ matrix.partition }}"
+          flags: wiki
         if: always()
