@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        partition: [0, 1, 2, 3]
+        partition: [0]
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
@@ -39,7 +39,7 @@ jobs:
         env:
           WS_REAL_WIKI: 1
           WS_REAL_WIKI_PART: "${{ matrix.partition }}"
-          WS_REAL_WIKI_PARTITIONS: 4
+          WS_REAL_WIKI_PARTITIONS: 1
           PYTHONUNBUFFERED: 1
         run: nose2 -v --with-coverage && coverage xml
       - name: Codecov
