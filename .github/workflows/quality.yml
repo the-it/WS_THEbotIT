@@ -1,0 +1,30 @@
+name: Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
+      - name: flake8
+        run: make flake8
+      - name: pycodestyle
+        run: make pycodestyle
+        if: always()
+      - name: pylint
+        run: make pylint
+        if: always()
+      - name: mypy
+        run: make mypy
+        if: always()
