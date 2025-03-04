@@ -36,8 +36,6 @@ jobs:
     strategy:
       matrix:
         partition: [0, 1, 2, 3]
-#    with:
-#      title: "Wikitest for partition ${{ matrix.partition }}."
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
@@ -53,7 +51,7 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           use_oidc: true
-          flags: wiki
+          flags: "wiki${{ matrix.partition }}"
         if: always()
 
   integration_test:
