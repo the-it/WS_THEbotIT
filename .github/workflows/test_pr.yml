@@ -36,8 +36,8 @@ jobs:
     strategy:
       matrix:
         partition: [0, 1, 2, 3]
-    with:
-      title: "Wikitest for partition ${{ matrix.partition }}."
+#    with:
+#      title: "Wikitest for partition ${{ matrix.partition }}."
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
