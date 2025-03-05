@@ -90,7 +90,7 @@ class ListBot(CloudBot):
     def post_infos(self):
         pass
 
-    def remove_old_lemmas(self, lemma_list:dict[str, dict[str, str]]) -> None:
+    def remove_old_lemmas(self, lemma_list: dict[str, dict[str, str]]) -> None:
         lemmas_to_remove = set(self.data.keys()).difference(set(lemma_list))
         for key in lemmas_to_remove:
             del self.data[key]
