@@ -29,12 +29,13 @@ class TestAuthorList(TestCloudBase):
         lemma_mock = mock.patch("service.list_bots.author_list.AuthorList.get_lemma_list",
                                 new_callable=mock.MagicMock).start()
         mock.patch("service.list_bots.author_list.Page.save").start()
-        lemma_mock.return_value = ([":Willy_Stöwer"], 1)
+        lemma_mock.return_value = ([":Willy_Stöwer", "something"], 2)
         self.addCleanup(mock.patch.stopall)
         with AuthorList(self.wiki) as bot:
             bot.data.assign_dict({})
             bot.run()
             del bot.data._data[":Willy_Stöwer"]["check"]
+            del bot.data._data["something"]["check"]
             compare(
                 {":Willy_Stöwer":
                     {
@@ -45,7 +46,8 @@ class TestAuthorList(TestCloudBase):
                         "death": "31. Mai 1931",
                         "sortkey": "Stöwer, Willy",
                         "description": "Maler, Illustrator"
-                    }
+                    },
+                    "something": {"lemma": "something"}
                 },
                 bot.data._data
             )

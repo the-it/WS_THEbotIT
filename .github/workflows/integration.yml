@@ -8,42 +8,16 @@ permissions:
   contents: read
 
 jobs:
-  quality:
+  integration_test:
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
         uses: "./.github/actions/dependencies"
-      - name: flake8
-        run: make flake8
-      - name: pycodestyle
-        run: make pycodestyle
-        if: always()
-      - name: pylint
-        run: make pylint
-        if: always()
-      - name: mypy
-        run: make mypy
-        if: always()
-  wikitest:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        partition: [0, 1, 2, 3]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Dependencies
-        uses: "./.github/actions/dependencies"
-      - name: wikitest
+      - name: integration test
         env:
-          WS_REAL_WIKI: 1
-          WS_REAL_WIKI_PART: "${{ matrix.partition }}"
-          WS_REAL_WIKI_PARTITIONS: 4
+          WS_REAL_DATA: 1
           PYTHONUNBUFFERED: 1
-        run: nose2 -v --with-coverage && coverage xml
-      - name: Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          use_oidc: true
-          flags: "wiki${{ matrix.partition }}"
+        run: nose2 -v --with-coverage -s service/ws_re/integration_test
         if: always()
