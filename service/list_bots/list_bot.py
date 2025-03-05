@@ -51,6 +51,7 @@ class ListBot(CloudBot):
 
     def process_lemmas(self):
         lemma_list, unprocessed_lemmas = self.get_lemma_list()
+        self.remove_old_lemmas(lemma_list)
         for idx, lemma in enumerate(lemma_list):
             clean_lemma = lemma.strip(":").replace("_", " ")
             self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} "
@@ -88,3 +89,8 @@ class ListBot(CloudBot):
 
     def post_infos(self):
         pass
+
+    def remove_old_lemmas(self, lemma_list: dict[str, dict[str, str]]) -> None:
+        lemmas_to_remove = set(self.data.keys()).difference(set(lemma_list))
+        for key in lemmas_to_remove:
+            del self.data[key]

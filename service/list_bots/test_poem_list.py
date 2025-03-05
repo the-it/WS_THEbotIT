@@ -91,7 +91,7 @@ class TestPoemList(TestCloudBase):
         lemma_mock.return_value = ([":An_die_Freude_(Schiller)"], 1)
         self.addCleanup(mock.patch.stopall)
         with PoemList(self.wiki) as bot:
-            bot.data.assign_dict({})
+            bot.data.assign_dict({"now_moved_lemma": {"lemma": "should disappear",}})
             bot.run()
             del bot.data[":An_die_Freude_(Schiller)"]["check"]
             compare(
