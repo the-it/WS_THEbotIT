@@ -293,7 +293,7 @@ class PetScan:
         return "".join(question_string)
 
     @staticmethod
-    def _make_plain_list(lemma_list: List[PetscanLemma]) -> List[str]:
+    def make_plain_list(lemma_list: List[PetscanLemma]) -> List[str]:
         return [item["nstext"] + ":" + item["title"] for item in lemma_list]
 
     def run(self) -> List[PetscanLemma]:
@@ -325,10 +325,10 @@ class PetScan:
           * every new lemma
           * old lemmas sorted by dictionary value (probably a timestamp)
         """
-        raw_lemma_list = self._make_plain_list(self.run())
+        raw_lemma_list = self.make_plain_list(self.run())
         if timeframe:
             self.max_age(timeframe)
-            timeframe_list = self._make_plain_list(self.run())
+            timeframe_list = self.make_plain_list(self.run())
         else:
             timeframe_list = []
         # all items which wasn't process before

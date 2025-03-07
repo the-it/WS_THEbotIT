@@ -8,6 +8,7 @@ from pywikibot import Page
 from service.list_bots._base import get_page_infos
 from tools.bots import BotException
 from tools.bots.cloud.cloud_bot import CloudBot
+from tools.petscan import PetScan
 
 
 class ListBot(CloudBot):
@@ -29,6 +30,8 @@ class ListBot(CloudBot):
         return self
 
     def task(self) -> bool:
+        self.logger.info("Remove old lemmas")
+
         self.logger.info("Processing lemmas.")
         self.process_lemmas()
         self.logger.info("Sorting list.")
@@ -50,8 +53,8 @@ class ListBot(CloudBot):
         return get_page_infos(page.text, self.PROPERTY_TEMPLATE, self.PROPERTY_MAPPING)
 
     def process_lemmas(self):
-        lemma_list, unprocessed_lemmas = self.get_lemma_list()
-        self.remove_old_lemmas(lemma_list)
+        self.remove_old_lemmas()
+        lemma_list, unprocessed_lemmas = self.get_combined_lemma_list()
         for idx, lemma in enumerate(lemma_list):
             clean_lemma = lemma.strip(":").replace("_", " ")
             self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} "
@@ -84,13 +87,23 @@ class ListBot(CloudBot):
         pass
 
     @abstractmethod
-    def get_lemma_list(self) -> Tuple[list[str], int]:
+    def get_searcher(self) -> PetScan:
         pass
+
+    def get_combined_lemma_list(self) -> Tuple[list[str], int]:
+        searcher = self.get_searcher()
+        self.logger.info(f"Searching for combined lemma list with {searcher}")
+        return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)
+
+    def get_raw_lemma_list(self) -> list[str]:
+        searcher = self.get_searcher()
+        self.logger.info(f"Searching for raw lemma list with {searcher}")
+        return searcher.make_plain_list(searcher.run())
 
     def post_infos(self):
         pass
 
-    def remove_old_lemmas(self, lemma_list: dict[str, dict[str, str]]) -> None:
-        lemmas_to_remove = set(self.data.keys()).difference(set(lemma_list))
+    def remove_old_lemmas(self) -> None:
+        lemmas_to_remove = set(self.data.keys()).difference(set(self.get_raw_lemma_list()))
         for key in lemmas_to_remove:
             del self.data[key]

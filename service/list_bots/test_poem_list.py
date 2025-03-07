@@ -85,10 +85,13 @@ class TestPoemList(TestCloudBase):
 
     @real_wiki_test
     def test_integration(self):
-        lemma_mock = mock.patch("service.list_bots.poem_list.PoemList.get_lemma_list",
+        lemma_mock = mock.patch("service.list_bots.poem_list.PoemList.get_combined_lemma_list",
+                                new_callable=mock.MagicMock).start()
+        lemma_raw_mock = mock.patch("service.list_bots.poem_list.PoemList.get_raw_lemma_list",
                                 new_callable=mock.MagicMock).start()
         mock.patch("service.list_bots.author_list.Page.save").start()
         lemma_mock.return_value = ([":An_die_Freude_(Schiller)"], 1)
+        lemma_raw_mock.return_value = [":An_die_Freude_(Schiller)"]
         self.addCleanup(mock.patch.stopall)
         with PoemList(self.wiki) as bot:
             bot.data.assign_dict({"now_moved_lemma": {"lemma": "should disappear",}})

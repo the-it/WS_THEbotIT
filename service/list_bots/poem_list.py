@@ -30,15 +30,14 @@ class PoemList(ListBot):
         self.new_data_model = datetime(2025, 3, 3, 23)
         self.timeout = timedelta(minutes=15)
 
-    def get_lemma_list(self) -> Tuple[list[str], int]:
+    def get_searcher(self) -> PetScan:
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Gedicht")
         searcher.add_negative_category("Unkorrigiert")
         searcher.add_negative_category("Unvollständig")
         searcher.set_search_depth(3)
-        self.logger.info(f"Searching for lemmas with {searcher}")
-        return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)
+        return searcher
 
     def sort_to_list(self) -> list[dict[str, str]]:
         poem_list = list(self.data.values())
