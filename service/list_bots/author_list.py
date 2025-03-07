@@ -1,6 +1,5 @@
 from copy import deepcopy
 from datetime import timedelta, datetime
-from typing import Tuple
 
 from pywikibot import Page, Site
 
@@ -25,13 +24,12 @@ class AuthorList(ListBot):
     def get_check_dict(self):
         return {author: self.data[author]["check"] for author in self.data}
 
-    def get_lemma_list(self) -> Tuple[list[str], int]:
+    def get_searcher(self) -> PetScan:
         searcher = PetScan()
         searcher.add_namespace(0)  # search in main namespace
         searcher.add_positive_category("Autoren")
         searcher.add_yes_template("Personendaten")
-        self.logger.info(f"Searching for lemmas with {searcher}")
-        return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)
+        return searcher
 
     def sort_to_list(self) -> list[dict[str, str]]:
         author_list = []
