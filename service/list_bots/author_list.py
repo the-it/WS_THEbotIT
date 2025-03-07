@@ -1,6 +1,5 @@
 from copy import deepcopy
 from datetime import timedelta, datetime
-from typing import Tuple
 
 from pywikibot import Page, Site
 

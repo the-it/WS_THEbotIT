@@ -2,7 +2,6 @@ import re
 from contextlib import suppress
 from datetime import timedelta, datetime
 from functools import lru_cache
-from typing import Tuple
 
 from pywikibot import Site, Page
 from pywikibot.exceptions import InvalidTitleError

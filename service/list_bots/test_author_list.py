@@ -26,9 +26,9 @@ class TestAuthorList(TestCloudBase):
 
     @real_wiki_test
     def test_integration(self):
-        lemma_mock = mock.patch("service.list_bots.author_list.AuthorList.get_combined_lemma_list",
+        lemma_mock = mock.patch("service.list_bots.author_list.PetScan.get_combined_lemma_list",
                                 new_callable=mock.MagicMock).start()
-        lemma_raw_mock = mock.patch("service.list_bots.author_list.AuthorList.get_raw_lemma_list",
+        lemma_raw_mock = mock.patch("service.list_bots.author_list.PetScan.make_plain_list",
                                 new_callable=mock.MagicMock).start()
         mock.patch("service.list_bots.author_list.Page.save").start()
         lemma_mock.return_value = ([":Willy_Stöwer", "something"], 2)
