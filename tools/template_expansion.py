@@ -20,10 +20,10 @@ class TemplateExpansion:
                 text_in_flight = self.replace_templates(lemma_parts, template)
         return text_in_flight
 
-    def replace_templates(self, lemma_parts: list[str], template_handler: str) -> str:
+    def replace_templates(self, lemma_parts: list[str], template_str: str) -> str:
         new_parts = []
         for part in lemma_parts:
-            if template_handler in part:
+            if template_str in part:
                 parameters = TemplateHandler(part).get_parameterlist()
                 section = None
                 lemma_to_insert = parameters[1]["value"]
