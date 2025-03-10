@@ -16,7 +16,7 @@ class TemplateExpansion:
 
     def expand(self) -> str:
         text_in_flight = self.raw
-        while match:= self.TAG_REGEX.search(text_in_flight):
+        while match := self.TAG_REGEX.search(text_in_flight):
             text_in_flight = self.replace_tag(match, text_in_flight)
         for template in ["SeitePR", "PoemPR", "SeiteST"]:
             if f"{template}|" in text_in_flight:
@@ -69,7 +69,7 @@ class TemplateExpansion:
 
     def replace_tag(self, match, text_in_flight: str) -> str:
         text_to_insert = ""
-        for i in range(int(match.group(2)), int(match.group(3))+1):
+        for i in range(int(match.group(2)), int(match.group(3)) + 1):
             text_to_insert += self.sanitize_included_lemma(
                 pywikibot.Page(self.wiki, f"Seite:{match.group(1)}/{i}").text)
         return text_in_flight[0:match.start()] + text_to_insert + text_in_flight[match.end():]
