@@ -12,8 +12,12 @@ class TemplateExpansion:
         self.raw = raw
         self.wiki = wiki
 
+    TAG_REGEX = re.compile(r"<pages index=\"([^\"]*)\" from=(\d{1,4}) to=(\d{1,4}) \/>")
+
     def expand(self) -> str:
         text_in_flight = self.raw
+        while match:= self.TAG_REGEX.search(text_in_flight):
+            text_in_flight = self.replace_tag(match, text_in_flight)
         for template in ["SeitePR", "PoemPR", "SeiteST"]:
             if f"{template}|" in text_in_flight:
                 lemma_parts = self.split_by_template(text_in_flight, template)
@@ -62,3 +66,10 @@ class TemplateExpansion:
                     lemma_parts.append(text_input[position.end:positions[idx + 1].start])
         lemma_parts.append(text_input[positions[-1].end:])
         return lemma_parts
+
+    def replace_tag(self, match, text_in_flight: str) -> str:
+        text_to_insert = ""
+        for i in range(int(match.group(2)), int(match.group(3))+1):
+            text_to_insert += self.sanitize_included_lemma(
+                pywikibot.Page(self.wiki, f"Seite:{match.group(1)}/{i}").text)
+        return text_in_flight[0:match.start()] + text_to_insert + text_in_flight[match.end():]
