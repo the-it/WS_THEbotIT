@@ -44,7 +44,7 @@ class TemplateExpansion:
                         # if we have a referenced section,
                         # which isn't present in the target lemma set the text_to_insert empty.
                         raise ValueError(f"Wasn't able to find complete section {section} "
-                                         f"for page Seite:{lemma_to_insert}.")
+                                         f"for page [https://de.wikisource.org/wiki/Seite:{lemma_to_insert}].")
                 new_parts.append(text_to_insert)
             else:
                 new_parts.append(part)

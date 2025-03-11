@@ -96,7 +96,7 @@ class PoemList(ListBot):
                 item_dict["last_name"] = author_dict["last_name"]
                 item_dict["sortkey_auth"] = author_dict["sortkey"]
             except (ValueError, InvalidTitleError):
-                self.logger.error(f"Can't process author {item_dict['author']} of lemma {item_dict['lemma']}")
+                self.logger.debug(f"Can't process author {item_dict['author']} of lemma {item_dict['lemma']}")
                 item_dict["no_lemma_auth"] = "yes"
         if has_value("title", item_dict):
             item_dict["title"] = self.clean_lemma_link(item_dict["title"])
