@@ -203,7 +203,7 @@ class PoemList(ListBot):
 
     POEM_REGEX = re.compile(r"<poem>(.*?)<\/poem>", re.DOTALL)
     ZEILE_REGEX = re.compile(r"\{\{[Zz]eile\|5\}\}")
-    HEADLINE_REGEX = re.compile(r"(?:'''?..+'''?|\{\{Headline|\{\{LineCenterSize|<big>..+</big>)")
+    HEADLINE_REGEX = re.compile(r"(?:'''?[^']{2,1000}'''?|\{\{Headline|\{\{LineCenterSize|<big>..+<\/big>)")
     FIRST_LINE_REGEX = re.compile(r"<!-- ?(?:first_line|[eE]rste ?[zZ]eile) ?-->")
     DOUBLE_NEW_LINE_REGEX = re.compile(r"\n\n")
     EMPTY_LINE = "<EMPTY_LINE>"

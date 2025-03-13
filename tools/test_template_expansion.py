@@ -199,3 +199,20 @@ Schlagt, Wellen, über mir zusammen!
 {{Zeile|40}}Ich brenne! brenne! kühlet mich!</poem>
 {{BlockSatzEnd}}"""
         compare(expect, expander.expand())
+
+    def test_expand_lst(self):
+        text_input = """{{BlockSatzStart}}
+{{#lst:Seite:Wünschelruthe Ein Zeitblatt 161.jpg|h1}}
+{{BlockSatzEnd}}"""
+        expander = TemplateExpansion(text_input, self.wiki)
+        expect = """{{BlockSatzStart}}
+
+{{Center|'''Von Clotilde de Vallon-Chalys'''}}
+{{Center|(aus dem 15. Jahrhundert)}}
+{{Center|''nach der Ausgabe von Vanderbourg.''}}
+
+
+{{Linie}}
+
+{{BlockSatzEnd}}"""
+        compare(expect, expander.expand())
