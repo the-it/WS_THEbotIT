@@ -728,3 +728,38 @@ center_first_line:
     Und im Hofe schrein die Ratten.
   expect: |-
     Oft am Brunnen, wenn es dämmert,
+first_line_with_bold_first_letter:
+  given: |
+    {{GLÜberschrift|2|130|''Sommerrast''.}}
+    {{GLÜberschrift|3||Von '''Max Hoffmann.'''}}
+
+    {{BRU|Die Gartenlaube (1893) b 465.jpg|center|550|||center}}
+
+    <poem>'''O''' stiller Ort der Einsamkeit,
+    Kein Hauch der Stadt mit ihrem Rauschen!
+    Ihr wirres Hasten liegt so weit,
+    Und ruheschwelgend kann ich lauschen:
+    Ich lieg’ im Grase, halb im Traum,
+    Die Sonne blinzelt durch die Blätter,
+    Und über mir im blauen Raum
+    Jauchzt rastlos Trillern und Geschmetter.
+
+    Ein Wölkchen segelt lässig-leicht,
+    Im Strauche summt ein goldner Käfer,
+    Und kleines Erdenvolk umschleicht
+    Neugierig mich erwachten Schläfer.
+    Die Wiesen streift ein Zug der Luft,
+    Als ob er weich sich wiegen wolle,
+    Und trägt mir zu den zarten Duft
+    Der üppig überblühten Scholle.
+
+    Froh schäkernd auf und nieder fliegt
+    Ein Liebespaar von Schmetterlingen,
+    Dicht an den Horizont geschmiegt
+    Ruft fern ein Dorf mit Glockenklingen;
+    Von Himmel, Erde, Blatt und Kraut
+    Ertönt’s in wundersel’gem Liede,
+    Und alles schmilzt zu einem Laut,
+    Zum sanften Säuseln: Friede! Friede!</poem>
+  expect: |-
+    '''O''' stiller Ort der Einsamkeit,
