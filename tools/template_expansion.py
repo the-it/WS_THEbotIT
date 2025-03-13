@@ -17,9 +17,10 @@ class TemplateExpansion:
 
     def expand(self) -> str:
         text_in_flight = self.raw
+        text_in_flight = text_in_flight.replace("{{#lst:Seite:", "{{#lst||")
         while match := self.TAG_REGEX.search(text_in_flight):
             text_in_flight = self.replace_tag(match, text_in_flight)
-        for template in ["SeitePR", "PoemPR", "SeiteST"]:
+        for template in ["SeitePR", "PoemPR", "SeiteST", "#lst"]:
             if f"{template}|" in text_in_flight:
                 lemma_parts = self.split_by_template(text_in_flight, template)
                 text_in_flight = self.replace_templates(lemma_parts, template)
