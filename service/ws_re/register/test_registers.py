@@ -66,9 +66,9 @@ class TestRegisters(BaseTestRegister):
         copy_tst_data("III_1_alpha", "III_1")
         registers = Registers()
         register_I_1 = registers["I,1"]
-        register_I_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        register_I_1._lemmas[0]._chapters[0].author = "Siegfried"
         register_III_1 = registers["III,1"]
-        register_III_1._lemmas[0]._chapters[0]._dict["author"] = "Siegfried"
+        register_III_1._lemmas[0]._chapters[0].author = "Siegfried"
         registers.persist()
         with open(DataRepo.get_data_path().joinpath("I_1.json"), mode="r", encoding="utf-8") as register_file:
             self.assertTrue("Siegfried" in register_file.read())
