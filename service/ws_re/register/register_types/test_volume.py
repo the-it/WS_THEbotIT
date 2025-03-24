@@ -121,7 +121,7 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         register._lemmas[0]._lemma_dict["previous"] = None
-        register._lemmas[0]._chapters[0]._dict["author"] = "ÄäÖöÜüß"
+        register._lemmas[0]._chapters[0].author = "ÄäÖöÜüß"
         register.persist()
         expect = """[
   {

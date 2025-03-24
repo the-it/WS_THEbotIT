@@ -114,7 +114,10 @@ class Lemma:
         self._chapters = []
         with contextlib.suppress(KeyError):
             for chapter in self._lemma_dict["chapters"]:
-                self._chapters.append(LemmaChapter(chapter))
+                try:
+                    self._chapters.append(LemmaChapter.from_dict(chapter))
+                except TypeError:
+                    raise RegisterException(f"Error init a Lemma chapter from {chapter}")
         if not self.is_valid():
             raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
 
@@ -199,16 +202,16 @@ class Lemma:
     def _get_chapter_dicts(self) -> List[ChapterDict]:
         chapter_list = []
         for chapter in self.chapters:
-            chapter_list.append(chapter.get_dict())
+            chapter_list.append(chapter.to_dict())
         return chapter_list
 
     def is_valid(self) -> bool:
         if "lemma" not in self.keys():
             return False
-        if self._chapters:
-            for chapter in self._chapters:
-                if not chapter.is_valid():
-                    return False
+        # if self._chapters:
+        #     for chapter in self._chapters:
+        #         if not chapter.is_valid():
+        #             return False
         return True
 
     def get_table_row(self, print_volume: bool = False, print_author: bool = True) -> str:

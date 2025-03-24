@@ -120,40 +120,40 @@ class TestLemma(BaseTestRegister):
     def test_get_pages(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("[http://elexikon.ch/RE/I,1_1.png 1]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 1, "end": 1, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 1, "end": 1, "author": "Abel"})))
         compare("[http://elexikon.ch/RE/I,1_5.png 3]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 3, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 3, "author": "Abel"})))
         compare("[http://elexikon.ch/RE/I,1_5.png 5]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 5, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 5, "author": "Abel"})))
         compare("[http://elexikon.ch/RE/I,1_17.png 18]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 18, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 18, "author": "Abel"})))
         compare("[http://elexikon.ch/RE/I,1_197.png 198]-200",
-                re_register_lemma._get_pages(LemmaChapter({"start": 198, "end": 200, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 198, "end": 200, "author": "Abel"})))
 
         re_register_lemma = Lemma(self.basic_dict, self.volumes["R"], self.authors)
         compare("[http://elexikon.ch/RE/R_3.png 3]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 3, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 3, "author": "Abel"})))
 
         re_register_lemma = Lemma(self.basic_dict, self.volumes["V A,1"], self.authors)
         compare("[http://elexikon.ch/RE/VA,1_1.png 1]",
-                re_register_lemma._get_pages(LemmaChapter({"start": 1, "author": "Abel"})))
+                re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 1, "author": "Abel"})))
 
     #http://elexikon.ch/RE/XVIII,3_289.png
     def test_get_author(self):
         re_register_lemma = Lemma(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("Abert", re_register_lemma._get_author_str(
-            LemmaChapter({"start": 1, "end": 2, "author": "Abert"})))
+            LemmaChapter.from_dict({"start": 1, "end": 2, "author": "Abert"})))
 
         # check use case one chapter several authors
         compare("Abert, Herman Abel", re_register_lemma._get_author_str(
-            LemmaChapter({"start": 1, "end": 2, "author": "redirect_list"})))
+            LemmaChapter.from_dict({"start": 1, "end": 2, "author": "redirect_list"})))
 
         # check if author not there
         compare("Tada", re_register_lemma._get_author_str(
-            LemmaChapter({"start": 1, "end": 2, "author": "Tada"})))
+            LemmaChapter.from_dict({"start": 1, "end": 2, "author": "Tada"})))
 
         compare("", re_register_lemma._get_author_str(
-            LemmaChapter({"start": 1, "end": 2})))
+            LemmaChapter.from_dict({"start": 1, "end": 2})))
 
     def test_get_public_domain_year(self):
         # one author

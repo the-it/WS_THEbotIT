@@ -1,44 +1,22 @@
-import contextlib
-from collections import OrderedDict
+from dataclasses import dataclass, fields
 from typing import Optional
 
 from service.ws_re.register._typing import ChapterDict
 
 
+@dataclass(kw_only=True)
 class LemmaChapter:
-    _keys = ["start", "end", "author"]
+    start: int
+    end: Optional[int] = None
+    author: Optional[str] = None
 
-    def __init__(self, chapter_dict: ChapterDict):
-        self._dict = chapter_dict
-
-    def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} - start:{self.start}, end:{self.end}, author:{self.author}>"
-
-    def is_valid(self) -> bool:
-        with contextlib.suppress(TypeError):
-            if "start" in self._dict:
-                return True
-        return False
-
-    def get_dict(self) -> ChapterDict:
-        return_dict: ChapterDict = OrderedDict()  # type: ignore
-        for property_key in self._keys:
-            if property_key in self._dict:
-                return_dict[property_key] = self._dict[property_key]  # type: ignore
+    def to_dict(self) -> ChapterDict:
+        return_dict: ChapterDict = {}
+        for property in fields(self):
+            if value := getattr(self, property.name, None):
+                return_dict[property.name] = value
         return return_dict
 
-    @property
-    def start(self) -> int:
-        return self._dict["start"]
-
-    @property
-    def end(self) -> Optional[int]:
-        if "end" in self._dict:
-            return self._dict["end"]
-        return None
-
-    @property
-    def author(self) -> Optional[str]:
-        if "author" in self._dict.keys():
-            return self._dict["author"]
-        return None
+    @classmethod
+    def from_dict(cls, lemma_dict: ChapterDict) -> 'LemmaChapter':
+        return cls(**lemma_dict)
