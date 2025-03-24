@@ -2,7 +2,6 @@
 from collections import OrderedDict
 from unittest.case import TestCase
 
-from responses import start
 from testfixtures import compare
 
 from service.ws_re.register.lemma_chapter import LemmaChapter

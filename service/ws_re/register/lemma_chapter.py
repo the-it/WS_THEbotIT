@@ -1,4 +1,4 @@
-from dataclasses import dataclass, fields
+from dataclasses import dataclass
 from typing import Optional
 
 from service.ws_re.register._typing import ChapterDict
@@ -11,10 +11,11 @@ class LemmaChapter:
     author: Optional[str] = None
 
     def to_dict(self) -> ChapterDict:
-        return_dict: ChapterDict = {}
-        for property in fields(self):
-            if value := getattr(self, property.name, None):
-                return_dict[property.name] = value
+        return_dict: ChapterDict = {"start": self.start}
+        if self.end:
+            return_dict["end"] = self.end
+        if self.author:
+            return_dict["author"] = self.author
         return return_dict
 
     @classmethod

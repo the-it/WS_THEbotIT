@@ -116,8 +116,8 @@ class Lemma:
             for chapter in self._lemma_dict["chapters"]:
                 try:
                     self._chapters.append(LemmaChapter.from_dict(chapter))
-                except TypeError:
-                    raise RegisterException(f"Error init a Lemma chapter from {chapter}")
+                except TypeError as error:
+                    raise RegisterException(f"Error init a Lemma chapter from {chapter}") from error
         if not self.is_valid():
             raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
 
