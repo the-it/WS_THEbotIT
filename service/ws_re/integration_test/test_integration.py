@@ -78,15 +78,15 @@ class TestIntegrationRegister(parent_class):
         for register in self.registers.volumes.values():
             for i, lemma in enumerate(register):
                 pre_lemma = register[i - 1] if i > 0 else None
-                if pre_lemma and pre_lemma["next"]:
-                    if not pre_lemma["next"] == lemma["lemma"]:  # pragma: no cover
+                if pre_lemma and pre_lemma.next:
+                    if not pre_lemma.next == lemma.lemma:  # pragma: no cover
                         errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register.volume.name} "
                                       f"not the same as pre lemma")
                 with contextlib.suppress(IndexError):
                     post_lemma = register[i + 1]
-                    if post_lemma and post_lemma["previous"]:
-                        if not post_lemma["previous"] == lemma["lemma"]:  # pragma: no cover
-                            errors.append(f"POST lemma name {lemma['lemma']} /{i} in register {register.volume.name} "
+                    if post_lemma and post_lemma.previous:
+                        if not post_lemma.previous == lemma.lemma:  # pragma: no cover
+                            errors.append(f"POST lemma name {lemma.lemma} /{i} in register {register.volume.name} "
                                           f"not the same as post lemma")
         _raise_count_errors(errors)
 
@@ -98,7 +98,7 @@ class TestIntegrationRegister(parent_class):
         for register in self.registers.volumes.values():
             lemmas = {}
             for i, lemma in enumerate(register):
-                lemma = lemma["lemma"]
+                lemma = lemma.lemma
                 if lemma not in lemmas:
                     lemmas[lemma] = i
                 else:
@@ -113,9 +113,9 @@ class TestIntegrationRegister(parent_class):
         mappings = set(self.registers.authors._mapping.keys())
         for register in self.registers.volumes.values():
             for lemma in register:
-                for chapter in lemma.chapters:
+                for chapter in lemma.chapter_objects:
                     if chapter.author and chapter.author not in mappings:  # pragma: no cover
-                        errors.append(f"Author {chapter.author}, {lemma['lemma']}, "
+                        errors.append(f"Author {chapter.author}, {lemma.lemma}, "
                                       f"{register.volume.name} not in mappings.")
         _raise_count_errors(errors)
 
@@ -128,11 +128,11 @@ class TestIntegrationRegister(parent_class):
             for index, lemma in enumerate(register):
                 try:
                     if index:
-                        if abs(lemma.chapters[0].start - register[index - 1].chapters[-1].end) \
+                        if abs(lemma.chapter_objects[0].start - register[index - 1].chapter_objects[-1].end) \
                                 > self._alarming_distance:  # pragma: no cover
                             errors.append(f"{lemma['lemma']}, {register.volume.name} "
                                           f"has difference in columns to pre lemma.")
-                        if abs(lemma.chapters[-1].end - register[index + 1].chapters[0].start) \
+                        if abs(lemma.chapter_objects[-1].end - register[index + 1].chapter_objects[0].start) \
                                 > self._alarming_distance:  # pragma: no cover
                             errors.append(f"{lemma['lemma']}, {register.volume.name} "
                                           f"has difference in columns to post lemma.")

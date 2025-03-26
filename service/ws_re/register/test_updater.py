@@ -22,8 +22,8 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, ["next"])
         post_lemma = register.get_lemma_by_name("Aal")
-        self.assertTrue(post_lemma["redirect"])
-        self.assertIsNone(post_lemma["next"])
+        self.assertTrue(post_lemma.redirect)
+        self.assertIsNone(post_lemma.next)
 
     def test_update_lemma_by_sortkey(self):
         copy_tst_data("I_1_base", "I_1")
@@ -32,10 +32,10 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Äal")
-        compare(True, post_lemma["redirect"])
-        compare("Aal", post_lemma["sort_key"])
+        compare(True, post_lemma.redirect)
+        compare("Aal", post_lemma.to_dict()["sort_key"])
         post_lemma_next = register.get_lemma_by_name("Aarassos")
-        compare("Äal", post_lemma_next["previous"])
+        compare("Äal", post_lemma_next.previous)
 
     def test_update_lemma_by_sortkey_pre_and_post(self):
         copy_tst_data("I_1_base", "I_1")
@@ -44,11 +44,11 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Äarassos")
-        compare("Aarassos", post_lemma["sort_key"])
+        compare("Aarassos", post_lemma.to_dict()["sort_key"])
         post_lemma_previous = register.get_lemma_by_name("Aal")
-        compare("Äarassos", post_lemma_previous["next"])
+        compare("Äarassos", post_lemma_previous.next)
         post_lemma_next = register.get_lemma_by_name("Aba 1")
-        compare("Äarassos", post_lemma_next["previous"])
+        compare("Äarassos", post_lemma_next.previous)
 
     def test_update_lemma_by_sortkey_pre_and_next_lemma_other_name(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -57,15 +57,15 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Ö")
-        compare("O", post_lemma["sort_key"])
+        compare("O", post_lemma.to_dict()["sort_key"])
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("Ö", post_lemma_previous["next"])
+        compare("Ö", post_lemma_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ü")
-        compare("Ö", post_lemma_next["previous"])
+        compare("Ö", post_lemma_next.previous)
         post_lemma_start = register.get_lemma_by_name("Vor A")
-        compare("Ä", post_lemma_start["next"])
+        compare("Ä", post_lemma_start.next)
         post_lemma_end = register.get_lemma_by_name("D")
-        compare("Ü", post_lemma_end["previous"])
+        compare("Ü", post_lemma_end.previous)
 
     def test_update_by_sortkey_raise_error(self):
         copy_tst_data("I_1_update_previous_wrong", "I_1")
@@ -75,9 +75,9 @@ class TestUpdater(BaseTestRegister):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
-        compare("Aarassos", previous_lemma["next"])
+        compare("Aarassos", previous_lemma.next)
         next_lemma = register.get_lemma_by_name("Ab 1")
-        compare("Aarassos", next_lemma["previous"])
+        compare("Aarassos", next_lemma.previous)
 
     def test_update_by_sortkey_raise_error_missing_key(self):
         copy_tst_data("I_1_base", "I_1")
@@ -87,17 +87,17 @@ class TestUpdater(BaseTestRegister):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
-        compare("Aarassos", previous_lemma["next"])
+        compare("Aarassos", previous_lemma.next)
         next_lemma = register.get_lemma_by_name("Aba 1")
-        compare("Aarassos", next_lemma["previous"])
+        compare("Aarassos", next_lemma.previous)
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal"}
         with self.assertRaisesRegex(RegisterException, "!= next lemma name \"Aba 1\""):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
-        compare("Aarassos", previous_lemma["next"])
+        compare("Aarassos", previous_lemma.next)
         next_lemma = register.get_lemma_by_name("Aba 1")
-        compare("Aarassos", next_lemma["previous"])
+        compare("Aarassos", next_lemma.previous)
 
     def test_update_no_update_possible(self):
         copy_tst_data("I_1_base", "I_1")
@@ -118,9 +118,9 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater._try_update_next_and_previous(update_dict, register.get_lemma_by_name("O"))
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("O", post_lemma_previous["next"])
+        compare("O", post_lemma_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ü")
-        compare("O", post_lemma_next["previous"])
+        compare("O", post_lemma_next.previous)
 
     def test_update_next_and_previous_in_normal_update(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -129,12 +129,12 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
-        compare("Ä", post_lemma["previous"])
-        compare("Ü", post_lemma["next"])
+        compare("Ä", post_lemma.previous)
+        compare("Ü", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("O", post_lemma_previous["next"])
+        compare("O", post_lemma_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ü")
-        compare("O", post_lemma_next["previous"])
+        compare("O", post_lemma_next.previous)
 
     def test_update_next_and_previous_in_update_by_sortkey(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -143,12 +143,12 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Ö")
-        compare("Ä", post_lemma["previous"])
-        compare("Ü", post_lemma["next"])
+        compare("Ä", post_lemma.previous)
+        compare("Ü", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("Ö", post_lemma_previous["next"])
+        compare("Ö", post_lemma_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ü")
-        compare("Ö", post_lemma_next["previous"])
+        compare("Ö", post_lemma_next.previous)
 
     def test_update_by_insert(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -157,16 +157,16 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
-        compare("Ä", post_lemma["previous"])
-        compare("Ö", post_lemma["next"])
+        compare("Ä", post_lemma.previous)
+        compare("Ö", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("B", post_lemma_previous["next"])
+        compare("B", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
-        compare("Ä", post_lemma_previous_previous["next"])
+        compare("Ä", post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ö")
-        compare("B", post_lemma_next["previous"])
+        compare("B", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
-        compare("Ö", post_lemma_next_next["previous"])
+        compare("Ö", post_lemma_next_next.previous)
 
     def test_update_by_replace(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -175,16 +175,16 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
-        compare("Ä", post_lemma["previous"])
-        compare("Ü", post_lemma["next"])
+        compare("Ä", post_lemma.previous)
+        compare("Ü", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("B", post_lemma_previous["next"])
+        compare("B", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
-        compare("Ä", post_lemma_previous_previous["next"])
+        compare("Ä", post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ü")
-        compare("B", post_lemma_next["previous"])
+        compare("B", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("D")
-        compare("Ü", post_lemma_next_next["previous"])
+        compare("Ü", post_lemma_next_next.previous)
 
     def test_update_by_insert_after_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -193,14 +193,14 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
-        compare("Ä", post_lemma["previous"])
-        compare(None, post_lemma["next"])
+        compare("Ä", post_lemma.previous)
+        compare(None, post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("B", post_lemma_previous["next"])
+        compare("B", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
-        compare("Ä", post_lemma_previous_previous["next"])
+        compare("Ä", post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("O")
-        compare(None, post_lemma_next["previous"])
+        compare(None, post_lemma_next.previous)
 
     def test_update_by_insert_no_next_exists(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -209,14 +209,14 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
-        compare("Ä", post_lemma["previous"])
-        compare(None, post_lemma["next"])
+        compare("Ä", post_lemma.previous)
+        compare(None, post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("B", post_lemma_previous["next"])
+        compare("B", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
-        compare("Ä", post_lemma_previous_previous["next"])
+        compare("Ä", post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("O")
-        compare(None, post_lemma_next["previous"])
+        compare(None, post_lemma_next.previous)
 
     def test_update_by_insert_before_next(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -225,14 +225,14 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
-        compare(None, post_lemma["previous"])
-        compare("Ö", post_lemma["next"])
+        compare(None, post_lemma.previous)
+        compare("Ö", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("A")
-        compare(None, post_lemma_previous["next"])
+        compare(None, post_lemma_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ö")
-        compare("B", post_lemma_next["previous"])
+        compare("B", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
-        compare("Ö", post_lemma_next_next["previous"])
+        compare("Ö", post_lemma_next_next.previous)
 
     def test_update_by_insert_before_next_no_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -241,14 +241,14 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("B")
-        compare(None, post_lemma["previous"])
-        compare("Ö", post_lemma["next"])
+        compare(None, post_lemma.previous)
+        compare("Ö", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("A")
-        compare(None, post_lemma_previous["next"])
+        compare(None, post_lemma_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ö")
-        compare("B", post_lemma_next["previous"])
+        compare("B", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
-        compare("Ö", post_lemma_next_next["previous"])
+        compare("Ö", post_lemma_next_next.previous)
 
     def test_update_create_next_previous_supplement_by_sort_key(self):
         copy_tst_data("I_1_sorting2", "S I")
@@ -257,16 +257,16 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("Ö")
-        compare("N", post_lemma["previous"])
-        compare("P", post_lemma["next"])
+        compare("N", post_lemma.previous)
+        compare("P", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("N")
-        compare("Ö", post_lemma_previous["next"])
+        compare("Ö", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("A")
-        compare(None, post_lemma_previous_previous["next"])
+        compare(None, post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("P")
-        compare("Ö", post_lemma_next["previous"])
+        compare("Ö", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
-        compare(None, post_lemma_next_next["previous"])
+        compare(None, post_lemma_next_next.previous)
         self.assertTrue(register.get_index_of_lemma("A") <
                         register.get_index_of_lemma("N") <
                         register.get_index_of_lemma("Ö") <
@@ -280,16 +280,16 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
-        compare("N", post_lemma["previous"])
-        compare("P", post_lemma["next"])
+        compare("N", post_lemma.previous)
+        compare("P", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("N")
-        compare("O", post_lemma_previous["next"])
+        compare("O", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("A")
-        compare(None, post_lemma_previous_previous["next"])
+        compare(None, post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("P")
-        compare("O", post_lemma_next["previous"])
+        compare("O", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
-        compare(None, post_lemma_next_next["previous"])
+        compare(None, post_lemma_next_next.previous)
         self.assertTrue(register.get_index_of_lemma("A") <
                         register.get_index_of_lemma("N") <
                         register.get_index_of_lemma("O") <
@@ -303,16 +303,16 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
-        compare("Ä", post_lemma["previous"])
-        compare("P", post_lemma["next"])
+        compare("Ä", post_lemma.previous)
+        compare("P", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("Ä")
-        compare("O", post_lemma_previous["next"])
+        compare("O", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("Vor A")
-        compare("Ä", post_lemma_previous_previous["next"])
+        compare("Ä", post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("P")
-        compare("O", post_lemma_next["previous"])
+        compare("O", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
-        compare(None, post_lemma_next_next["previous"])
+        compare(None, post_lemma_next_next.previous)
         self.assertTrue(register.get_index_of_lemma("Vor A") <
                         register.get_index_of_lemma("Ä") <
                         register.get_index_of_lemma("O") <
@@ -326,16 +326,16 @@ class TestUpdater(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
         post_lemma = register.get_lemma_by_name("O")
-        compare("N", post_lemma["previous"])
-        compare("Ü", post_lemma["next"])
+        compare("N", post_lemma.previous)
+        compare("Ü", post_lemma.next)
         post_lemma_previous = register.get_lemma_by_name("N")
-        compare("O", post_lemma_previous["next"])
+        compare("O", post_lemma_previous.next)
         post_lemma_previous_previous = register.get_lemma_by_name("A")
-        compare(None, post_lemma_previous_previous["next"])
+        compare(None, post_lemma_previous_previous.next)
         post_lemma_next = register.get_lemma_by_name("Ü")
-        compare("O", post_lemma_next["previous"])
+        compare("O", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("D")
-        compare("Ü", post_lemma_next_next["previous"])
+        compare("Ü", post_lemma_next_next.previous)
         self.assertTrue(register.get_index_of_lemma("A") <
                         register.get_index_of_lemma("N") <
                         register.get_index_of_lemma("O") <
@@ -372,11 +372,11 @@ class TestBugUpdates(BaseTestRegister):
             updater.update_lemma(update_dict, [])
         compare(9, len(register.lemmas))
         post_lemma = register.get_lemma_by_name("O")
-        compare("blub", post_lemma["previous"])
-        compare("A", post_lemma["next"])
+        compare("blub", post_lemma.previous)
+        compare("A", post_lemma.next)
         post_lemma = register.get_lemma_by_name("A")
-        compare("O", post_lemma["previous"])
-        compare("blab", post_lemma["next"])
+        compare("O", post_lemma.previous)
+        compare("blab", post_lemma.next)
         self.assertTrue(register.get_index_of_lemma("A") <
                         register.get_index_of_lemma("blab") <
                         register.get_index_of_lemma("blub") <
@@ -394,11 +394,11 @@ class TestBugUpdates(BaseTestRegister):
             updater.update_lemma(update_dict, [])
         compare(9, len(register.lemmas))
         post_lemma = register.get_lemma_by_name("Ö")
-        compare("blub", post_lemma["previous"])
-        compare("Ä", post_lemma["next"])
+        compare("blub", post_lemma.previous)
+        compare("Ä", post_lemma.next)
         post_lemma = register.get_lemma_by_name("Ä")
-        compare("Ö", post_lemma["previous"])
-        compare("blab", post_lemma["next"])
+        compare("Ö", post_lemma.previous)
+        compare("blab", post_lemma.next)
         self.assertTrue(register.get_index_of_lemma("Ä") <
                         register.get_index_of_lemma("blab") <
                         register.get_index_of_lemma("blub") <
@@ -422,8 +422,8 @@ class TestBugUpdates(BaseTestRegister):
         update_dict = {"lemma": "Prokleides 2", "previous": "Prokleides", "next": "Prokles"}
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
-        compare(None, register.lemmas[0]["previous"])
-        compare(None, register.lemmas[2]["next"])
+        compare(None, register.lemmas[0].previous)
+        compare(None, register.lemmas[2].next)
 
     def test_bug_no_previous_but_not(self):
         copy_tst_data("bug_accaus2", "S I")

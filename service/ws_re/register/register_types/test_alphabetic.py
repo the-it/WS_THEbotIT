@@ -26,21 +26,21 @@ class TestAlphabeticRegister(BaseTestRegister):
         b_register = AlphabeticRegister("be", "zzzzzz", "a", None, self.registers)
         compare(5, len(a_register))
         compare(5, len(b_register))
-        compare("Aal", a_register[0]["lemma"])
-        compare("Baaba", a_register[4]["lemma"])
-        compare("Beta", b_register[0]["lemma"])
-        compare("Vaaa", b_register[4]["lemma"])
-        compare("Ueee", b_register[5]["lemma"])
+        compare("Aal", a_register[0].lemma)
+        compare("Baaba", a_register[4].lemma)
+        compare("Beta", b_register[0].lemma)
+        compare("Vaaa", b_register[4].lemma)
+        compare("Ueee", b_register[5].lemma)
 
     def test_squash_lemmas(self):
         register = AlphabeticRegister("a", "be", None, "zzzzzz", OrderedDict())
-        lemma1 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+        lemma1 = Lemma.from_dict({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
                        Volumes()["I,1"],
                        self.authors)
-        lemma2 = Lemma({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+        lemma2 = Lemma.from_dict({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
                        Volumes()["III,1"],
                        self.authors)
-        lemma3 = Lemma({"lemma": "lemma2", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+        lemma3 = Lemma.from_dict({"lemma": "lemma2", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
                        Volumes()["III,1"],
                        self.authors)
         lemmas = [lemma1, lemma2, lemma3]

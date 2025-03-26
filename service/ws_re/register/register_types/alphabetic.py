@@ -40,10 +40,10 @@ class AlphabeticRegister(Register):
     def _is_lemma_in_range(self, lemma: Lemma) -> bool:
         append = True
         # include start
-        if lemma.sort_key < self._start:
+        if lemma.get_sort_key() < self._start:
             append = False
         # exclude end
-        elif lemma.sort_key >= self._end:
+        elif lemma.get_sort_key() >= self._end:
             append = False
         return append
 

@@ -1,4 +1,4 @@
-from typing import TypedDict, Dict, Union, Literal, List
+from typing import TypedDict, Dict, Union
 
 
 class AuthorDict(TypedDict, total=False):
@@ -12,32 +12,3 @@ class AuthorDict(TypedDict, total=False):
 
 
 CrawlerDict = Dict[str, Union[str, Dict[str, str]]]
-
-
-class ChapterDict(TypedDict, total=False):
-    author: str
-    start: int
-    end: int
-
-
-LemmaDictKeys = Literal["lemma", "previous", "next", "sort_key", "redirect", "proof_read", "short_description",
-                        "no_creative_height", "wp_link", "ws_link", "wd_link", "chapters"]
-LemmaDictItems = Union[str, bool, int, List[ChapterDict]]
-
-
-class LemmaDict(TypedDict, total=False):
-    lemma: str
-    previous: str
-    next: str
-    sort_key: str
-    redirect: Union[str, bool]
-    proof_read: int
-    short_description: str
-    wp_link: str
-    ws_link: str
-    wd_link: str
-    no_creative_height: bool
-    chapters: List[ChapterDict]
-
-
-UpdaterRemoveList = List[str]

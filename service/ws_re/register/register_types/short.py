@@ -32,7 +32,7 @@ class ShortRegister(Register):
 
     def get_register_str(self) -> str:
         table = []
-        for lemma in self.squash_lemmas(sorted(self._lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))):
-            lemma_str = lemma[0]["lemma"]
+        for lemma in self.squash_lemmas(sorted(self._lemmas, key=lambda k: (k.get_sort_key(), k.volume.sort_key))):
+            lemma_str = lemma[0].lemma
             table.append(f"[[RE:{lemma_str}|{lemma_str}]]")
         return " |\n".join(table)

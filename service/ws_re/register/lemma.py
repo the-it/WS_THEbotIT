@@ -2,13 +2,13 @@ import contextlib
 import math
 import re
 import unicodedata
+from dataclasses import dataclass
 from datetime import datetime
-from typing import List, Tuple, KeysView, Optional, Literal, Pattern, get_args
+from typing import List, Tuple, Optional, Literal, Pattern, TypedDict, get_args, Union, cast
 
 from service.ws_re.register._base import RegisterException
-from service.ws_re.register._typing import ChapterDict, LemmaDictKeys, LemmaDictItems, LemmaDict
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.lemma_chapter import LemmaChapter
+from service.ws_re.register.lemma_chapter import LemmaChapter, ChapterDict
 from service.ws_re.volumes import Volume
 
 
@@ -91,74 +91,109 @@ PRE_FINALIZE_REGEX = _generate_pre_finalize_regex()
 TRANSLATION_DICT = _generate_translation_dict()
 
 
-class Lemma:
-    _keys = get_args(LemmaDictKeys)
+LemmaKeys = Literal["lemma", "previous", "next", "sort_key", "redirect", "proof_read",
+                    "short_description", "wp_link", "ws_link", "wd_link", "no_creative_height", "chapters"]
 
-    def __init__(self,
-                 lemma_dict: LemmaDict,
-                 volume: Volume,
-                 authors: Authors):
-        self._lemma_dict: LemmaDict = lemma_dict
-        self._authors: Authors = authors
-        self._volume = volume
-        self._chapters: List[LemmaChapter] = []
-        self._sort_key = ""
+
+UpdaterRemoveList = List[str]
+
+
+class LemmaDict(TypedDict, total=False):
+    lemma: str
+    previous: str
+    next: str
+    sort_key: str
+    redirect: Union[str, bool]
+    proof_read: int
+    short_description: str
+    wp_link: str
+    ws_link: str
+    wd_link: str
+    no_creative_height: bool
+    chapters: List[ChapterDict]
+
+
+@dataclass(kw_only=True)
+class Lemma:
+    lemma: str
+    previous: Optional[str] = None
+    next: Optional[str] = None
+    sort_key: Optional[str] = None
+    redirect: Optional[Union[str, bool]] = None
+    proof_read: Optional[int] = None
+    short_description: Optional[str] = None
+    wp_link: Optional[str] = None
+    ws_link: Optional[str] = None
+    wd_link: Optional[str] = None
+    no_creative_height: Optional[bool] = None
+    chapters: Optional[List[ChapterDict]] = None
+    volume: Volume
+    authors: Authors
+
+    # def __init__(self,
+    #              lemma_dict: LemmaDict,
+    #              volume: Volume,
+    #              authors: Authors):
+    #     self._lemma_dict: LemmaDict = lemma_dict
+    #     self._authors: Authors = authors
+    #     self._volume = volume
+    #     self._chapters: List[LemmaChapter] = []
+    #     self._sort_key = ""
+    #     self._recalc_lemma()
+
+    def __post_init__(self):
+        # pylint: disable=attribute-defined-outside-init
+        self._chapter_objects: list[LemmaChapter] = []
+        self._computed_sort_key: str = ""
         self._recalc_lemma()
 
     def _recalc_lemma(self):
-        if "chapters" in self._lemma_dict and self._lemma_dict["chapters"]:
+        if self.chapters:
             self._init_chapters()
-        self._set_sort_key()
+        self.set_sort_key()
 
     def _init_chapters(self):
-        self._chapters = []
+        # pylint: disable=attribute-defined-outside-init
+        self._chapter_objects = []
         with contextlib.suppress(KeyError):
-            for chapter in self._lemma_dict["chapters"]:
+            for chapter in self.chapters:
                 try:
-                    self._chapters.append(LemmaChapter.from_dict(chapter))
+                    self._chapter_objects.append(LemmaChapter.from_dict(chapter))
                 except TypeError as error:
                     raise RegisterException(f"Error init a Lemma chapter from {chapter}") from error
-        if not self.is_valid():
-            raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
+        # if not self.is_valid():
+        #     raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
 
-    def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} - lemma:{self['lemma']}, previous:{self['previous']}, " \
-               f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
-
-    def __getitem__(self, item: LemmaDictKeys) -> Optional[LemmaDictItems]:
-        try:
-            return self._lemma_dict[item]
-        except KeyError:
-            return None
-
-    def __len__(self):
-        return len(self._lemma_dict)
-
-    def __iter__(self):
-        return iter(self._lemma_dict)
-
-    @property
-    def volume(self) -> Volume:
-        return self._volume
+    # def __repr__(self):  # pragma: no cover
+    #     return f"<{self.__class__.__name__} - lemma:{self['lemma']}, previous:{self['previous']}, " \
+    #            f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
+    #
+    # def __getitem__(self, item: LemmaDictKeys) -> Optional[LemmaDictItems]:
+    #     try:
+    #         return self._lemma_dict[item]
+    #     except KeyError:
+    #         return None
+    #
+    # def __len__(self):
+    #     return len(self._lemma_dict)
+    #
+    # def __iter__(self):
+    #     return iter(self._lemma_dict)
 
     @property
-    def chapters(self) -> List[LemmaChapter]:
-        return self._chapters
+    def chapter_objects(self) -> List[LemmaChapter]:
+        return self._chapter_objects
 
-    @property
-    def sort_key(self) -> str:
-        return self._sort_key
+    def get_sort_key(self) -> str:
+        return self._computed_sort_key
 
-    @property
-    def short_description(self) -> str:
-        return str(self["short_description"]) if self["short_description"] else ""
-
-    def _set_sort_key(self):
-        if self["sort_key"]:
-            lemma = self["sort_key"]
+    def set_sort_key(self):
+        # pylint: disable=attribute-defined-outside-init
+        if self.sort_key:
+            lemma = self.sort_key
         else:
-            lemma = self["lemma"]
-        self._sort_key = self.make_sort_key(lemma)
+            lemma = self.lemma
+        self._computed_sort_key = self.make_sort_key(lemma)
 
     @staticmethod
     def _strip_accents(accent_string: str) -> str:
@@ -183,47 +218,71 @@ class Lemma:
         lemma = lemma.replace(".", " ")
         return lemma.strip()
 
-    def keys(self) -> KeysView[str]:
-        return self._lemma_dict.keys()  # type: ignore  # mypy don't get that TypedDicts are Dicts?
+    # def keys(self) -> KeysView[str]:
+    #     return self._lemma_dict.keys()  # type: ignore  # mypy don't get that TypedDicts are Dicts?
 
-    @property
-    def lemma_dict(self) -> LemmaDict:
+    # def _is_valid_key(self, key: str) -> bool:
+    #     """Check if a string is a valid LemmaDict key."""
+    #     valid_keys: tuple[str, ...] = get_args(LemmaKeys)
+    #     return key in valid_keys
+
+    # def _safe_get_attr(self, key: LemmaKeys) -> Any:
+    #     """Get an attribute value in a type-safe way."""
+    #     if key == "chapters":
+    #         return self._get_chapter_dicts() if self.chapter_objects else None
+    #     return getattr(self, key)
+
+    def to_dict(self) -> LemmaDict:
+        """Convert the lemma object to a dictionary."""
         return_dict: LemmaDict = {}
-        for property_key in self._keys:
-            if property_key in self.keys():
-                if property_key == "chapters":
-                    value = self._get_chapter_dicts()
-                else:
-                    value = self._lemma_dict[property_key]  # type: ignore # TypedDict only works with string literals
-                if value:
-                    return_dict[property_key] = value  # type: ignore # TypedDict only works with string literals
+        valid_keys: tuple[str, ...] = get_args(LemmaKeys)
+
+        for key in valid_keys:
+            if key == "lemma":
+                if self.lemma:
+                    return_dict["lemma"] = self.lemma
+            elif key == "chapters":
+                if self.chapter_objects:
+                    return_dict["chapters"] = self._get_chapter_dicts()
+            else:
+                value = getattr(self, key)
+                if value is not None:
+                    return_dict[cast(LemmaKeys, key)] = value
+
         return return_dict
+
+    @classmethod
+    def from_dict(cls, lemma_dict: LemmaDict, volume: Volume, authors: Authors) -> 'Lemma':
+        try:
+            return Lemma(**lemma_dict, volume=volume, authors=authors)
+        except TypeError as error:
+            raise RegisterException(f"Error creating a Lemma object from dict {lemma_dict}") from error
 
     def _get_chapter_dicts(self) -> List[ChapterDict]:
         chapter_list = []
-        for chapter in self.chapters:
+        for chapter in self.chapter_objects:
             chapter_list.append(chapter.to_dict())
         return chapter_list
 
-    def is_valid(self) -> bool:
-        if "lemma" not in self.keys():
-            return False
-        # if self._chapters:
-        #     for chapter in self._chapters:
-        #         if not chapter.is_valid():
-        #             return False
-        return True
+    # def is_valid(self) -> bool:
+    #     if "lemma" not in self.keys():
+    #         return False
+    #     # if self._chapters:
+    #     #     for chapter in self._chapters:
+    #     #         if not chapter.is_valid():
+    #     #             return False
+    #     return True
 
     def get_table_row(self, print_volume: bool = False, print_author: bool = True) -> str:
         row_string = ["|-"]
         multi_row = ""
-        if len(self._chapters) > 1:
-            multi_row = f"rowspan={len(self._chapters)}"
+        if len(self.chapter_objects) > 1:
+            multi_row = f"rowspan={len(self.chapter_objects)}"
         if print_volume:
             row_string.append(f"{multi_row}|{self.volume.name}".strip())
         status = self.status
-        if self._chapters:
-            for idx, chapter in enumerate(self._chapters):
+        if self.chapter_objects:
+            for idx, chapter in enumerate(self.chapter_objects):
                 row_string.append(self._get_pages(chapter))
                 if print_author:
                     row_string.append(self._get_author_str(chapter))
@@ -242,13 +301,13 @@ class Lemma:
         return link.replace("=", "{{=}}")
 
     def get_link(self) -> str:
-        redirect = self.lemma_dict["redirect"] if "redirect" in self.lemma_dict else False
+        redirect = self.redirect if self.redirect else False
         if redirect:
-            link = f"[[RE:{self['lemma']}|''{{{{Anker2|{self._escape_link_for_templates(str(self['lemma']))}}}}}'']]"
+            link = f"[[RE:{self.lemma}|''{{{{Anker2|{self._escape_link_for_templates(str(self.lemma))}}}}}'']]"
             if isinstance(redirect, str):
                 link += f" → '''[[RE:{redirect}|{redirect}]]'''"
         else:
-            link = f"[[RE:{self['lemma']}|'''{{{{Anker2|{self._escape_link_for_templates(str(self['lemma']))}}}}}''']]"
+            link = f"[[RE:{self.lemma}|'''{{{{Anker2|{self._escape_link_for_templates(str(self.lemma))}}}}}''']]"
         return link
 
     def get_wiki_links(self) -> Tuple[str, str]:
@@ -256,17 +315,17 @@ class Lemma:
         sort_key = ""
         links = []
         sort_keys = []
-        if "wp_link" in self:
+        if self.wp_link:
             link, sort_key = self._process_wiki_link("wp")
             links.append(link)
             sort_keys.append(sort_key)
-        if "ws_link" in self:
+        if self.ws_link:
             link, sort_key = self._process_wiki_link("ws")
             links.append(link)
             sort_keys.append(sort_key)
-        if "wd_link" in self:
-            links.append(f"[[{self['wd_link']}|WD-Item]]")
-            sort_keys.append(f"{self['wd_link']}")
+        if self.wd_link:
+            links.append(f"[[{self.wd_link}|WD-Item]]")
+            sort_keys.append(f"{self.wd_link}")
         if links:
             link = "<br/>".join(links)
             sort_key = f"data-sort-value=\"{sort_keys[0]}\""
@@ -276,8 +335,8 @@ class Lemma:
         link_type: Literal["ws_link", "wp_link"] = "ws_link"
         if wiki_type == "wp":
             link_type = "wp_link"
-        parts = self._lemma_dict[link_type].split(":")
-        return f"[[{self[link_type]}|{self._escape_link_for_templates(parts[-1])}" \
+        parts = getattr(self, link_type).split(":")
+        return f"[[{getattr(self, link_type)}|{self._escape_link_for_templates(parts[-1])}" \
                f"<sup>({wiki_type.upper()} {parts[1]})</sup>]]", \
                f"{parts[0]}:{parts[1]}:{self.make_sort_key(':'.join(parts[2:]))}"
 
@@ -288,7 +347,7 @@ class Lemma:
         return ((math.ceil((lemma_chapter.start + (columns_on_page / 2)) / columns_on_page) - 1) * columns_on_page) + 1
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
-        pages_str = f"[http://elexikon.ch/RE/{self._volume.name.replace(' ', '')}_" \
+        pages_str = f"[http://elexikon.ch/RE/{self.volume.name.replace(' ', '')}_" \
                     f"{self._get_start_column(lemma_chapter)}.png {lemma_chapter.start}]"
         if lemma_chapter.end and lemma_chapter.start != lemma_chapter.end:
             pages_str += f"-{lemma_chapter.end}"
@@ -297,8 +356,8 @@ class Lemma:
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
         author_str = ""
         if lemma_chapter.author:
-            mapped_author = self._authors.get_author_by_mapping(lemma_chapter.author,
-                                                                self._volume.name)
+            mapped_author = self.authors.get_author_by_mapping(lemma_chapter.author,
+                                                               self.volume.name)
             if mapped_author:
                 author_str = ", ".join([author.name for author in mapped_author])
             else:
@@ -307,11 +366,11 @@ class Lemma:
 
     def _get_public_domain_year(self) -> int:
         year = 0
-        for chapter in self.chapters:
+        for chapter in self.chapter_objects:
             if self._get_author_str(chapter):
                 mapped_author = None
                 if chapter.author:
-                    mapped_author = self._authors.get_author_by_mapping(chapter.author, self._volume.name)
+                    mapped_author = self.authors.get_author_by_mapping(chapter.author, self.volume.name)
                 if mapped_author:
                     years = [author.year_public_domain for author in mapped_author if author.year_public_domain]
                     if (tmp_max_year := max(years)) > year:
@@ -330,31 +389,35 @@ class Lemma:
         if pd_year := self._get_public_domain_year():
             current_year = datetime.now().year
             if pd_year > current_year:
-                if not self["no_creative_height"]:
+                if not self.no_creative_height:
                     if self.exists:
                         return str(pd_year), light_yellow
                     return str(pd_year), light_red
 
-        if self["proof_read"] == 2:
+        if self.proof_read == 2:
             return "KOR", korrigiert
-        if self["proof_read"] == 3:
+        if self.proof_read == 3:
             return "FER", fertig
 
         return "UNK", unkorrigiert
 
     def update_lemma_dict(self, update_dict: LemmaDict, remove_items: Optional[List[str]] = None):
-        for item_key in update_dict:
-            # TypedDict only works with string literals
-            self._lemma_dict[item_key] = update_dict[item_key]  # type: ignore
+        """Update lemma attributes from a dictionary."""
+        # Update attributes from the dictionary
+        for key in update_dict:
+            typed_key = cast(LemmaKeys, key)  # Cast to the Literal type for mypy
+            setattr(self, typed_key, update_dict[typed_key])
+
+        # Handle items to remove
         if remove_items:
-            for item in remove_items:
-                if item in self._lemma_dict:
-                    del self._lemma_dict[item]  # type: ignore
+            for key in remove_items:
+                typed_key = cast(LemmaKeys, key)  # Cast to the Literal type for mypy
+                setattr(self, typed_key, None)
+
         self._recalc_lemma()
 
     @property
     def exists(self) -> bool:
-        if self["proof_read"]:
-            if self._lemma_dict["proof_read"] > 1:
-                return True
+        if self.proof_read and self.proof_read > 1:
+            return True
         return False
