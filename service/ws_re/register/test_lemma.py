@@ -1,13 +1,14 @@
 # pylint: disable=no-self-use,protected-access
 import copy
 from collections import OrderedDict
+from typing import cast
 
 from ddt import file_data, ddt
 from testfixtures import compare
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.lemma import Lemma
+from service.ws_re.register.lemma import Lemma, LemmaDict, LemmaKeys
 from service.ws_re.register.lemma_chapter import LemmaChapter
 from service.ws_re.register.test_base import BaseTestRegister
 from service.ws_re.volumes import Volumes
@@ -18,20 +19,21 @@ class TestLemma(BaseTestRegister):
     def setUp(self):
         self.authors = Authors()
         self.volumes = Volumes()
-        self.basic_dict = {"lemma": "lemma", "previous": "previous", "next": "next",
-                           "redirect": True, "chapters": [{"start": 1, "end": 1, "author": "Herman Abel"},
-                                                          {"start": 1, "end": 2, "author": "William Abbott"}]}
+        self.basic_dict: LemmaDict = {"lemma": "lemma", "previous": "previous", "next": "next",
+                                      "redirect": True,
+                                      "chapters": [{"start": 1, "end": 1, "author": "Herman Abel"},
+                                                   {"start": 1, "end": 2, "author": "William Abbott"}]}
 
     def test_from_dict_errors(self):
         for entry in ["lemma"]:
             test_dict = copy.deepcopy(self.basic_dict)
-            del test_dict[entry]
+            del test_dict[cast(LemmaKeys, entry)]
             with self.assertRaises(RegisterException):
                 Lemma.from_dict(test_dict, Volumes()["I,1"], self.authors)
 
         for entry in ["previous", "next", "redirect", "chapters"]:
             test_dict = copy.deepcopy(self.basic_dict)
-            del test_dict[entry]
+            del test_dict[cast(LemmaKeys, entry)]
             self.assertIsNone(getattr(Lemma.from_dict(test_dict, Volumes()["I,1"], self.authors), entry))
 
         re_register_lemma = Lemma.from_dict(self.basic_dict, Volumes()["I,1"], self.authors)

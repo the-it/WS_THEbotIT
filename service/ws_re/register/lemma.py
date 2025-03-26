@@ -130,17 +130,6 @@ class Lemma:
     volume: Volume
     authors: Authors
 
-    # def __init__(self,
-    #              lemma_dict: LemmaDict,
-    #              volume: Volume,
-    #              authors: Authors):
-    #     self._lemma_dict: LemmaDict = lemma_dict
-    #     self._authors: Authors = authors
-    #     self._volume = volume
-    #     self._chapters: List[LemmaChapter] = []
-    #     self._sort_key = ""
-    #     self._recalc_lemma()
-
     def __post_init__(self):
         # pylint: disable=attribute-defined-outside-init
         self._chapter_objects: list[LemmaChapter] = []
@@ -156,29 +145,12 @@ class Lemma:
         # pylint: disable=attribute-defined-outside-init
         self._chapter_objects = []
         with contextlib.suppress(KeyError):
-            for chapter in self.chapters:
-                try:
-                    self._chapter_objects.append(LemmaChapter.from_dict(chapter))
-                except TypeError as error:
-                    raise RegisterException(f"Error init a Lemma chapter from {chapter}") from error
-        # if not self.is_valid():
-        #     raise RegisterException(f"Error init RegisterLemma. Key missing in {self._lemma_dict}")
-
-    # def __repr__(self):  # pragma: no cover
-    #     return f"<{self.__class__.__name__} - lemma:{self['lemma']}, previous:{self['previous']}, " \
-    #            f"next:{self['next']}, chapters:{len(self._chapters)}, volume:{self._volume.name}>"
-    #
-    # def __getitem__(self, item: LemmaDictKeys) -> Optional[LemmaDictItems]:
-    #     try:
-    #         return self._lemma_dict[item]
-    #     except KeyError:
-    #         return None
-    #
-    # def __len__(self):
-    #     return len(self._lemma_dict)
-    #
-    # def __iter__(self):
-    #     return iter(self._lemma_dict)
+            if self.chapters:
+                for chapter in self.chapters:
+                    try:
+                        self._chapter_objects.append(LemmaChapter.from_dict(chapter))
+                    except TypeError as error:
+                        raise RegisterException(f"Error init a Lemma chapter from {chapter}") from error
 
     @property
     def chapter_objects(self) -> List[LemmaChapter]:
@@ -218,20 +190,6 @@ class Lemma:
         lemma = lemma.replace(".", " ")
         return lemma.strip()
 
-    # def keys(self) -> KeysView[str]:
-    #     return self._lemma_dict.keys()  # type: ignore  # mypy don't get that TypedDicts are Dicts?
-
-    # def _is_valid_key(self, key: str) -> bool:
-    #     """Check if a string is a valid LemmaDict key."""
-    #     valid_keys: tuple[str, ...] = get_args(LemmaKeys)
-    #     return key in valid_keys
-
-    # def _safe_get_attr(self, key: LemmaKeys) -> Any:
-    #     """Get an attribute value in a type-safe way."""
-    #     if key == "chapters":
-    #         return self._get_chapter_dicts() if self.chapter_objects else None
-    #     return getattr(self, key)
-
     def to_dict(self) -> LemmaDict:
         """Convert the lemma object to a dictionary."""
         return_dict: LemmaDict = {}
@@ -263,15 +221,6 @@ class Lemma:
         for chapter in self.chapter_objects:
             chapter_list.append(chapter.to_dict())
         return chapter_list
-
-    # def is_valid(self) -> bool:
-    #     if "lemma" not in self.keys():
-    #         return False
-    #     # if self._chapters:
-    #     #     for chapter in self._chapters:
-    #     #         if not chapter.is_valid():
-    #     #             return False
-    #     return True
 
     def get_table_row(self, print_volume: bool = False, print_author: bool = True) -> str:
         row_string = ["|-"]
