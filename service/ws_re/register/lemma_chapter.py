@@ -1,7 +1,11 @@
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, TypedDict
 
-from service.ws_re.register._typing import ChapterDict
+
+class ChapterDict(TypedDict, total=False):
+    author: str
+    start: int
+    end: int
 
 
 @dataclass(kw_only=True)

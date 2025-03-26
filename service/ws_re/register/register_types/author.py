@@ -32,7 +32,7 @@ class AuthorRegister(Register):
         return self._author
 
     def _is_lemma_of_author(self, lemma: Lemma) -> bool:
-        for chapter in lemma.chapters:
+        for chapter in lemma.chapter_objects:
             if chapter.author:
                 authors_of_lemma = self._authors.get_author_by_mapping(chapter.author, lemma.volume.name)
                 if self._author in authors_of_lemma:

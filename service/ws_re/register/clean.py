@@ -48,7 +48,7 @@ class CleanAuthors:
         register_authors = set()
         for register in self.registers.volumes.values():
             for lemma in register:
-                for chapter in lemma.chapters:
+                for chapter in lemma.chapter_objects:
                     if chapter.author:
                         register_authors.add(chapter.author)
         for key in set(self.authors.authors_mapping.keys()).difference(register_authors):

@@ -6,8 +6,9 @@ from typing import List, Tuple, Dict, Optional, Sequence
 import pywikibot
 
 from service.ws_re.register._base import RegisterException
-from service.ws_re.register._typing import ChapterDict, LemmaDict, UpdaterRemoveList
 from service.ws_re.register.author_crawler import AuthorCrawler
+from service.ws_re.register.lemma import LemmaDict, UpdaterRemoveList
+from service.ws_re.register.lemma_chapter import ChapterDict
 from service.ws_re.register.registers import Registers
 from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base_task import ReScannerTask

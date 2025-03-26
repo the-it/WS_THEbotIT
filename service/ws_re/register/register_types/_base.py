@@ -17,7 +17,7 @@ class Register(ABC):
             for lemma in self._registers[volume_str].lemmas:
                 if check_function(lemma):
                     lemmas.append(lemma)
-        self._lemmas = sorted(lemmas, key=lambda k: (k.sort_key, k.volume.sort_key))
+        self._lemmas = sorted(lemmas, key=lambda k: (k.get_sort_key(), k.volume.sort_key))
 
     @property
     def lemmas(self) -> List[Lemma]:
@@ -29,7 +29,7 @@ class Register(ABC):
         last_lemmas: List[Lemma] = []
         for lemma in lemmas:
             if last_lemmas:
-                if lemma["lemma"] == last_lemmas[-1]["lemma"]:
+                if lemma.lemma == last_lemmas[-1].lemma:
                     last_lemmas.append(lemma)
                     continue
                 return_lemmas.append(last_lemmas)
@@ -55,7 +55,7 @@ class Register(ABC):
             table_rows = []
             for lemma in lemmas:
                 # if there are no chapters ... one line must be added no madder what
-                chapter_sum += max(len(lemma.chapters), 1)
+                chapter_sum += max(len(lemma.chapter_objects), 1)
                 table_rows.append(lemma.get_table_row(print_volume=print_volume, print_author=print_author))
             # strip |-/n form the first line it is later replaced by the lemma line
             table_rows[0] = table_rows[0][3:]
@@ -66,9 +66,10 @@ class Register(ABC):
                 multi_chapter = f"rowspan={chapter_sum}"
             multi_chapter_items = ["|-\n|"]
             multi_chapter_items.append(
-                f"{multi_chapter} data-sort-value=\"{lemma.sort_key}\"|{lemma.get_link()}".strip())
+                f"{multi_chapter} data-sort-value=\"{lemma.get_sort_key()}\"|{lemma.get_link()}".strip())
             if print_description:
-                multi_chapter_items.append(f"\n|{multi_chapter}|{lemma.short_description}")
+                multi_chapter_items.append(f"\n|{multi_chapter}|"
+                                           f"{lemma.short_description if lemma.short_description else ''}")
             interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
             multi_chapter_items.append(
                 f"\n|{multi_chapter + '' if multi_chapter else ''}{interwiki_sort_key}|{interwiki_links}")

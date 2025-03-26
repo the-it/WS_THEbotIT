@@ -120,8 +120,8 @@ class TestRegister(BaseTestRegister):
     def test_persist(self):
         copy_tst_data("I_1_two_entries", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        register._lemmas[0]._lemma_dict["previous"] = None
-        register._lemmas[0]._chapters[0].author = "ÄäÖöÜüß"
+        register._lemmas[0].to_dict()["previous"] = None
+        register._lemmas[0].chapter_objects[0].author = "ÄäÖöÜüß"
         register.persist()
         expect = """[
   {
@@ -161,25 +161,25 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma_by_name("Aba 1")
-        compare("Aarassos", lemma["previous"])
+        compare("Aarassos", lemma.previous)
         self.assertIsNone(register.get_lemma_by_name("Abracadabra"))
 
     def test_get_lemma_by_sort_key(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma_by_sort_key("äbÄ 1")
-        compare("Aarassos", lemma["previous"])
+        compare("Aarassos", lemma.previous)
         self.assertIsNone(register.get_lemma_by_name("Abracadabra"))
 
     def test_get_lemma_self_append(self):
         copy_tst_data("I_1_self_append", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register.get_lemma_by_name("Aal")
-        compare(None, lemma["previous"])
+        compare(None, lemma.previous)
         lemma = register.get_lemma_by_name("Aal", self_supplement=True)
-        compare("Something", lemma["previous"])
+        compare("Something", lemma.previous)
         lemma = register.get_lemma_by_sort_key("AAL", self_supplement=True)
-        compare("Something", lemma["previous"])
+        compare("Something", lemma.previous)
         lemma = register.get_lemma_by_name("Something", self_supplement=True)
         compare(None, lemma)
 
@@ -187,7 +187,7 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         lemma = register[2]
-        compare("Aarassos", lemma["previous"])
+        compare("Aarassos", lemma.previous)
         with self.assertRaises(IndexError):
             print(register[8])
 
