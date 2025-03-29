@@ -29,55 +29,64 @@ class TestAuthorList(TestCloudBase):
         lemma_mock = mock.patch("service.list_bots.author_list.PetScan.get_combined_lemma_list",
                                 new_callable=mock.MagicMock).start()
         lemma_raw_mock = mock.patch("service.list_bots.author_list.PetScan.make_plain_list",
-                                new_callable=mock.MagicMock).start()
+                                    new_callable=mock.MagicMock).start()
         mock.patch("service.list_bots.author_list.Page.save").start()
-        lemma_mock.return_value = ([":Willy_Stöwer", "something"], 2)
-        lemma_raw_mock.return_value = [":Willy_Stöwer", "something"]
+        lemma_mock.return_value = ([":Willy_Stöwer", ":David_Hilbert"], 2)
+        lemma_raw_mock.return_value = [":Willy_Stöwer", ":David_Hilbert"]
         self.addCleanup(mock.patch.stopall)
         with AuthorList(self.wiki) as bot:
             bot.data.assign_dict({})
             bot.run()
             del bot.data._data[":Willy_Stöwer"]["check"]
-            del bot.data._data["something"]["check"]
+            del bot.data._data[":David_Hilbert"]["check"]
             compare(
-                {":Willy_Stöwer":
-                    {
-                        "lemma": "Willy Stöwer",
-                        "first_name": "Willy",
-                        "last_name": "Stöwer",
-                        "birth": "22. Mai 1864",
-                        "death": "31. Mai 1931",
-                        "sortkey": "Stöwer, Willy",
-                        "description": "Maler, Illustrator"
-                    },
-                    "something": {"lemma": "something"}
+                {
+                    ":Willy_Stöwer":
+                        {
+                            "lemma": "Willy Stöwer",
+                            "first_name": "Willy",
+                            "last_name": "Stöwer",
+                            "birth": "22. Mai 1864",
+                            "death": "31. Mai 1931",
+                            "sortkey": "Stöwer, Willy",
+                            "description": "Maler, Illustrator"
+                        },
+                    ":David_Hilbert":
+                        {
+                            "birth": "23. Januar 1862",
+                            "death": "14. Februar 1943",
+                            "description": "deutscher Mathematiker",
+                            "first_name": "David",
+                            "last_name": "Hilbert",
+                            "lemma": "David Hilbert",
+                            "sortkey": "Hilbert, David"
+                        }
                 },
                 bot.data._data
             )
 
-
     def test_sorting(self):
         self.author_list.data.assign_dict(
             {
-                    "A (second one)": {
-                        "title": "A (second one)",
-                        "sortkey": "A",
-                        "birth": "2.1.1900",
-                        "death": "2.1.2000"
-                    },
-                    "B": {
-                        "title": "B",
-                        "sortkey": "B",
-                        "birth": "3.3.2000"
-                        ,
-                        "death": "3.3.2100"
-                    },
-                    "A (first one)": {
-                        "title": "A (first one)",
-                        "sortkey": "A",
-                        "birth": "1.1.1900",
-                        "death": "1.1.2000"
-                    }
+                "A (second one)": {
+                    "title": "A (second one)",
+                    "sortkey": "A",
+                    "birth": "2.1.1900",
+                    "death": "2.1.2000"
+                },
+                "B": {
+                    "title": "B",
+                    "sortkey": "B",
+                    "birth": "3.3.2000"
+                    ,
+                    "death": "3.3.2100"
+                },
+                "A (first one)": {
+                    "title": "A (first one)",
+                    "sortkey": "A",
+                    "birth": "1.1.1900",
+                    "death": "1.1.2000"
+                }
             }
         )
         compare(
