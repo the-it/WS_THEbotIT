@@ -63,8 +63,7 @@ class DATATask(ReScannerTask):
             if item_dict_add:
                 data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
                 self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
-            claims_to_remove = claims_to_change["remove"]
-            if claims_to_remove:
+            if claims_to_remove := claims_to_change["remove"]:
                 # if there are claims, that aren't up to date remove them
                 data_item.removeClaims(claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
         except pywikibot.exceptions.NoPageError:
