@@ -1,4 +1,5 @@
 # pylint: disable=protected-access,broad-exception-raised
+# mypy: ignore-errors
 import json
 import os
 import time

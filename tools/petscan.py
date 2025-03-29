@@ -37,10 +37,10 @@ class PetScan:
         self.base_address = "https://petscan.wmflabs.org/"
         self._timeout = 30
         self.options = {}
-        self.categories = {"positive": [], "negative": []}
-        self.templates = {"yes": [], "any": [], "no": []}
-        self.outlinks = {"yes": [], "any": [], "no": []}
-        self.links_to = {"yes": [], "any": [], "no": []}
+        self.categories: dict[str, list[str]] = {"positive": [], "negative": []}
+        self.templates: dict[str, list[str]] = {"yes": [], "any": [], "no": []}
+        self.outlinks: dict[str, list[str]] = {"yes": [], "any": [], "no": []}
+        self.links_to: dict[str, list[str]] = {"yes": [], "any": [], "no": []}
         self.language = "de"
         self.project = "wikisource"
 

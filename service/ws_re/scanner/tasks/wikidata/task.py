@@ -69,7 +69,7 @@ class DATATask(ReScannerTask):
                 data_item.removeClaims(claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
         except pywikibot.exceptions.NoPageError:
             # create a new one from scratch
-            data_item: pywikibot.ItemPage = pywikibot.ItemPage(self.wikidata)
+            data_item = pywikibot.ItemPage(self.wikidata)
             claims_to_change = self._get_claimes_to_change(None)
             item_dict_add = {"claims": self._serialize_claims_to_add(claims_to_change["add"])}
             item_dict_add.update(NonClaims(self.re_page).dict)

@@ -43,7 +43,7 @@ bandit :
 
 mypy :
 	echo "############# MYPY #############"
-	mypy service tools
+	mypy --check-untyped-defs  service tools
 
 flake8 :
 	echo "############ FLAKE8 ############"

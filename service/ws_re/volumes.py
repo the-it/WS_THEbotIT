@@ -163,7 +163,7 @@ class Volumes(OrderedDict):
         yield from main_volumes
 
     @staticmethod
-    def _main_volume_of_volume(volume_key):
+    def _main_volume_of_volume(volume_key) -> str:
         return re.sub(r"\,[1-4]", "", volume_key)
 
     @staticmethod

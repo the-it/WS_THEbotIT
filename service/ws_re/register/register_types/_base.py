@@ -9,12 +9,12 @@ from service.ws_re.register.lemma import Lemma
 class Register(ABC):
     def __init__(self):
         self._lemmas: List[Lemma] = []
-        self._registers: Mapping = None
+        self._registers: Mapping = {}
 
     def _init_lemmas(self, check_function: Callable):
         lemmas = []
-        for volume_str in self._registers:
-            for lemma in self._registers[volume_str].lemmas:
+        for register in self._registers.values():
+            for lemma in register.lemmas:
                 if check_function(lemma):
                     lemmas.append(lemma)
         self._lemmas = sorted(lemmas, key=lambda k: (k.get_sort_key(), k.volume.sort_key))

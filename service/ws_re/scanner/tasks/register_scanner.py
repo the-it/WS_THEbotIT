@@ -241,13 +241,13 @@ class SCANTask(ReScannerTask):
         issues_in_articles = set()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
-            update_dict = {}
-            delete_list = []
+            update_dict: LemmaDict = {}
+            delete_list: UpdaterRemoveList = []
             for fetch_function in function_list_properties:
                 function_dict, function_list = fetch_function(article_list)
                 update_dict.update(function_dict)
                 delete_list += function_list
-            band_info = article_list[0]["BAND"].value
+            band_info = str(article_list[0]["BAND"].value)
             self_supplement = band_info in issues_in_articles
             issues_in_articles.add(band_info)
             self._update_lemma(band_info, delete_list, self_supplement, update_dict)

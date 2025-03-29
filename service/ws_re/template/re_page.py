@@ -1,5 +1,5 @@
 import re
-from typing import Union, List, Optional
+from typing import Union, List, Optional, Iterator
 
 import pywikibot
 
@@ -58,6 +58,9 @@ class RePage:
 
     def __len__(self) -> int:
         return len(self._article_list)
+
+    def __iter__(self) -> Iterator[Union[Article, str]]:
+        yield from self._article_list
 
     def __delitem__(self, idx: int):
         del self._article_list[idx]

@@ -1,5 +1,6 @@
 import re
 from datetime import datetime
+from typing import cast
 
 import pywikibot
 
@@ -32,7 +33,8 @@ class DEALTask(ReScannerTask, ReporterMixin):
             # check properties of REDaten Block first
             if isinstance(article, Article):
                 for prop in ["VORGÄNGER", "NACHFOLGER"]:
-                    link_to_check = article[prop].value
+                    # VORGÄNGER NACHFOLGER are string properties
+                    link_to_check = cast(str, article[prop].value)
                     if link_to_check:
                         self._check_link(link_to_check)
                 # then links in text

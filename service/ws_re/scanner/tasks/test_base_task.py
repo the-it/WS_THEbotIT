@@ -1,4 +1,5 @@
 # pylint: disable=broad-exception-raised
+# mypy: ignore-errors
 from datetime import datetime
 from unittest import TestCase
 
