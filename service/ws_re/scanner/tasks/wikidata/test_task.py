@@ -130,3 +130,45 @@ class TestDATATask(TestCase):
                          'snaktype': 'value'
                          }
         compare(remove_expect, remove_args[0].args[0][0].toJSON()['mainsnak'])
+
+    @real_wiki_test
+    def test_integration_create_page(self):
+        edit_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity",
+                               new_callable=mock.MagicMock).start()
+        mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims",
+                   new_callable=self.NonClaimsFake).start()
+        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+        lemma = pywikibot.Page(WS_WIKI, "Benutzer:THE IT/RE:Aba 1")  # existing wikidata_item
+        data_task = DATATask(WS_WIKI,
+                             WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False),
+                             True)
+        data_task.claim_factories = (self.P50AuthorFake,)
+        self.assertTrue(data_task.run(RePage(lemma)))
+        edit_args = edit_mock.call_args_list
+        edit_expect = {'claims':
+            {'P50': [
+                {'mainsnak':
+                     {'datatype': 'wikibase-item',
+                      'datavalue':
+                          {'type': 'wikibase-entityid',
+                           'value':
+                               {'entity-type': 'item',
+                                'numeric-id': 123456789
+                                }
+                           },
+                      'property': 'P50',
+                      'snaktype': 'value'
+                      },
+                 'rank': 'normal',
+                 'type': 'statement'
+                 }
+            ]},
+            'sitelinks':
+                {'dewikisource':
+                     {'badges': 'blub',
+                      'site': 'dewikisource',
+                      'title': 'something'
+                      }
+                 }
+        }
+        compare(edit_expect, edit_args[0].args[0])
