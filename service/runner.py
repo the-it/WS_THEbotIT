@@ -9,7 +9,6 @@ from service.gl.status import GlStatus
 from service.list_bots.poem_list import PoemList
 from service.ws_re.register.printer import ReRegisterPrinter
 from service.ws_re.scanner.base import ReScanner
-from service.ws_re.status import ReStatus
 from tools.bot_scheduler import BotScheduler
 
 if __name__ == "__main__":
@@ -24,7 +23,7 @@ if __name__ == "__main__":
         3: [],
         4: [],
         5: [],
-        6: [ReStatus, GlCreateMagazine]  # sunday
+        6: [GlCreateMagazine]  # sunday
     }
     SCHEDULER.monthly_bots = {1: [GlStatus]}
     SCHEDULER.bots_on_last_day_of_month = []
