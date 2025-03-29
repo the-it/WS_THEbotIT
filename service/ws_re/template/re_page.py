@@ -8,12 +8,53 @@ from service.ws_re.template.article import Article
 from tools.template_finder import TemplateFinderException, TemplateFinder, TemplatePosition
 
 
+class SplittedArticleList:
+    def __init__(self, article_list: List[Union[Article, str]]):
+        self._article_list = article_list
+        self._splitted_list = self._create_splitted_article_list()
+
+    def _create_splitted_article_list(self) -> List[List[Union[Article, str]]]:
+        """
+        For some tasks it is helpful to group the list of articles to groups of articles splitted at header articles.
+        Example: [RE_Daten, RE_Abschnitt, str, RE_Daten, RE_Daten, str, RE_Abschnitt] ->
+                 [[RE_Daten, RE_Abschnitt, str], [RE_Daten], [RE_Daten, str, RE_Abschnitt]]
+        :return: a list with lists of articles/strings.
+        """
+        splitted_list: List[List[Union[Article, str]]] = []
+        for article in self._article_list:
+            if isinstance(article, Article) and article.article_type == RE_DATEN:
+                splitted_list.append([article])
+            else:
+                try:
+                    splitted_list[-1].append(article)
+                except IndexError:
+                    splitted_list.append([article])
+        return splitted_list
+
+    def __len__(self):
+        return len(self._splitted_list)
+
+    def __getitem__(self,index: int):
+        return self._splitted_list[index]
+
+    @property
+    def raw(self):
+        return self._splitted_list
+
+    @property
+    def first_article(self):
+        for item in self._article_list:
+            if isinstance(item, Article):
+                return item
+
+
 class RePage:
     def __init__(self, wiki_page: pywikibot.Page):
         self.page: pywikibot.Page = wiki_page
         self.pre_text: str = self.page.text
         self._article_list: List[Union[Article, str]] = []
         self._init_page_dict()
+        self.splitted_article_list = SplittedArticleList(self._article_list)
 
     def _init_page_dict(self):
         # find the positions of all key templates
@@ -144,27 +185,6 @@ class RePage:
     @property
     def first_article(self) -> Article:
         return self.only_articles[0]
-
-    @property
-    def splitted_article_list(self) -> List[List[Article]]:
-        """
-        For some tasks it is helpful to group the list of articles to groups of articles splitted at header articles.
-
-        Example: [RE_Daten, RE_Abschnitt, str, RE_Daten, RE_Daten, str, RE_Abschnitt] ->
-                 [[RE_Daten, RE_Abschnitt], [RE_Daten], [RE_Daten, RE_Abschnitt]]
-
-        :return: a list with lists of articles/strings.
-        """
-        splitted_list: List[List[Article]] = []
-        for article in self._article_list:
-            if isinstance(article, str):
-                continue
-            if article.article_type == RE_DATEN:
-                splitted_list.append([article])
-            else:
-                # not a string or a REDaten template append to last added sublist
-                splitted_list[-1].append(article)
-        return splitted_list
 
     @property
     def complex_construction(self) -> bool:
