@@ -9,7 +9,7 @@ from service.ws_re.register.lemma import Lemma
 class Register(ABC):
     def __init__(self):
         self._lemmas: List[Lemma] = []
-        self._registers: Mapping = None
+        self._registers: Mapping = {}
 
     def _init_lemmas(self, check_function: Callable):
         lemmas = []

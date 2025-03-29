@@ -4,7 +4,7 @@ from functools import lru_cache
 from typing import Dict, Generator, List
 
 from service.ws_re.register.author import Author
-from service.ws_re.register._typing import AuthorDict
+from service.ws_re.register._typing import AuthorDict, CrawlerDict
 from service.ws_re.register.repo import DataRepo
 
 
@@ -47,7 +47,7 @@ class Authors:
             author = self._authors[author.redirect]
         return author
 
-    def set_mappings(self, mapping: Dict[str, str]):
+    def set_mappings(self, mapping: CrawlerDict):
         self._mapping.update(mapping)
 
     def set_author(self, mapping: Dict[str, AuthorDict]):

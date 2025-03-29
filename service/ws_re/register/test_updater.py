@@ -4,6 +4,7 @@ from testfixtures import compare
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register._base import RegisterException
+from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types.volume import VolumeRegister
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.register.updater import Updater

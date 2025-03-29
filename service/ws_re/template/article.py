@@ -1,13 +1,14 @@
 from collections.abc import Mapping
 import contextlib
 from datetime import datetime
-from typing import Generator, Optional, List
+from typing import Generator, Optional, List, cast
 
 from service.ws_re import public_domain
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
 from service.ws_re.template._typing import KeyValuePair, ArticleProperties
 from service.ws_re.template.property import Property
 from service.ws_re.template.re_author import REAuthor
+from tools._typing import TemplateParameterDict
 from tools.template_finder import TemplateFinder
 from tools.template_handler import TemplateHandler, TemplateHandlerException
 
@@ -64,6 +65,24 @@ class Article(Mapping):
     def __repr__(self):  # pragma: no cover
         return f"<{self.__class__.__name__} - type:{self._article_type}, author:{self.author}, issue:{self['BAND']}>"
 
+    def __len__(self) -> int:
+        return len(self._properties)
+
+    def __iter__(self) -> Generator[Property, None, None]:
+        yield from self._properties
+
+    def __getitem__(self, item: str) -> Property:
+        for re_property in self._properties:
+            if item == re_property.name:
+                return re_property
+        raise KeyError(f"Key {item} not found in self._properties")
+
+    def __hash__(self):
+        return hash(self._article_type) \
+            + (hash(self._properties) << 1) \
+            + (hash(self._text) << 2) \
+            + (hash(self.author) << 3)
+
     @property
     def article_type(self) -> str:
         return self._article_type
@@ -101,18 +120,6 @@ class Article(Mapping):
                     return False
         return True
 
-    def __len__(self) -> int:
-        return len(self._properties)
-
-    def __iter__(self) -> Generator[Property, None, None]:
-        yield from self._properties
-
-    def __getitem__(self, item: str) -> Property:
-        for re_property in self._properties:
-            if item == re_property.name:
-                return re_property
-        raise KeyError(f"Key {item} not found in self._properties")
-
     def _init_properties(self, properties_dict: Optional[ArticleProperties]):
         if properties_dict:
             for item in properties_dict.items():
@@ -123,19 +130,12 @@ class Article(Mapping):
                         raise ReDatenException(f"Keypair {item} is not permitted.") \
                             from property_error
 
-    def __hash__(self):
-        return hash(self._article_type) \
-            + (hash(self._properties) << 1) \
-            + (hash(self._text) << 2) \
-            + (hash(self.author) << 3)
-
     @classmethod
-    def from_text(cls, article_text):
+    def from_text(cls, article_text: str) -> 'Article':
         """
         main parser function for initiating a ReArticle from a given piece of text.
 
         :param article_text: text that represent a valid ReArticle
-        :rtype: Article
         """
         finder = TemplateFinder(article_text)
         find_re_daten = finder.get_positions(RE_DATEN)
@@ -167,7 +167,8 @@ class Article(Mapping):
             re_author = REAuthor.from_template(find_re_author[0].text)
         except TemplateHandlerException as error:
             raise ReDatenException("Author-Template has the wrong structure.") from error
-        properties_dict = cls._extract_properties(re_start.parameters)
+        # cast to KeyValuePair is valid, as all expected arguments in the template should be named
+        properties_dict = cls._extract_properties(cast(list[KeyValuePair], re_start.parameters))
         return Article(article_type=re_start.title,
                        re_daten_properties=properties_dict,
                        text=article_text[find_re_start[0].end:find_re_author[0].start]
@@ -221,7 +222,7 @@ class Article(Mapping):
     def _get_pre_text(self):
         template_handler = TemplateHandler()
         template_handler.title = RE_DATEN
-        list_of_properties = []
+        list_of_properties: list[TemplateParameterDict] = []
         for re_property in self._properties:
             list_of_properties.append({"key": re_property.name,
                                        "value": re_property.value_to_string()})

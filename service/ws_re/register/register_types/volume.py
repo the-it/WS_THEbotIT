@@ -1,6 +1,6 @@
 import json
 from json import JSONDecodeError
-from typing import Union, Optional, List
+from typing import Union, Optional, List, Iterator
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma, LemmaDict
@@ -29,6 +29,12 @@ class VolumeRegister(Register):
 
     def __len__(self):
         return len(self._lemmas)
+
+    def __getitem__(self, idx: int) -> Lemma:
+        return self.lemmas[idx]
+
+    def __iter__(self) -> Iterator[Lemma]:
+        yield from self.lemmas
 
     @property
     def volume(self) -> Volume:
@@ -73,9 +79,6 @@ class VolumeRegister(Register):
         with open(self.repo.get_data_path().joinpath(f"{self._volume.file_name}.json"),
                   "w", encoding="utf-8") as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
-
-    def __getitem__(self, idx: int) -> Lemma:
-        return self.lemmas[idx]
 
     def get_lemma_by_name(self, lemma_name: str, self_supplement: bool = False) -> Optional[Lemma]:
         found_before = False

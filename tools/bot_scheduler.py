@@ -8,7 +8,7 @@ from pywikibot import Site
 from tools.bots.cloud.cloud_bot import CloudBot
 from tools.bots.pi import CanonicalBot, OneTimeBot
 
-BotList = Optional[List[Type[Union[CanonicalBot, CloudBot]]]]
+BotList = List[Type[Union[CanonicalBot, CloudBot]]]
 
 
 class BotScheduler(CanonicalBot):
