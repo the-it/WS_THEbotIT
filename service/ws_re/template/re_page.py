@@ -48,10 +48,7 @@ class SplittedArticleList:
             if article.article_type == RE_DATEN:
                 splitted_list.append(ArticleList([article]))
             else:
-                try:
-                    splitted_list[-1].append(article)
-                except IndexError:
-                    splitted_list.append(ArticleList([article]))
+                splitted_list[-1].append(article)
         return splitted_list
 
     def __len__(self) -> int:
@@ -62,10 +59,6 @@ class SplittedArticleList:
 
     def __iter__(self) -> Iterator[ArticleList]:
         yield from self._splitted_list
-
-    @property
-    def raw(self) -> list[ArticleList]:
-        return self._splitted_list
 
     @property
     def first_article(self) -> Article:
