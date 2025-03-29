@@ -42,7 +42,7 @@ class ReRegisterPrinter(CanonicalBot):
     def _print_alphabetic(self):
         self.logger.info("Print alphabetic register.")
         for register in self.registers.alphabetic:
-            self.logger.debug(register)
+            self.logger.debug(str(register))
             save_if_changed(Page(self.wiki,
                                  f"Paulys Realencyclopädie der classischen "
                                  f"Altertumswissenschaft/Register/{register.start}"),
@@ -52,7 +52,7 @@ class ReRegisterPrinter(CanonicalBot):
     def _print_pd(self):
         self.logger.info("Print public domain register.")
         for register in self.registers.pd:
-            self.logger.debug(register)
+            self.logger.debug(str(register))
             save_if_changed(Page(self.wiki,
                                  f"Paulys Realencyclopädie der classischen "
                                  f"Altertumswissenschaft/Register/PD {register.year}"),
@@ -62,7 +62,7 @@ class ReRegisterPrinter(CanonicalBot):
     def _print_short(self):
         self.logger.info("Print short register.")
         for register in self.registers.short:
-            self.logger.debug(register)
+            self.logger.debug(str(register))
             save_if_changed(Page(self.wiki,
                                  f"Paulys Realencyclopädie der classischen "
                                  f"Altertumswissenschaft/Register/{register.main_issue} kurz"),
@@ -72,7 +72,7 @@ class ReRegisterPrinter(CanonicalBot):
     def _print_volume(self):
         self.logger.info("Print volume register.")
         for register in self.registers.volumes.values():
-            self.logger.debug(register)
+            self.logger.debug(str(register))
             save_if_changed(Page(self.wiki,
                                  f"Paulys Realencyclopädie der classischen "
                                  f"Altertumswissenschaft/Register/{register.volume.name}"),

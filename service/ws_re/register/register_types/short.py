@@ -12,7 +12,7 @@ class ShortRegister(Register):
         super().__init__()
         self.main_issue: str = main_issue
         self._registers = registers
-        self._init_lemmas()
+        self._init_short_lemmas()
 
     def __repr__(self):
         return f"<{self.__class__.__name__} - main_issue:{self.main_issue}, lemmas:{len(self)}>"
@@ -20,8 +20,7 @@ class ShortRegister(Register):
     def __len__(self):
         return len(self._lemmas)
 
-    # pylint: disable=arguments-differ
-    def _init_lemmas(self):
+    def _init_short_lemmas(self):
         lemmas = []
         for volume_str in self._registers:
             if Volumes.is_volume_part_of_main_volume(volume_str, self.main_issue):
