@@ -1,7 +1,7 @@
 import contextlib
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, Optional, List, Type, Union
+from typing import Dict, List, Type, Union
 
 from pywikibot import Site
 
