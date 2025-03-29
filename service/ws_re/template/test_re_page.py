@@ -7,7 +7,7 @@ from testfixtures import compare
 from service.ws_re.template import ReDatenException, ARTICLE_TEMPLATE
 from service.ws_re.template.article import Article
 from service.ws_re.template.re_author import REAuthor
-from service.ws_re.template.re_page import RePage, SplittedArticleList
+from service.ws_re.template.re_page import RePage
 from tools.test import real_wiki_test
 
 
@@ -27,25 +27,19 @@ class TestSplittedArticleList(TestCase):
 {{REDaten}}\ntext\n{{REAutor|Some Author.}}text{{REAbschnitt}}\ntext\n{{REAutor|Some Author.}}text"""
         self.text_mock.return_value = before
         re_page = RePage(self.page_mock)
-        splitted_list = SplittedArticleList(re_page._article_list)
+        splitted_list = re_page.splitted_article_list
         compare(3, len(splitted_list))
         compare(1, len(splitted_list[0]))
-        compare(3, len(splitted_list[1]))
-        compare(4, len(splitted_list[2]))
-        self.assertTrue(isinstance(splitted_list[1][1], str))
-        self.assertTrue(isinstance(splitted_list[2][1], str))
-        self.assertTrue(isinstance(splitted_list[2][3], str))
+        compare(2, len(splitted_list[1]))
+        compare(2, len(splitted_list[2]))
 
     def test_get_splitted_article_list_pre_text(self):
         before = """text{{REDaten}}\ntext\n{{REAutor|Some Author.}}text"""
         self.text_mock.return_value = before
         re_page = RePage(self.page_mock)
-        splitted_list = SplittedArticleList(re_page._article_list)
-        compare(2, len(splitted_list))
+        splitted_list = re_page.splitted_article_list
+        compare(1, len(splitted_list))
         compare(1, len(splitted_list[0]))
-        compare(2, len(splitted_list[1]))
-        self.assertTrue(isinstance(splitted_list[0][0], str))
-        self.assertTrue(isinstance(splitted_list[1][1], str))
 
 
 class TestRePage(TestCase):
