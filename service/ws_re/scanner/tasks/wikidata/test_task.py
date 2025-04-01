@@ -76,14 +76,14 @@ class TestDATATask(TestCase):
 
     @real_wiki_test
     def test_integration(self):
-        edit_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity",
-                               new_callable=mock.MagicMock).start()
+        # edit_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity",
+        #                        new_callable=mock.MagicMock).start()
         remove_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.removeClaims",
                                  new_callable=mock.MagicMock).start()
         mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims",
                    new_callable=self.NonClaimsFake).start()
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        lemma = pywikibot.Page(WS_WIKI, "RE:Aba 1")  # existing wikidata_item
+        lemma = pywikibot.Page(WS_WIKI, "RE:Aal")  # existing wikidata_item
         data_task = DATATask(WS_WIKI,
                              WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False),
                              True)
@@ -123,7 +123,7 @@ class TestDATATask(TestCase):
                              {'type': 'wikibase-entityid',
                               'value':
                                   {'entity-type': 'item',
-                                   'numeric-id': 72860
+                                   'numeric-id': 1372802
                                    }
                               },
                          'property': 'P50',

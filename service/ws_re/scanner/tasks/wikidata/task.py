@@ -1,11 +1,15 @@
 from typing import Dict, List, Optional
 
 import pywikibot
+from pywikibot import ItemPage
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
+from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, \
     ChangedClaimsDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims.non_claims import NonClaims
+from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
@@ -26,6 +30,8 @@ SerializedClaimDictionary = Dict[str, SerializedClaimList]
 
 
 class DATATask(ReScannerTask):
+
+
     claim_factories = (
         P31InstanceOf,
         P50Author,
@@ -61,7 +67,7 @@ class DATATask(ReScannerTask):
                 item_dict_add.update(non_claims.dict)
             # if a diff exists alter the wikidata item
             if item_dict_add:
-                data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
+                # data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
                 self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
             if claims_to_remove := claims_to_change["remove"]:
                 # if there are claims, that aren't up to date remove them
@@ -74,6 +80,13 @@ class DATATask(ReScannerTask):
             item_dict_add.update(NonClaims(self.re_page).dict)
             data_item.editEntity(item_dict_add)
             self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
+        self.back_link_main_topic()
+
+    def back_link_main_topic(self):
+        p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
+        main_topic = ItemPage(self.wikidata, p1343_factory.get_main_topic())
+        if claim_dict := p1343_factory.get_claims_to_update(main_topic)["add"]:
+            main_topic.editEntity({"claims": self._serialize_claims_to_add(claim_dict)})
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:

@@ -18,6 +18,7 @@ from tools.bots.pi import WikiLogger
 class ClaimFactory:
     _authors = Authors()
     _volumes = Volumes()
+    ITEM_RE = "Q1138524"
     _IMPORTED_FROM_WIKISOURCE = SnakParameter(property_str="P143",
                                               target_type="wikibase-item",
                                               target="Q15522295")
@@ -59,8 +60,8 @@ class ClaimFactory:
         raise ValueError("Class name doesn't match regex")
 
     @staticmethod
-    def _filter_new_vs_old_claim_list(new_claim_list: ClaimList,
-                                      old_claim_list: ClaimList) -> Tuple[ClaimList, ClaimList]:
+    def filter_new_vs_old_claim_list(new_claim_list: ClaimList,
+                                     old_claim_list: ClaimList) -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -101,7 +102,7 @@ class ClaimFactory:
                                         claim_list: ClaimList,
                                         data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         old_claims = self.get_old_claims(data_item)
-        claims_to_add, claims_to_remove = self._filter_new_vs_old_claim_list(claim_list, old_claims)
+        claims_to_add, claims_to_remove = self.filter_new_vs_old_claim_list(claim_list, old_claims)
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
 
     def get_old_claims(self, data_item) -> List[pywikibot.Claim]:
