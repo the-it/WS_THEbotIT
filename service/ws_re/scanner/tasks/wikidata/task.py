@@ -46,6 +46,7 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
+        self.test_counter_backlink = 0
 
     def task(self):
         try:
@@ -82,8 +83,11 @@ class DATATask(ReScannerTask):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
         main_topic = ItemPage(self.wikidata, p1343_factory.get_main_topic())
         if claim_dict := p1343_factory.get_claims_to_update(main_topic)["add"]:
-            main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict)},
-                                  summary="Add reference to a lexicon article.")
+            # only do 20 per day in the beginning
+            if self.test_counter_backlink < 20:
+                main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict)},
+                                      summary="Add reference to a lexicon article.")
+                self.test_counter_backlink += 1
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:
