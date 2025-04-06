@@ -4,7 +4,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFacto
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 from service.ws_re.template.re_page import RePage
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.pi import WikiLogger
 
 
 class P1343DescribedBySource(ClaimFactory):
@@ -29,10 +29,13 @@ class P1343DescribedBySource(ClaimFactory):
             qualifier_snak = SnakParameter(property_str=self.DESCRIBED_OBJECT_PROP,
                                            target_type="wikibase-item",
                                            target=re_id)
-            return [self.create_claim_json(snak_parameter=main_snak, qualifiers=[qualifier_snak])]
+            return [self.create_claim_json(snak_parameter=main_snak,
+                                           qualifiers=[qualifier_snak],
+                                           references=[[self._IMPORTED_FROM_WIKISOURCE]])]
         return []
 
     def get_main_topic(self) -> Optional[str]:
         if self.MAIN_TOPIC_PROP in self.data_json['claims']:
-            return f"Q{self.data_json['claims'][self.MAIN_TOPIC_PROP][0]['mainsnak']['datavalue']['value']['numeric-id']}"
+            return f"Q{self.data_json['claims'][self.MAIN_TOPIC_PROP][0]['mainsnak']
+                       ['datavalue']['value']['numeric-id']}"
         return None

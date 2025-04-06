@@ -76,8 +76,8 @@ class TestDATATask(TestCase):
 
     @real_wiki_test
     def test_integration(self):
-        # edit_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity",
-        #                        new_callable=mock.MagicMock).start()
+        edit_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity",
+                               new_callable=mock.MagicMock).start()
         remove_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.removeClaims",
                                  new_callable=mock.MagicMock).start()
         mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims",
@@ -117,7 +117,7 @@ class TestDATATask(TestCase):
                       }
                  }
         }
-        compare(edit_expect, edit_args[0].args[0])
+        compare(edit_expect, edit_args[0].kwargs["data"])
         remove_expect = {'datatype': 'wikibase-item',
                          'datavalue':
                              {'type': 'wikibase-entityid',
@@ -129,7 +129,50 @@ class TestDATATask(TestCase):
                          'property': 'P50',
                          'snaktype': 'value'
                          }
-        compare(remove_expect, remove_args[0].args[0][0].toJSON()['mainsnak'])
+        compare(remove_expect, remove_args[0].kwargs["data"][0].toJSON()['mainsnak'])
+        edit_expect = {'claims':
+                           {'P1343':
+                                [{'mainsnak':
+                                      {'datatype': 'wikibase-item',
+                                       'datavalue':
+                                           {'type': 'wikibase-entityid',
+                                            'value':
+                                                {'entity-type': 'item',
+                                                 'numeric-id': 1138524}
+                                            },
+                                       'property': 'P1343',
+                                       'snaktype': 'value'},
+                                  'qualifiers': {'P805': [{'datatype': 'wikibase-item',
+                                                           'datavalue':
+                                                               {'type': 'wikibase-entityid',
+                                                                'value':
+                                                                    {'entity-type': 'item',
+                                                                     'numeric-id': 19979634
+                                                                     }
+                                                                },
+                                                           'property': 'P805',
+                                                           'snaktype': 'value'}
+                                                          ]},
+                                  'qualifiers-order': ['P805'],
+                                  'rank': 'normal',
+                                  'type': 'statement',
+                                  'references':
+                                      [{'snaks':
+                                            {'P143':
+                                                 [{'datatype': 'wikibase-item',
+                                                   'datavalue': {
+                                                       'type': 'wikibase-entityid',
+                                                       'value': {'entity-type': 'item',
+                                                                 'numeric-id': 15522295}},
+                                                   'property': 'P143',
+                                                   'snaktype': 'value'}]
+                                             },
+                                        'snaks-order': ['P143']
+                                        }]
+                                  }]
+                            }
+                       }
+        compare(edit_expect, edit_args[1].kwargs["data"])
 
     @real_wiki_test
     def test_integration_create_page(self):
