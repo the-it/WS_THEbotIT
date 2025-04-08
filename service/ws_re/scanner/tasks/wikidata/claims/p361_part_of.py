@@ -10,8 +10,6 @@ class P361PartOf(ClaimFactory):
     Returns the Claim **part of** -> **Paulys Realenzyklopädie der klassischen Altertumswissenschaft**
     """
 
-    ITEM_RE = "Q1138524"
-
     def _get_claim_json(self) -> List[JsonClaimDict]:
         snak_parameter = SnakParameter(property_str=self.get_property_string(),
                                        target_type="wikibase-item",

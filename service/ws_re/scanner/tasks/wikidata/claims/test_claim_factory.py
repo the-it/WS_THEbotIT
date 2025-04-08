@@ -67,11 +67,11 @@ class TestClaimFactory(BaseTestClaimFactory):
 
     def test__filter_new_vs_old_claim_list(self):
         compare(([self.a, self.c], [self.d]),
-                self.factory_dummy._filter_new_vs_old_claim_list([self.a, self.b, self.c], [self.b, self.d]))
-        compare(([self.a], []), self.factory_dummy._filter_new_vs_old_claim_list([self.a], []))
-        compare(([], [self.a]), self.factory_dummy._filter_new_vs_old_claim_list([], [self.a]))
+                self.factory_dummy.filter_new_vs_old_claim_list([self.a, self.b, self.c], [self.b, self.d]))
+        compare(([self.a], []), self.factory_dummy.filter_new_vs_old_claim_list([self.a], []))
+        compare(([], [self.a]), self.factory_dummy.filter_new_vs_old_claim_list([], [self.a]))
         compare(([], []),
-                self.factory_dummy._filter_new_vs_old_claim_list([self.a, self.b, self.c], [self.a, self.b, self.c]))
+                self.factory_dummy.filter_new_vs_old_claim_list([self.a, self.b, self.c], [self.a, self.b, self.c]))
 
     def test__create_claim_dictionary(self):
         compare({"add": {"P1234": [self.a, self.b]}, "remove": [self.c, self.d]},

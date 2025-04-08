@@ -1,11 +1,13 @@
 from typing import Dict, List, Optional
 
 import pywikibot
+from pywikibot import ItemPage
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, \
     ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.non_claims import NonClaims
+from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
 from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
@@ -44,6 +46,7 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
+        self.test_counter_backlink = 0
 
     def task(self):
         try:
@@ -61,11 +64,11 @@ class DATATask(ReScannerTask):
                 item_dict_add.update(non_claims.dict)
             # if a diff exists alter the wikidata item
             if item_dict_add:
-                data_item.editEntity(item_dict_add, summary=self._create_add_summary(item_dict_add))
+                data_item.editEntity(data=item_dict_add, summary=self._create_add_summary(item_dict_add))
                 self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
             if claims_to_remove := claims_to_change["remove"]:
                 # if there are claims, that aren't up to date remove them
-                data_item.removeClaims(claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
+                data_item.removeClaims(data=claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
         except pywikibot.exceptions.NoPageError:
             # create a new one from scratch
             data_item = pywikibot.ItemPage(self.wikidata)
@@ -74,6 +77,17 @@ class DATATask(ReScannerTask):
             item_dict_add.update(NonClaims(self.re_page).dict)
             data_item.editEntity(item_dict_add)
             self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
+        self.back_link_main_topic()
+
+    def back_link_main_topic(self):
+        p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
+        main_topic = ItemPage(self.wikidata, p1343_factory.get_main_topic())
+        if claim_dict := p1343_factory.get_claims_to_update(main_topic)["add"]:
+            # only do 20 per day in the beginning
+            if self.test_counter_backlink < 20:
+                main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict)},
+                                      summary="Add reference to a lexicon article.")
+                self.test_counter_backlink += 1
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:
