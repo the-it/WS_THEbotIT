@@ -1,5 +1,4 @@
-from unittest import TestCase
-
+# pylint: disable=protected-access
 import pywikibot
 from testfixtures import compare
 
