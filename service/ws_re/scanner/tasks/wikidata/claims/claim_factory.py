@@ -36,9 +36,9 @@ class ClaimFactory:
 
     def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
         """
-        Every claim that is updated can possible add new claims, but can also remove existing claims at the item.
-        Which claims is removed or added depends of the specific implementation of the property factory. The standart
-        implementation will update all claims as expected by the factory (this include removing possible existing
+        Every claim that is updated can possibly add new claims, but can also remove existing claims at the item.
+        Which claims is removed or added depends on the specific implementation of the property factory. The standard
+        implementation will update all claims as expected by the factory (this includes removing possible existing
         claims).
 
         :param: data_item: item where the specific property is going to be altered
@@ -152,7 +152,7 @@ class ClaimFactory:
         return references_snak
 
     @staticmethod
-    def _add_qualifiers(qualifiers) -> Tuple[Dict[str, List[JsonSnakDict]], List[str]]:
+    def _add_qualifiers(qualifiers: List[SnakParameter]) -> Tuple[Dict[str, List[JsonSnakDict]], List[str]]:
         qualifiers_dict = {}
         qualifiers_order_list = []
         for qualifier in qualifiers:

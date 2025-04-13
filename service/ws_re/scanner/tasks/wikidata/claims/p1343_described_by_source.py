@@ -18,8 +18,7 @@ class P1343DescribedBySource(ClaimFactory):
     def __init__(self, re_page: RePage, logger: WikiLogger):
         super().__init__(re_page, logger)
         self.data_item = self.re_page.page.data_item()
-        self.data_item.get()
-        self.data_json = self.data_item.toJSON()
+        self.claims = self.data_item.get()["claims"].toJSON()
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
         re_id = self.data_item.id
@@ -36,7 +35,7 @@ class P1343DescribedBySource(ClaimFactory):
         return []
 
     def get_main_topic(self) -> Optional[str]:
-        if self.MAIN_TOPIC_PROP in self.data_json['claims']:
-            return f"Q{self.data_json['claims'][self.MAIN_TOPIC_PROP][0]['mainsnak']
+        if self.MAIN_TOPIC_PROP in self.claims:
+            return f"Q{self.claims[self.MAIN_TOPIC_PROP][0]['mainsnak']
                        ['datavalue']['value']['numeric-id']}"
         return None
