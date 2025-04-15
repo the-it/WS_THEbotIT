@@ -10,7 +10,7 @@ class TestNonClaims(BaseTestClaimFactory):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Blub}}", title="RE:Bla")
         non_claim = NonClaims(re_page).dict
         compare("Bla (Pauly-Wissowa)", non_claim["labels"]["de"]["value"])
-        compare(["de", "en"], non_claim["labels"].keys())
+        compare(["de", "mul"], non_claim["labels"].keys())
         compare("encyklopediartikel i Paulys Realencyclopädie der classischen Altertumswissenschaft (RE)",
                 non_claim["descriptions"]["sv"]["value"])
         compare(["de", "da", "el", "en", "es", "fr", "it", "nl", "pt", "sv"], non_claim["descriptions"].keys())
@@ -64,8 +64,8 @@ class TestNonClaims(BaseTestClaimFactory):
                     "language": "de",
                     "value": "Wilhelm Kroll \u2020 (Pauly-Wissowa)"
                 },
-                "en": {
-                    "language": "en",
+                "mul": {
+                    "language": "mul",
                     "value": "Wilhelm Kroll \u2020 (Pauly-Wissowa)"
                 }
             },
@@ -125,8 +125,8 @@ class TestNonClaims(BaseTestClaimFactory):
                     "language": "de",
                     "value": "Wilhelm Kroll \u2020 (Pauly-Wissowa)"
                 },
-                "en": {
-                    "language": "en",
+                "mul": {
+                    "language": "mul",
                     "value": "Wilhelm Kroll \u2020 (Pauly-Wissowa)"
                 },
                 "xy": {
