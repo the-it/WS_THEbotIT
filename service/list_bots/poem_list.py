@@ -27,7 +27,7 @@ class PoemList(ListBot):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 3, 15, 23)
-        self.timeout = timedelta(minutes=15)
+        self.timeout = timedelta(minutes=2)
 
     def get_searcher(self) -> PetScan:
         searcher = PetScan()
