@@ -81,7 +81,7 @@ class DATATask(ReScannerTask):
 
     def back_link_main_topic(self):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
-        main_topic = ItemPage(self.wikidata, p1343_factory.get_main_topic())
+        main_topic = ItemPage(self.wikidata, f"Q{p1343_factory.get_main_topic_id()}")
         if claim_dict := p1343_factory.get_claims_to_update(main_topic)["add"]:
             # only do 20 per day in the beginning
             if self.test_counter_backlink < 20:
