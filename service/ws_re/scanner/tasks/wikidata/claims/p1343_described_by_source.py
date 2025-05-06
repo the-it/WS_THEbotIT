@@ -52,7 +52,7 @@ class P1343DescribedBySource(ClaimFactory):
 
     def get_main_topic_id(self) -> Optional[int]:
         if self.MAIN_TOPIC_PROP in self.claims_re_source:
-            return self.claims_re_source[self.MAIN_TOPIC_PROP][0]['mainsnak']['datavalue']['value']['numeric-id']
+            return int(self.claims_re_source[self.MAIN_TOPIC_PROP][0]['mainsnak']['datavalue']['value']['numeric-id'])
         return None
 
     def get_existing_qualifiers(self, target_item) -> list[int]:
@@ -60,7 +60,9 @@ class P1343DescribedBySource(ClaimFactory):
         if self.DESCRIBED_IN_PROP not in target_claims:
             return []
         described_in_claims = target_claims[self.DESCRIBED_IN_PROP]
-        filtered_described_in_claims = [claim for claim in described_in_claims if claim["mainsnak"]["datavalue"]["value"]["numeric-id"] == int(self.ITEM_RE[1:])]
+        filtered_described_in_claims = \
+            [claim for claim in described_in_claims
+             if claim["mainsnak"]["datavalue"]["value"]["numeric-id"] == int(self.ITEM_RE[1:])]
         existing_qualifiers: list[int] = []
         for claim in filtered_described_in_claims:
             for qualifier in claim["qualifiers"][self.DESCRIBED_OBJECT_PROP]:
@@ -84,5 +86,7 @@ class P1343DescribedBySource(ClaimFactory):
     def filter_new_vs_old_claim_list(cls,
                                      new_claim_list: ClaimList,
                                      old_claim_list: ClaimList) -> Tuple[ClaimList, ClaimList]:
-        filtered_new_claims, filtered_old_claim_list = ClaimFactory.filter_new_vs_old_claim_list(new_claim_list, old_claim_list)
-        return filtered_new_claims, [claim for claim in filtered_old_claim_list if claim.id == cls.get_property_string()]
+        filtered_new_claims, filtered_old_claim_list = (
+            ClaimFactory.filter_new_vs_old_claim_list(new_claim_list, old_claim_list))
+        return filtered_new_claims, [claim for claim in filtered_old_claim_list
+                                     if claim.id == cls.get_property_string()]
