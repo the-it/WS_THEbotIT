@@ -40,9 +40,9 @@ class BaseTestClaimFactory(TestCase):
         return RePage(mock_item)
 
     @staticmethod
-    def _create_mock_json(letter: str, property: str = "P1234"):
+    def _create_mock_json(letter: str, property_str: str = "P1234"):
         return {"mainsnak": {"snaktype": "value",
-                             "property": property,
+                             "property": property_str,
                              "datatype": "string",
                              "datavalue": {"value": letter, "type": "string"}},
                 "type": "statement",
