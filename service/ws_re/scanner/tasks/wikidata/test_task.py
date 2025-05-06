@@ -129,7 +129,7 @@ class TestDATATask(TestCase):
                          'property': 'P50',
                          'snaktype': 'value'
                          }
-        compare(remove_expect, remove_args[0].kwargs["data"][0].toJSON()['mainsnak'])
+        compare(remove_expect, remove_args[0].kwargs["claims"][0].toJSON()['mainsnak'])
         edit_expect = {'claims':
                            {'P1343':
                                 [{'mainsnak':
