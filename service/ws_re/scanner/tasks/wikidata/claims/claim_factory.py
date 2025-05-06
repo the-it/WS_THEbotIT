@@ -59,8 +59,9 @@ class ClaimFactory:
             return regex_hit.group(0)
         raise ValueError("Class name doesn't match regex")
 
-    @staticmethod
-    def filter_new_vs_old_claim_list(new_claim_list: ClaimList,
+    @classmethod
+    def filter_new_vs_old_claim_list(cls,
+                                     new_claim_list: ClaimList,
                                      old_claim_list: ClaimList) -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,

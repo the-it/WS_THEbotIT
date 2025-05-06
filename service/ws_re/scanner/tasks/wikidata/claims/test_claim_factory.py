@@ -39,6 +39,15 @@ class BaseTestClaimFactory(TestCase):
             type(mock_item).title = title_mock
         return RePage(mock_item)
 
+    @staticmethod
+    def _create_mock_json(letter: str, property: str = "P1234"):
+        return {"mainsnak": {"snaktype": "value",
+                             "property": property,
+                             "datatype": "string",
+                             "datavalue": {"value": letter, "type": "string"}},
+                "type": "statement",
+                "rank": "normal"}
+
 
 class TestClaimFactory(BaseTestClaimFactory):
     class P1234FactoryDummy(ClaimFactory):
@@ -49,18 +58,10 @@ class TestClaimFactory(BaseTestClaimFactory):
         super().setUp()
         self.factory_dummy = self.P1234FactoryDummy(MagicMock(), self.logger)
 
-        def get_json(letter: str):
-            return {"mainsnak": {"snaktype": "value",
-                                 "property": "P1234",
-                                 "datatype": "string",
-                                 "datavalue": {"value": letter, "type": "string"}},
-                    "type": "statement",
-                    "rank": "normal"}
-
-        self.a = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("a"))
-        self.b = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("b"))
-        self.c = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("c"))
-        self.d = pywikibot.Claim.fromJSON(self.wikidata_site, get_json("d"))
+        self.a = pywikibot.Claim.fromJSON(self.wikidata_site, self._create_mock_json("a"))
+        self.b = pywikibot.Claim.fromJSON(self.wikidata_site, self._create_mock_json("b"))
+        self.c = pywikibot.Claim.fromJSON(self.wikidata_site, self._create_mock_json("c"))
+        self.d = pywikibot.Claim.fromJSON(self.wikidata_site, self._create_mock_json("d"))
 
     def test_property_string(self):
         compare("P1234", self.P1234FactoryDummy.get_property_string())
