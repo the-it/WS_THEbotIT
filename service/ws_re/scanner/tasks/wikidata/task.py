@@ -68,7 +68,7 @@ class DATATask(ReScannerTask):
                 self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
             if claims_to_remove := claims_to_change["remove"]:
                 # if there are claims, that aren't up to date remove them
-                data_item.removeClaims(data=claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
+                data_item.removeClaims(claims=claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
         except pywikibot.exceptions.NoPageError:
             # create a new one from scratch
             data_item = pywikibot.ItemPage(self.wikidata)
@@ -90,9 +90,8 @@ class DATATask(ReScannerTask):
                     main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
                                           summary="Add reference to a lexicon article.")
                 if claim_dict["remove"]:
-                    main_topic.removeClaims(data=claim_dict["remove"])
-                    main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
-                                          summary="Remove old reference to a lexicon article.")
+                    main_topic.removeClaims(claims=claim_dict["remove"],
+                                            summary="Remove old reference to a lexicon article.")
                 self.test_counter_backlink += 1
 
     @staticmethod
