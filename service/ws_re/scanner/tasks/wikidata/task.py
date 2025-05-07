@@ -81,11 +81,15 @@ class DATATask(ReScannerTask):
 
     def back_link_main_topic(self):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
-        main_topic = ItemPage(self.wikidata, f"Q{p1343_factory.get_main_topic_id()}")
+        main_topic_id = p1343_factory.get_main_topic_id()
+        if not main_topic_id:
+            return
+        main_topic = ItemPage(self.wikidata, f"Q{main_topic_id}")
         claim_dict = p1343_factory.get_claims_to_update(main_topic)
         if claim_dict["add"] or claim_dict["remove"]:
             # only do 20 per day in the beginning
             if self.test_counter_backlink < 20:
+                self.logger.info(f"Backlinking {claim_dict['add']} to {main_topic} on {self.re_page.lemma_as_link}")
                 if claim_dict["add"]:
                     main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
                                           summary="Add reference to a lexicon article.")

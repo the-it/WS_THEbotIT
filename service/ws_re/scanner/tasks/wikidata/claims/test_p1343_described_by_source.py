@@ -65,3 +65,8 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
         # first two already exists ... third one is added
         compare([a], filtered_new_claims)
         compare([b], filtered_old_claims)
+
+    def test_integration(self):
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Δικτυοβόλος"))
+        factory = P1343DescribedBySource(re_page, self.logger)
+        claims = factory.get_claims_to_update(re_page)
