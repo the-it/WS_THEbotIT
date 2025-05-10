@@ -158,8 +158,12 @@ class ClaimFactory:
         qualifiers_order_list = []
         for qualifier in qualifiers:
             qualifier_snak = ClaimFactory.create_snak_json(qualifier)
-            qualifiers_dict[qualifier.property_str] = [qualifier_snak]
-            qualifiers_order_list.append(qualifier.property_str)
+            if qualifier.property_str not in qualifiers_dict:
+                qualifiers_dict[qualifier.property_str] = [qualifier_snak]
+            else:
+                qualifiers_dict[qualifier.property_str].append(qualifier_snak)
+            if qualifier.property_str not in qualifiers_order_list:
+                qualifiers_order_list.append(qualifier.property_str)
         return qualifiers_dict, qualifiers_order_list
 
     @staticmethod

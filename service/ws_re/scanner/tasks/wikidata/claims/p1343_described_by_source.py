@@ -29,9 +29,10 @@ class P1343DescribedBySource(ClaimFactory):
             main_snak = SnakParameter(property_str=self.DESCRIBED_IN_PROP,
                                       target_type="wikibase-item",
                                       target=self.ITEM_RE)
-            return [self.create_claim_json(snak_parameter=main_snak,
-                                           qualifiers=qualifier_snaks,
-                                           references=[[self._IMPORTED_FROM_WIKISOURCE]])]
+            claim_json = [self.create_claim_json(snak_parameter=main_snak,
+                                                 qualifiers=qualifier_snaks,
+                                                 references=[[self._IMPORTED_FROM_WIKISOURCE]])]
+            return claim_json
         return []
 
     def get_qualifiers(self, re_item_id: int, target_id: int) -> List[SnakParameter]:
@@ -89,4 +90,4 @@ class P1343DescribedBySource(ClaimFactory):
         filtered_new_claims, filtered_old_claim_list = (
             ClaimFactory.filter_new_vs_old_claim_list(new_claim_list, old_claim_list))
         return filtered_new_claims, [claim for claim in filtered_old_claim_list
-                                     if claim.id == cls.get_property_string()]
+                                     if claim.target.id == cls.ITEM_RE]

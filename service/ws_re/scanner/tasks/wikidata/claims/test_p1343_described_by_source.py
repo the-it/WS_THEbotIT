@@ -2,6 +2,8 @@
 import pywikibot
 from testfixtures import compare
 
+from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
 from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import BaseTestClaimFactory
 from service.ws_re.template.re_page import RePage
@@ -54,9 +56,28 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Caliendrum"))
         factory = P1343DescribedBySource(re_page, self.logger)
 
-        a = pywikibot.Claim.fromJSON(self.wikidata_site, self._create_mock_json("a", "P1343"))
-        b = pywikibot.Claim.fromJSON(self.wikidata_site, self._create_mock_json("b", "P1343"))
-        c = pywikibot.Claim.fromJSON(self.wikidata_site, self._create_mock_json("c", "P1234"))
+        qualifier_a = SnakParameter(property_str="P805",
+                                    target_type="wikibase-item",
+                                    target="Q123")
+        qualifier_b = SnakParameter(property_str="P805",
+                                    target_type="wikibase-item",
+                                    target="Q1234")
+        qualifier_c = SnakParameter(property_str="P805",
+                                    target_type="wikibase-item",
+                                    target="Q12345")
+        main_snak_re = SnakParameter(property_str="P1343",
+                                     target_type="wikibase-item",
+                                     target="Q1138524")
+        main_snak_else = SnakParameter(property_str="P1343",
+                                       target_type="wikibase-item",
+                                       target="Q123456")
+
+        a = pywikibot.Claim.fromJSON(self.wikidata_site,
+                                     ClaimFactory.create_claim_json(main_snak_re, qualifiers=[qualifier_a]))
+        b = pywikibot.Claim.fromJSON(self.wikidata_site,
+                                     ClaimFactory.create_claim_json(main_snak_re, qualifiers=[qualifier_b]))
+        c = pywikibot.Claim.fromJSON(self.wikidata_site,
+                                     ClaimFactory.create_claim_json(main_snak_else, qualifiers=[qualifier_c]))
 
         new_claims = [a]
         old_claims = [b, c]
@@ -69,4 +90,51 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
     def test_integration(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Δικτυοβόλος"))
         factory = P1343DescribedBySource(re_page, self.logger)
-        claims = factory.get_claims_to_update(re_page)
+        claims = factory._get_claim_json()
+        expect = [{'mainsnak':
+                       {'datatype': 'wikibase-item',
+                        'datavalue':
+                            {'type': 'wikibase-entityid',
+                             'value':
+                                 {'entity-type': 'item',
+                                  'numeric-id': 1138524
+                                  }
+                             },
+                        'property': 'P1343',
+                        'snaktype': 'value'
+                        },
+                   'qualifiers':
+                       {'P805':
+                           [
+                               {'datatype': 'wikibase-item',
+                                'datavalue':
+                                    {'type': 'wikibase-entityid',
+                                     'value': {'entity-type': 'item', 'numeric-id': 20000919}
+                                     },
+                                'property': 'P805',
+                                'snaktype': 'value'
+                                },
+                               {'datatype': 'wikibase-item',
+                                'datavalue':
+                                    {'type': 'wikibase-entityid',
+                                     'value': {'entity-type': 'item', 'numeric-id': 19995086}
+                                     },
+                                'property': 'P805',
+                                'snaktype': 'value'
+                                }
+                           ]
+                       },
+                   'qualifiers-order': ['P805'],
+                   'rank': 'normal',
+                   'references':
+                       [{'snaks': {'P143': [{'datatype': 'wikibase-item',
+                                             'datavalue': {'type': 'wikibase-entityid',
+                                                           'value': {'entity-type': 'item',
+                                                                     'numeric-id': 15522295}},
+                                             'property': 'P143',
+                                             'snaktype': 'value'}]},
+                         'snaks-order': ['P143']}],
+                   'type': 'statement'
+                   }
+                  ]
+        compare(claims, expect)

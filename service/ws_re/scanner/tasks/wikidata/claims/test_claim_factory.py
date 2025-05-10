@@ -161,7 +161,16 @@ class TestClaimFactory(BaseTestClaimFactory):
                               "property": "P1234",
                               "datatype": "string",
                               "datavalue": {
-                                  "value": "text",
+                                  "value": "text1",
+                                  "type": "string"
+                              }
+                          },
+                          {
+                              "snaktype": "value",
+                              "property": "P1234",
+                              "datatype": "string",
+                              "datavalue": {
+                                  "value": "text2",
                                   "type": "string"
                               }
                           }
@@ -188,9 +197,12 @@ class TestClaimFactory(BaseTestClaimFactory):
                   }
 
         main_parameter = SnakParameter(property_str="P31", target_type="string", target="texttexttext")
-        quali_snak_1 = SnakParameter(property_str="P1234", target_type="string", target="text")
+        quali_snak_1a = SnakParameter(property_str="P1234", target_type="string", target="text1")
+        quali_snak_1b = SnakParameter(property_str="P1234", target_type="string", target="text2")
         quali_snak_2 = SnakParameter(property_str="P5678", target_type="wikibase-item", target="Q123456")
-        compare(expect, ClaimFactory.create_claim_json(main_parameter, qualifiers=[quali_snak_1, quali_snak_2]))
+        compare(expect,
+                ClaimFactory.create_claim_json(main_parameter,
+                                               qualifiers=[quali_snak_1a, quali_snak_1b, quali_snak_2]))
 
     def test__create_claim_json_with_reference(self):
         expect = {
