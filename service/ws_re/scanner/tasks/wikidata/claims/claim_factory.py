@@ -59,8 +59,9 @@ class ClaimFactory:
             return regex_hit.group(0)
         raise ValueError("Class name doesn't match regex")
 
-    @staticmethod
-    def filter_new_vs_old_claim_list(new_claim_list: ClaimList,
+    @classmethod
+    def filter_new_vs_old_claim_list(cls,
+                                     new_claim_list: ClaimList,
                                      old_claim_list: ClaimList) -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
@@ -157,8 +158,12 @@ class ClaimFactory:
         qualifiers_order_list = []
         for qualifier in qualifiers:
             qualifier_snak = ClaimFactory.create_snak_json(qualifier)
-            qualifiers_dict[qualifier.property_str] = [qualifier_snak]
-            qualifiers_order_list.append(qualifier.property_str)
+            if qualifier.property_str not in qualifiers_dict:
+                qualifiers_dict[qualifier.property_str] = [qualifier_snak]
+            else:
+                qualifiers_dict[qualifier.property_str].append(qualifier_snak)
+            if qualifier.property_str not in qualifiers_order_list:
+                qualifiers_order_list.append(qualifier.property_str)
         return qualifiers_dict, qualifiers_order_list
 
     @staticmethod

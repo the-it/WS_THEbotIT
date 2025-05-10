@@ -68,7 +68,7 @@ class DATATask(ReScannerTask):
                 self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} altered.")
             if claims_to_remove := claims_to_change["remove"]:
                 # if there are claims, that aren't up to date remove them
-                data_item.removeClaims(data=claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
+                data_item.removeClaims(claims=claims_to_remove, summary=self._create_remove_summary(claims_to_remove))
         except pywikibot.exceptions.NoPageError:
             # create a new one from scratch
             data_item = pywikibot.ItemPage(self.wikidata)
@@ -77,16 +77,25 @@ class DATATask(ReScannerTask):
             item_dict_add.update(NonClaims(self.re_page).dict)
             data_item.editEntity(item_dict_add)
             self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
-        # self.back_link_main_topic()
+        self.back_link_main_topic()
 
     def back_link_main_topic(self):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
-        main_topic = ItemPage(self.wikidata, p1343_factory.get_main_topic())
-        if claim_dict := p1343_factory.get_claims_to_update(main_topic)["add"]:
+        main_topic_id = p1343_factory.get_main_topic_id()
+        if not main_topic_id:
+            return
+        main_topic = ItemPage(self.wikidata, f"Q{main_topic_id}")
+        claim_dict = p1343_factory.get_claims_to_update(main_topic)
+        if claim_dict["add"] or claim_dict["remove"]:
             # only do 20 per day in the beginning
             if self.test_counter_backlink < 20:
-                main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict)},
-                                      summary="Add reference to a lexicon article.")
+                self.logger.info(f"Backlinking {claim_dict['add']} to {main_topic} on {self.re_page.lemma_as_link}")
+                if claim_dict["add"]:
+                    main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
+                                          summary="Add reference to a lexicon article.")
+                if claim_dict["remove"]:
+                    main_topic.removeClaims(claims=claim_dict["remove"],
+                                            summary="Remove old reference to a lexicon article.")
                 self.test_counter_backlink += 1
 
     @staticmethod

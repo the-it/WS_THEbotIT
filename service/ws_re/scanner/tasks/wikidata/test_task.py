@@ -129,7 +129,7 @@ class TestDATATask(TestCase):
                          'property': 'P50',
                          'snaktype': 'value'
                          }
-        compare(remove_expect, remove_args[0].kwargs["data"][0].toJSON()['mainsnak'])
+        compare(remove_expect, remove_args[0].kwargs["claims"][0].toJSON()['mainsnak'])
         edit_expect = {'claims':
                            {'P1343':
                                 [{'mainsnak':
@@ -172,7 +172,7 @@ class TestDATATask(TestCase):
                                   }]
                             }
                        }
-        # compare(edit_expect, edit_args[1].kwargs["data"])
+        compare(edit_expect, edit_args[1].kwargs["data"])
 
     @real_wiki_test
     def test_integration_create_page(self):
