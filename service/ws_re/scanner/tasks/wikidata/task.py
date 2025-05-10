@@ -88,7 +88,7 @@ class DATATask(ReScannerTask):
         claim_dict = p1343_factory.get_claims_to_update(main_topic)
         if claim_dict["add"] or claim_dict["remove"]:
             # only do 20 per day in the beginning
-            if self.test_counter_backlink < 20:
+            if self.test_counter_backlink < 10:
                 self.logger.info(f"Backlinking {claim_dict['add']} to {main_topic} on {self.re_page.lemma_as_link}")
                 if claim_dict["add"]:
                     main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
