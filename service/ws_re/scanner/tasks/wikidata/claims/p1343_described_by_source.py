@@ -5,6 +5,7 @@ import pywikibot
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict, ClaimList
+from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.template.re_page import RePage
 from tools.bots.pi import WikiLogger
 
@@ -38,10 +39,10 @@ class P1343DescribedBySource(ClaimFactory):
     def get_qualifiers(self, re_item_id: int, target_id: int) -> List[SnakParameter]:
         target_item = pywikibot.ItemPage(self.re_page.page.data_repository, f"Q{target_id}")
         existing_qualifiers = self.get_existing_qualifiers(target_item)
+        if re_item_id not in existing_qualifiers:
+            existing_qualifiers.append(re_item_id)
         filtered_qualifiers = [qualifier for qualifier in existing_qualifiers
-                               if self.check_source_has_target(qualifier, target_id)]
-        if re_item_id not in filtered_qualifiers:
-            filtered_qualifiers.append(re_item_id)
+                               if self.check_source_is_valid(qualifier, target_id)]
         qualifier_snaks: list[SnakParameter] = []
         for qualifier in filtered_qualifiers:
             qualifier_snaks.append(
@@ -72,9 +73,14 @@ class P1343DescribedBySource(ClaimFactory):
                         existing_qualifiers.append(value)
         return existing_qualifiers
 
-    def check_source_has_target(self, source_id: int, target_id: int) -> bool:
+    def check_source_is_valid(self, source_id: int, target_id: int) -> bool:
         source_item = pywikibot.ItemPage(self.re_page.page.data_repository, f"Q{source_id}")
         source_claims = source_item.get()["claims"].toJSON()
+        # if a reference, this isn't valid
+        if (source_claims["P31"][0]["mainsnak"]["datavalue"]["value"]["numeric-id"] == int(
+                P31InstanceOf.CROSS_REFERENCE_ITEM[1:])):
+            return False
+        # no main topic, nothing to check
         if self.MAIN_TOPIC_PROP not in source_claims:
             return False
         main_topic_claims = source_claims[self.MAIN_TOPIC_PROP]
