@@ -32,6 +32,12 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
         target_item = pywikibot.ItemPage(re_page.page.data_repository, "Q12345")
         compare([], factory.get_existing_qualifiers(target_item))
 
+    def test_empty_qualifier(self):
+        # Colonia 1 has a central topic, but is a cross-reference ... so no claim should be created
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Colonia 1"))
+        factory = P1343DescribedBySource(re_page, self.logger)
+        compare([], factory._get_claim_json())
+
     def test_check_source_has_target(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Iulius 133"))
         factory = P1343DescribedBySource(re_page, self.logger)

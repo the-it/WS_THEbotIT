@@ -27,6 +27,8 @@ class P1343DescribedBySource(ClaimFactory):
         re_item_id = int(self.data_item_re_source.id[1:])
         if target_id := self.get_main_topic_id():
             qualifier_snaks = self.get_qualifiers(re_item_id, target_id)
+            if not qualifier_snaks:
+                return []
             main_snak = SnakParameter(property_str=self.DESCRIBED_IN_PROP,
                                       target_type="wikibase-item",
                                       target=self.ITEM_RE)
