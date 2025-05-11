@@ -35,22 +35,14 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
     def test_check_source_has_target(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Iulius 133"))
         factory = P1343DescribedBySource(re_page, self.logger)
-        # source: RE:Caligula has Caligula as main topic
-        compare(True, factory.check_source_has_target(34622751, 1409))
+        # source: RE:Caligula has Caligula as main topic, but is a cross-reference
+        compare(False, factory.check_source_is_valid(34622751, 1409))
+        # source: RE:Iulius 133 has Caligula as main topic, is a main article
+        compare(True, factory.check_source_is_valid(34395255, 1409))
         # source: RE:Auloneus hasn't Caligula as main topic
-        compare(False, factory.check_source_has_target(19992463, 1409))
+        compare(False, factory.check_source_is_valid(19992463, 1409))
         # source: RE:Caliendrum has no main topic
-        compare(False, factory.check_source_has_target(19756677, 1409))
-
-    def test_get_qualifiers(self):
-        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Caliendrum"))
-        factory = P1343DescribedBySource(re_page, self.logger)
-        # get existing qualifiers and add new one
-        qualifiers = factory.get_qualifiers(19756677, 1409)
-        # first two already exists ... third one is added
-        compare("Q34622751", qualifiers[0].target)
-        compare("Q34395255", qualifiers[1].target)
-        compare("Q19756677", qualifiers[2].target)
+        compare(False, factory.check_source_is_valid(19756677, 1409))
 
     def test_filter_claimlists(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Caliendrum"))
@@ -106,14 +98,6 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
                    'qualifiers':
                        {'P805':
                            [
-                               {'datatype': 'wikibase-item',
-                                'datavalue':
-                                    {'type': 'wikibase-entityid',
-                                     'value': {'entity-type': 'item', 'numeric-id': 20000919}
-                                     },
-                                'property': 'P805',
-                                'snaktype': 'value'
-                                },
                                {'datatype': 'wikibase-item',
                                 'datavalue':
                                     {'type': 'wikibase-entityid',
