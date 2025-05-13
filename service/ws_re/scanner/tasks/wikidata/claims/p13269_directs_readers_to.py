@@ -7,7 +7,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFacto
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 from service.ws_re.template.re_page import RePage
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.pi import WikiLogger
 
 
 class P13269DirectsReadersTo(ClaimFactory):
