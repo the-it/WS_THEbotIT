@@ -11,6 +11,7 @@ from service.ws_re.register.lemma import LemmaDict, UpdaterRemoveList
 from service.ws_re.register.lemma_chapter import ChapterDict
 from service.ws_re.register.registers import Registers
 from service.ws_re.register.updater import Updater
+from service.ws_re.scanner.tasks.base import get_redirect
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
 from tools.bots.pi import WikiLogger
@@ -108,26 +109,11 @@ class SCANTask(ReScannerTask):
     def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
-    _REGEX_REDIRECT_RAW = r"(?:\[\[RE:|\{\{RE siehe\|)([^\|\}]+)"
-    _REGEX_REDIRECT = re.compile(_REGEX_REDIRECT_RAW)
-    _REGEX_REDIRECT_PICKY = re.compile(r"s\..*?" + _REGEX_REDIRECT_RAW)
-
-    def _fetch_redirect(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    @staticmethod
+    def _fetch_redirect(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
-        redirect = article["VERWEIS"].value
+        redirect = get_redirect(article)
         if redirect:
-            match = self._REGEX_REDIRECT.findall(article.text)
-            if match:
-                # if there are more then one result get more picky
-                if len(match) == 1:
-                    redirect = match[0]
-                # be more picky and look for a s. ...
-                else:
-                    match = self._REGEX_REDIRECT_PICKY.findall(article.text)
-                    # if there are still too much results, we return just the truth value
-                    if len(match) == 1:
-                        redirect = match[0]
-
             return {"redirect": redirect}, []
         return {}, ["redirect"]
 
