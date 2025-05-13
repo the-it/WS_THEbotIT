@@ -7,6 +7,7 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, \
     ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.non_claims import NonClaims
+from service.ws_re.scanner.tasks.wikidata.claims.p13269_directs_readers_to import P13269DirectsReadersTo
 from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
@@ -41,6 +42,7 @@ class DATATask(ReScannerTask):
         P1476Title,
         P3903Column,
         P6216CopyrightStatus,
+        P13269DirectsReadersTo
     )
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):

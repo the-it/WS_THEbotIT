@@ -1,0 +1,59 @@
+redirect_found:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    text.
+    {{REAutor|OFF}}
+  result: true
+
+no_redirect:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=OFF
+    }}
+    text.
+    {{REAutor|OFF}}
+  result: false
+
+fetch_a_real_link_from_template:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    '''Ad Algam''' s. {{SperrSchrift|{{RE siehe|Turris ad Algam}}}}.
+    {{REAutor|OFF}}
+  result:  "Turris ad Algam"
+
+fetch_a_real_link_from_real_link:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    '''2)''' s. [[RE:Amantia 2|{{SperrSchrift|Amantia}} Nr.&nbsp;2]].
+    {{REAutor|OFF}}
+  result: "Amantia 2"
+
+bug_no_s_provided:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    ['''5a''']) (K) Eponymos von [[RE:Akanthos 1|A. Nr. 1]] (I 1147). '''S III'''.
+    {{REAutor|OFF}}
+  result: "Akanthos 1"
+
+bug_two_links:
+  text: |
+    {{REDaten
+    |BAND=I,1
+    |VERWEIS=ON
+    }}
+    '''2)''' Laco ([[RE:Cornelius 395|Tac.]] ann. VI 18) s. C. {{RE siehe|Iulius 309|{{SperrSchrift|Iulius}} Laco}} (o. Bd. X S. 658f.).
+    {{REAutor|OFF}}
+  result:  "Iulius 309"
