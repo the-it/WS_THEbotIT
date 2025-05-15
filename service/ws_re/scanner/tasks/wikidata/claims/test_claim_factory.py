@@ -12,7 +12,7 @@ from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
-from tools.bots.pi import WikiLogger
+from tools.bots.cloud.logger import WikiLogger
 from tools.test import REAL_WIKI_TEST
 
 

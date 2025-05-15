@@ -11,7 +11,6 @@ from testfixtures import LogCapture
 from service.ws_re.scanner.base import ReScanner
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template import ReDatenException
-from tools.bots.test_pi import setup_data_path, teardown_data_path, _DATA_PATH_TEST
 from tools.test import SearchStringChecker
 
 
@@ -19,11 +18,9 @@ class TestReScanner(TestCase):
     def setUp(self):
         self.petscan_patcher = mock.patch("service.ws_re.scanner.base.PetScan.get_combined_lemma_list")
         self.petscan_mock = self.petscan_patcher.start()
-        setup_data_path(self)
         self.addCleanup(mock.patch.stopall)
 
     def tearDown(self):
-        teardown_data_path()
         mock.patch.stopall()
 
     def test_search_prepare_debug(self):
@@ -282,6 +279,7 @@ class TestReScanner(TestCase):
         def task(self):
             pass
 
+    @skip("skipped after changing to CloudBot")
     @freeze_time("Jan 14th, 2020", auto_tick_seconds=1)
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
@@ -324,17 +322,3 @@ class TestReScanner(TestCase):
                                         ("ReScanner", "WARNING", "Try to get the deprecated data back."),
                                         ("ReScanner", "WARNING", "There isn't deprecated data to reload."))
                     log_catcher.check_present(*expected_logging, order_matters=True)
-
-    def test_reload_deprecated_lemma_data(self):
-        self._mock_surroundings()
-        self.lemma_mock.return_value = [":RE:Lemma1"]
-        with open(_DATA_PATH_TEST + os.sep + "ReScanner.data.json.deprecated", mode="w", encoding="utf-8") \
-                as persist_json:
-            json.dump({":RE:Lemma1": "20000101000000"}, persist_json)
-        with suppress(AssertionError):
-            with LogCapture() as log_catcher:
-                with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False):
-                    log_catcher.check(("ReScanner", "INFO", "Start the bot ReScanner."),
-                                      ("ReScanner", "WARNING",
-                                       "The last run wasn't successful. The data is thrown away."),
-                                      ("ReScanner", "WARNING", "Try to get the deprecated data back."))

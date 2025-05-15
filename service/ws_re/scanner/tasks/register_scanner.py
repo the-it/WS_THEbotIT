@@ -14,7 +14,7 @@ from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base import get_redirect
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
-from tools.bots.pi import WikiLogger
+from tools.bots.cloud.logger import WikiLogger
 
 
 class SCANTask(ReScannerTask):

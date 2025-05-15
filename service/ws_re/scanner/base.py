@@ -19,14 +19,14 @@ from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
-from tools.bots.pi import CanonicalBot
+from tools.bots.cloud.cloud_bot import CloudBot
 from tools.petscan import PetScan
 
 
-class ReScanner(CanonicalBot):
+class ReScanner(CloudBot):
     def __init__(self, wiki: pywikibot.Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
-        CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
+        CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(hours=5)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to

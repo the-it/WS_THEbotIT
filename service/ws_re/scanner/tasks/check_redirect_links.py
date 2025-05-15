@@ -5,8 +5,7 @@ import pywikibot
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from tools import save_if_changed
-from tools.bots.pi import WikiLogger
-
+from tools.bots.cloud.logger import WikiLogger
 
 REGEX_TRANSLATION = str.maketrans({"(": r"\(",
                                    ")": r"\)",

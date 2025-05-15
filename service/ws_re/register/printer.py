@@ -1,11 +1,11 @@
 from pywikibot import Site, Page
 
 from service.ws_re.register.registers import Registers
-from tools.bots.pi import CanonicalBot
 from tools import save_if_changed
+from tools.bots.cloud.cloud_bot import CloudBot
 
 
-class ReRegisterPrinter(CanonicalBot):
+class ReRegisterPrinter(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
