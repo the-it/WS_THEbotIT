@@ -5,7 +5,7 @@ import pywikibot
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
 from service.ws_re.template.article import Article
-from tools.bots.pi import WikiLogger
+from tools.bots.cloud.logger import WikiLogger
 
 
 class DEWPTask(ReScannerTask, ReporterMixin):

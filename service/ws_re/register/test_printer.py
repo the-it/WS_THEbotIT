@@ -7,11 +7,23 @@ from testfixtures import compare
 
 from service.ws_re.register.printer import ReRegisterPrinter
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
+from tools.bots.cloud.test_base import TestCloudBase
 
 
-class TestReRegisterPrinter(BaseTestRegister):
+class TestReRegisterPrinter(BaseTestRegister, TestCloudBase):
+    @classmethod
+    def setUpClass(cls):
+        BaseTestRegister.setUpClass()
+        TestCloudBase.setUpClass()
+
+    @classmethod
+    def tearDownClass(cls):
+        BaseTestRegister.tearDownClass()
+        TestCloudBase.tearDownClass()
+
     def setUp(self):
-        super().setUp()
+        BaseTestRegister.setUp(self)
+        TestCloudBase.setUp(self)
         copy_tst_data("I_1_alpha", "I_1")
         copy_tst_data("III_1_alpha", "III_1")
 

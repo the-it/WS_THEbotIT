@@ -52,7 +52,7 @@ class TestCloudBase(TestCase):
 
     @classmethod
     def _create_manage_table(cls):
-        cls.dynamodb.create_table(
+        cls.dynamodb.create_table(  # type: ignore
             TableName=TABLE_NAME,
             KeySchema=[
                 {
@@ -78,8 +78,8 @@ class TestCloudBase(TestCase):
         )
 
     def _truncate_manage_table(self):
-        scan = self.manage_table.scan()
-        with self.manage_table.batch_writer() as batch:
+        scan = self.manage_table.scan()  # type: ignore
+        with self.manage_table.batch_writer() as batch:  # type: ignore
             for each in scan["Items"]:
                 batch.delete_item(
                     Key={

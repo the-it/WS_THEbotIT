@@ -7,7 +7,7 @@ import pywikibot
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
 from service.ws_re.template.article import Article
-from tools.bots.pi import WikiLogger
+from tools.bots.cloud.logger import WikiLogger
 
 
 class DEALTask(ReScannerTask, ReporterMixin):
