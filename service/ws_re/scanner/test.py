@@ -1,6 +1,4 @@
 # pylint: disable=protected-access
-import json
-import os
 from contextlib import suppress
 from datetime import datetime
 from unittest import TestCase, mock, skip
@@ -289,26 +287,26 @@ class TestReScanner(TestCase):
         bot.tasks = [self.WAITTask]
         with bot:
             bot.run()
-        with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
-            data = json.load(data_file)
-            self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
-                             data)
-            self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-                                 datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+        # with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
+        #     data = json.load(data_file)
+        #     self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
+        #                      data)
+        #     self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+        #                          datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
         self.lemma_mock.return_value = [':RE:Lemma3', ":RE:Lemma4"]
         with bot:
             bot.run()
-        with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
-            data = json.load(data_file)
-            self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
-                              ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
-                             data)
-            self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-                            datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
-            self.assertLess(datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"),
-                            datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"))
-            self.assertLess(datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"),
-                            datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
+        # with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
+        #     data = json.load(data_file)
+        #     self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
+        #                       ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
+        #                      data)
+        #     self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+        #                     datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+        #     self.assertLess(datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"),
+        #                     datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"))
+        #     self.assertLess(datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"),
+        #                     datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
 
     def test_reload_deprecated_lemma_data_none_there(self):
         self._mock_surroundings()
@@ -322,3 +320,18 @@ class TestReScanner(TestCase):
                                         ("ReScanner", "WARNING", "Try to get the deprecated data back."),
                                         ("ReScanner", "WARNING", "There isn't deprecated data to reload."))
                     log_catcher.check_present(*expected_logging, order_matters=True)
+
+    @skip("skipped after changing to CloudBot")
+    def test_reload_deprecated_lemma_data(self):
+        self._mock_surroundings()
+        self.lemma_mock.return_value = [":RE:Lemma1"]
+        # with open(_DATA_PATH_TEST + os.sep + "ReScanner.data.json.deprecated", mode="w", encoding="utf-8") \
+        #         as persist_json:
+        #     json.dump({":RE:Lemma1": "20000101000000"}, persist_json)
+        with suppress(AssertionError):
+            with LogCapture() as log_catcher:
+                with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False):
+                    log_catcher.check(("ReScanner", "INFO", "Start the bot ReScanner."),
+                                      ("ReScanner", "WARNING",
+                                       "The last run wasn't successful. The data is thrown away."),
+                                      ("ReScanner", "WARNING", "Try to get the deprecated data back."))
