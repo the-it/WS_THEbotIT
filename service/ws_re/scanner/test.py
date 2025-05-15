@@ -1,7 +1,7 @@
 # pylint: disable=protected-access
 from contextlib import suppress
 from datetime import datetime
-from unittest import TestCase, mock, skip
+from unittest import mock, skip
 
 from freezegun import freeze_time
 from testfixtures import LogCapture
