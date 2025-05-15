@@ -9,10 +9,11 @@ from testfixtures import LogCapture
 from service.ws_re.scanner.base import ReScanner
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template import ReDatenException
+from tools.bots.cloud.test_base import TestCloudBase
 from tools.test import SearchStringChecker
 
 
-class TestReScanner(TestCase):
+class TestReScanner(TestCloudBase):
     def setUp(self):
         self.petscan_patcher = mock.patch("service.ws_re.scanner.base.PetScan.get_combined_lemma_list")
         self.petscan_mock = self.petscan_patcher.start()
