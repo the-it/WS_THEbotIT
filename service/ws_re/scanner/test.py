@@ -1,4 +1,5 @@
 # pylint: disable=protected-access
+import json
 from contextlib import suppress
 from datetime import datetime
 from unittest import mock, skip
@@ -15,6 +16,7 @@ from tools.test import SearchStringChecker
 
 class TestReScanner(TestCloudBase):
     def setUp(self):
+        super().setUp()
         self.petscan_patcher = mock.patch("service.ws_re.scanner.base.PetScan.get_combined_lemma_list")
         self.petscan_mock = self.petscan_patcher.start()
         self.addCleanup(mock.patch.stopall)
@@ -278,7 +280,6 @@ class TestReScanner(TestCloudBase):
         def task(self):
             pass
 
-    @skip("skipped after changing to CloudBot")
     @freeze_time("Jan 14th, 2020", auto_tick_seconds=1)
     def test_lemma_processed_are_saved(self):
         self._mock_surroundings()
@@ -288,26 +289,26 @@ class TestReScanner(TestCloudBase):
         bot.tasks = [self.WAITTask]
         with bot:
             bot.run()
-        # with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
-        #     data = json.load(data_file)
-        #     self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
-        #                      data)
-        #     self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-        #                          datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+        data = json.loads(self.s3_client.get_object(Bucket="wiki-bots-persisted-data-tst", Key=f"ReScanner.data.json")
+                          ["Body"].read().decode("utf-8"))["data"]
+        self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
+                         data)
+        self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                             datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
         self.lemma_mock.return_value = [':RE:Lemma3', ":RE:Lemma4"]
         with bot:
             bot.run()
-        # with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
-        #     data = json.load(data_file)
-        #     self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
-        #                       ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
-        #                      data)
-        #     self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-        #                     datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
-        #     self.assertLess(datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"),
-        #                     datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"))
-        #     self.assertLess(datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"),
-        #                     datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
+        data = json.loads(self.s3_client.get_object(Bucket="wiki-bots-persisted-data-tst", Key=f"ReScanner.data.json")
+            ["Body"].read().decode("utf-8"))["data"]
+        self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
+                          ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
+                         data)
+        self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
+                        datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
+        self.assertLess(datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"),
+                        datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"))
+        self.assertLess(datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"),
+                        datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
 
     def test_reload_deprecated_lemma_data_none_there(self):
         self._mock_surroundings()
