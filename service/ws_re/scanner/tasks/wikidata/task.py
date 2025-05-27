@@ -47,7 +47,6 @@ class DATATask(ReScannerTask):
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
-        self.test_counter_backlink = 0
 
     def task(self):
         try:
@@ -88,16 +87,14 @@ class DATATask(ReScannerTask):
         main_topic = ItemPage(self.wikidata, f"Q{main_topic_id}")
         claim_dict = p1343_factory.get_claims_to_update(main_topic)
         if claim_dict["add"] or claim_dict["remove"]:
-            # only do 20 per day in the beginning
-            if self.test_counter_backlink < 5:
-                self.logger.info(f"Backlinking {claim_dict['add']} to {main_topic} on {self.re_page.lemma_as_link}")
-                if claim_dict["add"]:
-                    main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
-                                          summary="Add reference to a lexicon article.")
-                if claim_dict["remove"]:
-                    main_topic.removeClaims(claims=claim_dict["remove"],
-                                            summary="Remove old reference to a lexicon article.")
-                self.test_counter_backlink += 1
+            self.logger.info(f"Backlinking {claim_dict['add']} to {main_topic} on {self.re_page.lemma_as_link}")
+            if claim_dict["add"]:
+                main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
+                                      summary="Add reference to a lexicon article.")
+            if claim_dict["remove"]:
+                main_topic.removeClaims(claims=claim_dict["remove"],
+                                        summary="Remove old reference to a lexicon article.")
+            self.test_counter_backlink += 1
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:
