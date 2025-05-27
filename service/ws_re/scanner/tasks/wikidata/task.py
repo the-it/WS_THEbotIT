@@ -94,7 +94,6 @@ class DATATask(ReScannerTask):
             if claim_dict["remove"]:
                 main_topic.removeClaims(claims=claim_dict["remove"],
                                         summary="Remove old reference to a lexicon article.")
-            self.test_counter_backlink += 1
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:
