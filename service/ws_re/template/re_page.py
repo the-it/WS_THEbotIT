@@ -64,6 +64,10 @@ class SplittedArticleList:
     def first_article(self) -> Article:
         return self._splitted_list[0].daten
 
+    @property
+    def list(self) -> list[ArticleList]:
+        return self._splitted_list
+
 
 class RePage:
     def __init__(self, wiki_page: pywikibot.Page):
