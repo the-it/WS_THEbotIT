@@ -75,3 +75,10 @@ class TestDEALTask(TaskTestCase):
         task = WAORTask(None, self.logger)
         compare({"success": True, "changed": False}, task.run(re_page))
         compare(["Re:Title4"], task.data)
+
+    def test_build_entries(self):
+        task = WAORTask(None, self.logger)
+        task.data = ["First_Lemma", "Second_Lemma"]
+        expect = ["* [[RE:First_Lemma]]",
+                  "* [[RE:Second_Lemma]]"]
+        compare(expect, task._build_entry().split("\n")[-2:])
