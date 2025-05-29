@@ -25,10 +25,11 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
         compare([], claim_json)
 
     def test_existing_qualifier(self):
-        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Iulius 133"))
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Confluentes 1"))
         factory = P1343DescribedBySource(re_page, self.logger)
-        target_item = pywikibot.ItemPage(re_page.page.data_repository, "Q1409")
-        compare([34622751, 34395255], factory.get_existing_qualifiers(target_item))
+        # Wikidata item Confluentes, has two proper RE arcticle items
+        target_item = pywikibot.ItemPage(re_page.page.data_repository, "Q1125398")
+        compare([19994718, 19994710], factory.get_existing_qualifiers(target_item))
         target_item = pywikibot.ItemPage(re_page.page.data_repository, "Q12345")
         compare([], factory.get_existing_qualifiers(target_item))
 

@@ -16,6 +16,7 @@ from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.move_to_public_domain import PDKSTask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
+from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
 from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
@@ -41,6 +42,7 @@ class ReScanner(CloudBot):
             CHRETask,  # check if backlinks go over redirect pages
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
+            WAORTask,  # look for Lemma where the content article isn't the first on the page
         ]
         if self.debug:
             self.tasks = self.tasks + []
