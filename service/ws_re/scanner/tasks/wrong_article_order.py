@@ -30,7 +30,7 @@ class WAORTask(ReScannerTask, ReporterMixin):
         caption = f"\n\n=={datetime.now():%Y-%m-%d}==\n\n"
         entries = []
         for item in self.data:
-            entries.append(f"* [[RE:{item}]]")
+            entries.append(f"* [[{item}]]")
         body = "\n".join(entries)
         return caption + body
 

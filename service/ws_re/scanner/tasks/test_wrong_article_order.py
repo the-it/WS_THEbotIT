@@ -78,7 +78,7 @@ class TestDEALTask(TaskTestCase):
 
     def test_build_entries(self):
         task = WAORTask(None, self.logger)
-        task.data = ["First_Lemma", "Second_Lemma"]
+        task.data = ["RE:First_Lemma", "RE:Second_Lemma"]
         expect = ["* [[RE:First_Lemma]]",
                   "* [[RE:Second_Lemma]]"]
         compare(expect, task._build_entry().split("\n")[-2:])
