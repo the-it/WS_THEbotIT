@@ -49,6 +49,28 @@ class TestDEALTask(TaskTestCase):
         compare({"success": True, "changed": False}, task.run(re_page))
         compare([], task.data)
 
+    def test_redirects_to_another_article(self):
+        self.page_mock.text = """{{REDaten
+        |VERWEIS=ON
+        }}
+        '''97)''' Flavius Glaucus s. {{SperrSchrift|{{RE siehe|Glaukos 39|Glaukos}}}}.
+        {{REAutor|Autor.}}
+        {{REDaten
+        |NACHTRAG=ON
+        }}
+        01234567890123456789
+        01234567890123456789
+        01234567890123456789
+        01234567890123456789
+        01234567890123456789
+        01234567890123456789
+        {{REAutor|Autor.}}"""
+        self.page_mock.title_str = "Re:Title"
+        re_page = RePage(self.page_mock)
+        task = WAORTask(None, self.logger)
+        compare({"success": True, "changed": False}, task.run(re_page))
+        compare([], task.data)
+
     def test_main_article_is_the_third_one(self):
         # first article is a VERWEIS, second article has not enough content
         self.page_mock.text = """{{REDaten
