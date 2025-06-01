@@ -20,7 +20,6 @@ class P13269DirectsReadersTo(ClaimFactory):
             if redirected_lemma.exists():
                 data_item = redirected_lemma.data_item()
                 if data_item.exists():
-                    self.logger.info(f"{self.re_page.lemma_as_link} -> {redirected_lemma.title(as_link=True)}")
                     snak_parameter = SnakParameter(property_str=self.get_property_string(),
                                                    target_type="wikibase-item",
                                                    target=data_item.id)
