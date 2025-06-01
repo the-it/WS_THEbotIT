@@ -1,10 +1,7 @@
 # pylint: disable=protected-access
-from unittest import skip
-
 import pywikibot
 from testfixtures import compare
 
-from service.ws_re.scanner.tasks.wikidata.claims import claim_factory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
