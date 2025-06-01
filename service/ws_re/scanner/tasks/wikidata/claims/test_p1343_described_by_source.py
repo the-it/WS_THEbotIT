@@ -1,7 +1,10 @@
 # pylint: disable=protected-access
+from unittest import skip
+
 import pywikibot
 from testfixtures import compare
 
+from service.ws_re.scanner.tasks.wikidata.claims import claim_factory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
@@ -37,7 +40,11 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
         # Colonia 1 has a central topic, but is a cross-reference ... so no claim should be created
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Colonia 1"))
         factory = P1343DescribedBySource(re_page, self.logger)
-        compare([], factory._get_claim_json())
+        claim_json = factory._get_claim_json()
+        # resulting claim has only one qualifier, which isn't the data item of RE:Colonia 1 (34621354)
+        compare(1, len(claim_json[0]["qualifiers"]))
+        # instead it is RE:Coloniae
+        compare(51885370, claim_json[0]["qualifiers"]["P805"][0]["datavalue"]["value"]["numeric-id"])
 
     def test_check_source_has_target(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Iulius 133"))
