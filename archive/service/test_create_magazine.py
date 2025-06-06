@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from ddt import ddt, file_data
 
-from service.gl.create_magazine import search_for_refs
+from archive.service.create_magazine import search_for_refs
 
 
 @ddt

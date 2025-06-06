@@ -4,7 +4,6 @@ import sys
 from pywikibot import Site
 
 from service.list_bots.author_list import AuthorList
-from service.gl.create_magazine import GlCreateMagazine
 from service.gl.status import GlStatus
 from service.list_bots.poem_list import PoemList
 from service.ws_re.register.printer import ReRegisterPrinter
@@ -23,7 +22,7 @@ if __name__ == "__main__":
         3: [],
         4: [],
         5: [],
-        6: [GlCreateMagazine]  # sunday
+        6: []  # sunday
     }
     SCHEDULER.monthly_bots = {1: [GlStatus]}
     SCHEDULER.bots_on_last_day_of_month = []
