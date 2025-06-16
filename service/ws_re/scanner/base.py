@@ -21,7 +21,7 @@ from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 from tools.bots.cloud.cloud_bot import CloudBot
-from tools.petscan import PetScan
+from tools.petscan import PetScan, get_processed_time
 
 
 class ReScanner(CloudBot):
@@ -96,9 +96,6 @@ class ReScanner(CloudBot):
             except ReDatenException:
                 self.logger.error("RePage can't be saved.")
 
-    def _add_lemma_to_data(self, lemma: str):
-        self.data[lemma] = datetime.now().strftime("%Y%m%d%H%M%S")
-
     def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> Optional[str]:
         task_name = None
         with task:
@@ -149,7 +146,7 @@ class ReScanner(CloudBot):
                 processed_lemmas += 1
                 if not self.debug:
                     self._save_re_page(re_page, list_of_done_tasks)
-            self._add_lemma_to_data(lemma)
+            self.data[lemma]= get_processed_time()
             if self._watchdog():
                 self.logger.info(f"{idx} Lemmas processed, {processed_lemmas} changed.")
                 self.logger.info(f"Oldest processed item: {datetime.now() - self.get_oldest_datetime()}")
