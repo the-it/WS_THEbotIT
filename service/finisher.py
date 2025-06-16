@@ -53,7 +53,7 @@ class Finisher(CloudBot):
         searcher.add_namespace("Article")
         searcher.set_timeout(120)
         list_checked_lemmas, _ = searcher.get_combined_lemma_list(self.data)
-        # filter out lemmas from BLKÖ, RE and Zedler, those are proofread 1 conceptt, they don't need the finisher
+        # filter out lemmas from BLKÖ, RE and Zedler, those are proofread 1 concept, they don't need the finisher
         regex = re.compile(r"(BLKÖ:|RE:|Zedler:)")
         list_checked_lemmas = [item for item in list_checked_lemmas if not regex.search(item)]
         return list_checked_lemmas

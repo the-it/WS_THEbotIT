@@ -4,10 +4,11 @@ from pywikibot import Page, Site
 from testfixtures import compare
 
 from service.finisher import Finisher
+from tools.bots.cloud.test_base import TestCloudBase
 from tools.test import real_wiki_test
 
 
-class TestFinisher(TestCase):
+class TestFinisher(TestCloudBase):
     def setUp(self):
         self.wiki = Site(code="de", fam="wikisource", user="THEbotIT")
         self.finisher = Finisher(wiki=self.wiki)

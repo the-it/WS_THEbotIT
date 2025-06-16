@@ -7,7 +7,7 @@ import requests_mock
 from freezegun import freeze_time
 from testfixtures import compare
 
-from tools.petscan import PetScan, PetScanException
+from tools.petscan import PetScan, PetScanException, get_processed_time
 
 
 class TestPetScan(TestCase):
@@ -323,4 +323,4 @@ class TestPetScan(TestCase):
 
     @freeze_time("2001-12-31")
     def test_get_processed_time(self):
-        compare("20011231000000", PetScan.get_processed_time())
+        compare("20011231000000", get_processed_time())
