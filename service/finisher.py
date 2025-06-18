@@ -1,4 +1,6 @@
 import re
+import time
+from contextlib import contextmanager, suppress
 from datetime import timedelta, datetime
 
 import pywikibot
@@ -11,15 +13,15 @@ from tools.utils import has_korrigiert_category
 
 
 class Finisher(CloudBot):
-    # Wikisource has the concept of pages (namespace "Seite") and lemmas (main namespace, no prefix).
-    # Lemmas can include pages. This is called proofread version 2 (PR2). If an editor finishes the proofreading of a
-    # page it can happen, that they forget to also change the status of the lemma, which include the page. This bot
-    # targets lemmas, which include 100% proofread pages, but are left in the category "Korrigiert", and tries to move
-    # them to the category "Fertig".
+    """Wikisource has the concept of pages (namespace "Seite") and lemmas (main namespace, no prefix).
+    Lemmas can include pages. This is called proofread version 2 (PR2). If an editor finishes the proofreading of a
+    page it can happen, that they forget to also change the status of the lemma, which include the page. This bot
+    targets lemmas, which include 100% proofread pages, but are left in the category "Korrigiert", and tries to move
+    them to the category "Fertig"."""
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout: timedelta = timedelta(minutes=30)
+        self.timeout: timedelta = timedelta(minutes=10)
         self.proofread_pages_set = set()
 
     def __enter__(self):
@@ -83,6 +85,7 @@ class Finisher(CloudBot):
 
     @staticmethod
     def all_pages_fertig(pages: list[Page], proofread_pages_set: set[str]) -> bool:
+        # function checks if all pages of the list have the status proofread
         for page in pages:
             if page.title(with_ns=False) not in proofread_pages_set:
                 return False
@@ -102,37 +105,47 @@ class Finisher(CloudBot):
             return True
         return False
 
-
     def task(self) -> bool:
-        self.logger.info("Start initiating the proofread dictionary")
-        proofread_pages_set = self._get_proofread_pages()
-        self.logger.info("Start getting checked lemmas from current pages")
-        lemmas_to_check = self._get_checked_lemmas_from_current_pages(self._get_current_pages())
-        self.logger.info("Start getting checked lemmas from petscan")
-        lemmas_to_check += self._get_checked_lemmas_from_petscan()
-        self.logger.info("Start processing checked lemmas")
-        for lemma in lemmas_to_check:
-            # time is over
-            if self._watchdog():
-                break
-            # register the lemma in the beginning of the processing
-            self.data[lemma] = get_processed_time()
-            lemma_page = Page(self.wiki, lemma)
-            # fetch all included pages
-            pages = lemma_page.templates(namespaces="Seite")
-            # if there is nothing, carry on
-            if not pages:
-                continue
-            # if there are pages, that aren't proofread yet, carry on
-            if not self.all_pages_fertig(pages, proofread_pages_set):
-                continue
-            # if it is an overview page ... you get the idea
-            if self.is_overview_page(lemma_page):
-                continue
-            self.logger.warning(f"The lemma [[{lemma}]] has only proofread pages, but isn't in the proofread cat.")
+        with self.time_step("init_proofread_dict"):
+            proofread_pages_set = self._get_proofread_pages()
+        with self.time_step("get_checked_lemmas_current"):
+            lemmas_to_check = self._get_checked_lemmas_from_current_pages(self._get_current_pages())
+        with self.time_step("get_checked_lemmas_petscan"):
+            lemmas_to_check += self._get_checked_lemmas_from_petscan()
+        with self.time_step("process_lemmas"):
+            for idx, lemma in enumerate(lemmas_to_check):
+                # time is over
+                if self._watchdog():
+                    break
+                # register the lemma in the beginning of the processing
+                self.data[lemma] = get_processed_time()
+                lemma_page = Page(self.wiki, lemma)
+                # lemma was loaded from storage and has changed status since then. Kick it from the storage.
+                if not has_korrigiert_category(lemma_page):
+                    with suppress(KeyError):
+                        del self.data[lemma]
+                    continue
+                # if it is an overview page ... carry on
+                if self.is_overview_page(lemma_page):
+                    continue
+                # fetch all included pages
+                pages = lemma_page.templates(namespaces="Seite")
+                # if there is nothing, carry on
+                if not pages:
+                    continue
+                # if there are pages, that aren't proofread yet, carry on
+                if not self.all_pages_fertig(pages, proofread_pages_set):
+                    continue
+                self.logger.warning(f"The lemma [[{lemma}]] has only proofread pages, but isn't in the proofread cat.")
+                # also see warning every day, this way I don't have to scan the whole log page, if I look at it from
+                # time to time.
+                with suppress(KeyError):
+                    del self.data[lemma]
+            self.logger.info(f"{idx + 1} lemmas were processed.")
         return True
+
 
 if __name__ == "__main__":
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
-    with Finisher(wiki=WS_WIKI, debug=True, log_to_wiki=True) as bot:
+    with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=True) as bot:
         bot.run()

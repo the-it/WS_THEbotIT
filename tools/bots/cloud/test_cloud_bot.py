@@ -237,3 +237,16 @@ class TestCloudBot(TestCloudBase):
     def test_last_run_successful_false_2(self):
         with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
             compare(None, bot.status.last_run)
+
+    class TimeBot(CloudBot):
+        def task(self):
+            with self.time_step("step_name"):
+                do_something = 1
+            return True
+
+    @freeze_time("2000-12-31", auto_tick_seconds=1)
+    def test_time_step(self):
+        with LogCapture() as log_catcher:
+            time_bot = self.TimeBot(log_to_screen=True, log_to_wiki=False)
+            time_bot.run()
+            compare("step_name took 1.00 seconds", log_catcher.records[-1].msg)
