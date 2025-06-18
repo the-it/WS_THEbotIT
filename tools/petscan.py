@@ -18,6 +18,9 @@ def listify(item) -> list:
     """
     return item if isinstance(item, list) else [item]
 
+def get_processed_time():
+    return datetime.now().strftime("%Y%m%d%H%M%S")
+
 
 class PetScanException(ToolException):
     pass

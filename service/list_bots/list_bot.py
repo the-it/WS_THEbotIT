@@ -8,7 +8,7 @@ from pywikibot import Page
 from service.list_bots._base import get_page_infos
 from tools.bots import BotException
 from tools.bots.cloud.cloud_bot import CloudBot
-from tools.petscan import PetScan
+from tools.petscan import PetScan, get_processed_time
 
 
 class ListBot(CloudBot):
@@ -67,7 +67,7 @@ class ListBot(CloudBot):
                 self.logger.error(f"lemma {clean_lemma} was not parsed correctly.")
             item_dict["lemma"] = clean_lemma
             self.enrich_dict(page, item_dict)
-            item_dict["check"] = datetime.now().strftime("%Y%m%d%H%M%S")
+            item_dict["check"] = get_processed_time()
             self.data[lemma] = item_dict
             if (idx - 50 > unprocessed_lemmas) and self._watchdog():
                 break

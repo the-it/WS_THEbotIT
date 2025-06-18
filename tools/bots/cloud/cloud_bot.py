@@ -1,4 +1,6 @@
+import time
 from abc import ABC, abstractmethod
+from contextlib import contextmanager
 from datetime import datetime, timedelta
 
 from pywikibot import Site, Page
@@ -109,3 +111,10 @@ class CloudBot(ABC):
         if self.status.last_run and self.status.last_run.success:
             return self.status.last_run.start_time - offset
         return datetime.min
+
+    @contextmanager
+    def time_step(self, step_name: str):
+        start_time = time.time()
+        yield
+        elapsed_time = time.time() - start_time
+        self.logger.info(f"{step_name} took {elapsed_time:.2f} seconds")
