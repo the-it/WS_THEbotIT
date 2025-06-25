@@ -20,7 +20,7 @@ class Finisher(CloudBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout: timedelta = timedelta(minutes=4)
+        self.timeout: timedelta = timedelta(minutes=15)
         self.proofread_pages_set: set[str] = set()
 
     def __enter__(self):

@@ -3,6 +3,7 @@ import sys
 
 from pywikibot import Site
 
+from service.finisher import Finisher
 from service.list_bots.author_list import AuthorList
 from service.gl.status import GlStatus
 from service.list_bots.poem_list import PoemList
@@ -14,7 +15,7 @@ if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())  # type: ignore
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
-    SCHEDULER.daily_bots = [AuthorList, PoemList, ReScanner, ReRegisterPrinter]
+    SCHEDULER.daily_bots = [AuthorList, PoemList, ReScanner, ReRegisterPrinter, Finisher]
     SCHEDULER.weekly_bots = {
         0: [],  # monday
         1: [],
