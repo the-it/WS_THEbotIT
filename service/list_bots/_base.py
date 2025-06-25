@@ -1,6 +1,5 @@
 import re
-
-from typing_extensions import Optional
+from typing import Optional
 
 from tools.template_finder import TemplateFinder, TemplateFinderException
 from tools.template_handler import TemplateHandlerException, TemplateHandler

@@ -33,3 +33,10 @@ class TestTools(TestCase):
 
     def test_add_category_already_there(self):
         compare("test\n[[Kategorie:new_cat]]", add_category("test\n[[Kategorie:new_cat]]", "new_cat"))
+
+    @real_wiki_test
+    def test__has_category(self):
+        WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
+        page = Page(WS_WIKI, "Seite:Meyers b11 s0001.jpg")
+        compare(True, has_fertig_category(page))
+        compare(False, has_korrigiert_category(page))

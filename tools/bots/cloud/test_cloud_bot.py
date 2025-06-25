@@ -241,7 +241,7 @@ class TestCloudBot(TestCloudBase):
     class TimeBot(CloudBot):
         def task(self):
             with self.time_step("step_name"):
-                do_something = 1
+                pass
             return True
 
     @freeze_time("2000-12-31", auto_tick_seconds=1)

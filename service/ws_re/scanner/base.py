@@ -146,7 +146,7 @@ class ReScanner(CloudBot):
                 processed_lemmas += 1
                 if not self.debug:
                     self._save_re_page(re_page, list_of_done_tasks)
-            self.data[lemma]= get_processed_time()
+            self.data[lemma] = get_processed_time()
             if self._watchdog():
                 self.logger.info(f"{idx} Lemmas processed, {processed_lemmas} changed.")
                 self.logger.info(f"Oldest processed item: {datetime.now() - self.get_oldest_datetime()}")

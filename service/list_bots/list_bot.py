@@ -1,6 +1,5 @@
 import urllib.parse
 from abc import abstractmethod
-from datetime import datetime
 from typing import Tuple
 
 from pywikibot import Page

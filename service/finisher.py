@@ -21,7 +21,7 @@ class Finisher(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout: timedelta = timedelta(minutes=4)
-        self.proofread_pages_set = set()
+        self.proofread_pages_set: set[str] = set()
 
     def __enter__(self):
         super().__enter__()
@@ -33,7 +33,8 @@ class Finisher(CloudBot):
                 self.logger.warning("There isn't deprecated data to reload.")
         return self
 
-    def _get_proofread_pages_searcher(self) -> PetScan:
+    @staticmethod
+    def _get_proofread_pages_searcher() -> PetScan:
         searcher = PetScan()
         searcher.add_positive_category("Fertig")
         searcher.add_namespace("Seite")
@@ -112,6 +113,7 @@ class Finisher(CloudBot):
         with self.time_step("get_checked_lemmas_petscan"):
             lemmas_to_check += self._get_checked_lemmas_from_petscan()
         with self.time_step("process_lemmas"):
+            idx = 0
             for idx, lemma in enumerate(lemmas_to_check):
                 # time is over
                 if self._watchdog():

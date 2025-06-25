@@ -321,6 +321,7 @@ class TestPetScan(TestCase):
         compare(([":RE:Lemma4", ":RE:Lemma2", ":RE:Lemma3", ":RE:Lemma1"], 3),
                 self.petscan.get_combined_lemma_list({":RE:Lemma1": "20010101232359"}, timeframe=42))
 
+    @staticmethod
     @freeze_time("2001-12-31")
-    def test_get_processed_time(self):
+    def test_get_processed_time():
         compare("20011231000000", get_processed_time())

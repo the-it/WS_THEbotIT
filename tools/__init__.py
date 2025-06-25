@@ -25,6 +25,7 @@ def add_category(text: str, category: str) -> str:
         return text + f"\n[[Kategorie:{category}]]"
     return text
 
+
 def _has_category(lemma: Page, category_to_find: str) -> bool:
     categories: list[str] = [category.title() for category in lemma.categories()]
     category_found = False
@@ -34,8 +35,10 @@ def _has_category(lemma: Page, category_to_find: str) -> bool:
             break
     return category_found
 
+
 def has_fertig_category(lemma: Page) -> bool:
     return _has_category(lemma, 'Fertig')
+
 
 def has_korrigiert_category(lemma: Page) -> bool:
     return _has_category(lemma, 'Korrigiert')

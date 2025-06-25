@@ -1,3 +1,4 @@
+# pylint: disable=protected-access,no-member,no-self-use,broad-exception-raised
 from unittest import mock
 
 from pywikibot import Page, Site
@@ -62,7 +63,8 @@ class TestFinisher(TestCloudBase):
                          "Der Ausdruck der Gemüthsbewegungen bei dem Menschen und den Thieren/Zwölftes Capitel")))
 
     @real_wiki_test
-    def test_integration(self):
+    @staticmethod
+    def test_integration():
         petscan_mock = mock.patch("service.finisher.PetScan").start()
         save_mock = mock.patch("service.finisher.save_if_changed").start()
         petscan_mock.return_value.run.side_effect = [
@@ -87,5 +89,5 @@ class TestFinisher(TestCloudBase):
 {{#lst:Seite:THE IT/unittest/finisher/Seite:2}}
 [[Kategorie:Korrigiert]]
 [[Kategorie:Wikisource:Lemma korrigiert, alle Unterseiten fertig]]""", save_mock.call_args.kwargs["text"])
-        compare("Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig", save_mock.call_args.kwargs["page"].title())
-
+        compare("Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig",
+                save_mock.call_args.kwargs["page"].title())
