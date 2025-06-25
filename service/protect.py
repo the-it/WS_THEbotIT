@@ -6,7 +6,7 @@ from pywikibot import Site, Page, exceptions
 
 from tools.bots import BotException
 from tools.bots.pi import CanonicalBot
-from tools.petscan import PetScan
+from tools.petscan import PetScan, get_processed_time
 
 
 class Protect(CanonicalBot):
@@ -51,7 +51,7 @@ class Protect(CanonicalBot):
                 with suppress(KeyError):
                     del self.data[lemma_str]
                 continue
-            self.data[lemma_str] = datetime.now().strftime("%Y%m%d%H%M%S")
+            self.data[lemma_str] = get_processed_time()
             self.logger.debug(f"check lemma {lemma.title()} for protection")
             if not lemma.protection():
                 self.logger.debug(f"protect lemma {lemma.title()}")
