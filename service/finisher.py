@@ -1,6 +1,5 @@
 import re
-import time
-from contextlib import contextmanager, suppress
+from contextlib import suppress
 from datetime import timedelta, datetime
 
 import pywikibot
@@ -9,7 +8,7 @@ from pywikibot import Site, Page
 from tools.bots import BotException
 from tools.bots.cloud.cloud_bot import CloudBot
 from tools.petscan import PetScan, get_processed_time
-from tools.utils import has_korrigiert_category
+from tools import has_korrigiert_category, save_if_changed, add_category
 
 
 class Finisher(CloudBot):
@@ -21,7 +20,7 @@ class Finisher(CloudBot):
 
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout: timedelta = timedelta(minutes=10)
+        self.timeout: timedelta = timedelta(minutes=4)
         self.proofread_pages_set = set()
 
     def __enter__(self):
@@ -98,7 +97,7 @@ class Finisher(CloudBot):
         # page.
 
         # fetching all outbond links from the main namespace
-        linked_pages = [page.title() for page in lemma.linkedPages() if page.namespace() == 0]
+        linked_pages = [page.title() for page in lemma.linkedPages() if page.namespace() in (0, 2)]
         # if some of those links contain the title of the lemma itself, it is very likely, that we have an overview
         # lemma.
         if [page for page in linked_pages if f"{lemma.title()}/" in page]:
@@ -136,11 +135,11 @@ class Finisher(CloudBot):
                 # if there are pages, that aren't proofread yet, carry on
                 if not self.all_pages_fertig(pages, proofread_pages_set):
                     continue
-                self.logger.warning(f"The lemma [[{lemma}]] has only proofread pages, but isn't in the proofread cat.")
-                # also see warning every day, this way I don't have to scan the whole log page, if I look at it from
-                # time to time.
-                with suppress(KeyError):
-                    del self.data[lemma]
+                self.logger.info(f"The lemma [[{lemma}]] has only proofread pages, but isn't in the proofread cat.")
+                save_if_changed(page=lemma_page,
+                                text=add_category(lemma_page.text,
+                                                  "Wikisource:Lemma korrigiert, alle Unterseiten fertig"),
+                                change_msg="Korrekturstand des Lemmas überprüfen!")
             self.logger.info(f"{idx + 1} lemmas were processed.")
         return True
 

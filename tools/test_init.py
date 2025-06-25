@@ -1,9 +1,11 @@
 # pylint: disable=protected-access, no-self-use
 from unittest import TestCase, mock
 
+from pywikibot import Site, Page
 from testfixtures import compare
 
-from tools import save_if_changed, add_category
+from tools import save_if_changed, add_category, has_fertig_category, has_korrigiert_category
+from tools.test import real_wiki_test
 
 
 class TestTools(TestCase):
