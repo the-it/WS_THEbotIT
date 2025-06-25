@@ -146,7 +146,7 @@ class Finisher(CloudBot):
         return True
 
 
-if __name__ == "__main__":
-    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
-    with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=True) as bot:
-        bot.run()
+# if __name__ == "__main__":
+#     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
+#     with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=True) as bot:
+#         bot.run()
