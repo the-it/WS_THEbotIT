@@ -7,13 +7,8 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
 from tools.bots.cloud.logger import WikiLogger
 
 
-class WAORTask(ReScannerTask, ReporterMixin):
-    _wiki_page = "RE:Wartung:Artikel sind in der falschen Reihenfolge"
-    _reason = "Neue Lemma gefunden"
-
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
-        ReScannerTask.__init__(self, wiki, logger, debug)
-        ReporterMixin.__init__(self, wiki)
+class WAORTask(ReScannerTask):
+    MAINTENANCE_CAT = "RE:Artikel sind in der falschen Reihenfolge"
 
     def task(self):
         # just one article, nothing to check
@@ -27,17 +22,5 @@ class WAORTask(ReScannerTask, ReporterMixin):
             return
         for sub_article_list in self.re_page.splitted_article_list.list[1:]:
             if not sub_article_list.daten["VERWEIS"].value and len(sub_article_list.daten.text) > 100:
-                self.data.append(self.re_page.lemma)
+                self.re_page.add_error_category(category=self.MAINTENANCE_CAT)
                 break
-
-    def _build_entry(self) -> str:
-        caption = f"\n\n=={datetime.now():%Y-%m-%d}==\n\n"
-        entries = []
-        for item in self.data:
-            entries.append(f"* [[{item}]]")
-        body = "\n".join(entries)
-        return caption + body
-
-    def finish_task(self):
-        self.report_data_entries()
-        super().finish_task()

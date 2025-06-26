@@ -16,7 +16,6 @@ class TestDEALTask(TaskTestCase):
         re_page = RePage(self.page_mock)
         task = WAORTask(None, self.logger)
         compare({"success": True, "changed": False}, task.run(re_page))
-        compare([], task.data)
 
     def test_first_article_no_verweis(self):
         self.page_mock.text = """{{REDaten
@@ -31,7 +30,6 @@ class TestDEALTask(TaskTestCase):
         re_page = RePage(self.page_mock)
         task = WAORTask(None, self.logger)
         compare({"success": True, "changed": False}, task.run(re_page))
-        compare([], task.data)
 
     def test_second_not_enough_content(self):
         self.page_mock.text = """{{REDaten
@@ -47,7 +45,6 @@ class TestDEALTask(TaskTestCase):
         re_page = RePage(self.page_mock)
         task = WAORTask(None, self.logger)
         compare({"success": True, "changed": False}, task.run(re_page))
-        compare([], task.data)
 
     def test_redirects_to_another_article(self):
         self.page_mock.text = """{{REDaten
@@ -69,7 +66,6 @@ class TestDEALTask(TaskTestCase):
         re_page = RePage(self.page_mock)
         task = WAORTask(None, self.logger)
         compare({"success": True, "changed": False}, task.run(re_page))
-        compare([], task.data)
 
     def test_main_article_is_the_third_one(self):
         # first article is a VERWEIS, second article has not enough content
@@ -95,12 +91,4 @@ class TestDEALTask(TaskTestCase):
         self.page_mock.title_str = "Re:Title4"
         re_page = RePage(self.page_mock)
         task = WAORTask(None, self.logger)
-        compare({"success": True, "changed": False}, task.run(re_page))
-        compare(["Re:Title4"], task.data)
-
-    def test_build_entries(self):
-        task = WAORTask(None, self.logger)
-        task.data = ["RE:First_Lemma", "RE:Second_Lemma"]
-        expect = ["* [[RE:First_Lemma]]",
-                  "* [[RE:Second_Lemma]]"]
-        compare(expect, task._build_entry().split("\n")[-2:])
+        compare({"success": True, "changed": True}, task.run(re_page))
