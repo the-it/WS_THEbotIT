@@ -48,8 +48,8 @@ class TestFinisher(TestCloudBase):
             Page(self.wiki, "Seite:GN.A.250 Gemein-Nachrichten 1788,5.pdf/507"),
         ]
         proofread_pages_set = {
-            "GN.A.250 Gemein-Nachrichten 1788,5.pdf/505",
-            "GN.A.250 Gemein-Nachrichten 1788,5.pdf/506",
+            "GN.A.250_Gemein-Nachrichten_1788,5.pdf/505",
+            "GN.A.250_Gemein-Nachrichten_1788,5.pdf/506",
         }
         compare(True, self.finisher.all_pages_fertig(only_fertig_pages, proofread_pages_set))
         compare(False, self.finisher.all_pages_fertig(one_korrigiert_page, proofread_pages_set))
@@ -68,8 +68,11 @@ class TestFinisher(TestCloudBase):
         petscan_mock = mock.patch("service.finisher.PetScan").start()
         save_mock = mock.patch("service.finisher.save_if_changed").start()
         petscan_mock.return_value.run.side_effect = [
-            [{"title": "THE IT/unittest/finisher/Seite:1"},
-             {"title": "THE IT/unittest/finisher/Seite:2"}],
+            [{"title": "THE_IT/unittest/finisher/Seite:1"},
+             {"title": "THE_IT/unittest/finisher/Seite:2"},
+             {"title": "Die_Gartenlaube_(1886)_497.jpg"},
+             {"title": "Die_Gartenlaube_(1886)_498.jpg"},
+             {"title": "Die_Gartenlaube_(1886)_499.jpg"}, ],
             [{"title": "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages korrigiert", }]
         ]
         petscan_mock.return_value.get_combined_lemma_list.side_effect = [
@@ -78,16 +81,19 @@ class TestFinisher(TestCloudBase):
                  "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig",
                  "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages korrigiert",
                  "Benutzer:THE IT/unittest/finisher/Lemma korrigiert overview",
-                 "Benutzer:THE IT/unittest/finisher/Lemma no included pages"
+                 "Benutzer:THE IT/unittest/finisher/Lemma no included pages",
+                 "Benutzer:THE IT/unittest/finisher/Lemma underscores"
              ], 2)
         ]
         WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
         with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=False) as bot:
             bot.run()
-        compare(1, save_mock.call_count)
+        compare(2, save_mock.call_count)
         compare("""{{#lst:Seite:THE IT/unittest/finisher/Seite:1}}
 {{#lst:Seite:THE IT/unittest/finisher/Seite:2}}
 [[Kategorie:Korrigiert]]
-[[Kategorie:Wikisource:Lemma korrigiert, alle Unterseiten fertig]]""", save_mock.call_args.kwargs["text"])
+[[Kategorie:Wikisource:Lemma korrigiert, alle Unterseiten fertig]]""", save_mock.call_args_list[0].kwargs["text"])
         compare("Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig",
-                save_mock.call_args.kwargs["page"].title())
+                save_mock.call_args_list[0].kwargs["page"].title())
+        compare("Benutzer:THE IT/unittest/finisher/Lemma underscores",
+                save_mock.call_args_list[1].kwargs["page"].title())

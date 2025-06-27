@@ -87,7 +87,7 @@ class Finisher(CloudBot):
     def all_pages_fertig(pages: list[Page], proofread_pages_set: set[str]) -> bool:
         # function checks if all pages of the list have the status proofread
         for page in pages:
-            if page.title(with_ns=False) not in proofread_pages_set:
+            if page.title(with_ns=False).replace(" ", "_") not in proofread_pages_set:
                 return False
         return True
 
@@ -146,7 +146,7 @@ class Finisher(CloudBot):
         return True
 
 
-# if __name__ == "__main__":
-#     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
-#     with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=True) as bot:
-#         bot.run()
+if __name__ == "__main__":
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
+    with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=True) as bot:
+        bot.run()
