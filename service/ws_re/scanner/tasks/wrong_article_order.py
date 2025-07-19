@@ -1,10 +1,5 @@
-from datetime import datetime
-
-import pywikibot
-
 from service.ws_re.scanner.tasks.base import get_redirect
-from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
-from tools.bots.cloud.logger import WikiLogger
+from service.ws_re.scanner.tasks.base_task import ReScannerTask
 
 
 class WAORTask(ReScannerTask):
