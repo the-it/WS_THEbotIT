@@ -11,7 +11,6 @@ class TestCOPDTask(TaskTestCase):
     def setUp(self):
         super().setUp()
         self.task = COPDTask(None, self.logger)
-        pass
 
     def test_get_pd_death(self):
         self.page_mock.text = """{{REDaten
@@ -214,3 +213,66 @@ bla
         compare(False, first_article["KEINE_SCHÖPFUNGSHÖHE"].value)
         compare("", first_article["GEBURTSJAHR"].value)
         compare("1950", first_article["TODESJAHR"].value)
+
+    def test_integration(self):
+        self.page_mock.text = """{{REDaten
+|BAND=XIII,2
+|KEINE_SCHÖPFUNGSHÖHE=ON
+|TODESJAHR=
+|GEBURTSJAHR=1882
+}}
+blub
+{{REAutor|Obst.}}
+{{REDaten
+|BAND=XII,1
+|KEINE_SCHÖPFUNGSHÖHE=ON
+|TODESJAHR=
+|GEBURTSJAHR=
+}}
+something
+{{REAutor|Werner Eck.}}"""
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.task()
+        compare("""{{REDaten
+|BAND=XIII,2
+|SPALTE_START=
+|SPALTE_END=
+|VORGÄNGER=
+|NACHFOLGER=
+|SORTIERUNG=
+|KORREKTURSTAND=
+|KURZTEXT=
+|WIKIPEDIA=
+|WIKISOURCE=
+|GND=
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=
+|GEBURTSJAHR=
+|NACHTRAG=OFF
+|ÜBERSCHRIFT=OFF
+|VERWEIS=OFF
+}}
+blub
+{{REAutor|Obst.}}
+{{REDaten
+|BAND=XII,1
+|SPALTE_START=
+|SPALTE_END=
+|VORGÄNGER=
+|NACHFOLGER=
+|SORTIERUNG=
+|KORREKTURSTAND=
+|KURZTEXT=
+|WIKIPEDIA=
+|WIKISOURCE=
+|GND=
+|KEINE_SCHÖPFUNGSHÖHE=ON
+|TODESJAHR=
+|GEBURTSJAHR=1939
+|NACHTRAG=OFF
+|ÜBERSCHRIFT=OFF
+|VERWEIS=OFF
+}}
+something
+{{REAutor|Werner Eck.}}""", str(re_page))

@@ -4,10 +4,8 @@ from typing import Optional
 
 import pywikibot
 
-from service.ws_re import public_domain
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from service.ws_re.template.article import Article
 from tools.bots.cloud.logger import WikiLogger
 
 
@@ -31,18 +29,17 @@ class COPDTask(ReScannerTask):
         return True
 
     def set_year_values(self, re_article_list, years):
-        first_article = re_article_list[0]
-        if first_article["KEINE_SCHÖPFUNGSHÖHE"].value and years.pd <= self.current_year:
+        article = re_article_list[0]
+        if article["KEINE_SCHÖPFUNGSHÖHE"].value and years.pd <= self.current_year:
             # article is not protected anymore reset all necessary values
-            first_article["KEINE_SCHÖPFUNGSHÖHE"].value = False
-            first_article["GEBURTSJAHR"].value = ""
-            first_article["TODESJAHR"].value = ""
+            article["KEINE_SCHÖPFUNGSHÖHE"].value = False
+            article["GEBURTSJAHR"].value = ""
+            article["TODESJAHR"].value = ""
         else:
             # still protected ... set values according to years object
-            if ((first_article["GEBURTSJAHR"].value or first_article["TODESJAHR"].value)
-                    or years.pd > self.current_year):
-                first_article["GEBURTSJAHR"].value = str(years.birth) if years.birth else ""
-                first_article["TODESJAHR"].value = str(years.death) if years.death else ""
+            if ((article["GEBURTSJAHR"].value or article["TODESJAHR"].value) or years.pd > self.current_year):
+                article["GEBURTSJAHR"].value = str(years.birth) if years.birth else ""
+                article["TODESJAHR"].value = str(years.death) if years.death else ""
 
     def get_max_pd_year(self, re_article_list) -> Years:
         years = Years()
