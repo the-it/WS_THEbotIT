@@ -1,0 +1,15 @@
+[
+  {
+    "lemma": "Äal",
+    "sort_key": "aal",
+    "short_description": "more complicated then lower, but sortkey is provided"
+  },
+  {
+    "lemma": "Äall",
+    "short_description": "more complicated then lower, processed sortkey should be in dict"
+  },
+    {
+    "lemma": "aal 1",
+    "short_description": "simple numbers case, shouldn't turn up."
+  }
+]
