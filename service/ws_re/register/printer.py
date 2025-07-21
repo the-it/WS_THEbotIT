@@ -5,6 +5,13 @@ from tools import save_if_changed
 from tools.bots.cloud.cloud_bot import CloudBot
 
 
+def _get_simple_number_sortkey(lemma: str) -> str:
+    key_list = lemma.split()
+    if key_list[-1].isdigit():
+        key_list[-1] = key_list[-1].zfill(3)
+    return " ".join(key_list)
+
+
 class ReRegisterPrinter(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
@@ -17,6 +24,7 @@ class ReRegisterPrinter(CloudBot):
         self._print_author()
         self._print_short()
         self._print_pd()
+        self._print_sortkeys()
         return True
 
     def _print_author(self):
@@ -78,6 +86,28 @@ class ReRegisterPrinter(CloudBot):
                                  f"Altertumswissenschaft/Register/{register.volume.name}"),
                             register.get_register_str(print_details=register.volume.name != "R"),
                             "Register aktualisiert")
+
+    def _print_sortkeys(self):
+        self.logger.info("Print sortkeys mapping.")
+        save_if_changed(Page(self.wiki,
+                             "Modul:RE/Sortierschlüssel"),
+                        self._get_sortkey_map(),
+                        "Sortierschlüssel aktualisiert")
+
+    def _get_sortkey_map(self):
+        sortkey_dict: dict[str, str] = {}
+        for register in self.registers.volumes.values():
+            for lemma in register.lemmas:
+                processed_sortkey = lemma.get_sort_key()
+                simple_sortkey = lemma.lemma.lower()
+                if not lemma.sort_key:
+                    if processed_sortkey != _get_simple_number_sortkey(simple_sortkey):
+                        sortkey_dict[simple_sortkey] = processed_sortkey
+        lines: list[str] = []
+        for key, value in sortkey_dict.items():
+            lines.append(f"[\"{key}\"] = \"{value}\",")
+        sortkey_str = f"return {{\n{'\n'.join(lines)}\n}}"
+        return sortkey_str
 
 
 if __name__ == "__main__":  # pragma: no cover

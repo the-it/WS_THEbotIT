@@ -98,21 +98,42 @@ class TestReRegisterPrinter(BaseTestRegister, TestCloudBase):
                 call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Autorenübersicht'),
                 page_mock.call_args_list[3])
 
+    def test_print_sortkey_map(self):
+        with mock.patch("service.ws_re.register.printer.Page") as page_mock:
+            printer = ReRegisterPrinter()
+            printer._print_sortkeys()
+            compare(1, len(page_mock.call_args_list))
+            compare(call(None, 'Modul:RE/Sortierschlüssel'),
+                    page_mock.call_args_list[0])
+
+    def test_get_sortkeys(self):
+        copy_tst_data("I_1_sorting", "I_1")
+        printer = ReRegisterPrinter()
+        expection = """return {
+["äall"] = "aall",
+["vaaa"] = "uaaa",
+}"""
+        compare(expection, printer._get_sortkey_map())
+
+
     def test_task(self):
         printer = ReRegisterPrinter()
-        volume_mock: mock.Mock = mock.Mock()
+        volume_mock = mock.Mock()
         alphabetic_mock = mock.Mock()
         author_mock = mock.Mock()
         short_mock = mock.Mock()
         pd_mock = mock.Mock()
+        sortkeys_mock = mock.Mock()
         printer._print_volume = volume_mock
         printer._print_alphabetic = alphabetic_mock
         printer._print_author = author_mock
         printer._print_short = short_mock
         printer._print_pd = pd_mock
+        printer._print_sortkeys = sortkeys_mock
         printer.task()
         self.assertTrue(volume_mock.called)
         self.assertTrue(alphabetic_mock.called)
         self.assertTrue(author_mock.called)
         self.assertTrue(short_mock.called)
         self.assertTrue(pd_mock.called)
+        self.assertTrue(sortkeys_mock.called)

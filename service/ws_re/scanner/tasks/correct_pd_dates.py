@@ -29,7 +29,7 @@ class COPDTask(ReScannerTask):
             self.set_year_values(re_article_list, years)
         return True
 
-    def set_year_values(self, re_article_list: ArticleList, years:Years):
+    def set_year_values(self, re_article_list: ArticleList, years: Years):
         article = re_article_list[0]
         if article["KEINE_SCHÖPFUNGSHÖHE"].value and years.pd <= self.current_year:
             # article is not protected anymore reset all necessary values
