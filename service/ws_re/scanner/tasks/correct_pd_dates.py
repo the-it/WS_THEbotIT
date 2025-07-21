@@ -6,6 +6,7 @@ import pywikibot
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
+from service.ws_re.template.re_page import ArticleList
 from tools.bots.cloud.logger import WikiLogger
 
 
@@ -28,7 +29,7 @@ class COPDTask(ReScannerTask):
             self.set_year_values(re_article_list, years)
         return True
 
-    def set_year_values(self, re_article_list, years):
+    def set_year_values(self, re_article_list: ArticleList, years:Years):
         article = re_article_list[0]
         if article["KEINE_SCHÖPFUNGSHÖHE"].value and years.pd <= self.current_year:
             # article is not protected anymore reset all necessary values
@@ -37,7 +38,7 @@ class COPDTask(ReScannerTask):
             article["TODESJAHR"].value = ""
         else:
             # still protected ... set values according to years object
-            if ((article["GEBURTSJAHR"].value or article["TODESJAHR"].value) or years.pd > self.current_year):
+            if article["GEBURTSJAHR"].value or article["TODESJAHR"].value or years.pd > self.current_year:
                 article["GEBURTSJAHR"].value = str(years.birth) if years.birth else ""
                 article["TODESJAHR"].value = str(years.death) if years.death else ""
 
