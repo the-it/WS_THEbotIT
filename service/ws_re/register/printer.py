@@ -102,7 +102,7 @@ class ReRegisterPrinter(CloudBot):
                 simple_sortkey = lemma.lemma.lower()
                 if not lemma.sort_key:
                     if processed_sortkey != _get_simple_number_sortkey(simple_sortkey):
-                        sortkey_dict[simple_sortkey] = processed_sortkey
+                        sortkey_dict[lemma.lemma] = processed_sortkey
         lines: list[str] = []
         for key, value in sortkey_dict.items():
             lines.append(f"[\"{key}\"] = \"{value}\",")
