@@ -80,7 +80,7 @@ class TestIntegrationRegister(parent_class):
                 pre_lemma = register[i - 1] if i > 0 else None
                 if pre_lemma and pre_lemma.next:
                     if not pre_lemma.next == lemma.lemma:  # pragma: no cover
-                        errors.append(f"PRE lemma name {lemma['lemma']} /{i} in register {register.volume.name} "
+                        errors.append(f"PRE lemma name {lemma.lemma} /{i} in register {register.volume.name} "
                                       f"not the same as pre lemma")
                 with contextlib.suppress(IndexError):
                     post_lemma = register[i + 1]
