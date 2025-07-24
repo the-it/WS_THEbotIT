@@ -39,7 +39,7 @@ class P6216CopyrightStatus(ClaimFactory):
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
         claim_list: List[JsonClaimDict] = []
-        if self._current_year - int(self._volume_of_first_article.year) > 95:
+        if self._current_year - int(self._volume_of_article(self.re_page.first_article).year) > 95:
             claim_list.append(self.published_95_years_ago)
         pma_claim = self.min_years_since_death
         if pma_claim:
@@ -74,7 +74,7 @@ class P6216CopyrightStatus(ClaimFactory):
     @property
     def min_years_since_death(self) -> Optional[JsonClaimDict]:
         max_death_year = 0
-        for author in self._authors_of_first_article:
+        for author in self.get_authors_article(self.re_page.splitted_article_list[0]):
             if not author.death:
                 max_death_year = self._current_year
             elif author.death > max_death_year:
