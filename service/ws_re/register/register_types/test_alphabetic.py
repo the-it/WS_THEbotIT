@@ -112,7 +112,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 }}
 
 {{Tabellenstile}}
-{|class="wikitable sortable tabelle-kopf-fixiert"
+{|class="wikitable sortable tabelle-kopf-fixiert" style="background:#FFFAF0;"
 !Artikel
 !Kurztext
 !Wikilinks

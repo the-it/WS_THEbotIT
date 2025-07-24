@@ -39,9 +39,10 @@ class Register(ABC):
             return_lemmas.append(last_lemmas)
         return return_lemmas
 
-    def _get_table(self, print_volume: bool = True, print_description: bool = True, print_author: bool = True) -> str:
+    def _get_table(self, print_volume: bool = True, print_description: bool = True,
+                   print_author: bool = True, background: bool = False) -> str:
         header = f"""{{{{Tabellenstile}}}}
-{{|class="wikitable sortable tabelle-kopf-fixiert"
+{{|class="wikitable sortable tabelle-kopf-fixiert"{' style=\"background:#FFFAF0;\"' if background else ''}
 !Artikel
 {'!Kurztext' if print_description else ''}
 !Wikilinks

@@ -66,4 +66,4 @@ class AlphabeticRegister(Register):
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def get_register_str(self) -> str:
-        return f"{self._get_header()}\n{self._get_table()}\n[[Kategorie:RE:Register|!]]"
+        return f"{self._get_header()}\n{self._get_table(background=True)}\n[[Kategorie:RE:Register|!]]"
