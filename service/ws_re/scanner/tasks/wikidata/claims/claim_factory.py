@@ -10,7 +10,7 @@ from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ChangedClaimsDict, JsonDataValue, \
     JsonSnakDict, ReferencesList, JsonClaimDict
 from service.ws_re.template.article import Article
-from service.ws_re.template.re_page import RePage
+from service.ws_re.template.re_page import RePage, ArticleList
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
 from tools.bots.logger import WikiLogger
@@ -206,7 +206,7 @@ class ClaimFactory:
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
-    def get_authors_article(self, article_list: list[Article]) -> List[Author]:
+    def get_authors_article(self, article_list: ArticleList) -> List[Author]:
         author_list: List[Author] = []
         for article_part in article_list:
             author = article_part.author.identification

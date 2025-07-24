@@ -12,9 +12,9 @@ class P1433PublishedIn(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        return [self.create_claim_json(self.get_volume_snak(self.re_page.splitted_article_list[0]))]
+        return [self.create_claim_json(self.get_volume_snak(self.re_page.first_article))]
 
-    def get_volume_snak(self, articles: list[Article]) -> SnakParameter:
+    def get_volume_snak(self, article: Article) -> SnakParameter:
         return SnakParameter(property_str=self.get_property_string(),
                              target_type="wikibase-item",
-                             target=self._volume_of_article(articles[0]).data_item)
+                             target=self._volume_of_article(article).data_item)
