@@ -22,7 +22,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 
 SerializedClaimList = List[Dict]
 SerializedClaimDictionary = Dict[str, SerializedClaimList]

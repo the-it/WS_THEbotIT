@@ -8,7 +8,7 @@ from unittest import TestCase
 
 from pywikibot import Page, Site
 
-from tools.bots.pi import OneTimeBot
+from archive.service.pi import OneTimeBot
 from tools.petscan import PetScan
 
 

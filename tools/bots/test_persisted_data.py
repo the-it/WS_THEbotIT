@@ -5,8 +5,8 @@ from freezegun import freeze_time
 from testfixtures import compare
 
 from tools.bots import BotException
-from tools.bots.cloud.persisted_data import PersistedData
-from tools.bots.cloud.test_base import TestCloudBase, BUCKET_NAME
+from tools.bots.persisted_data import PersistedData
+from tools.bots.test_base import TestCloudBase, BUCKET_NAME
 
 
 class TestPersistedData(TestCloudBase):

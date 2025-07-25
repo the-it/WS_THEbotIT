@@ -6,7 +6,7 @@ import pywikibot
 from pywikibot import Site, Page
 
 from tools.bots import BotException
-from tools.bots.cloud.cloud_bot import CloudBot
+from tools.bots.cloud_bot import CloudBot
 from tools.petscan import PetScan, get_processed_time
 from tools import has_korrigiert_category, save_if_changed, add_category
 

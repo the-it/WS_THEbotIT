@@ -9,7 +9,7 @@ from testfixtures import LogCapture
 from service.ws_re.scanner.base import ReScanner
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template import ReDatenException
-from tools.bots.cloud.test_base import TestCloudBase
+from tools.bots.test_base import TestCloudBase
 from tools.test import SearchStringChecker
 
 

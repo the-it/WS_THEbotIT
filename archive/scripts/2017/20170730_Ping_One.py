@@ -5,7 +5,7 @@ sys.path.append('../../')
 
 import pywikibot
 
-from tools.bots.pi import OneTimeBot
+from archive.service.pi import OneTimeBot
 
 
 class PingOne(OneTimeBot):

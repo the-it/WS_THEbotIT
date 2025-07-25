@@ -6,7 +6,7 @@ from ddt import ddt, file_data
 from testfixtures import compare
 
 from service.list_bots.poem_list import PoemList
-from tools.bots.cloud.test_base import TestCloudBase
+from tools.bots.test_base import TestCloudBase
 from tools.test import real_wiki_test, PageMock
 
 

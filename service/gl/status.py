@@ -2,14 +2,11 @@ import re
 
 from pywikibot import Page, Site
 
-from tools.bots.pi import CanonicalBot
+from tools.bots.cloud_bot import CloudBot
 from tools.petscan import PetScan
 
 
-class GlStatus(CanonicalBot):
-    def __init__(self, wiki, debug):
-        CanonicalBot.__init__(self, wiki, debug)
-
+class GlStatus(CloudBot):
     def task(self):
         if self.debug:  # activate for debug purpose
             lemma = "Benutzer:THEbotIT/" + self.bot_name
@@ -44,7 +41,7 @@ class GlStatus(CanonicalBot):
         composed_text = "".join(["<!--new line: "
                                  "Liste wird von einem Bot aktuell gehalten.-->\n|-\n",
                                  "|",
-                                 self.timestamp.start_of_run.strftime("%d.%m.%Y"),
+                                 self.status.current_run.start_time.strftime("%d.%m.%Y"),
                                  "|| ", str(alle),
                                  " || ", str(unkorrigiert), self.to_percent(unkorrigiert, alle),
                                  " || ", str(korrigiert), self.to_percent(korrigiert, alle),

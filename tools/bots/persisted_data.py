@@ -9,7 +9,7 @@ import boto3
 from botocore import exceptions
 
 from tools.bots import BotException
-from tools.bots.cloud.base import get_aws_credentials, is_aws_test_env
+from tools.bots.base import get_aws_credentials, is_aws_test_env
 
 
 class PersistedData(Mapping):

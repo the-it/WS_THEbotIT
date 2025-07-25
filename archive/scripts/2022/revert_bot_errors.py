@@ -3,7 +3,7 @@ from typing import Optional, List
 from pywikibot import Site, Page, User, Timestamp
 from pywikibot.page import Revision
 
-from tools.bots.pi import OneTimeBot
+from archive.service.pi import OneTimeBot
 
 
 class RevertBotDeletions(OneTimeBot):

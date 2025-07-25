@@ -11,7 +11,7 @@ from unittest import TestCase, mock
 from testfixtures import LogCapture
 
 from tools.bots import BotException
-from tools.bots.pi import CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, \
+from archive.service.pi import CanonicalBot, OneTimeBot, PersistedTimestamp, PersistedData, \
     WikiLogger, \
     _DATA_PATH, _get_data_path
 

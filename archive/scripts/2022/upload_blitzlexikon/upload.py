@@ -7,7 +7,7 @@ from pathlib import Path
 import pywikibot
 from pywikibot import Site
 
-from tools.bots.pi import OneTimeBot
+from archive.service.pi import OneTimeBot
 
 file_description = """== batch ==
 Meyers Blitz-Lexikon. Die Schnellauskunft für jedermann in Wort und Bild. Leipzig: Bibliographisches Institut AG

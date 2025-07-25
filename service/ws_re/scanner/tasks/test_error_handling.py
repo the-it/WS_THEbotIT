@@ -5,7 +5,7 @@ from unittest import TestCase, mock
 from testfixtures import LogCapture
 
 from service.ws_re.scanner.tasks.error_handling import ERROTask
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 
 
 class TestERROTask(TestCase):

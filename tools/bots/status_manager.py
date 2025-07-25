@@ -5,8 +5,8 @@ import boto3
 from boto3.dynamodb.conditions import Key
 from mypy_boto3_dynamodb import DynamoDBServiceResource
 
-from tools.bots.cloud.base import is_aws_test_env, get_aws_credentials
-from tools.bots.cloud.status import Status
+from tools.bots.base import is_aws_test_env, get_aws_credentials
+from tools.bots.status import Status
 
 MANAGE_TABLE = f"wiki_bots_manage_table_{'tst' if is_aws_test_env() else 'prd'}"
 

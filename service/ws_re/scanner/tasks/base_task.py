@@ -6,7 +6,7 @@ from typing import List, Dict, Any
 import pywikibot
 
 from service.ws_re.template.re_page import RePage
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 
 SUCCESS = "success"
 CHANGED = "changed"

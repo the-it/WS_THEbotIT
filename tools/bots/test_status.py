@@ -6,7 +6,7 @@ from unittest import TestCase
 from freezegun import freeze_time
 from testfixtures import compare
 
-from tools.bots.cloud.status import Status
+from tools.bots.status import Status
 
 
 class TestStatus(TestCase):

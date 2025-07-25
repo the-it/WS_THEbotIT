@@ -5,9 +5,9 @@ from datetime import datetime, timedelta
 
 from pywikibot import Site, Page
 
-from tools.bots.cloud.logger import WikiLogger
-from tools.bots.cloud.persisted_data import PersistedData
-from tools.bots.cloud.status_manager import StatusManager
+from tools.bots.logger import WikiLogger
+from tools.bots.persisted_data import PersistedData
+from tools.bots.status_manager import StatusManager
 
 
 class CloudBot(ABC):

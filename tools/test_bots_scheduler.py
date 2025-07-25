@@ -5,7 +5,8 @@ from unittest import TestCase, mock
 from testfixtures import LogCapture, compare
 
 from tools.bot_scheduler import BotScheduler
-from tools.bots.pi import CanonicalBot, PersistedTimestamp
+from tools.bots.cloud_bot import CloudBot
+from tools.bots.status_manager import StatusManager
 
 
 class TestBotScheduler(TestCase):
@@ -45,9 +46,9 @@ class TestBotScheduler(TestCase):
             self.assertFalse(self.bot_scheduler._last_day_of_month())
 
     def test_bot_run(self):
-        bot_mock = mock.MagicMock(spec=CanonicalBot)
+        bot_mock = mock.MagicMock(spec=CloudBot)
         bot_mock.run.return_value = True
-        bot_mock.timestamp = PersistedTimestamp("")
+        bot_mock.status = StatusManager("something")
         with LogCapture():
             self.assertTrue(self.bot_scheduler.run_bot(bot_mock))
             compare(1, bot_mock.__enter__.call_count)
@@ -58,11 +59,11 @@ class TestBotScheduler(TestCase):
         with LogCapture():
             self.assertFalse(self.bot_scheduler.run_bot(bot_mock))
 
-    class Bot1(CanonicalBot):
+    class Bot1(CloudBot):
         def task(self):
             pass
 
-    class Bot2(CanonicalBot):
+    class Bot2(CloudBot):
         def task(self):
             pass
 

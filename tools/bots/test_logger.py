@@ -5,7 +5,7 @@ from unittest import TestCase
 
 from testfixtures import compare
 
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 
 
 class TestWikilogger(TestCase):

@@ -20,7 +20,7 @@ from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
 from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
-from tools.bots.cloud.cloud_bot import CloudBot
+from tools.bots.cloud_bot import CloudBot
 from tools.petscan import PetScan, get_processed_time
 
 

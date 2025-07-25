@@ -6,8 +6,8 @@ from unittest import mock
 from freezegun import freeze_time
 from testfixtures import compare
 
-from tools.bots.cloud.status_manager import StatusManager
-from tools.bots.cloud.test_base import TestCloudBase
+from tools.bots.status_manager import StatusManager
+from tools.bots.test_base import TestCloudBase
 
 
 class TestStatusManager(TestCloudBase):
