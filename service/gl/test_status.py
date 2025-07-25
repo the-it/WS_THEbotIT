@@ -1,13 +1,13 @@
 # pylint: disable=no-self-use,protected-access
 from datetime import datetime
-from unittest import TestCase
 
 from testfixtures import compare
 
 from service.gl.status import GlStatus
+from tools.bots.test_base import TestCloudBase
 
 
-class TestGlStatus(TestCase):
+class TestGlStatus(TestCloudBase):
     def test_projektstand(self):
         given_file = """aaa
 <!--new line: Liste wird von einem Bot aktuell gehalten.-->

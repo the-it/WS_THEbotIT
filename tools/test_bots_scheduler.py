@@ -1,15 +1,16 @@
 # pylint: disable=protected-access
 from datetime import datetime
-from unittest import TestCase, mock
+from unittest import  mock
 
 from testfixtures import LogCapture, compare
 
 from tools.bot_scheduler import BotScheduler
 from tools.bots.cloud_bot import CloudBot
 from tools.bots.status_manager import StatusManager
+from tools.bots.test_base import TestCloudBase
 
 
-class TestBotScheduler(TestCase):
+class TestBotScheduler(TestCloudBase):
     def setUp(self):
         self.addCleanup(mock.patch.stopall)
         self.now_patcher = mock.patch("tools.bot_scheduler.BotScheduler.now", new_callable=mock.Mock())

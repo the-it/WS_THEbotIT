@@ -1,16 +1,17 @@
 # pylint: disable=protected-access
 import time
 from datetime import timedelta
-from unittest import TestCase, mock
+from unittest import mock
 
 import pywikibot
 from testfixtures import compare
 
 from service.protect import Protect
+from tools.bots.test_base import TestCloudBase
 from tools.test import real_wiki_test
 
 
-class TestProtect(TestCase):
+class TestProtect(TestCloudBase):
     def setUp(self):
         self.petscan_mock = mock.patch("service.protect.PetScan").start()
         self.get_combined_lemma_list_mock = mock.Mock()
