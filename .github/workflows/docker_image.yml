@@ -29,10 +29,18 @@ jobs:
           type=sha
           type=raw,value=latest,enable={{is_default_branch}}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v6
+#    - name: Build and push Docker image
+#      uses: docker/build-push-action@v6
+#      with:
+#        context: .
+#        push: true
+#        tags: ${{ steps.meta.outputs.tags }}
+#        labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Build
+      uses: docker/bake-action@v6
       with:
-        context: .
-        push: true
-        tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
+        files: |
+          ./docker-bake.hcl
+          cwd://${{ steps.meta.outputs.bake-file }}
+        targets: build
