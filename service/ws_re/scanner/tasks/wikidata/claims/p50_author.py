@@ -5,6 +5,7 @@ import pywikibot
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
+from service.ws_re.template.re_page import ArticleList
 
 
 class P50Author(ClaimFactory):
@@ -13,14 +14,11 @@ class P50Author(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        return [self.create_claim_json(SnakParameter(property_str=self.get_property_string(),
-                                                     target_type="wikibase-item",
-                                                     target=id))
-                for id in self._get_author_list()]
+        return [self.create_claim_json(snak) for snak in self.get_author_list(self.re_page.splitted_article_list[0])]
 
-    def _get_author_list(self) -> List[str]:
+    def get_author_list(self, articles: ArticleList) -> List[SnakParameter]:
         author_items: List[str] = []
-        for author in self._authors_of_first_article:
+        for author in self.get_authors_article(articles):
             author_lemma = None
             if author.ws_lemma:
                 author_lemma = pywikibot.Page(self.wikisource, author.ws_lemma)
@@ -33,4 +31,7 @@ class P50Author(ClaimFactory):
                         author_items.append(author_wikidata_id)
                 except pywikibot.exceptions.NoPageError:
                     continue
-        return author_items
+        return [SnakParameter(property_str=self.get_property_string(),
+                              target_type="wikibase-item",
+                              target=author_id)
+                for author_id in author_items]

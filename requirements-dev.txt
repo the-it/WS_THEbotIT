@@ -8,27 +8,27 @@ annotated-types==0.7.0
     # via pydantic
 anyio==4.9.0
     # via httpx
-astroid==3.3.10
+astroid==3.3.11
     # via pylint
-authlib==1.6.0
+authlib==1.6.1
     # via safety
-bandit==1.8.3
+bandit==1.8.6
     # via -r requirements-dev.in
 beautifulsoup4==4.13.4
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   -r requirements-dev.in
-boto3==1.38.36
+boto3==1.39.13
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   moto
-botocore==1.38.36
+botocore==1.39.13
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   boto3
     #   moto
     #   s3transfer
-certifi==2025.6.15
+certifi==2025.7.14
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   httpcore
@@ -40,18 +40,18 @@ charset-normalizer==3.4.2
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   requests
-click==8.1.8
+click==8.2.1
     # via
     #   nltk
     #   safety
     #   typer
 codecov==2.1.13
     # via -r requirements-dev.in
-coverage==7.9.1
+coverage==7.10.0
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==45.0.4
+cryptography==45.0.5
     # via
     #   authlib
     #   moto
@@ -65,9 +65,9 @@ dparse==0.6.4
     #   safety-schemas
 filelock==3.16.1
     # via safety
-flake8==7.2.0
+flake8==7.3.0
     # via -r requirements-dev.in
-freezegun==1.5.2
+freezegun==1.5.3
     # via -r requirements-dev.in
 h11==0.16.0
     # via httpcore
@@ -81,7 +81,7 @@ idna==3.10
     #   anyio
     #   httpx
     #   requests
-internetarchive==5.4.0
+internetarchive==5.5.0
     # via -r requirements-dev.in
 isort==6.0.1
     # via pylint
@@ -114,9 +114,9 @@ mccabe==0.7.0
     #   pylint
 mdurl==0.1.2
     # via markdown-it-py
-moto==5.1.6
+moto==5.1.8
     # via -r requirements-dev.in
-mypy==1.16.0
+mypy==1.17.0
     # via -r requirements-dev.in
 mypy-extensions==1.1.0
     # via mypy
@@ -140,7 +140,7 @@ platformdirs==4.3.8
     # via pylint
 psutil==6.1.1
     # via safety
-pycodestyle==2.13.0
+pycodestyle==2.14.0
     # via flake8
 pycparser==2.22
     # via cffi
@@ -152,9 +152,9 @@ pydantic-core==2.23.4
     # via pydantic
 pyfiglet==1.0.3
     # via -r requirements-dev.in
-pyflakes==3.3.2
+pyflakes==3.4.0
     # via flake8
-pygments==2.19.1
+pygments==2.19.2
     # via rich
 pylint==3.3.7
     # via -r requirements-dev.in
@@ -196,11 +196,11 @@ ruamel-yaml==0.18.14
     #   safety-schemas
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
-s3transfer==0.13.0
+s3transfer==0.13.1
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   boto3
-safety==3.5.2
+safety==3.6.0
     # via -r requirements-dev.in
 safety-schemas==0.0.14
     # via safety
@@ -220,7 +220,7 @@ stevedore==5.4.1
     # via bandit
 tenacity==9.1.2
     # via safety
-testfixtures==8.3.0
+testfixtures==9.1.0
     # via -r requirements-dev.in
 tomlkit==0.13.3
     # via
@@ -236,7 +236,7 @@ types-freezegun==1.1.10
     # via -r requirements-dev.in
 types-requests==2.32.4.20250611
     # via -r requirements-dev.in
-typing-extensions==4.14.0
+typing-extensions==4.14.1
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   beautifulsoup4
@@ -246,7 +246,7 @@ typing-extensions==4.14.0
     #   safety
     #   safety-schemas
     #   typer
-urllib3==2.4.0
+urllib3==2.5.0
     # via
     #   -c /Users/erik/workspace/WS_THEbotIT/requirements.txt
     #   botocore
