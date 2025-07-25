@@ -25,8 +25,7 @@ jobs:
         images: ghcr.io/${{ github.repository }}
         tags: |
           type=ref,event=branch
-          type=ref,event=pr
-          type=raw,pattern={{date 'YYYYMMDD-hhmmss'}}
+          type=raw,value={{date 'YYYYMMDD-hhmmss'}}
           type=sha
           type=raw,value=latest,enable={{is_default_branch}}
 
