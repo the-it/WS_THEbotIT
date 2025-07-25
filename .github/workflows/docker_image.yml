@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: macos-15
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -33,6 +33,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
+        platforms: linux/arm64
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
