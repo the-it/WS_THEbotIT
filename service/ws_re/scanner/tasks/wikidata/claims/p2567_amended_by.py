@@ -28,7 +28,10 @@ class P2567AmendedBy(ClaimFactory):
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
         claim_list: list[JsonClaimDict] = []
-        for article_list in self.re_page.splitted_article_list[1:]:
+        for idx, article_list in enumerate(self.re_page.splitted_article_list):
+            # skip first entry, this isn't an amendment
+            if idx == 0:
+                continue
             published_in_snak = self.p1433_published_in.get_volume_snak(article_list[0])
             published_in_snak.property_str = self.get_property_string()
             if published_in_snak.target == self.ITEM_R:
@@ -37,7 +40,9 @@ class P2567AmendedBy(ClaimFactory):
             qualifiers += self.p50_author.get_author_list(article_list)
             qualifiers.append(self.p577_publication_date.get_snack(article_list[0]))
             qualifiers.append(self.p3903_column.get_column_snak(article_list[0]))
-            qualifiers.append(self.p155_follows.get_item_of_neighbour_lemma(article_list[0]))
-            qualifiers.append(self.p156_followed_by.get_item_of_neighbour_lemma(article_list[0]))
+            if follows := self.p155_follows.get_item_of_neighbour_lemma(article_list[0]):
+                qualifiers.append(follows)
+            if followed_by := self.p156_followed_by.get_item_of_neighbour_lemma(article_list[0]):
+                qualifiers.append(followed_by)
             claim_list.append(self.create_claim_json(published_in_snak, qualifiers=qualifiers))
         return claim_list
