@@ -26,9 +26,8 @@ jobs:
         tags: |
           type=ref,event=branch
           type=ref,event=pr
-          type=sha
+          type=schedule,pattern={{date 'YYYYMMDD-hhmmss'}}
           type=raw,value=latest,enable={{is_default_branch}}
-          type=raw,value=timestamp,enable=true,priority=200
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
