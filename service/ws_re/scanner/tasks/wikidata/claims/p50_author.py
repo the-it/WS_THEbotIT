@@ -14,9 +14,9 @@ class P50Author(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        return [self.create_claim_json(snak) for snak in self._get_author_list(self.re_page.splitted_article_list[0])]
+        return [self.create_claim_json(snak) for snak in self.get_author_list(self.re_page.splitted_article_list[0])]
 
-    def _get_author_list(self, articles: ArticleList) -> List[SnakParameter]:
+    def get_author_list(self, articles: ArticleList) -> List[SnakParameter]:
         author_items: List[str] = []
         for author in self.get_authors_article(articles):
             author_lemma = None

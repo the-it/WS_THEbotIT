@@ -14,11 +14,11 @@ class Neighbour(ClaimFactory):
         raise NotImplementedError
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        if snak := self._get_item_of_neighbour_lemma(self.re_page.first_article):
+        if snak := self.get_item_of_neighbour_lemma(self.re_page.first_article):
             return [self.create_claim_json(snak)]
         return []
 
-    def _get_item_of_neighbour_lemma(self, article: Article) -> Optional[SnakParameter]:
+    def get_item_of_neighbour_lemma(self, article: Article) -> Optional[SnakParameter]:
         lemma_neighbour = self._get_lemma_of_neighbour(article)
         try:
             return SnakParameter(property_str=self.get_property_string(),
