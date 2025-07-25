@@ -7,7 +7,7 @@ import pywikibot
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.re_page import ArticleList
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 
 
 @dataclass

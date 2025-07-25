@@ -5,14 +5,13 @@ import pywikibot
 from pywikibot import Site, Page, exceptions
 
 from tools.bots import BotException
-from tools.bots.pi import CanonicalBot
+from tools.bots.cloud_bot import CloudBot
 from tools.petscan import PetScan, get_processed_time
 
 
-class Protect(CanonicalBot):
-    def __init__(self, wiki: Site = None, debug: bool = True,
-                 log_to_screen: bool = True, log_to_wiki: bool = True):
-        CanonicalBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
+class Protect(CloudBot):
+    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+        CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout: timedelta = timedelta(minutes=30)
 
     def __enter__(self):

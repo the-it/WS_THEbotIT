@@ -4,7 +4,7 @@ from pywikibot import Site
 
 from service.ws_re.register.registers import Registers
 from service.ws_re.scanner.tasks.add_short_description import KURZTask
-from tools.bots.pi import WikiLogger
+from archive.service.pi import WikiLogger
 
 if __name__ == "__main__":  # pragma: no cover
     wiki = Site(code="de", fam="wikisource", user="THEbotIT")

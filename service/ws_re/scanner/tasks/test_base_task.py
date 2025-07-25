@@ -7,7 +7,7 @@ from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.base import ReScannerTask
 from service.ws_re.template.re_page import RePage
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 from tools.test import PageMock
 
 

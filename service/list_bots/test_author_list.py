@@ -5,7 +5,7 @@ from pywikibot.scripts.generate_user_files import pywikibot
 from testfixtures import compare
 
 from service.list_bots.author_list import AuthorList
-from tools.bots.cloud.test_base import TestCloudBase
+from tools.bots.test_base import TestCloudBase
 from tools.test import real_wiki_test
 
 

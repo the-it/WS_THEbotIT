@@ -4,7 +4,7 @@ from datetime import datetime
 from pywikibot import Page, Site
 
 from service.ws_re.status import make_html_color
-from tools.bots.pi import OneTimeBot
+from archive.service.pi import OneTimeBot
 from tools.petscan import PetScan
 
 

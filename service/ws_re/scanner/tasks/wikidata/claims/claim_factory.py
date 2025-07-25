@@ -12,7 +12,7 @@ from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, Chang
 from service.ws_re.template.re_page import RePage
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 
 
 class ClaimFactory:

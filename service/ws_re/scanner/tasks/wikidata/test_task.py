@@ -10,7 +10,7 @@ from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.template.re_page import RePage
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 from tools.test import real_wiki_test
 
 

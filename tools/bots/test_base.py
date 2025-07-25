@@ -5,7 +5,7 @@ from unittest import TestCase
 import boto3
 from moto import mock_aws
 
-from tools.bots.cloud.base import is_aws_test_env
+from tools.bots.base import is_aws_test_env
 
 JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
 JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \

@@ -3,7 +3,7 @@ from datetime import datetime
 import pywikibot
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
-from tools.bots.cloud.logger import WikiLogger
+from tools.bots.logger import WikiLogger
 
 
 class ERROTask(ReScannerTask, ReporterMixin):

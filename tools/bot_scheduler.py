@@ -1,23 +1,22 @@
 import contextlib
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, List, Type, Union
+from typing import Dict, List, Type
 
 from pywikibot import Site
 
-from tools.bots.cloud.cloud_bot import CloudBot
-from tools.bots.pi import CanonicalBot, OneTimeBot
+from tools.bots.cloud_bot import CloudBot
 
-BotList = List[Type[Union[CanonicalBot, CloudBot]]]
+BotList = List[Type[CloudBot]]
 
 
-class BotScheduler(CanonicalBot):
-    def __init__(self, wiki: Site, debug: bool):
+class BotScheduler(CloudBot):
+    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         self._daily_bots: BotList = []
         self._weekly_bots: Dict[int, BotList] = {}
         self._monthly_bots: Dict[int, BotList] = {}
         self._bots_on_last_day_of_month: BotList = []
-        CanonicalBot.__init__(self, wiki, debug)
+        super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self._now = datetime.now()
 
     def now(self) -> datetime:  # pragma: no cover
@@ -58,15 +57,12 @@ class BotScheduler(CanonicalBot):
     def bots_on_last_day_of_month(self, new_config: BotList):
         self._bots_on_last_day_of_month = new_config
 
-    def run_bot(self, bot_to_run: Union[OneTimeBot, CloudBot]) -> bool:
+    def run_bot(self, bot_to_run: CloudBot) -> bool:
         self.logger.info(f"The bot {bot_to_run.bot_name} is scheduled for start.")
         with bot_to_run:
             success = bot_to_run.run()
         path_to_log = f"{self.wiki.username()}/Logs/{bot_to_run.bot_name}"
-        if isinstance(bot_to_run, OneTimeBot):
-            start_run = bot_to_run.timestamp.start_of_run
-        else:
-            start_run = bot_to_run.status.current_run.start_time
+        start_run = bot_to_run.status.current_run.start_time
         self.logger.info(f"Log @ [https://de.wikisource.org/wiki/Benutzer:{path_to_log}"
                          f"#{start_run:%y-%m-%d_%H:%M:%S} {path_to_log}]")
         if not success:
@@ -106,7 +102,7 @@ if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     BOT_SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=True)
 
-    class TestBot(CanonicalBot):
+    class TestBot(CloudBot):
         def task(self):
             self.logger.info("TestBot")
             return True

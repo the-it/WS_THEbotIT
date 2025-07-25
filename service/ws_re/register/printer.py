@@ -2,7 +2,7 @@ from pywikibot import Site, Page
 
 from service.ws_re.register.registers import Registers
 from tools import save_if_changed
-from tools.bots.cloud.cloud_bot import CloudBot
+from tools.bots.cloud_bot import CloudBot
 
 
 def _get_simple_number_sortkey(lemma: str) -> str:

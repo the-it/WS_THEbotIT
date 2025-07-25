@@ -1,6 +1,6 @@
 from pywikibot import Site, Page
 
-from tools.bots.pi import OneTimeBot
+from archive.service.pi import OneTimeBot
 from tools.petscan import PetScan
 
 

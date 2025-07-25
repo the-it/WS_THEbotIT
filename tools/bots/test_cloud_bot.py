@@ -7,10 +7,10 @@ from unittest import mock
 from freezegun import freeze_time
 from testfixtures import LogCapture, compare
 
-from tools.bots.cloud.cloud_bot import CloudBot
-from tools.bots.cloud.logger import WikiLogger
-from tools.bots.cloud.status_manager import StatusManager
-from tools.bots.cloud.test_base import TestCloudBase
+from tools.bots.cloud_bot import CloudBot
+from tools.bots.logger import WikiLogger
+from tools.bots.status_manager import StatusManager
+from tools.bots.test_base import TestCloudBase
 
 
 class TestCloudBot(TestCloudBase):
@@ -95,7 +95,7 @@ class TestCloudBot(TestCloudBase):
             self.assertTrue(bot.run())
 
     def test_send_log_to_wiki(self):
-        with mock.patch("tools.bots.cloud.cloud_bot.Page") as mock_page:
+        with mock.patch("tools.bots.cloud_bot.Page") as mock_page:
             with self.MinimalBot(wiki=None, log_to_screen=False) as bot:
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
@@ -199,7 +199,7 @@ class TestCloudBot(TestCloudBase):
         StatusManager("DataThrowException").finish_run(success=True)
         with suppress(AssertionError):
             with LogCapture() as log_catcher:
-                with mock.patch("tools.bots.cloud.cloud_bot.PersistedData.dump") as mock_dump:
+                with mock.patch("tools.bots.cloud_bot.PersistedData.dump") as mock_dump:
                     with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
                         log_catcher.clear()
                         bot.run()

@@ -7,7 +7,7 @@ from testfixtures import compare
 
 from service.ws_re.register.printer import ReRegisterPrinter
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
-from tools.bots.cloud.test_base import TestCloudBase
+from tools.bots.test_base import TestCloudBase
 
 
 class TestReRegisterPrinter(BaseTestRegister, TestCloudBase):

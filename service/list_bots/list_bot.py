@@ -6,7 +6,7 @@ from pywikibot import Page
 
 from service.list_bots._base import get_page_infos
 from tools.bots import BotException
-from tools.bots.cloud.cloud_bot import CloudBot
+from tools.bots.cloud_bot import CloudBot
 from tools.petscan import PetScan, get_processed_time
 
 

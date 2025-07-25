@@ -2,7 +2,7 @@ import json
 
 from pywikibot import Site, Page
 
-from tools.bots.pi import OneTimeBot
+from archive.service.pi import OneTimeBot
 
 
 class PageRedirects(OneTimeBot):
