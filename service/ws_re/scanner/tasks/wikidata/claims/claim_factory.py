@@ -9,7 +9,8 @@ from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ChangedClaimsDict, JsonDataValue, \
     JsonSnakDict, ReferencesList, JsonClaimDict
-from service.ws_re.template.re_page import RePage
+from service.ws_re.template.article import Article
+from service.ws_re.template.re_page import RePage, ArticleList
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
 from tools.bots.logger import WikiLogger
@@ -205,17 +206,15 @@ class ClaimFactory:
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
-    @property
-    def _authors_of_first_article(self) -> List[Author]:
+    def get_authors_article(self, article_list: ArticleList) -> List[Author]:
         author_list: List[Author] = []
-        for article_part in self.re_page.splitted_article_list[0]:
+        for article_part in article_list:
             author = article_part.author.identification
-            band = self.re_page.first_article["BAND"].value
+            band = article_list[0]["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)
             if len(possible_authors) == 1:
                 author_list.append(possible_authors[0])
         return author_list
 
-    @property
-    def _volume_of_first_article(self) -> Volume:
-        return self._volumes[str(self.re_page.first_article["BAND"].value)]
+    def _volume_of_article(self, article: Article) -> Volume:
+        return self._volumes[str(article["BAND"].value)]
