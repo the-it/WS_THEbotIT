@@ -26,7 +26,8 @@ class COPDTask(ReScannerTask):
     def task(self):
         for re_article_list in self.re_page.splitted_article_list:
             years = self.get_max_pd_year(re_article_list)
-            self.set_year_values(re_article_list, years)
+            if years.pd:
+                self.set_year_values(re_article_list, years)
         return True
 
     def set_year_values(self, re_article_list: ArticleList, years: Years):
@@ -52,7 +53,7 @@ class COPDTask(ReScannerTask):
                         years.birth = None
                         years.death = author.death
                         years.pd = author.year_public_domain
-                    else:
+                    elif author.birth:
                         years.birth = author.birth
                         years.death = None
                         years.pd = author.year_public_domain
