@@ -214,6 +214,37 @@ bla
         compare("", first_article["GEBURTSJAHR"].value)
         compare("1950", first_article["TODESJAHR"].value)
 
+    def test_no_author_information(self):
+        """
+        We have neither a birth nor a death year for the author ... change nothing.
+        """
+        expectation = """{{REDaten
+|BAND=S XIV
+|SPALTE_START=104
+|SPALTE_END=105
+|VORGÄNGER=Claudius 441a
+|NACHFOLGER=Clodius 58a
+|SORTIERUNG=
+|KORREKTURSTAND=Platzhalter
+|KURZTEXT=Q. C. Flavianus, c.v., Inhaber mehrerer Priesterämter 4. Jh. n. Chr.
+|WIKIPEDIA=
+|WIKISOURCE=
+|GND=
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=
+|GEBURTSJAHR=1952
+|NACHTRAG=OFF
+|ÜBERSCHRIFT=OFF
+|VERWEIS=OFF
+}}
+TEXT
+{{REAutor|Garth Thomas.}}"""
+        self.page_mock.text = expectation
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.task()
+        compare(expectation, str(re_page))
+
     def test_integration(self):
         self.page_mock.text = """{{REDaten
 |BAND=XIII,2
