@@ -26,6 +26,10 @@ def add_category(text: str, category: str) -> str:
     return text
 
 
+def remove_category(text: str, category: str) -> str:
+    return re.sub(rf"\n\[\[Kategorie:{category}\]\]", "", text)
+
+
 def _has_category(lemma: Page, category_to_find: str) -> bool:
     categories: list[str] = [category.title() for category in lemma.categories()]
     category_found = False

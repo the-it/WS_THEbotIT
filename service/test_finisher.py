@@ -62,6 +62,31 @@ class TestFinisher(TestCloudBase):
                     Page(self.wiki,
                          "Der Ausdruck der Gemüthsbewegungen bei dem Menschen und den Thieren/Zwölftes Capitel")))
 
+    def test_try_autocorrect(self):
+        before = """{{Navigation2
+ |AUTOR      = [[Friedrich von Boetticher]]
+ |ÜBERSETZER =
+ |ARTIKEL    = [[Malerwerke des neunzehnten Jahrhunderts – Erster Band]]
+ |KAPITEL  =  [[Boetticher:Adam, Benno|Adam, Benno]]
+ |VORIGER  =   [[Boetticher:Adam, Albrecht|Adam, Albrecht]]
+ |NÄCHSTER   =[[Boetticher:Adam, Emil|Adam, Emil]]
+ |JAHR       = 1891
+ |ANMERKUNG  =
+ |STATUS   = korrigiert
+}}
+__TOC__
+{{BlockSatzStart}}
+{{SeitePR|15|Malerwerke des neunzehnten Jahrhunderts Erster Band.pdf/28|2}}
+{{SeitePR|16|Malerwerke des neunzehnten Jahrhunderts Erster Band.pdf/29|1}}
+{{BlockSatzEnd}}
+
+
+[[Kategorie:Malerwerke des neunzehnten Jahrhunderts 1. Band/Künstler|A]]"""
+        after = before.replace("korrigiert", "fertig")
+        new, changed = self.finisher.try_autocorrect(before)
+        compare(new, after)
+        compare(changed, True)
+
     @real_wiki_test
     @staticmethod
     def test_integration():
@@ -82,13 +107,14 @@ class TestFinisher(TestCloudBase):
                  "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages korrigiert",
                  "Benutzer:THE IT/unittest/finisher/Lemma korrigiert overview",
                  "Benutzer:THE IT/unittest/finisher/Lemma no included pages",
-                 "Benutzer:THE IT/unittest/finisher/Lemma underscores"
+                 "Benutzer:THE IT/unittest/finisher/Lemma underscores",
+                 "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig autocorrect"
              ], 2)
         ]
         WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
         with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=False) as bot:
             bot.run()
-        compare(2, save_mock.call_count)
+        compare(3, save_mock.call_count)
         compare("""{{#lst:Seite:THE IT/unittest/finisher/Seite:1}}
 {{#lst:Seite:THE IT/unittest/finisher/Seite:2}}
 [[Kategorie:Korrigiert]]
@@ -97,3 +123,20 @@ class TestFinisher(TestCloudBase):
                 save_mock.call_args_list[0].kwargs["page"].title())
         compare("Benutzer:THE IT/unittest/finisher/Lemma underscores",
                 save_mock.call_args_list[1].kwargs["page"].title())
+        compare("""{{Navigation2
+ |AUTOR      = [[Friedrich von Boetticher]]
+ |ÜBERSETZER =
+ |ARTIKEL    = [[Malerwerke des neunzehnten Jahrhunderts – Erster Band]]
+ |KAPITEL  =  [[Boetticher:Adam, Benno|Adam, Benno]]
+ |VORIGER  =   [[Boetticher:Adam, Albrecht|Adam, Albrecht]]
+ |NÄCHSTER   =[[Boetticher:Adam, Emil|Adam, Emil]]
+ |JAHR       = 1891
+ |ANMERKUNG  =
+ |STATUS   = fertig
+}}
+{{#lst:Seite:THE IT/unittest/finisher/Seite:1}}
+{{#lst:Seite:THE IT/unittest/finisher/Seite:2}}
+[[Kategorie:Korrigiert]]""",
+                save_mock.call_args_list[2].kwargs["text"])
+        compare("Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig autocorrect",
+                save_mock.call_args_list[2].kwargs["page"].title())

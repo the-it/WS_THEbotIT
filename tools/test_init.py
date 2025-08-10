@@ -4,7 +4,7 @@ from unittest import TestCase, mock
 from pywikibot import Site, Page
 from testfixtures import compare
 
-from tools import save_if_changed, add_category, has_fertig_category, has_korrigiert_category
+from tools import save_if_changed, add_category, has_fertig_category, has_korrigiert_category, remove_category
 from tools.test import real_wiki_test
 
 
@@ -33,6 +33,9 @@ class TestTools(TestCase):
 
     def test_add_category_already_there(self):
         compare("test\n[[Kategorie:new_cat]]", add_category("test\n[[Kategorie:new_cat]]", "new_cat"))
+
+    def test_remove_category(self):
+        compare("test", remove_category("test\n[[Kategorie:new_cat]]", "new_cat"))
 
     @real_wiki_test
     def test__has_category(self):
