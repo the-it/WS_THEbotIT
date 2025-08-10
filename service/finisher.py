@@ -1,6 +1,7 @@
 import re
 from contextlib import suppress
 from datetime import timedelta, datetime
+from typing import Tuple
 
 import pywikibot
 from pywikibot import Site, Page
@@ -8,7 +9,7 @@ from pywikibot import Site, Page
 from tools.bots import BotException
 from tools.bots.cloud_bot import CloudBot
 from tools.petscan import PetScan, get_processed_time
-from tools import has_korrigiert_category, save_if_changed, add_category
+from tools import has_korrigiert_category, save_if_changed, add_category, remove_category
 
 
 class Finisher(CloudBot):
@@ -18,6 +19,7 @@ class Finisher(CloudBot):
     targets lemmas, which include 100% proofread pages, but are left in the category "Korrigiert", and tries to move
     them to the category "Fertig"."""
 
+    CATEGORY = "Wikisource:Lemma korrigiert, alle Unterseiten fertig"
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout: timedelta = timedelta(minutes=15)
@@ -105,6 +107,11 @@ class Finisher(CloudBot):
             return True
         return False
 
+    @staticmethod
+    def try_autocorrect(text: str) -> Tuple[str, bool]:
+        new = re.sub(r"\|STATUS(\s{0,10}=\s{0,10})korrigiert", r"|STATUS\1fertig", text)
+        return new, not(text == new)
+
     def task(self) -> bool:
         with self.time_step("init_proofread_dict"):
             proofread_pages_set = self._get_proofread_pages()
@@ -138,9 +145,13 @@ class Finisher(CloudBot):
                 if not self.all_pages_fertig(pages, proofread_pages_set):
                     continue
                 self.logger.info(f"The lemma [[{lemma}]] has only proofread pages, but isn't in the proofread cat.")
+                new_text, changed = self.try_autocorrect(lemma_page.text)
+                if changed:
+                    new_text = remove_category(new_text, self.CATEGORY)
+                else:
+                    new_text = add_category(new_text, self.CATEGORY)
                 save_if_changed(page=lemma_page,
-                                text=add_category(lemma_page.text,
-                                                  "Wikisource:Lemma korrigiert, alle Unterseiten fertig"),
+                                text=new_text,
                                 change_msg="Korrekturstand des Lemmas überprüfen!")
             self.logger.info(f"{idx + 1} lemmas were processed.")
         return True
