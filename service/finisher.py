@@ -20,6 +20,7 @@ class Finisher(CloudBot):
     them to the category "Fertig"."""
 
     CATEGORY = "Wikisource:Lemma korrigiert, alle Unterseiten fertig"
+
     def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout: timedelta = timedelta(minutes=15)
@@ -110,7 +111,7 @@ class Finisher(CloudBot):
     @staticmethod
     def try_autocorrect(text: str) -> Tuple[str, bool]:
         new = re.sub(r"\|STATUS(\s{0,10}=\s{0,10})korrigiert", r"|STATUS\1fertig", text)
-        return new, not(text == new)
+        return new, text != new
 
     def task(self) -> bool:
         with self.time_step("init_proofread_dict"):
