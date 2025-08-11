@@ -69,10 +69,14 @@ class P1343DescribedBySource(ClaimFactory):
              if claim["mainsnak"]["datavalue"]["value"]["numeric-id"] == int(self.ITEM_RE[1:])]
         existing_qualifiers: list[int] = []
         for claim in filtered_described_in_claims:
-            for qualifier in claim["qualifiers"][self.DESCRIBED_OBJECT_PROP]:
-                if value := qualifier["datavalue"]["value"]["numeric-id"]:
-                    if value not in existing_qualifiers:
-                        existing_qualifiers.append(value)
+            try:
+                for qualifier in claim["qualifiers"][self.DESCRIBED_OBJECT_PROP]:
+                    if value := qualifier["datavalue"]["value"]["numeric-id"]:
+                        if value not in existing_qualifiers:
+                            existing_qualifiers.append(value)
+            except KeyError:
+                self.logger.warning(f"[https://www.wikidata.org/wiki/{target_item.id} Target item]"
+                                    f" doesn't have P805 to specify the claim P1343. This entry was wiped.")
         return existing_qualifiers
 
     def check_source_is_valid(self, source_id: int, target_id: int) -> bool:

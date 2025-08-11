@@ -1,6 +1,6 @@
 # pylint: disable=protected-access,no-self-use
 from datetime import datetime
-from unittest import TestCase, mock
+from unittest import TestCase, mock, skip
 
 import pywikibot
 from testfixtures import compare
@@ -172,3 +172,13 @@ class TestDATATask(TestCase):
                  }
         }
         compare(edit_expect, edit_args[0].args[0])
+
+    @skip("For debuging.")
+    @real_wiki_test
+    def test_debug(self):
+        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+        lemma = RePage(pywikibot.Page(WS_WIKI, "RE:Menephron 1"))
+        data_task = DATATask(WS_WIKI,
+                             WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False),
+                             True)
+        self.assertTrue(data_task.run(lemma))
