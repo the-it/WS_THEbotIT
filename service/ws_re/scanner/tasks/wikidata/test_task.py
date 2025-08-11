@@ -174,7 +174,6 @@ class TestDATATask(TestCase):
         compare(edit_expect, edit_args[0].args[0])
 
     @skip("For debuging.")
-    def test_integration_edit_page(self):
     @real_wiki_test
     def test_debug(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
