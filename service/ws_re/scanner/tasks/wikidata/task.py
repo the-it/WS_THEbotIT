@@ -80,6 +80,8 @@ class DATATask(ReScannerTask):
             item_dict_add.update(NonClaims(self.re_page).dict)
             data_item.editEntity(item_dict_add)
             self.logger.debug(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
+            # refetch data item, if the item was created before this step
+            self.re_page.page.data_item().get()
         self.back_link_main_topic()
 
     def back_link_main_topic(self):
