@@ -83,6 +83,8 @@ class DATATask(ReScannerTask):
         self.back_link_main_topic()
 
     def back_link_main_topic(self):
+        # refetch data item, if the item was created before this step
+        self.re_page.page.data_item().get()
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
         main_topic_id = p1343_factory.get_main_topic_id()
         if not main_topic_id:
