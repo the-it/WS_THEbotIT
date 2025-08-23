@@ -116,12 +116,12 @@ class TestDEWPTask(TaskTestCase):
                      "disambiguous": [("Four", "Second_Lemma")]}
         expect = [
             "=== Artikel existieren in Wikipedia nicht ===",
-            "* Wikpedia Artikel: [[w:One]] (verlinkt von [[RE:First_Lemma]]) existiert nicht",
-            "* Wikpedia Artikel: [[w:Two]] (verlinkt von [[RE:Second_Lemma]]) existiert nicht",
+            "* Wikipedia-Artikel: [[w:One]] (verlinkt von [[RE:First_Lemma]]) existiert nicht",
+            "* Wikipedia-Artikel: [[w:Two]] (verlinkt von [[RE:Second_Lemma]]) existiert nicht",
             "=== Linkziel ist ein Redirect ===",
-            "* Wikpedia Artikel: [[w:Three]] (verlinkt von [[RE:Second_Lemma]]) ist ein Redirect",
+            "* Wikipedia-Artikel: [[w:Three]] (verlinkt von [[RE:Second_Lemma]]) ist ein Redirect",
             "=== Linkziel ist eine Begriffsklärungsseite ===",
-            "* Wikpedia Artikel: [[w:Four]] (verlinkt von [[RE:Second_Lemma]]) ist eine Begriffsklärungsseite",
+            "* Wikipedia-Artikel: [[w:Four]] (verlinkt von [[RE:Second_Lemma]]) ist eine Begriffsklärungsseite",
             ]
         compare(expect, task._build_entry().split("\n")[-7:])
 
