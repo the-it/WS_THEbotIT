@@ -100,6 +100,9 @@ class Finisher(CloudBot):
         # readiness not just by the pages on the lemma page itself. This function detects (best effort) if we have such
         # page.
 
+        # if we have a "Band" in the title it is an overview page most likely
+        if "Band" in lemma.title() or "Bd." in lemma.title():
+            return True
         # fetching all outbond links from the main namespace
         linked_pages = [page.title() for page in lemma.linkedPages() if page.namespace() in (0, 2)]
         # if some of those links contain the title of the lemma itself, it is very likely, that we have an overview

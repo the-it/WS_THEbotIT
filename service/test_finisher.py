@@ -56,11 +56,14 @@ class TestFinisher(TestCloudBase):
 
     @real_wiki_test
     def test_is_overview_page(self):
-        compare(True, self.finisher.is_overview_page(Page(self.wiki, "Mathematische Principien der Naturlehre")))
-        compare(False,
-                self.finisher.is_overview_page(
-                    Page(self.wiki,
-                         "Der Ausdruck der Gemüthsbewegungen bei dem Menschen und den Thieren/Zwölftes Capitel")))
+        compare(True, self.finisher.is_overview_page(
+            Page(self.wiki, "Mathematische Principien der Naturlehre")))
+        compare(True, self.finisher.is_overview_page(
+            Page(self.wiki, "Interessante Kriminal-Prozesse von kulturhistorischer Bedeutung, Band 4")))
+        compare(True, self.finisher.is_overview_page(
+            Page(self.wiki, "Deutsche Zeitschrift für Geschichtswissenschaft Bd. 01 (1889)")))
+        compare(False, self.finisher.is_overview_page(
+            Page(self.wiki, "Der Ausdruck der Gemüthsbewegungen bei dem Menschen und den Thieren/Zwölftes Capitel")))
 
     def test_try_autocorrect(self):
         before = """{{Navigation2
