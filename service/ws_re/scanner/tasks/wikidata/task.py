@@ -82,12 +82,9 @@ class DATATask(ReScannerTask):
             item_dict_add.update(NonClaims(self.re_page).dict)
             data_item.editEntity(item_dict_add)
             self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
-            # refresh the page after creation of wikidata item
-            title = self.re_page.lemma
-            time.sleep(10)
-            self.re_page = RePage(pywikibot.Page(self.wiki, title))
-            self.re_page.page.data_item().get()
-        # self.back_link_main_topic()
+            # try just waiting for 5 seconds after the fresh creation of an item
+            time.sleep(5)
+        self.back_link_main_topic()
 
     def back_link_main_topic(self):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
