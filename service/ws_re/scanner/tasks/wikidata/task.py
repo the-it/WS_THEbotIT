@@ -1,3 +1,4 @@
+import time
 from typing import Dict, List, Optional
 
 import pywikibot
@@ -23,6 +24,7 @@ from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
+from service.ws_re.template.re_page import RePage
 from tools.bots.logger import WikiLogger
 
 SerializedClaimList = List[Dict]
@@ -80,8 +82,11 @@ class DATATask(ReScannerTask):
             item_dict_add.update(NonClaims(self.re_page).dict)
             data_item.editEntity(item_dict_add)
             self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
-            # assign data_item manually to make instant backlinking possible
-            self.re_page.page.data_item = data_item
+            # refresh the page after creation of wikidata item
+            title = self.re_page.lemma
+            time.sleep(10)
+            self.re_page = RePage(pywikibot.Page(self.wiki, title))
+            self.re_page.page.data_item().get()
         # self.back_link_main_topic()
 
     def back_link_main_topic(self):
