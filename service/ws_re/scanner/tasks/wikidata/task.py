@@ -82,7 +82,7 @@ class DATATask(ReScannerTask):
             self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
             # assign data_item manually to make instant backlinking possible
             self.re_page.page.data_item = data_item
-        self.back_link_main_topic()
+        # self.back_link_main_topic()
 
     def back_link_main_topic(self):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
