@@ -74,7 +74,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 |style="background:#AA0000"|UNK
 |-
 |rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
-|rowspan=2|This is Beta
+|rowspan=2|
 |rowspan=2|
 |rowspan=2|I,1
 |[http://elexikon.ch/RE/I,1_5.png 4]

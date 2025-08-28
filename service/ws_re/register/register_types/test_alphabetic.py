@@ -122,8 +122,8 @@ class TestAlphabeticRegister(BaseTestRegister):
 !Stat
 |-
 |rowspan=3 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
-|rowspan=3|This is Beta
-|rowspan=3|
+|rowspan=3|This is Beta 1
+|rowspan=3 data-sort-value="w:de:beta"|[[w:de:Beta|Beta<sup>(WP de)</sup>]]<br/>[[s:en:Author:Beta|Beta<sup>(WS en)</sup>]]<br/>[[d:Q123456|WD-Item]]
 |rowspan=2|I,1
 |[http://elexikon.ch/RE/I,1_5.png 4]
 |Abert

@@ -70,14 +70,33 @@ class Register(ABC):
                 f"{multi_chapter} data-sort-value=\"{lemma.get_sort_key()}\"|{lemma.get_link()}".strip())
             if print_description:
                 multi_chapter_items.append(f"\n|{multi_chapter}|"
-                                           f"{lemma.short_description if lemma.short_description else ''}")
-            interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
+                                           f"{self._get_short_description_line(lemmas)}")
             multi_chapter_items.append(
-                f"\n|{multi_chapter + '' if multi_chapter else ''}{interwiki_sort_key}|{interwiki_links}")
+                f"\n|{multi_chapter + '' if multi_chapter else ''}"
+                f"{self._get_interwiki_line(lemmas)}")
             table.append("".join(multi_chapter_items))
             table += table_rows
         table.append("|}")
         return "\n".join(table)
+
+    @staticmethod
+    def _get_interwiki_line(lemmas):
+        interwiki_links = ""
+        interwiki_sort_key = ""
+        for lemma in lemmas:
+            interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
+            if interwiki_links or interwiki_sort_key:
+                break
+        return f"{' ' + interwiki_sort_key if interwiki_sort_key else ''}|{interwiki_links}"
+
+    @staticmethod
+    def _get_short_description_line(lemmas):
+        short_description = ""
+        for lemma in lemmas:
+            short_description = lemma.short_description
+            if short_description:
+                break
+        return short_description if short_description else ""
 
     @property
     def proof_read(self) -> Tuple[int, int, int, int, int]:
