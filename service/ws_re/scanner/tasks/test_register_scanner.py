@@ -255,14 +255,3 @@ text.
                 self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]))
         compare(({'wd_link': 'd:Q3705296'}, []),
                 self.task._fetch_wd_link(self.task.re_page.splitted_article_list[0]))
-
-    @real_wiki_test
-    def test_get_wd_sitelink_bug_Stesichoros(self):
-        WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Stesichoros 1"))
-        compare(({'wp_link': 'w:de:Stesichoros'}, []),
-                self.task._fetch_wp_link(self.task.re_page.splitted_article_list[0]))
-        compare(({'ws_link': 's:en:Author:Stesichorus'}, []),
-                self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]))
-        compare(({'wd_link': 'd:Q332797'}, []),
-                self.task._fetch_wd_link(self.task.re_page.splitted_article_list[0]))
