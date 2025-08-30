@@ -23,13 +23,13 @@ fertig:
 unkorrigiert:
   text: |
     {{REDaten
-    |KORREKTURSTAND=Unkorrigert
+    |KORREKTURSTAND=Unkorrigiert
     }}
     text.
     {{REAutor|OFF}}
   result:
-    - {}
-    - ["proof_read"]
+    - proof_read: 1
+    - []
 
 not_valid:
   text: |
@@ -39,8 +39,8 @@ not_valid:
     text.
     {{REAutor|OFF}}
   result:
-    - {}
-    - ["proof_read"]
+    - proof_read: 0
+    - []
 
 not_gemeinfrei:
   text: |
@@ -51,5 +51,16 @@ not_gemeinfrei:
     text.
     {{REAutor|OFF}}
   result:
-    - {}
-    - ["proof_read"]
+    - proof_read: 0
+    - []
+platzhalter:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=Platzhalter
+    |TODESJAHR=9999
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - proof_read: 0
+    - []

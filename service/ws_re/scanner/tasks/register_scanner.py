@@ -211,15 +211,15 @@ class SCANTask(ReScannerTask):
     def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         proof_read = str(article["KORREKTURSTAND"].value).lower().strip()
-        if proof_read == "platzhalter":
-            return {"proof_read": 0}, []
         if article.common_free:
             if proof_read:
                 if proof_read == "fertig":
                     return {"proof_read": 3}, []
                 if proof_read == "korrigiert":
                     return {"proof_read": 2}, []
-        return {}, ["proof_read"]
+                if proof_read == "unkorrigiert":
+                    return {"proof_read": 1}, []
+        return {"proof_read": 0}, []
 
     def _process_from_article_list(self):
         function_list_properties = []

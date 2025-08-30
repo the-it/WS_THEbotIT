@@ -191,29 +191,6 @@ text.
             compare("Short Description", post_lemma_dict["short_description"])
             compare(True, post_lemma_dict["no_creative_height"])
 
-    def test_fetch_from_properties_platzhalter(self):
-        with LogCapture():
-            self.page_mock.title_str = "RE:Aal"
-            self.page_mock.text = """{{REDaten
-|BAND=I,1
-|VORGÄNGER=Lemma Previous
-|NACHFOLGER=Lemma Next
-|WP=Aal_wp_link
-|WS=Aal_ws_link
-|SORTIERUNG=Aal
-|VERWEIS=ON
-|KORREKTURSTAND=Platzhalter
-|KURZTEXT=Short Description
-|KEINE_SCHÖPFUNGSHÖHE=ON
-}}
-text.
-{{REAutor|OFF}}"""
-            task = SCANTask(None, self.logger)
-            task.re_page = RePage(self.page_mock)
-            task._process_from_article_list()
-            post_lemma_dict = task.registers["I,1"].get_lemma_by_name("Aal").to_dict()
-            compare(0, post_lemma_dict["proof_read"])
-
     def test_fetch_from_properties_self_append(self):
         with LogCapture():
             copy_tst_data("I_1_self_append", "I_1")
