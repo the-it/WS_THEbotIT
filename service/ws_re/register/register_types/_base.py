@@ -71,9 +71,11 @@ class Register(ABC):
             if print_description:
                 multi_chapter_items.append(f"\n|{multi_chapter}|"
                                            f"{self._get_short_description_line(lemmas)}")
+            interwiki_line = self._get_interwiki_line(lemmas)
             multi_chapter_items.append(
-                f"\n|{multi_chapter + '' if multi_chapter else ''}"
-                f"{self._get_interwiki_line(lemmas)}")
+                f"\n|{multi_chapter}"
+                f"{' ' if (multi_chapter and interwiki_line != '|') else ''}"
+                f"{interwiki_line}")
             table.append("".join(multi_chapter_items))
             table += table_rows
         table.append("|}")
