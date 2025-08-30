@@ -87,7 +87,7 @@ class Register(ABC):
             interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
             if interwiki_links or interwiki_sort_key:
                 break
-        return f"{' ' + interwiki_sort_key if interwiki_sort_key else ''}|{interwiki_links}"
+        return f"{interwiki_sort_key if interwiki_sort_key else ''}|{interwiki_links}"
 
     @staticmethod
     def _get_short_description_line(lemmas):
