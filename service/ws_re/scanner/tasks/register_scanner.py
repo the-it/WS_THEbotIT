@@ -211,6 +211,8 @@ class SCANTask(ReScannerTask):
     def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         proof_read = str(article["KORREKTURSTAND"].value).lower().strip()
+        if proof_read == "platzhalter":
+            return {"proof_read": 0}, []
         if article.common_free:
             if proof_read:
                 if proof_read == "fertig":
