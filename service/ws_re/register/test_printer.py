@@ -110,6 +110,7 @@ class TestReRegisterPrinter(BaseTestRegister, TestCloudBase):
         copy_tst_data("I_1_sorting", "I_1")
         printer = ReRegisterPrinter()
         expection = """return {
+["Äal"] = "aal",
 ["Äall"] = "aall",
 ["Vaaa"] = "uaaa",
 }"""

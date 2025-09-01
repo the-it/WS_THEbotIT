@@ -100,8 +100,10 @@ class ReRegisterPrinter(CloudBot):
             for lemma in register.lemmas:
                 processed_sortkey = lemma.get_sort_key()
                 simple_sortkey = lemma.lemma.lower()
-                if not lemma.sort_key:
-                    if processed_sortkey != _get_simple_number_sortkey(simple_sortkey):
+                if processed_sortkey != _get_simple_number_sortkey(simple_sortkey):
+                    if lemma.sort_key:
+                        sortkey_dict[lemma.lemma] = lemma.sort_key
+                    else:
                         sortkey_dict[lemma.lemma] = processed_sortkey
         lines: list[str] = []
         for key, value in sortkey_dict.items():
