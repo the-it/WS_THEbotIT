@@ -15,6 +15,7 @@ from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
+from service.ws_re.scanner.tasks.set_platzhalter import SEPLTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
 from service.ws_re.template import ReDatenException
@@ -34,6 +35,7 @@ class ReScanner(CloudBot):
         # Wikidata and the Registers.
         self.tasks: List[Callable] = [
             KURZTask,  # add short description
+            SEPLTask,  # if there is no Korrekturstand set, set it to "Platzhalter"
             DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia
             REAUTask,  # check for integrity article must have an author, or it is a soft redirect

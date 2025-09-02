@@ -217,7 +217,9 @@ class SCANTask(ReScannerTask):
                     return {"proof_read": 3}, []
                 if proof_read == "korrigiert":
                     return {"proof_read": 2}, []
-        return {}, ["proof_read"]
+                if proof_read == "unkorrigiert":
+                    return {"proof_read": 1}, []
+        return {"proof_read": 0}, []
 
     def _process_from_article_list(self):
         function_list_properties = []
