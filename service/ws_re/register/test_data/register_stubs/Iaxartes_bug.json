@@ -1,0 +1,91 @@
+[
+  {
+    "lemma": "Iavolenus 2",
+    "previous": "Iavolenus 1",
+    "next": "Iaxartes",
+    "chapters": [
+      {
+        "start": 806,
+        "end": 806
+      }
+    ]
+  },
+  {
+    "lemma": "Iaxartes",
+    "previous": "Iavolenus 2",
+    "next": "Iazyges",
+    "chapters": [
+      {
+        "start": 1181,
+        "end": 1189,
+        "author": "Herrmann."
+      }
+    ]
+  },
+  {
+    "lemma": "Iazer",
+    "previous": "Iaxartes",
+    "next": "Iazyges",
+    "redirect": "Iaezer",
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 806,
+        "end": 806
+      }
+    ]
+  },
+  {"lemma": "more_lemmas"},
+  {
+    "lemma": "Iaxartae",
+    "previous": "Iaxamatae",
+    "next": "Iaxartes",
+    "proof_read": 2,
+    "short_description": "ostskyth. Volk",
+    "chapters": [
+      {
+        "start": 1180,
+        "end": 1181,
+        "author": "Herrmann."
+      }
+    ]
+  },
+  {
+    "lemma": "Iaxartes",
+    "previous": "Iaxartae",
+    "next": "Iazer",
+    "redirect": true,
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 806,
+        "end": 806
+      }
+    ]
+  },
+  {
+    "lemma": "Iazyges",
+    "previous": "Iaxartes",
+    "next": "Ibis",
+    "redirect": true,
+    "proof_read": 3,
+    "chapters": [
+      {
+        "start": 1189,
+        "end": 1191
+      }
+    ]
+  },
+  {
+    "lemma": "Ibis",
+    "previous": "Iazyges",
+    "next": "Icauna",
+    "chapters": [
+      {
+        "start": 1191,
+        "end": 1191,
+        "author": "Roeder."
+      }
+    ]
+  }
+]

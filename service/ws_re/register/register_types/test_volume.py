@@ -194,11 +194,11 @@ class TestRegister(BaseTestRegister):
     def test_get_id_of_lemma(self):
         copy_tst_data("I_1_self_append", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        compare(0, register.get_index_of_lemma("Aal"))
-        compare(2, register.get_index_of_lemma("Something"))
-        compare(3, register.get_index_of_lemma("Aal", self_supplement=True))
+        compare(1, register.get_index_of_lemma("Aal"))
+        compare(3, register.get_index_of_lemma("Something"))
+        compare(4, register.get_index_of_lemma("Aal", self_supplement=True))
         lemma = register.get_lemma_by_name("Aal", self_supplement=True)
-        compare(3, register.get_index_of_lemma(lemma))
+        compare(4, register.get_index_of_lemma(lemma))
         compare(None, register.get_index_of_lemma("Lemma not there"))
 
 

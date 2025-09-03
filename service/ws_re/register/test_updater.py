@@ -432,6 +432,21 @@ class TestBugUpdates(BaseTestRegister):
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
 
+    def test_bug_multi_issues_on_lemma_page(self):
+        copy_tst_data("Iaxartes_bug", "IX_1")
+        register = VolumeRegister(Volumes()["IX,1"], Authors())
+        update_dict_1 = {"lemma": "Iaxartes","previous": "Iaxartae", "next": "Iazyges",
+                         "proof_read": 3, "chapters": [{"start": 1181, "end": 1189}]}
+        update_dict_2 = {"lemma": "Iaxartes", "previous": "Iavolenus 2", "next": "Iazer",
+                         "proof_read": 2, "redirect": True, "chapters": [{"start": 806}]}
+        with Updater(register) as updater:
+            updater.update_lemma(update_dict_1, [], self_supplement=True)
+            updater.update_lemma(update_dict_2, [], self_supplement=True)
+        compare(806, register.lemmas[1].chapters[0]["start"])
+        compare(2, register.lemmas[1].proof_read)
+        compare(1181, register.lemmas[5].chapters[0]["start"])
+        compare(3, register.lemmas[5].proof_read)
+
 
 @ddt
 class TestMissingIndices(BaseTestRegister):
