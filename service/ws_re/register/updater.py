@@ -24,10 +24,12 @@ class Updater():
                      self_supplement: bool = False) -> str:
         sort_key = VolumeRegister.normalize_sort_key(lemma_dict)
 
-        if "lemma" in lemma_dict and self._register.get_lemma_by_name(lemma_dict["lemma"], self_supplement):
+        if "lemma" in lemma_dict \
+                and self._register.get_lemma_by_name(lemma_dict["lemma"], self_supplement) \
+                and not self_supplement:
             self._update_lemma_by_name(lemma_dict, remove_items, self_supplement)
             return "update_lemma_by_name"
-        if self._register.get_lemma_by_sort_key(sort_key):
+        if self._register.get_lemma_by_sort_key(sort_key) and not self_supplement:
             self._update_by_sortkey(lemma_dict, remove_items)
             return "update_by_sortkey"
         if "previous" in lemma_dict and "next" in lemma_dict \
@@ -119,7 +121,7 @@ class Updater():
             post_idx = self._register.get_index_of_lemma(post_lemma)
         else:
             return
-        if pre_idx and post_idx:
+        if pre_idx is not None and post_idx is not None:
             if post_idx - pre_idx == 1:
                 self._register.lemmas.insert(post_idx,
                                              Lemma.from_dict(lemma_dict, self._register.volume,

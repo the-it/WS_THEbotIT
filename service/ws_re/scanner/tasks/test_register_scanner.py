@@ -197,22 +197,27 @@ text.
             self.page_mock.title_str = "RE:Aal"
             self.page_mock.text = """{{REDaten
 |BAND=I,1
-|VORGÄNGER=Lemma Previous
-|NACHFOLGER=Lemma Next
-|WP=Aal_wp_link
-|WS=Aal_ws_link
+|VORGÄNGER=Something
+|NACHFOLGER=Dummy-End
 |SORTIERUNG=Aal
-|VERWEIS=ON
+|SPALTE_START=5
+|SPALTE_END=6
 }}
-text.
-{{REAutor|OFF}}
+text Hauptartikel.
+{{REAutor|Abel.}}
 {{REDaten
 |BAND=I,1
-|VORGÄNGER=Lemma Previous2
-|NACHFOLGER=Lemma Next2
+|VORGÄNGER=Dummy-Start
+|NACHFOLGER=Aarassos
+|VERWEIS=ON
+|WP=Aal_wp_link
+|WS=Aal_ws_link
+|SPALTE_START=1
+|SPALTE_END=4
 }}
-text.
-{{REAutor|OFF}}"""
+text Verweis, aber früher im Band abgedruckt.
+{{REAutor|OFF}}
+"""
             task = SCANTask(None, self.logger)
             task.re_page = RePage(self.page_mock)
             task._process_from_article_list()
@@ -222,11 +227,11 @@ text.
             compare("s:de:Aal_ws_link", post_lemma_dict["ws_link"])
             compare("Aal", post_lemma_dict["sort_key"])
             compare(True, post_lemma_dict["redirect"])
-            compare("Lemma Previous", post_lemma_dict["previous"])
-            compare("Lemma Next", post_lemma_dict["next"])
+            compare("Dummy-Start", post_lemma_dict["previous"])
+            compare("Aarassos", post_lemma_dict["next"])
             post_lemma_append = task.registers["I,1"].get_lemma_by_name("Aal", self_supplement=True)
-            compare("Lemma Previous2", post_lemma_append.to_dict()["previous"])
-            compare("Lemma Next2", post_lemma_append.to_dict()["next"])
+            compare("Something", post_lemma_append.to_dict()["previous"])
+            compare("Dummy-End", post_lemma_append.to_dict()["next"])
 
     def test_fetch_from_properties_lemma_not_found(self):
         self.page_mock.title_str = "RE:Aas"

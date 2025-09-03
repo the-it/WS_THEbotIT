@@ -226,7 +226,14 @@ class SCANTask(ReScannerTask):
         for item in dir(self):
             if "_fetch" in item:
                 function_list_properties.append(getattr(self, item))
-        issues_in_articles = set()
+        issues_in_articles = {}
+        # detect self_supplement dict
+        for article_list in self.re_page.splitted_article_list:
+            band_info = str(article_list[0]["BAND"].value)
+            if band_info not in issues_in_articles:
+                issues_in_articles[band_info] = 1
+                continue
+            issues_in_articles[band_info] += 1
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             update_dict: LemmaDict = {}
@@ -236,8 +243,7 @@ class SCANTask(ReScannerTask):
                 update_dict.update(function_dict)
                 delete_list += function_list
             band_info = str(article_list[0]["BAND"].value)
-            self_supplement = band_info in issues_in_articles
-            issues_in_articles.add(band_info)
+            self_supplement = issues_in_articles[band_info] > 1
             self._update_lemma(band_info, delete_list, self_supplement, update_dict)
 
     def _update_lemma(self,
