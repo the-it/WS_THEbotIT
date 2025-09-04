@@ -1,91 +1,57 @@
 [
   {
-    "lemma": "Iavolenus 2",
-    "previous": "Iavolenus 1",
-    "next": "Iaxartes",
-    "chapters": [
-      {
-        "start": 806,
-        "end": 806
-      }
-    ]
+    "lemma": "Iavolenus 2"
   },
   {
     "lemma": "Iaxartes",
     "previous": "Iavolenus 2",
-    "next": "Iazyges",
-    "chapters": [
-      {
-        "start": 1181,
-        "end": 1189,
-        "author": "Herrmann."
-      }
-    ]
+    "next": "Iazer"
   },
   {
     "lemma": "Iazer",
     "previous": "Iaxartes",
-    "next": "Iazyges",
-    "redirect": "Iaezer",
-    "proof_read": 3,
-    "chapters": [
-      {
-        "start": 806,
-        "end": 806
-      }
-    ]
+    "next": "Iazyges"
   },
-  {"lemma": "more_lemmas"},
+  {
+    "lemma": "Iazyges",
+    "previous": "Iazer",
+    "next": "Ibe"
+  },
+  {
+    "lemma": "Ibe",
+    "previous": "Iazyges",
+    "next": "Iber 1"
+  },
+  {
+    "lemma": "Iber 1"
+  },
+  {
+    "lemma": "more lemma ... "
+  },
+  {
+    "lemma": "Iaxamatae"
+  },
   {
     "lemma": "Iaxartae",
     "previous": "Iaxamatae",
-    "next": "Iaxartes",
-    "proof_read": 2,
-    "short_description": "ostskyth. Volk",
-    "chapters": [
-      {
-        "start": 1180,
-        "end": 1181,
-        "author": "Herrmann."
-      }
-    ]
+    "next": "Iaxartes"
   },
   {
     "lemma": "Iaxartes",
     "previous": "Iaxartae",
-    "next": "Iazer",
-    "redirect": true,
-    "proof_read": 3,
-    "chapters": [
-      {
-        "start": 806,
-        "end": 806
-      }
-    ]
+    "next": "Iazyges"
   },
   {
     "lemma": "Iazyges",
     "previous": "Iaxartes",
-    "next": "Ibis",
-    "redirect": true,
-    "proof_read": 3,
-    "chapters": [
-      {
-        "start": 1189,
-        "end": 1191
-      }
-    ]
+    "next": "Ibis"
   },
   {
     "lemma": "Ibis",
     "previous": "Iazyges",
-    "next": "Icauna",
-    "chapters": [
-      {
-        "start": 1191,
-        "end": 1191,
-        "author": "Roeder."
-      }
-    ]
+    "next": "Icauna"
+  },
+  {
+    "lemma": "Icauna"
   }
 ]
