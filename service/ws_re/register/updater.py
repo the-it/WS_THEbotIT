@@ -27,7 +27,7 @@ class Updater():
         if "lemma" in lemma_dict \
                 and self._register.get_lemma_by_name(lemma_dict["lemma"], self_supplement) \
                 and not self_supplement:
-            self._update_lemma_by_name(lemma_dict, remove_items, self_supplement)
+            self._update_lemma_by_name(lemma_dict, remove_items)
             return "update_lemma_by_name"
         if self._register.get_lemma_by_sort_key(sort_key) and not self_supplement:
             self._update_by_sortkey(lemma_dict, remove_items)
@@ -35,7 +35,7 @@ class Updater():
         if "previous" in lemma_dict and "next" in lemma_dict \
                 and self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])) \
                 and self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
-            self._update_pre_and_post_exists(lemma_dict)
+            self._update_pre_and_post_exists(lemma_dict, self_supplement)
             return "update_pre_and_post_exists"
         if "previous" in lemma_dict \
                 and self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])):
@@ -49,8 +49,8 @@ class Updater():
                                 f"with the dict {lemma_dict} is not possible. "
                                 f"No strategy available")
 
-    def _update_lemma_by_name(self, lemma_dict: LemmaDict, remove_items: UpdaterRemoveList, self_supplement: bool):
-        lemma_to_update = self._register.get_lemma_by_name(lemma_dict["lemma"], self_supplement)
+    def _update_lemma_by_name(self, lemma_dict: LemmaDict, remove_items: UpdaterRemoveList):
+        lemma_to_update = self._register.get_lemma_by_name(lemma_dict["lemma"])
         if lemma_to_update:
             if self._register.volume.type in (VolumeType.SUPPLEMENTS, VolumeType.REGISTER):
                 self._update_in_supplements_with_neighbour_creation(lemma_to_update, lemma_dict, remove_items)
@@ -113,14 +113,34 @@ class Updater():
                                                                  self._register.volume,
                                                                  self._register.authors))
 
-    def _update_pre_and_post_exists(self, lemma_dict: LemmaDict):
+    def _update_pre_and_post_exists(self, lemma_dict: LemmaDict, self_supplement: bool):
         pre_lemma = self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]))
         post_lemma = self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]))
         if pre_lemma and post_lemma:
             pre_idx = self._register.get_index_of_lemma(pre_lemma)
             post_idx = self._register.get_index_of_lemma(post_lemma)
+            if self_supplement and pre_idx and post_idx:
+                pre_idx_list: list[int] = [pre_idx]
+                post_idx_list: list[int] = [post_idx]
+                if pre_lemma := self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]),
+                                                                     self_supplement):
+                    if idx := self._register.get_index_of_lemma(pre_lemma, self_supplement=True):
+                        pre_idx_list.append(idx)
+                if post_lemma := self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]),
+                                                                      self_supplement):
+                    if idx := self._register.get_index_of_lemma(post_lemma, self_supplement=True):
+                        post_idx_list.append(idx)
+                for pre_idx_tmp in pre_idx_list:
+                    for post_idx_tmp in post_idx_list:
+                        if abs(post_idx_tmp - pre_idx_tmp) <= 2:
+                            pre_idx = pre_idx_tmp
+                            post_idx = post_idx_tmp
+                            break
         else:
-            return
+            # shouldn't happen
+            raise RegisterException(f"The update of the register {self._register.volume.name} "
+                                    f"with the dict {lemma_dict} went wrong. "
+                                    f"_update_pre_and_post_exists wasn't successful. This shouldn't happen.")
         if pre_idx is not None and post_idx is not None:
             if post_idx - pre_idx == 1:
                 self._register.lemmas.insert(post_idx,

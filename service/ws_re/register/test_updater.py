@@ -436,16 +436,26 @@ class TestBugUpdates(BaseTestRegister):
         copy_tst_data("Iaxartes_bug", "IX_1")
         register = VolumeRegister(Volumes()["IX,1"], Authors())
         update_dict_1 = {"lemma": "Iaxartes","previous": "Iaxartae", "next": "Iazyges",
-                         "proof_read": 3, "chapters": [{"start": 1181, "end": 1189}]}
+                         "proof_read": 2, "chapters": [{"start": 1181, "end": 1189}]}
         update_dict_2 = {"lemma": "Iaxartes", "previous": "Iavolenus 2", "next": "Iazer",
-                         "proof_read": 2, "redirect": True, "chapters": [{"start": 806}]}
+                         "proof_read": 3, "redirect": True, "chapters": [{"start": 806}]}
+        update_dict_3 = {"lemma": "Iazyges", "previous": "Iaxartes", "next": "Ibis",
+                         "proof_read": 2, "chapters": [{"start": 1189, "end": 1191}]}
+        update_dict_4 = {"lemma": "Iazyges", "previous": "Iazer", "next": "Ibe",
+                         "proof_read": 3, "redirect": True, "chapters": [{"start": 806}]}
         with Updater(register) as updater:
             updater.update_lemma(update_dict_1, [], self_supplement=True)
             updater.update_lemma(update_dict_2, [], self_supplement=True)
+            updater.update_lemma(update_dict_3, [], self_supplement=True)
+            updater.update_lemma(update_dict_4, [], self_supplement=True)
         compare(806, register.lemmas[1].chapters[0]["start"])
-        compare(2, register.lemmas[1].proof_read)
-        compare(1181, register.lemmas[5].chapters[0]["start"])
-        compare(3, register.lemmas[5].proof_read)
+        compare(3, register.lemmas[1].proof_read)
+        compare(806, register.lemmas[3].chapters[0]["start"])
+        compare(3, register.lemmas[3].proof_read)
+        compare(1181, register.lemmas[9].chapters[0]["start"])
+        compare(2, register.lemmas[9].proof_read)
+        compare(1189, register.lemmas[10].chapters[0]["start"])
+        compare(2, register.lemmas[10].proof_read)
 
 
 @ddt
