@@ -119,15 +119,17 @@ class Updater():
         if pre_lemma and post_lemma:
             pre_idx = self._register.get_index_of_lemma(pre_lemma)
             post_idx = self._register.get_index_of_lemma(post_lemma)
-            if self_supplement:
-                pre_idx_list = [pre_idx]
-                post_idx_list = [post_idx]
+            if self_supplement and pre_idx and post_idx:
+                pre_idx_list: list[int] = [pre_idx]
+                post_idx_list: list[int] = [post_idx]
                 if pre_lemma := self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"]),
                                                                      self_supplement):
-                    pre_idx_list.append(self._register.get_index_of_lemma(pre_lemma, self_supplement=True))
+                    if idx := self._register.get_index_of_lemma(pre_lemma, self_supplement=True):
+                        pre_idx_list.append(idx)
                 if post_lemma := self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"]),
                                                                       self_supplement):
-                    post_idx_list.append(self._register.get_index_of_lemma(post_lemma, self_supplement=True))
+                    if idx := self._register.get_index_of_lemma(post_lemma, self_supplement=True):
+                        post_idx_list.append(idx)
                 for pre_idx_tmp in pre_idx_list:
                     for post_idx_tmp in post_idx_list:
                         if abs(post_idx_tmp - pre_idx_tmp) <= 2:
