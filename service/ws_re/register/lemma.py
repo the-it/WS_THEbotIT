@@ -313,7 +313,7 @@ class Lemma:
                 author_str = lemma_chapter.author
         return author_str
 
-    def _get_public_domain_year(self) -> int:
+    def get_public_domain_year(self) -> int:
         year = 0
         for chapter in self.chapter_objects:
             if self._get_author_str(chapter):
@@ -335,7 +335,7 @@ class Lemma:
         light_yellow = "#9FC859"
         # gray = "#CBCBCB"
 
-        if pd_year := self._get_public_domain_year():
+        if pd_year := self.get_public_domain_year():
             current_year = datetime.now().year
             if pd_year > current_year:
                 if not self.no_creative_height:
