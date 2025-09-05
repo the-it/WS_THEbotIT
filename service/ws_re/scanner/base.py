@@ -70,6 +70,7 @@ class ReScanner(CloudBot):
             searcher.add_namespace(0)
             searcher.add_positive_category("RE:Fertig")
             searcher.add_positive_category("RE:Korrigiert")
+            searcher.add_positive_category("RE:Unkorrigiert")
             searcher.add_positive_category("RE:Platzhalter")
             searcher.set_logic_union()
             searcher.set_sort_criteria("date")
