@@ -160,22 +160,22 @@ class TestLemma(BaseTestRegister):
         # one author
         small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma.from_dict(small_dict, self.volumes["I,1"], self.authors)
-        compare(2069, re_register_lemma._get_public_domain_year())
+        compare(2069, re_register_lemma.get_public_domain_year())
 
         # two authors for one article
         small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "redirect_list"}]}
         re_register_lemma = Lemma.from_dict(small_dict, self.volumes["I,1"], self.authors)
-        compare(2069, re_register_lemma._get_public_domain_year())
+        compare(2069, re_register_lemma.get_public_domain_year())
 
         # two authors two articles
         small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"},
                                                      {"start": 1, "end": 1, "author": "Abert"}]}
         re_register_lemma = Lemma.from_dict(small_dict, self.volumes["XVI,1"], self.authors)
-        compare(2058, re_register_lemma._get_public_domain_year())
+        compare(2058, re_register_lemma.get_public_domain_year())
         small_dict = {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abert"},
                                                      {"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma.from_dict(small_dict, self.volumes["XVI,1"], self.authors)
-        compare(2058, re_register_lemma._get_public_domain_year())
+        compare(2058, re_register_lemma.get_public_domain_year())
 
     @file_data("test_data/test_lemma_status.yml")
     def test_get_lemma_status(self, given, expect):
