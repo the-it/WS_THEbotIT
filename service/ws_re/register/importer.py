@@ -17,7 +17,7 @@ class ReImporter(CloudBot):
         self.new_articles: dict[str, dict[str, str]] = {}
         self._create_neuland()
         self.current_year = datetime.now().year
-        self.max_create = min(10, 1000 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
+        self.max_create = min(50, 1000 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
 
     def _create_neuland(self):
         for number in [1, 2, 3, 4, 5, 6, 7, 11, 12, 13]:

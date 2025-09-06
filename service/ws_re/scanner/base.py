@@ -72,7 +72,6 @@ class ReScanner(CloudBot):
             searcher.add_positive_category("RE:Korrigiert")
             searcher.add_positive_category("RE:Unkorrigiert")
             searcher.add_positive_category("RE:Platzhalter")
-            searcher.add_negative_category("RE:Stammdaten überprüfen")
             searcher.set_logic_union()
             searcher.set_sort_criteria("date")
             searcher.set_sortorder_decending()
