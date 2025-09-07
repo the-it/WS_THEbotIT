@@ -14,7 +14,9 @@ class REAuthor:
     @classmethod
     def from_template(cls, template: str):
         handler = TemplateHandler(template)
-        short_string = handler.parameters[0]["value"]
+        short_string = "OFF"
+        with suppress(IndexError):
+            short_string = handler.parameters[0]["value"]
         issue = ""
         full_identification = ""
         with suppress(IndexError):

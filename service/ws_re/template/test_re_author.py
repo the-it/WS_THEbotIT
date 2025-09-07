@@ -42,3 +42,12 @@ class TestREAuthor(TestCase):
         compare("Albert_Nagl", author_template.full_identification)
         compare("Albert_Nagl", author_template.identification)
         compare(string_template, str(author_template))
+
+    def test_from_template_empty_bug(self):
+        string_template = "{{REAutor|}}"
+        author_template = REAuthor.from_template(string_template)
+        compare("OFF", author_template.short_string)
+        compare("", author_template.issue)
+        compare("", author_template.full_identification)
+        compare("OFF", author_template.identification)
+        compare("{{REAutor|OFF}}", str(author_template))
