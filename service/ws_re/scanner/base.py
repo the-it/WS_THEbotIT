@@ -81,7 +81,7 @@ class ReScanner(CloudBot):
     @property
     def lemma_list(self) -> list[str]:
         searcher = self._prepare_searcher()
-        result, _ = searcher.get_combined_lemma_list(self.data, timeframe=36)
+        result, _ = searcher.get_combined_lemma_list(self.data, timeframe=72)
         return result
 
     def _activate_tasks(self) -> List[ReScannerTask]:
