@@ -331,24 +331,27 @@ class Lemma:
         unkorrigiert = "#AA0000"
         fertig = "#669966"
         korrigiert = "#556B2F"
-        light_red = "#FFCBCB"
-        light_yellow = "#9FC859"
-        # gray = "#CBCBCB"
+        orange = "#FFA300"
+        white = "#FFFFFF"
+
+        if self.proof_read == 1:
+            return "UNK", unkorrigiert
+        if self.proof_read == 2:
+            return "KOR", korrigiert
+        if self.proof_read == 3:
+            return "FER", fertig
 
         if pd_year := self.get_public_domain_year():
             current_year = datetime.now().year
             if pd_year > current_year:
                 if not self.no_creative_height:
                     if self.exists:
-                        return str(pd_year), light_yellow
-                    return str(pd_year), light_red
+                        return str(pd_year), orange
+                    return str(pd_year), white
 
-        if self.proof_read == 2:
-            return "KOR", korrigiert
-        if self.proof_read == 3:
-            return "FER", fertig
-
-        return "UNK", unkorrigiert
+        if self.proof_read == 0:
+            return "", orange
+        return "", white
 
     def update_lemma_dict(self, update_dict: LemmaDict, remove_items: Optional[List[str]] = None):
         """Update lemma attributes from a dictionary."""
@@ -367,6 +370,6 @@ class Lemma:
 
     @property
     def exists(self) -> bool:
-        if self.proof_read and self.proof_read > 1:
+        if self.proof_read is not None:
             return True
         return False
