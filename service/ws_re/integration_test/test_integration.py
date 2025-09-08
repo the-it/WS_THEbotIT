@@ -114,8 +114,10 @@ class TestIntegrationRegister(parent_class):
         for register in self.registers.volumes.values():
             for lemma in register:
                 for chapter in lemma.chapter_objects:
-                    if chapter.author and chapter.author not in mappings:  # pragma: no cover
-                        errors.append(f"Author {chapter.author}, {lemma.lemma}, "
+                    if chapter.author:
+                        if chapter.author[-1] == "." and chapter.author not in mappings:  # pragma: no cover
+                            # only check author shortcuts set by human operators
+                            errors.append(f"Author {chapter.author}, {lemma.lemma}, "
                                       f"{register.volume.name} not in mappings.")
         _raise_count_errors(errors)
 
