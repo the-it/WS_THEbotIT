@@ -63,8 +63,6 @@ class TestAlphabeticRegister(BaseTestRegister):
 |SUM=5
 |FER=1
 |KOR=1
-|NGE=0
-|VOR=0
 |UNK=3
 }}
 """
@@ -77,8 +75,6 @@ class TestAlphabeticRegister(BaseTestRegister):
 |SUM=2
 |FER=1
 |KOR=0
-|NGE=0
-|VOR=0
 |UNK=1
 }}
 """
@@ -90,8 +86,6 @@ class TestAlphabeticRegister(BaseTestRegister):
 |SUM=4
 |FER=2
 |KOR=1
-|NGE=0
-|VOR=0
 |UNK=1
 }}
 """
@@ -106,8 +100,6 @@ class TestAlphabeticRegister(BaseTestRegister):
 |SUM=6
 |FER=3
 |KOR=1
-|NGE=0
-|VOR=0
 |UNK=2
 }}
 
@@ -167,7 +159,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||III,1
 |[http://elexikon.ch/RE/III,1_5.png 4]
 |Abert
-|style="background:#AA0000"|UNK
+|style="background:#FFFFFF"|
 |}
 [[Kategorie:RE:Register|!]]"""
         compare(expected_table, b_register.get_register_str())

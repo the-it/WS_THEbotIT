@@ -55,7 +55,7 @@ class TestPublicDomainRegister(BaseTestRegister):
 ||I,1
 |[http://elexikon.ch/RE/I,1_5.png 4]
 |Herman Abel
-|style="background:#AA0000"|UNK
+|style="background:#FFFFFF"|
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||

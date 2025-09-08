@@ -47,10 +47,8 @@ class TestRegister(BaseTestRegister):
 |VG=
 |NF=I,2
 |SUM=2
-|FER=0
+|FER=1
 |KOR=1
-|NGE=0
-|VOR=1
 |UNK=0
 }}
 
@@ -69,7 +67,7 @@ class TestRegister(BaseTestRegister):
 ||
 |[http://elexikon.ch/RE/I,1_1.png 1]-4
 |Herman Abel
-|style="background:#9FC859"|2069
+|style="background:#669966"|FER
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
@@ -86,10 +84,8 @@ class TestRegister(BaseTestRegister):
 |VG=
 |NF=I,2
 |SUM=2
-|FER=0
+|FER=1
 |KOR=1
-|NGE=0
-|VOR=1
 |UNK=0
 }}
 
@@ -106,7 +102,7 @@ class TestRegister(BaseTestRegister):
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||
 |[http://elexikon.ch/RE/I,1_1.png 1]-4
-|style="background:#9FC859"|2069
+|style="background:#669966"|FER
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
