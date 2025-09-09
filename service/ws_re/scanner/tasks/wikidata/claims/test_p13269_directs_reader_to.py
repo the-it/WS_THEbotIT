@@ -18,7 +18,7 @@ class TestP13269DirectsReadersTo(BaseTestClaimFactory):
 
     @real_wiki_test
     def test__get_claim_json(self):
-        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Ἡμιώβολον"))
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Amantes 2"))
         factory = P13269DirectsReadersTo(re_page, self.logger)
         claim_json = factory._get_claim_json()
         expected_claim_json = [{'mainsnak':
