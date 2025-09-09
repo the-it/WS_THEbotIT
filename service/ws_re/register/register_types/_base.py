@@ -101,19 +101,14 @@ class Register(ABC):
         return short_description if short_description else ""
 
     @property
-    def proof_read(self) -> Tuple[int, int, int, int, int]:
-        fer = kor = nge = unk = vor = 0
+    def proof_read(self) -> Tuple[int, int, int]:
+        fer = kor = unk = 0
         for lemma in self.lemmas:
             status, _ = lemma.status
             if status == "FER":
                 fer += 1
             elif status == "KOR":
                 kor += 1
-            elif status.isdecimal():
-                if lemma.exists:
-                    vor += 1
-                    continue
-                nge += 1
             else:
                 unk += 1
-        return fer, kor, nge, vor, unk
+        return fer, kor, unk

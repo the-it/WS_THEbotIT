@@ -9,7 +9,6 @@ no_proof_read:
 proof_read_too_low:
   given:
     lemma: Lemma
-    proof_read: 1
     chapters:
       - author: Someone
         start: 10

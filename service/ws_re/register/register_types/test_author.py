@@ -31,8 +31,6 @@ class TestAuthorRegister(BaseTestRegister):
 |SUM=4
 |FER=2
 |KOR=1
-|NGE=0
-|VOR=0
 |UNK=1
 }}
 
@@ -52,7 +50,7 @@ class TestAuthorRegister(BaseTestRegister):
 ||I,1
 |[http://elexikon.ch/RE/I,1_5.png 4]
 |Herman Abel
-|style="background:#AA0000"|UNK
+|style="background:#FFFFFF"|
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||
@@ -88,8 +86,6 @@ class TestAuthorRegister(BaseTestRegister):
 |SUM=4
 |FER=2
 |KOR=1
-|NGE=0
-|VOR=0
 |UNK=1
 }}
 
@@ -107,7 +103,7 @@ class TestAuthorRegister(BaseTestRegister):
 ||
 ||I,1
 |[http://elexikon.ch/RE/I,1_5.png 4]
-|style="background:#AA0000"|UNK
+|style="background:#FFFFFF"|
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||
@@ -141,23 +137,20 @@ class TestAuthorRegister(BaseTestRegister):
                 "|data-sort-value=\"075.0\"|75.0%\n"
                 "|<span style=\"color:#669966\">██████████</span>"
                 "<span style=\"color:#556B2F\">█████</span>"
-                "<span style=\"color:#FFCBCB\"></span>"
-                "<span style=\"color:#9FC859\"></span>"
                 "<span style=\"color:#AA0000\">█████</span>",
                 abel_register.overview_line)
 
     def test_proofread_parts_of_20(self):
-        compare((10, 5, 0, 0, 5), AuthorRegister.proofread_parts_of_20(4, 2, 1, 0, 0))
-        compare((10, 0, 5, 0, 5), AuthorRegister.proofread_parts_of_20(4, 2, 0, 1, 0))
-        compare((10, 0, 0, 5, 5), AuthorRegister.proofread_parts_of_20(4, 2, 0, 0, 1))
-        compare((4, 4, 4, 4, 4), AuthorRegister.proofread_parts_of_20(5, 1, 1, 1, 1))
-        compare((0, 1, 0, 0, 19), AuthorRegister.proofread_parts_of_20(40, 1, 1, 0, 0))
-        compare((1, 0, 0, 0, 19), AuthorRegister.proofread_parts_of_20(45, 2, 1, 0, 0))
-        compare((0, 1, 0, 0, 19), AuthorRegister.proofread_parts_of_20(45, 1, 2, 0, 0))
-        compare((0, 1, 0, 0, 19), AuthorRegister.proofread_parts_of_20(79, 1, 1, 0, 0))
-        compare((0, 0, 0, 0, 20), AuthorRegister.proofread_parts_of_20(80, 1, 1, 0, 0))
+        compare((10, 5, 5), AuthorRegister.proofread_parts_of_20(4, 2, 1))
+        compare((10, 0, 10), AuthorRegister.proofread_parts_of_20(4, 2, 0))
+        compare((7, 6, 7), AuthorRegister.proofread_parts_of_20(3, 1, 1))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(40, 1, 1))
+        compare((1, 0, 19), AuthorRegister.proofread_parts_of_20(45, 2, 1))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(45, 1, 2))
+        compare((0, 1, 19), AuthorRegister.proofread_parts_of_20(79, 1, 1))
+        compare((0, 0, 20), AuthorRegister.proofread_parts_of_20(80, 1, 1))
 
-    def test_bug_to_much_percent(self):
+    def test_bug_too_much_percent(self):
         copy_tst_data("I_1_author_bug_percent", "I_1")
         copy_tst_data("III_1_author_bug_percent", "III_1")
         registers = OrderedDict()
@@ -171,7 +164,5 @@ class TestAuthorRegister(BaseTestRegister):
                 "|data-sort-value=\"100.0\"|100.0%\n"
                 "|<span style=\"color:#669966\">████████████████████</span>"
                 "<span style=\"color:#556B2F\"></span>"
-                "<span style=\"color:#FFCBCB\"></span>"
-                "<span style=\"color:#9FC859\"></span>"
                 "<span style=\"color:#AA0000\"></span>",
                 abel_register.overview_line)

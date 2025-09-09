@@ -198,7 +198,7 @@ class TestLemma(BaseTestRegister):
         expected_row = """|-
 |[http://elexikon.ch/RE/I,1_1.png 1]
 |Herman Abel
-|style="background:#FFCBCB"|2069"""
+|style="background:#FFFFFF"|2069"""
         compare(expected_row, re_register_lemma.get_table_row())
         two_line_dict = {"lemma": "lemma", "previous": "previous", "next": "next", "short_description": "Blub",
                          "wp_link": "w:en:Lemm", "ws_link": "s:de:Lemma",
@@ -208,7 +208,7 @@ class TestLemma(BaseTestRegister):
         expected_row = """|-
 |[http://elexikon.ch/RE/I,1_1.png 1]
 |Herman Abel
-|rowspan=2 style="background:#FFCBCB"|2100
+|rowspan=2 style="background:#FFFFFF"|2100
 |-
 |[http://elexikon.ch/RE/I,1_1.png 1]-4
 |William Abbott"""
@@ -217,7 +217,7 @@ class TestLemma(BaseTestRegister):
 |rowspan=2|I,1
 |[http://elexikon.ch/RE/I,1_1.png 1]
 |Herman Abel
-|rowspan=2 style="background:#FFCBCB"|2100
+|rowspan=2 style="background:#FFFFFF"|2100
 |-
 |[http://elexikon.ch/RE/I,1_1.png 1]-4
 |William Abbott"""
@@ -231,7 +231,7 @@ class TestLemma(BaseTestRegister):
         expected_row = """|-
 ||
 ||
-|style="background:#AA0000"|UNK"""
+|style="background:#FFFFFF"|"""
         compare(expected_row, re_register_lemma.get_table_row())
 
     def test_strip_accents(self):
