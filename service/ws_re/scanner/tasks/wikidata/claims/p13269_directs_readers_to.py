@@ -18,7 +18,12 @@ class P13269DirectsReadersTo(ClaimFactory):
         if redirect and isinstance(redirect, str):
             redirected_lemma = pywikibot.Page(self.re_page.page.site, f"RE:{redirect}")
             if redirected_lemma.exists():
-                data_item = redirected_lemma.data_item()
+                try:
+                    data_item = redirected_lemma.data_item()
+                except pywikibot.exceptions.NoPageError:
+                    self.logger.error(f"{self.get_property_string()}: "
+                                      f"Page existed for {redirected_lemma}, but no data item.")
+                    return []
                 if data_item.exists():
                     snak_parameter = SnakParameter(property_str=self.get_property_string(),
                                                    target_type="wikibase-item",
