@@ -18,7 +18,7 @@ something
         compare({'success': True, 'changed': True}, task.run(re_page))
         compare("Platzhalter", re_page.first_article["KORREKTURSTAND"].value)
 
-    def test_from_unvollständig(self):
+    def test_from_unvollstaendig(self):
         task = SEPLTask(None, self.logger)
         self.page_mock.text = """{{REDaten
 |BAND=XII,1
