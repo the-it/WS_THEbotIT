@@ -15,4 +15,6 @@ class SEPLTask(ReScannerTask):
             if isinstance(article, Article):
                 if not article["KORREKTURSTAND"].value:
                     article["KORREKTURSTAND"].value = "Platzhalter"
+                elif str(article["KORREKTURSTAND"].value).lower() == "unvollständig":
+                    article["KORREKTURSTAND"].value = "Platzhalter"
         return True

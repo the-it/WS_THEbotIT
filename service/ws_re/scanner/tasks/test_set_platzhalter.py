@@ -6,11 +6,23 @@ from service.ws_re.template.re_page import RePage
 
 
 class TestSEPLTask(TaskTestCase):
-    def test_get_pd_death(self):
+    def test_from_empty(self):
         task = SEPLTask(None, self.logger)
         self.page_mock.text = """{{REDaten
 |BAND=XII,1
 |KORREKTURSTAND=
+}}
+something
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        compare({'success': True, 'changed': True}, task.run(re_page))
+        compare("Platzhalter", re_page.first_article["KORREKTURSTAND"].value)
+
+    def test_from_unvollstaendig(self):
+        task = SEPLTask(None, self.logger)
+        self.page_mock.text = """{{REDaten
+|BAND=XII,1
+|KORREKTURSTAND=Unvollständig
 }}
 something
 {{REAutor|OFF}}"""
