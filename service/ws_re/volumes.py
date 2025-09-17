@@ -30,12 +30,17 @@ class Volume:
                  year: Union[str, int],
                  data_item: str,
                  start: Optional[str] = None,
-                 end: Optional[str] = None):
+                 end: Optional[str] = None,
+                 start_column: Optional[str] = None,
+                 end_column: Optional[str] = None
+                 ):
         self._name = name
         self._year = str(year)
         self._data_item = data_item
         self._start = start
         self._end = end
+        self._start_column = int(start_column) if start_column else None
+        self._end_column = int(end_column) if end_column else None
         self._sortkey = self._compute_sortkey()
 
     def __repr__(self):  # pragma: no cover
@@ -65,6 +70,14 @@ class Volume:
     @property
     def end(self) -> Optional[str]:
         return self._end
+
+    @property
+    def start_column(self) -> Optional[int]:
+        return self._start_column
+
+    @property
+    def end_column(self) -> Optional[int]:
+        return self._end_column
 
     @property
     def type(self) -> VolumeType:

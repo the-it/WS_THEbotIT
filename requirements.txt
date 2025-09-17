@@ -6,15 +6,15 @@
 #
 beautifulsoup4==4.13.5
     # via -r requirements.in
-boto3==1.40.25
+boto3==1.40.30
     # via -r requirements.in
-boto3-stubs[essential]==1.40.25
+boto3-stubs[essential]==1.40.30
     # via -r requirements.in
-botocore==1.40.25
+botocore==1.40.30
     # via
     #   boto3
     #   s3transfer
-botocore-stubs==1.40.25
+botocore-stubs==1.40.30
     # via boto3-stubs
 certifi==2025.8.3
     # via requests
@@ -44,9 +44,9 @@ mypy-boto3-ec2==1.40.24
     # via boto3-stubs
 mypy-boto3-lambda==1.40.7
     # via boto3-stubs
-mypy-boto3-rds==1.40.24
+mypy-boto3-rds==1.40.29
     # via boto3-stubs
-mypy-boto3-s3==1.40.0
+mypy-boto3-s3==1.40.26
     # via boto3-stubs
 mypy-boto3-sqs==1.40.17
     # via boto3-stubs
@@ -71,7 +71,7 @@ requests-oauthlib==2.0.0
     # via -r requirements.in
 roman==5.1
     # via -r requirements.in
-s3transfer==0.13.1
+s3transfer==0.14.0
     # via boto3
 six==1.17.0
     # via python-dateutil
