@@ -9,22 +9,28 @@ from service.ws_re.volumes import Volume, Volumes, VolumeType
 
 class TestVolume(TestCase):
     def test_init(self):
-        volume = Volume("I,1", "1900", "Q26414644", "Aal", "Bethel")
+        volume = Volume("I,1", "1900", "Q26414644",
+                        "Aal", "Bethel", "1", "2")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
         compare("1900", volume.year)
         compare("Aal", volume.start)
         compare("Bethel", volume.end)
         compare("Q26414644", volume.data_item)
+        compare(1, volume.start_column)
+        compare(2, volume.end_column)
 
     def test_init_by_name(self):
-        volume = Volume(name="I,1", year="1900", start="Aal", end="Bethel", data_item="Q26414644")
+        volume = Volume(name="I,1", year="1900", start="Aal", end="Bethel",
+                        data_item="Q26414644", start_column="1", end_column="2")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
         compare("1900", volume.year)
         compare("Aal", volume.start)
         compare("Bethel", volume.end)
         compare("Q26414644", volume.data_item)
+        compare(1, volume.start_column)
+        compare(2, volume.end_column)
 
     def test_init_supp_or_register(self):
         volume = Volume(name="S I", year="1900", data_item="Q26469375")
