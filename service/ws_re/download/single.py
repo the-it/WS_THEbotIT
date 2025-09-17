@@ -14,7 +14,7 @@ class Single(DownloadTarget):
         self.page_1 = (page // 2 * 2) + 1
         self.page_2 = self.page_1 + 1
         self.path_issue = Path(BASE_PATH, "singles",
-                                 f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
+                               f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
         self.path_page_2 = self.path_issue.joinpath(f"{self.page_2:04d}.png")
         self.path_page_1 = self.path_issue.joinpath(f"{self.page_1:04d}.png")
         self.double = Double(issue=self.issue, page=self.page_1)
@@ -36,7 +36,7 @@ class Single(DownloadTarget):
             list_of_colorsums = []
             range_slice = range(-200, 201, 1)
             # check every slice around the middle for the color value
-            for k, j in enumerate(range_slice):
+            for j in range_slice:
                 im = double_image.convert("L")
                 crop_image = im.crop((half_width + j, 0, half_width + j + 1, height))
                 list_of_colorsums.append(sum(list(crop_image.getdata())) / height)
@@ -47,6 +47,7 @@ class Single(DownloadTarget):
             single_image_2 = double_image.crop((half, 0, width, height))
             single_image_1.save(self.path_page_1, "PNG")
             single_image_2.save(self.path_page_2, "PNG")
+
 
 if __name__ == "__main__":
     volumes = Volumes()
@@ -67,5 +68,6 @@ if __name__ == "__main__":
     ]
     for string in issues:
         volume = volumes[string]
-        for i in range(volume.start_column, volume.end_column + 1, 2):
-            Single(issue=volume.name, page=i).get_target()
+        if volume.start_column and volume.end_column:
+            for i in range(volume.start_column, volume.end_column + 1, 2):
+                Single(issue=volume.name, page=i).get_target()

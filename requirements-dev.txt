@@ -18,11 +18,11 @@ beautifulsoup4==4.13.5
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.40.30
+boto3==1.40.32
     # via
     #   -c requirements.txt
     #   moto
-botocore==1.40.30
+botocore==1.40.32
     # via
     #   -c requirements.txt
     #   boto3
@@ -51,7 +51,7 @@ coverage==7.10.6
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==45.0.7
+cryptography==46.0.1
     # via
     #   authlib
     #   moto
@@ -256,7 +256,7 @@ urllib3==2.5.0
     #   types-requests
 werkzeug==3.1.3
     # via moto
-xmltodict==1.0.0
+xmltodict==1.0.1
     # via moto
 
 # The following packages are considered to be unsafe in a requirements file:
