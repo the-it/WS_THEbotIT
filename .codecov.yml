@@ -4,6 +4,8 @@ coverage:
     project: yes
     patch: yes
     changes: yes
+ignore:
+  - "scripts/service/ws_re/download"
 
 codecov:
   notify:
