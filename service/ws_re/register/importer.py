@@ -40,7 +40,7 @@ class ReImporter(CloudBot):
                 break
             for article in register:
                 if article.proof_read is None:
-                    if article.get_public_domain_year() < self.current_year:
+                    if article.get_public_domain_year() <= self.current_year:
                         lemma = Page(self.wiki, f"RE:{article.lemma}")
                         if not lemma.exists():
                             article_text = self.get_text(article.volume.name, article.lemma)
