@@ -47,8 +47,8 @@ class SCANTask(ReScannerTask):
 
     def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
-        if article['WIKIPEDIA'].value:
-            wp_link: Optional[str] = f"w:de:{article['WIKIPEDIA'].value}"
+        if wp_value := article['WIKIPEDIA'].value:
+            wp_link: Optional[str] = f"w:de:{wp_value}" if not wp_value.contains(":") else "w:{wp_value}"
         else:
             wp_link = self._get_link_from_wd(("dewikipedia", "enwikipedia", "frwikipedia", "itwikipedia",
                                               "eswikipedia", "ptwikipedia", "sewikipedia", "cawikipedia",
