@@ -222,7 +222,9 @@ class Lemma:
             chapter_list.append(chapter.to_dict())
         return chapter_list
 
-    def get_table_row(self, print_volume: bool = False, print_author: bool = True) -> str:
+    def get_table_row(self, print_volume: bool = False,
+                      print_author: bool = True,
+                      print_colour: bool = True) -> str:
         row_string = ["|-"]
         multi_row = ""
         if len(self.chapter_objects) > 1:
@@ -230,16 +232,17 @@ class Lemma:
         if print_volume:
             row_string.append(f"{multi_row}|{self.volume.name}".strip())
         status = self.status
+        background = f" style=\"background:{status[1]}\"" if print_colour else ""
         if self.chapter_objects:
             for idx, chapter in enumerate(self.chapter_objects):
                 row_string.append(self._get_pages(chapter))
                 if print_author:
                     row_string.append(self._get_author_str(chapter))
                 if idx == 0:
-                    row_string.append(f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip())
+                    row_string.append(f"{multi_row}{background}|{status[0]}".strip())
                 row_string.append("-")
         else:
-            row_string += ["|", "|", f"{multi_row} style=\"background:{status[1]}\"|{status[0]}".strip()]
+            row_string += ["|", "|", f"{multi_row}{background}|{status[0]}".strip()]
         # remove the last entry again because the row separator only needed between rows
         if row_string[-1] == "-":
             row_string.pop(-1)
@@ -259,16 +262,16 @@ class Lemma:
             link = f"[[RE:{self.lemma}|'''{{{{Anker2|{self._escape_link_for_templates(str(self.lemma))}}}}}''']]"
         return link
 
-    def get_wiki_links(self) -> Tuple[str, str]:
+    def get_wiki_links(self, print_all_links: bool = True) -> Tuple[str, str]:
         link = ""
         sort_key = ""
         links = []
         sort_keys = []
-        if self.wp_link:
+        if self.wp_link and print_all_links:
             link, sort_key = self._process_wiki_link("wp")
             links.append(link)
             sort_keys.append(sort_key)
-        if self.ws_link:
+        if self.ws_link and print_all_links:
             link, sort_key = self._process_wiki_link("ws")
             links.append(link)
             sort_keys.append(sort_key)
