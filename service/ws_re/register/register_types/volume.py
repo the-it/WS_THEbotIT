@@ -65,7 +65,11 @@ class VolumeRegister(Register):
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def get_register_str(self, print_details: bool = True) -> str:
-        table = self._get_table(print_volume=False, print_description=print_details, print_author=print_details)
+        table = self._get_table(print_volume=False,
+                                print_description=print_details,
+                                print_author=print_details,
+                                print_all_links=print_details,
+                                print_colour=print_details)
         return f"{self._get_header()}" \
                f"\n{table}" \
                f"\n[[Kategorie:RE:Register|!]]"

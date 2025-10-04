@@ -102,12 +102,12 @@ class TestRegister(BaseTestRegister):
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||
 |[http://elexikon.ch/RE/I,1_1.png 1]-4
-|style="background:#669966"|FER
+||FER
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
 |[http://elexikon.ch/RE/I,1_5.png 4]
-|style="background:#556B2F"|KOR
+||KOR
 |}
 [[Kategorie:RE:Register|!]]"""
 

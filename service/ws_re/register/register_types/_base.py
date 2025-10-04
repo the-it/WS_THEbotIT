@@ -40,7 +40,8 @@ class Register(ABC):
         return return_lemmas
 
     def _get_table(self, print_volume: bool = True, print_description: bool = True,
-                   print_author: bool = True, background: bool = False) -> str:
+                   print_author: bool = True, background: bool = False, print_all_links: bool = True,
+                   print_colour: bool = True) -> str:
         header = f"""{{{{Tabellenstile}}}}
 {{|class="wikitable sortable tabelle-kopf-fixiert"{' style=\"background:#FFFAF0;\"' if background else ''}
 !Artikel
@@ -57,7 +58,9 @@ class Register(ABC):
             for lemma in lemmas:
                 # if there are no chapters ... one line must be added no madder what
                 chapter_sum += max(len(lemma.chapter_objects), 1)
-                table_rows.append(lemma.get_table_row(print_volume=print_volume, print_author=print_author))
+                table_rows.append(lemma.get_table_row(print_volume=print_volume,
+                                                      print_author=print_author,
+                                                      print_colour=print_colour))
             # strip |-/n form the first line it is later replaced by the lemma line
             table_rows[0] = table_rows[0][3:]
             # take generell information from first template (no supplement)
@@ -71,7 +74,7 @@ class Register(ABC):
             if print_description:
                 multi_chapter_items.append(f"\n|{multi_chapter}|"
                                            f"{self._get_short_description_line(lemmas)}")
-            interwiki_line = self._get_interwiki_line(lemmas)
+            interwiki_line = self._get_interwiki_line(lemmas, print_all_links=print_all_links)
             multi_chapter_items.append(
                 f"\n|{multi_chapter}"
                 f"{' ' if (multi_chapter and interwiki_line != '|') else ''}"
@@ -82,11 +85,11 @@ class Register(ABC):
         return "\n".join(table)
 
     @staticmethod
-    def _get_interwiki_line(lemmas):
+    def _get_interwiki_line(lemmas, print_all_links: bool = True) -> str:
         interwiki_links = ""
         interwiki_sort_key = ""
         for lemma in lemmas:
-            interwiki_links, interwiki_sort_key = lemma.get_wiki_links()
+            interwiki_links, interwiki_sort_key = lemma.get_wiki_links(print_all_links)
             if interwiki_links or interwiki_sort_key:
                 break
         return f"{interwiki_sort_key if interwiki_sort_key else ''}|{interwiki_links}"
