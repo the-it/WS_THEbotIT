@@ -14,6 +14,15 @@ replace_simple_link:
   expect: |
     [[RE:Target|Redirect]]
     [[RE:Target]]
+replace_with_section:
+  text: |
+    [[RE:Redirect#page|Redirect]]
+    [[RE:Redirect#page]]
+  redirect: "Redirect"
+  target: "Target"
+  expect: |
+    [[RE:Target#page|Redirect]]
+    [[RE:Target#page]]
 replace_re_siehe:
   text: |
     {{RE siehe|Redirect}}
