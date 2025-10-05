@@ -27,8 +27,26 @@ resource "aws_s3_bucket" "state_bucket" {
   }
 }
 
-resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
+resource "aws_s3_bucket" "re_ocr_bucket" {
+  bucket = "wiki-bots-re-ocr-${var.environment}"
+  tags = {
+    "project" = local.module_name
+    "environment" = var.environment
+  }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "encryption_state_bucket" {
   bucket = aws_s3_bucket.state_bucket.bucket
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "encryption_re_ocr_bucket" {
+  bucket = aws_s3_bucket.re_ocr_bucket.bucket
 
   rule {
     apply_server_side_encryption_by_default {
@@ -44,6 +62,13 @@ resource "aws_s3_bucket_logging" "logging_state_bucket" {
   target_prefix = "log/${aws_s3_bucket.state_bucket.id}/"
 }
 
+resource "aws_s3_bucket_logging" "logging_re_ocr_bucket" {
+  bucket = aws_s3_bucket.re_ocr_bucket.id
+
+  target_bucket = var.logging_bucket
+  target_prefix = "log/${aws_s3_bucket.re_ocr_bucket.id}/"
+}
+
 resource "aws_iam_user" "ws_bot_user" {
   name = "ws_bot_user_${var.environment}"
 }
@@ -56,6 +81,7 @@ data "aws_iam_policy_document" "ws_bot_bucket_policy_document" {
 
     resources = [
       aws_s3_bucket.state_bucket.arn,
+      aws_s3_bucket.re_ocr_bucket.arn,
     ]
   }
 
@@ -66,6 +92,7 @@ data "aws_iam_policy_document" "ws_bot_bucket_policy_document" {
 
     resources = [
       "${aws_s3_bucket.state_bucket.arn}/*",
+      "${aws_s3_bucket.re_ocr_bucket.arn}/*",
     ]
   }
 }
