@@ -58,7 +58,7 @@ class CHRETask(ReScannerTask):
     @staticmethod
     def replace_redirect_links(text: str, redirect: str, target: str):
         redirect_re = redirect.translate(REGEX_TRANSLATION)
-        # [[RE:Redirect]] -> [[RE:Target]], [[RE:Redirect|Something]] -> [[RE:Target|Something]]
+        # [[RE:Redirect(#part)(|Something)]] -> [[RE:Target(#part)(|Something)]]
         temp_text = re.sub(rf"\[\[RE:{redirect_re}(#|\||\]\])", rf"[[RE:{target}\g<1>", text)
         # {{RE siehe|Redirect}} -> {{RE siehe|Target|Redirect}}
         temp_text = re.sub(rf"{{RE siehe\|{redirect_re}}}", f"{{RE siehe|{target}|{redirect}}}", temp_text)
