@@ -38,11 +38,13 @@ class Updater():
             self._update_pre_and_post_exists(lemma_dict, self_supplement)
             return "update_pre_and_post_exists"
         if "previous" in lemma_dict \
-                and self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])):
+                and self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["previous"])) \
+                and not self_supplement:
             self._update_pre_exists(lemma_dict)
             return "update_pre_exists"
         if "next" in lemma_dict \
-                and self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])):
+                and self._register.get_lemma_by_sort_key(Lemma.make_sort_key(lemma_dict["next"])) \
+                and not self_supplement:
             self._update_post_exists(lemma_dict)
             return "update_post_exists"
         raise RegisterException(f"The update of the register {self._register.volume.name} "
