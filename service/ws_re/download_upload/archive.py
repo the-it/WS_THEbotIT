@@ -1,7 +1,7 @@
 import internetarchive
 
-from service.ws_re.download.base import BASE_PATH, DownloadTarget
-from service.ws_re.download.data import _ARCHIVES
+from service.ws_re.download_upload.base import BASE_PATH, DownloadTarget
+from service.ws_re.download_upload.data import _ARCHIVES
 
 
 class Archive(DownloadTarget):

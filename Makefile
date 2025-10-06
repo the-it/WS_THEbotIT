@@ -111,6 +111,14 @@ cloc :
 	echo "########## COUNT LOC ###########"
 	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
 
+############
+### OCRS ###
+############
+
+upload_ocrs :
+	echo "########## UPLOAD OCRS ###########"
+	 aws s3 sync service/ws_re/download_upload/ocrs s3://wiki-bots-re-ocr-prd --profile ersotech_prd
+
 #############
 ### PHONY ###
 #############

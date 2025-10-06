@@ -5,9 +5,9 @@ from os.path import isfile, join
 from pathlib import Path
 from typing import Dict
 
-from service.ws_re.download.base import DownloadTarget, BASE_PATH
-from service.ws_re.download.data import _MAPPINGS, _MISSING_PAGES
-from service.ws_re.download.raw_files import RawFiles
+from service.ws_re.download_upload.base import DownloadTarget, BASE_PATH
+from service.ws_re.download_upload.data import _MAPPINGS, _MISSING_PAGES
+from service.ws_re.download_upload.raw_files import RawFiles
 from service.ws_re.volumes import Volumes
 
 

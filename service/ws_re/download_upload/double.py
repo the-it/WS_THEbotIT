@@ -3,9 +3,9 @@ from pathlib import Path
 
 from PIL import Image
 
-from service.ws_re.download.base import BASE_PATH, DownloadTarget
-from service.ws_re.download.data import _ARCHIVES
-from service.ws_re.download.quadrupel import Quadrupel
+from service.ws_re.download_upload.base import BASE_PATH, DownloadTarget
+from service.ws_re.download_upload.data import _ARCHIVES
+from service.ws_re.download_upload.quadrupel import Quadrupel
 from service.ws_re.volumes import Volumes
 
 

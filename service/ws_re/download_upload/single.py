@@ -3,8 +3,8 @@ from pathlib import Path
 
 from PIL import Image
 
-from service.ws_re.download.base import BASE_PATH, DownloadTarget
-from service.ws_re.download.double import Double
+from service.ws_re.download_upload.base import BASE_PATH, DownloadTarget
+from service.ws_re.download_upload.double import Double
 from service.ws_re.volumes import Volumes
 
 
