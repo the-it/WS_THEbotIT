@@ -117,7 +117,7 @@ cloc :
 
 upload_ocrs :
 	echo "########## UPLOAD OCRS ###########"
-	 aws s3 sync service/ws_re/download_upload/ocrs s3://wiki-bots-re-ocr-prd --profile ersotech_prd
+	 aws s3 sync service/ws_re/download_upload/ocrs/txt s3://wiki-bots-re-ocr-prd --profile ersotech_prd
 
 #############
 ### PHONY ###
