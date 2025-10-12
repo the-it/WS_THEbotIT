@@ -26,6 +26,8 @@ class SCANTask(ReScannerTask):
         self._strategies: Dict[str, List[str]] = {}
 
     def task(self):
+        if "RE:Stammdaten überprüfen" in self.re_page.page.text:
+            return
         self._process_from_article_list()
 
     def finish_task(self):

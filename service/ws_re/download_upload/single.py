@@ -51,21 +51,22 @@ class Single(DownloadTarget):
 
 if __name__ == "__main__":
     volumes = Volumes()
-    issues = [
-        "I A,1", "I A,2",
-        "II A,1", "II A,2",
-        "III A,1", "III A,2",
-        "IV A,1", "IV A,2",
-        "V A,1", "V A,2",
-        "VI A,1", "VI A,2",
-        "VII A,1", "VII A,2",
-        "VIII A,1", "VIII A,2",
-        "IX A,1", "IX A,2",
-        "X A",
-        "S I", "S II", "S III", "S IV", "S V",
-        "S VI", "S VII", "S VIII", "S IX", "S X",
-        "S XI", "S XII", "S XIII", "S XIV", "S XV",
-    ]
+    # issues = [
+    #     "I A,1", "I A,2",
+    #     "II A,1", "II A,2",
+    #     "III A,1", "III A,2",
+    #     "IV A,1", "IV A,2",
+    #     "V A,1", "V A,2",
+    #     "VI A,1", "VI A,2",
+    #     "VII A,1", "VII A,2",
+    #     "VIII A,1", "VIII A,2",
+    #     "IX A,1", "IX A,2",
+    #     "X A",
+    #     "S I", "S II", "S III", "S IV", "S V",
+    #     "S VI", "S VII", "S VIII", "S IX", "S X",
+    #     "S XI", "S XII", "S XIII", "S XIV", "S XV",
+    # ]
+    issues = ["X,2"]
     for string in issues:
         volume = volumes[string]
         if volume.start_column and volume.end_column:
