@@ -179,7 +179,7 @@ text.
 {{REAutor|OFF}}"""
             task = SCANTask(None, self.logger)
             task.re_page = RePage(self.page_mock)
-            task._process_from_article_list()
+            task.task()
             post_lemma_dict = task.registers["I,1"].get_lemma_by_name("Aal").to_dict()
             compare("w:de:Aal_wp_link", post_lemma_dict["wp_link"])
             compare("s:de:Aal_ws_link", post_lemma_dict["ws_link"])
@@ -190,6 +190,32 @@ text.
             compare("Lemma Next", post_lemma_dict["next"])
             compare("Short Description", post_lemma_dict["short_description"])
             compare(True, post_lemma_dict["no_creative_height"])
+
+    def test_dont_fetch_generated_lemmas(self):
+        with LogCapture():
+            self.page_mock.title_str = "RE:Aal"
+            self.page_mock.text = """{{REDaten
+|BAND=I,1
+|VORGÄNGER=Lemma Previous
+|NACHFOLGER=Lemma Next
+|WP=Aal_wp_link
+|WS=Aal_ws_link
+|SORTIERUNG=Aal
+|VERWEIS=ON
+|KORREKTURSTAND=korrigiert
+|KURZTEXT=Short Description
+|KEINE_SCHÖPFUNGSHÖHE=ON
+}}
+text.
+{{REAutor|OFF}}
+[[Kategorie:RE:Stammdaten überprüfen]]"""
+            task = SCANTask(None, self.logger)
+            task.re_page = RePage(self.page_mock)
+            pre_lemma_dict = task.registers["I,1"].get_lemma_by_name("Aal").to_dict()
+            task.task()
+            post_lemma_dict = task.registers["I,1"].get_lemma_by_name("Aal").to_dict()
+            compare(pre_lemma_dict, post_lemma_dict)
+
 
     def test_fetch_from_properties_self_append(self):
         with LogCapture():
