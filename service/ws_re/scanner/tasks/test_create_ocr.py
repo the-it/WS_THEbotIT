@@ -1,10 +1,11 @@
 from datetime import datetime
 from pathlib import Path
 
-from botocore import exceptions
+from ddt import ddt, file_data
 from testfixtures import compare
 
-from service.ws_re.scanner.tasks.create_ocr import COCRTask
+from service.ws_re.scanner.tasks.create_ocr import COCRTask, NoRawOCRFound
+from service.ws_re.template.re_page import RePage
 from tools.bots.logger import WikiLogger
 from tools.bots.test_base import TestCloudBase
 from tools.test import PageMock
@@ -12,6 +13,7 @@ from tools.test import PageMock
 OCR_BUCKET_NAME = "wiki-bots-re-ocr-prd"
 
 
+@ddt
 class TestCOCRTask(TestCloudBase):
     PATH_TEST_FILES = Path(__file__).parent.joinpath("test_data").joinpath("create_ocr")
 
@@ -36,13 +38,21 @@ class TestCOCRTask(TestCloudBase):
 
     def test_read_from_cloud_page_not_there(self):
         self.put_page_to_cloud("I A,1_0127")
-        self.task.get_raw_page("something_wrong")
-        # SOLVE THIS
-        # with self.assertRaises(exceptions.):
-        #     self.task.get_raw_page("something_wrong")
+        with self.assertRaises(NoRawOCRFound):
+            self.task.get_raw_page("something_wrong")
 
     def test_get_full_text_of_page(self):
         self.put_page_to_cloud("I A,1_0127")
         text = self.task._get_text_for_section("I A,1", 127, start=False, end=False)
         self.assertTrue(text.startswith("\ufeff127 {{Polytonisch|sup€λsupΡάγαεα}}"))
         self.assertTrue(text.endswith("CIE 109f. 163. 1228ff.), sowie den aus dem"))
+
+    @file_data("test_data/create_ocr/test_get_texts.yml")
+    def test_get_text_start_end(self, given, expect):
+        self.put_page_to_cloud(f"{given["issue"]}_{str(given["page"]).zfill(4)}")
+        page_mock = PageMock()
+        page_mock.title_str = f"RE:{given['title']}"
+        page_mock.text = "{{REDaten}}{{REAutor|OFF}}"
+        self.task.re_page = RePage(page_mock)
+        text = self.task._get_text_for_section(given["issue"], given["page"], start=given["start"], end=given["end"])
+        compare(expect.strip(), text)
