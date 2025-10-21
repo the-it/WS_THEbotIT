@@ -14,6 +14,7 @@ class TestReImporter(TestCase):
         mapping = ReImporter.get_author_mapping()
         compare("Stein.", mapping["Arthur Stein"])
         compare("A.W.", mapping["Albert Wünsch"])
+        compare("A. E. Gordon.", mapping["Arthur Ernest Gordon"])
 
     @file_data("test_data/test_importer.yml")
     def test_adjust_author(self, given, expect):

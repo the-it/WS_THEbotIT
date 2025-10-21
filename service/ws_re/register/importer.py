@@ -20,7 +20,7 @@ class ReImporter(CloudBot):
         self.author_mapping = self.get_author_mapping()
         self._create_neuland()
         self.current_year = datetime.now().year
-        self.max_create = min(50, 300 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
+        self.max_create = min(50, 200 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
 
     def _create_neuland(self):
         for number in [1, 2, 3, 4, 5, 6, 7, 11, 12, 13]:
@@ -69,7 +69,7 @@ class ReImporter(CloudBot):
         return None
 
     ADDITIONAL_AUTHORS = {
-        "Arthur Stein": "Stein.",
+
     }
 
     COMPLEX_AUTHORS = {
@@ -81,6 +81,7 @@ class ReImporter(CloudBot):
         "Alfred Nagl": "Nagl.",
         "Alfred Philippson": "Philippson.",
         "Johannes Schmidt (Epigraphiker)": "J. Schmidt.",
+        "Johannes Schmidt (Philologe)": "J. Schmidt.",
         "Ernst Schwabe": "J. Schwabe.",
         "Ludwig Schwabe": "J. Schwabe.",
     }
@@ -99,8 +100,21 @@ class ReImporter(CloudBot):
             author_raw_mapping[authors.authors_mapping[author]].append(author)
         author_mapping = {}
         for key, value in author_raw_mapping.items():
+            value = [item for item in value if item[-1] == "."]
             if len(value) == 1 and value[0][-1] == ".":
                 author_mapping[key] = value[0]
+            else:
+                last_name = f"{key.split(" ")[-1]}."
+                name_list = []
+                for name in key.split(" ")[0:-1]:
+                    name_list.append(f"{name[0]}.")
+                name_list.append(last_name)
+                long_last_name = " ".join(name_list)
+                if last_name in value:
+                    author_mapping[key] = last_name
+                elif long_last_name in value:
+                    author_mapping[key] = long_last_name
+
         author_mapping.update(cls.ADDITIONAL_AUTHORS)
         author_mapping.update(cls.COMPLEX_AUTHORS)
         return author_mapping
