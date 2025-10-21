@@ -20,7 +20,7 @@ class ReImporter(CloudBot):
         self.author_mapping = self.get_author_mapping()
         self._create_neuland()
         self.current_year = datetime.now().year
-        self.max_create = min(50, 200 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
+        self.max_create = min(60, 200 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
 
     def _create_neuland(self):
         for number in [1, 2, 3, 4, 5, 6, 7, 11, 12, 13]:
@@ -69,7 +69,7 @@ class ReImporter(CloudBot):
         return None
 
     ADDITIONAL_AUTHORS: dict[str, str] = {
-
+        "Franz Heinrich Weissbach": "Weißbach."
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
