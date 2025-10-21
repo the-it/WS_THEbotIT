@@ -1,0 +1,33 @@
+stein:
+  given: |
+    {{REDaten
+    |BAND=I,1
+    }}
+    {{REAutor|Arthur Stein}}
+  expect: |
+    {{REDaten
+    |BAND=I,1
+    }}
+    {{REAutor|Stein.}}
+nagl:
+  given: |
+    {{REDaten
+    |BAND=I,1
+    }}
+    {{REAutor|Alfred Nagl}}
+  expect: |
+    {{REDaten
+    |BAND=I,1
+    }}
+    {{REAutor|Nagl.|I,1}}
+nothing_to_change:
+  given: |
+    {{REDaten
+    |BAND=I,1
+    }}
+    {{REAutor|Fantasy Author}}
+  expect: |
+    {{REDaten
+    |BAND=I,1
+    }}
+    {{REAutor|Fantasy Author}}
