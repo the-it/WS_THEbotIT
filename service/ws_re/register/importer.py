@@ -68,11 +68,11 @@ class ReImporter(CloudBot):
                 return article_text
         return None
 
-    ADDITIONAL_AUTHORS = {
+    ADDITIONAL_AUTHORS: dict[str, str] = {
 
     }
 
-    COMPLEX_AUTHORS = {
+    COMPLEX_AUTHORS: dict[str, str] = {
         "Ernst Hugo Berger": "Berger.",
         "Adolf Berger": "Berger.",
         "Ludo Moritz Hartmann": "Hartmann.",
