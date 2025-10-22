@@ -1,5 +1,6 @@
 import re
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 from pywikibot import Site, Page, Category
@@ -18,6 +19,7 @@ class ReImporter(CloudBot):
         self.registers = Registers()
         self.new_articles: dict[str, dict[str, str]] = {}
         self.author_mapping = self.get_author_mapping()
+        self.tm_set = self._load_tm_set()
         self._create_neuland()
         self.current_year = datetime.now().year
         self.max_create = min(60, 200 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
@@ -35,6 +37,15 @@ class ReImporter(CloudBot):
                         self.new_articles[band] = {}
                     self.new_articles[band][lemma] = article
 
+    @staticmethod
+    def _load_tm_set():
+        tm_set = set()
+        file_path = Path(__file__).parent / "real_red_people.csv"
+        with open(file_path, "r", encoding="utf-8") as file:
+            for line in file.readlines():
+                tm_set.add(line.strip().strip("\""))
+        return tm_set
+
     def task(self):
         # pylint: disable=too-many-nested-blocks
         create_count = 0
@@ -43,7 +54,8 @@ class ReImporter(CloudBot):
                 break
             for article in register:
                 if article.proof_read is None:
-                    if article.get_public_domain_year() <= self.current_year:
+                    # if article.get_public_domain_year() <= self.current_year:
+                    if article.lemma in self.tm_set:
                         lemma = Page(self.wiki, f"RE:{article.lemma}")
                         if not lemma.exists():
                             article_text = self.get_text(article.volume.name, article.lemma)
@@ -69,7 +81,8 @@ class ReImporter(CloudBot):
         return None
 
     ADDITIONAL_AUTHORS: dict[str, str] = {
-        "Franz Heinrich Weissbach": "Weißbach."
+        "Franz Heinrich Weissbach": "Weißbach.",
+        "Hans von Arnim": "v. Arnim.",
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
