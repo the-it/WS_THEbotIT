@@ -81,7 +81,7 @@ class ReImporter(CloudBot):
         return None
 
     ADDITIONAL_AUTHORS: dict[str, str] = {
-        "Franz Heinrich Weissbach": "Weißbach.",
+        "Franz Heinrich Weissbach": "Weissbach.",
         "Hans von Arnim": "v. Arnim.",
     }
 
