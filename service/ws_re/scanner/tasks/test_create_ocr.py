@@ -56,3 +56,10 @@ class TestCOCRTask(TestCloudBase):
         self.task.re_page = RePage(page_mock)
         text = self.task._get_text_for_section(given["issue"], given["page"], start=given["start"], end=given["end"])
         compare(expect.strip(), text)
+
+    @file_data("test_data/create_ocr/test_detect_empty.yml")
+    def test_detect_empty_content(self, given, expect):
+        page_mock = PageMock()
+        page_mock.text = f"{{{{REDaten}}}}{given}{{{{REAutor|OFF}}}}"
+        self.task.re_page = RePage(page_mock)
+        compare(expect, self.task._detect_empty_content())

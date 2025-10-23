@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Any
 
 from pywikibot import Site, Page, Category
 
@@ -19,7 +19,7 @@ class ReImporter(CloudBot):
         self.registers = Registers()
         self.new_articles: dict[str, dict[str, str]] = {}
         self.author_mapping = self.get_author_mapping()
-        self.tm_set = self._load_tm_set()
+        self.tm_set = self.load_tm_set()
         self._create_neuland()
         self.current_year = datetime.now().year
         self.max_create = min(60, 200 - len(list(Category(self.wiki, "RE:Stammdaten überprüfen").articles())))
@@ -38,7 +38,7 @@ class ReImporter(CloudBot):
                     self.new_articles[band][lemma] = article
 
     @staticmethod
-    def _load_tm_set():
+    def load_tm_set() -> set[str]:
         tm_set = set()
         file_path = Path(__file__).parent / "real_red_people.csv"
         with open(file_path, "r", encoding="utf-8") as file:
@@ -83,6 +83,7 @@ class ReImporter(CloudBot):
     ADDITIONAL_AUTHORS: dict[str, str] = {
         "Franz Heinrich Weissbach": "Weissbach.",
         "Hans von Arnim": "v. Arnim.",
+        "Paul Friedländer": "P. Friedländer.",
         "Felix Jacoby": "F. Jacoby.",
     }
 

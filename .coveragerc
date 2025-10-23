@@ -4,6 +4,7 @@ omit =
     archive/*,
     # offline functions for one time purposes
     service/ws_re/download_upload/*,
+    service/ws_re/analyser.py,
     # potential python virtual env
     venv/*,
     # the runner suite copies test modules temporary to a directory, ignore this files

@@ -22,5 +22,5 @@ class TestReImporter(TestCase):
         compare(expect, ReImporter.adjust_author(given, mapping))
 
     def test_load_tm_list(self):
-        tm_set = ReImporter._load_tm_set()
+        tm_set = ReImporter.load_tm_set()
         self.assertTrue("Hermogenes 27" in tm_set)
