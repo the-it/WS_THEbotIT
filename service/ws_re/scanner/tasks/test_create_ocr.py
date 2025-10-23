@@ -6,6 +6,7 @@ from testfixtures import compare
 
 from service.ws_re.scanner.tasks.create_ocr import COCRTask, NoRawOCRFound
 from service.ws_re.template.re_page import RePage
+from service.ws_re.template.article import Article
 from tools.bots.logger import WikiLogger
 from tools.bots.test_base import TestCloudBase
 from tools.test import PageMock
@@ -62,4 +63,26 @@ class TestCOCRTask(TestCloudBase):
         page_mock = PageMock()
         page_mock.text = f"{{{{REDaten}}}}{given}{{{{REAutor|OFF}}}}"
         self.task.re_page = RePage(page_mock)
-        compare(expect, self.task._detect_empty_content())
+        compare(expect, self.task._detect_empty_content(page_mock.text))
+
+    def test_get_text_for_article_single_page(self):
+        # Arrange: upload OCR page and set page/lemma
+        self.put_page_to_cloud("I A,1_0127")
+        page_mock = PageMock()
+        page_mock.title_str = "RE:Ragando"
+        page_mock.text = "{{REDaten}}{{REAutor|OFF}}"
+        self.task.re_page = RePage(page_mock)
+        # Create a placeholder article with single page range
+        article = Article()
+        article["BAND"].value = "I A,1"
+        article["SPALTE_START"].value = "127"
+        article["SPALTE_END"].value = "127"
+
+        # Expected text equals the section text extracted when start=True on page 127
+        expected = """'''Ragando,''' ein Ort in [[RE:Noricum|Noricum]], nach {{RE siehe|Itinerarien|Itin.}} Ant. 129 ([[RE:Abi|Abi]].) ''Ragundone'', nach [[RE:Tabula Peutingeriana|Tab. Peut.]] ''Ragandone'', nach Itin. Hieros. 560 ''Ragindone'', in der Mitte zwischen [[RE:Celeia|Celeia]] (Cilli) und {{RE siehe|Poetovio}} (Pettau) gelegen, nach Itin. Ant. und Tab. Peut. je 18, nach Itin. Hieros. (auf Umwegen) je 24 röm. Meilen von beiden Städten entfernt, also im südöstlichen Steiermark, nach CIL III p. 645<ref name="CIL 3p|645">[https://cil.bbaw.de/hauptnavigation/das-cil/baende CORPUS INSCRIPTIONUM LATINARUM I{{sup|2}} ff.] 645</ref> bei Loßnitz, nach der angehängten {{SperrSchrift|Kiepert}} sehen Karte bei Studenitz."""
+
+        # Act
+        text = self.task._get_text_for_article(article)
+
+        # Assert
+        compare(expected.strip(), text)

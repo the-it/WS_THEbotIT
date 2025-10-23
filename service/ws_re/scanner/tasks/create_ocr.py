@@ -20,19 +20,23 @@ class NoRawOCRFound(Exception):
 
 class COCRTask(ReScannerTask):
     _bucket_name = "wiki-bots-re-ocr-prd"
+    # Precompile regex patterns used by _detect_empty_content to avoid recompilation on each call
+    _re_bold_headers = re.compile(r"'''.*?'''", re.DOTALL)
+    _re_seite_template = re.compile(r"\{\{Seite\|[^}]*\}\}")
+    _re_ellipsis_placeholders = re.compile(r"(?:\[\s*(?:\.{3}|…)\s*\]|…+|\.{3,})")
+    _re_square_brackets = re.compile(r"[\[\]]")
+    _re_punct_only_line = re.compile(r"^[\W_]+$")
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         key, secret = get_aws_credentials()
         self.s3_client = boto3.client("s3", aws_access_key_id=key, aws_secret_access_key=secret)
-        # Precompile regex patterns used by _detect_empty_content to avoid recompilation on each call
-        self._re_bold_headers = re.compile(r"'''.*?'''", re.DOTALL)
-        self._re_seite_template = re.compile(r"\{\{Seite\|[^}]*\}\}")
-        self._re_ellipsis_placeholders = re.compile(r"(?:\[\s*(?:\.{3}|…)\s*\]|…+|\.{3,})")
-        self._re_square_brackets = re.compile(r"[\[\]]")
-        self._re_punct_only_line = re.compile(r"^[\W_]+$")
 
     def task(self):
-
+        for article_list in self.re_page.splitted_article_list:
+            article = cast(Article, article_list[0])
+            if article["KORREKTURSTAND"] == "Platzhalter":
+                if self._detect_empty_content(article.text):
+                    article.text = article.text + self._get_text_for_article(article)
 
     def _get_text_for_section(self, issue: str, page: int, start: bool=False, end: bool=False) -> Optional[str]:
         try:
@@ -49,36 +53,69 @@ class COCRTask(ReScannerTask):
                 return match[0].strip()
         return raw_text
 
-    def _detect_empty_content(self) -> bool:
+    def _get_text_for_article(self, article: Article) -> str:
+        """
+        Build the article text by stitching OCR sections across the page range.
+        - issue is derived from article["BAND"].value
+        - pages are from SPALTE_START .. SPALTE_END (inclusive)
+        - first page called with start=True, last page with end=True
+        """
+        # Derive issue identifier
+        issue = str(article["BAND"].value)
+        # Determine page range
+        start_str = str(article["SPALTE_START"].value)
+        end_raw = article["SPALTE_END"].value
+        end_str = "" if end_raw is None else str(end_raw)
+        try:
+            start_page = int(start_str)
+        except (TypeError, ValueError):
+            # If start is invalid, nothing to fetch
+            return ""
+        try:
+            end_page = int(end_str) if end_str else start_page
+        except (TypeError, ValueError):
+            end_page = start_page
+        if end_page < start_page:
+            end_page = start_page
+        parts: list[str] = []
+        for page in range(start_page, end_page + 1):
+            txt = self._get_text_for_section(
+                issue,
+                page,
+                start=(page == start_page),
+                end=(page == end_page)
+            )
+            if txt:
+                parts.append(txt.strip())
+        return "\n\n".join(parts)
+
+    def _detect_empty_content(self, text: str) -> bool:
         """
         Detect if the first article on the current RePage has no meaningful content.
         Consider as empty when only placeholder markers (e.g., "[...]"), page markers
         like {{Seite|...}}, formatting (e.g., bold title) or a small stub (endding on etc. etc.)
         are present.
         """
-        # Prefer structured access to the first article's text
-        content = self.re_page.first_article.text
-        if not content:
+        if not text:
             return True
 
-        cleaned = content
         # Remove bold headers entirely
-        cleaned = self._re_bold_headers.sub("", cleaned)
+        text = self._re_bold_headers.sub("", text)
         # Remove Seite templates completely
-        cleaned = self._re_seite_template.sub("", cleaned)
+        text = self._re_seite_template.sub("", text)
         # Remove common placeholder ellipses variants (bracketed or standalone) in one pass
-        cleaned = self._re_ellipsis_placeholders.sub("", cleaned)
+        text = self._re_ellipsis_placeholders.sub("", text)
         # Remove any remaining brackets that may linger from placeholders
-        cleaned = self._re_square_brackets.sub("", cleaned)
+        text = self._re_square_brackets.sub("", text)
         # Remove empty lines and stray punctuation-only lines
-        lines = [self._re_punct_only_line.sub("", ln.strip()) for ln in cleaned.splitlines()]
-        cleaned = "\n".join([ln for ln in lines if ln]).strip()
+        lines = [self._re_punct_only_line.sub("", ln.strip()) for ln in text.splitlines()]
+        text = "\n".join([ln for ln in lines if ln]).strip()
 
-        if cleaned and cleaned[-9:] == "etc. etc." and len(cleaned) < 200:
+        if text and text[-9:] == "etc. etc." and len(text) < 200:
             return True
 
         # After cleaning, if nothing meaningful remains, it's empty
-        return len(cleaned) == 0
+        return len(text) == 0
 
     @lru_cache(maxsize=1000)
     def get_raw_page(self, page_id: str) -> str:
