@@ -65,7 +65,8 @@ class TestCOCRTask(TestCloudBase):
     @file_data("test_data/create_ocr/test_get_text_for_article.yml")
     def test_get_text_for_article_single_page(self, given, expect):
         # Arrange: upload OCR page and set page/lemma from fixture
-        self.put_page_to_cloud(f"{given['issue']}_{str(given['start_page']).zfill(4)}")
+        for page in range(given["start_page"], given["end_page"] + 1):
+            self.put_page_to_cloud(f"{given['issue']}_{str(page).zfill(4)}")
         page_mock = PageMock()
         page_mock.title_str = f"RE:{given['title']}"
         page_mock.text = "{{REDaten}}{{REAutor|OFF}}"

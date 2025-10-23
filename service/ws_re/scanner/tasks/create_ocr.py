@@ -87,7 +87,7 @@ class COCRTask(ReScannerTask):
             )
             if txt:
                 parts.append(txt.strip())
-        return "\n\n".join(parts)
+        return "\n".join(parts)
 
     def _detect_empty_content(self, text: str) -> bool:
         """
