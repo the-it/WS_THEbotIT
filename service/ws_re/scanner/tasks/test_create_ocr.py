@@ -88,10 +88,14 @@ class TestCOCRTask(TestCloudBase):
     def test_task_appends_ocr_for_rages(self):
         # Arrange: upload OCR page and create a placeholder article for RE:Rages on page 127
         self.put_page_to_cloud("I A,1_0127")
+        self.put_page_to_cloud("I A,1_0267")
         page_mock = PageMock()
         page_mock.title_str = "RE:Rages"
         # Placeholder article: KORREKTURSTAND=Platzhalter triggers OCR append
         page_mock.text = ("{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=128|KORREKTURSTAND=Platzhalter}}"
+                          "'''Rages'''{{REAutor|OFF}}"
+                          "{{REDaten|BAND=I A,1|SPALTE_START=267|SPALTE_END=267"
+                          "|KORREKTURSTAND=Platzhalter|TODESJAHR=2100}}"
                           "'''Rages'''{{REAutor|OFF}}")
         self.task.re_page = RePage(page_mock)
 
@@ -102,3 +106,5 @@ class TestCOCRTask(TestCloudBase):
         expected = ("'''Rages'''\n[[Kategorie:RE:OCR_erstellt]]\n'''Rages''' s. {{Polytonisch|'Pάγα}} ta."
                     "\n{{Seite|128}}\n[[Kategorie:RE:OCR_Seite_nicht_gefunden]]")
         compare(expected, self.task.re_page.first_article.text.strip())
+        expected = "'''Rages'''"
+        compare(expected, self.task.re_page.splitted_article_list[1][0].text.strip())

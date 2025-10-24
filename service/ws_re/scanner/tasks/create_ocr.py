@@ -39,10 +39,11 @@ class COCRTask(ReScannerTask):
             # don't create if there is already a created
             if self.counter > 10 or self._ocr_category in article.text:
                 return True
-            if article["KORREKTURSTAND"].value == "Platzhalter" and self._detect_empty_content(article.text):
-                if ocr := self._get_text_for_article(article):
-                    article.text = article.text + f"\n{ocr}"
-                    self.counter += 1
+            if article["KORREKTURSTAND"].value == "Platzhalter" and article.common_free:
+                if self._detect_empty_content(article.text):
+                    if ocr := self._get_text_for_article(article):
+                        article.text = article.text + f"\n{ocr}"
+                        self.counter += 1
         return True
 
     def _get_text_for_section(self, issue: str, page: int, start: bool = False, end: bool = False) -> Optional[str]:
