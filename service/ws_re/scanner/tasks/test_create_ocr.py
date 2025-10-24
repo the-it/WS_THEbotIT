@@ -1,3 +1,4 @@
+# pylint: disable=protected-access
 from datetime import datetime
 from pathlib import Path
 
@@ -82,3 +83,22 @@ class TestCOCRTask(TestCloudBase):
 
         # Assert
         compare(expect.strip(), text)
+
+
+    def test_task_appends_ocr_for_rages(self):
+        # Arrange: upload OCR page and create a placeholder article for RE:Rages on page 127
+        self.put_page_to_cloud("I A,1_0127")
+        page_mock = PageMock()
+        page_mock.title_str = "RE:Rages"
+        # Placeholder article: KORREKTURSTAND=Platzhalter triggers OCR append
+        page_mock.text = ("{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=128|KORREKTURSTAND=Platzhalter}}"
+                          "'''Rages'''{{REAutor|OFF}}")
+        self.task.re_page = RePage(page_mock)
+
+        # Act: run the task to append OCR to placeholder
+        self.task.task()
+
+        # Assert: the first article's text should now be the OCR section for Rages
+        expected = ("'''Rages'''\n[[Kategorie:RE:OCR_erstellt]]\n'''Rages''' s. {{Polytonisch|'Pάγα}} ta."
+                    "\n{{Seite|128}}\n[[Kategorie:RE:OCR_Seite_nicht_gefunden]]")
+        compare(expected, self.task.re_page.first_article.text.strip())

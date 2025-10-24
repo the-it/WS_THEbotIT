@@ -1,5 +1,4 @@
 import re
-from datetime import datetime
 from functools import lru_cache
 from typing import cast, Optional
 
@@ -7,8 +6,7 @@ import boto3
 import pywikibot
 from botocore.exceptions import ClientError
 
-from service.ws_re.register.lemma import Lemma
-from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
+from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
 from tools.bots.base import get_aws_credentials
 from tools.bots.logger import WikiLogger
@@ -19,13 +17,17 @@ class NoRawOCRFound(Exception):
 
 
 class COCRTask(ReScannerTask):
+    counter = 0
     _bucket_name = "wiki-bots-re-ocr-prd"
+    _ocr_category = "RE:OCR_erstellt"
+    _error_category = "RE:OCR_Seite_nicht_gefunden"
     # Precompile regex patterns used by _detect_empty_content to avoid recompilation on each call
     _re_bold_headers = re.compile(r"'''.*?'''", re.DOTALL)
     _re_seite_template = re.compile(r"\{\{Seite\|[^}]*\}\}")
     _re_ellipsis_placeholders = re.compile(r"(?:\[\s*(?:\.{3}|…)\s*\]|…+|\.{3,})")
     _re_square_brackets = re.compile(r"[\[\]]")
     _re_punct_only_line = re.compile(r"^[\W_]+$")
+
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         key, secret = get_aws_credentials()
@@ -34,11 +36,16 @@ class COCRTask(ReScannerTask):
     def task(self):
         for article_list in self.re_page.splitted_article_list:
             article = cast(Article, article_list[0])
-            if article["KORREKTURSTAND"] == "Platzhalter":
-                if self._detect_empty_content(article.text):
-                    article.text = article.text + self._get_text_for_article(article)
+            # don't create if there is already a created
+            if self.counter > 10 or self._ocr_category in article.text:
+                return True
+            if article["KORREKTURSTAND"].value == "Platzhalter" and self._detect_empty_content(article.text):
+                if ocr := self._get_text_for_article(article):
+                    article.text = article.text + f"\n{ocr}"
+                    self.counter += 1
+        return True
 
-    def _get_text_for_section(self, issue: str, page: int, start: bool=False, end: bool=False) -> Optional[str]:
+    def _get_text_for_section(self, issue: str, page: int, start: bool = False, end: bool = False) -> Optional[str]:
         try:
             raw_text = self.get_raw_page(f"{issue}_{str(page).zfill(4)}").replace("\ufeff", "")
         except NoRawOCRFound:
@@ -46,11 +53,11 @@ class COCRTask(ReScannerTask):
         if start:
             match = re.findall(rf"== {self.re_page.lemma} ==(.*?)(?:\n==|$)", raw_text, re.DOTALL)
             if match:
-                return match[0].strip()
+                return str(match[0]).strip()
         if end:
-            match = re.findall(rf"^(.*?)(?:\n==|$)", raw_text, re.DOTALL)
+            match = re.findall(r"^(.*?)(?:\n==|$)", raw_text, re.DOTALL)
             if match:
-                return match[0].strip()
+                return str(match[0]).strip()
         return raw_text
 
     def _get_text_for_article(self, article: Article) -> str:
@@ -66,15 +73,8 @@ class COCRTask(ReScannerTask):
         start_str = str(article["SPALTE_START"].value)
         end_raw = article["SPALTE_END"].value
         end_str = "" if end_raw is None else str(end_raw)
-        try:
-            start_page = int(start_str)
-        except (TypeError, ValueError):
-            # If start is invalid, nothing to fetch
-            return ""
-        try:
-            end_page = int(end_str) if end_str else start_page
-        except (TypeError, ValueError):
-            end_page = start_page
+        start_page = int(start_str)
+        end_page = int(end_str) if end_str else start_page
         parts: list[str] = []
         for page in range(start_page, end_page + 1):
             txt = self._get_text_for_section(
@@ -83,14 +83,16 @@ class COCRTask(ReScannerTask):
                 start=(page == start_page),
                 end=(page == end_page)
             )
+            if page != start_page:
+                if page % 2 == 1:
+                    parts.append(f"{{{{Seite|{page}||{{{{REEL|{issue}|{page}}}}}}}}}")
+                else:
+                    parts.append(f"{{{{Seite|{page}}}}}")
             if txt:
-                if page != start_page:
-                    if page % 2 == 1:
-                        parts.append(f"{{{{Seite|{page}||{{{{REEL|{issue}|{page}}}}}}}}}")
-                    else:
-                        parts.append(f"{{{{Seite|{page}}}}}")
                 parts.append(txt.strip())
-        return "\n".join(parts)
+            else:
+                parts.append(f"[[Kategorie:{self._error_category}]]")
+        return f"[[Kategorie:{self._ocr_category}]]\n" + "\n".join(parts)
 
     def _detect_empty_content(self, text: str) -> bool:
         """
@@ -99,9 +101,6 @@ class COCRTask(ReScannerTask):
         like {{Seite|...}}, formatting (e.g., bold title) or a small stub (endding on etc. etc.)
         are present.
         """
-        if not text:
-            return True
-
         # Remove bold headers entirely
         text = self._re_bold_headers.sub("", text)
         # Remove Seite templates completely
@@ -127,9 +126,5 @@ class COCRTask(ReScannerTask):
             return response["Body"].read().decode("utf-8")
         except ClientError as ex:
             if ex.response['Error']['Code'] == 'NoSuchKey':
-                raise NoRawOCRFound(f"Page_ID {page_id} not found in OCR bucket")
-            else:
-                raise
-
-
-
+                raise NoRawOCRFound(f'Page_ID {page_id} not found in OCR bucket') from ex
+            raise
