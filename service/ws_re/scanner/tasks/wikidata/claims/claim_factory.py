@@ -17,8 +17,6 @@ from tools.bots.logger import WikiLogger
 
 
 class ClaimFactory:
-    _authors = Authors()
-    _volumes = Volumes()
     ITEM_RE = "Q1138524"
     _IMPORTED_FROM_WIKISOURCE = SnakParameter(property_str="P143",
                                               target_type="wikibase-item",
@@ -30,6 +28,8 @@ class ClaimFactory:
         self.wikidata: pywikibot.site.DataSite = self.wikisource.data_repository()
         self.re_page = re_page
         self.logger = logger
+        self._authors = Authors()
+        self._volumes = Volumes()
         self._current_year = datetime.now().year
 
     def _get_claim_json(self) -> List[JsonClaimDict]:

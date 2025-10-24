@@ -1,0 +1,17 @@
+fresh_from_importer:
+  given: |
+    '''Herse. 1)'''
+    [...][…]
+    …...
+    {{Seite|1147||{{REIA|VIII,1|1147}}}}
+    {{Seite|1148}}
+    {{Seite|1149||{{REIA|VIII,1|1149}}}}
+  expect: True
+small_example_text:
+  given: |
+    '''Herse. 1)''', Something something not too much etc. etc.
+  expect: True
+text_already_provided:
+  given: |
+    '''27)''' Aelius  (a. O.) vhat: etc. etc. <!-- weder -->
+  expect: False

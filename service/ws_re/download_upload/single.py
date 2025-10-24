@@ -66,7 +66,7 @@ if __name__ == "__main__":
     #     "S VI", "S VII", "S VIII", "S IX", "S X",
     #     "S XI", "S XII", "S XIII", "S XIV", "S XV",
     # ]
-    issues = ["X,2"]
+    issues = ["I A,1", "I A,2",]
     for string in issues:
         volume = volumes[string]
         if volume.start_column and volume.end_column:

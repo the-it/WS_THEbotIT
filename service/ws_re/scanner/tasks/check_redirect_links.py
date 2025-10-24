@@ -26,11 +26,11 @@ class CHRETask(ReScannerTask):
         )
 
     def task(self) -> bool:
-        self.iterate_throw_redirects(repair=True)
-        self.iterate_throw_redirects(report=True)
+        self.iterate_through_redirects(repair=True)
+        self.iterate_through_redirects(report=True)
         return True
 
-    def iterate_throw_redirects(self, repair: bool = False, report: bool = False):
+    def iterate_through_redirects(self, repair: bool = False, report: bool = False):
         for redirect in self.re_page.get_redirects():
             filtered_list = self.filter_link_list(self.get_backlinks(redirect))
             if filtered_list:
