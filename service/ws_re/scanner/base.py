@@ -43,7 +43,7 @@ class ReScanner(CloudBot):
             COPDTask,  # removes properties after article is in common domain and corrects the birth and death date
             CARETask,  # put hard redirects to lemma in a category
             CHRETask,  # check if backlinks go over redirect pages
-            COCRTask,  # create OCR for empty articles
+            # COCRTask,  # create OCR for empty articles
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
             WAORTask,  # look for Lemma where the content article isn't the first on the page
