@@ -94,7 +94,9 @@ class TestCOCRTask(TestCloudBase):
         # Placeholder article: KORREKTURSTAND=Platzhalter triggers OCR append
         page_mock.text = ("{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=128|KORREKTURSTAND=Platzhalter}}"
                           "'''Rages'''{{REAutor|OFF}}"
-                          "{{REDaten|BAND=I A,1|SPALTE_START=267|SPALTE_END=267"
+                          "{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=OFF|KORREKTURSTAND=Platzhalter}}"
+                          "'''Rages'''{{REAutor|OFF}}"
+                          "{{REDaten|BAND=I A,1|SPALTE_START=267|SPALTE_END=OFF"
                           "|KORREKTURSTAND=Platzhalter|TODESJAHR=2100}}"
                           "'''Rages'''{{REAutor|OFF}}")
         self.task.re_page = RePage(page_mock)
@@ -107,4 +109,4 @@ class TestCOCRTask(TestCloudBase):
                     "\n{{Seite|128}}\n[[Kategorie:RE:OCR_Seite_nicht_gefunden]]")
         compare(expected, self.task.re_page.first_article.text.strip())
         expected = "'''Rages'''"
-        compare(expected, self.task.re_page.splitted_article_list[1][0].text.strip())
+        compare(expected, self.task.re_page.splitted_article_list[2][0].text.strip())

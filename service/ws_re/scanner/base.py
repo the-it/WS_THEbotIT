@@ -11,6 +11,7 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.categorize_redirects import CARETask
 from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
 from service.ws_re.scanner.tasks.correct_pd_dates import COPDTask
+from service.ws_re.scanner.tasks.create_ocr import COCRTask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
@@ -29,7 +30,7 @@ class ReScanner(CloudBot):
     def __init__(self, wiki: pywikibot.Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(minutes=30)
+        self.timeout = timedelta(hours=8)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
         # Wikidata and the Registers.
@@ -42,6 +43,7 @@ class ReScanner(CloudBot):
             COPDTask,  # removes properties after article is in common domain and corrects the birth and death date
             CARETask,  # put hard redirects to lemma in a category
             CHRETask,  # check if backlinks go over redirect pages
+            COCRTask,  # create OCR for empty articles
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
             WAORTask,  # look for Lemma where the content article isn't the first on the page

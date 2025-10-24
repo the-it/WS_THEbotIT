@@ -8,7 +8,7 @@ from botocore.exceptions import ClientError
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
-from tools.bots.base import get_aws_credentials
+from tools.bots.base import get_aws_credentials, is_aws_test_env
 from tools.bots.logger import WikiLogger
 
 
@@ -18,7 +18,7 @@ class NoRawOCRFound(Exception):
 
 class COCRTask(ReScannerTask):
     counter = 0
-    _bucket_name = "wiki-bots-re-ocr-prd"
+    _bucket_name = "wiki-bots-re-ocr-tst" if is_aws_test_env() else "wiki-bots-re-ocr-prd"
     _ocr_category = "RE:OCR_erstellt"
     _error_category = "RE:OCR_Seite_nicht_gefunden"
     # Precompile regex patterns used by _detect_empty_content to avoid recompilation on each call
@@ -73,7 +73,7 @@ class COCRTask(ReScannerTask):
         # Determine page range
         start_str = str(article["SPALTE_START"].value)
         end_raw = article["SPALTE_END"].value
-        end_str = "" if end_raw is None else str(end_raw)
+        end_str = "" if (end_raw is None) or (end_raw == "OFF") else str(end_raw)
         start_page = int(start_str)
         end_page = int(end_str) if end_str else start_page
         parts: list[str] = []
