@@ -40,7 +40,7 @@ class COCRTask(ReScannerTask):
 
     def _get_text_for_section(self, issue: str, page: int, start: bool=False, end: bool=False) -> Optional[str]:
         try:
-            raw_text = self.get_raw_page(f"{issue}_{str(page).zfill(4)}")
+            raw_text = self.get_raw_page(f"{issue}_{str(page).zfill(4)}").replace("\ufeff", "")
         except NoRawOCRFound:
             return None
         if start:
@@ -75,8 +75,6 @@ class COCRTask(ReScannerTask):
             end_page = int(end_str) if end_str else start_page
         except (TypeError, ValueError):
             end_page = start_page
-        if end_page < start_page:
-            end_page = start_page
         parts: list[str] = []
         for page in range(start_page, end_page + 1):
             txt = self._get_text_for_section(
@@ -86,6 +84,11 @@ class COCRTask(ReScannerTask):
                 end=(page == end_page)
             )
             if txt:
+                if page != start_page:
+                    if page % 2 == 1:
+                        parts.append(f"{{{{Seite|{page}||{{{{REEL|{issue}|{page}}}}}}}}}")
+                    else:
+                        parts.append(f"{{{{Seite|{page}}}}}")
                 parts.append(txt.strip())
         return "\n".join(parts)
 

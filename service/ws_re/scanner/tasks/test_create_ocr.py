@@ -45,7 +45,7 @@ class TestCOCRTask(TestCloudBase):
     def test_get_full_text_of_page(self):
         self.put_page_to_cloud("I A,1_0127")
         text = self.task._get_text_for_section("I A,1", 127, start=False, end=False)
-        self.assertTrue(text.startswith("\ufeff127 {{Polytonisch|sup€λsupΡάγαεα}}"))
+        self.assertTrue(text.startswith("127 {{Polytonisch|sup€λsupΡάγαεα}}"))
         self.assertTrue(text.endswith("CIE 109f. 163. 1228ff.), sowie den aus dem"))
 
     @file_data("test_data/create_ocr/test_get_texts.yml")
