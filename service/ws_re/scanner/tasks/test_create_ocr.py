@@ -14,7 +14,7 @@ from tools.bots.logger import WikiLogger
 from tools.bots.test_base import TestCloudBase
 from tools.test import PageMock
 
-OCR_BUCKET_NAME = "wiki-bots-re-ocr-tst" if is_aws_test_env() else "wiki-bots-re-ocr-prd"
+OCR_BUCKET_NAME = COCRTask.bucket_name
 
 
 @ddt

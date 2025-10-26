@@ -18,7 +18,7 @@ class NoRawOCRFound(Exception):
 
 class COCRTask(ReScannerTask):
     counter = 0
-    _bucket_name = "wiki-bots-re-ocr-tst" if is_aws_test_env() else "wiki-bots-re-ocr-prd"
+    bucket_name = "wiki-bots-re-ocr-tst" if is_aws_test_env() else "wiki-bots-re-ocr-prd"
     _ocr_category = "RE:OCR_erstellt"
     _error_category = "RE:OCR_Seite_nicht_gefunden"
     _cut_category = "RE:OCR_nicht_zugeschnitten"
@@ -125,7 +125,7 @@ class COCRTask(ReScannerTask):
     @lru_cache(maxsize=1000)
     def get_raw_page(self, page_id: str) -> str:
         try:
-            response = self.s3_client.get_object(Bucket=self._bucket_name, Key=f"{page_id}.txt")
+            response = self.s3_client.get_object(Bucket=self.bucket_name, Key=f"{page_id}.txt")
             return response["Body"].read().decode("utf-8")
         except ClientError as ex:
             if ex.response['Error']['Code'] == 'NoSuchKey':
