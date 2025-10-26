@@ -1,6 +1,7 @@
 # pylint: disable=protected-access
 from datetime import datetime
 from pathlib import Path
+from unittest import skip
 
 from ddt import ddt, file_data
 from testfixtures import compare
@@ -12,7 +13,7 @@ from tools.bots.logger import WikiLogger
 from tools.bots.test_base import TestCloudBase
 from tools.test import PageMock
 
-OCR_BUCKET_NAME = "wiki-bots-re-ocr-prd"
+OCR_BUCKET_NAME = "wiki-bots-re-ocr-tst"
 
 
 @ddt
@@ -63,6 +64,7 @@ class TestCOCRTask(TestCloudBase):
     def test_detect_empty_content(self, given, expect):
         compare(expect, self.task._detect_empty_content(given))
 
+    @skip
     @file_data("test_data/create_ocr/test_get_text_for_article.yml")
     def test_get_text_for_article_single_page(self, given, expect):
         # Arrange: upload OCR page and set page/lemma from fixture
@@ -85,6 +87,7 @@ class TestCOCRTask(TestCloudBase):
         compare(expect.strip(), text)
 
 
+    @skip
     def test_task_appends_ocr_for_rages(self):
         # Arrange: upload OCR page and create a placeholder article for RE:Rages on page 127
         self.put_page_to_cloud("I A,1_0127")

@@ -21,6 +21,7 @@ class COCRTask(ReScannerTask):
     _bucket_name = "wiki-bots-re-ocr-tst" if is_aws_test_env() else "wiki-bots-re-ocr-prd"
     _ocr_category = "RE:OCR_erstellt"
     _error_category = "RE:OCR_Seite_nicht_gefunden"
+    _cut_category = "RE:OCR_nicht_zugeschnitten"
     # Precompile regex patterns used by _detect_empty_content to avoid recompilation on each call
     _re_bold_headers = re.compile(r"'''.*?'''", re.DOTALL)
     _re_seite_template = re.compile(r"\{\{Seite\|[^}]*\}\}")
@@ -76,19 +77,20 @@ class COCRTask(ReScannerTask):
         end_str = "" if (end_raw is None) or (end_raw == "OFF") else str(end_raw)
         start_page = int(start_str)
         end_page = int(end_str) if end_str else start_page
-        parts: list[str] = []
+        # create only articles with more than 2 pages
+        if end_page < start_page + 2:
+            return ""
+        parts: list[str] = [f"[[Kategorie:{self._cut_category}]]"]
         for page in range(start_page, end_page + 1):
             txt = self._get_text_for_section(
                 issue,
                 page,
-                start=(page == start_page),
-                end=(page == end_page)
+                # only full pages for the time being
+                # start=(page == start_page),
+                # end=(page == end_page)
             )
             if page != start_page:
-                if page % 2 == 1:
-                    parts.append(f"{{{{Seite|{page}||{{{{REEL|{issue}|{page}}}}}}}}}")
-                else:
-                    parts.append(f"{{{{Seite|{page}}}}}")
+                parts.append(f"{{{{Seite|{page}||{{{{REEL|{issue}|{page}}}}}}}}}")
             if txt:
                 parts.append(txt.strip())
             else:
