@@ -38,7 +38,7 @@ class COCRTask(ReScannerTask):
         for article_list in self.re_page.splitted_article_list:
             article = cast(Article, article_list[0])
             # don't create if there is already a created
-            if self.counter > 10 or self._ocr_category in article.text:
+            if self.counter > 5 or self._ocr_category in article.text:
                 return True
             if article["KORREKTURSTAND"].value == "Platzhalter" and article.common_free:
                 if self._detect_empty_content(article.text):
