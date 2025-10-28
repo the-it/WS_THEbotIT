@@ -65,11 +65,11 @@ class ReImporter(CloudBot):
                                                 "\n[[Kategorie:RE:Kurztext überprüfen]]")
                                 save_if_changed(lemma, article_text, "Automatisch generiert")
                                 create_count += 1
-                                if create_count >= self.max_create:
-                                    self.logger.info(
-                                        f"Created {create_count} articles. Last article was [[RE:{article.lemma}]]"
-                                        f" in {register.volume.name}")
-                                    break
+                if create_count >= self.max_create:
+                    self.logger.info(
+                        f"Created {create_count} articles. Last article was [[RE:{article.lemma}]]"
+                        f" in {register.volume.name}")
+                    break
         return True
 
     def get_text(self, band: str, article: str) -> Optional[str]:
