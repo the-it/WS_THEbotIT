@@ -85,6 +85,7 @@ class ReImporter(CloudBot):
         "Hans von Arnim": "v. Arnim.",
         "Paul Friedländer": "P. Friedländer.",
         "Felix Jacoby": "F. Jacoby.",
+        "Hans von Geisau": "v. Geisau.",
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
