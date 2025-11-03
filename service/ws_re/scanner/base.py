@@ -19,6 +19,7 @@ from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.set_platzhalter import SEPLTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
+from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
 from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
@@ -42,6 +43,7 @@ class ReScanner(CloudBot):
             REAUTask,  # check for integrity article must have an author, or it is a soft redirect
             COPDTask,  # removes properties after article is in common domain and corrects the birth and death date
             CARETask,  # put hard redirects to lemma in a category
+            VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
             CHRETask,  # check if backlinks go over redirect pages
             COCRTask,  # create OCR for empty articles
             DATATask,  # write out to Wikidata
