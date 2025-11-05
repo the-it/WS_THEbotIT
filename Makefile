@@ -85,8 +85,6 @@ coverage : clean-coverage
 	venv/bin/nose2 -v --with-coverage && \
 	coverage xml
 
-
-
 coverage-html : wikitest
 	echo "######### COVERAGE HTML ########"
 	coverage html -d .coverage_html
@@ -101,7 +99,7 @@ codecov :
 	codecov
 
 #############
-### STUFF ###
+### TOOLS ###
 #############
 gource :
 	echo "############ GOURCE ############"
@@ -109,7 +107,11 @@ gource :
 
 cloc :
 	echo "########## COUNT LOC ###########"
-	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json .
+	cloc --exclude-dir=venv,__pycache__ --exclude-ext=xml,json,html,txt,png .
+
+clean_data :
+	echo "########## CLEAN DATA ###########"
+	rm -rf service/ws_re/register/data
 
 ############
 ### OCRS ###
