@@ -47,3 +47,12 @@ class TestAuthor(TestCase):
 
         author = Author("Test Name", {"death": 1950, "birth": 1900})
         compare(2021, author.year_public_domain)
+
+    def test_update_bug_remove_death_date(self):
+        author = Author("Test Name", {"death": 1950, "birth": 1900, "ws_lemma": "Tada_lemma"})
+        author.update_internal_dict({"birth": 1950})
+        compare(None, author.death)
+        compare(None, author.ws_lemma)
+        author.update_internal_dict({"birth": 1950})
+        compare(None, author.death)
+        compare(None, author.ws_lemma)

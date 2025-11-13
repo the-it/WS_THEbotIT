@@ -61,6 +61,20 @@ class Author:
         return self._name
 
     def update_internal_dict(self, author_dict: AuthorDict):
+        for key in  (
+            "birth",
+            "death",
+            "first_name",
+            "last_name",
+            "wp_lemma",
+            "ws_lemma",
+            "redirect",
+        ):
+            if key not in author_dict:
+                # Remove death information if present
+                self._dict.pop(key, None)
+        # Apply the incoming updates (ignore keys explicitly set to None by not filtering them out here,
+        # so that future explicit clears via death=None remain possible if used elsewhere)
         self._dict.update(author_dict)
 
     def to_dict(self) -> AuthorDict:
