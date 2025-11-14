@@ -61,7 +61,7 @@ class Author:
         return self._name
 
     def update_internal_dict(self, author_dict: AuthorDict):
-        for key in  (
+        for key in (
             "birth",
             "death",
             "first_name",
