@@ -273,3 +273,14 @@ nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
         author_mapping = self.crawler.get_authors(author_table)
         expect = {"Paul Groebe": {"birth": 2222, "death": 3333, "first_name": "Paul", "last_name": "Groebe"}}
         compare(expect, author_mapping)
+
+    def test_bug_tolde(self):
+        author = """|-
+|Tolde, Eva
+| || 2000
+|XXIII,1
+|something"""
+        author_table = self.table_head + author + self.table_bottom
+        author_mapping = self.crawler.get_authors(author_table)
+        expect = {"Eva Tolde": {"death": 2000, "first_name": "Eva", "last_name": "Tolde"}}
+        compare(expect, author_mapping)

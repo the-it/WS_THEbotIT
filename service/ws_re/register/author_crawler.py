@@ -108,9 +108,10 @@ class AuthorCrawler:
 
     @staticmethod
     def _extract_years(years: str) -> Tuple[Optional[int], Optional[int]]:
-        hit = re.search(r"(?<!\")(\d{4}) ?\|\| ?(\d{4})?", years)
+        hit = re.search(r"(?<!\")(\d{4})? ?\|\| ?(\d{4})?", years)
         if hit:
-            return int(hit.group(1)), int(hit.group(2)) if hit.group(2) else None
+            return (int(hit.group(1)) if hit.group(1) else None,
+                    int(hit.group(2)) if hit.group(2) else None)
         return None, None
 
     @staticmethod
