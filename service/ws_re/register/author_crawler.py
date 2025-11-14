@@ -108,10 +108,48 @@ class AuthorCrawler:
 
     @staticmethod
     def _extract_years(years: str) -> Tuple[Optional[int], Optional[int]]:
-        hit = re.search(r"(?<!\")(\d{4})? ?\|\| ?(\d{4})?", years)
+        # Keep it regex-based and simple; extend to handle optional "/YY" or "/YYYY" in both birth and death parts
+        # Pattern groups:
+        #  - birth1: 4-digit birth year (optional)
+        #  - birth2: optional trailing 2 or 4 digits after a slash (e.g., 1903/04 or 1903/1904)
+        #  - death1: 4-digit death year (optional)
+        #  - death2: optional trailing 2 or 4 digits after a slash (e.g., 1991/92 or 1991/1992)
+        hit = re.search(
+            (
+                r'(?<!")'               # ignore years inside data-sort-value="..."
+                r'(?P<birth1>\d{4})?'   # main birth year
+                r'(?:\s*/\s*(?P<birth2>\d{2,4}))?'  # optional birth suffix after slash
+                r'\s*\|\|\s*'        # separator between birth and death columns
+                r'(?P<death1>\d{4})?'   # main death year
+                r'(?:\s*/\s*(?P<death2>\d{2,4}))?'  # optional death suffix after slash
+            ),
+            years,
+        )
         if hit:
-            return (int(hit.group(1)) if hit.group(1) else None,
-                    int(hit.group(2)) if hit.group(2) else None)
+            # Birth processing
+            birth_main = hit.group('birth1')
+            birth_suffix = hit.group('birth2')
+            birth: Optional[int]
+            if birth_suffix:
+                if len(birth_suffix) == 2 and birth_main and len(birth_main) == 4:
+                    birth = int(birth_main[:2] + birth_suffix)
+                elif len(birth_suffix) == 4:
+                    birth = int(birth_suffix)
+            else:
+                birth = int(birth_main) if birth_main else None
+
+            # Death processing
+            death_main = hit.group('death1')
+            death_suffix = hit.group('death2')
+            if death_suffix:
+                # Case like 1991/92 or 1991/1992 -> keep the second year; if 2 digits, keep the century of the first
+                if len(death_suffix) == 2 and death_main and len(death_main) == 4:
+                    death = int(death_main[:2] + death_suffix)
+                else:
+                    death = int(death_suffix)
+            else:
+                death = int(death_main) if death_main else None
+            return birth, death
         return None, None
 
     @staticmethod
