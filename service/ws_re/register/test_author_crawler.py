@@ -285,7 +285,7 @@ nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
         expect = {"Eva Tolde": {"death": 2000, "first_name": "Eva", "last_name": "Tolde"}}
         compare(expect, author_mapping)
 
-    def test_bug_söder(self):
+    def test_bug_soeder(self):
         author = """|-
 |Söder, Rosa
 |1903/04 ||  1991/92
@@ -305,4 +305,3 @@ nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
         author_table = self.table_head + author_2 + self.table_bottom
         author_mapping = self.crawler.get_authors(author_table)
         compare(expect, author_mapping)
-

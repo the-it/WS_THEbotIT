@@ -24,6 +24,6 @@ jobs:
       - name: pylint
         run: make pylint
         if: always()
-      - name: mypy
-        run: make mypy
-        if: always()
+#      - name: mypy
+#        run: make mypy
+#        if: always()

@@ -108,7 +108,7 @@ class AuthorCrawler:
 
     @staticmethod
     def _extract_years(years: str) -> Tuple[Optional[int], Optional[int]]:
-        # Keep it regex-based and simple; extend to handle optional "/YY" or "/YYYY" in both birth and death parts
+        # Dates don't have to be present. If alternatives are present like 1991/92 the second alternative counts.
         # Pattern groups:
         #  - birth1: 4-digit birth year (optional)
         #  - birth2: optional trailing 2 or 4 digits after a slash (e.g., 1903/04 or 1903/1904)
