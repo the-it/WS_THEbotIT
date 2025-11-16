@@ -89,6 +89,7 @@ class ReImporter(CloudBot):
         "Paul Schoch-Bodmer": "Schoch.",
         "Max Fluß": "Fluss.",
         "August Burckhardt-Brandenberg": "Burckhardt.",
+        "Johannes Geffcken": "Geffcken.",
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
