@@ -57,3 +57,16 @@ something
         re_page = RePage(self.page_mock)
         task.run(re_page)
         compare(False, re_page.first_article["KEINE_SCHÖPFUNGSHÖHE"].value)
+
+    def test_wasnt_running(self):
+        task = TOBSTask(None, self.logger)
+        self.page_mock.text = """{{REDaten
+|BAND=XII,1
+|KORREKTURSTAND=korrigiert
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+}}
+something
+{{REAutor|Obst.}}"""
+        re_page = RePage(self.page_mock)
+        task.run(re_page)
+        compare(True, re_page.first_article["KEINE_SCHÖPFUNGSHÖHE"].value)

@@ -20,6 +20,6 @@ class TOBSTask(ReScannerTask):
             if isinstance(article, Article):
                 author_list = self.authors.get_author_by_mapping(article.author.identification, article["BAND"].value)
                 if author_list and "Ernst Obst" == author_list[0].name:
-                    if article["KORREKTURSTAND"].value in ["Fertig", "Korrigiert"]:
+                    if article["KORREKTURSTAND"].value in ["Fertig", "Korrigiert", "fertig", "korrigiert"]:
                         article["KEINE_SCHÖPFUNGSHÖHE"].value = True
         return True
