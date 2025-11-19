@@ -126,7 +126,7 @@ class TestAuthorCrawler(TestCase):
                   'Beer-Moritz.': ['Georg Beer', 'Bernhard Moritz'],
                   'Bürchner und Philippson.': ['Ludwig Bürchner', 'Alfred Philippson'],
                   'Reinhard Büll. Ernst Moser.': ['Reinhard Büll', 'Ernst Moser']}
-        self.crawler.get_compound_mapping(test_str, Authors())
+        compare(expect, self.crawler.get_compound_mapping(test_str, Authors()))
 
     def test_extract_author_infos(self):
         compare(("Klaus", "Alpers", ""), self.crawler._extract_author_infos("|Alpers, Klaus"))

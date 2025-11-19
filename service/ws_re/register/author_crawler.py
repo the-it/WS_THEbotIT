@@ -55,9 +55,9 @@ class AuthorCrawler:
         raise ValueError(f"{single_mapping} not compliant to regex")
 
     @classmethod
-    def get_compound_mapping(cls, mapping: str, authors: Authors) -> CrawlerDict:
+    def get_compound_mapping(cls, weiche: str, authors: Authors) -> CrawlerDict:
         mapping_dict = {}
-        for mapping in re.finditer(r"\| ([^=]*)=(.+)\n", mapping):
+        for mapping in re.finditer(r"\| ([^=]*)=(.+)\n", weiche):
             authors_list = []
             for invoke in re.finditer(r"\{\{REAutor/invokeModule\|([^.]+\.)", mapping.group(2)):
                 author = authors.get_author_by_mapping(invoke.group(1), "")
