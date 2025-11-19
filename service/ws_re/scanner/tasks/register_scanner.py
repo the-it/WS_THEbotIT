@@ -38,7 +38,7 @@ class SCANTask(ReScannerTask):
                 self.logger.info(f"{self._strategies[strategy]}")
         self.logger.info("Fetch changes for the authors.")
         authors = self.registers.authors
-        authors.set_mappings(AuthorCrawler.get_author_mapping(self.wiki))
+        authors.set_mappings(AuthorCrawler.get_author_mapping(self.wiki, authors))
         authors.set_author(AuthorCrawler.process_author_infos(self.wiki))
         self.logger.info("Persist the author data.")
         authors.persist()
