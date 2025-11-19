@@ -4,6 +4,7 @@ from typing import List, Dict, Tuple, Optional
 from pywikibot import Site
 
 from service.ws_re.register._typing import AuthorDict, CrawlerDict
+from service.ws_re.register.authors import Authors
 from tools import fetch_text_from_wiki_site
 
 TRANS_DICT = str.maketrans({"[": "", "]": "", "'": ""})
@@ -52,6 +53,19 @@ class AuthorCrawler:
                     sub_dict["*"] = sub_mapping.strip().strip("\"")
             return {hit.group(1): sub_dict}
         raise ValueError(f"{single_mapping} not compliant to regex")
+
+    @classmethod
+    def get_compound_mapping(cls, weiche: str, authors: Authors) -> CrawlerDict:
+        mapping_dict = {}
+        for mapping in re.finditer(r"\| ([^=]*)=(.+)\n", weiche):
+            authors_list = []
+            for invoke in re.finditer(r"\{\{REAutor/invokeModule\|([^.]+\.)", mapping.group(2)):
+                author = authors.get_author_by_mapping(invoke.group(1), "")
+                if author:
+                    authors_list.append(author[0].name)
+            if authors_list:
+                mapping_dict[mapping.group(1)] = authors_list
+        return mapping_dict
 
     @classmethod
     def get_authors(cls, text: str) -> Dict[str, AuthorDict]:
@@ -189,6 +203,9 @@ class AuthorCrawler:
         return cls.get_authors(text)
 
     @classmethod
-    def get_author_mapping(cls, wiki: Site) -> CrawlerDict:
+    def get_author_mapping(cls, wiki: Site, authors: Authors) -> CrawlerDict:
         text = fetch_text_from_wiki_site(wiki, "Modul:RE/Autoren")
-        return cls.get_mapping(text)
+        mapping = cls.get_mapping(text)
+        text = fetch_text_from_wiki_site(wiki, "Vorlage:REAutor/Weiche")
+        mapping.update(cls.get_compound_mapping(text, authors))
+        return mapping

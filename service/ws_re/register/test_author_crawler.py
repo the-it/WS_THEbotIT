@@ -4,6 +4,7 @@ from unittest.case import TestCase
 from testfixtures import compare
 
 from service.ws_re.register.author_crawler import AuthorCrawler
+from service.ws_re.register.authors import Authors
 
 
 class TestAuthorCrawler(TestCase):
@@ -107,6 +108,25 @@ class TestAuthorCrawler(TestCase):
                               "R": "Albert Wünsch"},
                   "Zwicker.": "Johannes Zwicker"}
         compare(expect, self.crawler.get_mapping(test_str))
+
+    def test_get_compound_mapping(self):
+        test_str = """<includeonly><nowiki>[</nowiki>{{#switch: {{{1}}}
+ | ?=?[[Kategorie:RE:Autor:Unbekannt]]
+
+ | Beer-Honigmann.={{REAutor/invokeModule|Beer.||Beer}}-{{REAutor/invokeModule|Honigmann.}}
+
+ | Beer-Moritz.={{REAutor/invokeModule|Beer.||Beer}}-{{REAutor/invokeModule|Moritz.}}
+
+ | Reinhard Büll. Ernst Moser.={{REAutor/invokeModule|Reinhard Büll.}} {{REAutor/invokeModule|Ernst Moser.}}
+
+ | Bürchner und Philippson.={{REAutor/invokeModule|Bürchner.|Bürchner}} und {{REAutor/invokeModule|Philippson.}}
+
+"""
+        expect = {'Beer-Honigmann.': ['Georg Beer', 'Ernst Honigmann'],
+                  'Beer-Moritz.': ['Georg Beer', 'Bernhard Moritz'],
+                  'Bürchner und Philippson.': ['Ludwig Bürchner', 'Alfred Philippson'],
+                  'Reinhard Büll. Ernst Moser.': ['Reinhard Büll', 'Ernst Moser']}
+        compare(expect, self.crawler.get_compound_mapping(test_str, Authors()))
 
     def test_extract_author_infos(self):
         compare(("Klaus", "Alpers", ""), self.crawler._extract_author_infos("|Alpers, Klaus"))
