@@ -17,13 +17,13 @@ class TestCOPDTask(TaskTestCase):
 |BAND=XII,1
 |KEINE_SCHÖPFUNGSHÖHE=ON
 |TODESJAHR=
-|GEBURTSJAHR=1882
+|GEBURTSJAHR=1878
 }}
 something
-{{REAutor|Obst.}}"""
+{{REAutor|Adler.}}"""
         re_page = RePage(self.page_mock)
         article_list = re_page.splitted_article_list[0]
-        compare(Years(None, 1944, 2015), self.task.get_max_pd_year(article_list))
+        compare(Years(None, 1946, 2017), self.task.get_max_pd_year(article_list))
 
     def test_get_pd_birth(self):
         self.page_mock.text = """{{REDaten
@@ -250,10 +250,10 @@ TEXT
 |BAND=XIII,2
 |KEINE_SCHÖPFUNGSHÖHE=ON
 |TODESJAHR=
-|GEBURTSJAHR=1882
+|GEBURTSJAHR=1878
 }}
 blub
-{{REAutor|Obst.}}
+{{REAutor|Adler.}}
 {{REDaten
 |BAND=XII,1
 |KEINE_SCHÖPFUNGSHÖHE=ON
@@ -285,7 +285,7 @@ something
 |VERWEIS=OFF
 }}
 blub
-{{REAutor|Obst.}}
+{{REAutor|Adler.}}
 {{REDaten
 |BAND=XII,1
 |SPALTE_START=
