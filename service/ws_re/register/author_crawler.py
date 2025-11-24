@@ -59,7 +59,7 @@ class AuthorCrawler:
         mapping_dict = {}
         for mapping in re.finditer(r"\| ([^=]*)=(.+)\n", weiche):
             authors_list = []
-            for invoke in re.finditer(r"\{\{REAutor/invokeModule\|([^.]+\.)", mapping.group(2)):
+            for invoke in re.finditer(r"\{\{REAutor/invokeModule\|([^\|\}]+\.)(?:\|\||\}\})", mapping.group(2)):
                 author = authors.get_author_by_mapping(invoke.group(1), "")
                 if author:
                     authors_list.append(author[0].name)

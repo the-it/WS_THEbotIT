@@ -119,13 +119,24 @@ class TestAuthorCrawler(TestCase):
 
  | Reinhard Büll. Ernst Moser.={{REAutor/invokeModule|Reinhard Büll.}} {{REAutor/invokeModule|Ernst Moser.}}
 
- | Bürchner und Philippson.={{REAutor/invokeModule|Bürchner.|Bürchner}} und {{REAutor/invokeModule|Philippson.}}
+ | Bürchner und Philippson.={{REAutor/invokeModule|Bürchner.||Bürchner}} und {{REAutor/invokeModule|Philippson.}}
+
+ | W. Kroll mit Zusätzen von Hobein in eckigen Klammern.={{REAutor/invokeModule|W. Kroll.||W. Kroll}} mit Zusätzen von {{REAutor/invokeModule|Hobein.||Hobein}} in eckigen Klammern.
+
+ | W. Tomaschek † – Max Fluss.={{REAutor/invokeModule|W. Tomaschek.||W. Tomaschek}} † – {{REAutor/invokeModule|Max Fluss.}}
+
+ | v. Jan und Graf.={{REAutor/invokeModule|v. Jan.||v. Jan}} und {{REAutor/invokeModule|Graf.}}
 
 """
-        expect = {'Beer-Honigmann.': ['Georg Beer', 'Ernst Honigmann'],
-                  'Beer-Moritz.': ['Georg Beer', 'Bernhard Moritz'],
-                  'Bürchner und Philippson.': ['Ludwig Bürchner', 'Alfred Philippson'],
-                  'Reinhard Büll. Ernst Moser.': ['Reinhard Büll', 'Ernst Moser']}
+        expect = {
+            'Beer-Honigmann.': ['Georg Beer', 'Ernst Honigmann'],
+            'Beer-Moritz.': ['Georg Beer', 'Bernhard Moritz'],
+            'Bürchner und Philippson.': ['Ludwig Bürchner', 'Alfred Philippson'],
+            'Reinhard Büll. Ernst Moser.': ['Reinhard Büll', 'Ernst Moser'],
+            'W. Kroll mit Zusätzen von Hobein in eckigen Klammern.': ['Wilhelm Kroll', 'Hermann Hobein'],
+            'W. Tomaschek † – Max Fluss.': ['Wilhelm Tomaschek', 'Max Fluß'],
+            'v. Jan und Graf.': ['Karl von Jan', 'Ernst Graf'],
+        }
         compare(expect, self.crawler.get_compound_mapping(test_str, Authors()))
 
     def test_extract_author_infos(self):
@@ -263,7 +274,8 @@ nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
                                             "last_name": "Abbott", "wp_lemma": "Kenneth Morgan Abbott"},
                   "Karlhans Abel": {"birth": 1919, "death": 1998, "first_name": "Karlhans", "last_name": "Abel",
                                     "ws_lemma": "Karlhans Abel", "wp_lemma": "Karlhans Abel"},
-                  "Walther Abel": {"birth": 1906, "death": 1987, "first_name": "Walther", "last_name": "Abel", "wp_lemma": "Walther Abel"},
+                  "Walther Abel": {"birth": 1906, "death": 1987, "first_name": "Walther", "last_name": "Abel",
+                                   "wp_lemma": "Walther Abel"},
                   "Wolf ?": {"last_name": "Wolf ?"},
                   "Johannes Zwicker": {"birth": 1881, "death": 1969, "first_name": "Johannes", "last_name": "Zwicker",
                                        "wp_lemma": "Johannes Zwicker"}}
