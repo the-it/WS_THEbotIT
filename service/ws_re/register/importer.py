@@ -52,7 +52,7 @@ class ReImporter(CloudBot):
         for register in self.registers.volumes.values():
             if create_count >= self.max_create:
                 break
-            for article in register:
+            for idx, article in enumerate(register):
                 if article.proof_read is None:
                     # if article.get_public_domain_year() <= self.current_year:
                     if article.lemma in self.tm_set:
@@ -61,6 +61,7 @@ class ReImporter(CloudBot):
                             article_text = self.get_text(article.volume.name, article.lemma)
                             if article_text:
                                 article_text = self.adjust_author(article_text, self.author_mapping)
+                                article_text = self.adjust_end_column(article_text, register, idx)
                                 article_text = (f"{article_text}\n[[Kategorie:RE:Stammdaten überprüfen]]"
                                                 "\n[[Kategorie:RE:Kurztext überprüfen]]")
                                 save_if_changed(lemma, article_text, "Automatisch generiert")
@@ -153,6 +154,21 @@ class ReImporter(CloudBot):
             article = Article.from_text(input_str.strip())
             input_str = cls.REGEX_COMPLEX.sub(rf"REAutor|\g<author>|{article["BAND"].value}", input_str)
         return input_str
+
+    @staticmethod
+    def adjust_end_column(article_text, register, idx):
+        try:
+            follow_article = register[idx + 1]
+        except IndexError:
+            return article_text
+        re_match = re.search(r"SPALTE_START=(\d{1,4})", article_text)
+        if not re_match:
+            return article_text
+        start_column = int(re_match.group(1))
+        start_follow_article = follow_article.chapter_objects[0].start
+        if start_follow_article != start_column + 1:
+            return article_text
+        return article_text.replace("SPALTE_END=OFF", f"SPALTE_END={start_follow_article}")
 
 
 if __name__ == "__main__":  # pragma: no cover

@@ -5,6 +5,7 @@ from ddt import ddt, file_data
 from testfixtures import compare
 
 from service.ws_re.register.importer import ReImporter
+from service.ws_re.register.registers import Registers
 
 
 @ddt
@@ -24,3 +25,59 @@ class TestReImporter(TestCase):
     def test_load_tm_list(self):
         tm_set = ReImporter.load_tm_set()
         self.assertTrue("Hermogenes 27" in tm_set)
+
+    def test_adjust_end_column(self):
+        registers = Registers()
+        register = registers["XVI,1"]
+        for idx, article in enumerate(register):
+            if article.lemma == "Molorchos":
+                #start test
+                pre_1 = """{{REDaten
+|BAND=XVI,1
+|SPALTE_START=13
+|SPALTE_END=OFF
+|VORGÄNGER=Molorchia
+|NACHFOLGER=Μόλος 1
+}}
+'''Molorchos'''
+[...]
+{{REAutor|J. Pley.}}"""
+                self.assertTrue("SPALTE_END=14" in ReImporter.adjust_end_column(pre_1, register, idx))
+                pre_2 = """{{REDaten
+|BAND=XVI,1
+|SPALTE_START=12
+|SPALTE_END=OFF
+|VORGÄNGER=Molorchia
+|NACHFOLGER=Μόλος 1
+}}
+'''Molorchos'''
+[...]
+{{REAutor|J. Pley.}}"""
+                # not clear don't do shit
+                self.assertTrue("SPALTE_END=OFF" in ReImporter.adjust_end_column(pre_2, register, idx))
+                # index out of range
+                self.assertTrue("SPALTE_END=OFF" in ReImporter.adjust_end_column(pre_2, register, 9999))
+                pre_3 = """{{REDaten
+|BAND=XVI,1
+|SPALTE_START=nothing
+|SPALTE_END=OFF
+|VORGÄNGER=Molorchia
+|NACHFOLGER=Μόλος 1
+}}
+'''Molorchos'''
+[...]
+{{REAutor|J. Pley.}}"""
+                # can't determine start column
+                self.assertTrue("SPALTE_END=OFF" in ReImporter.adjust_end_column(pre_3, register, idx))
+                pre_4 = """{{REDaten
+|BAND=XVI,1
+|SPALTE_START=14
+|SPALTE_END=OFF
+|VORGÄNGER=Molorchia
+|NACHFOLGER=Μόλος 1
+}}
+'''Molorchos'''
+[...]
+{{REAutor|J. Pley.}}"""
+                # start on the same column like follow article
+                self.assertTrue("SPALTE_END=OFF" in ReImporter.adjust_end_column(pre_4, register, idx))
