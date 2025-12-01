@@ -56,17 +56,16 @@ class ReImporter(CloudBot):
                 if article.proof_read is None:
                     # if article.get_public_domain_year() <= self.current_year:
                     # if article.lemma in self.tm_set:
-                    if True: # don't mind the TM-check for the moment
-                        lemma = Page(self.wiki, f"RE:{article.lemma}")
-                        if not lemma.exists():
-                            article_text = self.get_text(article.volume.name, article.lemma)
-                            if article_text:
-                                article_text = self.adjust_author(article_text, self.author_mapping)
-                                article_text = self.adjust_end_column(article_text, register, idx)
-                                article_text = (f"{article_text}\n[[Kategorie:RE:Stammdaten überprüfen]]"
-                                                "\n[[Kategorie:RE:Kurztext überprüfen]]")
-                                save_if_changed(lemma, article_text, "Automatisch generiert")
-                                create_count += 1
+                    lemma = Page(self.wiki, f"RE:{article.lemma}")
+                    if not lemma.exists():
+                        article_text = self.get_text(article.volume.name, article.lemma)
+                        if article_text:
+                            article_text = self.adjust_author(article_text, self.author_mapping)
+                            article_text = self.adjust_end_column(article_text, register, idx)
+                            article_text = (f"{article_text}\n[[Kategorie:RE:Stammdaten überprüfen]]"
+                                            "\n[[Kategorie:RE:Kurztext überprüfen]]")
+                            save_if_changed(lemma, article_text, "Automatisch generiert")
+                            create_count += 1
                 if create_count >= self.max_create:
                     self.logger.info(
                         f"Created {create_count} articles. Last article was [[RE:{article.lemma}]]"
