@@ -55,7 +55,8 @@ class ReImporter(CloudBot):
             for idx, article in enumerate(register):
                 if article.proof_read is None:
                     # if article.get_public_domain_year() <= self.current_year:
-                    if article.lemma in self.tm_set:
+                    # if article.lemma in self.tm_set:
+                    if True: # don't mind the TM-check for the moment
                         lemma = Page(self.wiki, f"RE:{article.lemma}")
                         if not lemma.exists():
                             article_text = self.get_text(article.volume.name, article.lemma)
