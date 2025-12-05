@@ -6,6 +6,7 @@ from testfixtures import compare
 
 from service.ws_re.register.importer import ReImporter
 from service.ws_re.register.registers import Registers
+from tools.test import real_wiki_test
 
 
 @ddt
@@ -26,6 +27,7 @@ class TestReImporter(TestCase):
         tm_set = ReImporter.load_tm_set()
         self.assertTrue("Hermogenes 27" in tm_set)
 
+    @real_wiki_test
     def test_adjust_end_column(self):
         registers = Registers()
         register = registers["XVI,1"]

@@ -167,6 +167,8 @@ class ReImporter(CloudBot):
         if not re_match:
             return article_text
         start_column = int(re_match.group(1))
+        if not follow_article.chapter_objects:
+            return article_text
         start_follow_article = follow_article.chapter_objects[0].start
         if start_follow_article != start_column + 1:
             return article_text
