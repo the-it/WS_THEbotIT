@@ -6,6 +6,7 @@ from typing import Optional
 from pywikibot import Site, Page, Category
 
 from service.ws_re.register.authors import Authors
+from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.registers import Registers
 from service.ws_re.template.article import Article
 from tools import save_if_changed
@@ -59,13 +60,14 @@ class ReImporter(CloudBot):
                     lemma = Page(self.wiki, f"RE:{article.lemma}")
                     if not lemma.exists():
                         article_text = self.get_text(article.volume.name, article.lemma)
-                        if article_text:
-                            article_text = self.adjust_author(article_text, self.author_mapping)
-                            article_text = self.adjust_end_column(article_text, register, idx)
-                            article_text = (f"{article_text}\n[[Kategorie:RE:Stammdaten überprüfen]]"
-                                            "\n[[Kategorie:RE:Kurztext überprüfen]]")
-                            save_if_changed(lemma, article_text, "Automatisch generiert")
-                            create_count += 1
+                        if not article_text:
+                            article_text = self.get_text_backup(article.volume.name, article)
+                        article_text = self.adjust_author(article_text, self.author_mapping)
+                        article_text = self.adjust_end_column(article_text, register, idx)
+                        article_text = (f"{article_text}\n[[Kategorie:RE:Stammdaten überprüfen]]"
+                                        "\n[[Kategorie:RE:Kurztext überprüfen]]")
+                        save_if_changed(lemma, article_text, "Automatisch generiert")
+                        create_count += 1
                 if create_count >= self.max_create:
                     self.logger.info(
                         f"Created {create_count} articles. Last article was [[RE:{article.lemma}]]"
@@ -80,6 +82,38 @@ class ReImporter(CloudBot):
             if article_text:
                 return article_text
         return None
+
+    def get_text_backup(self, band: str, article: Lemma) -> str:
+        previous = article.previous if article.previous else ""
+        next = article.next if article.next else ""
+        spalte_start = article.chapter_objects[0].start if article.chapter_objects else "OFF"
+        spalte_end = article.chapter_objects[0].end if article.chapter_objects and article.chapter_objects[0].end else "OFF"
+        author = article.chapter_objects[0].author if article.chapter_objects else "OFF"
+        short_text = article.short_description if article.short_description else ""
+        parsed_article = f"""{{{{REDaten
+|BAND={band}
+|SPALTE_START={spalte_start}
+|SPALTE_END={spalte_end}
+|VORGÄNGER={previous}
+|NACHFOLGER={next}
+|SORTIERUNG=
+|KORREKTURSTAND=Platzhalter
+|KURZTEXT={short_text}
+|WIKIPEDIA=
+|WIKISOURCE=
+|GND=
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=
+|GEBURTSJAHR=
+|NACHTRAG=OFF
+|ÜBERSCHRIFT=OFF
+|VERWEIS=OFF
+}}}}
+'''{article.lemma}'''
+[...]
+{{{{REAutor|{author}}}}}
+"""
+        return parsed_article
 
     ADDITIONAL_AUTHORS: dict[str, str] = {
         "Franz Heinrich Weissbach": "Weissbach.",
