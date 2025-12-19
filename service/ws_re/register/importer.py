@@ -111,8 +111,7 @@ class ReImporter(CloudBot):
 }}}}
 '''{article.lemma}'''
 [...]
-{{{{REAutor|{author}}}}}
-"""
+{{{{REAutor|{author}}}}}"""
         return parsed_article
 
     ADDITIONAL_AUTHORS: dict[str, str] = {
