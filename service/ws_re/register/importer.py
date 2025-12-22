@@ -83,19 +83,22 @@ class ReImporter(CloudBot):
                 return article_text
         return None
 
-    def get_text_backup(self, band: str, article: Lemma) -> str:
-        previous = article.previous if article.previous else ""
-        next = article.next if article.next else ""
+    @staticmethod
+    def get_text_backup(band: str, article: Lemma) -> str:
+        vorgaenger = article.previous if article.previous else ""
+        nachfolger = article.next if article.next else ""
         spalte_start = article.chapter_objects[0].start if article.chapter_objects else "OFF"
-        spalte_end = article.chapter_objects[0].end if article.chapter_objects and article.chapter_objects[0].end else "OFF"
+        spalte_end = "OFF"
+        if article.chapter_objects and article.chapter_objects[0].end:
+            spalte_end = article.chapter_objects[0].end
         author = article.chapter_objects[0].author if article.chapter_objects else "OFF"
         short_text = article.short_description if article.short_description else ""
         parsed_article = f"""{{{{REDaten
 |BAND={band}
 |SPALTE_START={spalte_start}
 |SPALTE_END={spalte_end}
-|VORGÄNGER={previous}
-|NACHFOLGER={next}
+|VORGÄNGER={vorgaenger}
+|NACHFOLGER={nachfolger}
 |SORTIERUNG=
 |KORREKTURSTAND=Platzhalter
 |KURZTEXT={short_text}
