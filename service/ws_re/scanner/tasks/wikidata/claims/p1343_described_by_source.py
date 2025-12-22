@@ -60,6 +60,10 @@ class P1343DescribedBySource(ClaimFactory):
         return None
 
     def get_existing_qualifiers(self, target_item) -> list[int]:
+        if target_item.isRedirectPage():
+            self.logger.warning(f"linked item https://www.wikidata.org/wiki/Q{target_item.id} is a redirect page. "
+                                "Please correct linked RE item.")
+            target_item = target_item.getRedirectTarget()
         target_claims = target_item.get()["claims"].toJSON()
         if self.DESCRIBED_IN_PROP not in target_claims:
             return []
