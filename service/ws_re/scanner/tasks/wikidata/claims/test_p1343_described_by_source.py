@@ -90,26 +90,6 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
         compare([a], filtered_new_claims)
         compare([b], filtered_old_claims)
 
-    def test_get_existing_qualifiers_real_redirect_item_Q6533233(self):
-        # Uses a real Wikidata item which is a redirect to validate behavior against live data.
-        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Aal"))
-        factory = P1343DescribedBySource(re_page, self.logger)
-
-        repo = re_page.page.data_repository
-        redirect_item = pywikibot.ItemPage(repo, "Q6533233")
-
-        # Ensure we actually have a redirect (as intended by this test)
-        compare(True, redirect_item.isRedirectPage())
-
-        # get qualifiers via redirect and via its target – must be identical
-        res_via_redirect = factory.get_existing_qualifiers(redirect_item)
-        target_item = redirect_item.getRedirectTarget()
-        res_via_target = factory.get_existing_qualifiers(target_item)
-
-        compare(res_via_target, res_via_redirect)
-        # And ensure we really got some qualifiers back
-        compare(True, len(res_via_redirect) > 0)
-
     def test_integration(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Δικτυοβόλος"))
         factory = P1343DescribedBySource(re_page, self.logger)

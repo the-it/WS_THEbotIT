@@ -83,7 +83,11 @@ class DATATask(ReScannerTask):
             self.logger.info(f"Item ([[d:{data_item.id}]]) for {self.re_page.lemma_as_link} created.")
             # try just waiting for 5 seconds after the fresh creation of an item
             time.sleep(5)
-        self.back_link_main_topic()
+        try:
+            self.back_link_main_topic()
+        except pywikibot.exceptions.IsRedirectPageError:
+            self.logger.warning(f"Backlink to main topic failed for {self.re_page.lemma_as_link}"
+                                ", because target is a redirect.")
 
     def back_link_main_topic(self):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)

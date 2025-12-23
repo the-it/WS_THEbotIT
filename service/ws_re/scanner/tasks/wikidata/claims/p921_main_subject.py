@@ -51,10 +51,21 @@ class P921MainSubject(ClaimFactory):
             return self._create_claim_dictionary([], [])
         new_claim: pywikibot.Claim = pywikibot.Claim.fromJSON(self.wikidata, claim_json[0])
         old_claims = self.get_old_claims(data_item)
+        # no old claim exists yet
         if not old_claims:
             return self._create_claim_dictionary([new_claim], [])
+        # if the existing claim is a redirect, replace it
+        if old_claims[0].target.isRedirectPage():
+            return self._create_claim_dictionary([self.replace_redirect(old_claims[0])],
+                                                 [old_claims[0]])
         if not new_claim.same_as(old_claims[0]):
             self.re_page.add_error_category(self.ERROR_CAT)
         else:
             self.re_page.remove_error_category(self.ERROR_CAT)
         return self._create_claim_dictionary([], [])
+
+    @staticmethod
+    def replace_redirect(old_claim: pywikibot.Claim) -> pywikibot.Claim:
+        new_claim = old_claim.copy()
+        new_claim.setTarget(old_claim.target.getRedirectTarget())
+        return new_claim
