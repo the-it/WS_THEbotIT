@@ -17,7 +17,6 @@ from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.set_platzhalter import SEPLTask
-from service.ws_re.scanner.tasks.temp_obst import TOBSTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
 from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
@@ -38,7 +37,6 @@ class ReScanner(CloudBot):
         # Wikidata and the Registers.
         self.tasks: List[Callable] = [
             KURZTask,  # add short description
-            TOBSTask,  # gone in two days
             SEPLTask,  # if there is no Korrekturstand set, set it to "Platzhalter"
             DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia
