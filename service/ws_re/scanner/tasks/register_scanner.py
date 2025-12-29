@@ -25,10 +25,11 @@ class SCANTask(ReScannerTask):
         self.registers = Registers(update_data=True)
         self._strategies: Dict[str, List[str]] = {}
 
-    def task(self):
+    def task(self) -> bool:
         if "RE:Stammdaten überprüfen" in self.re_page.page.text:
-            return
+            return True
         self._process_from_article_list()
+        return True
 
     def finish_task(self):
         super().finish_task()

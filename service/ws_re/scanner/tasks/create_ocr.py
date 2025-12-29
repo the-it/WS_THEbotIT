@@ -35,6 +35,8 @@ class COCRTask(ReScannerTask):
         self.s3_client = boto3.client("s3", aws_access_key_id=key, aws_secret_access_key=secret)
 
     def task(self):
+        if "RE:Stammdaten überprüfen" in self.re_page.page.text:
+            return True
         for article_list in self.re_page.splitted_article_list:
             article = cast(Article, article_list[0])
             # don't create if there is already a created
