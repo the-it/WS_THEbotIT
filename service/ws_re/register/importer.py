@@ -17,7 +17,7 @@ class ReImporter(CloudBot):
     def __init__(self, wiki: Site = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
-        self.registers = Registers()
+        self.registers = Registers(update_data=True)
         self.new_articles: dict[str, dict[str, str]] = {}
         self.author_mapping = self.get_author_mapping()
         self.tm_set = self.load_tm_set()
