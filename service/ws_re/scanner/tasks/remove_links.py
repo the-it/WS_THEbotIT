@@ -22,6 +22,7 @@ class RELITask(ReScannerTask):
 
     # This list can be populated/overwritten from outside if needed
     TARGET_LEMMAS: List[str] = [
+        "Λεβήν",
         "Leben(a)",
     ]
 
