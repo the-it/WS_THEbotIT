@@ -47,7 +47,7 @@ class ReScanner(CloudBot):
             CARETask,  # put hard redirects to lemma in a category
             VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
             CHRETask,  # check if backlinks go over redirect pages
-            COCRTask,  # create OCR for empty articles
+            # COCRTask,  # create OCR for empty articles
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
             WAORTask,  # look for Lemma where the content article isn't the first on the page
