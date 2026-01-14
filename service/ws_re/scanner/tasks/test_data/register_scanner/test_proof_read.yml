@@ -64,3 +64,14 @@ platzhalter:
   result:
     - proof_read: 0
     - []
+unvollständig:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=Unvollständig
+    |TODESJAHR=9999
+    }}
+    text.
+    {{REAutor|OFF}}
+  result:
+    - proof_read: 0
+    - []

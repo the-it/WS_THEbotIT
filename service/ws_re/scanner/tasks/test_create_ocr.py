@@ -94,13 +94,13 @@ class TestCOCRTask(TestCloudBase):
         self.put_page_to_cloud("I A,1_0267")
         page_mock = PageMock()
         page_mock.title_str = "RE:Rages"
-        # Placeholder article: KORREKTURSTAND=Platzhalter triggers OCR append
-        page_mock.text = ("{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=128|KORREKTURSTAND=Platzhalter}}"
+        # Placeholder article: KORREKTURSTAND=Unvollständig triggers OCR append
+        page_mock.text = ("{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=128|KORREKTURSTAND=Unvollständig}}"
                           "'''Rages'''{{REAutor|OFF}}"
-                          "{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=OFF|KORREKTURSTAND=Platzhalter}}"
+                          "{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=OFF|KORREKTURSTAND=Unvollständig}}"
                           "'''Rages'''{{REAutor|OFF}}"
                           "{{REDaten|BAND=I A,1|SPALTE_START=267|SPALTE_END=OFF"
-                          "|KORREKTURSTAND=Platzhalter|TODESJAHR=2100}}"
+                          "|KORREKTURSTAND=Unvollständig|TODESJAHR=2100}}"
                           "'''Rages'''{{REAutor|OFF}}")
         self.task.re_page = RePage(page_mock)
 

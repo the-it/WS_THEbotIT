@@ -42,7 +42,7 @@ class COCRTask(ReScannerTask):
             # don't create if there is already a created
             if self.counter > 8 or self._ocr_category in article.text:
                 return True
-            if article["KORREKTURSTAND"].value == "Platzhalter" and article.common_free:
+            if article["KORREKTURSTAND"].value == "Unvollständig" and article.common_free:
                 if self._detect_empty_content(article.text):
                     if ocr := self._get_text_for_article(article):
                         article.text = article.text + f"\n{ocr}"

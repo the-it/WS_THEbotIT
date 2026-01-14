@@ -2,19 +2,17 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
 
 
-class SEPLTask(ReScannerTask):
+class SEUVTask(ReScannerTask):
     """
-    SEt PLaceholder
+    SEt UnVollständig
 
     All articles shall have a "Korrekturstand", this got forgotten sometimes.
-    This task sets the Korrekturstand to "Platzhalter" in those cases.
+    This task sets the Korrekturstand to "Unvollständig" in those cases.
     """
 
     def task(self):
         for article in self.re_page:
             if isinstance(article, Article):
                 if not article["KORREKTURSTAND"].value:
-                    article["KORREKTURSTAND"].value = "Platzhalter"
-                elif str(article["KORREKTURSTAND"].value).lower() == "unvollständig":
-                    article["KORREKTURSTAND"].value = "Platzhalter"
+                    article["KORREKTURSTAND"].value = "Unvollständig"
         return True
