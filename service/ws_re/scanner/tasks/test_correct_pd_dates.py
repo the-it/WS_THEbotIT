@@ -225,7 +225,7 @@ bla
 |VORGÄNGER=Claudius 441a
 |NACHFOLGER=Clodius 58a
 |SORTIERUNG=
-|KORREKTURSTAND=Unvollständig
+|KORREKTURSTAND=Platzhalter
 |KURZTEXT=Q. C. Flavianus, c.v., Inhaber mehrerer Priesterämter 4. Jh. n. Chr.
 |WIKIPEDIA=
 |WIKISOURCE=

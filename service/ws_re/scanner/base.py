@@ -17,7 +17,7 @@ from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
-from service.ws_re.scanner.tasks.set_unvollstaendig import SEUVTask
+from service.ws_re.scanner.tasks.set_platzhalter import SEPLTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
 from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
@@ -38,7 +38,7 @@ class ReScanner(CloudBot):
         # Wikidata and the Registers.
         self.tasks: List[Callable] = [
             KURZTask,  # add short description
-            SEUVTask,  # if there is no Korrekturstand set, set it to "Unvollständig"
+            SEPLTask,  # if there is no Korrekturstand set, set it to "Platzhalter"
             RELITask,  # remove unwanted RE cross-reference syntax
             DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia
@@ -77,7 +77,6 @@ class ReScanner(CloudBot):
             searcher.add_positive_category("RE:Fertig")
             searcher.add_positive_category("RE:Korrigiert")
             searcher.add_positive_category("RE:Unkorrigiert")
-            searcher.add_positive_category("RE:Unvollständig")
             searcher.add_positive_category("RE:Platzhalter")
             searcher.set_logic_union()
             searcher.set_sort_criteria("date")
