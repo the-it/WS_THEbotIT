@@ -100,7 +100,7 @@ class ReImporter(CloudBot):
 |VORGÄNGER={vorgaenger}
 |NACHFOLGER={nachfolger}
 |SORTIERUNG=
-|KORREKTURSTAND=Platzhalter
+|KORREKTURSTAND=Unvollständig
 |KURZTEXT={short_text}
 |WIKIPEDIA=
 |WIKISOURCE=
