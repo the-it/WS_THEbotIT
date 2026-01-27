@@ -2,7 +2,7 @@ next_previous_wrong_start_letter:
   text: |
     {{REDaten
     |VG=Bla
-    |NF=Episch
+    |NF=Zpisch
     }}
     {{REAutor|Autor.}}
   title: "Re:Title"
@@ -14,7 +14,7 @@ next_previous_multiple_aticles:
   text: |
     {{REDaten
     |VG=Bla
-    |NF=Episch
+    |NF=Zpisch
     }}
     {{REAutor|Autor.}}
     {{REDaten
@@ -73,6 +73,23 @@ find_red_links:
   expect:
     - ["Aal", "Title"]
     - ["Anderer Quatsch", "Title"]
+
+skip_non_proofread_articles:
+  text: |
+    {{REDaten
+    |KORREKTURSTAND=fertig
+    }}
+    {{RE siehe|Aal}}
+    {{REAutor|Autor.}}
+    {{REDaten
+    |KORREKTURSTAND=unkorrigiert
+    }}
+    [[RE:Anderer Quatsch]]
+    {{REAutor|Autor.}}
+  title: "Re:Title"
+  exists_mocks: [false]
+  expect:
+    - ["Aal", "Title"]
 
 bug_value_error:
   text: |

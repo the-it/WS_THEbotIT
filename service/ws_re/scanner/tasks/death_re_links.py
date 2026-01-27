@@ -14,17 +14,12 @@ class DEALTask(ReScannerTask, ReporterMixin):
     _wiki_page = "RE:Wartung:Tote Links"
     _reason = "Neue tote Links"
 
-    _start_characters = ("a",
-                         "b",
-                         "c",
-                         "d",
-                         )
+    _start_characters = "abcdefghijkl"
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         ReporterMixin.__init__(self, wiki)
-        regex_start_characters = ''.join(self._start_characters)
-        regex_start_characters = regex_start_characters + regex_start_characters.upper()
+        regex_start_characters = self._start_characters + self._start_characters.upper()
         self.re_siehe_regex = re.compile(rf"(?:\{{\{{RE siehe\||\[\[RE:)"
                                          rf"([{regex_start_characters}][^\|\}}\]]+)")
 
@@ -32,6 +27,9 @@ class DEALTask(ReScannerTask, ReporterMixin):
         for article in self.re_page:
             # check properties of REDaten Block first
             if isinstance(article, Article):
+                # check only proofread articles
+                if article["KORREKTURSTAND"].value.lower() in ["platzhalter", "unvollständig", "unkorrigiert"]:
+                    continue
                 for prop in ["VORGÄNGER", "NACHFOLGER"]:
                     # VORGÄNGER NACHFOLGER are string properties
                     link_to_check = cast(str, article[prop].value)
