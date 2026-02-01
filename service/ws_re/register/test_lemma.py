@@ -120,26 +120,26 @@ class TestLemma(BaseTestRegister):
 
     def test_get_pages(self):
         re_register_lemma = Lemma.from_dict(self.basic_dict, self.volumes["I,1"], self.authors)
-        compare("[http://elexikon.ch/RE/I,1_1.png 1]",
+        compare("[http://elexikon.ch/RE/I,1_1 1]",
                 re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 1, "end": 1, "author": "Abel"})))
-        compare("[http://elexikon.ch/RE/I,1_5.png 3]",
+        compare("[http://elexikon.ch/RE/I,1_5 3]",
                 re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 3, "author": "Abel"})))
-        compare("[http://elexikon.ch/RE/I,1_5.png 5]",
+        compare("[http://elexikon.ch/RE/I,1_5 5]",
                 re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 5, "author": "Abel"})))
-        compare("[http://elexikon.ch/RE/I,1_17.png 18]",
+        compare("[http://elexikon.ch/RE/I,1_17 18]",
                 re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 18, "author": "Abel"})))
-        compare("[http://elexikon.ch/RE/I,1_197.png 198]-200",
+        compare("[http://elexikon.ch/RE/I,1_197 198]-200",
                 re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 198, "end": 200, "author": "Abel"})))
 
         re_register_lemma = Lemma.from_dict(self.basic_dict, self.volumes["R"], self.authors)
-        compare("[http://elexikon.ch/RE/R_3.png 3]",
+        compare("[http://elexikon.ch/RE/R_3 3]",
                 re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 3, "author": "Abel"})))
 
         re_register_lemma = Lemma.from_dict(self.basic_dict, self.volumes["V A,1"], self.authors)
-        compare("[http://elexikon.ch/RE/VA,1_1.png 1]",
+        compare("[http://elexikon.ch/RE/VA,1_1 1]",
                 re_register_lemma._get_pages(LemmaChapter.from_dict({"start": 1, "author": "Abel"})))
 
-    #http://elexikon.ch/RE/XVIII,3_289.png
+    #http://elexikon.ch/RE/XVIII,3_289
     def test_get_author(self):
         re_register_lemma = Lemma.from_dict(self.basic_dict, self.volumes["I,1"], self.authors)
         compare("Abert", re_register_lemma._get_author_str(
@@ -196,7 +196,7 @@ class TestLemma(BaseTestRegister):
                          "redirect": False, "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}
         re_register_lemma = Lemma.from_dict(one_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|[http://elexikon.ch/RE/I,1_1.png 1]
+|[http://elexikon.ch/RE/I,1_1 1]
 |Herman Abel
 |style="background:#FFFFFF"|2069"""
         compare(expected_row, re_register_lemma.get_table_row())
@@ -206,20 +206,20 @@ class TestLemma(BaseTestRegister):
                                                          {"start": 1, "end": 4, "author": "Abbott"}]}
         re_register_lemma = Lemma.from_dict(two_line_dict, self.volumes["I,1"], self.authors)
         expected_row = """|-
-|[http://elexikon.ch/RE/I,1_1.png 1]
+|[http://elexikon.ch/RE/I,1_1 1]
 |Herman Abel
 |rowspan=2 style="background:#FFFFFF"|2100
 |-
-|[http://elexikon.ch/RE/I,1_1.png 1]-4
+|[http://elexikon.ch/RE/I,1_1 1]-4
 |William Abbott"""
         compare(expected_row, re_register_lemma.get_table_row())
         expected_row = """|-
 |rowspan=2|I,1
-|[http://elexikon.ch/RE/I,1_1.png 1]
+|[http://elexikon.ch/RE/I,1_1 1]
 |Herman Abel
 |rowspan=2 style="background:#FFFFFF"|2100
 |-
-|[http://elexikon.ch/RE/I,1_1.png 1]-4
+|[http://elexikon.ch/RE/I,1_1 1]-4
 |William Abbott"""
         compare(expected_row, re_register_lemma.get_table_row(print_volume=True))
 

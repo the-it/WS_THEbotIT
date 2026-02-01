@@ -300,7 +300,7 @@ class Lemma:
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
         pages_str = f"[http://elexikon.ch/RE/{self.volume.name.replace(' ', '')}_" \
-                    f"{self._get_start_column(lemma_chapter)}.png {lemma_chapter.start}]"
+                    f"{self._get_start_column(lemma_chapter)} {lemma_chapter.start}]"
         if lemma_chapter.end and lemma_chapter.start != lemma_chapter.end:
             pages_str += f"-{lemma_chapter.end}"
         return pages_str

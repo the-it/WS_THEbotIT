@@ -11,7 +11,7 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.categorize_redirects import CARETask
 from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
 from service.ws_re.scanner.tasks.correct_pd_dates import COPDTask
-from service.ws_re.scanner.tasks.create_ocr import COCRTask
+# from service.ws_re.scanner.tasks.create_ocr import COCRTask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask

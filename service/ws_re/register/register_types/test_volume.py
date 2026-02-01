@@ -65,14 +65,14 @@ class TestRegister(BaseTestRegister):
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||Ein Fisch
 ||
-|[http://elexikon.ch/RE/I,1_1.png 1]-4
+|[http://elexikon.ch/RE/I,1_1 1]-4
 |Herman Abel
 |style="background:#669966"|FER
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
 ||
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |Abert
 |style="background:#556B2F"|KOR
 |}
@@ -101,12 +101,12 @@ class TestRegister(BaseTestRegister):
 |-
 |data-sort-value="aal"|[[RE:Aal|'''{{Anker2|Aal}}''']]
 ||
-|[http://elexikon.ch/RE/I,1_1.png 1]-4
+|[http://elexikon.ch/RE/I,1_1 1]-4
 ||FER
 |-
 |data-sort-value="aarassos"|[[RE:Aarassos|'''{{Anker2|Aarassos}}''']]
 ||
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 ||KOR
 |}
 [[Kategorie:RE:Register|!]]"""

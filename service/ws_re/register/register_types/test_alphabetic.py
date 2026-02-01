@@ -117,11 +117,11 @@ class TestAlphabeticRegister(BaseTestRegister):
 |rowspan=3|This is Beta 1
 |rowspan=3 data-sort-value="w:de:beta"|[[w:de:Beta|Beta<sup>(WP de)</sup>]]<br/>[[s:en:Author:Beta|Beta<sup>(WS en)</sup>]]<br/>[[d:Q123456|WD-Item]]
 |rowspan=2|I,1
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |Abert
 |rowspan=2 style="background:#669966"|FER
 |-
-|[http://elexikon.ch/RE/I,1_5.png 4]-5
+|[http://elexikon.ch/RE/I,1_5 4]-5
 |Herman Abel
 |-
 ||III,1
@@ -133,7 +133,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[http://elexikon.ch/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5 4]
 |Herman Abel
 |style="background:#669966"|FER
 |-
@@ -141,7 +141,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[http://elexikon.ch/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5 4]
 |Abert
 |style="background:#556B2F"|KOR
 |-
@@ -149,7 +149,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[http://elexikon.ch/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5 4]
 |Abert
 |style="background:#669966"|FER
 |-
@@ -157,7 +157,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 ||
 ||
 ||III,1
-|[http://elexikon.ch/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5 4]
 |Abert
 |style="background:#FFFFFF"|
 |}

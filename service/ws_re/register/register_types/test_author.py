@@ -48,7 +48,7 @@ class TestAuthorRegister(BaseTestRegister):
 ||This is Aba 1
 ||
 ||I,1
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |Herman Abel
 |style="background:#FFFFFF"|
 |-
@@ -56,7 +56,7 @@ class TestAuthorRegister(BaseTestRegister):
 ||
 ||
 ||I,1
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |Herman Abel
 |style="background:#556B2F"|KOR
 |-
@@ -64,18 +64,18 @@ class TestAuthorRegister(BaseTestRegister):
 |rowspan=2|
 |rowspan=2|
 |rowspan=2|I,1
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |Abert
 |rowspan=2 style="background:#669966"|FER
 |-
-|[http://elexikon.ch/RE/I,1_5.png 4]-5
+|[http://elexikon.ch/RE/I,1_5 4]-5
 |Herman Abel
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||
 ||
 ||III,1
-|[http://elexikon.ch/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5 4]
 |Herman Abel
 |style="background:#669966"|FER
 |}
@@ -102,27 +102,27 @@ class TestAuthorRegister(BaseTestRegister):
 |data-sort-value="aba 001"|[[RE:Aba 1|'''{{Anker2|Aba 1}}''']]
 ||
 ||I,1
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |style="background:#FFFFFF"|
 |-
 |data-sort-value="aba 002"|[[RE:Aba 2|'''{{Anker2|Aba 2}}''']]
 ||
 ||I,1
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |style="background:#556B2F"|KOR
 |-
 |rowspan=2 data-sort-value="beta"|[[RE:Beta|'''{{Anker2|Beta}}''']]
 |rowspan=2|
 |rowspan=2|I,1
-|[http://elexikon.ch/RE/I,1_5.png 4]
+|[http://elexikon.ch/RE/I,1_5 4]
 |rowspan=2 style="background:#669966"|FER
 |-
-|[http://elexikon.ch/RE/I,1_5.png 4]-5
+|[http://elexikon.ch/RE/I,1_5 4]-5
 |-
 |data-sort-value="charlie"|[[RE:Charlie|'''{{Anker2|Charlie}}''']]
 ||
 ||III,1
-|[http://elexikon.ch/RE/III,1_5.png 4]
+|[http://elexikon.ch/RE/III,1_5 4]
 |style="background:#669966"|FER
 |}
 [[Kategorie:RE:Register|Abel, Herman]]"""
