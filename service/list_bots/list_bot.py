@@ -55,7 +55,7 @@ class ListBot(CloudBot):
         self.remove_old_lemmas()
         lemma_list, unprocessed_lemmas = self.get_combined_lemma_list()
         for idx, lemma in enumerate(lemma_list):
-            clean_lemma = lemma.strip(":").replace("_", " ")
+            clean_lemma = lemma.lstrip(":").replace("_", " ")
             self.logger.debug(f"{idx + 1}/{unprocessed_lemmas} "
                               f"https://de.wikisource.org/wiki/{urllib.parse.quote(clean_lemma)}")
             page = Page(self.wiki, lemma)
