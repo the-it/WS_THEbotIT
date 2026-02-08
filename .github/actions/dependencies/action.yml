@@ -9,10 +9,10 @@ runs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.13'
-        cache: 'pip'
+        cache: 'uv'
     - name: Install dependencies
-      run: make pip3-dev
+      run: make install-dev
       shell: sh
     - name: Display Python version and Dependencies
-      run: python -c "import sys; print(sys.version)" && pip list
+      run: python -c "import sys; print(sys.version)" && uv tree
       shell: sh
