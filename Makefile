@@ -51,7 +51,7 @@ unittest :
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	uv run nose2 -v service tools
+	.venv/bin/nose2 -v service tools
 
 integrationtest : clean-coverage
 	echo "######## INTEGRATIONTEST #######"
@@ -59,7 +59,7 @@ integrationtest : clean-coverage
 	unset WS_REAL_WIKI && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	uv run nose2 -v --with-coverage service tools && \
+	.venv/bin/nose2 -v --with-coverage service tools && \
 	uv run coverage xml
 
 wikitest : clean-coverage
@@ -67,7 +67,7 @@ wikitest : clean-coverage
 	export WS_REAL_WIKI=1 && \
 	unset WS_REAL_DATA && \
 	export PYTHONUNBUFFERED=1 && \
-	uv run nose2 -v --with-coverage service tools && \
+	.venv/bin/nose2 -v --with-coverage service tools && \
 	uv run coverage xml
 
 coverage : clean-coverage
@@ -75,7 +75,7 @@ coverage : clean-coverage
 	unset WS_REAL_WIKI && \
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
-	uv run nose2 -v --with-coverage && \
+	.venv/bin/nose2 -v --with-coverage && \
 	uv run coverage xml
 
 coverage-html : wikitest
