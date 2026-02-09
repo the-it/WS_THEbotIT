@@ -51,7 +51,7 @@ unittest :
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	.venv/bin/nose2 -v service tools
+	uv run nose2 -v service tools
 
 integrationtest : clean-coverage
 	echo "######## INTEGRATIONTEST #######"
