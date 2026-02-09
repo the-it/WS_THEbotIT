@@ -28,7 +28,8 @@ class ReImporter(CloudBot):
         self.tm_set = self.load_tm_set()
         self._create_neuland()
         self.current_year = datetime.now().year
-        self.max_create = min(self._PER_NIGHT, self._MAX_CAT - len(list(Category(self.wiki, self._STORE_CATEGORY).articles())))
+        self.max_create = min(self._PER_NIGHT,
+                              self._MAX_CAT - len(list(Category(self.wiki, self._STORE_CATEGORY).articles())))
 
     def _create_neuland(self):
         for number in [1, 2, 3, 4, 5, 6, 7, 11, 12, 13]:
@@ -222,6 +223,7 @@ class ReImporterPersons(ReImporter):
     _CREATE_ALL = False
     _PER_NIGHT = 100
     _MAX_CAT = 200
+
 
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
