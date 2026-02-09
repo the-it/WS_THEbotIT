@@ -7,47 +7,40 @@ clean-pyc :
 
 # dependency management
 
-install_pip_tools :
-	echo "########## UPDATE PIP ##########"
-	pip install --upgrade pip pip-tools setuptools wheel
-
-pip3 : install_pip_tools
+install :
 	echo "##### INSTALL REQUIREMENTS #####"
-	pip3 install -r requirements.txt
+	uv sync
 
-pip3-dev : install_pip_tools
-	echo "##### INSTALL REQUIREMENTS #####"
-	pip3 install -r requirements.txt -r requirements-dev.txt
+install-dev :
+	echo "##### INSTALL DEV REQUIREMENTS #####"
+	uv sync --all-extras
 
-update_pip3 : install_pip_tools
+update :
 	echo "##### UPDATE REQUIREMENTS ######"
-	rm requirements.txt requirements-dev.txt || true
-	pip-compile --resolver=backtracking --output-file requirements.txt requirements.in
-	pip-compile --resolver=backtracking --output-file requirements-dev.txt requirements-dev.in
-	pip-sync requirements.txt requirements-dev.txt
+	uv lock --upgrade
 
 ###############
 ### QUALITY ###
 ###############
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
-	pycodestyle --show-source --statistics --count
+	uv run pycodestyle --show-source --statistics --count
 
 pylint :
 	echo "############ PYLINT ############"
-	pylint -j4 --rcfile .pylintrc service tools
+	uv run pylint -j4 --rcfile .pylintrc service tools
 
 bandit :
 	echo "############ BANDIT ############"
-	bandit -r service tools
+	uv run bandit -r service tools
 
 mypy :
 	echo "############# MYPY #############"
-	mypy --check-untyped-defs  service tools
+	uv run mypy --check-untyped-defs  service tools
 
 flake8 :
 	echo "############ FLAKE8 ############"
-	flake8
+	uv run flake8
 
 ############################
 ### TESTING AND COVERAGE ###
@@ -58,7 +51,7 @@ unittest :
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	venv/bin/nose2 -v service tools
+	uv run nose2 -v service tools
 
 integrationtest : clean-coverage
 	echo "######## INTEGRATIONTEST #######"
@@ -66,29 +59,29 @@ integrationtest : clean-coverage
 	unset WS_REAL_WIKI && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	venv/bin/nose2 -v --with-coverage service tools && \
-	coverage xml
+	.venv/bin/nose2 -v --with-coverage service tools && \
+	uv run coverage xml
 
 wikitest : clean-coverage
 	echo "########### WIKITEST ###########"
 	export WS_REAL_WIKI=1 && \
 	unset WS_REAL_DATA && \
 	export PYTHONUNBUFFERED=1 && \
-	venv/bin/nose2 -v --with-coverage service tools && \
-	coverage xml
+	.venv/bin/nose2 -v --with-coverage service tools && \
+	uv run coverage xml
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
 	unset WS_REAL_WIKI && \
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
-	venv/bin/nose2 -v --with-coverage && \
-	coverage xml
+	.venv/bin/nose2 -v --with-coverage && \
+	uv run coverage xml
 
 coverage-html : wikitest
 	echo "######### COVERAGE HTML ########"
-	coverage html -d .coverage_html
-	python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
+	uv run coverage html -d .coverage_html
+	uv run python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
 
 clean-coverage :
 	echo "######## CLEAN COVERAGE ########"
@@ -96,7 +89,7 @@ clean-coverage :
 
 codecov :
 	echo "########### CODECOV ############"
-	codecov
+	uv run codecov
 
 #############
 ### TOOLS ###
@@ -130,7 +123,7 @@ upload_ocrs_tst :
 #############
 clean : clean-pyc clean-coverage
 
-pre-commit : update_pip3 quality unittest
+pre-commit : update quality unittest
 
 quality : flake8 pycodestyle pylint mypy unittest
 

@@ -9,10 +9,10 @@ git checkout main
 git pull
 git reset --hard main
 rm -rf service/ws_re/register/data
-sudo /usr/local/bin/python3 -m pip install --upgrade pip
-sudo /usr/local/bin/python3 -m pip install -r requirements.txt
+sudo /usr/local/bin/python3 -m pip install --user uv
+uv sync
 export PYTHONPATH=${PYTHONPATH}:${BASE_DIR}
 source /etc/profile
-/usr/local/bin/python3 service/runner.py
+uv run service/runner.py
 export PYWIKIBOT_DIR=/home/pi/.pywikibot_protect/
-/usr/local/bin/python3 service/protect.py
+uv run service/protect.py

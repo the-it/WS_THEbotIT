@@ -1,0 +1,45 @@
+[project]
+name = "ws-thebotit"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13, <3.14"
+dependencies = [
+  "beautifulsoup4==4.14.3",
+  "boto3==1.42.27",
+  "boto3-stubs[essential]==1.42.27",
+  "defusedxml==0.7.1",
+  "dictdiffer==0.9.0",
+  "GitPython==3.1.46",
+  "oauthlib==3.3.1",
+  "pywikibot==10.7.4",
+  "requests==2.32.5",
+  "requests-oauthlib==2.0.0",
+  "roman==5.2",
+  "wikitextparser==0.56.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "bandit==1.9.2",
+  "beautifulsoup4==4.14.3",
+  "codecov==2.1.13",
+  "coverage==7.13.1",
+  "ddt==1.7.2",
+  "flake8==7.3.0",
+  "freezegun==1.5.5",
+  "internetarchive==5.7.1",
+  "moto==5.1.19",
+  "mypy==1.19.1",
+  "nose2==0.15.1",
+  "patool==4.0.3",
+  "pillow==12.1.0",
+  "pyfiglet==1.0.4",
+  "pylint==4.0.4",
+  "pyyaml==6.0.3",
+  "requests-mock==1.12.1",
+  "safety==3.7.0",
+  "testfixtures==10.0.0",
+  "types-freezegun==1.1.10",
+  "types-requests==2.32.4.20260107",
+]
