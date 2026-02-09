@@ -24,23 +24,23 @@ update :
 ###############
 pycodestyle :
 	echo "########## PYCODESTYLE #########"
-	pycodestyle --show-source --statistics --count
+	uv run pycodestyle --show-source --statistics --count
 
 pylint :
 	echo "############ PYLINT ############"
-	pylint -j4 --rcfile .pylintrc service tools
+	uv run pylint -j4 --rcfile .pylintrc service tools
 
 bandit :
 	echo "############ BANDIT ############"
-	bandit -r service tools
+	uv run bandit -r service tools
 
 mypy :
 	echo "############# MYPY #############"
-	mypy --check-untyped-defs  service tools
+	uv run mypy --check-untyped-defs  service tools
 
 flake8 :
 	echo "############ FLAKE8 ############"
-	flake8
+	uv run flake8
 
 ############################
 ### TESTING AND COVERAGE ###
@@ -51,7 +51,7 @@ unittest :
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	venv/bin/nose2 -v service tools
+	uv run nose2 -v service tools
 
 integrationtest : clean-coverage
 	echo "######## INTEGRATIONTEST #######"
@@ -59,29 +59,29 @@ integrationtest : clean-coverage
 	unset WS_REAL_WIKI && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	venv/bin/nose2 -v --with-coverage service tools && \
-	coverage xml
+	uv run nose2 -v --with-coverage service tools && \
+	uv run coverage xml
 
 wikitest : clean-coverage
 	echo "########### WIKITEST ###########"
 	export WS_REAL_WIKI=1 && \
 	unset WS_REAL_DATA && \
 	export PYTHONUNBUFFERED=1 && \
-	venv/bin/nose2 -v --with-coverage service tools && \
-	coverage xml
+	uv run nose2 -v --with-coverage service tools && \
+	uv run coverage xml
 
 coverage : clean-coverage
 	echo "########### COVERAGE ###########"
 	unset WS_REAL_WIKI && \
 	unset WS_REAL_DATA && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
-	venv/bin/nose2 -v --with-coverage && \
-	coverage xml
+	uv run nose2 -v --with-coverage && \
+	uv run coverage xml
 
 coverage-html : wikitest
 	echo "######### COVERAGE HTML ########"
-	coverage html -d .coverage_html
-	python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
+	uv run coverage html -d .coverage_html
+	uv run python -c "import webbrowser, os; webbrowser.open('file://' + os.path.realpath('.coverage_html/index.html'))"
 
 clean-coverage :
 	echo "######## CLEAN COVERAGE ########"
@@ -89,7 +89,7 @@ clean-coverage :
 
 codecov :
 	echo "########### CODECOV ############"
-	codecov
+	uv run codecov
 
 #############
 ### TOOLS ###
