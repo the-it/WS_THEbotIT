@@ -11,9 +11,6 @@ from tools.bots.logger import WikiLogger
 class SKFRTask(ReScannerTask):
     """Task to check sortkeys and suggest better alternatives from redirects."""
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
-        super().__init__(wiki, logger, debug)
-
     def task(self) -> bool:
         """Main task logic."""
         article = self.re_page.first_article
