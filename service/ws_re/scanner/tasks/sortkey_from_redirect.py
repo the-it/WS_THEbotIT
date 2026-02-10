@@ -35,9 +35,12 @@ class SKFRTask(ReScannerTask):
         best_redirect = self._find_best_redirect(redirects, computed_sortkey, main_lemma)
 
         if best_redirect:
-            article["SORTIERUNG"].value = best_redirect
+            # Copy sortkey to all articles
+            for art in self.re_page.splitted_article_list:
+                art["SORTIERUNG"].value = best_redirect
             self.logger.info(
-                f"Set SORTIERUNG={best_redirect} for {self.re_page.lemma_without_prefix}"
+                f"Set SORTIERUNG={best_redirect} for {self.re_page.lemma_without_prefix} "
+                f"(applied to {len(self.re_page.splitted_article_list)} article(s))"
             )
 
         return True
