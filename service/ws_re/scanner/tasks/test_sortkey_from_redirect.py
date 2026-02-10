@@ -128,3 +128,39 @@ text.
             result = self.task.task()
             self.assertTrue(result)
             # Should not crash
+
+    def test_sortkey_copied_to_all_articles(self):
+        """Test that sortkey is copied to all articles when there are multiple."""
+        self.page_mock.title_str = "RE:Ἀβαριᾶται"
+        self.page_mock.text = """{{REDaten
+|BAND=I,1
+}}
+text article 1.
+{{REAutor|OFF}}
+{{REDaten
+|BAND=I,2
+}}
+text article 2.
+{{REAutor|OFF}}
+{{REDaten
+|BAND=II,1
+}}
+text article 3.
+{{REAutor|OFF}}"""
+
+        # Mock redirect page
+        redirect_mock = mock.Mock(spec=pywikibot.Page)
+        redirect_mock.title.return_value = "RE:Abariatai"
+
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+
+        # Verify we have 3 articles
+        self.assertEqual(3, len(re_page.splitted_article_list))
+
+        with mock.patch.object(re_page, 'get_redirects', return_value=[redirect_mock]):
+            result = self.task.task()
+            self.assertTrue(result)
+            # Check that SORTIERUNG was set in ALL articles
+            for article in re_page.splitted_article_list:
+                self.assertEqual("Abariatai", article[0]["SORTIERUNG"].value)

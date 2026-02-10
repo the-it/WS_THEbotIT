@@ -37,7 +37,7 @@ class SKFRTask(ReScannerTask):
         if best_redirect:
             # Copy sortkey to all articles
             for art in self.re_page.splitted_article_list:
-                art["SORTIERUNG"].value = best_redirect
+                art[0]["SORTIERUNG"].value = best_redirect
             self.logger.info(
                 f"Set SORTIERUNG={best_redirect} for {self.re_page.lemma_without_prefix} "
                 f"(applied to {len(self.re_page.splitted_article_list)} article(s))"
