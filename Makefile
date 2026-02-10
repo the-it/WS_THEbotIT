@@ -9,7 +9,7 @@ clean-pyc :
 
 install_pip_tools :
 	echo "########## UPDATE PIP ##########"
-	pip install --upgrade pip pip-tools setuptools wheel
+	pip install --upgrade "pip<26" pip-tools setuptools wheel
 
 pip3 : install_pip_tools
 	echo "##### INSTALL REQUIREMENTS #####"

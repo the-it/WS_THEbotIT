@@ -6,15 +6,15 @@
 #
 beautifulsoup4==4.14.3
     # via -r requirements.in
-boto3==1.42.27
+boto3==1.42.46
     # via -r requirements.in
-boto3-stubs[essential]==1.42.27
+boto3-stubs[essential]==1.42.46
     # via -r requirements.in
-botocore==1.42.27
+botocore==1.42.46
     # via
     #   boto3
     #   s3transfer
-botocore-stubs==1.42.27
+botocore-stubs==1.42.41
     # via boto3-stubs
 certifi==2026.1.4
     # via requests
@@ -30,23 +30,25 @@ gitpython==3.1.46
     # via -r requirements.in
 idna==3.11
     # via requests
-jmespath==1.0.1
+jmespath==1.1.0
     # via
     #   boto3
     #   botocore
+levenshtein==0.27.3
+    # via -r requirements.in
 mwparserfromhell==0.7.2
     # via pywikibot
 mypy-boto3-cloudformation==1.42.3
     # via boto3-stubs
-mypy-boto3-dynamodb==1.42.3
+mypy-boto3-dynamodb==1.42.41
     # via boto3-stubs
-mypy-boto3-ec2==1.42.15
+mypy-boto3-ec2==1.42.45
     # via boto3-stubs
-mypy-boto3-lambda==1.42.8
+mypy-boto3-lambda==1.42.37
     # via boto3-stubs
-mypy-boto3-rds==1.42.5
+mypy-boto3-rds==1.42.46
     # via boto3-stubs
-mypy-boto3-s3==1.42.21
+mypy-boto3-s3==1.42.37
     # via boto3-stubs
 mypy-boto3-sqs==1.42.3
     # via boto3-stubs
@@ -54,13 +56,15 @@ oauthlib==3.3.1
     # via
     #   -r requirements.in
     #   requests-oauthlib
-packaging==25.0
+packaging==26.0
     # via pywikibot
 python-dateutil==2.9.0.post0
     # via botocore
-pywikibot==10.7.4
+pywikibot==11.0.0
     # via -r requirements.in
-regex==2025.11.3
+rapidfuzz==3.14.3
+    # via levenshtein
+regex==2026.1.15
     # via wikitextparser
 requests==2.32.5
     # via
@@ -77,9 +81,9 @@ six==1.17.0
     # via python-dateutil
 smmap==5.0.2
     # via gitdb
-soupsieve==2.8.1
+soupsieve==2.8.3
     # via beautifulsoup4
-types-awscrt==0.31.0
+types-awscrt==0.31.1
     # via botocore-stubs
 types-s3transfer==0.16.0
     # via boto3-stubs
@@ -89,7 +93,7 @@ urllib3==2.6.3
     # via
     #   botocore
     #   requests
-wcwidth==0.2.14
+wcwidth==0.6.0
     # via wikitextparser
 wikitextparser==0.56.4
     # via -r requirements.in
