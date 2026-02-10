@@ -1,11 +1,9 @@
 from typing import List
 
 import Levenshtein
-import pywikibot
 
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from tools.bots.logger import WikiLogger
 
 
 class SKFRTask(ReScannerTask):
