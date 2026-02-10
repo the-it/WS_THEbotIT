@@ -18,6 +18,7 @@ from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.set_unvollstaendig import SEUVTask
+from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
 from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
@@ -39,6 +40,7 @@ class ReScanner(CloudBot):
         self.tasks: List[Callable] = [
             KURZTask,  # add short description
             SEUVTask,  # if there is no Korrekturstand set, set it to "Unvollständig"
+            SKFRTask,  # set sortkey from redirect if it has a better match
             RELITask,  # remove unwanted RE cross-reference syntax
             DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia

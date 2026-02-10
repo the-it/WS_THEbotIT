@@ -4,25 +4,27 @@
 #
 #    pip-compile --output-file=requirements-dev.txt requirements-dev.in
 #
+annotated-doc==0.0.4
+    # via typer
 annotated-types==0.7.0
     # via pydantic
 anyio==4.12.1
     # via httpx
-astroid==4.0.3
+astroid==4.0.4
     # via pylint
-authlib==1.6.6
+authlib==1.6.7
     # via safety
-bandit==1.9.2
+bandit==1.9.3
     # via -r requirements-dev.in
 beautifulsoup4==4.14.3
     # via
     #   -c requirements.txt
     #   -r requirements-dev.in
-boto3==1.42.27
+boto3==1.42.46
     # via
     #   -c requirements.txt
     #   moto
-botocore==1.42.27
+botocore==1.42.46
     # via
     #   -c requirements.txt
     #   boto3
@@ -47,17 +49,17 @@ click==8.3.1
     #   typer
 codecov==2.1.13
     # via -r requirements-dev.in
-coverage==7.13.1
+coverage==7.13.4
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==46.0.3
+cryptography==46.0.5
     # via
     #   authlib
     #   moto
 ddt==1.7.2
     # via -r requirements-dev.in
-dill==0.4.0
+dill==0.4.1
     # via pylint
 dparse==0.6.4
     # via
@@ -81,7 +83,7 @@ idna==3.11
     #   anyio
     #   httpx
     #   requests
-internetarchive==5.7.1
+internetarchive==5.7.2
     # via -r requirements-dev.in
 isort==7.0.0
     # via pylint
@@ -89,7 +91,7 @@ jinja2==3.1.6
     # via
     #   moto
     #   safety
-jmespath==1.0.1
+jmespath==1.1.0
     # via
     #   -c requirements.txt
     #   boto3
@@ -100,7 +102,7 @@ jsonpatch==1.33
     # via internetarchive
 jsonpointer==3.0.0
     # via jsonpatch
-librt==0.7.7
+librt==0.7.8
     # via mypy
 markdown-it-py==4.0.0
     # via rich
@@ -108,7 +110,7 @@ markupsafe==3.0.3
     # via
     #   jinja2
     #   werkzeug
-marshmallow==4.2.0
+marshmallow==4.2.2
     # via safety
 mccabe==0.7.0
     # via
@@ -116,7 +118,7 @@ mccabe==0.7.0
     #   pylint
 mdurl==0.1.2
     # via markdown-it-py
-moto==5.1.19
+moto==5.1.21
     # via -r requirements-dev.in
 mypy==1.19.1
     # via -r requirements-dev.in
@@ -126,15 +128,15 @@ nltk==3.9.2
     # via safety
 nose2==0.15.1
     # via -r requirements-dev.in
-packaging==25.0
+packaging==26.0
     # via
     #   -c requirements.txt
     #   dparse
     #   safety
     #   safety-schemas
-pathspec==1.0.3
+pathspec==1.0.4
     # via mypy
-patool==4.0.3
+patool==4.0.4
     # via -r requirements-dev.in
 pillow==12.1.0
     # via -r requirements-dev.in
@@ -142,7 +144,7 @@ platformdirs==4.5.1
     # via pylint
 pycodestyle==2.14.0
     # via flake8
-pycparser==2.23
+pycparser==3.0
     # via cffi
 pydantic==2.12.5
     # via
@@ -169,7 +171,7 @@ pyyaml==6.0.3
     #   -r requirements-dev.in
     #   bandit
     #   responses
-regex==2025.11.3
+regex==2026.1.15
     # via
     #   -c requirements.txt
     #   nltk
@@ -186,7 +188,7 @@ requests-mock==1.12.1
     # via -r requirements-dev.in
 responses==0.25.8
     # via moto
-rich==14.2.0
+rich==14.3.2
     # via
     #   bandit
     #   typer
@@ -208,13 +210,13 @@ six==1.17.0
     # via
     #   -c requirements.txt
     #   python-dateutil
-soupsieve==2.8.1
+soupsieve==2.8.3
     # via
     #   -c requirements.txt
     #   beautifulsoup4
 stevedore==5.6.0
     # via bandit
-tenacity==9.1.2
+tenacity==9.1.4
     # via safety
 testfixtures==10.0.0
     # via -r requirements-dev.in
@@ -222,11 +224,11 @@ tomlkit==0.14.0
     # via
     #   pylint
     #   safety
-tqdm==4.67.1
+tqdm==4.67.3
     # via
     #   internetarchive
     #   nltk
-typer==0.21.1
+typer==0.21.2
     # via safety
 types-freezegun==1.1.10
     # via -r requirements-dev.in
@@ -241,7 +243,6 @@ typing-extensions==4.15.0
     #   pydantic-core
     #   safety
     #   safety-schemas
-    #   typer
     #   typing-inspection
 typing-inspection==0.4.2
     # via pydantic
