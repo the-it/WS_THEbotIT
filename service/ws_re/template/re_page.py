@@ -166,6 +166,7 @@ class RePage:
 
     def save(self, reason: str):
         if self.is_writable:
+            self.logger.info(f"DEBUG: #3 {self.lemma}")
             try:
                 save_if_changed(self.page, str(self), reason)
             except pywikibot.exceptions.LockedPageError as error:

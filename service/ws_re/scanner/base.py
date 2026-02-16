@@ -156,8 +156,10 @@ class ReScanner(CloudBot):
             for task in active_tasks:
                 processed_task = self._process_task(task, re_page, lemma)
                 if processed_task:
+                    self.logger.info(f"DEBUG: #1 {re_page.lemma} {processed_task}")
                     list_of_done_tasks.append(processed_task)
             if list_of_done_tasks and re_page.is_writable:
+                self.logger.info(f"DEBUG: #2 {re_page.lemma} {list_of_done_tasks}")
                 processed_lemmas += 1
                 if not self.debug:
                     self._save_re_page(re_page, list_of_done_tasks)
