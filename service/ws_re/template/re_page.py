@@ -5,6 +5,7 @@ import pywikibot
 
 from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, RE_AUTHOR, ReDatenException
 from service.ws_re.template.article import Article
+from tools import save_if_changed
 from tools.template_finder import TemplateFinderException, TemplateFinder, TemplatePosition
 
 
@@ -164,16 +165,14 @@ class RePage:
         return True
 
     def save(self, reason: str):
-        if self.has_changed():
-            self.page.text = str(self)
-            if self.is_writable:
-                try:
-                    self.page.save(summary=reason, bot=True)
-                except pywikibot.exceptions.LockedPageError as error:
-                    raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.") from error
-            else:
-                raise ReDatenException(f"Page {self.page.title} is protected for normal users, "
-                                       f"it can't be saved.")
+        if self.is_writable:
+            try:
+                save_if_changed(self.page, str(self), reason)
+            except pywikibot.exceptions.LockedPageError as error:
+                raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.") from error
+        else:
+            raise ReDatenException(f"Page {self.page.title} is protected for normal users, "
+                                   f"it can't be saved.")
 
     def append(self, new_article: Article):
         if isinstance(new_article, Article):
