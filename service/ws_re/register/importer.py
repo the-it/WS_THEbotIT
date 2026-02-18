@@ -61,7 +61,8 @@ class ReImporter(CloudBot):
                 break
             for idx, article in enumerate(register):
                 if article.proof_read is None:
-                    if self._CREATE_ALL or article.lemma in self.tm_set:
+                    # either create every article ... but then no persons, or create just the persons ... let's see
+                    if bool(self._CREATE_ALL) ^ bool(article.lemma in self.tm_set):
                         lemma = Page(self.wiki, f"RE:{article.lemma}")
                         if not lemma.exists():
                             article_text = self.get_text(article.volume.name, article.lemma)
