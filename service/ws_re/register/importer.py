@@ -155,6 +155,7 @@ class ReImporter(CloudBot):
         "Johannes Schmidt (Philologe)": "J. Schmidt.",
         "Ernst Schwabe": "Schwabe.",
         "Ludwig Schwabe": "Schwabe.",
+        "Hans Schaefer": "Hans Schaefer.",
     }
 
     REGEX_COMPLEX = re.compile(rf"REAutor\|(?P<author>{'|'.join(set(COMPLEX_AUTHORS.values()))})")
