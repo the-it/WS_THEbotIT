@@ -222,7 +222,7 @@ class ReImporterPersons(ReImporter):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen, Personen"
     _CREATE_ALL = False
     _PER_NIGHT = 100
-    _MAX_CAT = 200
+    _MAX_CAT = 500
 
 
 if __name__ == "__main__":  # pragma: no cover
