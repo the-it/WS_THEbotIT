@@ -151,7 +151,7 @@ class TestRePage(TestCase):
         re_page = RePage(self.page_mock)
         re_page.save("reason")
         self.text_mock.assert_called_with(ARTICLE_TEMPLATE)
-        self.page_mock.save.assert_called_once_with(summary="reason", bot=True)
+        self.page_mock.save.assert_called_once_with("reason", bot=True)
 
     def test_dont_save_because_no_changes(self):
         self.text_mock.return_value = ARTICLE_TEMPLATE
