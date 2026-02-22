@@ -75,7 +75,7 @@ something
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': False}, task.run(re_page))
+        compare({'success': True, 'changed': True}, task.run(re_page))
         compare("unvollständig", re_page.first_article["KORREKTURSTAND"].value)
 
     def test_no_change_when_empty(self):
