@@ -71,7 +71,7 @@ class ReImporter(CloudBot):
                             article_text = self.adjust_author(article_text, self.author_mapping)
                             article_text = self.adjust_end_column(article_text, register, idx)
                             article_text = article_text.replace("KORREKTURSTAND=Platzhalter",
-                                                                "KORREKTURSTAND=Unvollständig")
+                                                                "KORREKTURSTAND=unvollständig")
                             article_text = (f"{article_text}\n[[Kategorie:{self._STORE_CATEGORY}]]"
                                             "\n[[Kategorie:RE:Kurztext überprüfen]]")
                             save_if_changed(lemma, article_text, "Automatisch generiert")
@@ -108,7 +108,7 @@ class ReImporter(CloudBot):
 |VORGÄNGER={vorgaenger}
 |NACHFOLGER={nachfolger}
 |SORTIERUNG=
-|KORREKTURSTAND=Unvollständig
+|KORREKTURSTAND=unvollständig
 |KURZTEXT={short_text}
 |WIKIPEDIA=
 |WIKISOURCE=
