@@ -10,6 +10,7 @@ from service.ws_re.scanner.tasks.author_or_redirect import REAUTask
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.categorize_redirects import CARETask
 from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
+from service.ws_re.scanner.tasks.correct_korrekturstand import COKSTask
 from service.ws_re.scanner.tasks.correct_pd_dates import COPDTask
 # from service.ws_re.scanner.tasks.create_ocr import COCRTask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
@@ -49,6 +50,7 @@ class ReScanner(CloudBot):
             CARETask,  # put hard redirects to lemma in a category
             VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
             CHRETask,  # check if backlinks go over redirect pages
+            COKSTask,  # correct Korrekturstand if it is not correct
             # COCRTask,  # create OCR for empty articles
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
