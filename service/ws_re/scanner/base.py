@@ -18,7 +18,6 @@ from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
-from service.ws_re.scanner.tasks.set_unvollstaendig import SEUVTask
 from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
@@ -40,7 +39,7 @@ class ReScanner(CloudBot):
         # Wikidata and the Registers.
         self.tasks: List[Callable] = [
             KURZTask,  # add short description
-            SEUVTask,  # if there is no Korrekturstand set, set it to "Unvollständig"
+            COKSTask,  # correct Korrekturstand if it is not correct
             SKFRTask,  # set sortkey from redirect if it has a better match
             RELITask,  # remove unwanted RE cross-reference syntax
             DEALTask,  # check for dead links RE internal
@@ -50,7 +49,6 @@ class ReScanner(CloudBot):
             CARETask,  # put hard redirects to lemma in a category
             VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
             CHRETask,  # check if backlinks go over redirect pages
-            COKSTask,  # correct Korrekturstand if it is not correct
             # COCRTask,  # create OCR for empty articles
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
