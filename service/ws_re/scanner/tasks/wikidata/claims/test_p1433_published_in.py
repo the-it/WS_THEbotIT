@@ -5,8 +5,10 @@ from testfixtures import compare
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
     BaseTestClaimFactory
+from tools.test import real_wiki_test
 
 
+@real_wiki_test
 class TestP1433PublishedIn(BaseTestClaimFactory):
     def test__get_claim_json_I1(self):
         re_page = self._create_mock_page(text="{{REDaten\n|BAND=I,1}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")

@@ -4,6 +4,7 @@ from testfixtures import compare
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
     BaseTestClaimFactory
+from tools.test import real_wiki_test
 
 COUNTRIES_WITH_50_YEARS_PMA_OR_SHORTER = 59621182
 FIFTY_YEARS_OR_MORE_AFTER_AUTHORS_DEATH = 29870405
@@ -15,6 +16,7 @@ COUNTRIES_WITH_100_YEARS_PMA_OR_SHORTER = 60332278
 HUNDRED_YEARS_OR_MORE_AFTER_AUTHORS_DEATH = 29940705
 
 
+@real_wiki_test
 class TestP6216CopyrightStatus(BaseTestClaimFactory):
     PMA_CLAIM_50 = {'mainsnak':
                         {'snaktype': 'value',

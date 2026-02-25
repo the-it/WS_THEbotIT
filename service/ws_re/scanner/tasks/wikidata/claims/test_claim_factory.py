@@ -13,7 +13,7 @@ from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 from tools.bots.logger import WikiLogger
-from tools.test import REAL_WIKI_TEST
+from tools.test import REAL_WIKI_TEST, real_wiki_test
 
 
 class BaseTestClaimFactory(TestCase):
@@ -49,6 +49,7 @@ class BaseTestClaimFactory(TestCase):
                 "rank": "normal"}
 
 
+@real_wiki_test
 class TestClaimFactory(BaseTestClaimFactory):
     class P1234FactoryDummy(ClaimFactory):
         def _get_claim_json(self) -> List[JsonClaimDict]:

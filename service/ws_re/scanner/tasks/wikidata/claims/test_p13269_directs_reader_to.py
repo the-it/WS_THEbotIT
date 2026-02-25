@@ -9,6 +9,7 @@ from service.ws_re.template.re_page import RePage
 from tools.test import real_wiki_test
 
 
+@real_wiki_test
 class TestP13269DirectsReadersTo(BaseTestClaimFactory):
     def test__get_claim_json_no_redirect(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
@@ -16,7 +17,6 @@ class TestP13269DirectsReadersTo(BaseTestClaimFactory):
         claim_json = factory._get_claim_json()
         compare([], claim_json)
 
-    @real_wiki_test
     def test__get_claim_json(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Amantes 2"))
         factory = P13269DirectsReadersTo(re_page, self.logger)

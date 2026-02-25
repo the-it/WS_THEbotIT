@@ -60,19 +60,19 @@ blub
         self.page_mock.text = """{{REDaten
 |BAND=XIII,2
 |KEINE_SCHÖPFUNGSHÖHE=OFF
-|TODESJAHR=
-|GEBURTSJAHR=1882
+|TODESJAHR=1944
+|GEBURTSJAHR=
 }}
 blub
 {{REAutor|Obst.}}"""
         re_page = RePage(self.page_mock)
         article_list = re_page.splitted_article_list[0]
-        years = Years(None, 1944, 2015)
+        years = Years(1882, None, 2099)
         self.task.set_year_values(article_list, years)
         first_article = article_list[0]
         compare(False, first_article["KEINE_SCHÖPFUNGSHÖHE"].value)
-        compare("", first_article["GEBURTSJAHR"].value)
-        compare("1944", first_article["TODESJAHR"].value)
+        compare("1882", first_article["GEBURTSJAHR"].value)
+        compare("", first_article["TODESJAHR"].value)
 
     def test_set_years_relevant_but_not_protected_anymore_dont_set_years(self):
         self.page_mock.text = """{{REDaten
@@ -196,7 +196,7 @@ bla
     def test_process_newly_public_domain_height_of_creation(self):
         """
         article is in public domain since but has height of creation.
-        Expectation: article not changed
+        Expectation: article changed
         """
         self.page_mock.text = """{{REDaten
 |BAND=S I
@@ -212,7 +212,7 @@ bla
         first_article = article_list[0]
         compare(False, first_article["KEINE_SCHÖPFUNGSHÖHE"].value)
         compare("", first_article["GEBURTSJAHR"].value)
-        compare("1950", first_article["TODESJAHR"].value)
+        compare("", first_article["TODESJAHR"].value)
 
     def test_no_author_information(self):
         """

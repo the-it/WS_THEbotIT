@@ -4,8 +4,10 @@ from testfixtures import compare
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
 from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
     BaseTestClaimFactory
+from tools.test import real_wiki_test
 
 
+@real_wiki_test
 class TestP3903Column(BaseTestClaimFactory):
     def test__get_claim_json_start_and_end(self):
         re_page = self._create_mock_page(
