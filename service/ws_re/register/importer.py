@@ -224,7 +224,7 @@ class ReImporter(CloudBot):
 class ReImporterPersons(ReImporter):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen, Personen"
     _CREATE_ALL = False
-    _PER_NIGHT = 100
+    _PER_NIGHT = 50
     _MAX_CAT = 500
 
 
