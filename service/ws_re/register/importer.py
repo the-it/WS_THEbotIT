@@ -141,6 +141,7 @@ class ReImporter(CloudBot):
         "Wilhelm Enßlin": "W. Enßlin.",
         "Walter Friedrich Otto": "W. F. Otto.",
         "Hans Philipp": "Philipp.",
+        "Schmidt": "Johanna Schmidt.",
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
