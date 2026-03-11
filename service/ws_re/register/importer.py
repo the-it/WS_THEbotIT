@@ -16,7 +16,7 @@ from tools.bots.cloud_bot import CloudBot
 class ReImporter(CloudBot):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen"
     _CREATE_ALL = True
-    _PER_NIGHT = 50
+    _PER_NIGHT = 100
     _MAX_CAT = 1000
 
     def __init__(self, wiki: Site = None, debug: bool = True,
@@ -142,6 +142,7 @@ class ReImporter(CloudBot):
         "Walter Friedrich Otto": "W. F. Otto.",
         "Hans Philipp": "Philipp.",
         "Schmidt": "Johanna Schmidt.",
+        "Albert William Van Buren": "A. W. Van Buren."
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
