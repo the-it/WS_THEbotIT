@@ -16,7 +16,7 @@ from tools.bots.cloud_bot import CloudBot
 class ReImporter(CloudBot):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen"
     _CREATE_ALL = True
-    _PER_NIGHT = 100
+    _PER_NIGHT = 50
     _MAX_CAT = 1000
 
     def __init__(self, wiki: Site = None, debug: bool = True,
@@ -142,7 +142,8 @@ class ReImporter(CloudBot):
         "Walter Friedrich Otto": "W. F. Otto.",
         "Hans Philipp": "Philipp.",
         "Schmidt": "Johanna Schmidt.",
-        "Albert William Van Buren": "A. W. Van Buren."
+        "Albert William Van Buren": "A. W. Van Buren.",
+        "Judith Andrée-Hanslik": "Judith Andrée-Hanslik."
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
@@ -232,4 +233,6 @@ class ReImporterPersons(ReImporter):
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReImporter(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
+        bot.run()
+    with ReImporterPersons(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
         bot.run()
