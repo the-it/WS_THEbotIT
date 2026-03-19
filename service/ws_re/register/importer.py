@@ -16,7 +16,7 @@ from tools.bots.cloud_bot import CloudBot
 class ReImporter(CloudBot):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen"
     _CREATE_ALL = True
-    _PER_NIGHT = 40
+    _PER_NIGHT = 25
     _MAX_CAT = 1000
 
     def __init__(self, wiki: Site = None, debug: bool = True,
@@ -227,7 +227,7 @@ class ReImporter(CloudBot):
 class ReImporterPersons(ReImporter):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen, Personen"
     _CREATE_ALL = False
-    _PER_NIGHT = 40
+    _PER_NIGHT = 55
     _MAX_CAT = 500
 
 
