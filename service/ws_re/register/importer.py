@@ -15,7 +15,6 @@ from tools.bots.cloud_bot import CloudBot
 
 class ReImporter(CloudBot):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen"
-    _CREATE_ALL = True
     _PER_NIGHT = 25
     _MAX_CAT = 1000
 
@@ -61,21 +60,22 @@ class ReImporter(CloudBot):
                 break
             for idx, article in enumerate(register):
                 if article.proof_read is None:
-                    # either create every article ... but then no persons, or create just the persons ... let's see
-                    if bool(self._CREATE_ALL) ^ bool(article.lemma in self.tm_set):
-                        lemma = Page(self.wiki, f"RE:{article.lemma}")
-                        if not lemma.exists():
-                            article_text = self.get_text(article.volume.name, article.lemma)
-                            if not article_text:
-                                article_text = self.get_text_backup(article.volume.name, article)
-                            article_text = self.adjust_author(article_text, self.author_mapping)
-                            article_text = self.adjust_end_column(article_text, register, idx)
-                            article_text = article_text.replace("KORREKTURSTAND=Platzhalter",
-                                                                "KORREKTURSTAND=unvollständig")
-                            article_text = (f"{article_text}\n[[Kategorie:{self._STORE_CATEGORY}]]"
-                                            "\n[[Kategorie:RE:Kurztext überprüfen]]")
-                            save_if_changed(lemma, article_text, "Automatisch generiert")
-                            create_count += 1
+                    lemma = Page(self.wiki, f"RE:{article.lemma}")
+                    if not lemma.exists():
+                        article_text = self.get_text(article.volume.name, article.lemma)
+                        if not article_text:
+                            article_text = self.get_text_backup(article.volume.name, article)
+                        article_text = self.adjust_author(article_text, self.author_mapping)
+                        article_text = self.adjust_end_column(article_text, register, idx)
+                        article_text = article_text.replace("KORREKTURSTAND=Platzhalter",
+                                                            "KORREKTURSTAND=unvollständig")
+                        category = self._STORE_CATEGORY
+                        if article.lemma in self.tm_set:
+                            category += ", Personen"
+                        article_text = (f"{article_text}\n[[Kategorie:{category}]]"
+                                        "\n[[Kategorie:RE:Kurztext überprüfen]]")
+                        save_if_changed(lemma, article_text, "Automatisch generiert")
+                        create_count += 1
                 if create_count >= self.max_create:
                     self.logger.info(
                         f"Created {create_count} articles. Last article was [[RE:{article.lemma}]]"
@@ -224,16 +224,7 @@ class ReImporter(CloudBot):
         return article_text.replace("SPALTE_END=OFF", f"SPALTE_END={start_follow_article}")
 
 
-class ReImporterPersons(ReImporter):
-    _STORE_CATEGORY = "RE:Stammdaten überprüfen, Personen"
-    _CREATE_ALL = False
-    _PER_NIGHT = 55
-    _MAX_CAT = 1000
-
-
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with ReImporter(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
-        bot.run()
-    with ReImporterPersons(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
         bot.run()
