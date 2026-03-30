@@ -116,7 +116,13 @@ class TestP1343DescribedBySource(BaseTestClaimFactory):
                                      },
                                 'property': 'P805',
                                 'snaktype': 'value'
-                                }
+                                },
+                               {'datatype': 'wikibase-item',
+                                'datavalue':
+                                    {'type': 'wikibase-entityid',
+                                     'value': {'entity-type': 'item', 'numeric-id': 136521528}
+                                     },
+                                'property': 'P805', 'snaktype': 'value'}
                            ]
                        },
                    'qualifiers-order': ['P805'],
