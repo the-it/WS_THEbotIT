@@ -212,8 +212,8 @@ class ClaimFactory:
             author = article_part.author.identification
             band = article_list[0]["BAND"].value
             possible_authors = self._authors.get_author_by_mapping(author, band)
-            if len(possible_authors) == 1:
-                author_list.append(possible_authors[0])
+            for author in possible_authors:
+                author_list.append(author)
         return author_list
 
     def _volume_of_article(self, article: Article) -> Volume:
