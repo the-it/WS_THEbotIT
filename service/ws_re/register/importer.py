@@ -145,6 +145,7 @@ class ReImporter(CloudBot):
         "Albert William Van Buren": "A. W. Van Buren.",
         "Judith Andrée-Hanslik": "Judith Andrée-Hanslik.",
         "Anthony Eric Raubitschek": "A. Raubitschek.",
+        "Hans Georg Gundel": "H. Gundel.",
     }
 
     COMPLEX_AUTHORS: dict[str, str] = {
