@@ -1,8 +1,6 @@
 # pylint: disable=protected-access,no-self-use
 from unittest import TestCase
 
-from testfixtures import compare
-
 from service.ws_re.register.importer import ReImporter
 from service.ws_re.register.registers import Registers
 from tools.test import real_wiki_test
