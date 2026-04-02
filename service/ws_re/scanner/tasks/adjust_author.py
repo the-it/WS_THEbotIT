@@ -28,6 +28,7 @@ ADDITIONAL_AUTHORS: dict[str, str] = {
     "Judith Andrée-Hanslik": "Judith Andrée-Hanslik.",
     "Anthony Eric Raubitschek": "A. Raubitschek.",
     "Hans Georg Gundel": "H. Gundel.",
+    "Max Lambertz": "Lambertz.",
 }
 
 COMPLEX_AUTHORS: dict[str, str] = {
