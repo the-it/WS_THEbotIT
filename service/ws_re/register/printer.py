@@ -36,7 +36,7 @@ class ReRegisterPrinter(CloudBot):
             if register.author.last_name:
                 save_if_changed(Page(self.wiki,
                                      f"Paulys Realencyclopädie der classischen "
-                                     f"Altertumswissenschaft/Register/{register.author.name}"),
+                                     f"Altertumswissenschaft/Register/{register.author.ws_lemma_if_exists}"),
                                 register.get_register_str(print_details=register.author.name != "Hans Gärtner"),
                                 "Register aktualisiert")
                 overview.append(register.overview_line)

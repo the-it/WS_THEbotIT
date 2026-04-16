@@ -60,6 +60,13 @@ class Author:
     def name(self) -> str:
         return self._name
 
+    @property
+    def ws_lemma_if_exists(self) -> str:
+        name: str = self.name
+        if self.ws_lemma and ":" not in self.ws_lemma:
+            name = self.ws_lemma
+        return name
+
     def update_internal_dict(self, author_dict: AuthorDict):
         for key in (
             "birth",

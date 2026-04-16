@@ -41,7 +41,7 @@ class AuthorRegister(Register):
 
     def _get_header(self) -> str:
         header = ["RERegister"]
-        header.append(f"AUTHOR={self._author.name}")
+        header.append(f"AUTHOR={self._author.ws_lemma_if_exists}")
         header.append(f"SUM={len(self)}")
         # calculate proof_read status
         fer, kor, unk = self.proof_read
