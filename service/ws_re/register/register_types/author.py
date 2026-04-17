@@ -62,7 +62,8 @@ class AuthorRegister(Register):
         return any(lemma.exists for lemma in self._lemmas)
 
     def get_category_str(self):
-        return f"{{{{REKategorie/Autor|{self.author.ws_lemma_if_exists}|{self.author.last_name}, {self.author.first_name}}}}}"
+        return f"{{{{REKategorie/Autor|{self.author.ws_lemma_if_exists}"\
+               f"|{self.author.last_name}, {self.author.first_name}}}}}"
 
     @property
     def overview_line(self):
