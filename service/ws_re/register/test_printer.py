@@ -86,17 +86,23 @@ class TestReRegisterPrinter(BaseTestRegister, TestCloudBase):
         with mock.patch("service.ws_re.register.printer.Page") as page_mock:
             printer = ReRegisterPrinter()
             printer._print_author()
-            compare(4, len(page_mock.call_args_list))
+            compare(7, len(page_mock.call_args_list))
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel'),
                     page_mock.call_args_list[0])
-            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Abert'),
+            compare(call(None, 'Kategorie:RE:Autor:Herman Abel'),
                     page_mock.call_args_list[1])
+            compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Abert'),
+                    page_mock.call_args_list[2])
+            compare(call(None, 'Kategorie:RE:Autor:Abert'),
+                    page_mock.call_args_list[3])
             compare(call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/'
                                'Register/William Abbott'),
-                    page_mock.call_args_list[2])
+                    page_mock.call_args_list[4])
+            compare(call(None, 'Kategorie:RE:Autor:William Abbott'),
+                    page_mock.call_args_list[5])
             compare(
                 call(None, 'Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Autorenübersicht'),
-                page_mock.call_args_list[3])
+                page_mock.call_args_list[6])
 
     def test_print_sortkey_map(self):
         with mock.patch("service.ws_re.register.printer.Page") as page_mock:

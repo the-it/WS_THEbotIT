@@ -58,6 +58,13 @@ class AuthorRegister(Register):
                f"\n{self._get_table(print_description=print_details, print_author=print_details)}" \
                f"\n{self._get_footer()}"
 
+    def has_existing_article(self) -> bool:
+        return any(lemma.exists for lemma in self._lemmas)
+
+    def get_category_str(self):
+        return f"{{{{REKategorie/Autor|{self.author.ws_lemma_if_exists}"\
+               f"|{self.author.last_name}, {self.author.first_name}}}}}"
+
     @property
     def overview_line(self):
         line = ["|-\n", f"|data-sort-value=\"{self.author.last_name}, {self.author.first_name}\""]

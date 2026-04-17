@@ -39,6 +39,10 @@ class ReRegisterPrinter(CloudBot):
                                      f"Altertumswissenschaft/Register/{register.author.ws_lemma_if_exists}"),
                                 register.get_register_str(print_details=register.author.name != "Hans Gärtner"),
                                 "Register aktualisiert")
+                if register.has_existing_article():
+                    save_if_changed(Page(self.wiki, f"Kategorie:RE:Autor:{register.author.ws_lemma_if_exists}"),
+                                    register.get_category_str(),
+                                    "Kategorie aktualisiert")
                 overview.append(register.overview_line)
         overview.append("|}")
         save_if_changed(Page(self.wiki,
