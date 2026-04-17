@@ -128,6 +128,20 @@ class TestAuthorRegister(BaseTestRegister):
 [[Kategorie:RE:Register|Abel, Herman]]"""
         compare(expected_table_less_details, abel_register.get_register_str(print_details=False))
 
+    def test_has_existing_article(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        compare(True, abel_register.has_existing_article())
+
+    def test_has_existing_article_none(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        for lemma in abel_register._lemmas:
+            lemma.proof_read = None
+        compare(False, abel_register.has_existing_article())
+
+    def test_get_category_str(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        compare("{{REKategorie/Autor|Herman Abel|Abel, Herman}}", abel_register.get_category_str())
+
     def test_overview_line(self):
         abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
         compare("|-\n"
