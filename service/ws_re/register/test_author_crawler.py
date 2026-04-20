@@ -1,12 +1,14 @@
 # pylint: disable=protected-access,no-self-use
 from unittest.case import TestCase
 
+from ddt import ddt, file_data
 from testfixtures import compare
 
 from service.ws_re.register.author_crawler import AuthorCrawler
 from service.ws_re.register.authors import Authors
 
 
+@ddt
 class TestAuthorCrawler(TestCase):
     def setUp(self):
         self.crawler = AuthorCrawler()
@@ -139,27 +141,9 @@ class TestAuthorCrawler(TestCase):
         }
         compare(expect, self.crawler.get_compound_mapping(test_str, Authors()))
 
-    def test_extract_author_infos(self):
-        compare(("Klaus", "Alpers", ""), self.crawler._extract_author_infos("|Alpers, Klaus"))
-        compare(("Franz", "Altheim", ""), self.crawler._extract_author_infos("Altheim, [Franz]"))
-        compare(("Wolfgang", "Aly", "Wolfgang Aly"),
-                self.crawler._extract_author_infos("|[[Wolfgang Aly|Aly, Wolf[gang]]]"))
-        compare(("Walter", "Amelung", "Walter Amelung"),
-                self.crawler._extract_author_infos("|'''[[Walter Amelung|Amelung, [Walter]]]'''"))
-        compare(("Hermann", "Abert", "Hermann Abert"),
-                self.crawler._extract_author_infos("|'''[[Hermann Abert|Abert, [Hermann]]]"))
-        compare(("Martin", "Bang", ""), self.crawler._extract_author_infos("Bang, [Martin]{{Anker | B}}"))
-        compare(("Johannes", "Zwicker", ""), self.crawler._extract_author_infos("Zwicker, Joh[annes = Hanns]"))
-        compare(("Friedrich Walter", "Lenz", ""),
-                self.crawler._extract_author_infos("Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"))
-        compare(("Eduard", "Thraemer", "Eduard Thraemer"),
-                self.crawler._extract_author_infos("'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"))
-        compare(("", "Buren s. Van Buren", ""), self.crawler._extract_author_infos("Buren s. Van Buren"))
-        compare(("Karl", "Praechter", ""), self.crawler._extract_author_infos("Praechter, K[arl]<nowiki></nowiki>"))
-        compare(("Richard", "Wagner", "Richard Wagner (Philologe)"),
-                self.crawler._extract_author_infos("'''[[Richard Wagner (Philologe)|Wagner, [Richard]]]'''"))
-        compare(("Anton", "Baumstark", "Anton Baumstark junior"),
-                self.crawler._extract_author_infos("'''[[Anton Baumstark junior|Baumstark, [Anton (jr.)]]]'''"))
+    @file_data("test_data/test_extract_author_infos.yml")
+    def test_extract_author_infos(self, given, expect):
+        compare(tuple(expect), self.crawler._extract_author_infos(given))
 
     def test_extract_years(self):
         compare((1906, 1988), self.crawler._extract_years("1906 || 1988"))

@@ -1,0 +1,55 @@
+alpers:
+  given: "|Alpers, Klaus"
+  expect: ["Klaus", "Alpers", ""]
+
+altheim:
+  given: "Altheim, [Franz]"
+  expect: ["Franz", "Altheim", ""]
+
+aly:
+  given: "|[[Wolfgang Aly|Aly, Wolf[gang]]]"
+  expect: ["Wolfgang", "Aly", "Wolfgang Aly"]
+
+amelung:
+  given: "|'''[[Walter Amelung|Amelung, [Walter]]]'''"
+  expect: ["Walter", "Amelung", "Walter Amelung"]
+
+abert:
+  given: "|'''[[Hermann Abert|Abert, [Hermann]]]"
+  expect: ["Hermann", "Abert", "Hermann Abert"]
+
+bang:
+  given: "Bang, [Martin]{{Anker | B}}"
+  expect: ["Martin", "Bang", ""]
+
+zwicker:
+  given: "Zwicker, Joh[annes = Hanns]"
+  expect: ["Johannes", "Zwicker", ""]
+
+lenz:
+  given: "Lenz, Friedrich [Walter] = (Levy, [Friedrich Walter])"
+  expect: ["Friedrich Walter", "Lenz", ""]
+
+thraemer:
+  given: "'''[[Eduard Thraemer|Thraemer [= Thrämer], Eduard]]'''"
+  expect: ["Eduard", "Thraemer", "Eduard Thraemer"]
+
+buren:
+  given: "Buren s. Van Buren"
+  expect: ["", "Buren s. Van Buren", ""]
+
+praechter:
+  given: "Praechter, K[arl]<nowiki></nowiki>"
+  expect: ["Karl", "Praechter", ""]
+
+wagner:
+  given: "'''[[Richard Wagner (Philologe)|Wagner, [Richard]]]'''"
+  expect: ["Richard", "Wagner", "Richard Wagner (Philologe)"]
+
+baumstark:
+  given: "'''[[Anton Baumstark junior|Baumstark, [Anton (jr.)]]]'''"
+  expect: ["Anton", "Baumstark", "Anton Baumstark junior"]
+
+borzsák:
+  given: "Borzsák, [István/]St[efan]"
+  expect: ["István", "Borzsák", "István Borzsák"]

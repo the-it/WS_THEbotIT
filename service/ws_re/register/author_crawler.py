@@ -116,6 +116,11 @@ class AuthorCrawler:
                 names[0] = names[0].split("=")[0].strip()
             if "=" in names[1]:
                 names[1] = names[1].split("=")[0].strip()
+            # handle alternative names separated by "/"
+            if "/" in names[1]:
+                names[1] = names[1].split("/")[0].strip()
+                if not author_lemma:
+                    author_lemma = f"{names[1]} {names[0].strip()}"
         except IndexError:
             return "", names[0].strip(), author_lemma
         return names[1].strip(), names[0].strip(), author_lemma

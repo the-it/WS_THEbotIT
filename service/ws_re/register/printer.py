@@ -19,8 +19,8 @@ class ReRegisterPrinter(CloudBot):
         self.registers = Registers()
 
     def task(self):
-        self._print_volume()
-        self._print_alphabetic()
+        #self._print_volume()
+        #self._print_alphabetic()
         self._print_author()
         self._print_short()
         self._print_pd()
@@ -34,6 +34,7 @@ class ReRegisterPrinter(CloudBot):
                     "\n!Autor\n!Artikel\n!colspan=\"2\"|Erschließungsgrad"]
         for register in self.registers.author:
             if register.author.last_name:
+                print(register.author.name)
                 save_if_changed(Page(self.wiki,
                                      f"Paulys Realencyclopädie der classischen "
                                      f"Altertumswissenschaft/Register/{register.author.ws_lemma_if_exists}"),
