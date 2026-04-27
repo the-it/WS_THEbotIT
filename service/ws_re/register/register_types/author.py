@@ -69,7 +69,7 @@ class AuthorRegister(Register):
     def overview_line(self):
         line = ["|-\n", f"|data-sort-value=\"{self.author.last_name}, {self.author.first_name}\""]
         line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
-                    f"{self.author.name}|{self.author.name}]]\n")
+                    f"{self.author.ws_lemma_if_exists}|{self.author.ws_lemma_if_exists}]]\n")
         line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}\n")
         fer, kor, _ = self.proof_read
         parts_fertig, parts_korrigiert, parts_unkorrigiert = \
