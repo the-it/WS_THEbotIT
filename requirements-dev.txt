@@ -138,7 +138,7 @@ pathspec==1.0.4
     # via mypy
 patool==4.0.4
     # via -r requirements-dev.in
-pillow==12.1.0
+pillow==12.1.1
     # via -r requirements-dev.in
 platformdirs==4.5.1
     # via pylint
