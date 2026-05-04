@@ -1,11 +1,11 @@
-# pragma: no cover
-
 import json
+from datetime import datetime
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import List, Tuple
 
 from PIL import Image, ImageDraw, ImageFont
 
+from service.ws_re.register.authors import Authors
 from service.ws_re.register.repo import DataRepo
 from service.ws_re.volumes import Volumes
 
@@ -16,6 +16,7 @@ LABEL_PADDING = 6
 COLOR_GREEN = (102, 153, 102)
 COLOR_YELLOW = (255, 215, 0)
 COLOR_RED = (170, 0, 0)
+COLOR_LIGHT_RED = (255, 130, 130)
 COLOR_BLACK = (0, 0, 0)
 COLOR_BACKGROUND = (255, 255, 255)
 COLOR_TEXT = (0, 0, 0)
@@ -23,23 +24,43 @@ COLOR_TEXT = (0, 0, 0)
 Color = Tuple[int, int, int]
 
 
-def _color_for_proof_read(proof_read: Optional[int]) -> Color:
+def _is_public_domain(lemma: dict, authors: Authors, volume_name: str) -> bool:
+    if lemma.get("no_creative_height"):
+        return True
+    max_pd_year = 0
+    for chapter in lemma.get("chapters", []):
+        author_name = chapter.get("author")
+        if not author_name:
+            continue
+        for mapped in authors.get_author_by_mapping(author_name, volume_name):
+            if mapped.year_public_domain:
+                max_pd_year = max(max_pd_year, mapped.year_public_domain)
+    if max_pd_year == 0:
+        return True
+    return max_pd_year <= datetime.now().year
+
+
+def _color_for_lemma(lemma: dict, authors: Authors, volume_name: str) -> Color:
+    proof_read = lemma.get("proof_read")
     if proof_read == 3:
         return COLOR_GREEN
     if proof_read == 2:
         return COLOR_YELLOW
     if proof_read in (0, 1):
+        if not _is_public_domain(lemma, authors, volume_name):
+            return COLOR_LIGHT_RED
         return COLOR_RED
     return COLOR_BLACK
 
 
-def _build_row_articles(lemmas: List[dict], start_column: int, length: int) -> List[List[Color]]:
+def _build_row_articles(lemmas: List[dict], start_column: int, length: int,
+                        authors: Authors, volume_name: str) -> List[List[Color]]:
     spans: List[List] = []
     for lemma in lemmas:
         chapters = lemma.get("chapters", [])
         if not chapters:
             continue
-        color = _color_for_proof_read(lemma.get("proof_read"))
+        color = _color_for_lemma(lemma, authors, volume_name)
         first = min(chapter["start"] for chapter in chapters)
         last = max(chapter.get("end", chapter["start"]) for chapter in chapters)
         last_chapter = max(chapters, key=lambda chapter: chapter["start"])
@@ -51,12 +72,11 @@ def _build_row_articles(lemmas: List[dict], start_column: int, length: int) -> L
     for i, span in enumerate(spans):
         if not span[3]:
             continue
-        new_last = volume_end
-        for j in range(i + 1, len(spans)):
-            if spans[j][0] > span[1]:
-                new_last = spans[j][0] - 1
-                break
-        span[1] = new_last
+        if i + 1 < len(spans):
+            next_start = spans[i + 1][0]
+            span[1] = max(span[1], next_start - 1)
+        else:
+            span[1] = volume_end
 
     articles_per_column: List[List[Color]] = [[] for _ in range(length)]
     for first, last, color, _ in spans:
@@ -78,6 +98,7 @@ def _load_font() -> ImageFont.ImageFont:
 
 def create_picture(output_path: Path) -> None:
     data_path = DataRepo().get_data_path()
+    authors = Authors()
     rows: List[Tuple[str, List[List[Color]]]] = []
     for volume in Volumes().all_volumes:
         start_column = volume.start_column
@@ -90,7 +111,7 @@ def create_picture(output_path: Path) -> None:
         with open(json_file, "r", encoding="utf-8") as fp:
             lemmas = json.load(fp)
         length = end_column - start_column + 1
-        rows.append((volume.name, _build_row_articles(lemmas, start_column, length)))
+        rows.append((volume.name, _build_row_articles(lemmas, start_column, length, authors, volume.name)))
 
     bar_width = max(len(row) for _, row in rows)
     width = LABEL_WIDTH + bar_width
@@ -102,14 +123,15 @@ def create_picture(output_path: Path) -> None:
         row_y = row_idx * LINE_HEIGHT
         for col_idx, article_colors in enumerate(articles_per_column):
             x = LABEL_WIDTH + col_idx
+            bar_height = LINE_HEIGHT - 1
             if not article_colors:
-                for y_offset in range(LINE_HEIGHT):
+                for y_offset in range(bar_height):
                     pixels[x, row_y + y_offset] = COLOR_BLACK
                 continue
             count = len(article_colors)
             for i, color in enumerate(article_colors):
-                y_start = (i * LINE_HEIGHT) // count
-                y_end = ((i + 1) * LINE_HEIGHT) // count
+                y_start = (i * bar_height) // count
+                y_end = ((i + 1) * bar_height) // count
                 for y_offset in range(y_start, y_end):
                     pixels[x, row_y + y_offset] = color
 
