@@ -72,11 +72,21 @@ def _build_row_articles(lemmas: List[dict], start_column: int, length: int,
     for i, span in enumerate(spans):
         if not span[3]:
             continue
-        if i + 1 < len(spans):
-            next_start = spans[i + 1][0]
-            span[1] = max(span[1], next_start - 1)
-        else:
-            span[1] = volume_end
+        original_last = span[1]
+        new_last = volume_end
+        for j in range(i + 1, len(spans)):
+            if spans[j][0] > original_last:
+                new_last = spans[j][0] - 1
+                break
+        # An open-ended chapter must not extend into the body of a closed article whose
+        # span already covers the column right after the open chapter — even when that
+        # closed article appears earlier in sort order (same start column).
+        for other in spans:
+            if other is span or other[3]:
+                continue
+            if other[0] <= new_last and other[1] >= original_last + 1:
+                new_last = min(new_last, other[0] - 1)
+        span[1] = max(original_last, new_last)
 
     articles_per_column: List[List[Color]] = [[] for _ in range(length)]
     for first, last, color, _ in spans:

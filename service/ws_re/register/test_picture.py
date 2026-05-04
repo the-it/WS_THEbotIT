@@ -153,6 +153,29 @@ class TestBuildRowArticles(BaseTestRegister):
             result,
         )
 
+    def test_open_ended_span_blocked_by_long_closed_starting_earlier_in_sort(self):
+        # Regression for S XI: when a long closed span shares the open-ended span's
+        # start column AND was input first (so it sorts before the open span), the
+        # open span must still be clamped to its own start — not extended across the
+        # closed article's body to the next sorted neighbour.
+        long_span = {
+            "proof_read": 3,
+            "chapters": [{"start": 5, "end": 9, "author": "Abert"}],
+        }
+        open_ended = {"proof_read": 2, "chapters": [{"start": 5, "author": "Abert"}]}
+        far = {"proof_read": 3, "chapters": [{"start": 12, "end": 12, "author": "Abert"}]}
+        # Order matters: long_span first ensures it sorts before open_ended at col 5.
+        result = _build_row_articles([long_span, open_ended, far], 1, 13, self.authors, "I,1")
+        expected = [
+            [], [], [], [],
+            [COLOR_GREEN, COLOR_YELLOW],     # col 5 — both articles begin here
+            [COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN],  # cols 6–9 — long span only
+            [], [],                           # cols 10–11 — gap
+            [COLOR_GREEN],                    # col 12 — far span
+            [],                               # col 13
+        ]
+        compare(expected, result)
+
     def test_overlapping_spans_stack_colors(self):
         first = {"proof_read": 3, "chapters": [{"start": 1, "end": 3, "author": "Abert"}]}
         second = {"proof_read": 2, "chapters": [{"start": 2, "end": 4, "author": "Abert"}]}
