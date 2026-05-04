@@ -13,7 +13,9 @@ from service.ws_re.register.picture import (
     COLOR_GREEN,
     COLOR_LIGHT_RED,
     COLOR_RED,
+    COLOR_WHITE,
     COLOR_YELLOW,
+    HEADER_HEIGHT,
     LABEL_WIDTH,
     LINE_HEIGHT,
     _build_row_articles,
@@ -231,7 +233,7 @@ class TestCreatePicture(BaseTestRegister):
                 compare(True, out_path.exists())
                 with Image.open(out_path) as image:
                     compare("PNG", image.format)
-                    compare((LABEL_WIDTH + 10, LINE_HEIGHT), image.size)
+                    compare((LABEL_WIDTH + 10, HEADER_HEIGHT + LINE_HEIGHT), image.size)
 
     def test_skips_volumes_without_columns(self):
         # The volume without columns is skipped; only I,1 contributes a row.
@@ -245,7 +247,7 @@ class TestCreatePicture(BaseTestRegister):
                 out_path = Path(tmp_dir).joinpath("out.png")
                 create_picture(out_path)
                 with Image.open(out_path) as image:
-                    compare((LABEL_WIDTH + 5, LINE_HEIGHT), image.size)
+                    compare((LABEL_WIDTH + 5, HEADER_HEIGHT + LINE_HEIGHT), image.size)
 
     def test_skips_volumes_without_json_file(self):
         present = Volume(
@@ -261,7 +263,7 @@ class TestCreatePicture(BaseTestRegister):
                 create_picture(out_path)
                 with Image.open(out_path) as image:
                     # Only one row (the present volume) is rendered.
-                    compare(LINE_HEIGHT, image.size[1])
+                    compare(HEADER_HEIGHT + LINE_HEIGHT, image.size[1])
 
     def test_renders_label_and_bar_pixels(self):
         volume = Volume(
@@ -287,5 +289,138 @@ class TestCreatePicture(BaseTestRegister):
                 with Image.open(out_path) as image:
                     pixels = image.load()
                     # Bar pixels are green inside the span.
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH, 0])
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 5, 0])
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH, HEADER_HEIGHT])
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 5, HEADER_HEIGHT])
+
+    def test_gridline_does_not_overwrite_marked_column_data(self):
+        # Col 50 is the first marked column. Give it its own (yellow) lemma so
+        # we can prove the gridline gap doesn't replace its data.
+        volume = Volume(
+            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="55"
+        )
+        lemmas = [
+            {
+                "lemma": "Before",
+                "proof_read": 3,
+                "no_creative_height": True,
+                "chapters": [{"start": 1, "end": 49, "author": "Abert"}],
+            },
+            {
+                "lemma": "Marked",
+                "proof_read": 2,
+                "no_creative_height": True,
+                "chapters": [{"start": 50, "end": 50, "author": "Abert"}],
+            },
+            {
+                "lemma": "After",
+                "proof_read": 3,
+                "no_creative_height": True,
+                "chapters": [{"start": 51, "end": 55, "author": "Abert"}],
+            },
+        ]
+        json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
+        with open(json_file, "w", encoding="utf-8") as fp:
+            json.dump(lemmas, fp)
+        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+            volumes_mock.return_value.all_volumes = [volume]
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                out_path = Path(tmp_dir).joinpath("out.png")
+                create_picture(out_path)
+                with Image.open(out_path) as image:
+                    pixels = image.load()
+                    bar_y = HEADER_HEIGHT + 1
+                    # Col 49 (offset 48) green, gridline gap (offset 49) white,
+                    # col 50 (offset 50) yellow — preserved! — col 51 (offset 51) green.
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 48, bar_y])
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 49, bar_y])
+                    compare(COLOR_YELLOW, pixels[LABEL_WIDTH + 50, bar_y])
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 51, bar_y])
+
+    def test_each_row_has_its_own_header_and_gridline(self):
+        # Two volumes with different start columns. Each row gets its own header
+        # placed directly above its bar, and gridlines align with that volume's
+        # actual column numbers.
+        volume_a = Volume(
+            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="250"
+        )
+        volume_b = Volume(
+            name="I,2", year=1894, data_item="Q2", start_column="1439", end_column="1700"
+        )
+        lemmas_a = [{
+            "lemma": "A", "proof_read": 3, "no_creative_height": True,
+            "chapters": [{"start": 1, "end": 250, "author": "Abert"}],
+        }]
+        lemmas_b = [{
+            "lemma": "B", "proof_read": 3, "no_creative_height": True,
+            "chapters": [{"start": 1439, "end": 1700, "author": "Abert"}],
+        }]
+        mock_dir = Path(__file__).parent.joinpath("mock_data")
+        with open(mock_dir.joinpath("I_1.json"), "w", encoding="utf-8") as fp:
+            json.dump(lemmas_a, fp)
+        with open(mock_dir.joinpath("I_2.json"), "w", encoding="utf-8") as fp:
+            json.dump(lemmas_b, fp)
+        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+            volumes_mock.return_value.all_volumes = [volume_a, volume_b]
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                out_path = Path(tmp_dir).joinpath("out.png")
+                create_picture(out_path)
+                with Image.open(out_path) as image:
+                    pixels = image.load()
+                    row_block = HEADER_HEIGHT + LINE_HEIGHT
+                    bar_a_y = HEADER_HEIGHT + 1
+                    bar_b_y = row_block + HEADER_HEIGHT + 1
+                    # The gridline gap is inserted *before* each marked column
+                    # so the column's data is not overwritten.
+                    # Volume I,1 (start=1): gridline gaps before cols 50, 100, 150
+                    # → offsets 49, 100, 151. Each marked column's data sits one
+                    # pixel after its gap (col 50 at 50, col 100 at 101, …).
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 49, bar_a_y])
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 100, bar_a_y])
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 151, bar_a_y])
+                    # Marked-column data is preserved (no overlap).
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 50, bar_a_y])
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 101, bar_a_y])
+                    # Volume I,2 (start=1439): first marked column is 1450, at
+                    # col_idx 11. Gap goes before it → offset 11. Next marked
+                    # column 1500 sits 50 cols later, with one gap already
+                    # inserted, so its gap is at offset 62.
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 11, bar_b_y])
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 62, bar_b_y])
+                    # Col 1450 data preserved at offset 12, col 1500 at offset 63.
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 12, bar_b_y])
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 63, bar_b_y])
+
+    def test_draws_white_gridline_every_50_columns(self):
+        # Bar wide enough to contain several gridlines (at columns 50, 100, …).
+        volume = Volume(
+            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="250"
+        )
+        # Single green span covering the full bar — gridline pixels must overwrite it.
+        lemmas = [
+            {
+                "lemma": "Solo",
+                "proof_read": 3,
+                "no_creative_height": True,
+                "chapters": [{"start": 1, "end": 250, "author": "Abert"}],
+            }
+        ]
+        json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
+        with open(json_file, "w", encoding="utf-8") as fp:
+            json.dump(lemmas, fp)
+        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+            volumes_mock.return_value.all_volumes = [volume]
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                out_path = Path(tmp_dir).joinpath("out.png")
+                create_picture(out_path)
+                with Image.open(out_path) as image:
+                    pixels = image.load()
+                    bar_y = HEADER_HEIGHT + 1
+                    # Gridline gaps before cols 50, 100, 150 → offsets 49, 100, 151.
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 49, bar_y])
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 100, bar_y])
+                    compare(COLOR_WHITE, pixels[LABEL_WIDTH + 151, bar_y])
+                    # Marked column data is preserved on the right side of the
+                    # gap (col 50 at offset 50, col 100 at offset 101).
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 48, bar_y])
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 50, bar_y])
+                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 101, bar_y])
