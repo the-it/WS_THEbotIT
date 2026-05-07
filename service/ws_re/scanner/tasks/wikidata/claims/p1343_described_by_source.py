@@ -60,10 +60,10 @@ class P1343DescribedBySource(ClaimFactory):
         return None
 
     def get_existing_qualifiers(self, target_item) -> list[int]:
-        target_claims = target_item.get()["claims"].toJSON()
-        if self.DESCRIBED_IN_PROP not in target_claims:
+        claims = target_item.get()["claims"]
+        if self.DESCRIBED_IN_PROP not in claims:
             return []
-        described_in_claims = target_claims[self.DESCRIBED_IN_PROP]
+        described_in_claims = [claim.toJSON() for claim in claims[self.DESCRIBED_IN_PROP]]
         filtered_described_in_claims = \
             [claim for claim in described_in_claims
              if claim["mainsnak"]["datavalue"]["value"]["numeric-id"] == int(self.ITEM_RE[1:])]
