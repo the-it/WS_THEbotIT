@@ -57,6 +57,17 @@ class DataRepo:
                 return True
         return False
 
+    def checkout_commit_after(self, target: datetime) -> None:
+        if not self._git_repo:
+            return
+        for commit in self._git_repo.iter_commits(reverse=True):
+            committed = commit.committed_datetime
+            if target.tzinfo is None:
+                committed = committed.replace(tzinfo=None)
+            if committed >= target:
+                self._git_repo.git.checkout(commit.hexsha)
+                return
+
     @classmethod
     def mock_data(cls, mock: bool):
         cls.data_is_real = not mock

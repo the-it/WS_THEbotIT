@@ -81,6 +81,33 @@ class TestDataRepo(TestCase):
             compare(StringComparison(r"Updating the register at \d{6}_\d{6}"), git_repo_mock.mock_calls[4][1][0])
             compare("().git.push", git_repo_mock.mock_calls[5][0])
 
+    def test_checkout_commit_after(self):
+        with mock.patch("service.ws_re.register.repo.Repo", mock.Mock(spec=Repo)) as git_repo_mock:
+            commit_old = mock.Mock(hexsha="aaa", committed_datetime=datetime(2024, 1, 1))
+            commit_mid = mock.Mock(hexsha="bbb", committed_datetime=datetime(2024, 6, 1))
+            commit_new = mock.Mock(hexsha="ccc", committed_datetime=datetime(2024, 12, 1))
+            git_repo_mock().iter_commits.return_value = iter([commit_old, commit_mid, commit_new])
+            data_repo = DataRepo()
+            data_repo.checkout_commit_after(datetime(2024, 3, 1))
+            git_repo_mock().iter_commits.assert_called_with(reverse=True)
+            git_repo_mock().git.checkout.assert_called_once_with("bbb")
+
+    def test_checkout_commit_after_no_match(self):
+        with mock.patch("service.ws_re.register.repo.Repo", mock.Mock(spec=Repo)) as git_repo_mock:
+            commit_old = mock.Mock(hexsha="aaa", committed_datetime=datetime(2024, 1, 1))
+            git_repo_mock().iter_commits.return_value = iter([commit_old])
+            data_repo = DataRepo()
+            data_repo.checkout_commit_after(datetime(2025, 1, 1))
+            git_repo_mock().git.checkout.assert_not_called()
+
+    def test_checkout_commit_after_mocked_data(self):
+        with mock.patch("service.ws_re.register.repo.Repo", mock.Mock(spec=Repo)) as git_repo_mock:
+            DataRepo.mock_data(True)
+            data_repo = DataRepo()
+            data_repo.checkout_commit_after(datetime(2024, 1, 1))
+            git_repo_mock.assert_not_called()
+            DataRepo.mock_data(False)
+
     def test_mock_data(self):
         # nothing should happen during mocked data state
         with mock.patch("service.ws_re.register.repo.Repo", mock.Mock(spec=Repo)) as git_repo_mock:
