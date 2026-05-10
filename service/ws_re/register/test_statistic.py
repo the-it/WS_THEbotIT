@@ -8,7 +8,7 @@ from PIL import Image, ImageFont
 from testfixtures import compare
 
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.picture import (
+from service.ws_re.register.statistic import (
     COLOR_BLACK,
     COLOR_GREEN,
     COLOR_LIGHT_RED,
@@ -212,7 +212,7 @@ class TestLoadFont:
 
     def test_falls_back_to_default_when_truetype_unavailable(self):
         with mock.patch(
-            "service.ws_re.register.picture.ImageFont.truetype",
+            "service.ws_re.register.statistic.ImageFont.truetype",
             side_effect=OSError,
         ):
             font = _load_font()
@@ -225,7 +225,7 @@ class TestCreatePicture(BaseTestRegister):
 
     def test_creates_png_with_expected_dimensions(self):
         volume = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="10")
-        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
@@ -241,7 +241,7 @@ class TestCreatePicture(BaseTestRegister):
             name="I,1", year=1893, data_item="Q1", start_column="1", end_column="5"
         )
         volume_no_columns = Volume(name="R", year=1980, data_item="Q9")
-        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume_with_columns, volume_no_columns]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
@@ -256,7 +256,7 @@ class TestCreatePicture(BaseTestRegister):
         missing = Volume(
             name="II,1", year=1896, data_item="Q2", start_column="1", end_column="5"
         )
-        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [present, missing]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
@@ -281,7 +281,7 @@ class TestCreatePicture(BaseTestRegister):
         json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
         with open(json_file, "w", encoding="utf-8") as fp:
             json.dump(lemmas, fp)
-        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
@@ -321,7 +321,7 @@ class TestCreatePicture(BaseTestRegister):
         json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
         with open(json_file, "w", encoding="utf-8") as fp:
             json.dump(lemmas, fp)
-        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
@@ -359,7 +359,7 @@ class TestCreatePicture(BaseTestRegister):
             json.dump(lemmas_a, fp)
         with open(mock_dir.joinpath("I_2.json"), "w", encoding="utf-8") as fp:
             json.dump(lemmas_b, fp)
-        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume_a, volume_b]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
@@ -407,7 +407,7 @@ class TestCreatePicture(BaseTestRegister):
         json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
         with open(json_file, "w", encoding="utf-8") as fp:
             json.dump(lemmas, fp)
-        with mock.patch("service.ws_re.register.picture.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")

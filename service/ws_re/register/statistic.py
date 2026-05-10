@@ -1,13 +1,16 @@
 import json
+import tempfile
 from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple
 
 from PIL import Image, ImageDraw, ImageFont
+from pywikibot import FilePage, Site
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.repo import DataRepo
 from service.ws_re.volumes import Volumes
+from tools.bots.cloud_bot import CloudBot
 
 LINE_HEIGHT = 20
 LABEL_WIDTH = 80
@@ -198,5 +201,24 @@ def create_picture(output_path: Path) -> None:
     image.save(output_path)
 
 
-if __name__ == "__main__":
-    create_picture(Path(__file__).parent.joinpath("proof_read_overview.png"))
+class ReStatistic(CloudBot):
+    WIKI_FILE_NAME = "RE Register Statistik.png"
+    UPLOAD_COMMENT = "Bearbeitungsstand aktualisiert"
+
+    def task(self) -> bool:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir).joinpath("proof_read_overview.png")
+            self.logger.info("Generate proof-read overview picture.")
+            create_picture(output_path)
+            self.logger.info(f"Upload {self.WIKI_FILE_NAME} to wikisource.")
+            file_page = FilePage(self.wiki, f"File:{self.WIKI_FILE_NAME}")
+            file_page.upload(str(output_path),
+                             comment=self.UPLOAD_COMMENT,
+                             ignore_warnings=True)
+        return True
+
+
+if __name__ == "__main__":  # pragma: no cover
+    WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
+    with ReStatistic(wiki=WS_WIKI, debug=True, log_to_wiki=False) as bot:
+        bot.run()

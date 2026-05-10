@@ -9,6 +9,7 @@ from service.gl.status import GlStatus
 from service.list_bots.poem_list import PoemList
 from service.ws_re.register.importer import ReImporter
 from service.ws_re.register.printer import ReRegisterPrinter
+from service.ws_re.register.statistic import ReStatistic
 from service.ws_re.scanner.base import ReScanner
 from tools.bot_scheduler import BotScheduler
 
@@ -19,7 +20,7 @@ if __name__ == "__main__":
     SCHEDULER.daily_bots = [AuthorList, PoemList, ReImporter, ReScanner, ReRegisterPrinter,
                             Finisher]
     SCHEDULER.weekly_bots = {
-        0: [],  # monday
+        0: [ReStatistic],  # monday
         1: [],
         2: [],
         3: [],
