@@ -110,7 +110,7 @@ def _load_font(size: int = 13) -> ImageFont.ImageFont:
             return ImageFont.truetype(candidate, size)
         except OSError:
             continue
-    return ImageFont.load_default()
+    return ImageFont.load_default_imagefont()
 
 
 def create_picture(output_path: Path) -> None:
