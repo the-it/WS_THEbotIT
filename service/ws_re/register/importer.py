@@ -98,7 +98,7 @@ class ReImporter(CloudBot):
         spalte_end = "OFF"
         if article.chapter_objects and article.chapter_objects[0].end:
             spalte_end = article.chapter_objects[0].end
-        author = article.chapter_objects[0].author if article.chapter_objects else "OFF"
+        author = article.chapter_objects[0].author if article.chapter_objects and article.chapter_objects[0].author else "OFF"
         short_text = article.short_description if article.short_description else ""
         parsed_article = f"""{{{{REDaten
 |BAND={band}
