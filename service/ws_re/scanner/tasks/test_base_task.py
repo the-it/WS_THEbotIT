@@ -3,6 +3,7 @@
 from datetime import datetime
 from unittest import TestCase
 
+import pywikibot
 from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.base import ReScannerTask
@@ -100,6 +101,21 @@ class TestReScannerTask(TaskTestCase):
                 result = task.run(re_page)
         self.assertFalse(result["success"])
         self.assertTrue(result["changed"])
+
+    class MXLGTask(ReScannerTask):
+        def task(self):
+            raise pywikibot.exceptions.MaxlagTimeoutError("maxlag exceeded")
+
+    def test_execute_with_maxlag_timeout(self):
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        re_page = RePage(self.page_mock)
+        with LogCapture() as log_catcher:
+            with self.MXLGTask(None, self.logger) as task:
+                result = task.run(re_page)
+            log_catcher.check(("Test", "INFO", "opening task MXLG"),
+                              ("Test", "ERROR", "Maxlag timeout occurred, retries failed."))
+        self.assertFalse(result["success"])
+        self.assertFalse(result["changed"])
 
     def test_register_processed_title(self):
         self.page_mock.title_str = "RE:Page"

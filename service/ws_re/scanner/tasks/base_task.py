@@ -38,6 +38,8 @@ class ReScannerTask:
         result = {SUCCESS: False, CHANGED: False}
         try:
             self.task()
+        except pywikibot.exceptions.MaxlagTimeoutError:
+            self.logger.error("Maxlag timeout occurred, retries failed.")
         except Exception as exception:  # pylint: disable=broad-except
             self.logger.exception("Logging a caught exception", exception)
         else:
