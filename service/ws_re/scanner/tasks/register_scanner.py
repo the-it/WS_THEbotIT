@@ -1,7 +1,7 @@
 import contextlib
 import re
 from functools import lru_cache
-from typing import List, Tuple, Dict, Optional, Sequence
+from typing import List, Tuple, Dict, Optional
 
 import pywikibot
 
@@ -19,6 +19,7 @@ from tools.bots.logger import WikiLogger
 
 class SCANTask(ReScannerTask):
     ERROR_CAT = "RE:Nicht ins Register einsortierbar"
+    LANGUAGES = ("de", "en", "fr", "it", "es", "pt", "se", "ca", "la", "ar", "tr", "el")
 
     def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
@@ -53,9 +54,7 @@ class SCANTask(ReScannerTask):
         if wp_value := str(article['WIKIPEDIA'].value):
             wp_link: Optional[str] = f"w:de:{wp_value}" if ":" not in wp_value else f"w:{wp_value}"
         else:
-            wp_link = self._get_link_from_wd(("dewikipedia", "enwikipedia", "frwikipedia", "itwikipedia",
-                                              "eswikipedia", "ptwikipedia", "sewikipedia", "cawikipedia",
-                                              "lawikipedia", "arwikipedia", "trwikipedia", "elwikipedia"))
+            wp_link = self._get_link_from_wd("wikipedia")
         if wp_link:
             return {"wp_link": wp_link}, []
         return {}, ["wp_link"]
@@ -65,9 +64,7 @@ class SCANTask(ReScannerTask):
         if article['WIKISOURCE'].value:
             ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
         else:
-            ws_link = self._get_link_from_wd(("dewikisource", "enwikisource", "frwikisource", "itwikisource",
-                                              "eswikisource", "ptwikisource", "sewikisource", "cawikisource",
-                                              "lawikisource", "arwikisource", "trwikisource", "elwikisource"))
+            ws_link = self._get_link_from_wd("wikisource")
         if ws_link:
             return {"ws_link": ws_link}, []
         return {}, ["ws_link"]
@@ -77,17 +74,14 @@ class SCANTask(ReScannerTask):
             return {"wd_link": f"d:{target.id}"}, []
         return {}, ["wd_link"]
 
-    def _get_link_from_wd(self, possible_source_wikis: Sequence[str]) -> Optional[str]:
+    def _get_link_from_wd(self, wiki: str) -> Optional[str]:
         target = self._get_target_from_wd()
         if target:
-            for site_str in possible_source_wikis:
+            wiki_prefix = "s" if wiki == "wikisource" else "w"
+            for language in self.LANGUAGES:
                 with contextlib.suppress(pywikibot.exceptions.NoSiteLinkError):
-                    language = site_str[0:2]
-                    wiki = site_str[2:]
-                    wiki_prefix = "s" if wiki == "wikisource" else "w"
                     site = self._get_site_from_str(f"{wiki}:{language}")
-                    link = f"{wiki_prefix}:{language}:{target.getSitelink(site)}"
-                    return link
+                    return f"{wiki_prefix}:{language}:{target.getSitelink(site)}"
         return None
 
     @staticmethod
