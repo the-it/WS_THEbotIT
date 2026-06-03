@@ -63,7 +63,13 @@ class ReImporter(CloudBot):
                     if not lemma.exists():
                         article_text = self.get_text(article.volume.name, article.lemma)
                         if not article_text:
-                            article_text = self.get_text_backup(article.volume.name, article)
+                            pre_article = register[idx - 1] if idx > 0 else None
+                            try:
+                                post_article = register[idx + 1]
+                            except IndexError:
+                                post_article = None
+                            article_text = self.get_text_backup(article.volume.name, article,
+                                                                pre_article, post_article)
                         article_text = adjust_author(article_text, self.author_mapping)
                         article_text = self.adjust_end_column(article_text, register, idx)
                         article_text = article_text.replace("KORREKTURSTAND=Platzhalter",
@@ -91,9 +97,21 @@ class ReImporter(CloudBot):
         return None
 
     @staticmethod
-    def get_text_backup(band: str, article: Lemma) -> str:
-        vorgaenger = article.previous if article.previous else ""
-        nachfolger = article.next if article.next else ""
+    def get_text_backup(band: str, article: Lemma,
+                        pre_article: Optional[Lemma] = None,
+                        post_article: Optional[Lemma] = None) -> str:
+        if article.previous:
+            vorgaenger = article.previous
+        elif pre_article is not None:
+            vorgaenger = pre_article.lemma
+        else:
+            vorgaenger = ""
+        if article.next:
+            nachfolger = article.next
+        elif post_article is not None:
+            nachfolger = post_article.lemma
+        else:
+            nachfolger = ""
         spalte_start = article.chapter_objects[0].start if article.chapter_objects else "OFF"
         spalte_end = "OFF"
         if article.chapter_objects and article.chapter_objects[0].end:
