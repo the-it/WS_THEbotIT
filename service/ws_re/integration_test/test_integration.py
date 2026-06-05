@@ -90,7 +90,10 @@ class TestIntegrationRegister(parent_class):
                                           f"not the same as post lemma")
         _raise_count_errors(errors)
 
-    _DOUBLE_LEMMAS = {"Orpheus 1", "Victor 69"}
+    _DOUBLE_LEMMAS = {
+        ("Orpheus 1", "XVIII,1"),
+        ("Pausippos", "XVIII,4"),
+    }
 
     def test_previous_double_lemmas(self):
         LEMMA_DISTANCE = 40
@@ -103,7 +106,7 @@ class TestIntegrationRegister(parent_class):
                     lemmas[lemma] = i
                 else:
                     if i - lemmas[lemma] < LEMMA_DISTANCE:  # pragma: no cover
-                        if lemma not in self._DOUBLE_LEMMAS:
+                        if (lemma, register.volume.name) not in self._DOUBLE_LEMMAS:
                             errors.append(f"distance problem {register.volume.name}, {lemma} , {lemmas[lemma]}, {i}")
                     lemmas[lemma] = i
         _raise_count_errors(errors)
