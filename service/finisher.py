@@ -129,6 +129,9 @@ class Finisher(CloudBot):
                 # time is over
                 if self._watchdog():
                     break
+                # skip overview lemmas with "Band" or "Bd." in their name
+                if "Band" in lemma or "Bd." in lemma:
+                    continue
                 # register the lemma in the beginning of the processing
                 self.data[lemma] = get_processed_time()
                 lemma_page = Page(self.wiki, lemma)

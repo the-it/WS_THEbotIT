@@ -65,6 +65,30 @@ class TestFinisher(TestCloudBase):
         compare(False, self.finisher.is_overview_page(
             Page(self.wiki, "Der Ausdruck der Gemüthsbewegungen bei dem Menschen und den Thieren/Zwölftes Capitel")))
 
+    def test_task_skips_band_and_bd_lemmas(self):
+        mock.patch.object(self.finisher, "_get_proofread_pages", return_value=set()).start()
+        mock.patch.object(self.finisher, "_get_current_pages", return_value=[]).start()
+        mock.patch.object(self.finisher, "_get_checked_lemmas_from_current_pages", return_value=[]).start()
+        mock.patch.object(
+            self.finisher,
+            "_get_checked_lemmas_from_petscan",
+            return_value=[
+                ":Some Overview, Band 4",
+                ":Another Bd. 01 (1889)",
+                ":Regular Lemma",
+            ],
+        ).start()
+        has_korrigiert_mock = mock.patch("service.finisher.has_korrigiert_category", return_value=False).start()
+
+        self.finisher.task()
+
+        # Band/Bd. lemmas are skipped before has_korrigiert_category is consulted
+        checked_titles = [call.args[0].title() for call in has_korrigiert_mock.call_args_list]
+        compare(["Regular Lemma"], checked_titles)
+        # Band/Bd. lemmas are never registered in self.data
+        compare(False, ":Some Overview, Band 4" in self.finisher.data)
+        compare(False, ":Another Bd. 01 (1889)" in self.finisher.data)
+
     def test_try_autocorrect(self):
         before = """{{Navigation2
  |AUTOR      = [[Friedrich von Boetticher]]
