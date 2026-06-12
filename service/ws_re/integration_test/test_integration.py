@@ -93,6 +93,9 @@ class TestIntegrationRegister(parent_class):
     _DOUBLE_LEMMAS = {
         ("Orpheus 1", "XVIII,1"),
         ("Pausippos", "XVIII,4"),
+        ("Piathris", "XX,1"),
+        ("Pibechis", "XX,1"),
+        ("Victor 69", "S XV"),
     }
 
     def test_previous_double_lemmas(self):
