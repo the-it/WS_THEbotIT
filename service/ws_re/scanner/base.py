@@ -5,6 +5,7 @@ from typing import List, Optional, Dict, Callable
 
 import pywikibot
 
+from service.ws_re.scanner.tasks.add_issue_to_complex_author import AICATask
 from service.ws_re.scanner.tasks.add_short_description import KURZTask
 from service.ws_re.scanner.tasks.adjust_author import ADAUTask
 from service.ws_re.scanner.tasks.author_or_redirect import REAUTask
@@ -47,6 +48,7 @@ class ReScanner(CloudBot):
             DEWPTask,  # check for dead links to Wikipedia
             REAUTask,  # check for integrity article must have an author, or it is a soft redirect
             ADAUTask,  # adjust author full names to short names
+            AICATask,  # add issue number to authors with a complex mapping
             COPDTask,  # removes properties after article is in common domain and corrects the birth and death date
             CARETask,  # put hard redirects to lemma in a category
             VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
