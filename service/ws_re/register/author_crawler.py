@@ -184,20 +184,24 @@ class AuthorCrawler:
         author_tuple = cls._extract_author_infos(lines[0])
         years = cls._extract_years(lines[1])
         wp_lemma = cls._extract_wp_lemma(lines[3])
-        author = f"{author_tuple[0]} {author_tuple[1]}".strip()
-        author_dict: Dict[str, AuthorDict] = {author: {"last_name": author_tuple[1]}}
+        ws_lemma = author_tuple[2]
+        name = f"{author_tuple[0]} {author_tuple[1]}".strip()
+        # Use the ws_lemma as key if present, fall back to the wp_lemma, and use
+        # the plain first/last name only as a last resort.
+        key = ws_lemma or wp_lemma or name
+        author_dict: Dict[str, AuthorDict] = {key: {"last_name": author_tuple[1]}}
         if author_tuple[0]:
-            author_dict[author]["first_name"] = author_tuple[0]
-        if author_tuple[2]:
-            author_dict[author]["ws_lemma"] = author_tuple[2]
+            author_dict[key]["first_name"] = author_tuple[0]
+        if ws_lemma:
+            author_dict[key]["ws_lemma"] = ws_lemma
         birth_year = years[0]
         if birth_year:
-            author_dict[author]["birth"] = birth_year
+            author_dict[key]["birth"] = birth_year
         death_year = years[1]
         if death_year:
-            author_dict[author]["death"] = death_year
+            author_dict[key]["death"] = death_year
         if wp_lemma:
-            author_dict[author]["wp_lemma"] = wp_lemma
+            author_dict[key]["wp_lemma"] = wp_lemma
         return author_dict
 
     @classmethod
