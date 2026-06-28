@@ -188,7 +188,7 @@ class AuthorCrawler:
         name = f"{author_tuple[0]} {author_tuple[1]}".strip()
         # Use the ws_lemma as key if present, fall back to the wp_lemma, and use
         # the plain first/last name only as a last resort.
-        key = ws_lemma or wp_lemma or name
+        key = ws_lemma or name
         author_dict: Dict[str, AuthorDict] = {key: {"last_name": author_tuple[1]}}
         if author_tuple[0]:
             author_dict[key]["first_name"] = author_tuple[0]
