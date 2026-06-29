@@ -49,7 +49,8 @@ class TestAuthors(parent_class):
             try:
                 self.authors.get_author(author)
             except KeyError:  # pragma: no cover
-                errors.append(f"Mapping target {author} not there.")
+                if author != "ZUORDNUNG NICHT EINDEUTIG":
+                    errors.append(f"Mapping target {author} not there.")
         _raise_count_errors(errors)
 
 
