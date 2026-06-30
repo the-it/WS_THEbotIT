@@ -1,11 +1,13 @@
 # pylint: disable=protected-access,no-self-use
 from unittest.case import TestCase
 
+import pywikibot
 from ddt import ddt, file_data
 from testfixtures import compare
 
 from service.ws_re.register.author_crawler import AuthorCrawler
 from service.ws_re.register.authors import Authors
+from tools.test import real_wiki_test
 
 
 @ddt
@@ -321,3 +323,34 @@ nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
         author_table = self.table_head + author_2 + self.table_bottom
         author_mapping = self.crawler.get_authors(author_table)
         compare(expect, author_mapping)
+
+
+@real_wiki_test
+class TestAuthorCrawlerRealWiki(TestCase):
+    """Tests that crawl the live German Wikisource. Hidden behind the
+    ``real_wiki_test`` skip flag (set ``WS_REAL_WIKI`` to run)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.wiki = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+
+    def test_process_author_infos(self):
+        authors = AuthorCrawler.process_author_infos(self.wiki)
+        # the crawl must return a substantial amount of authors
+        self.assertGreater(len(authors), 1000)
+        # spot check a well known author from the table
+        zwicker = authors["Johannes Zwicker"]
+        compare(1881, zwicker["birth"])
+        compare(1969, zwicker["death"])
+        compare("Johannes", zwicker["first_name"])
+        compare("Zwicker", zwicker["last_name"])
+        compare("Johannes Zwicker", zwicker["wp_lemma"])
+
+    def test_get_author_mapping(self):
+        mapping = AuthorCrawler.get_author_mapping(self.wiki, Authors())
+        self.assertGreater(len(mapping), 1000)
+        # a simple mapping from Modul:RE/Autoren
+        compare("Johannes Zwicker", mapping["Zwicker."])
+        # a compound mapping from Vorlage:REAutor/Weiche
+        self.assertIsInstance(mapping["Beer-Honigmann."], list)
+        compare(["Georg Beer", "Ernst Honigmann"], mapping["Beer-Honigmann."])
