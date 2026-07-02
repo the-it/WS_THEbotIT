@@ -2,7 +2,6 @@ import pywikibot
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from service.ws_re.template.article import Article
 from tools.bots.logger import WikiLogger
 
 
@@ -23,10 +22,12 @@ class AICATask(ReScannerTask):
         return isinstance(self.authors_mapping.get(short_string), dict)
 
     def task(self) -> bool:
-        for article in self.re_page:
-            if not isinstance(article, Article):
-                continue
-            author = article.author
-            if self._has_complex_mapping(author.short_string):
-                author.issue = str(article["BAND"].value)
+        for article_list in self.re_page.splitted_article_list:
+            # a REAbschnitt section carries no BAND of its own; it shares the BAND of the
+            # REDaten article that heads its group
+            issue = str(article_list.daten["BAND"].value)
+            for article in article_list:
+                author = article.author
+                if self._has_complex_mapping(author.short_string):
+                    author.issue = issue
         return True

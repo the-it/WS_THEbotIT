@@ -57,6 +57,25 @@ test
             task = self._build_task(authors_mock)
             compare({"success": True, "changed": False}, task.run(re_page))
 
+    def test_add_issue_for_complex_author_in_reabschnitt(self, authors_mock):
+        # a REAbschnitt section has no BAND of its own; it must inherit the BAND
+        # of the REDaten article that heads its group
+        self.page_mock.text = """{{REDaten
+|BAND=XVI,1
+|KORREKTURSTAND=unvollständig
+}}
+test
+{{REAutor|Stein.}}
+{{REAbschnitt}}
+more text
+{{REAutor|Abel}}"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = self._build_task(authors_mock)
+            compare({"success": True, "changed": True}, task.run(re_page))
+        compare("Abel", re_page[1].author.short_string)
+        compare("XVI,1", re_page[1].author.issue)
+
     def test_corrects_existing_issue_to_band(self, authors_mock):
         self.page_mock.text = """{{REDaten
 |BAND=XVI,1
