@@ -113,6 +113,26 @@ class TestAuthorCrawler(TestCase):
                   "Zwicker.": "Johannes Zwicker"}
         compare(expect, self.crawler.get_mapping(test_str))
 
+    def test_get_mapping_ignores_commented_lines(self):
+        # A commented-out line (Lua "--") in the middle of a complex mapping must be ignored.
+        # See "Nagl." in Modul:RE/Autoren: the commented "III A,1" line otherwise swallows the
+        # following "V A,1" mapping and drops it.
+        test_str = """return {
+["Nagl."] = {"ZUORDNUNG NICHT EINDEUTIG",
+	["XX,2"]		= "Maria Assunta Nagl",
+	--["III A,1"]		= "Maria Assunta Nagl", überschneidet sich mit Alfred, 4. Parameter nutzen
+	["V A,1"]		= "Maria Assunta Nagl",
+	["III A,1"]     = "Alfred Nagl",
+	["S V"]         = "Alfred Nagl" }
+}
+"""
+        expect = {"Nagl.": {"*": "ZUORDNUNG NICHT EINDEUTIG",
+                            "XX,2": "Maria Assunta Nagl",
+                            "V A,1": "Maria Assunta Nagl",
+                            "III A,1": "Alfred Nagl",
+                            "S V": "Alfred Nagl"}}
+        compare(expect, self.crawler.get_mapping(test_str))
+
     def test_get_compound_mapping(self):
         test_str = """<includeonly><nowiki>[</nowiki>{{#switch: {{{1}}}
  | ?=?[[Kategorie:RE:Autor:Unbekannt]]

@@ -14,12 +14,22 @@ class AuthorCrawler:
     _SIMPLE_REGEX_MAPPING = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\"([^\"]*)\"")
     _COMPLEX_REGEX_MAPPING = re.compile(r"\[\"([^\]]*)\"\]\s*=\s*\{([^\}]*)\}")
 
+    # matches whole-line Lua comments (optionally indented), e.g. `--["III A,1"] = "..."`
+    _COMMENT_LINE_REGEX = re.compile(r"^[ \t]*--.*$\n?", re.MULTILINE)
+
     @classmethod
     def get_mapping(cls, mapping: str) -> CrawlerDict:
+        mapping = cls._remove_comments(mapping)
         mapping_dict = {}
         for single_mapping in cls._split_mappings(mapping):
             mapping_dict.update(cls._extract_mapping(single_mapping))
         return mapping_dict
+
+    @classmethod
+    def _remove_comments(cls, mapping: str) -> str:
+        # Drop commented-out lines entirely. If left in place they merge with the following real
+        # mapping line (comments carry no trailing ",") and shadow it, dropping a valid mapping.
+        return cls._COMMENT_LINE_REGEX.sub("", mapping)
 
     @staticmethod
     def _split_mappings(mapping: str) -> List[str]:
