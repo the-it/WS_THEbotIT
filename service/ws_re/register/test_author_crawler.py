@@ -113,24 +113,64 @@ class TestAuthorCrawler(TestCase):
                   "Zwicker.": "Johannes Zwicker"}
         compare(expect, self.crawler.get_mapping(test_str))
 
-    def test_get_mapping_ignores_commented_lines(self):
-        # A commented-out line (Lua "--") in the middle of a complex mapping must be ignored.
-        # See "Nagl." in Modul:RE/Autoren: the commented "III A,1" line otherwise swallows the
-        # following "V A,1" mapping and drops it.
-        test_str = """return {
-["Nagl."] = {"ZUORDNUNG NICHT EINDEUTIG",
-	["XX,2"]		= "Maria Assunta Nagl",
-	--["III A,1"]		= "Maria Assunta Nagl", überschneidet sich mit Alfred, 4. Parameter nutzen
-	["V A,1"]		= "Maria Assunta Nagl",
-	["III A,1"]     = "Alfred Nagl",
-	["S V"]         = "Alfred Nagl" }
-}
-"""
-        expect = {"Nagl.": {"*": "ZUORDNUNG NICHT EINDEUTIG",
-                            "XX,2": "Maria Assunta Nagl",
-                            "V A,1": "Maria Assunta Nagl",
-                            "III A,1": "Alfred Nagl",
-                            "S V": "Alfred Nagl"}}
+    def test_get_mapping_nagl(self):
+        # Full "Nagl." mapping from Modul:RE/Autoren. It exercises two parsing hazards that
+        # broke the crawl:
+        #  1. a commented-out Lua line ("--["III A,1"] ...") in the middle, which must be ignored
+        #     (it otherwise shadows the following "V A,1" mapping), and
+        #  2. entries ending in a comma followed by trailing whitespace ("...Nagl",\t) which must
+        #     still be split into separate entries (a plain ",\n" split merges them and drops all
+        #     but the first mapping of the run "V A,1" .. "XI,1").
+        # The trailing tabs below are intentional and mirror the real module source.
+        test_str = (
+            'return {\n'
+            '["Nagl."]           ={"ZUORDNUNG NICHT EINDEUTIG",\n'
+            '\t["IX,2"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XIII,1"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XIII,2"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XIV,2"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XV,1"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XVIII,1"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XVIII,2"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XVIII,3"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XVIII,4"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XIX,2"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XX,1"]\t\t= "Maria Assunta Nagl",\n'
+            '\t["XX,2"]\t\t= "Maria Assunta Nagl",\n'
+            '\t--["III A,1"]\t\t= "Maria Assunta Nagl", überschneidet sich mit Alfred, 4. Parameter nutzen\n'
+            '\t["V A,1"]\t\t= "Maria Assunta Nagl",\t\n'
+            '\t["V A,2"]\t\t= "Maria Assunta Nagl",\t\n'
+            '\t["VI A,1"]\t\t= "Maria Assunta Nagl",\t\n'
+            '\t["VI A,2"]\t\t= "Maria Assunta Nagl",\t\n'
+            '\t["VII A,1"]\t\t= "Maria Assunta Nagl",\t\n'
+            '\t["VII A,2"]\t\t= "Maria Assunta Nagl",\t\n'
+            '\t["S VII"]\t\t= "Maria Assunta Nagl",\t\n'
+            '\t["XI,1"]\t\t= "Alfred Nagl",\n'
+            '\t["I A,1"]       = "Alfred Nagl",\n'
+            '\t["I A,2"]\t\t= "Alfred Nagl",\n'
+            '\t["II A,1"]      = "Alfred Nagl",\n'
+            '\t["III A,1"]     = "Alfred Nagl",\n'
+            '\t["III A,2"]\t\t= "Alfred Nagl",\n'
+            '\t["IV A,1"]\t\t= "Alfred Nagl",\n'
+            '\t["IV A,2"]\t\t= "Alfred Nagl",\n'
+            '\t["S III"]\t\t= "Alfred Nagl",\n'
+            '\t["S IV"]\t\t= "Alfred Nagl",\n'
+            '\t["S V"]         = "Alfred Nagl" },\n'
+            '}\n'
+        )
+        maria = "Maria Assunta Nagl"
+        alfred = "Alfred Nagl"
+        expect = {"Nagl.": {
+            "*": "ZUORDNUNG NICHT EINDEUTIG",
+            "IX,2": maria, "XIII,1": maria, "XIII,2": maria, "XIV,2": maria, "XV,1": maria,
+            "XVIII,1": maria, "XVIII,2": maria, "XVIII,3": maria, "XVIII,4": maria,
+            "XIX,2": maria, "XX,1": maria, "XX,2": maria,
+            "V A,1": maria, "V A,2": maria, "VI A,1": maria, "VI A,2": maria,
+            "VII A,1": maria, "VII A,2": maria, "S VII": maria,
+            "XI,1": alfred, "I A,1": alfred, "I A,2": alfred, "II A,1": alfred,
+            "III A,1": alfred, "III A,2": alfred, "IV A,1": alfred, "IV A,2": alfred,
+            "S III": alfred, "S IV": alfred, "S V": alfred,
+        }}
         compare(expect, self.crawler.get_mapping(test_str))
 
     def test_get_compound_mapping(self):

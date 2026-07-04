@@ -54,7 +54,10 @@ class AuthorCrawler:
         hit = cls._COMPLEX_REGEX_MAPPING.search(single_mapping)
         if hit:
             sub_dict = {}
-            for sub_mapping in hit.group(2).split(",\n"):
+            # Split on the comma between entries, tolerating trailing whitespace before the
+            # newline. A plain ",\n" split misses lines ending in ",\t" and would merge them
+            # with the next entry, silently dropping all but the first mapping in the chunk.
+            for sub_mapping in re.split(r",[ \t]*\r?\n", hit.group(2)):
                 sub_hit = cls._SIMPLE_REGEX_MAPPING.search(sub_mapping)
                 if sub_hit:
                     sub_dict[sub_hit.group(1)] = sub_hit.group(2)
