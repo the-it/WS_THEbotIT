@@ -183,23 +183,24 @@ class TestAuthorCrawler(TestCase):
 
  | Reinhard Büll. Ernst Moser.={{REAutor/invokeModule|Reinhard Büll.}} {{REAutor/invokeModule|Ernst Moser.}}
 
- | Bürchner und Philippson.={{REAutor/invokeModule|Bürchner.||Bürchner}} und {{REAutor/invokeModule|Philippson.}}
-
  | W. Kroll mit Zusätzen von Hobein in eckigen Klammern.={{REAutor/invokeModule|W. Kroll.||W. Kroll}} mit Zusätzen von {{REAutor/invokeModule|Hobein.||Hobein}} in eckigen Klammern.
 
  | W. Tomaschek † – Max Fluss.={{REAutor/invokeModule|W. Tomaschek.||W. Tomaschek}} † – {{REAutor/invokeModule|Max Fluss.}}
 
  | v. Jan und Graf.={{REAutor/invokeModule|v. Jan.||v. Jan}} und {{REAutor/invokeModule|Graf.}}
 
+ | Nagl–Münzer.={{REAutor/invokeModule|Nagl.|I A,1|Nagl}}-{{REAutor/invokeModule|Münzer.}}
+
 """
         expect = {
             'Beer-Honigmann.': ['Georg Beer', 'Ernst Honigmann'],
             'Beer-Moritz.': ['Georg Beer', 'Bernhard Moritz'],
-            'Bürchner und Philippson.': ['Ludwig Bürchner', 'Alfred Philippson'],
             'Reinhard Büll. Ernst Moser.': ['Reinhard Büll', 'Ernst Moser'],
             'W. Kroll mit Zusätzen von Hobein in eckigen Klammern.': ['Wilhelm Kroll', 'Hermann Hobein'],
             'W. Tomaschek † – Max Fluss.': ['Wilhelm Tomaschek', 'Max Fluß'],
             'v. Jan und Graf.': ['Karl von Jan', 'Ernst Graf'],
+            # "Nagl." is ambiguous; the issue "I A,1" must disambiguate it to Alfred Nagl.
+            'Nagl–Münzer.': ['Alfred Nagl', 'Friedrich Münzer'],
         }
         compare(expect, self.crawler.get_compound_mapping(test_str, Authors()))
 
