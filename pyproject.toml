@@ -11,6 +11,7 @@ dependencies = [
   "defusedxml==0.7.1",
   "dictdiffer==0.9.0",
   "GitPython==3.1.46",
+  "levenshtein>=0.27.3",
   "oauthlib==3.3.1",
   "pywikibot==10.7.4",
   "requests==2.32.5",
