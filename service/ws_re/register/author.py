@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Literal, Optional, Tuple
 
 from service.ws_re import public_domain
 from service.ws_re.register._typing import AuthorDict
@@ -68,7 +68,8 @@ class Author:
         return name
 
     def update_internal_dict(self, author_dict: AuthorDict):
-        for key in (
+        keys: Tuple[Literal["birth", "death", "first_name", "last_name",
+                            "wp_lemma", "ws_lemma", "redirect"], ...] = (
             "birth",
             "death",
             "first_name",
@@ -76,7 +77,8 @@ class Author:
             "wp_lemma",
             "ws_lemma",
             "redirect",
-        ):
+        )
+        for key in keys:
             if key not in author_dict:
                 # Remove death information if present
                 self._dict.pop(key, None)

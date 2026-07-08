@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union
 
 from pywikibot import Site, Page, Category
 
@@ -113,7 +113,7 @@ class ReImporter(CloudBot):
         else:
             nachfolger = ""
         spalte_start = article.chapter_objects[0].start if article.chapter_objects else "OFF"
-        spalte_end = "OFF"
+        spalte_end: Union[str, int] = "OFF"
         if article.chapter_objects and article.chapter_objects[0].end:
             spalte_end = article.chapter_objects[0].end
         author = "OFF"
