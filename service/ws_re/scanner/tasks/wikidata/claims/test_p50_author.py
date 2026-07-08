@@ -43,7 +43,7 @@ class TestP50Author(BaseTestClaimFactory):
         compare(711593, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
     def test__get_claim_json_bug_author_from_non_de_wikipedia(self):
-        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Holmberg}}", title="RE:Bla")
+        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|J. E. Holmberg.}}", title="RE:Bla")
         factory = P50Author(re_page, self.logger)
         claim_json = factory._get_claim_json()
         # should be Erik J. Holmberg (https://www.wikidata.org/wiki/Q16649410)
