@@ -13,6 +13,7 @@ dependencies = [
   "GitPython==3.1.46",
   "levenshtein>=0.27.3",
   "oauthlib==3.3.1",
+  "pillow>=12.1.0",
   "pywikibot==10.7.4",
   "requests==2.32.5",
   "requests-oauthlib==2.0.0",
