@@ -2,7 +2,7 @@ import json
 import tempfile
 from datetime import datetime
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 from PIL import Image, ImageDraw, ImageFont
 from pywikibot import FilePage, Site
@@ -104,7 +104,7 @@ def _build_row_articles(lemmas: List[dict], start_column: int, length: int,
     return articles_per_column
 
 
-def _load_font(size: int = 13) -> ImageFont.ImageFont:
+def _load_font(size: int = 13) -> Union[ImageFont.FreeTypeFont, ImageFont.ImageFont]:
     for candidate in ("DejaVuSans.ttf", "Arial.ttf", "Helvetica.ttf"):
         try:
             return ImageFont.truetype(candidate, size)

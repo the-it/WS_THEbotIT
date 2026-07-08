@@ -69,7 +69,7 @@ class AuthorCrawler:
 
     @classmethod
     def get_compound_mapping(cls, weiche: str, authors: Authors) -> CrawlerDict:
-        mapping_dict = {}
+        mapping_dict: CrawlerDict = {}
         for mapping in re.finditer(r"\| ([^=]*)=(.+)\n", weiche):
             authors_list = []
             # Capture the author name (group 1) and the optional issue parameter (group 2). The
@@ -178,6 +178,7 @@ class AuthorCrawler:
             # Death processing
             death_main = hit.group('death1')
             death_suffix = hit.group('death2')
+            death: Optional[int]
             if death_suffix:
                 # Case like 1991/92 or 1991/1992 -> keep the second year; if 2 digits, keep the century of the first
                 if len(death_suffix) == 2 and death_main and len(death_main) == 4:

@@ -1,4 +1,4 @@
-from typing import TypedDict, Dict, Union
+from typing import TypedDict, Dict, List, Union
 
 
 class AuthorDict(TypedDict, total=False):
@@ -11,4 +11,4 @@ class AuthorDict(TypedDict, total=False):
     redirect: str
 
 
-CrawlerDict = Dict[str, Union[str, Dict[str, str]]]
+CrawlerDict = Dict[str, Union[str, List[str], Dict[str, str]]]

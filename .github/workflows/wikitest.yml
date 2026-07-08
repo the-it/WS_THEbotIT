@@ -21,7 +21,7 @@ jobs:
         env:
           WS_REAL_WIKI: 1
           PYTHONUNBUFFERED: 1
-        run: nose2 -v --with-coverage service tools && coverage xml
+        run: uv run nose2 -v --with-coverage service tools && uv run coverage xml
       - name: Codecov
         uses: codecov/codecov-action@v5
         with:

@@ -28,7 +28,8 @@ class DEALTask(ReScannerTask, ReporterMixin):
             # check properties of REDaten Block first
             if isinstance(article, Article):
                 # check only proofread articles
-                if article["KORREKTURSTAND"].value.lower() in ["platzhalter", "unvollständig", "unkorrigiert"]:
+                if cast(str, article["KORREKTURSTAND"].value).lower() \
+                        in ["platzhalter", "unvollständig", "unkorrigiert"]:
                     continue
                 for prop in ["VORGÄNGER", "NACHFOLGER"]:
                     # VORGÄNGER NACHFOLGER are string properties

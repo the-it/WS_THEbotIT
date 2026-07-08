@@ -78,8 +78,11 @@ class Article(Mapping):
         raise KeyError(f"Key {item} not found in self._properties")
 
     def __hash__(self):
+        # hash each property individually: since Python 3.14 tuples cache their
+        # hash, so hash(self._properties) would go stale when a property mutates
+        properties_hash = hash(tuple(hash(re_property) for re_property in self._properties))
         return hash(self._article_type) \
-            + (hash(self._properties) << 1) \
+            + (properties_hash << 1) \
             + (hash(self._text) << 2) \
             + (hash(self.author) << 3)
 
