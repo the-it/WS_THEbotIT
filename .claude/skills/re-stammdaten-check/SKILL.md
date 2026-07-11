@@ -39,7 +39,11 @@ human checks them against the scan.
 
 1. **Exists** at that RE issue (BAND + column).
 2. **SPALTE_START / SPALTE_END** correct. `SPALTE_END=OFF` means single column (start == end).
-   For multi-column articles, find the end by browsing the scans.
+   For multi-column articles, find the end by browsing the scans. `SPALTE_END` is the column
+   holding the article's **last line of text**: if the article ends flush at the bottom of a
+   column and the next lemma opens the following column, it does **not** extend into that next
+   column — set `SPALTE_END` to the ending column (`OFF` if that equals the start). The nightly
+   ReScanner tends to over-count the end by one in exactly this column-break case, so check it.
 3. **VORGÄNGER / NACHFOLGER** are really the articles printed before/after — verify with the
    scan. (See the Nachtrag/band-chain gotcha below; don't over-eagerly "fix" these.)
 4. **REAutor** = the **exact** signature printed in `[ ... ]` at the article's end
@@ -145,6 +149,14 @@ as a redirect. Then set `SORTIERUNG=<transliteration>` on the moved page for cat
 (cf. `RE:Λεβήν` has `SORTIERUNG=Leben`). Leave the article-body bold headword as-is. Move +
 redirect is sufficient — no register-data edit needed (the nightly ReScanner won't fight it).
 Use `action=move` (csrf token, leave the redirect; check the target doesn't already exist).
+
+- **Leaving the redirect — MediaWiki boolean gotcha:** `noredirect` is treated as *true* if the
+  parameter is **present at all**, regardless of value — passing `noredirect:'0'` (or `'false'`,
+  `''`) still **suppresses** the redirect. To keep the redirect, simply **omit `noredirect`
+  entirely** from the move request.
+- **Always verify after moving** that the old title now exists as a redirect (query its content).
+  If it's missing, recreate it: `#WEITERLEITUNG [[RE:<greek>]]` + `[[Kategorie:RE:Redirect]]`
+  (cf. `RE:Leben`).
 
 ## Nachtrag / band chains — Vorgänger/Nachfolger gotcha
 
