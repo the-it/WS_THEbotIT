@@ -1,6 +1,5 @@
 import re
 from datetime import datetime
-from pathlib import Path
 from typing import Optional, Union
 
 from pywikibot import Site, Page, Category
@@ -23,7 +22,6 @@ class ReImporter(CloudBot):
         self.registers = Registers(update_data=True)
         self.new_articles: dict[str, dict[str, str]] = {}
         self.author_mapping = get_author_mapping()
-        self.tm_set = self.load_tm_set()
         self._create_neuland()
         self.current_year = datetime.now().year
         self.max_create = min(self._PER_NIGHT,
@@ -41,15 +39,6 @@ class ReImporter(CloudBot):
                     if band not in self.new_articles:
                         self.new_articles[band] = {}
                     self.new_articles[band][lemma] = article
-
-    @staticmethod
-    def load_tm_set() -> set[str]:
-        tm_set = set()
-        file_path = Path(__file__).parent / "real_red_people.csv"
-        with open(file_path, "r", encoding="utf-8") as file:
-            for line in file.readlines():
-                tm_set.add(line.strip().strip("\""))
-        return tm_set
 
     def task(self):
         # pylint: disable=too-many-nested-blocks
@@ -74,10 +63,7 @@ class ReImporter(CloudBot):
                         article_text = self.adjust_end_column(article_text, register, idx)
                         article_text = article_text.replace("KORREKTURSTAND=Platzhalter",
                                                             "KORREKTURSTAND=unvollständig")
-                        category = self._STORE_CATEGORY
-                        if article.lemma in self.tm_set:
-                            category += ", Personen"
-                        article_text = (f"{article_text}\n[[Kategorie:{category}]]"
+                        article_text = (f"{article_text}\n[[Kategorie:{self._STORE_CATEGORY}]]"
                                         "\n[[Kategorie:RE:Kurztext überprüfen]]")
                         save_if_changed(lemma, article_text, "Automatisch generiert")
                         create_count += 1
