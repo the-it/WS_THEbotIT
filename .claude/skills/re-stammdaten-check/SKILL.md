@@ -182,7 +182,17 @@ Articles about people (they carry `GEBURTSJAHR`/`TODESJAHR` fields) use the cate
 
 ## Workflow & user preferences
 
-- Work in **batches of ~10**, pause after each.
+- Work in batches the user tells you about. If no number is given, ask.
+- **Parallelize the verification step:** fan out the per-article checks (fetch wikitext,
+  fetch/read the relevant scan, compare Spalte/Vorgänger/Nachfolger/REAutor) across **10
+  parallel subagents**, roughly one per article, and collect their findings before touching
+  the wiki. The actual edits/moves still go through the single logged-in browser session
+  sequentially — only the research/verification fans out.
+- **Parallelize the verification step:** fan out the per-article checks (fetch wikitext,
+  fetch/read the relevant scan, compare Spalte/Vorgänger/Nachfolger/REAutor) across **10
+  parallel subagents**, roughly one per article, and collect their findings before touching
+  the wiki. The actual edits/moves still go through the single logged-in browser session
+  sequentially — only the research/verification fans out.
 - Per article, in one pass: verify Spalte/Vorgänger/Nachfolger → set **REAutor to the exact
   signature** → **move** to the Greek lemma if the headword is Greek → (only with the user's
   agreement) any Vorgänger/Nachfolger chain fix.
