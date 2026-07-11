@@ -32,8 +32,8 @@ human checks them against the scan.
   Just navigate to `https://de.wikisource.org` and ask them to log in; verify via a snapshot
   of the "Persönliche Werkzeuge" nav.
 - The Playwright MCP tools are deferred — load them with ToolSearch
-  (`browser_navigate`, `browser_take_screenshot`, `browser_evaluate`, `browser_tabs`,
-  `browser_wait_for`, `browser_snapshot`).
+  (`browser_navigate`, `browser_take_screenshot`, `browser_evaluate`, `browser_wait_for`,
+  `browser_snapshot`, and `browser_run_code_unsafe` for grabbing the elexikon cookie).
 
 ## What to verify against the scan (per article)
 
@@ -65,31 +65,66 @@ curl -s ".../index.php?title=<urlenc>&action=raw" \
   | grep -iE "BAND=|SPALTE_START=|SPALTE_END=|VORGÄNGER=|NACHFOLGER=|KURZTEXT=|REAutor|Kategorie:RE:Stammdaten"
 ```
 
+**At scale (dozens/hundreds of lemmas), don't loop `action=raw`** — it gets HTTP 429
+("your bot is making too many requests") after ~50 hits, and `urllib` without a `User-Agent`
+gets 403. Instead fetch in bulk via the query API, **up to 50 titles per POST**, with a
+descriptive UA:
+
+```python
+import urllib.request, urllib.parse, json
+UA = 'THE-IT-stammdaten-check/1.0 (<your-email>)'
+def post(body):
+    req = urllib.request.Request('https://de.wikisource.org/w/api.php',
+        data=urllib.parse.urlencode(body).encode(), headers={'User-Agent': UA})
+    return json.loads(urllib.request.urlopen(req, timeout=60).read())
+d = post({'action':'query','prop':'revisions','rvprop':'content','rvslots':'main',
+          'format':'json','formatversion':'2','titles':'|'.join(chunk_of_50)})
+# content: d['query']['pages'][i]['revisions'][0]['slots']['main']['content']
+# note: API returns titles with SPACES; PetScan gives them with UNDERSCORES.
+```
+
 ## Getting the scans (elexikon.ch)
 
 - **elexikon.ch IS behind Cloudflare** — plain curl returns a "Just a moment…" challenge
   page. You **must** load scans in the Playwright browser. The `cf_clearance` cookie persists
   for a while but expires; if a navigation returns HTTP 403 / title "Just a moment…", call
   `browser_wait_for {time: 6}` and re-screenshot.
-- **Don't guess the scan filename.** Get it from the article's rendered page:
-
-  ```bash
-  curl -s ".../w/api.php?action=parse&page=<urlenc>&prop=externallinks&format=json" \
-    | python3 -c "import sys,json; d=json.load(sys.stdin); [print(u) for u in d['parse']['externallinks'] if u.endswith('.png')]"
-  ```
-
-  The `…VIIA,1_NNN.png` links are the scans (the "Bildergalerie im Original"). A multi-column
-  article lists several.
 - **One PNG = a 4-column two-page spread.** E.g. `VIIA,1_525.png` shows columns **523–526**;
   `_585.png` shows 583–586; spreads step by 4 (…_585, _589, _593, _597, _601…). So a handful
   of scans cover a whole batch — dedupe the scan list and read each spread once.
-- **Read it:** `browser_take_screenshot {fullPage:true, scale:"device", filename:"scan_NNN.png"}`,
-  then `Read` the saved PNG (it lands in the repo working dir). The full spread is legible for
-  headwords/structure.
-- **For exact signatures / fine print, crop and zoom** with the helper (Pillow is available):
-  `scripts/crop.py` (see below). The saved screenshot is ~3620×3038; left page ≈ x 0–1780
-  (col A ≈ 0–880, col B ≈ 880–1780), right page ≈ x 1840–3620 (col C ≈ 1840–2720,
-  col D ≈ 2720–3620).
+- **Compute the scan filename from the metadata — don't do a per-page `externallinks` lookup**
+  (that's slow and rate-limited at scale). Filename = `<BAND-without-spaces>_<page>.png`, so
+  `BAND=VII A,1` → `VIIA,1_…`, `BAND=VII A,2` → `VIIA,2_…` (**a page can hold both bands — always
+  use each article's own `BAND=`, never assume one prefix for the batch**). The page number for
+  a column `C` is the unique `P ≡ 1 (mod 4)` in `[C−1, C+2]`; that spread covers columns
+  `P−2 … P+1`, laid out left→right **A=P−2, B=P−1 | C=P, D=P+1**:
+
+  ```python
+  def scan_page(col):            # e.g. 525 -> 525, 523 -> 525, 527 -> 529
+      return next(P for P in range(col-1, col+3) if P % 4 == 1)
+  pages = sorted({scan_page(c) for c in range(spalte_start, spalte_end+1)})
+  ```
+
+  (If in doubt, the authoritative source is still the rendered page's `externallinks`: the
+  `…_NNN.png` links are the "Bildergalerie im Original".)
+- **Downloading many scans efficiently (native resolution).** curl with the `cf_clearance`
+  cookie **fails** — Cloudflare also fingerprints the TLS/JA3, so only the *browser* can fetch.
+  But you do **not** have to screenshot each one:
+  1. Navigate to **one** scan, then `browser_wait_for {time: 6}` so Cloudflare fully solves the
+     challenge. This makes clearance **global for the session** — after that, `fetch()` for any
+     other scan URL returns 200 (a fresh navigation alone, before the wait, is not enough).
+  2. In a single `browser_evaluate`, loop the needed pages, `fetch()` each PNG same-origin,
+     base64-encode the `arrayBuffer`, and return them joined; save with the `filename:` param so
+     the (multi-MB) blob lands in a file **instead of your context**. Pace ~300 ms between
+     fetches (bursts get rate-limited; retry the misses in a second pass). Then base64-decode
+     locally to real `.png` files. Native size is **3685×2592** (higher res than a screenshot).
+     Grab the cookie/UA once via `browser_run_code_unsafe` → `page.context().cookies('https://elexikon.ch')`.
+  - Screenshot fallback (`browser_take_screenshot {fullPage:true, scale:"device"}`) still works
+    for a one-off spread, but downsamples to ~2366 px wide.
+- **For exact signatures / fine print, crop and zoom** with `scripts/crop.py` (Pillow available).
+  On the **native** PNG (3685×2592) the 4 columns are roughly **A: 0–921, B: 921–1842,
+  C: 1842–2763, D: 2763–3685** (x px; y as 0–1 fractions). crop.py's docstring numbers assume
+  the older ~3620-wide screenshot — scale to the actual image width.
 
 ## Making edits (through the browser session)
 
@@ -119,6 +154,22 @@ async () => {
 - Loop the pattern to batch-edit many titles in one `browser_evaluate` call.
 - Note: Lua modules (Scribunto) must be saved via api.php too — the on-wiki CodeEditor
   overwrites the textarea otherwise. (Regular wikitext articles are fine either way.)
+
+**Batch editing at scale (100+ edits in one `browser_evaluate`):**
+
+- Compute the *intended changes* locally, then send a **compact payload** (title + new values
+  only: new REAutor string, new Spalte fields, SORTIERUNG, move target) — not full article text.
+  Inject it as **base64** to dodge quoting/escaping of Greek + `ß`/umlauts:
+  `JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(B64), c=>c.charCodeAt(0))))`.
+- In the loop, **fetch each article's live text and apply targeted replacements** (regex-replace
+  the single `{{REAutor|…}}`; line-replace `^\|SPALTE_END=.*$`; fill `^\|SORTIERUNG=\s*$`). This
+  is robust to overnight ReScanner regeneration — if the guard (`exactly one REAutor tag`, line
+  present, SORTIERUNG empty) fails, record a SKIP instead of clobbering. Only POST when the text
+  actually changed; skip `NOCHANGE`.
+- Pass `maxlag:'5'` and **pace ~700 ms** between edits ("THE IT" is not a bot account, so it hits
+  manual rate limits). Collect a per-title `{status}` result array and save it via `filename:`.
+- **Do moves in a second pass, after the text edits** (set `SORTIERUNG` in the text pass on the
+  old title, then move). Same base64-inject + pacing pattern.
 
 ## REAutor = the EXACT printed signature
 
@@ -183,23 +234,25 @@ Articles about people (they carry `GEBURTSJAHR`/`TODESJAHR` fields) use the cate
 ## Workflow & user preferences
 
 - Work in batches the user tells you about. If no number is given, ask.
-- **Parallelize the verification step:** fan out the per-article checks (fetch wikitext,
-  fetch/read the relevant scan, compare Spalte/Vorgänger/Nachfolger/REAutor) across **10
-  parallel subagents**, roughly one per article, and collect their findings before touching
-  the wiki. The actual edits/moves still go through the single logged-in browser session
-  sequentially — only the research/verification fans out.
-- **Parallelize the verification step:** fan out the per-article checks (fetch wikitext,
-  fetch/read the relevant scan, compare Spalte/Vorgänger/Nachfolger/REAutor) across **10
-  parallel subagents**, roughly one per article, and collect their findings before touching
-  the wiki. The actual edits/moves still go through the single logged-in browser session
-  sequentially — only the research/verification fans out.
+- **Parallelize the verification step across 10 subagents.** There is only **one** browser
+  session and it's the only thing that can reach elexikon — so subagents **cannot** fetch scans
+  themselves. Instead, the main session first **pre-downloads every needed scan to local PNG
+  files** (see the at-scale download above) and bulk-fetches all wikitext, then fans out ~10
+  subagents (roughly one per ~20 lemmas). Give each subagent a chunk of assignments — per
+  article the local scan-file paths + a column→position (A/B/C/D) map + the wikitext path — and
+  have it **only read local files + `crop.py`** (no browser, no web). Each writes a
+  `findings_NN.json` (exists / spalte_fix / reautor_printed / greek_move+title / confidence).
+  Collect all findings, then do the edits/moves sequentially through the single browser session.
 - Per article, in one pass: verify Spalte/Vorgänger/Nachfolger → set **REAutor to the exact
   signature** → **move** to the Greek lemma if the headword is Greek → (only with the user's
   agreement) any Vorgänger/Nachfolger chain fix.
 - **Do NOT remove the `RE:Stammdaten überprüfen` category.** The **user keeps the last check
-  and removes the maintenance category themselves.** Leave it in place and **present the batch
-  in browser tabs** (`browser_tabs` action:"new" per article, using the *moved* Greek titles
-  where applicable) for their review.
+  and removes the maintenance category themselves.** Leave it in place for their review.
+- **Don't open the articles in browser tabs.** Instead hand over a **written report** — a
+  Markdown table of every change (REAutor / Spalte / move, with the *moved* Greek titles where
+  applicable), grouped by type, so the user can scan it and work the category page themselves.
+  Note which entries are high-confidence signature expansions vs. the review-worthy ones
+  (Greek moves, wrong-author fixes, Spalte changes).
 - Never touch the `RE:Kurztext überprüfen` category.
 - If an article is genuinely problematic, multi-part, or too complex, **skip it and ask** /
   optionally note it on the category talk page — don't guess.
