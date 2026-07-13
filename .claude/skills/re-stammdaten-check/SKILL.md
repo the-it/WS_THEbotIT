@@ -113,10 +113,16 @@ d = post({'action':'query','prop':'revisions','rvprop':'content','rvslots':'main
   1. Navigate to **one** scan, then `browser_wait_for {time: 6}` so Cloudflare fully solves the
      challenge. This makes clearance **global for the session** — after that, `fetch()` for any
      other scan URL returns 200 (a fresh navigation alone, before the wait, is not enough).
-  2. In a single `browser_evaluate`, loop the needed pages, `fetch()` each PNG same-origin,
-     base64-encode the `arrayBuffer`, and return them joined; save with the `filename:` param so
-     the (multi-MB) blob lands in a file **instead of your context**. Pace ~300 ms between
-     fetches (bursts get rate-limited; retry the misses in a second pass). Then base64-decode
+  2. In a single `browser_evaluate`, loop the needed pages, `fetch()` each PNG **with
+     `credentials:'include'`** (CRITICAL: `credentials:'omit'` drops the `cf_clearance` cookie
+     and every fetch 403s — this looks exactly like a rate limit but is NOT; with the cookie
+     included, ~30 files/batch at 700 ms pacing download 100% clean and there is no rate limit).
+     base64-encode the `arrayBuffer` (chunk the `String.fromCharCode` in ~8 KB slices or big
+     PNGs blow the call stack), and return them joined; save with the `filename:` param so
+     the (multi-MB) blob lands in a file **instead of your context**. Early-stop a batch on
+     ~3 consecutive 403s and re-solve the challenge rather than hammering (repeated 403s while
+     blocked can invalidate `cf_clearance` and trigger a fresh "Just a moment…" challenge — just
+     re-navigate + `browser_wait_for {time: 10}`). Then base64-decode
      locally to real `.png` files. Native size is **3685×2592** (higher res than a screenshot).
      Grab the cookie/UA once via `browser_run_code_unsafe` → `page.context().cookies('https://elexikon.ch')`.
   - Screenshot fallback (`browser_take_screenshot {fullPage:true, scale:"device"}`) still works
@@ -186,6 +192,31 @@ expanded/mapped form. Keep the trailing period as printed. Examples seen:
 
 Replace with a regex on the single template: `oldText.replace(/\{\{REAutor\|[^}]*\}\}/, '{{REAutor|'+author+'}}')`.
 
+**Do NOT overwrite these REAutor forms — they are deliberate author-template syntax, not raw
+signatures (flag for the user instead):**
+- **Band-disambiguation `Autor|Band`** (e.g. `{{REAutor|Nagl.|VII A,2}}`) — the `|VII A,2`
+  param disambiguates an ambiguous surname (several "Nagl" authors); replacing it with the
+  printed full name (`Assunta Nagl.`) breaks the disambiguation.
+- **Maiden-name redirect `Vorname s. Mädchenname Ehename`** (e.g. `Dorothea s. Lunzer Sträussler`).
+- **Dual-/multi-author articles**: one page whose sections carry *different* printed signatures
+  (e.g. Tympanum: §1–5 `[K. Schneider.]`, §6–7 `[O. Reuther.]`). Don't clobber the first author
+  with the last signature. Represent each author with its **own** `{{REAutor|<AUTHOR>.}}` at the
+  end of that author's section, separated by **`{{REAbschnitt}}`**:
+  ```
+  …text of first author's sections…
+  {{REAutor|K. Schneider.}}
+  {{REAbschnitt}}
+  …text of next author's sections…
+  {{REAutor|O. Reuther.}}
+  ```
+  Each block closes with its `{{REAutor|…}}`; `{{REAbschnitt}}` goes *between* blocks; the last
+  block has no trailing `{{REAbschnitt}}`. (Working example: `RE:Tullius 29` chains
+  `Matthias Gelzer.` → `{{REAbschnitt}}` → `W. Kroll.` → `{{REAbschnitt}}` → `Philippson.|VII A,1`
+  …) The single-`{{REAutor|…}}` guard/regex only handles the one-author case — for these, insert
+  the extra `{{REAutor}}`+`{{REAbschnitt}}` instead of a blind replace.
+- A guard of "exactly one `{{REAutor|…}}` tag" is right, but also skip when `cur` contains `|`
+  or ` s. `.
+
 ## Greek headwords → move to the Greek lemma
 
 RE lemmas are often stored as **Latin transliterations** while the printed headword is
@@ -243,6 +274,15 @@ Articles about people (they carry `GEBURTSJAHR`/`TODESJAHR` fields) use the cate
   have it **only read local files + `crop.py`** (no browser, no web). Each writes a
   `findings_NN.json` (exists / spalte_fix / reautor_printed / greek_move+title / confidence).
   Collect all findings, then do the edits/moves sequentially through the single browser session.
+  - **Only the START and END spread matter per article** (start = exists/headword/VORGÄNGER;
+    end = SPALTE_END/NACHFOLGER/signature) — you do NOT need the middle spreads of a long
+    article. Trim each article's scan list to `{scan_page(SS), scan_page(SE)}` and chunk by a
+    **scan-union budget (~12 spreads/subagent)**, not a fixed article count, so one long article
+    (e.g. 22 spreads) doesn't bloat a subagent. This keeps each subagent light.
+  - Subagents die on transient API errors ("Connection closed mid-response" / "ConnectionRefused")
+    — findings files are the source of truth, so just re-spawn any chunk whose `findings_NN.json`
+    is missing (idempotent; last writer wins). Verify page-move accents/numbering yourself via
+    `crop.py` before applying — moves are hard to reverse and the subagents flag these as med.
 - Per article, in one pass: verify Spalte/Vorgänger/Nachfolger → set **REAutor to the exact
   signature** → **move** to the Greek lemma if the headword is Greek → (only with the user's
   agreement) any Vorgänger/Nachfolger chain fix.
