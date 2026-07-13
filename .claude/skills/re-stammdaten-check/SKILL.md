@@ -44,11 +44,42 @@ human checks them against the scan.
    column and the next lemma opens the following column, it does **not** extend into that next
    column — set `SPALTE_END` to the ending column (`OFF` if that equals the start). The nightly
    ReScanner tends to over-count the end by one in exactly this column-break case, so check it.
-3. **VORGÄNGER / NACHFOLGER** are really the articles printed before/after — verify with the
-   scan. (See the Nachtrag/band-chain gotcha below; don't over-eagerly "fix" these.)
+3. **VORGÄNGER / NACHFOLGER** are really the articles printed before/after — **verify both
+   explicitly against the scan, every time.** Obey the scan exactly: do **not** assume the
+   preceding/following lemma is already correct just because it looks plausible or matches the
+   register — read the actual neighbouring headwords on the spread (the lemma immediately before
+   this article's start column, and the one immediately after its end column) and set VORGÄNGER
+   /NACHFOLGER to what is genuinely printed. (Regression: at `RE:Tuficum` a neighbour was taken
+   on trust instead of being checked against the scan, and it was wrong.) See the Nachtrag/band-
+   chain gotcha below — but "don't over-eagerly fix" means *confirm with the scan first*, not
+   *leave it unchecked*.
+   - **When you touch an article at all, re-verify ALL of Spalte + V/N + REAutor in the same
+     pass — don't tunnel-vision on the field you came to fix.** A wrong bot-generated V/N sitting
+     next to a field you *are* correcting is easy to skip past. (Regression: at `RE:Tydeus 2` the
+     REAutor and SPALTE_END were fixed from the scan, but the bot's `NACHFOLGER=Tylangii` was left
+     unchecked — the scan shows Tydeus 2 `[Wolf Aly.]` is directly followed by `Tydii`
+     `[Erich Diehl.]`, so the successor was `Tydii`.)
+   - **The register V/N can be *scrambled*, not just off-by-one:** an alphabetically-later, longer
+     article can be spliced into the middle of a run even though it is printed further on. At
+     `RE:Tydeus 2` the register read `… → Tylangii → Tydii → Tyenis …`, but the print order is
+     `Tydeus 2 → Tydii → Tyenis → Tylangii` (Tylangii, "Keltisches Volk im Wallis", actually
+     begins at the bottom of col 1709 *after* Tyenis). Trust the on-scan headword/signature
+     sequence, not the register order. A whole-run scramble is a multi-article chain fix — do the
+     named article, then **surface the rest for the user's agreement** (V/N regenerate nightly).
 4. **REAutor** = the **exact** signature printed in `[ ... ]` at the article's end
    (see "REAutor" below). Short articles may share the *next* signed article's author; pure
    redirects/verweise get `{{REAutor|OFF}}`.
+5. **HEADWORD = lemma name — read it character for character.** Read the *printed* bold headword
+   (and the page running head) and confirm the page title matches it exactly — **case and
+   punctuation included** — don't just check Spalte/author and move on. Five ways the
+   auto-generated title is wrong: a **Greek** headword (see below), a **double lemma** (see
+   "Double lemmas" below), **letter case** (see "Letter case" below), a **parenthetical
+   reconstruction** (see "Parenthetical headwords" below), and a **reversed person-name** (see
+   "Reversed person-name" below). Regressions: `RE:Turba 1/2/3` read "Turba 1) oder Turbula"
+   (→ `RE:Turba, Turbula 1/2/3`); `RE:Turmuca` was printed lowercase **"turmuca"**; `RE:Turolici`
+   was printed **"Turol(ici)"** with the reconstructed ending in parentheses; `RE:Val., P.` was
+   printed **"P. Val."** (praenomen before nomen). All had correct Spalte/V/N/REAutor and were
+   missed by not reading the headword.
 
 ## Getting the article wikitext
 
@@ -189,8 +220,19 @@ expanded/mapped form. Keep the trailing period as printed. Examples seen:
 | `[Eugen Oberhummer.]` | `Eugen Oberhummer.` (not "Oberhummer.") |
 | `[Konrat Ziegler.]` | `Konrat Ziegler.` |
 | `[F. Münzer.]` | `F. Münzer.` |
+| `[Güngerich.]` | `Güngerich.` (not "Rudolf Güngerich") |
 
 Replace with a regex on the single template: `oldText.replace(/\{\{REAutor\|[^}]*\}\}/, '{{REAutor|'+author+'}}')`.
+
+**The most common REAutor error is over-expansion, and it hides in plain sight.** The bot fills
+REAutor from its author database as a **full name with no trailing period** (e.g. the print
+`[Güngerich.]` became `{{REAutor|Rudolf Güngerich}}`). Because that *looks* like a legitimate
+author, it is easy to glance past and leave unchanged — but it is wrong twice over (expanded form
++ missing period). **Diff every REAutor against the exact printed signature in both directions**
+(under-expanded bare surname *and* over-expanded full name), and treat a missing trailing period
+as a diff. Do not assume an already-plausible full name is correct. (Regression: `RE:Tuscianus 1`
+kept `Rudolf Güngerich` when the print reads `[Güngerich.]` — it was never re-checked against the
+scan.)
 
 **Do NOT overwrite these REAutor forms — they are deliberate author-template syntax, not raw
 signatures (flag for the user instead):**
@@ -215,7 +257,89 @@ signatures (flag for the user instead):**
   …) The single-`{{REAutor|…}}` guard/regex only handles the one-author case — for these, insert
   the extra `{{REAutor}}`+`{{REAbschnitt}}` instead of a blind replace.
 - A guard of "exactly one `{{REAutor|…}}` tag" is right, but also skip when `cur` contains `|`
-  or ` s. `.
+  or ` s. `. **Run the `|`/` s. ` test on the captured author *value* — the text between
+  `REAutor|` and `}}` — not on the whole `{{REAutor|…}}` string**, or the template's own separator
+  pipe false-positives and you skip every ordinary single-author article. Capture with
+  `/\{\{REAutor\|([^}]*)\}\}/` and test group 1.
+
+## Letter case matters → the lemma must match the printed case
+
+The bot **auto-capitalizes** the first letter of a lemma, but some RE headwords are printed with
+a **lowercase initial** — typically Etruscan/foreign inscription words or transliterations
+(e.g. running head **"turmuca"**, an Etruscan word in the turmś/aitaś group). Whenever the printed
+bold headword / running head starts lowercase (or has internal case the title doesn't), the
+auto-generated title is wrong.
+
+- **Compare the title's case to the print, every time** — this is easy to miss because Spalte, V/N
+  and REAutor can all be right while only the case is wrong (that is how `RE:Turmuca` slipped
+  through).
+- **Fix by moving** `RE:Turmuca` → `RE:turmuca` (leave the redirect; omit `noredirect`).
+  de.wikisource's RE namespace permits a lowercase first character even though MediaWiki normally
+  capitalizes titles.
+- Also lowercase the **body bold headword** to match (`'''Turmuca'''` → `'''turmuca'''`).
+- This is a scan-verified, review-worthy change (like Greek/double-lemma moves) — list it in the
+  report and check the exact case on the scan crop before moving.
+
+## Reversed person-name ("Val., P." → "P. Val.") → restore the printed word order
+
+For a person lemma whose printed headword is an abbreviated **praenomen + nomen** (e.g. bold
+**"P. Val.,"** = P. Valerius, *praeses provinciae Sardiniae*), the bot sometimes stores the
+**sort form** — *nomen, praenomen* — as the title and body headword: `RE:Val., P.` with
+`SORTIERUNG=Val.,p.`. The printed lemma is the natural order **"P. Val."**, so the title is wrong.
+
+- **Fix by moving** `RE:Val., P.` → `RE:P. Val.` (leave the redirect) and set the body bold
+  headword to the printed order `'''P. Val.'''`.
+- The `SORTIERUNG` (`Val.,p.`) is the reversed *sort* key and is fine to keep — it correctly files
+  the entry under the gens (Valerius), which is why the bot generated the reversed **title** in
+  the first place. Don't confuse the two: sort key reversed = OK; **title reversed = wrong**.
+- Update the two chain neighbours that point at the old title (here the real neighbours were the
+  Greek lemmas `RE:Οὐακουᾶται` / `RE:Οὔαλα 1`, since `Uakuatai`/`Uala` are themselves redirects).
+- Scan-verified, review-worthy — list it in the report.
+
+## Parenthetical headwords (reconstruction: "Turol(ici)", "Theba(i)genes") → keep the parens
+
+Some RE headwords print **parentheses inside the word** to mark an editorially **reconstructed /
+supplemented** part — usually because the attested source (an inscription) only preserves a
+fragment. The auto-generated lemma silently drops the parens (expands to the full form), which is
+**wrong**: the lemma must reproduce the parentheses verbatim. Distinguish this from a double lemma
+`X (Y)` (two whole alternative words, comma form) — here the parens sit **inside one word**:
+`Turol(ici)`, `Theba(i)genes`, `Turoni (Turones)`.
+
+- Example: `RE:Turolici` → **`RE:Turol(ici)`**. Reason (read it off the scan): the inscription
+  CIL II 431 reads only *"Larib. Turol. consecr."*, so `Turol` is attested and `ici` is the
+  editor's completion → RE prints `Turol(ici)`. The bold body headword is `'''Turol(ici)'''`.
+- **Fix by moving** `RE:<expanded>` → `RE:<with parens>` (leave the redirect — the paren-less
+  expanded form is a useful search redirect and the move creates it automatically). Then fix the
+  body bold headword to the paren form.
+- `SORTIERUNG` stays **empty** and **no extra redirect** is needed (matches the `RE:Theba(i)genes`
+  precedent, whose paren-less forms don't exist as redirects).
+- Update the V/N of the two neighbours pointing into the article to the paren form.
+- Scan-verified, review-worthy change — list it in the report.
+
+## Double lemmas (Doppellemma: "X oder Y" / "X (Y)") → move to the comma form
+
+RE often prints a headword with a **byform**: the running head reads `X (Y)` and the article
+body opens `'''X 1)''' oder '''Y.'''` (e.g. running head "Turba (Turbula)", body "Turba 1) oder
+Turbula"). The auto-generated lemma keeps only the primary word (`RE:Turba 1`), which is **wrong**
+— the RE-Werkstatt convention titles such articles with the **comma form** `RE:X, Y N`, and it
+applies to **every numbered sub-article** of that headword, not just Nr. 1 (confirmed by e.g.
+`RE:Aqua, Aquae 55`, `RE:Agreus, Agreutes 1/2`, `RE:Castra, Castrum 33`, `RE:Ilion, Ilios 1`).
+Detect it by **reading the printed headword and running head** — Spalte/V/N/REAutor can all be
+correct while the title is still wrong (that is exactly how `RE:Turba` was missed).
+
+- **Verify the byform against the scan** (the "oder Y" / "(Y)" in the print), then **move**
+  `RE:X N` → `RE:X, Y N` for each N in the group, **leaving the redirect** (omit `noredirect`).
+- Only Nr. 1's body repeats the full bold double headword — fix it to `'''X 1)''' oder '''Y.'''`
+  (match the print). Nr. 2, 3, … keep their bare `'''2)'''` body.
+- **Fix the whole V/N chain to the new titles**: each moved article's VORGÄNGER/NACHFOLGER, plus
+  the two outside neighbours (the article before Nr. 1 and after the last N) that point *into*
+  the group. The old-title redirects keep links working, but update them for a clean chain.
+- `SORTIERUNG` can stay empty — `X, Y` already sorts under `X`. No SORTIERUNG needed (unlike Greek
+  moves).
+- **Register caveat:** the nightly ReScanner regenerates lemma names + V/N from the on-wiki RE
+  register. If the register still holds the single name (`Turba`), the move may be regenerated
+  back to `RE:X N` overnight. Flag this to the user — the durable fix is in the register data, not
+  just the on-wiki move.
 
 ## Greek headwords → move to the Greek lemma
 
@@ -231,6 +355,18 @@ as a redirect. Then set `SORTIERUNG=<transliteration>` on the moved page for cat
 (cf. `RE:Λεβήν` has `SORTIERUNG=Leben`). Leave the article-body bold headword as-is. Move +
 redirect is sufficient — no register-data edit needed (the nightly ReScanner won't fight it).
 Use `action=move` (csrf token, leave the redirect; check the target doesn't already exist).
+
+- **Transcribe the Greek letter by letter from a zoomed crop — a misspelled Greek move is a real
+  error another editor has to clean up.** Do **not** type the word from memory or approximate it;
+  `crop.py` the headword and read every letter/accent/breathing. Two specific traps:
+  - **The lemma is the FIRST bold headword.** What follows `v. l.` (*varia lectio*) are **variant
+    readings, not the title** — do not move to a v.l. form, and do not blend the main form with a
+    variant.
+  - **Don't insert phantom letters.** (Regression: `RE:Tukrumuda`'s headword is
+    **`Τουκρούμουδα`** (…μουδα), with v.l. `Τουκρούμονδα`/`Τουρκούμουδα`; the move went to
+    `Τουκρούμου`**ν**`δα` — a spurious `ν` blended in from the variant, matching neither form, and
+    editor *Epìdosis* had to re-move it to the correct `Τουκρούμουδα`.)
+  - After moving, re-read the moved title against the crop once more to confirm the spelling.
 
 - **Leaving the redirect — MediaWiki boolean gotcha:** `noredirect` is treated as *true* if the
   parameter is **present at all**, regardless of value — passing `noredirect:'0'` (or `'false'`,
@@ -260,7 +396,13 @@ the VII A,1 chain `… → Trogus → Troia 2 → …`. **Do not conflate them.*
 
 Articles about people (they carry `GEBURTSJAHR`/`TODESJAHR` fields) use the category variant
 **`[[Kategorie:RE:Stammdaten überprüfen, Personen]]`** instead of the plain
-`[[Kategorie:RE:Stammdaten überprüfen]]`. Handle both.
+`[[Kategorie:RE:Stammdaten überprüfen]]`. Handle both — the PetScan worklist and the fan-out
+**must include the Personen variant**, and every lemma needs a findings entry (re-spawn missing
+chunks). A person article is especially prone to the over-expanded REAutor above, because the
+author DB expands the surname to the full name. (Regression: `RE:Tuscianus 1`, a Personen article,
+was left entirely untouched — only the bot's `Automatisch generiert` revision existed — so its
+`Rudolf Güngerich` / `[Güngerich.]` mismatch was never caught. If the maintenance category is
+still present and there is no `THE IT` revision, the article was never processed: check it.)
 
 ## Workflow & user preferences
 
