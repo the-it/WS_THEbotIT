@@ -407,7 +407,7 @@ still present and there is no `THE IT` revision, the article was never processed
 ## Workflow & user preferences
 
 - Work in batches the user tells you about. If no number is given, ask.
-- **Parallelize the verification step across 10 subagents.** There is only **one** browser
+- **Parallelize the verification step across 5 subagents.** There is only **one** browser
   session and it's the only thing that can reach elexikon — so subagents **cannot** fetch scans
   themselves. Instead, the main session first **pre-downloads every needed scan to local PNG
   files** (see the at-scale download above) and bulk-fetches all wikitext, then fans out ~10
