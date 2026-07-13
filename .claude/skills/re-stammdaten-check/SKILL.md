@@ -65,7 +65,8 @@ human checks them against the scan.
      `Tydeus 2 → Tydii → Tyenis → Tylangii` (Tylangii, "Keltisches Volk im Wallis", actually
      begins at the bottom of col 1709 *after* Tyenis). Trust the on-scan headword/signature
      sequence, not the register order. A whole-run scramble is a multi-article chain fix — do the
-     named article, then **surface the rest for the user's agreement** (V/N regenerate nightly).
+     named article, then **surface the rest for the user's agreement** (V/N chain fixes touch the
+     neighbours too, so the user signs off; V/N do **not** regenerate nightly, so hand-edits persist).
 4. **REAutor** = the **exact** signature printed in `[ ... ]` at the article's end
    (see "REAutor" below). Short articles may share the *next* signed article's author; pure
    redirects/verweise get `{{REAutor|OFF}}`.
@@ -336,10 +337,11 @@ correct while the title is still wrong (that is exactly how `RE:Turba` was misse
   the group. The old-title redirects keep links working, but update them for a clean chain.
 - `SORTIERUNG` can stay empty — `X, Y` already sorts under `X`. No SORTIERUNG needed (unlike Greek
   moves).
-- **Register caveat:** the nightly ReScanner regenerates lemma names + V/N from the on-wiki RE
+- **Register caveat:** the nightly ReScanner regenerates the **lemma name** from the on-wiki RE
   register. If the register still holds the single name (`Turba`), the move may be regenerated
   back to `RE:X N` overnight. Flag this to the user — the durable fix is in the register data, not
-  just the on-wiki move.
+  just the on-wiki move. (This applies to the lemma name/title only — **V/N do not regenerate
+  nightly**, so V/N hand-edits are durable.)
 
 ## Greek headwords → move to the Greek lemma
 
@@ -387,8 +389,10 @@ the VII A,1 chain `… → Trogus → Troia 2 → …`. **Do not conflate them.*
 
 - A break in Vorgänger/Nachfolger may just be two different band-chains — inspect each lemma's
   `BAND=` before concluding it's wrong.
-- The nightly **ReScanner regenerates V/N from register data**, so hand-edits to these fields
-  may be reverted overnight — mention this when you touch them, and prefer minimal edits.
+- **V/N do NOT regenerate nightly** — hand-edits to VORGÄNGER/NACHFOLGER are durable and are
+  **not** reverted overnight. (Don't tell the user a V/N fix "will regenerate" — that's wrong.)
+  V/N chain fixes still need the user's sign-off because they touch the neighbours, not because
+  they'd revert; prefer minimal edits.
 - The other verweis kind — a plain `s. <article>` (e.g. `Troiae lusus` "s. Lusus",
   `VERWEIS=ON`) — *is* part of the main chain.
 
@@ -442,7 +446,30 @@ still present and there is no `THE IT` revision, the article was never processed
   register-driven fields).
 - do all editing with one edit, **do not split edits**.
 
-## Helper
+## Helpers (`scripts/`) — prefer these over re-writing one-off Python each run
 
-`scripts/crop.py <scan.png> <x0> <y0frac> <x1> <y1frac> <out.png> [scale]` — crop a region of a
-saved scan (y as 0–1 fractions of height) and upscale, for reading fine print / signatures.
+All take the batch **work dir** (`<outdir>`, e.g. `.claude_work_dir/assign`) and/or the
+**scans dir** (default `.claude_work_dir/scans`). Run them with literal paths (no shell
+expansion). The whole pipeline, in order:
+
+1. `scripts/fetch_wikitext.py <petscan.json> <outdir> [--email you@…]` — bulk-fetch every
+   article's wikitext via the query API (50/POST, descriptive UA) and extract Stammdaten →
+   `<outdir>/all_wikitext.json` + `all_meta.json`. Also accepts a plain one-title-per-line `.txt`.
+2. `scripts/scan_pages.py <outdir>` — print the scan-page union (start+end spread per article)
+   grouped by BAND, with the exact `<prefix>_<page>.png` filenames to download. (`--cols 42 116`
+   for an ad-hoc lookup.) Download those spreads in the browser (see "Getting the scans").
+3. `scripts/decode_scans.py <b64_batch.json> <scansdir> <BANDPREFIX>` — turn the in-browser
+   base64 batch (the evaluate `filename:` output) into verified PNGs
+   `<scansdir>/<BANDPREFIX>_<page>.png` (e.g. prefix `VIIIA,1`).
+4. `scripts/build_chunks.py <outdir> [num_chunks=10] [scansdir]` — split into
+   `<outdir>/chunk_NN.json`, each article carrying wikitext + start/end scan file paths + column
+   A/B/C/D positions, for the offline subagent fan-out.
+5. `scripts/aggregate_findings.py <outdir>` — merge the subagents' `findings_*.json` →
+   `<outdir>/all_findings.json` and print grouped counts (REAutor / SPALTE / V/N / moves /
+   low-med) to drive the apply-vs-hold decision.
+6. `scripts/crop.py <scan.png> <x0> <y0frac> <x1> <y1frac> <out.png> [scale]` — crop a region of
+   a saved scan (y as 0–1 fractions of height) and upscale, for reading fine print / signatures.
+
+The edit pass itself (REAutor/SPALTE regex-replace, V/N re-link) runs in the browser via
+`browser_evaluate` (see "Making edits") — not a local script, because it needs the same-origin
+login session.
