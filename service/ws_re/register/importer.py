@@ -13,7 +13,7 @@ from tools.bots.cloud_bot import CloudBot
 
 class ReImporter(CloudBot):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen"
-    _PER_NIGHT = 100
+    _PER_NIGHT = 150
     _MAX_CAT = 1000
 
     def __init__(self, wiki: Site = None, debug: bool = True,
