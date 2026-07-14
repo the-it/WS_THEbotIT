@@ -32,7 +32,7 @@ def _generate_translation_dict():
                              "s": "σ",
                              "t": "τ",
                              "th": "θ",
-                             "u": "vw",
+                             "v": "uw",
                              "x": "ξ",
                              "y": "υ",
                              "z": "ζ",
