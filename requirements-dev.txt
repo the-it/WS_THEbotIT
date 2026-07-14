@@ -14,7 +14,7 @@ ast-serialize==0.6.0
     # via mypy
 astroid==4.0.4
     # via pylint
-authlib==1.7.2
+authlib==1.6.12
     # via safety
 bandit==1.9.4
     # via -r requirements-dev.in
@@ -59,7 +59,6 @@ coverage==7.15.0
 cryptography==49.0.0
     # via
     #   authlib
-    #   joserfc
     #   moto
 ddt==1.7.2
     # via -r requirements-dev.in
@@ -104,8 +103,6 @@ jmespath==1.1.0
     #   botocore
 joblib==1.5.3
     # via nltk
-joserfc==1.7.3
-    # via authlib
 jsonpatch==1.33
     # via internetarchive
 jsonpointer==3.1.1
