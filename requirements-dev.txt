@@ -56,7 +56,7 @@ coverage==7.15.0
     # via
     #   -r requirements-dev.in
     #   codecov
-cryptography==49.0.0
+cryptography==48.0.1
     # via
     #   authlib
     #   joserfc
