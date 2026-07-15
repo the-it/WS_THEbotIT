@@ -43,6 +43,9 @@ class TestRegisters(BaseTestRegister):
                 compare(1, len(register))
                 continue
             if register.start == "u":
+                compare(0, len(register))
+                continue
+            if register.start == "uf":
                 compare(2, len(register))
                 continue
         compare(43, i)

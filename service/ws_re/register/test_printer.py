@@ -118,7 +118,7 @@ class TestReRegisterPrinter(BaseTestRegister, TestCloudBase):
         expection = """return {
 ["Äal"] = "aal",
 ["Äall"] = "aall",
-["Vaaa"] = "uaaa",
+["Ueee"] = "veee",
 }"""
         compare(expection, printer._get_sortkey_map())
 
