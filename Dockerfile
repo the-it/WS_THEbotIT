@@ -10,6 +10,12 @@ COPY . /app
 # Set PYTHONPATH
 ENV PYTHONPATH=/app
 
-# Install any needed packages specified in requirements.txt
+# Install a C toolchain: some dependencies (e.g. mwparserfromhell) have no
+# prebuilt wheel for this Python/arch and are compiled from source by uv sync.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends gcc build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install dependencies from pyproject.toml / uv.lock
 RUN pip install uv
 RUN uv sync
