@@ -1,0 +1,20 @@
+name: Unittest
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Dependencies
+        uses: "./.github/actions/dependencies"
+      - name: unittest
+        run: make unittest
