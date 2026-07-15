@@ -6,11 +6,11 @@
 #
 beautifulsoup4==4.15.0
     # via -r requirements.in
-boto3==1.43.42
+boto3==1.43.48
     # via -r requirements.in
-boto3-stubs[essential]==1.43.42
+boto3-stubs[essential]==1.43.48
     # via -r requirements.in
-botocore==1.43.42
+botocore==1.43.48
     # via
     #   boto3
     #   s3transfer
@@ -26,7 +26,7 @@ dictdiffer==0.9.0
     # via -r requirements.in
 gitdb==4.0.12
     # via gitpython
-gitpython==3.1.50
+gitpython==3.1.51
     # via -r requirements.in
 idna==3.18
     # via requests
@@ -42,9 +42,9 @@ mypy-boto3-cloudformation==1.43.38
     # via boto3-stubs
 mypy-boto3-dynamodb==1.43.0
     # via boto3-stubs
-mypy-boto3-ec2==1.43.42
+mypy-boto3-ec2==1.43.46
     # via boto3-stubs
-mypy-boto3-lambda==1.43.42
+mypy-boto3-lambda==1.43.48
     # via boto3-stubs
 mypy-boto3-rds==1.43.30
     # via boto3-stubs
@@ -62,11 +62,11 @@ pillow==12.3.0
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via botocore
-pywikibot==11.4.2
+pywikibot==11.5.0
     # via -r requirements.in
 rapidfuzz==3.14.5
     # via levenshtein
-regex==2026.6.28
+regex==2026.7.10
     # via wikitextparser
 requests==2.34.2
     # via
@@ -77,7 +77,7 @@ requests-oauthlib==2.0.0
     # via -r requirements.in
 roman==5.2
     # via -r requirements.in
-s3transfer==0.19.0
+s3transfer==0.19.1
     # via boto3
 six==1.17.0
     # via python-dateutil
