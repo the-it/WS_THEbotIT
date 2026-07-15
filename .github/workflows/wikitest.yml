@@ -23,7 +23,7 @@ jobs:
           PYTHONUNBUFFERED: 1
         run: uv run nose2 -v --with-coverage service tools && uv run coverage xml
       - name: Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           use_oidc: true
           flags: wiki
