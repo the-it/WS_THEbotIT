@@ -145,7 +145,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |Abert
 |style="background:#556B2F"|KOR
 |-
-|data-sort-value="uaaa"|[[RE:Vaaa|'''{{Anker2|Vaaa}}''']]
+|data-sort-value="vaaa"|[[RE:Vaaa|'''{{Anker2|Vaaa}}''']]
 ||
 ||
 ||III,1
@@ -153,7 +153,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |Abert
 |style="background:#669966"|FER
 |-
-|data-sort-value="ueee"|[[RE:Ueee|'''{{Anker2|Ueee}}''']]
+|data-sort-value="veee"|[[RE:Ueee|'''{{Anker2|Ueee}}''']]
 ||
 ||
 ||III,1

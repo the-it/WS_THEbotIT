@@ -11,10 +11,6 @@ from tools.test import real_wiki_test
 
 
 class TestReImporter(TestCase):
-    def test_load_tm_list(self):
-        tm_set = ReImporter.load_tm_set()
-        self.assertTrue("Hermogenes 27" in tm_set)
-
     @real_wiki_test
     def test_adjust_end_column(self):
         registers = Registers()

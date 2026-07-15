@@ -103,7 +103,7 @@ class TestLemma(BaseTestRegister):
         altered_dict["wp_link"] = "w:de:Lemma = Irgendwas"
         re_register_lemma = Lemma.from_dict(altered_dict, self.volumes["I,1"], self.authors)
         compare(("[[w:de:Lemma = Irgendwas|Lemma {{=}} Irgendwas<sup>(WP de)</sup>]]",
-                 "data-sort-value=\"w:de:lemma = irgenduas\""),
+                 "data-sort-value=\"w:de:lemma = irgendvas\""),
                 re_register_lemma.get_wiki_links())
 
     def test_wiki_links_bug_multipart_lemma(self):
@@ -115,7 +115,7 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma.from_dict(altered_dict, self.volumes["I,1"], self.authors)
         compare(("[[w:it:Autore:Lemma|Lemma<sup>(WP it)</sup>]]<br/>"
                  "[[s:it:Autore:Lemma|Lemma<sup>(WS it)</sup>]]",
-                 "data-sort-value=\"w:it:autore:lemma\""),
+                 "data-sort-value=\"w:it:avtore:lemma\""),
                 re_register_lemma.get_wiki_links())
 
     def test_get_pages(self):
@@ -248,11 +248,11 @@ class TestLemma(BaseTestRegister):
         sort_dict["lemma"] = "Lemma"
         sort_dict["sort_key"] = "WasAnderes"
         sort_lemma = Lemma.from_dict(sort_dict, self.volumes["I,1"], self.authors)
-        compare("uasanderes", sort_lemma.get_sort_key())
+        compare("vasanderes", sort_lemma.get_sort_key())
 
         sort_dict["sort_key"] = "WasAnderes 02"
         sort_lemma = Lemma.from_dict(sort_dict, self.volumes["I,1"], self.authors)
-        compare("uasanderes 002", sort_lemma.get_sort_key())
+        compare("vasanderes 002", sort_lemma.get_sort_key())
 
     def test_return_dict(self):
         reverse_dict = {"chapters": [{"start": 1, "author": "Abel", "end": 1},

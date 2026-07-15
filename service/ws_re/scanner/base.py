@@ -152,7 +152,7 @@ class ReScanner(CloudBot):
                 with suppress(KeyError):
                     del self.data[lemma]
                 continue
-            except pywikibot.exceptions.TimeoutError:
+            except pywikibot.exceptions.ApiTimeoutError:
                 self.logger.error(f"Timeout at lemma ({lemma}) creation")
                 continue
             if re_page.has_changed():
