@@ -5,9 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14, <3.15"
 dependencies = [
-  "beautifulsoup4==4.14.3",
-  "boto3==1.42.27",
-  "boto3-stubs[essential]==1.42.27",
+  "beautifulsoup4==4.15.0",
+  "boto3==1.43.48",
+  "boto3-stubs[essential]==1.43.48",
   "defusedxml==0.7.1",
   "dictdiffer==0.9.0",
   "GitPython==3.1.46",
@@ -23,24 +23,24 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-  "bandit==1.9.2",
-  "beautifulsoup4==4.14.3",
+  "bandit==1.9.4",
+  "beautifulsoup4==4.15.0",
   "codecov==2.1.13",
-  "coverage==7.13.1",
+  "coverage==7.15.1",
   "ddt==1.7.2",
   "flake8==7.3.0",
   "freezegun==1.5.5",
-  "internetarchive==5.7.1",
-  "moto==5.1.19",
+  "internetarchive==5.10.1",
+  "moto==5.2.2",
   "mypy==2.3.0",
-  "nose2==0.15.1",
-  "patool==4.0.3",
+  "nose2==0.16.0",
+  "patool==4.0.5",
   "pyfiglet==1.0.4",
-  "pylint==4.0.4",
+  "pylint==4.0.6",
   "pyyaml==6.0.3",
   "requests-mock==1.12.1",
-  "safety==3.7.0",
+  "safety==3.8.1",
   "testfixtures==12.3.0",
   "types-freezegun==1.1.10",
-  "types-requests==2.32.4.20260107",
+  "types-requests==2.33.0.20260712",
 ]
