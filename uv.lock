@@ -1541,15 +1541,15 @@ wheels = [
 
 [[package]]
 name = "wikitextparser"
-version = "0.56.4"
+version = "1.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "regex" },
     { name = "wcwidth" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a4/c4/10b8bbf098eea940253f25086ad4a770f4dc3fad6aefbe6514be68943aa7/wikitextparser-0.56.4.tar.gz", hash = "sha256:f13bca96cfc2fe85a7e98ec8fca9a819b468a95fe8c3e22418536f9673f0f757", size = 73640, upload-time = "2025-05-14T03:34:08.547Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4e/cd/f2ba36210a9dbd0549c3faae23cb6969e00d161cae313f7696cdbbd97355/wikitextparser-1.0.2.tar.gz", hash = "sha256:db7abcffa907083af7d43f14108b78545930e9419b9a17b72e1ee83a382e1454", size = 51909, upload-time = "2026-06-25T08:15:18.844Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0e/6a/9f4fa1b14449632e8adacb07410430222e5aab208ee5128607116b0fc1b6/wikitextparser-0.56.4-py3-none-any.whl", hash = "sha256:b81637c72c0df058b94de29bcdd21d8ca6dbefb0bb5fd6f07eb6da365c29cbb8", size = 66460, upload-time = "2025-05-14T03:34:04.006Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/f4/168c7908a7ae0f81edce14bccc22962e62f2ec07974df17e4d0ebed98862/wikitextparser-1.0.2-py3-none-any.whl", hash = "sha256:1a1b22feb31df39c505cd1f1537abfc5c9a4dc630da6120db8deacaf0b9acda3", size = 61464, upload-time = "2026-06-25T08:15:15.889Z" },
 ]
 
 [[package]]
@@ -1632,7 +1632,7 @@ requires-dist = [
     { name = "testfixtures", marker = "extra == 'dev'", specifier = "==12.3.0" },
     { name = "types-freezegun", marker = "extra == 'dev'", specifier = "==1.1.10" },
     { name = "types-requests", marker = "extra == 'dev'", specifier = "==2.33.0.20260712" },
-    { name = "wikitextparser", specifier = "==0.56.4" },
+    { name = "wikitextparser", specifier = "==1.0.2" },
 ]
 provides-extras = ["dev"]
 
