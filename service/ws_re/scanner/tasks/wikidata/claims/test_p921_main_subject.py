@@ -40,6 +40,17 @@ class TestP921MainSubject(BaseTestClaimFactory):
         claim_json = factory._get_claim_json()
         compare(212239, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
+    def test_get_backlink_mapping_real_query(self):
+        # reset the cache preset by setUp, so the real sparql query is executed
+        P921MainSubject._backlink_mapping = None
+        mapping = P921MainSubject.get_backlink_mapping()
+        self.assertGreater(len(mapping), 1000)
+        for lemma, item_id in mapping.items():
+            self.assertIsInstance(lemma, str)
+            self.assertRegex(item_id, r"^Q\d+$")
+        # the second call is served from the cache
+        self.assertIs(mapping, P921MainSubject.get_backlink_mapping())
+
     def test__process_backlink_query(self):
         query_result = [
             {"candidate": "http://www.wikidata.org/entity/Q100346248", "REArticle": "Postumius 12a"},
