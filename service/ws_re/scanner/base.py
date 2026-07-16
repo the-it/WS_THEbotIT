@@ -18,6 +18,7 @@ from service.ws_re.scanner.tasks.correct_pd_dates import COPDTask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
+from service.ws_re.scanner.tasks.nachtrag_ueberschrift import NAUETask
 from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
@@ -57,6 +58,7 @@ class ReScanner(CloudBot):
             DATATask,  # write out to Wikidata
             SCANTask,  # write out to Registers
             WAORTask,  # look for Lemma where the content article isn't the first on the page
+            NAUETask,  # correct NACHTRAG/ÜBERSCHRIFT values on multi-article pages
         ]
         if self.debug:
             self.tasks = self.tasks + []
