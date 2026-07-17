@@ -174,19 +174,24 @@ italics are curated added value; the rule is that the **displayed text** must ma
 print exactly. Fix display text inside links rather than deleting the link; don't invent
 new links; drop a link only if its display text cannot be made to match the print.
 
-## Fan-out: one subagent per article
+## Fan-out: one subagent per article, max 20 subagents
 
 Subagents work **offline only** — local files + `crop.py`; no browser, no web, no wiki
-edits (there is only one browser session, and it belongs to the main loop). Give each
-subagent: the skeleton wikitext path, the eLexikon text path, the column PNG paths, and
-the article meta (lemma, BAND, SPALTE_START/END). Each writes:
+edits (there is only one browser session, and it belongs to the main loop). **Never spawn
+more than 20 subagents in total for a batch.** Up to 20 articles: one subagent per
+article. More than 20: split the articles into at most 20 chunks (round-robin or
+contiguous, ~⌈N/20⌉ articles each) and give each subagent its whole chunk to process
+sequentially. Give each subagent, per article: the skeleton wikitext path, the eLexikon
+text path, the column PNG paths, and the article meta (lemma, BAND, SPALTE_START/END).
+For each article the subagent writes:
 
 - `<workdir>/out/<lemma>.wikitext` — the complete new page text, and
 - `<workdir>/out/<lemma>.notes.json` —
   `{lemma, status: "ok"|"skip", reason, uncertain: ["col 753: Greek accent on …"], fixes: {line_numbers, hyphens, misreads, paragraph_joins}}`.
 
 Subagents die on transient API errors; the output files are the source of truth — re-spawn
-any article whose files are missing (idempotent). Parallel is fine.
+for any articles whose files are missing (idempotent, still within the 20-subagent cap).
+Parallel is fine.
 
 ## Structural check before saving
 
