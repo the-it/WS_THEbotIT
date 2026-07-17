@@ -1,0 +1,47 @@
+{
+ "skill_name": "create-ocr",
+ "notes": "This skill edits live de.wikisource pages and requires the single Playwright browser session for elexikon.ch (Cloudflare). Evals therefore run the OFFLINE portion (assembly + scan proofread) on pre-fetched inputs; no baseline runs (a no-skill agent cannot reach elexikon and must not edit the live wiki).",
+ "evals": [
+  {
+   "id": 0,
+   "eval_name": "tubantes-multicolumn",
+   "prompt": "Fill the unvollständig RE article RE:Tubantes (BAND VII A,1, columns 752-754) with the eLexikon OCR text: proofread it word-by-word against the column scans and produce the complete new page wikitext. Inputs are pre-fetched local files (skeleton, eLexikon text, column PNGs). Do not edit any wiki and do not use a browser.",
+   "expected_output": "A complete wikitext file where the [...] placeholder is replaced by the proofread OCR body, both skeleton {{Seite}} lines (incl. the {{REIA}} one) survive byte-identically at the column breaks, KORREKTURSTAND is unkorrigiert, REAutor/categories untouched, margin line-numbers (10/20/.../60) removed, hyphen-split words rejoined, Greek verified against the scan; plus a notes JSON listing fixes and uncertainties.",
+   "files": [
+    "iteration-1/input/Tubantes.skeleton.wikitext",
+    "iteration-1/input/Tubantes.txt",
+    "iteration-1/input/VII A,1_0752.png",
+    "iteration-1/input/VII A,1_0753.png",
+    "iteration-1/input/VII A,1_0754.png"
+   ],
+   "assertions": [
+    "structural checker (check_assembly.py) passes",
+    "KORREKTURSTAND flipped to unkorrigiert",
+    "both skeleton {{Seite}} lines survive byte-identically",
+    "margin line-counter artifacts (10/20/…/60) removed",
+    "hyphen-split words rejoined (Namenb/Germanenstamm/Tamfana)",
+    "known misreads fixed (Reailex/eich/Strab»)",
+    "notes.json present with status field"
+   ]
+  },
+  {
+   "id": 1,
+   "eval_name": "herennius12-single-column",
+   "prompt": "Fill the unvollständig RE article RE:Herennius 12 (BAND VIII,1, single column 664, SPALTE_END=OFF) with the eLexikon OCR text: proofread it word-by-word against the column scan and produce the complete new page wikitext. Inputs are pre-fetched local files. Do not edit any wiki and do not use a browser.",
+   "expected_output": "A complete wikitext file: no {{Seite}} lines (single column), [...] replaced by the short proofread body starting with the bold headword as printed, KORREKTURSTAND unkorrigiert, REAutor/categories untouched; plus a notes JSON.",
+   "files": [
+    "iteration-1/input/Herennius_12.skeleton.wikitext",
+    "iteration-1/input/Herennius_12.txt",
+    "iteration-1/input/VIII,1_0664.png"
+   ],
+   "assertions": [
+    "structural checker (check_assembly.py) passes",
+    "KORREKTURSTAND flipped to unkorrigiert",
+    "hyphen artifacts rejoined (Municipium/scavi/SperrSchrift split)",
+    "footnotes kept and Anmerkungen block placed after {{REAutor}}",
+    "no {{Seite}} template (single-column article)",
+    "notes.json present with status field"
+   ]
+  }
+ ]
+}

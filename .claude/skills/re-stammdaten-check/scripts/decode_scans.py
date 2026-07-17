@@ -29,6 +29,8 @@ def main():
     b64path, scansdir, prefix = sys.argv[1], sys.argv[2].rstrip('/'), sys.argv[3]
     os.makedirs(scansdir, exist_ok=True)
     d = json.load(open(b64path))
+    if isinstance(d, str):  # evaluate returned JSON.stringify(...) -> double-encoded
+        d = json.loads(d)
     if isinstance(d, dict) and 'result' in d and isinstance(d['result'], dict):
         d = d['result']
 

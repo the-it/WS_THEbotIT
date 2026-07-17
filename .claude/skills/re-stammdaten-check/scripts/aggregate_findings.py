@@ -27,6 +27,29 @@ def main():
     for f in sorted(glob.glob(f'{outdir}/findings_*.json')):
         for e in json.load(open(f)):
             e['_src'] = os.path.basename(f)
+            # compat: flatten the nested schema ({'reautor': {'ok':..,'printed':..}, ...)
+            if isinstance(e.get('reautor'), dict):
+                ra = e['reautor']
+                if ra.get('ok') is False and ra.get('printed') and not ra.get('multi_author'):
+                    e.setdefault('reautor_current', ra.get('current'))
+                    e.setdefault('reautor_fix', ra.get('printed'))
+                fx = {}
+                for k, tag in (('spalte_start', 'SS'), ('spalte_end', 'SE')):
+                    v = e.get(k)
+                    if isinstance(v, dict) and v.get('ok') is False:
+                        fx[tag] = v.get('scan_value')
+                if fx:
+                    e.setdefault('spalte_fix', fx)
+                vn = {}
+                for k, tag in (('vorgaenger', 'V'), ('nachfolger', 'N')):
+                    v = e.get(k)
+                    if isinstance(v, dict) and v.get('ok') is False:
+                        vn[tag] = v.get('scan_value')
+                if vn:
+                    e.setdefault('vn_fix', vn)
+                hw = e.get('headword')
+                if isinstance(hw, dict) and hw.get('move_target'):
+                    e.setdefault('title_fix', hw['move_target'])
             rows.append(e)
     json.dump(rows, open(f'{outdir}/all_findings.json', 'w'), ensure_ascii=False, indent=1)
     print(f'total findings: {len(rows)}\n')

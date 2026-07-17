@@ -64,9 +64,10 @@ human checks them against the scan.
      `RE:Tydeus 2` the register read `… → Tylangii → Tydii → Tyenis …`, but the print order is
      `Tydeus 2 → Tydii → Tyenis → Tylangii` (Tylangii, "Keltisches Volk im Wallis", actually
      begins at the bottom of col 1709 *after* Tyenis). Trust the on-scan headword/signature
-     sequence, not the register order. A whole-run scramble is a multi-article chain fix — do the
-     named article, then **surface the rest for the user's agreement** (V/N chain fixes touch the
-     neighbours too, so the user signs off; V/N do **not** regenerate nightly, so hand-edits persist).
+     sequence, not the register order. A whole-run scramble is a multi-article chain fix — apply
+     the whole chain (both outside neighbours included) once each link is verified on the scan;
+     the user asked for scan-verified V/N fixes to be applied autonomously (2026-07-16). List
+     them prominently in the report. V/N do **not** regenerate nightly, so hand-edits persist.
 4. **REAutor** = the **exact** signature printed in `[ ... ]` at the article's end
    (see "REAutor" below). Short articles may share the *next* signed article's author; pure
    redirects/verweise get `{{REAutor|OFF}}`.
@@ -357,6 +358,9 @@ as a redirect. Then set `SORTIERUNG=<transliteration>` on the moved page for cat
 (cf. `RE:Λεβήν` has `SORTIERUNG=Leben`). Leave the article-body bold headword as-is. Move +
 redirect is sufficient — no register-data edit needed (the nightly ReScanner won't fight it).
 Use `action=move` (csrf token, leave the redirect; check the target doesn't already exist).
+Then update the two neighbours whose V/N still hold the old transliteration to the new Greek
+title (the redirect keeps them working, but the chain should carry the real lemma — the
+Uellegeia move left `Velleboroi.N`/`Velleia.V` on the old name until follow-up, 2026-07-16).
 
 - **Transcribe the Greek letter by letter from a zoomed crop — a misspelled Greek move is a real
   error another editor has to clean up.** Do **not** type the word from memory or approximate it;
@@ -381,20 +385,42 @@ Use `action=move` (csrf token, leave the redirect; check the target doesn't alre
 ## Nachtrag / band chains — Vorgänger/Nachfolger gotcha
 
 RE pages can hold **multiple REDaten blocks**, one per band (main text e.g. `BAND=VII A,1`,
-second half-band `VII A,2`, and the Register `BAND=R`). Cross-reference stubs printed
-**"s. am Schluß des Bandes / Halbbandes"** are *Nachtrag* lemmas whose real content lives in
-VII A,2 / R, and they form their **own** band-chain — separate from the main-text chain.
-Example: Band-R chain `Troezene → Trogitis → Trogodytai → Troia 1 → Troiaspiel` runs alongside
-the VII A,1 chain `… → Trogus → Troia 2 → …`. **Do not conflate them.**
+second half-band `VII A,2`, and the Register `BAND=R`).
 
-- A break in Vorgänger/Nachfolger may just be two different band-chains — inspect each lemma's
-  `BAND=` before concluding it's wrong.
+**EVERY printed cross-reference stub is part of the band's V/N chain.** V/N = the lemma
+printed immediately before/after, no exceptions: plain `s. <article>` verweise, `s. d. Suppl.`
+stubs, AND `s. am Ende/Schluß des Bandes` Nachtrag stubs all count. If the register skips a
+printed stub, that's a register error — fix the chain to the printed sequence (both
+neighbours; the stub's own same-band block too, if the page exists). Do NOT read the
+existence of other-band chains as "the main chain skips the stub". (Regression, batch
+2026-07-16: `Veltae→Veltinia tribus→Velvinus` was chained past the printed
+`Weltalter/Weltbild/Weltschöpfung/Weltwunder` stubs, likewise `Venasa`, `Veneris oppidum 3`
+and `Uennikioi`/`Uennikion akron` were skipped — the user had to correct it. The register is
+inconsistent about stubs, so its current value is no evidence either way.)
+
+Where the **separate band-chain** point actually applies: the stub's *page* usually holds
+additional REDaten blocks for the band where the content really lives (VII A,2 Nachtrag,
+`BAND=R` Register, Supplement bands). Those blocks chain within *their* band (e.g. Band-R
+`Troezene → Trogitis → Trogodytai → Troia 1 → Troiaspiel` alongside the VII A,1
+`… → Trogus → Troia 2 → …`) — leave them alone, and:
+
+- A seeming break in Vorgänger/Nachfolger may just be another band's block — inspect each
+  block's `BAND=` before concluding it's wrong.
 - **V/N do NOT regenerate nightly** — hand-edits to VORGÄNGER/NACHFOLGER are durable and are
   **not** reverted overnight. (Don't tell the user a V/N fix "will regenerate" — that's wrong.)
-  V/N chain fixes still need the user's sign-off because they touch the neighbours, not because
-  they'd revert; prefer minimal edits.
-- The other verweis kind — a plain `s. <article>` (e.g. `Troiae lusus` "s. Lusus",
-  `VERWEIS=ON`) — *is* part of the main chain.
+- **Two adjacent stubs can be SWAPPED in the register** (batch 2026-07-17: print order
+  `Vercingetorix → Verconnius Herennianus → Vercondaridubnus → Vercustis`, register had the
+  two stubs reversed). The stubs' own pages exist as Verweis pages with their own V/N — fetch
+  and fix those too, not just the batch article pointing at them.
+- **After every move, sweep for ALL pages whose V/N hold the old lemma**: batch-internal via
+  a rename map over `all_meta.json`, plus the outside neighbours (derive them from the moved
+  article's own corrected V/N and fetch them — batch 2026-07-17 needed 7 such outside edits,
+  e.g. `Fundus Ver...`→`ver sacrum`, `Verrucini`→`C. Verrucius`, `Verbalis`→`Verban(n)us lacus`).
+  Also check whether the move TARGET already exists first — neighbours may already point at the
+  correct (e.g. Greek) lemma even though the page itself is still at the transliteration.
+- **A printed signature that looks like a misprint still wins** (Sp. 968 prints
+  `[E. A. Gordon.]` though the author was Arthur E. Gordon = "A. E."): set REAutor to the
+  printed form, verify on a crop yourself, and flag it prominently in the report.
 
 ## Person articles
 
@@ -430,8 +456,10 @@ still present and there is no `THE IT` revision, the article was never processed
     is missing (idempotent; last writer wins). Verify page-move accents/numbering yourself via
     `crop.py` before applying — moves are hard to reverse and the subagents flag these as med.
 - Per article, in one pass: verify Spalte/Vorgänger/Nachfolger → set **REAutor to the exact
-  signature** → **move** to the Greek lemma if the headword is Greek → (only with the user's
-  agreement) any Vorgänger/Nachfolger chain fix.
+  signature** → **move** to the Greek lemma if the headword is Greek → apply any
+  Vorgänger/Nachfolger chain fix (scan-verify every link yourself first — crop the spot for
+  each medium-confidence reading; the user asked for these to be applied autonomously,
+  2026-07-16). Remember: printed stubs belong in the chain (see the Nachtrag section).
 - **Do NOT remove the `RE:Stammdaten überprüfen` category.** The **user keeps the last check
   and removes the maintenance category themselves.** Leave it in place for their review.
 - **Don't open the articles in browser tabs.** Instead hand over a **written report** — a
