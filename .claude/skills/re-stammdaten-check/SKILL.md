@@ -73,15 +73,18 @@ human checks them against the scan.
    redirects/verweise get `{{REAutor|OFF}}`.
 5. **HEADWORD = lemma name — read it character for character.** Read the *printed* bold headword
    (and the page running head) and confirm the page title matches it exactly — **case and
-   punctuation included** — don't just check Spalte/author and move on. Five ways the
+   punctuation included** — don't just check Spalte/author and move on. Six ways the
    auto-generated title is wrong: a **Greek** headword (see below), a **double lemma** (see
    "Double lemmas" below), **letter case** (see "Letter case" below), a **parenthetical
-   reconstruction** (see "Parenthetical headwords" below), and a **reversed person-name** (see
-   "Reversed person-name" below). Regressions: `RE:Turba 1/2/3` read "Turba 1) oder Turbula"
+   reconstruction** (see "Parenthetical headwords" below), a **reversed person-name** (see
+   "Reversed person-name" below), and **missing macrons/breves** (see "Macrons" below).
+   Regressions: `RE:Turba 1/2/3` read "Turba 1) oder Turbula"
    (→ `RE:Turba, Turbula 1/2/3`); `RE:Turmuca` was printed lowercase **"turmuca"**; `RE:Turolici`
    was printed **"Turol(ici)"** with the reconstructed ending in parentheses; `RE:Val., P.` was
-   printed **"P. Val."** (praenomen before nomen). All had correct Spalte/V/N/REAutor and were
-   missed by not reading the headword.
+   printed **"P. Val."** (praenomen before nomen); `RE:Verbenaca`/`RE:Verbena`/`RE:Veratrum` were
+   printed **"Verbēnāca"/"Verbēna"/"Vērātrum"** and the verifiers *saw* the macrons but dismissed
+   them as "quantity marks only". All had correct Spalte/V/N/REAutor and were missed by not
+   reading — or not *obeying* — the headword.
 
 ## Getting the article wikitext
 
@@ -282,6 +285,26 @@ auto-generated title is wrong.
 - This is a scan-verified, review-worthy change (like Greek/double-lemma moves) — list it in the
   report and check the exact case on the scan crop before moving.
 
+## Macrons/breves in the headword ("Verbēnāca") → keep them in the lemma
+
+RE prints **vowel-quantity marks** (macron `ā ē ī ō ū`, occasionally breve `ă ĕ`) on many Latin
+bold headwords. **They are part of the lemma — the title must reproduce them verbatim.** Do NOT
+reason them away as "just pronunciation/quantity marks": that exact rationalization is how a
+verifier that had *correctly read* "Verbēnāca", "Verbēna" and "Vērātrum" off the scan still
+marked all three titles OK (`headword.ok=true`, "macron/breve are quantity marks only"), and the
+user had to make the moves themself (2026-07-17; same convention already visible in their earlier
+moves `RE:Vēiovis`, `RE:Vēdiovis`, 2026-07-15). If the printed bold headword and the plain title
+differ **in any character, diacritics included → flag it as a move**, never `ok`.
+
+- **The running head prints the PLAIN form** (page header "Verbenaca" over the article
+  "Verbēnāca") — read the diacritics off the **bold headword**, on a zoomed crop (at 1× a macron
+  vs. breve is ambiguous; at 5× they're clearly distinct — one was misread as `ă` at low zoom).
+- **Fix by moving** `RE:Verbenaca` → `RE:Verbēnāca`, **leaving the redirect** (the plain form is
+  the search form). Set the body bold headword to the macron form too.
+- `SORTIERUNG` stays **empty** (matches the user's own fixes on `RE:Vērātrum`/`RE:Verbēna`).
+- Update the neighbours' V/N to the macron title, as after any move.
+- Scan-verified, review-worthy — list these moves in the report.
+
 ## Reversed person-name ("Val., P." → "P. Val.") → restore the printed word order
 
 For a person lemma whose printed headword is an abbreviated **praenomen + nomen** (e.g. bold
@@ -318,13 +341,25 @@ fragment. The auto-generated lemma silently drops the parens (expands to the ful
 - Update the V/N of the two neighbours pointing into the article to the paren form.
 - Scan-verified, review-worthy change — list it in the report.
 
-## Double lemmas (Doppellemma: "X oder Y" / "X (Y)") → move to the comma form
+## Double lemmas (Doppellemma: "X oder Y" / "X (Y)") → match the printed byform syntax
 
-RE often prints a headword with a **byform**: the running head reads `X (Y)` and the article
-body opens `'''X 1)''' oder '''Y.'''` (e.g. running head "Turba (Turbula)", body "Turba 1) oder
-Turbula"). The auto-generated lemma keeps only the primary word (`RE:Turba 1`), which is **wrong**
-— the RE-Werkstatt convention titles such articles with the **comma form** `RE:X, Y N`, and it
-applies to **every numbered sub-article** of that headword, not just Nr. 1 (confirmed by e.g.
+RE often prints a headword with a **byform**, in two distinct print shapes with **different
+title conventions — copy the shape the BODY bold headword actually uses**:
+
+- Body opens `'''X 1)''' oder '''Y.'''` (running head `X (Y)`, e.g. "Turba 1) oder Turbula")
+  → title is the **comma form** `RE:X, Y N`.
+- Body bold headword itself is **`X (Y)`** (parens in the print, no "oder", e.g.
+  "Veraudunus (Veriugodumnus)") → title **keeps the parens verbatim**: `RE:X (Y)`. Do NOT
+  normalize it to the comma form. (Regression 2026-07-17: the verifier read
+  `Veraudunus (Veriugodumnus)` correctly off the scan but "corrected" the title to
+  `Veraudunus, Veriugodumnus` per the old comma rule, and the user re-moved it to the printed
+  paren form; their earlier moves `RE:Vassocales (Vassus)` and
+  `RE:Udravarinehae (Udrovarinehae)`, both 2026-07-15, are the same convention.)
+
+The auto-generated lemma keeps only the primary word (`RE:Turba 1`), which is **wrong** —
+for the "oder" shape the RE-Werkstatt convention titles such articles with the **comma form**
+`RE:X, Y N`, and it applies to **every numbered sub-article** of that headword, not just Nr. 1
+(confirmed by e.g.
 `RE:Aqua, Aquae 55`, `RE:Agreus, Agreutes 1/2`, `RE:Castra, Castrum 33`, `RE:Ilion, Ilios 1`).
 Detect it by **reading the printed headword and running head** — Spalte/V/N/REAutor can all be
 correct while the title is still wrong (that is exactly how `RE:Turba` was missed).
