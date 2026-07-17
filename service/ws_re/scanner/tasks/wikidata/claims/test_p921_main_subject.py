@@ -1,4 +1,4 @@
-# pylint: disable=protected-access
+# pylint: disable=protected-access,no-self-use
 import pywikibot
 from pywikibot import ItemPage
 from testfixtures import compare
@@ -11,11 +11,61 @@ from tools.test import real_wiki_test
 
 @real_wiki_test
 class TestP921MainSubject(BaseTestClaimFactory):
+    def setUp(self) -> None:
+        super().setUp()
+        # don't trigger the sparql query for the backlink mapping in tests
+        P921MainSubject._backlink_mapping = {}
+
+    def tearDown(self) -> None:
+        P921MainSubject._backlink_mapping = None
+
     def test__get_claim_json_no_linked_wikipedia_lemma(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Blub}}", title="RE:Aal")
         factory = P921MainSubject(re_page, self.logger)
         claim_json = factory._get_claim_json()
         compare(0, len(claim_json))
+
+    def test__get_claim_json_from_backlink_mapping(self):
+        P921MainSubject._backlink_mapping = {"Aal": "Q212239"}
+        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Blub}}", title="RE:Aal")
+        factory = P921MainSubject(re_page, self.logger)
+        claim_json = factory._get_claim_json()
+        compare(212239, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+        compare(15522295, claim_json[0]["references"][0]["snaks"]["P143"][0]["datavalue"]["value"]["numeric-id"])
+
+    def test__get_claim_json_wikipedia_link_beats_backlink_mapping(self):
+        P921MainSubject._backlink_mapping = {"Aal": "Q54321"}
+        re_page = self._create_mock_page(text="{{REDaten|\nWP=de:Aale}}\ntext\n{{REAutor|Blub}}", title="RE:Aal")
+        factory = P921MainSubject(re_page, self.logger)
+        claim_json = factory._get_claim_json()
+        compare(212239, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+    def test_get_backlink_mapping_real_query(self):
+        # reset the cache preset by setUp, so the real sparql query is executed
+        P921MainSubject._backlink_mapping = None
+        mapping = P921MainSubject.get_backlink_mapping()
+        self.assertGreater(len(mapping), 1000)
+        for lemma, item_id in mapping.items():
+            self.assertIsInstance(lemma, str)
+            self.assertRegex(item_id, r"^Q\d+$")
+        # the second call is served from the cache
+        self.assertIs(mapping, P921MainSubject.get_backlink_mapping())
+
+    def test__process_backlink_query(self):
+        query_result = [
+            {"candidate": "http://www.wikidata.org/entity/Q100346248", "REArticle": "Postumius 12a"},
+            {"candidate": "http://www.wikidata.org/entity/Q100347483", "REArticle": "Postumius 66"},
+            # same lemma claimed by two different items -> ambiguous, must be dropped
+            {"candidate": "http://www.wikidata.org/entity/Q11111", "REArticle": "Aal"},
+            {"candidate": "http://www.wikidata.org/entity/Q22222", "REArticle": "Aal"},
+            # same lemma claimed twice by the same item -> not ambiguous
+            {"candidate": "http://www.wikidata.org/entity/Q33333", "REArticle": "Monuste"},
+            {"candidate": "http://www.wikidata.org/entity/Q33333", "REArticle": "Monuste"},
+        ]
+        compare({"Postumius 12a": "Q100346248",
+                 "Postumius 66": "Q100347483",
+                 "Monuste": "Q33333"},
+                P921MainSubject._process_backlink_query(query_result))
 
     def test__get_claim_json_bogus_lemma(self):
         re_page = self._create_mock_page(text="{{REDaten|\nWP=de:Blablub}}\ntext\n{{REAutor|Blub}}", title="RE:Aal")
