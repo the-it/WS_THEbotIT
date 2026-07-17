@@ -32,10 +32,11 @@ after:   … → Tuccianus 2 → Tuccius → Tuccius 1 → Tuccius 2 → …
 This skill runs on the **same infrastructure** as the `re-stammdaten-check` skill. Do **not**
 re-derive it; read that SKILL.md for the details and reuse:
 
-- **Login / edits:** the user logs Claude in via the **Playwright browser** as their personal
-  account (**"THE IT"**, *not* the bot). All writes go through the MediaWiki API in
-  `browser_evaluate` (same-origin cookies, csrf token, `basetimestamp`, `maxlag:'5'`, ~700 ms
-  pacing). Playwright MCP tools are deferred — load them with ToolSearch.
+- **Edits:** all writes run as the bot account **THEbotIT** via **pywikibot** — see the
+  stammdaten skill's "Making edits (pywikibot as THEbotIT)" for the pattern (OAuth in
+  `~/.pywikibot/user-config.py`, repo venv interpreter, script + JSON payload in
+  `.claude_work_dir`). No wikisource browser login is needed; Playwright (MCP tools are
+  deferred — load with ToolSearch) is only for the elexikon scans.
 - **Reading wikitext:** de.wikisource is not behind Cloudflare — plain
   `curl ".../index.php?title=<t>&action=raw"` (with a descriptive `User-Agent`) works for a
   few pages; bulk-fetch via the query API otherwise.
@@ -81,8 +82,10 @@ Surface the verified values to the user before writing.
 
 ## Step 3 — Create the intro lemma `RE:<Name>`
 
-Create it via the browser API (`action=edit`, **no** `nocreate`; if overwriting a redirect,
-that's fine). Body is a **placeholder stub** — the user fills the real intro text later.
+Create it via pywikibot (`pywikibot.Page(site, 'RE:<Name>')`, set `page.text`,
+`page.save(summary=…)` — creating the page or overwriting a redirect is fine here; this
+is the one write in these skills that intends creation). Body is a **placeholder stub** —
+the user fills the real intro text later.
 
 ```wikitext
 {{REDaten

@@ -25,12 +25,11 @@ stays byte-identical.
 Read `../re-stammdaten-check/SKILL.md` for the infrastructure and reuse it; don't
 re-derive:
 
-- **Login / edits:** the user logs Claude in via the **Playwright browser** as their
-  personal account (**"THE IT"**, not the bot). All writes go through the MediaWiki API in
-  `browser_evaluate` (same-origin cookies, csrf token, `basetimestamp`, `maxlag:'5'`,
-  ~700 ms pacing). Playwright MCP tools are deferred — load them with ToolSearch.
-  Login is only needed for the **edit pass**; eLexikon needs no login, just the
-  Cloudflare clearance below.
+- **Edits:** the edit pass runs as the bot account **THEbotIT** via **pywikibot** — see
+  "Making edits (pywikibot as THEbotIT)" in the stammdaten skill. No browser login is
+  needed for wikisource at all; the Playwright browser is only used to reach eLexikon
+  (no login there either, just the Cloudflare clearance below). Playwright MCP tools are
+  deferred — load them with ToolSearch.
 - **Reading wikisource:** not behind Cloudflare — `curl …action=raw` for a few pages,
   bulk via the query API (50 titles/POST, descriptive User-Agent). PetScan gives titles
   with underscores, the API returns spaces.
@@ -202,18 +201,21 @@ categories are intact, no `[...]`/BOM/`== RE:` heading remains, and the body len
 plausible for the column count. Fix any FAIL before the edit pass; treat WARNs as review
 pointers.
 
-## Edit pass (main session, sequential)
+## Edit pass (main session, sequential, pywikibot as THEbotIT)
 
-Be logged in as **THE IT** on de.wikisource (ask the user). For each article, in **one
-edit** (never split):
+Edits run as **THEbotIT** through pywikibot (repo venv + `~/.pywikibot/user-config.py`
+OAuth — see the stammdaten skill's "Making edits" section for the pattern and how to run
+the script). Put the edit script in `.claude_work_dir`, feed it the `out/` directory, and
+process each article in **one edit** (never split):
 
-1. Fetch the live text + timestamp via the API; **guard:** it still contains the `[...]`
-   line and `KORREKTURSTAND=unvollständig` — otherwise someone touched it meanwhile: SKIP
-   and report.
-2. POST `action=edit` with the full new text, `basetimestamp`, `nocreate:'1'`,
-   `maxlag:'5'`, summary
-   `OCR-Text von elexikon.ch eingefügt und am Scan korrekturgelesen, Korrekturstand: unkorrigiert`,
-   ~700 ms pacing between articles.
+1. `page = pywikibot.Page(site, lemma)`; **guard:** `page.exists()` and `page.text` still
+   contains the `[...]` line and `KORREKTURSTAND=unvollständig` — otherwise someone
+   touched it meanwhile: SKIP and report.
+2. Set `page.text` to the full new text and `page.save(summary=..., minor=False)` with
+   summary
+   `OCR-Text von elexikon.ch eingefügt und am Scan korrekturgelesen, Korrekturstand: unkorrigiert`.
+   pywikibot handles edit conflicts (basetimestamp), `maxlag=5`, and pacing
+   (`put_throttle=2`) itself.
 
 ## Verify & report
 

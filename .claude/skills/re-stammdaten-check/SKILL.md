@@ -27,11 +27,12 @@ human checks them against the scan.
 
 ## Prerequisites
 
-- The user logs Claude in through the **Playwright browser** (their personal account, e.g.
-  "THE IT" — *not* the THEbotIT bot). All edits/moves go through that browser session.
-  Just navigate to `https://de.wikisource.org` and ask them to log in; verify via a snapshot
-  of the "Persönliche Werkzeuge" nav.
-- The Playwright MCP tools are deferred — load them with ToolSearch
+- **All edits/moves run as the bot account THEbotIT via pywikibot** (see "Making edits"
+  below): OAuth credentials live in `~/.pywikibot/user-config.py`, and the repo venv
+  `/Users/erik/workspace/WS_THEbotIT/.venv/bin/python` has pywikibot installed. No
+  wikisource browser login is needed.
+- The Playwright browser is only needed for the **elexikon.ch scans** (Cloudflare). The
+  MCP tools are deferred — load them with ToolSearch
   (`browser_navigate`, `browser_take_screenshot`, `browser_evaluate`, `browser_wait_for`,
   `browser_snapshot`, and `browser_run_code_unsafe` for grabbing the elexikon cookie).
 
@@ -168,50 +169,55 @@ d = post({'action':'query','prop':'revisions','rvprop':'content','rvslots':'main
   C: 1842–2763, D: 2763–3685** (x px; y as 0–1 fractions). crop.py's docstring numbers assume
   the older ~3620-wide screenshot — scale to the actual image width.
 
-## Making edits (through the browser session)
+## Making edits (pywikibot as THEbotIT)
 
-All writes go through the logged-in browser via the MediaWiki API in `browser_evaluate`
-(same-origin cookies). Be on a `de.wikisource.org` page first. Pattern:
+All writes run as the bot account **THEbotIT** via **pywikibot** — no browser involved.
+OAuth credentials are in `~/.pywikibot/user-config.py` (family wikisource/de,
+`put_throttle=2`). Write the edit script to `.claude_work_dir` (payload as a JSON file
+next to it — no shell quoting/escaping issues with Greek or umlauts) and run it with the
+literal interpreter path:
 
-```js
-async () => {
-  const api = '/w/api.php';
-  const title = 'RE:...';
-  const tk = await (await fetch(`${api}?action=query&meta=tokens&format=json`, {credentials:'same-origin'})).json();
-  const token = tk.query.tokens.csrftoken;
-  const q = await (await fetch(`${api}?action=query&prop=revisions&rvprop=content|timestamp&rvslots=main&titles=${encodeURIComponent(title)}&format=json&formatversion=2`, {credentials:'same-origin'})).json();
-  const rev = q.query.pages[0].revisions[0];
-  const oldText = rev.slots.main.content;
-  const newText = /* ...transform... */ oldText;
-  const body = new URLSearchParams({
-    action:'edit', title, text:newText, format:'json',
-    summary:'…', token, basetimestamp: rev.timestamp, bot:'0', nocreate:'1'
-  });
-  return await (await fetch(api, {method:'POST', credentials:'same-origin', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body})).json();
-}
+```bash
+/Users/erik/workspace/WS_THEbotIT/.venv/bin/python /Users/erik/workspace/WS_THEbotIT/.claude_work_dir/apply_edits.py
 ```
 
-- Always pass `basetimestamp` (edit-conflict safety) and guard that the string you replace
-  actually exists before editing (report a SKIP otherwise).
-- Loop the pattern to batch-edit many titles in one `browser_evaluate` call.
-- Note: Lua modules (Scribunto) must be saved via api.php too — the on-wiki CodeEditor
-  overwrites the textarea otherwise. (Regular wikitext articles are fine either way.)
+Pattern:
 
-**Batch editing at scale (100+ edits in one `browser_evaluate`):**
+```python
+import pywikibot
+site = pywikibot.Site('de', 'wikisource')   # OAuth from ~/.pywikibot/user-config.py
+site.login()
+assert site.user() == 'THEbotIT'
+page = pywikibot.Page(site, 'RE:...')
+old = page.text                              # loading records the base revision
+new = transform(old)                         # guard first: the exact string must exist
+if new != old:
+    page.text = new
+    page.save(summary='…', minor=False)      # conflict-safe; maxlag=5 + throttle built in
+```
 
-- Compute the *intended changes* locally, then send a **compact payload** (title + new values
-  only: new REAutor string, new Spalte fields, SORTIERUNG, move target) — not full article text.
-  Inject it as **base64** to dodge quoting/escaping of Greek + `ß`/umlauts:
-  `JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(B64), c=>c.charCodeAt(0))))`.
+- Guard that the string you replace actually exists before editing (report a SKIP
+  otherwise); only save when the text actually changed (skip `NOCHANGE`).
+- Moves: `page.move('RE:<new title>', reason='…')` — pywikibot **leaves the redirect by
+  default**; don't pass `noredirect`.
+- Note: Lua modules (Scribunto) must be saved via the API/pywikibot too — the on-wiki
+  CodeEditor overwrites the textarea otherwise. (Regular wikitext articles are fine
+  either way.)
+
+**Batch editing at scale (100+ edits in one script run):**
+
+- Compute the *intended changes* locally into a **compact JSON payload** (title + new
+  values only: new REAutor string, new Spalte fields, SORTIERUNG, move target) — not full
+  article text — and have the script read that file.
 - In the loop, **fetch each article's live text and apply targeted replacements** (regex-replace
   the single `{{REAutor|…}}`; line-replace `^\|SPALTE_END=.*$`; fill `^\|SORTIERUNG=\s*$`). This
   is robust to overnight ReScanner regeneration — if the guard (`exactly one REAutor tag`, line
-  present, SORTIERUNG empty) fails, record a SKIP instead of clobbering. Only POST when the text
+  present, SORTIERUNG empty) fails, record a SKIP instead of clobbering. Only save when the text
   actually changed; skip `NOCHANGE`.
-- Pass `maxlag:'5'` and **pace ~700 ms** between edits ("THE IT" is not a bot account, so it hits
-  manual rate limits). Collect a per-title `{status}` result array and save it via `filename:`.
+- Rate limiting is handled by pywikibot (`put_throttle=2`, `maxlag=5`); the edits carry the
+  bot flag automatically. Collect a per-title `{status}` result JSON in `.claude_work_dir`.
 - **Do moves in a second pass, after the text edits** (set `SORTIERUNG` in the text pass on the
-  old title, then move). Same base64-inject + pacing pattern.
+  old title, then move).
 
 ## REAutor = the EXACT printed signature
 
@@ -392,7 +398,8 @@ article** (e.g. `ἡ Τροβαλισσικὴ ὁδός` → `RE:ἡ Τροβα
 as a redirect. Then set `SORTIERUNG=<transliteration>` on the moved page for category sorting
 (cf. `RE:Λεβήν` has `SORTIERUNG=Leben`). Leave the article-body bold headword as-is. Move +
 redirect is sufficient — no register-data edit needed (the nightly ReScanner won't fight it).
-Use `action=move` (csrf token, leave the redirect; check the target doesn't already exist).
+Move with pywikibot `page.move(target, reason=…)` (leaves the redirect by default; check
+the target doesn't already exist).
 Then update the two neighbours whose V/N still hold the old transliteration to the new Greek
 title (the redirect keeps them working, but the chain should carry the real lemma — the
 Uellegeia move left `Velleboroi.N`/`Velleia.V` on the old name until follow-up, 2026-07-16).
@@ -409,10 +416,10 @@ Uellegeia move left `Velleboroi.N`/`Velleia.V` on the old name until follow-up, 
     editor *Epìdosis* had to re-move it to the correct `Τουκρούμουδα`.)
   - After moving, re-read the moved title against the crop once more to confirm the spelling.
 
-- **Leaving the redirect — MediaWiki boolean gotcha:** `noredirect` is treated as *true* if the
-  parameter is **present at all**, regardless of value — passing `noredirect:'0'` (or `'false'`,
-  `''`) still **suppresses** the redirect. To keep the redirect, simply **omit `noredirect`
-  entirely** from the move request.
+- **Leaving the redirect:** pywikibot's `page.move()` leaves the redirect by default —
+  just don't pass `noredirect`. (Raw-API gotcha, if you ever POST `action=move` to api.php
+  yourself: `noredirect` is treated as *true* if the parameter is **present at all** —
+  `'0'`/`'false'`/`''` still suppress the redirect; omit it entirely.)
 - **Always verify after moving** that the old title now exists as a redirect (query its content).
   If it's missing, recreate it: `#WEITERLEITUNG [[RE:<greek>]]` + `[[Kategorie:RE:Redirect]]`
   (cf. `RE:Leben`).
@@ -467,7 +474,9 @@ chunks). A person article is especially prone to the over-expanded REAutor above
 author DB expands the surname to the full name. (Regression: `RE:Tuscianus 1`, a Personen article,
 was left entirely untouched — only the bot's `Automatisch generiert` revision existed — so its
 `Rudolf Güngerich` / `[Güngerich.]` mismatch was never caught. If the maintenance category is
-still present and there is no `THE IT` revision, the article was never processed: check it.)
+still present and there is no manual check revision (`THE IT` historically, `THEbotIT`
+with a check summary since 2026-07 — anything beyond the bot's `Automatisch generiert`),
+the article was never processed: check it.)
 
 ## Workflow & user preferences
 
@@ -480,7 +489,7 @@ still present and there is no `THE IT` revision, the article was never processed
   article the local scan-file paths + a column→position (A/B/C/D) map + the wikitext path — and
   have it **only read local files + `crop.py`** (no browser, no web). Each writes a
   `findings_NN.json` (exists / spalte_fix / reautor_printed / greek_move+title / confidence).
-  Collect all findings, then do the edits/moves sequentially through the single browser session.
+  Collect all findings, then do the edits/moves sequentially via the pywikibot edit script.
   - **Only the START and END spread matter per article** (start = exists/headword/VORGÄNGER;
     end = SPALTE_END/NACHFOLGER/signature) — you do NOT need the middle spreads of a long
     article. Trim each article's scan list to `{scan_page(SS), scan_page(SE)}` and chunk by a
@@ -533,6 +542,6 @@ expansion). The whole pipeline, in order:
 6. `scripts/crop.py <scan.png> <x0> <y0frac> <x1> <y1frac> <out.png> [scale]` — crop a region of
    a saved scan (y as 0–1 fractions of height) and upscale, for reading fine print / signatures.
 
-The edit pass itself (REAutor/SPALTE regex-replace, V/N re-link) runs in the browser via
-`browser_evaluate` (see "Making edits") — not a local script, because it needs the same-origin
-login session.
+The edit pass itself (REAutor/SPALTE regex-replace, V/N re-link) is a local pywikibot
+script in `.claude_work_dir`, run as **THEbotIT** with the repo venv (see "Making edits")
+— the browser is only needed for the elexikon scans.
