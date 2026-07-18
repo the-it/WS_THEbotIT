@@ -173,7 +173,7 @@ italics are curated added value; the rule is that the **displayed text** must ma
 print exactly. Fix display text inside links rather than deleting the link; don't invent
 new links; drop a link only if its display text cannot be made to match the print.
 
-## Fan-out: one subagent per article, max 20 subagents
+## Fan-out: one subagent per article, max 10 subagents
 
 Subagents work **offline only** — local files + `crop.py`; no browser, no web, no wiki
 edits (there is only one browser session, and it belongs to the main loop). **Always spawn
