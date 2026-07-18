@@ -487,7 +487,9 @@ the article was never processed: check it.)
   files** (see the at-scale download above) and bulk-fetches all wikitext, then fans out ~10
   subagents (roughly one per ~20 lemmas). Give each subagent a chunk of assignments — per
   article the local scan-file paths + a column→position (A/B/C/D) map + the wikitext path — and
-  have it **only read local files + `crop.py`** (no browser, no web). Each writes a
+  have it **only read local files + `crop.py`** (no browser, no web). **Always spawn these
+  subagents with the `sonnet` model** (pass `model: "sonnet"` to the Agent tool for every
+  fan-out subagent). Each writes a
   `findings_NN.json` (exists / spalte_fix / reautor_printed / greek_move+title / confidence).
   Collect all findings, then do the edits/moves sequentially via the pywikibot edit script.
   - **Only the START and END spread matter per article** (start = exists/headword/VORGÄNGER;

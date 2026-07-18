@@ -176,7 +176,9 @@ new links; drop a link only if its display text cannot be made to match the prin
 ## Fan-out: one subagent per article, max 20 subagents
 
 Subagents work **offline only** — local files + `crop.py`; no browser, no web, no wiki
-edits (there is only one browser session, and it belongs to the main loop). **Never spawn
+edits (there is only one browser session, and it belongs to the main loop). **Always spawn
+the subagents with the `sonnet` model** (pass `model: "sonnet"` to the Agent tool for every
+fan-out subagent). **Never spawn
 more than 20 subagents in total for a batch.** Up to 20 articles: one subagent per
 article. More than 20: split the articles into at most 20 chunks (round-robin or
 contiguous, ~⌈N/20⌉ articles each) and give each subagent its whole chunk to process
