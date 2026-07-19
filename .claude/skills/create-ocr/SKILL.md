@@ -43,13 +43,18 @@ re-derive:
 ## Worklist & scope
 
 - **Source:** PetScan — category `RE:Unvollständig`, **minus** everything under
-  `Wikisource:Gemeinfreiheit` (depth 1), dewikisource ns 0:
-  `https://petscan.wmcloud.org/?categories=RE%3AUnvollst%C3%A4ndig&depth=1&sortby=title&language=de&negcats=Wikisource%3AGemeinfreiheit%7C1&project=wikisource&ns%5B0%5D=1&output_compatability=catscan&format=json&doit=`
-  (results at `d['*'][0]['a']['*']`, each item has `title`; ~14 000 entries as of 2026-07).
-- The negcat is a **copyright guard**: articles in a `Wikisource:Gemeinfreiheit <year>`
-  subcategory have authors not yet 71 years dead — their text must NOT be published.
-  Never work on a lemma outside this filtered list, and re-check the guard per article
-  (below) if the user hands you lemmas directly.
+  `Wikisource:Gemeinfreiheit` (depth 1) **and** `RE:Stammdaten überprüfen`, dewikisource ns 0:
+  `https://petscan.wmcloud.org/?categories=RE%3AUnvollst%C3%A4ndig&depth=1&sortby=title&language=de&negcats=Wikisource%3AGemeinfreiheit%7C1%0ARE%3AStammdaten%20%C3%BCberpr%C3%BCfen&project=wikisource&ns%5B0%5D=1&output_compatability=catscan&format=json&doit=`
+  (results at `d['*'][0]['a']['*']`, each item has `title`; ~14 000 entries as of 2026-07;
+  negcats are **newline-separated** — `%0A` in the URL — and a `|1` suffix sets that cat's depth).
+- The `Wikisource:Gemeinfreiheit` negcat is a **copyright guard**: articles in a
+  `Wikisource:Gemeinfreiheit <year>` subcategory have authors not yet 71 years dead — their text
+  must NOT be published. Never work on a lemma outside this filtered list, and re-check the guard
+  per article (below) if the user hands you lemmas directly.
+- The `RE:Stammdaten überprüfen` negcat **excludes articles whose metadata isn't verified yet**:
+  their auto-generated `SPALTE_*`/`BAND` can be wrong, which makes the OCR insert fail (the
+  scan column doesn't match, the article spans a column you didn't fetch, etc. — the exact cause
+  of the skips in batch 2026-07-18). Let those go through `re-stammdaten-check` first.
 - **Ask the user how many articles to work on if they didn't say.** If they named
   specific lemmas, use those.
 - **Selection: shortest first.** Bulk-fetch the wikitext of the first few hundred
@@ -177,7 +182,7 @@ new links; drop a link only if its display text cannot be made to match the prin
 
 Subagents work **offline only** — local files + `crop.py`; no browser, no web, no wiki
 edits (there is only one browser session, and it belongs to the main loop). **Always spawn
-the subagents with the `sonnet` model** (pass `model: "sonnet"` to the Agent tool for every
+the subagents with the `haiku` model** (pass `model: "haiku"` to the Agent tool for every
 fan-out subagent). **Never spawn
 more than 10 subagents in total for a batch.** Up to 10 articles: one subagent per
 article. More than 10: split the articles into at most 10 chunks (round-robin or
