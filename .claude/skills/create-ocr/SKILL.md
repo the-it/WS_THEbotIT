@@ -182,8 +182,12 @@ new links; drop a link only if its display text cannot be made to match the prin
 
 Subagents work **offline only** — local files + `crop.py`; no browser, no web, no wiki
 edits (there is only one browser session, and it belongs to the main loop). **Always spawn
-the subagents with the `haiku` model** (pass `model: "haiku"` to the Agent tool for every
-fan-out subagent). **Never spawn
+the fan-out subagents as the `ocr-proofreader` agent type** (pass
+`subagent_type: "ocr-proofreader"` to the Agent tool for every fan-out subagent). That
+definition (`.claude/agents/ocr-proofreader.md`) pins the model to **sonnet** and reasoning
+**effort to medium** — do NOT pass `model`/`effort` on the Agent call itself (the tool
+ignores `effort`; the frontmatter is the only place it takes effect). Sonnet is required:
+haiku proofreads Greek and letter-spaced names too unreliably to publish. **Never spawn
 more than 10 subagents in total for a batch.** Up to 10 articles: one subagent per
 article. More than 10: split the articles into at most 10 chunks (round-robin or
 contiguous, ~⌈N/10⌉ articles each) and give each subagent its whole chunk to process
