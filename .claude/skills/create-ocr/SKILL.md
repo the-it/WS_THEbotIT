@@ -224,10 +224,11 @@ process each article in **one edit** (never split):
    pywikibot handles edit conflicts (basetimestamp), `maxlag=5`, and pacing
    (`put_throttle=2`) itself.
 
-## Verify & report
+## Report
 
-Re-fetch each edited page: `KORREKTURSTAND=unkorrigiert`, no `[...]`, categories now show
-`RE:Unkorrigiert` (not `RE:Unvollständig`). Then hand the user a written report — a table
+No post-edit re-fetch/verification step — pywikibot confirms each save, and the pre-save
+structural check already guarantees the invariants; trust the save results. Just hand the
+user a written report — a table
 `lemma | columns | fixes (line-nrs/hyphens/misreads) | uncertainties | status` plus the
 skipped articles with reasons. Flag any suspected Stammdaten problems (wrong SPALTE,
 odd V/N) for a `re-stammdaten-check` pass instead of fixing them here.
