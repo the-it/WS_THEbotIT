@@ -182,7 +182,7 @@ new links; drop a link only if its display text cannot be made to match the prin
 
 Subagents work **offline only** — local files + `crop.py`; no browser, no web, no wiki
 edits (there is only one browser session, and it belongs to the main loop). **Always spawn
-the subagents with the `haiku` model** (pass `model: "haiku"` to the Agent tool for every
+the subagents with the `sonnet` model** (pass `model: "sonnet"` to the Agent tool for every
 fan-out subagent). **Never spawn
 more than 10 subagents in total for a batch.** Up to 10 articles: one subagent per
 article. More than 10: split the articles into at most 10 chunks (round-robin or
@@ -196,7 +196,7 @@ For each article the subagent writes:
   `{lemma, status: "ok"|"skip", reason, uncertain: ["col 753: Greek accent on …"], fixes: {line_numbers, hyphens, misreads, paragraph_joins}}`.
 
 Subagents die on transient API errors; the output files are the source of truth — re-spawn
-for any articles whose files are missing (idempotent, still within the 20-subagent cap).
+for any articles whose files are missing (idempotent, still within the 10-subagent cap).
 Parallel is fine.
 
 ## Structural check before saving
