@@ -16,8 +16,9 @@ class Mapping(DownloadTarget):
         self.target = target
         self.source = _MAPPINGS[target]["source"]
         self.path_raw_files = Path(BASE_PATH, "raw_files", *self.source)
-        self.path_mapping = Path(BASE_PATH, "mappings",
-                                 f"{Volumes()[self.target].sort_key.replace('_', '')}_{self.target}")
+        self.path_mapping = Path(
+            BASE_PATH, "mappings", f"{Volumes()[self.target].sort_key.replace('_', '')}_{self.target}"
+        )
 
     def _get_raw_files_photo_mapping(self) -> Dict[int, str]:
         regex_number = re.compile(r"\d{4,7}")
@@ -43,8 +44,10 @@ class Mapping(DownloadTarget):
                     makedirs(self.path_mapping, exist_ok=True)
                     for idx, page in enumerate(range(page_mapping[1], page_mapping[2] + 1)):
                         try:
-                            symlink(Path(self.path_raw_files, _photo_mapping[page]),
-                                    Path(self.path_mapping, f"{offset + (4 * idx):04d}.tif"))
+                            symlink(
+                                Path(self.path_raw_files, _photo_mapping[page]),
+                                Path(self.path_mapping, f"{offset + (4 * idx):04d}.tif"),
+                            )
                         except KeyError as error:
                             # known absent pages
                             if error.args[0] in _MISSING_PAGES:

@@ -1,7 +1,7 @@
 import re
 from typing import List, Dict, Tuple, Optional
 
-from pywikibot import Site
+from pywikibot.site import BaseSite
 
 from service.ws_re.register._typing import AuthorDict, CrawlerDict
 from service.ws_re.register.authors import Authors
@@ -36,8 +36,7 @@ class AuthorCrawler:
         mapping = re.sub(r"^return \{\n", "", mapping)
         mapping = re.sub(r"\}\s?$", "", mapping)
         splitted_mapping = mapping.split("\n[")
-        splitted_mapping = ["[" + mapping.strip().strip(",").lstrip("[")
-                            for mapping in splitted_mapping]
+        splitted_mapping = ["[" + mapping.strip().strip(",").lstrip("[") for mapping in splitted_mapping]
         return splitted_mapping
 
     @classmethod
@@ -62,8 +61,7 @@ class AuthorCrawler:
                 if sub_hit:
                     sub_dict[sub_hit.group(1)] = sub_hit.group(2)
                 else:
-
-                    sub_dict["*"] = sub_mapping.strip().strip("\"")
+                    sub_dict["*"] = sub_mapping.strip().strip('"')
             return {hit.group(1): sub_dict}
         raise ValueError(f"{single_mapping} not compliant to regex")
 
@@ -76,8 +74,8 @@ class AuthorCrawler:
             # issue disambiguates authors whose mapping is ambiguous ("ZUORDNUNG NICHT EINDEUTIG"),
             # e.g. "Nagl." with issue "I A,1" resolves to Alfred Nagl instead of being dropped.
             for invoke in re.finditer(
-                    r"\{\{REAutor/invokeModule\|([^\|\}]+\.)(?:\|([^\|\}]*))?(?:\|[^\}]*)?\}\}",
-                    mapping.group(2)):
+                r"\{\{REAutor/invokeModule\|([^\|\}]+\.)(?:\|([^\|\}]*))?(?:\|[^\}]*)?\}\}", mapping.group(2)
+            ):
                 author = authors.get_author_by_mapping(invoke.group(1), invoke.group(2) or "")
                 if author:
                     authors_list.append(author[0].name)
@@ -95,8 +93,9 @@ class AuthorCrawler:
 
     @staticmethod
     def _split_author_table(raw_table: str) -> List[str]:
-        hit = re.search(r"\{\|class=\"wikitable sortable tabelle-kopf-fixiert\"[^\|]*?\|-\s+(.*)\s+\|\}",
-                        raw_table, re.DOTALL)
+        hit = re.search(
+            r"\{\|class=\"wikitable sortable tabelle-kopf-fixiert\"[^\|]*?\|-\s+(.*)\s+\|\}", raw_table, re.DOTALL
+        )
         if hit:
             table = hit.group(1)
             splitted_table = table.split("\n|-\n")
@@ -153,19 +152,19 @@ class AuthorCrawler:
         #  - death2: optional trailing 2 or 4 digits after a slash (e.g., 1991/92 or 1991/1992)
         hit = re.search(
             (
-                r'(?<!")'               # ignore years inside data-sort-value="..."
-                r'(?P<birth1>\d{4})?'   # main birth year
-                r'(?:\s*/\s*(?P<birth2>\d{2,4}))?'  # optional birth suffix after slash
-                r'\s*\|\|\s*'        # separator between birth and death columns
-                r'(?P<death1>\d{4})?'   # main death year
-                r'(?:\s*/\s*(?P<death2>\d{2,4}))?'  # optional death suffix after slash
+                r'(?<!")'  # ignore years inside data-sort-value="..."
+                r"(?P<birth1>\d{4})?"  # main birth year
+                r"(?:\s*/\s*(?P<birth2>\d{2,4}))?"  # optional birth suffix after slash
+                r"\s*\|\|\s*"  # separator between birth and death columns
+                r"(?P<death1>\d{4})?"  # main death year
+                r"(?:\s*/\s*(?P<death2>\d{2,4}))?"  # optional death suffix after slash
             ),
             years,
         )
         if hit:
             # Birth processing
-            birth_main = hit.group('birth1')
-            birth_suffix = hit.group('birth2')
+            birth_main = hit.group("birth1")
+            birth_suffix = hit.group("birth2")
             birth: Optional[int]
             if birth_suffix:
                 if len(birth_suffix) == 2 and birth_main and len(birth_main) == 4:
@@ -176,8 +175,8 @@ class AuthorCrawler:
                 birth = int(birth_main) if birth_main else None
 
             # Death processing
-            death_main = hit.group('death1')
-            death_suffix = hit.group('death2')
+            death_main = hit.group("death1")
+            death_suffix = hit.group("death2")
             death: Optional[int]
             if death_suffix:
                 # Case like 1991/92 or 1991/1992 -> keep the second year; if 2 digits, keep the century of the first
@@ -224,14 +223,12 @@ class AuthorCrawler:
         return author_dict
 
     @classmethod
-    def process_author_infos(cls, wiki: Site) -> Dict[str, AuthorDict]:
-        text = fetch_text_from_wiki_site(wiki,
-                                         "Paulys Realencyclopädie der classischen "
-                                         "Altertumswissenschaft/Autoren")
+    def process_author_infos(cls, wiki: BaseSite) -> Dict[str, AuthorDict]:
+        text = fetch_text_from_wiki_site(wiki, "Paulys Realencyclopädie der classischen Altertumswissenschaft/Autoren")
         return cls.get_authors(text)
 
     @classmethod
-    def get_author_mapping(cls, wiki: Site, authors: Authors) -> CrawlerDict:
+    def get_author_mapping(cls, wiki: BaseSite, authors: Authors) -> CrawlerDict:
         text = fetch_text_from_wiki_site(wiki, "Modul:RE/Autoren")
         mapping = cls.get_mapping(text)
         text = fetch_text_from_wiki_site(wiki, "Vorlage:REAutor/Weiche")

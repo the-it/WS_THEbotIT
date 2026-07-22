@@ -18,7 +18,7 @@ class Years:
 
 
 class COPDTask(ReScannerTask):
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.authors = Authors()
         self.current_year = datetime.datetime.now().year
@@ -31,11 +31,12 @@ class COPDTask(ReScannerTask):
             self.remove_death_year_for_finished_article(re_article_list)
         return True
 
-    def remove_death_year_for_finished_article(self, re_article_list: ArticleList):
+    @staticmethod
+    def remove_death_year_for_finished_article(re_article_list: ArticleList):
         # once an article is fully proofread ("Fertig"/"fertig") the death year is no longer
         # needed and gets removed.
         article = re_article_list[0]
-        if article["KORREKTURSTAND"].value.lower() == "fertig":
+        if str(article["KORREKTURSTAND"].value).lower() == "fertig":
             article["TODESJAHR"].value = ""
 
     def set_year_values(self, re_article_list: ArticleList, years: Years):

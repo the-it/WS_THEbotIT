@@ -22,6 +22,4 @@ class P3903Column(ClaimFactory):
         columns = start
         if end and start != end:
             columns = f"{start}–{end}"
-        return SnakParameter(property_str=self.get_property_string(),
-                             target_type="string",
-                             target=columns)
+        return SnakParameter(property_str=self.get_property_string(), target_type="string", target=columns)

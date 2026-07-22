@@ -17,9 +17,13 @@ class TestCHRETaskRealWiki(TaskTestCase):
     def test_get_backlinks(self):
         WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
         task = CHRETask(WS_WIKI, self.logger)
-        compare(["Benutzer:S8w4/Spielwiese/Lemmata06kurz",
-                "Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/PD 2013"],
-                task.get_backlinks(pywikibot.Page(WS_WIKI, "RE:ho epi bomo hiereus")))
+        compare(
+            [
+                "Benutzer:S8w4/Spielwiese/Lemmata06kurz",
+                "Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/PD 2013",
+            ],
+            task.get_backlinks(pywikibot.Page(WS_WIKI, "RE:ho epi bomo hiereus")),
+        )
 
     @real_wiki_test
     def test_integration(self):

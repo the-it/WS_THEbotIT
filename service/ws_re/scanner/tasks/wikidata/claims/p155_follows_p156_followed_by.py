@@ -21,9 +21,11 @@ class Neighbour(ClaimFactory):
     def get_item_of_neighbour_lemma(self, article: Article) -> Optional[SnakParameter]:
         lemma_neighbour = self._get_lemma_of_neighbour(article)
         try:
-            return SnakParameter(property_str=self.get_property_string(),
-                                 target_type="wikibase-item",
-                                 target=lemma_neighbour.data_item().id)
+            return SnakParameter(
+                property_str=self.get_property_string(),
+                target_type="wikibase-item",
+                target=lemma_neighbour.data_item().id,
+            )
         except pywikibot.exceptions.NoPageError:
             return None
 
@@ -37,6 +39,7 @@ class P155Follows(Neighbour):
     """
     Returns the Claim **follows** -> **<Item of predecessor article>**
     """
+
     neighbour = "VORGÄNGER"
 
 
@@ -44,4 +47,5 @@ class P156FollowedBy(Neighbour):
     """
     Returns the Claim **followed by** -> **<Item of following article>**
     """
+
     neighbour = "NACHFOLGER"

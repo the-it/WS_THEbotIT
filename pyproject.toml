@@ -28,19 +28,42 @@ dev = [
   "codecov==2.1.13",
   "coverage==7.15.2",
   "ddt==1.7.2",
-  "flake8==7.3.0",
   "freezegun==1.5.5",
   "internetarchive==5.10.1",
   "moto==5.2.2",
-  "mypy==2.3.0",
   "nose2==0.16.0",
   "patool==4.0.5",
   "pyfiglet==1.0.4",
-  "pylint==4.0.6",
   "pyyaml==6.0.3",
   "requests-mock==1.12.1",
+  "ruff==0.15.22",
   "safety==3.8.1",
   "testfixtures==12.3.0",
+  "ty==0.0.62",
   "types-freezegun==1.1.10",
   "types-requests==2.33.0.20260712",
+]
+
+[tool.ruff]
+line-length = 120
+extend-exclude = [
+  "archive",
+  ".claude",
+]
+
+[tool.ruff.lint]
+ignore = [
+  # E402: module level import not at top of file
+  "E402",
+]
+
+[tool.ty.environment]
+python-version = "3.14"
+
+[tool.ty.src]
+exclude = [
+  "archive",
+  ".claude",
+  # test modules are excluded from type checking
+  "**/test_*.py",
 ]

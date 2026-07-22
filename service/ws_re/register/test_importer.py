@@ -17,7 +17,7 @@ class TestReImporter(TestCase):
         register = registers["XVI,1"]
         for idx, article in enumerate(register):
             if article.lemma == "Molorchos":
-                #start test
+                # start test
                 pre_1 = """{{REDaten
 |BAND=XVI,1
 |SPALTE_START=13

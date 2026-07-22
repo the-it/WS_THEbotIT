@@ -43,7 +43,7 @@ class TestAuthorCrawler(TestCase):
 }
 """
         splitted_mapping = self.crawler._split_mappings(test_str)
-        compare("[\"Karlhans Abel.\"] = \"Karlhans Abel\"", splitted_mapping[0])
+        compare('["Karlhans Abel."] = "Karlhans Abel"', splitted_mapping[0])
         compare(7, len(splitted_mapping))
         expect = """["Wünsch."] = {
 	"Richard Wünsch",
@@ -65,7 +65,7 @@ class TestAuthorCrawler(TestCase):
 
     def test_extract_mapping(self):
         expect = {"K A.": "Karlhans Abel"}
-        compare(expect, self.crawler._extract_mapping("[\"K A.\"]     = 	\"Karlhans Abel\""))
+        compare(expect, self.crawler._extract_mapping('["K A."]     = 	"Karlhans Abel"'))
 
         mapping_text = """["Schwabe."] = {
 	"Ernst Schwabe",
@@ -73,26 +73,28 @@ class TestAuthorCrawler(TestCase):
 	["IV,1"] = "Ludwig Schwabe",
 	["VI,2"] = "Ludwig Schwabe"
 }"""
-        expect = {"Schwabe.": {"*": "Ernst Schwabe",
-                               "II,1": "Ludwig Schwabe",
-                               "IV,1": "Ludwig Schwabe",
-                               "VI,2": "Ludwig Schwabe"}}
+        expect = {
+            "Schwabe.": {
+                "*": "Ernst Schwabe",
+                "II,1": "Ludwig Schwabe",
+                "IV,1": "Ludwig Schwabe",
+                "VI,2": "Ludwig Schwabe",
+            }
+        }
         compare(expect, self.crawler._extract_mapping(mapping_text))
 
         mapping_text = """["Wolf."] = {
 	["IX,2"] = "Karl Wolf",
 	"? Wolf"
 }"""
-        expect = {"Wolf.": {"*": "? Wolf",
-                            "IX,2": "Karl Wolf"}}
+        expect = {"Wolf.": {"*": "? Wolf", "IX,2": "Karl Wolf"}}
         compare(expect, self.crawler._extract_mapping(mapping_text))
 
         mapping_text = """["Wünsch."] = {
 	"Richard Wünsch",
 	["R"] = "Albert Wünsch"
 }"""
-        expect = {"Wünsch.": {"*": "Richard Wünsch",
-                              "R": "Albert Wünsch"}}
+        expect = {"Wünsch.": {"*": "Richard Wünsch", "R": "Albert Wünsch"}}
         compare(expect, self.crawler._extract_mapping(mapping_text))
 
     def test_get_mapping(self):
@@ -107,10 +109,11 @@ class TestAuthorCrawler(TestCase):
 ["Zwicker."] = "Johannes Zwicker"
 }
 """
-        expect = {"Karlhans Abel.": "Karlhans Abel",
-                  "Wünsch.": {"*": "Richard Wünsch",
-                              "R": "Albert Wünsch"},
-                  "Zwicker.": "Johannes Zwicker"}
+        expect = {
+            "Karlhans Abel.": "Karlhans Abel",
+            "Wünsch.": {"*": "Richard Wünsch", "R": "Albert Wünsch"},
+            "Zwicker.": "Johannes Zwicker",
+        }
         compare(expect, self.crawler.get_mapping(test_str))
 
     def test_get_mapping_nagl(self):
@@ -123,7 +126,7 @@ class TestAuthorCrawler(TestCase):
         #     but the first mapping of the run "V A,1" .. "XI,1").
         # The trailing tabs below are intentional and mirror the real module source.
         test_str = (
-            'return {\n'
+            "return {\n"
             '["Nagl."]           ={"ZUORDNUNG NICHT EINDEUTIG",\n'
             '\t["IX,2"]\t\t= "Maria Assunta Nagl",\n'
             '\t["XIII,1"]\t\t= "Maria Assunta Nagl",\n'
@@ -156,21 +159,45 @@ class TestAuthorCrawler(TestCase):
             '\t["S III"]\t\t= "Alfred Nagl",\n'
             '\t["S IV"]\t\t= "Alfred Nagl",\n'
             '\t["S V"]         = "Alfred Nagl" },\n'
-            '}\n'
+            "}\n"
         )
         maria = "Maria Assunta Nagl"
         alfred = "Alfred Nagl"
-        expect = {"Nagl.": {
-            "*": "ZUORDNUNG NICHT EINDEUTIG",
-            "IX,2": maria, "XIII,1": maria, "XIII,2": maria, "XIV,2": maria, "XV,1": maria,
-            "XVIII,1": maria, "XVIII,2": maria, "XVIII,3": maria, "XVIII,4": maria,
-            "XIX,2": maria, "XX,1": maria, "XX,2": maria,
-            "V A,1": maria, "V A,2": maria, "VI A,1": maria, "VI A,2": maria,
-            "VII A,1": maria, "VII A,2": maria, "S VII": maria,
-            "XI,1": alfred, "I A,1": alfred, "I A,2": alfred, "II A,1": alfred,
-            "III A,1": alfred, "III A,2": alfred, "IV A,1": alfred, "IV A,2": alfred,
-            "S III": alfred, "S IV": alfred, "S V": alfred,
-        }}
+        expect = {
+            "Nagl.": {
+                "*": "ZUORDNUNG NICHT EINDEUTIG",
+                "IX,2": maria,
+                "XIII,1": maria,
+                "XIII,2": maria,
+                "XIV,2": maria,
+                "XV,1": maria,
+                "XVIII,1": maria,
+                "XVIII,2": maria,
+                "XVIII,3": maria,
+                "XVIII,4": maria,
+                "XIX,2": maria,
+                "XX,1": maria,
+                "XX,2": maria,
+                "V A,1": maria,
+                "V A,2": maria,
+                "VI A,1": maria,
+                "VI A,2": maria,
+                "VII A,1": maria,
+                "VII A,2": maria,
+                "S VII": maria,
+                "XI,1": alfred,
+                "I A,1": alfred,
+                "I A,2": alfred,
+                "II A,1": alfred,
+                "III A,1": alfred,
+                "III A,2": alfred,
+                "IV A,1": alfred,
+                "IV A,2": alfred,
+                "S III": alfred,
+                "S IV": alfred,
+                "S V": alfred,
+            }
+        }
         compare(expect, self.crawler.get_mapping(test_str))
 
     def test_get_compound_mapping(self):
@@ -193,14 +220,14 @@ class TestAuthorCrawler(TestCase):
 
 """
         expect = {
-            'Beer-Honigmann.': ['Georg Beer', 'Ernst Honigmann'],
-            'Beer-Moritz.': ['Georg Beer', 'Bernhard Moritz'],
-            'Reinhard Büll. Ernst Moser.': ['Reinhard Büll', 'Ernst Moser'],
-            'W. Kroll mit Zusätzen von Hobein in eckigen Klammern.': ['Wilhelm Kroll', 'Hermann Hobein'],
-            'W. Tomaschek † – Max Fluss.': ['Wilhelm Tomaschek', 'Max Fluß'],
-            'v. Jan und Graf.': ['Karl von Jan', 'Ernst Graf'],
+            "Beer-Honigmann.": ["Georg Beer", "Ernst Honigmann"],
+            "Beer-Moritz.": ["Georg Beer", "Bernhard Moritz"],
+            "Reinhard Büll. Ernst Moser.": ["Reinhard Büll", "Ernst Moser"],
+            "W. Kroll mit Zusätzen von Hobein in eckigen Klammern.": ["Wilhelm Kroll", "Hermann Hobein"],
+            "W. Tomaschek † – Max Fluss.": ["Wilhelm Tomaschek", "Max Fluß"],
+            "v. Jan und Graf.": ["Karl von Jan", "Ernst Graf"],
             # "Nagl." is ambiguous; the issue "I A,1" must disambiguate it to Alfred Nagl.
-            'Nagl–Münzer.': ['Alfred Nagl', 'Friedrich Münzer'],
+            "Nagl–Münzer.": ["Alfred Nagl", "Friedrich Münzer"],
         }
         compare(expect, self.crawler.get_compound_mapping(test_str, Authors()))
 
@@ -213,7 +240,7 @@ class TestAuthorCrawler(TestCase):
         compare((1906, 1988), self.crawler._extract_years("1906||1988"))
         compare((1908, None), self.crawler._extract_years("1908 || ?"))
         compare((1933, None), self.crawler._extract_years("1933 ||"))
-        compare((1933, None), self.crawler._extract_years("data-sort-value=\"1932\" | 1933 ||"))
+        compare((1933, None), self.crawler._extract_years('data-sort-value="1932" | 1933 ||'))
         compare((None, None), self.crawler._extract_years(""))
 
     def test_extract_wp_lemma(self):
@@ -294,16 +321,34 @@ Als Kontrollgrundlage dienen in erster Linie die Angaben im Werk selbst:
 |XIX,2
 |[[w:Kenneth Morgan Abbott|Wikipedia]]"""
 
-        expect = {"Kenneth Morgan Abbott": {"death": 1988, "birth": 1906, "first_name": "Kenneth Morgan",
-                                            "last_name": "Abbott", "wp_lemma": "Kenneth Morgan Abbott"}}
+        expect = {
+            "Kenneth Morgan Abbott": {
+                "death": 1988,
+                "birth": 1906,
+                "first_name": "Kenneth Morgan",
+                "last_name": "Abbott",
+                "wp_lemma": "Kenneth Morgan Abbott",
+            }
+        }
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906 || 1988")))
 
-        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "first_name": "Kenneth Morgan", "last_name": "Abbott",
-                                            "wp_lemma": "Kenneth Morgan Abbott"}}
+        expect = {
+            "Kenneth Morgan Abbott": {
+                "birth": 1906,
+                "first_name": "Kenneth Morgan",
+                "last_name": "Abbott",
+                "wp_lemma": "Kenneth Morgan Abbott",
+            }
+        }
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "1906 ||")))
 
-        expect = {"Kenneth Morgan Abbott": {"first_name": "Kenneth Morgan", "last_name": "Abbott",
-                                            "wp_lemma": "Kenneth Morgan Abbott"}}
+        expect = {
+            "Kenneth Morgan Abbott": {
+                "first_name": "Kenneth Morgan",
+                "last_name": "Abbott",
+                "wp_lemma": "Kenneth Morgan Abbott",
+            }
+        }
         compare(expect, self.crawler._get_author(author_sub_table.replace("##date##", "")))
 
     def test_get_author_mapping_bug_meyer(self):
@@ -317,18 +362,41 @@ nicht der Jurist [[w:Herbert Meyer (Jurist)|Wikipedia]] -->"""
 
     def test_get_complete_authors(self):
         author_mapping = self.crawler.get_authors(self.author_table)
-        expect = {"Kenneth Morgan Abbott": {"birth": 1906, "death": 1988, "first_name": "Kenneth Morgan",
-                                            "last_name": "Abbott", "wp_lemma": "Kenneth Morgan Abbott"},
-                  "Karlhans Abel": {"birth": 1919, "death": 1998, "first_name": "Karlhans", "last_name": "Abel",
-                                    "ws_lemma": "Karlhans Abel", "wp_lemma": "Karlhans Abel"},
-                  "Walther Abel": {"birth": 1906, "death": 1987, "first_name": "Walther", "last_name": "Abel",
-                                   "wp_lemma": "Walther Abel"},
-                  "Wolf ?": {"last_name": "Wolf ?"},
-                  "Johannes Zwicker": {"birth": 1881, "death": 1969, "first_name": "Johannes", "last_name": "Zwicker",
-                                       "wp_lemma": "Johannes Zwicker"}}
+        expect = {
+            "Kenneth Morgan Abbott": {
+                "birth": 1906,
+                "death": 1988,
+                "first_name": "Kenneth Morgan",
+                "last_name": "Abbott",
+                "wp_lemma": "Kenneth Morgan Abbott",
+            },
+            "Karlhans Abel": {
+                "birth": 1919,
+                "death": 1998,
+                "first_name": "Karlhans",
+                "last_name": "Abel",
+                "ws_lemma": "Karlhans Abel",
+                "wp_lemma": "Karlhans Abel",
+            },
+            "Walther Abel": {
+                "birth": 1906,
+                "death": 1987,
+                "first_name": "Walther",
+                "last_name": "Abel",
+                "wp_lemma": "Walther Abel",
+            },
+            "Wolf ?": {"last_name": "Wolf ?"},
+            "Johannes Zwicker": {
+                "birth": 1881,
+                "death": 1969,
+                "first_name": "Johannes",
+                "last_name": "Zwicker",
+                "wp_lemma": "Johannes Zwicker",
+            },
+        }
         compare(expect, author_mapping)
 
-    table_head = "{|class=\"wikitable sortable tabelle-kopf-fixiert\"\n! Name/Sigel !! Leben !! Mitarbeit !! Artikel"
+    table_head = '{|class="wikitable sortable tabelle-kopf-fixiert"\n! Name/Sigel !! Leben !! Mitarbeit !! Artikel'
     table_bottom = "\n|}}\n\n[[Kategorie:RE:Autoren|!]]"
 
     def test_bug_kazarow(self):

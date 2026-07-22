@@ -31,7 +31,7 @@ class P50Author(ClaimFactory):
                         author_items.append(author_wikidata_id)
                 except pywikibot.exceptions.NoPageError:
                     continue
-        return [SnakParameter(property_str=self.get_property_string(),
-                              target_type="wikibase-item",
-                              target=author_id)
-                for author_id in author_items]
+        return [
+            SnakParameter(property_str=self.get_property_string(), target_type="wikibase-item", target=author_id)
+            for author_id in author_items
+        ]

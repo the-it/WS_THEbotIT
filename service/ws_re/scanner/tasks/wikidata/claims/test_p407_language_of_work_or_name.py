@@ -3,8 +3,7 @@
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
-from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
-    BaseTestClaimFactory
+from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import BaseTestClaimFactory
 from tools.test import real_wiki_test
 
 

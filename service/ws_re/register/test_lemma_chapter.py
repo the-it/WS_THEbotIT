@@ -13,5 +13,5 @@ class TestLemmaChapter(TestCase):
         compare(None, lemma_chapter.author)
 
     def test_return_dict(self):
-        lemma_chapter = LemmaChapter(start= 1, end=2, author="bla")
+        lemma_chapter = LemmaChapter(start=1, end=2, author="bla")
         compare(OrderedDict((("start", 1), ("end", 2), ("author", "bla"))), lemma_chapter.to_dict())

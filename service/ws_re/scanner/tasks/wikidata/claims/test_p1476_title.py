@@ -3,8 +3,7 @@
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
-from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
-    BaseTestClaimFactory
+from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import BaseTestClaimFactory
 from tools.test import real_wiki_test
 
 

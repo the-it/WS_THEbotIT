@@ -1,5 +1,6 @@
 from os import makedirs
 from pathlib import Path
+from typing import Iterable, cast
 
 from PIL import Image
 
@@ -13,8 +14,7 @@ class Single(DownloadTarget):
         self.issue = issue
         self.page_1 = (page // 2 * 2) + 1
         self.page_2 = self.page_1 + 1
-        self.path_issue = Path(BASE_PATH, "singles",
-                               f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
+        self.path_issue = Path(BASE_PATH, "singles", f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
         self.path_page_2 = self.path_issue.joinpath(f"{self.page_2:04d}.png")
         self.path_page_1 = self.path_issue.joinpath(f"{self.page_1:04d}.png")
         self.double = Double(issue=self.issue, page=self.page_1)
@@ -39,7 +39,8 @@ class Single(DownloadTarget):
             for j in range_slice:
                 im = double_image.convert("L")
                 crop_image = im.crop((half_width + j, 0, half_width + j + 1, height))
-                list_of_colorsums.append(sum(list(crop_image.getdata())) / height)
+                pixel_values = cast(Iterable[int], crop_image.getdata())
+                list_of_colorsums.append(sum(pixel_values) / height)
             # the slice with the highest colorvalue should
             first_max_index = list_of_colorsums.index(max(list_of_colorsums))
             half = half_width + range_slice[first_max_index]
@@ -66,7 +67,10 @@ if __name__ == "__main__":
     #     "S VI", "S VII", "S VIII", "S IX", "S X",
     #     "S XI", "S XII", "S XIII", "S XIV", "S XV",
     # ]
-    issues = ["XII,1", "XII,2",]
+    issues = [
+        "XII,1",
+        "XII,2",
+    ]
     for string in issues:
         volume = volumes[string]
         if volume.start_column and volume.end_column:

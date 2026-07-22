@@ -1,13 +1,14 @@
 import re
 
-from pywikibot import Site, Page
+from pywikibot import Page
+from pywikibot.site import BaseSite
 
 
 class ToolException(Exception):
     pass
 
 
-def fetch_text_from_wiki_site(wiki: Site, lemma: str) -> str:  # pragma: no cover
+def fetch_text_from_wiki_site(wiki: BaseSite, lemma: str) -> str:  # pragma: no cover
     text: str = Page(wiki, lemma).text
     if not text:
         raise ToolException(f"The lemma {lemma} is empty.")
@@ -41,8 +42,8 @@ def _has_category(lemma: Page, category_to_find: str) -> bool:
 
 
 def has_fertig_category(lemma: Page) -> bool:
-    return _has_category(lemma, 'Fertig')
+    return _has_category(lemma, "Fertig")
 
 
 def has_korrigiert_category(lemma: Page) -> bool:
-    return _has_category(lemma, 'Korrigiert')
+    return _has_category(lemma, "Korrigiert")

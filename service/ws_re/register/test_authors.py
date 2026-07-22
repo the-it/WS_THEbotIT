@@ -63,9 +63,9 @@ class TestAuthors(BaseTestRegister):
         authors.persist()
         base_path = Path(__file__).parent.joinpath("mock_data")
         with open(str(base_path.joinpath("authors_mapping.json")), mode="r", encoding="utf8") as mapping:
-            compare(True, "\"Foo\": \"Bar\"" in mapping.read())
+            compare(True, '"Foo": "Bar"' in mapping.read())
         with open(str(base_path.joinpath("authors.json")), mode="r", encoding="utf8") as authors:
-            compare(True, "  \"Foo Bar\": {\n    \"birth\": 1234\n  }" in authors.read())
+            compare(True, '  "Foo Bar": {\n    "birth": 1234\n  }' in authors.read())
 
     def test_iter(self):
         authors = iter(Authors())

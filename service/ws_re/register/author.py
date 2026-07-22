@@ -68,8 +68,7 @@ class Author:
         return name
 
     def update_internal_dict(self, author_dict: AuthorDict):
-        keys: Tuple[Literal["birth", "death", "first_name", "last_name",
-                            "wp_lemma", "ws_lemma", "redirect"], ...] = (
+        keys: Tuple[Literal["birth", "death", "first_name", "last_name", "wp_lemma", "ws_lemma", "redirect"], ...] = (
             "birth",
             "death",
             "first_name",

@@ -9,7 +9,7 @@ from tools.template_handler import TemplateHandler
 
 
 class TemplateExpansion:
-    def __init__(self, raw: str, wiki: pywikibot.Site):
+    def __init__(self, raw: str, wiki: pywikibot.site.BaseSite):
         self.raw = raw
         self.wiki = wiki
 
@@ -36,18 +36,23 @@ class TemplateExpansion:
                 with suppress(IndexError):
                     section = parameters[2]["value"]
                 text_to_insert = self.sanitize_included_lemma(
-                    pywikibot.Page(self.wiki, f"Seite:{lemma_to_insert}").text)
+                    pywikibot.Page(self.wiki, f"Seite:{lemma_to_insert}").text
+                )
                 if section:
-                    if match := re.search(rf"<section begin=\"?{section}\"? ?/>(.*?)<section end=\"?{section}\"? ?/>",
-                                          text_to_insert,
-                                          re.DOTALL):
+                    if match := re.search(
+                        rf"<section begin=\"?{section}\"? ?/>(.*?)<section end=\"?{section}\"? ?/>",
+                        text_to_insert,
+                        re.DOTALL,
+                    ):
                         text_to_insert = match.group(1)
                     else:
                         # if we have a referenced section,
                         # which isn't present in the target lemma set the text_to_insert empty.
-                        raise ValueError(f"Wasn't able to find complete section {section} "
-                                         f"for page [https://de.wikisource.org/wiki/Seite:"
-                                         f"{urllib.parse.quote(lemma_to_insert)} {lemma_to_insert}].")
+                        raise ValueError(
+                            f"Wasn't able to find complete section {section} "
+                            f"for page [https://de.wikisource.org/wiki/Seite:"
+                            f"{urllib.parse.quote(lemma_to_insert)} {lemma_to_insert}]."
+                        )
                 new_parts.append(text_to_insert)
             else:
                 new_parts.append(part)
@@ -61,18 +66,19 @@ class TemplateExpansion:
     @staticmethod
     def split_by_template(text_input: str, template_name: str) -> list[str]:
         positions = TemplateFinder(text_input).get_positions(template_name)
-        lemma_parts = [text_input[0:positions[0].start]]
+        lemma_parts = [text_input[0 : positions[0].start]]
         for idx, position in enumerate(positions):
             lemma_parts.append(position.text)
             with suppress(IndexError):
                 if position.end != positions[idx + 1].start:
-                    lemma_parts.append(text_input[position.end:positions[idx + 1].start])
-        lemma_parts.append(text_input[positions[-1].end:])
+                    lemma_parts.append(text_input[position.end : positions[idx + 1].start])
+        lemma_parts.append(text_input[positions[-1].end :])
         return lemma_parts
 
     def replace_tag(self, match, text_in_flight: str) -> str:
         text_to_insert = ""
         for i in range(int(match.group(2)), int(match.group(3)) + 1):
             text_to_insert += self.sanitize_included_lemma(
-                pywikibot.Page(self.wiki, f"Seite:{match.group(1)}/{i}").text)
-        return text_in_flight[0:match.start()] + text_to_insert + text_in_flight[match.end():]
+                pywikibot.Page(self.wiki, f"Seite:{match.group(1)}/{i}").text
+            )
+        return text_in_flight[0 : match.start()] + text_to_insert + text_in_flight[match.end() :]

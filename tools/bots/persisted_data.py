@@ -47,20 +47,23 @@ class PersistedData(Mapping):
         key_name = self.key_name
         if not success:
             key_name = f"{self.bot_name}.data.broken.json"
-        self.s3_client.put_object(Bucket=self._bucket_name,
-                                  Key=key_name,
-                                  Body=BytesIO(json.dumps({"time": str(datetime.now()),
-                                                           "data": self._data},
-                                                          indent=2)
-                                               .encode("utf-8")))
+        self.s3_client.put_object(
+            Bucket=self._bucket_name,
+            Key=key_name,
+            Body=BytesIO(json.dumps({"time": str(datetime.now()), "data": self._data}, indent=2).encode("utf-8")),
+        )
 
     def _load_from_bucket(self, key_appendix: str = ""):
         try:
             self._data = json.loads(
-                self.s3_client.get_object(Bucket=self._bucket_name, Key=f"{self.bot_name}.data{key_appendix}.json")
-                ["Body"].read().decode("utf-8"))["data"]  # type: ignore
+                self.s3_client.get_object(Bucket=self._bucket_name, Key=f"{self.bot_name}.data{key_appendix}.json")[
+                    "Body"
+                ]
+                .read()
+                .decode("utf-8")
+            )["data"]
         except exceptions.ClientError as error:
-            if error.response['Error']['Code'] == 'NoSuchKey':
+            if error.response["Error"]["Code"] == "NoSuchKey":
                 raise BotException(f"The data for {self.bot_name}.data{key_appendix}.json doesn't exists") from error
             raise
 
@@ -69,8 +72,9 @@ class PersistedData(Mapping):
             self.s3_resource.Object(self._bucket_name, f"{self.bot_name}.data{key_appendix}.json").delete()
 
     def _copy_to_deprecated(self):
-        self.s3_resource.Object(self._bucket_name, f"{self.bot_name}.data.deprecated.json")\
-            .copy_from(CopySource={'Bucket': self._bucket_name, 'Key': self.key_name})  # pylint: disable=no-member
+        self.s3_resource.Object(self._bucket_name, f"{self.bot_name}.data.deprecated.json").copy_from(
+            CopySource={"Bucket": self._bucket_name, "Key": self.key_name}
+        )  # pylint: disable=no-member
 
     def load(self):
         self._load_from_bucket()

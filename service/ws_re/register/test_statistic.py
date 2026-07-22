@@ -149,9 +149,18 @@ class TestBuildRowArticles(BaseTestRegister):
         }
         result = _build_row_articles([open_ended, long_span], 1, 10, self.authors, "I,1")
         compare(
-            [[], [], [], [],
-             [COLOR_YELLOW, COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN],
-             []],
+            [
+                [],
+                [],
+                [],
+                [],
+                [COLOR_YELLOW, COLOR_GREEN],
+                [COLOR_GREEN],
+                [COLOR_GREEN],
+                [COLOR_GREEN],
+                [COLOR_GREEN],
+                [],
+            ],
             result,
         )
 
@@ -169,12 +178,19 @@ class TestBuildRowArticles(BaseTestRegister):
         # Order matters: long_span first ensures it sorts before open_ended at col 5.
         result = _build_row_articles([long_span, open_ended, far], 1, 13, self.authors, "I,1")
         expected = [
-            [], [], [], [],
-            [COLOR_GREEN, COLOR_YELLOW],     # col 5 — both articles begin here
-            [COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN],  # cols 6–9 — long span only
-            [], [],                           # cols 10–11 — gap
-            [COLOR_GREEN],                    # col 12 — far span
-            [],                               # col 13
+            [],
+            [],
+            [],
+            [],
+            [COLOR_GREEN, COLOR_YELLOW],  # col 5 — both articles begin here
+            [COLOR_GREEN],
+            [COLOR_GREEN],
+            [COLOR_GREEN],
+            [COLOR_GREEN],  # cols 6–9 — long span only
+            [],
+            [],  # cols 10–11 — gap
+            [COLOR_GREEN],  # col 12 — far span
+            [],  # col 13
         ]
         compare(expected, result)
 
@@ -237,9 +253,7 @@ class TestCreatePicture(BaseTestRegister):
 
     def test_skips_volumes_without_columns(self):
         # The volume without columns is skipped; only I,1 contributes a row.
-        volume_with_columns = Volume(
-            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="5"
-        )
+        volume_with_columns = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="5")
         volume_no_columns = Volume(name="R", year=1980, data_item="Q9")
         with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume_with_columns, volume_no_columns]
@@ -250,12 +264,8 @@ class TestCreatePicture(BaseTestRegister):
                     compare((LABEL_WIDTH + 5, HEADER_HEIGHT + LINE_HEIGHT), image.size)
 
     def test_skips_volumes_without_json_file(self):
-        present = Volume(
-            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="5"
-        )
-        missing = Volume(
-            name="II,1", year=1896, data_item="Q2", start_column="1", end_column="5"
-        )
+        present = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="5")
+        missing = Volume(name="II,1", year=1896, data_item="Q2", start_column="1", end_column="5")
         with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [present, missing]
             with tempfile.TemporaryDirectory() as tmp_dir:
@@ -266,9 +276,7 @@ class TestCreatePicture(BaseTestRegister):
                     compare(HEADER_HEIGHT + LINE_HEIGHT, image.size[1])
 
     def test_renders_label_and_bar_pixels(self):
-        volume = Volume(
-            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="6"
-        )
+        volume = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="6")
         # Single PD lemma with proof_read=3 → green bar across the entire volume span.
         lemmas = [
             {
@@ -295,9 +303,7 @@ class TestCreatePicture(BaseTestRegister):
     def test_gridline_does_not_overwrite_marked_column_data(self):
         # Col 50 is the first marked column. Give it its own (yellow) lemma so
         # we can prove the gridline gap doesn't replace its data.
-        volume = Volume(
-            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="55"
-        )
+        volume = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="55")
         lemmas = [
             {
                 "lemma": "Before",
@@ -340,20 +346,24 @@ class TestCreatePicture(BaseTestRegister):
         # Two volumes with different start columns. Each row gets its own header
         # placed directly above its bar, and gridlines align with that volume's
         # actual column numbers.
-        volume_a = Volume(
-            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="250"
-        )
-        volume_b = Volume(
-            name="I,2", year=1894, data_item="Q2", start_column="1439", end_column="1700"
-        )
-        lemmas_a = [{
-            "lemma": "A", "proof_read": 3, "no_creative_height": True,
-            "chapters": [{"start": 1, "end": 250, "author": "Abert"}],
-        }]
-        lemmas_b = [{
-            "lemma": "B", "proof_read": 3, "no_creative_height": True,
-            "chapters": [{"start": 1439, "end": 1700, "author": "Abert"}],
-        }]
+        volume_a = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="250")
+        volume_b = Volume(name="I,2", year=1894, data_item="Q2", start_column="1439", end_column="1700")
+        lemmas_a = [
+            {
+                "lemma": "A",
+                "proof_read": 3,
+                "no_creative_height": True,
+                "chapters": [{"start": 1, "end": 250, "author": "Abert"}],
+            }
+        ]
+        lemmas_b = [
+            {
+                "lemma": "B",
+                "proof_read": 3,
+                "no_creative_height": True,
+                "chapters": [{"start": 1439, "end": 1700, "author": "Abert"}],
+            }
+        ]
         mock_dir = Path(__file__).parent.joinpath("mock_data")
         with open(mock_dir.joinpath("I_1.json"), "w", encoding="utf-8") as fp:
             json.dump(lemmas_a, fp)
@@ -392,9 +402,7 @@ class TestCreatePicture(BaseTestRegister):
 
     def test_draws_white_gridline_every_50_columns(self):
         # Bar wide enough to contain several gridlines (at columns 50, 100, …).
-        volume = Volume(
-            name="I,1", year=1893, data_item="Q1", start_column="1", end_column="250"
-        )
+        volume = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="250")
         # Single green span covering the full bar — gridline pixels must overwrite it.
         lemmas = [
             {

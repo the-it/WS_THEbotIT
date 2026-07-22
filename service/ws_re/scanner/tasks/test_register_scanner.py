@@ -45,8 +45,9 @@ text.
         compare(({"ws_link": "s:de:WsLemma"}, []), self.task._fetch_ws_link(article_list))
 
     def test_fetch_wikipedia_link_no_link(self):
-        with mock.patch("service.ws_re.scanner.tasks.register_scanner.SCANTask._get_link_from_wd",
-                        mock.Mock(return_value=None)):
+        with mock.patch(
+            "service.ws_re.scanner.tasks.register_scanner.SCANTask._get_link_from_wd", mock.Mock(return_value=None)
+        ):
             self.page_mock.text = """{{REDaten
 |BAND=I,1
 }}
@@ -216,7 +217,6 @@ text.
             post_lemma_dict = task.registers["I,1"].get_lemma_by_name("Aal").to_dict()
             compare(pre_lemma_dict, post_lemma_dict)
 
-
     def test_fetch_from_properties_self_append(self):
         with LogCapture():
             copy_tst_data("I_1_self_append", "I_1")
@@ -272,17 +272,21 @@ text.
         task.re_page = RePage(self.page_mock)
         with LogCapture() as log_catcher:
             task._process_from_article_list()
-            log_catcher.check(mock.ANY, ("Test", "ERROR",
-                                         StringComparison("No available Lemma in Registers for issue I,1 "
-                                                          ".* Reason is:.*")))
+            log_catcher.check(
+                mock.ANY,
+                ("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")),
+            )
 
     @real_wiki_test
     def test_get_wd_sitelink(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         self.task.re_page = RePage(pywikibot.Page(WS_WIKI, "RE:Demetrios 79"))
-        compare(({'wp_link': 'w:en:Demetrius the Chronographer'}, []),
-                self.task._fetch_wp_link(self.task.re_page.splitted_article_list[0]))
-        compare(({'ws_link': 's:de:Apokryphen/Demetrius der Chronograph'}, []),
-                self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]))
-        compare(({'wd_link': 'd:Q3705296'}, []),
-                self.task._fetch_wd_link(self.task.re_page.splitted_article_list[0]))
+        compare(
+            ({"wp_link": "w:en:Demetrius the Chronographer"}, []),
+            self.task._fetch_wp_link(self.task.re_page.splitted_article_list[0]),
+        )
+        compare(
+            ({"ws_link": "s:de:Apokryphen/Demetrius der Chronograph"}, []),
+            self.task._fetch_ws_link(self.task.re_page.splitted_article_list[0]),
+        )
+        compare(({"wd_link": "d:Q3705296"}, []), self.task._fetch_wd_link(self.task.re_page.splitted_article_list[0]))

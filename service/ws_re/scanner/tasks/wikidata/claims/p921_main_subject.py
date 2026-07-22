@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, cast
 
 import pywikibot
 from pywikibot.data import sparql
@@ -35,9 +35,9 @@ class P921MainSubject(ClaimFactory):
         if not target_item_id:
             return []
         # finally create the claim
-        snak = SnakParameter(property_str=self.get_property_string(),
-                             target_type="wikibase-item",
-                             target=target_item_id)
+        snak = SnakParameter(
+            property_str=self.get_property_string(), target_type="wikibase-item", target=target_item_id
+        )
 
         return [self.create_claim_json(snak, references=[[self._IMPORTED_FROM_WIKISOURCE]])]
 
@@ -50,12 +50,12 @@ class P921MainSubject(ClaimFactory):
         if ":" not in wp_article:
             wp_article = f"de:{wp_article}"
         language, wp_page_str = wp_article.split(":")
-        wp_site: pywikibot.Site = pywikibot.Site(code=language, fam="wikipedia")
+        wp_site: pywikibot.site.BaseSite = pywikibot.Site(code=language, fam="wikipedia")
         wp_page: pywikibot.Page = pywikibot.Page(wp_site, wp_page_str)
         # try to fetch the data item of the page, if not there is nothing to connect
         try:
             wp_data_item: pywikibot.ItemPage = wp_page.data_item()
-        except (pywikibot.exceptions.NoPageError, pywikibot.exceptions.InvalidTitleError):
+        except pywikibot.exceptions.NoPageError, pywikibot.exceptions.InvalidTitleError:
             return None
         return str(wp_data_item.id)
 
@@ -81,7 +81,7 @@ class P921MainSubject(ClaimFactory):
             del mapping[lemma]
         return mapping
 
-    def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
+    def get_claims_to_update(self, data_item: Optional[pywikibot.ItemPage]) -> ChangedClaimsDict:
         """
         Only add claims, if no claim already exist.
         Alert with an error if existing claim and added claim are different.
@@ -93,15 +93,14 @@ class P921MainSubject(ClaimFactory):
         claim_json = self._get_claim_json()
         if not claim_json:
             return self._create_claim_dictionary([], [])
-        new_claim: pywikibot.Claim = pywikibot.Claim.fromJSON(self.wikidata, claim_json[0])
+        new_claim: pywikibot.Claim = pywikibot.Claim.fromJSON(self.wikidata, cast(dict, claim_json[0]))
         old_claims = self.get_old_claims(data_item)
         # no old claim exists yet
         if not old_claims:
             return self._create_claim_dictionary([new_claim], [])
         # if the existing claim is a redirect, replace it
-        if old_claims[0].target.isRedirectPage():
-            return self._create_claim_dictionary([self.replace_redirect(old_claims[0])],
-                                                 [old_claims[0]])
+        if cast(pywikibot.Page, old_claims[0].target).isRedirectPage():
+            return self._create_claim_dictionary([self.replace_redirect(old_claims[0])], [old_claims[0]])
         if not new_claim.same_as(old_claims[0]):
             self.re_page.add_error_category(self.ERROR_CAT)
         else:
@@ -111,5 +110,5 @@ class P921MainSubject(ClaimFactory):
     @staticmethod
     def replace_redirect(old_claim: pywikibot.Claim) -> pywikibot.Claim:
         new_claim = old_claim.copy()
-        new_claim.setTarget(old_claim.target.getRedirectTarget())
+        new_claim.setTarget(cast(pywikibot.Page, old_claim.target).getRedirectTarget())
         return new_claim

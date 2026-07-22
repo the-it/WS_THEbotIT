@@ -3,6 +3,7 @@ from datetime import datetime
 from typing import Optional, Union
 
 from pywikibot import Site, Page, Category
+from pywikibot.site import BaseSite
 
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.registers import Registers
@@ -16,22 +17,25 @@ class ReImporter(CloudBot):
     _PER_NIGHT = 150
     _MAX_CAT = 1000
 
-    def __init__(self, wiki: Site = None, debug: bool = True,
-                 log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(
+        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+    ):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.registers = Registers(update_data=True)
         self.new_articles: dict[str, dict[str, str]] = {}
         self.author_mapping = get_author_mapping()
         self._create_neuland()
         self.current_year = datetime.now().year
-        self.max_create = min(self._PER_NIGHT,
-                              self._MAX_CAT - len(list(Category(self.wiki, self._STORE_CATEGORY).articles())))
+        self.max_create = min(
+            self._PER_NIGHT, self._MAX_CAT - len(list(Category(self.wiki, self._STORE_CATEGORY).articles()))
+        )
 
     def _create_neuland(self):
         for number in [1, 2, 3, 4, 5, 6, 7, 11, 12, 13]:
             neuland = Page(self.wiki, f"Wikisource:RE-Werkstatt/Neuland {number}")
-            for raw in re.finditer(r"(\{\{REDaten.*?\{\{REAutor\|.*?\}\})\n\d{1,5}\s*„RE:(.*?)“", neuland.text,
-                                   re.DOTALL):
+            for raw in re.finditer(
+                r"(\{\{REDaten.*?\{\{REAutor\|.*?\}\})\n\d{1,5}\s*„RE:(.*?)“", neuland.text, re.DOTALL
+            ):
                 lemma = raw.group(2)
                 article = raw.group(1)
                 if match := re.search(r"BAND=(.{1,10})\n", article):
@@ -57,20 +61,23 @@ class ReImporter(CloudBot):
                                 post_article = register[idx + 1]
                             except IndexError:
                                 post_article = None
-                            article_text = self.get_text_backup(article.volume.name, article,
-                                                                pre_article, post_article)
+                            article_text = self.get_text_backup(article.volume.name, article, pre_article, post_article)
                         article_text = adjust_author(article_text, self.author_mapping)
                         article_text = self.adjust_end_column(article_text, register, idx)
-                        article_text = article_text.replace("KORREKTURSTAND=Platzhalter",
-                                                            "KORREKTURSTAND=unvollständig")
-                        article_text = (f"{article_text}\n[[Kategorie:{self._STORE_CATEGORY}]]"
-                                        "\n[[Kategorie:RE:Kurztext überprüfen]]")
+                        article_text = article_text.replace(
+                            "KORREKTURSTAND=Platzhalter", "KORREKTURSTAND=unvollständig"
+                        )
+                        article_text = (
+                            f"{article_text}\n[[Kategorie:{self._STORE_CATEGORY}]]"
+                            "\n[[Kategorie:RE:Kurztext überprüfen]]"
+                        )
                         save_if_changed(lemma, article_text, "Automatisch generiert")
                         create_count += 1
                 if create_count >= self.max_create:
                     self.logger.info(
                         f"Created {create_count} articles. Last article was [[RE:{article.lemma}]]"
-                        f" in {register.volume.name}")
+                        f" in {register.volume.name}"
+                    )
                     break
         return True
 
@@ -83,9 +90,9 @@ class ReImporter(CloudBot):
         return None
 
     @staticmethod
-    def get_text_backup(band: str, article: Lemma,
-                        pre_article: Optional[Lemma] = None,
-                        post_article: Optional[Lemma] = None) -> str:
+    def get_text_backup(
+        band: str, article: Lemma, pre_article: Optional[Lemma] = None, post_article: Optional[Lemma] = None
+    ) -> str:
         if article.previous:
             vorgaenger = article.previous
         elif pre_article is not None:

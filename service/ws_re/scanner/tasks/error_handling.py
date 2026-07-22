@@ -10,7 +10,7 @@ class ERROTask(ReScannerTask, ReporterMixin):
     _wiki_page = "RE:Wartung:Strukturfehler"
     _reason = "Neue Fehlermeldungen"
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         ReporterMixin.__init__(self, wiki)
 

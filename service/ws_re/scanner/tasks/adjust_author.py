@@ -70,7 +70,7 @@ def get_author_mapping() -> dict[str, str]:
         if len(value) == 1 and value[0][-1] == ".":
             author_mapping[key] = value[0]
         else:
-            last_name = f"{key.split(" ")[-1]}."
+            last_name = f"{key.split(' ')[-1]}."
             name_list = []
             for name in key.split(" ")[0:-1]:
                 name_list.append(f"{name[0]}.")
@@ -88,17 +88,15 @@ def get_author_mapping() -> dict[str, str]:
 
 def adjust_author(input_str: str, mapping: dict[str, str]) -> str:
     for author in mapping:
-        input_str = re.sub(rf"{{{{REAutor\|{author}}}}}",
-                           f"{{{{REAutor|{mapping[author]}}}}}",
-                           input_str)
+        input_str = re.sub(rf"{{{{REAutor\|{author}}}}}", f"{{{{REAutor|{mapping[author]}}}}}", input_str)
     if REGEX_COMPLEX.search(input_str):
         article = Article.from_text(input_str.strip())
-        input_str = REGEX_COMPLEX.sub(rf"REAutor|\g<author>|{article["BAND"].value}", input_str)
+        input_str = REGEX_COMPLEX.sub(rf"REAutor|\g<author>|{article['BAND'].value}", input_str)
     return input_str
 
 
 class ADAUTask(ReScannerTask):
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         self.author_mapping = get_author_mapping()
         self.complex_short_names = set(COMPLEX_AUTHORS.values())
         super().__init__(wiki, logger, debug)

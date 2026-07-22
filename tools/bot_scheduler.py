@@ -1,9 +1,10 @@
 import contextlib
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, List, Type
+from typing import Dict, List, Type, cast
 
 from pywikibot import Site
+from pywikibot.site import BaseSite
 
 from tools.bots.cloud_bot import CloudBot
 
@@ -11,11 +12,13 @@ BotList = List[Type[CloudBot]]
 
 
 class BotScheduler(CloudBot):
-    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
-        self._daily_bots: BotList = []
-        self._weekly_bots: Dict[int, BotList] = {}
-        self._monthly_bots: Dict[int, BotList] = {}
-        self._bots_on_last_day_of_month: BotList = []
+    def __init__(
+        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+    ):
+        self.daily_bots: BotList = []
+        self.weekly_bots: Dict[int, BotList] = {}
+        self.monthly_bots: Dict[int, BotList] = {}
+        self.bots_on_last_day_of_month: BotList = []
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self._now = datetime.now()
 
@@ -25,49 +28,19 @@ class BotScheduler(CloudBot):
     def _last_day_of_month(self) -> bool:
         return (self.now() + timedelta(days=1)).day == 1
 
-    @property
-    def daily_bots(self) -> BotList:
-        return self._daily_bots
-
-    @daily_bots.setter
-    def daily_bots(self, new_config: BotList):
-        self._daily_bots = new_config
-
-    @property
-    def weekly_bots(self) -> Dict[int, BotList]:
-        return self._weekly_bots
-
-    @weekly_bots.setter
-    def weekly_bots(self, new_config: Dict[int, BotList]):
-        self._weekly_bots = new_config
-
-    @property
-    def monthly_bots(self) -> Dict[int, BotList]:
-        return self._monthly_bots
-
-    @monthly_bots.setter
-    def monthly_bots(self, new_config: Dict[int, BotList]):
-        self._monthly_bots = new_config
-
-    @property
-    def bots_on_last_day_of_month(self) -> BotList:
-        return self._bots_on_last_day_of_month
-
-    @bots_on_last_day_of_month.setter
-    def bots_on_last_day_of_month(self, new_config: BotList):
-        self._bots_on_last_day_of_month = new_config
-
     def run_bot(self, bot_to_run: CloudBot) -> bool:
         self.logger.info(f"The bot {bot_to_run.bot_name} is scheduled for start.")
         with bot_to_run:
             success = bot_to_run.run()
-        path_to_log = f"{self.wiki.username()}/Logs/{bot_to_run.bot_name}"
+        path_to_log = f"{cast(BaseSite, self.wiki).username()}/Logs/{bot_to_run.bot_name}"
         start_run = bot_to_run.status.current_run.start_time
-        self.logger.info(f"Log @ [https://de.wikisource.org/wiki/Benutzer:{path_to_log}"
-                         f"#{start_run:%y-%m-%d_%H:%M:%S} {path_to_log}]")
+        self.logger.info(
+            f"Log @ [https://de.wikisource.org/wiki/Benutzer:{path_to_log}#{start_run:%y-%m-%d_%H:%M:%S} {path_to_log}]"
+        )
         if not success:
-            self.logger.error(f"<span style=\"background:#FF0000\">"
-                              f"The bot {bot_to_run.bot_name} wasn't successful.</span>")
+            self.logger.error(
+                f'<span style="background:#FF0000">The bot {bot_to_run.bot_name} wasn\'t successful.</span>'
+            )
         return success
 
     def run_dailys(self):

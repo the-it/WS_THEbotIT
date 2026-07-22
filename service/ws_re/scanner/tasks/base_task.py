@@ -13,7 +13,7 @@ CHANGED = "changed"
 
 
 class ReScannerTask:
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         self.wiki = wiki
         self.debug = debug
         self.logger = logger
@@ -67,7 +67,7 @@ class ReporterMixin:
     _wiki_page = "Wiki lemma to report to"
     _reason = "Reason to save report page"
 
-    def __init__(self, report_wiki: pywikibot.Site):
+    def __init__(self, report_wiki: pywikibot.site.BaseSite):
         self.data: Any = []
         self.report_wiki = report_wiki
 

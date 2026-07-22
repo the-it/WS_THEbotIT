@@ -31,35 +31,40 @@ class Article(Mapping):
         "GJ": "GEBURTSJAHR",
         "NT": "NACHTRAG",
         "ÜB": "ÜBERSCHRIFT",
-        "VW": "VERWEIS"}
+        "VW": "VERWEIS",
+    }
 
-    def __init__(self,
-                 article_type: str = RE_DATEN,
-                 re_daten_properties: Optional[ArticleProperties] = None,
-                 text: str = "",
-                 author: REAuthor = REAuthor("")):
+    def __init__(
+        self,
+        article_type: str = RE_DATEN,
+        re_daten_properties: Optional[ArticleProperties] = None,
+        text: str = "",
+        author: REAuthor = REAuthor(""),
+    ):
         self._article_type = ""
         self.article_type = article_type
         self._text = ""
         self.text = text
         self.author = author
-        self._properties = (Property("BAND", ""),
-                            Property("SPALTE_START", ""),
-                            Property("SPALTE_END", ""),
-                            Property("VORGÄNGER", ""),
-                            Property("NACHFOLGER", ""),
-                            Property("SORTIERUNG", ""),
-                            Property("KORREKTURSTAND", ""),
-                            Property("KURZTEXT", ""),
-                            Property("WIKIPEDIA", ""),
-                            Property("WIKISOURCE", ""),
-                            Property("GND", ""),
-                            Property("KEINE_SCHÖPFUNGSHÖHE", False),
-                            Property("TODESJAHR", ""),
-                            Property("GEBURTSJAHR", ""),
-                            Property("NACHTRAG", False),
-                            Property("ÜBERSCHRIFT", False),
-                            Property("VERWEIS", False))
+        self._properties = (
+            Property("BAND", ""),
+            Property("SPALTE_START", ""),
+            Property("SPALTE_END", ""),
+            Property("VORGÄNGER", ""),
+            Property("NACHFOLGER", ""),
+            Property("SORTIERUNG", ""),
+            Property("KORREKTURSTAND", ""),
+            Property("KURZTEXT", ""),
+            Property("WIKIPEDIA", ""),
+            Property("WIKISOURCE", ""),
+            Property("GND", ""),
+            Property("KEINE_SCHÖPFUNGSHÖHE", False),
+            Property("TODESJAHR", ""),
+            Property("GEBURTSJAHR", ""),
+            Property("NACHTRAG", False),
+            Property("ÜBERSCHRIFT", False),
+            Property("VERWEIS", False),
+        )
         self._init_properties(re_daten_properties)
 
     def __repr__(self):  # pragma: no cover
@@ -81,10 +86,7 @@ class Article(Mapping):
         # hash each property individually: since Python 3.14 tuples cache their
         # hash, so hash(self._properties) would go stale when a property mutates
         properties_hash = hash(tuple(hash(re_property) for re_property in self._properties))
-        return hash(self._article_type) \
-            + (properties_hash << 1) \
-            + (hash(self._text) << 2) \
-            + (hash(self.author) << 3)
+        return hash(self._article_type) + (properties_hash << 1) + (hash(self._text) << 2) + (hash(self.author) << 3)
 
     @property
     def article_type(self) -> str:
@@ -113,12 +115,16 @@ class Article(Mapping):
     def common_free(self) -> bool:
         current_year = datetime.now().year
         with contextlib.suppress(ValueError):
-            if self["TODESJAHR"].value and \
-                    int(self["TODESJAHR"].value) > current_year - public_domain.YEARS_AFTER_DEATH:
+            if (
+                self["TODESJAHR"].value
+                and int(self["TODESJAHR"].value) > current_year - public_domain.YEARS_AFTER_DEATH
+            ):
                 if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
                     return False
-            if self["GEBURTSJAHR"].value and int(self["GEBURTSJAHR"].value) > \
-                    current_year - public_domain.YEARS_AFTER_BIRTH:
+            if (
+                self["GEBURTSJAHR"].value
+                and int(self["GEBURTSJAHR"].value) > current_year - public_domain.YEARS_AFTER_BIRTH
+            ):
                 if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
                     return False
         return True
@@ -130,11 +136,10 @@ class Article(Mapping):
                     try:
                         self[item[0]].value = item[1]
                     except (ValueError, TypeError) as property_error:
-                        raise ReDatenException(f"Keypair {item} is not permitted.") \
-                            from property_error
+                        raise ReDatenException(f"Keypair {item} is not permitted.") from property_error
 
     @classmethod
-    def from_text(cls, article_text: str) -> 'Article':
+    def from_text(cls, article_text: str) -> "Article":
         """
         main parser function for initiating a ReArticle from a given piece of text.
 
@@ -172,11 +177,12 @@ class Article(Mapping):
             raise ReDatenException("Author-Template has the wrong structure.") from error
         # cast to KeyValuePair is valid, as all expected arguments in the template should be named
         properties_dict = cls._extract_properties(cast(list[KeyValuePair], re_start.parameters))
-        return Article(article_type=re_start.title,
-                       re_daten_properties=properties_dict,
-                       text=article_text[find_re_start[0].end:find_re_author[0].start]
-                       .strip(),
-                       author=re_author)
+        return Article(
+            article_type=re_start.title,
+            re_daten_properties=properties_dict,
+            text=article_text[find_re_start[0].end : find_re_author[0].start].strip(),
+            author=re_author,
+        )
 
     @classmethod
     def _extract_properties(cls, parameters: List[KeyValuePair]) -> ArticleProperties:
@@ -218,8 +224,7 @@ class Article(Mapping):
             else:
                 raise ReDatenException(f"REDaten has wrong key word. --> {template_property}")
         else:
-            raise ReDatenException(f"REDaten has property without a key word. --> "
-                                   f"{template_property}")
+            raise ReDatenException(f"REDaten has property without a key word. --> {template_property}")
         return keyword
 
     def _get_pre_text(self):
@@ -227,8 +232,7 @@ class Article(Mapping):
         template_handler.title = RE_DATEN
         list_of_properties: list[TemplateParameterDict] = []
         for re_property in self._properties:
-            list_of_properties.append({"key": re_property.name,
-                                       "value": re_property.value_to_string()})
+            list_of_properties.append({"key": re_property.name, "value": re_property.value_to_string()})
         template_handler.update_parameters(list_of_properties)
         return template_handler.get_str(str_complex=True)
 

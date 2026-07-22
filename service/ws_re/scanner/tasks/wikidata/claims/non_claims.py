@@ -9,9 +9,7 @@ import dictdiffer
 from service.ws_re.scanner.tasks.wikidata.base import get_article_type
 from service.ws_re.template.re_page import RePage
 
-PROOFREAD_BADGES = {"fertig": "Q20748093",
-                    "korrigiert": "Q20748092",
-                    "unkorrigiert": "Q20748091"}
+PROOFREAD_BADGES = {"fertig": "Q20748093", "korrigiert": "Q20748092", "unkorrigiert": "Q20748091"}
 
 
 class NonClaims:
@@ -38,11 +36,9 @@ class NonClaims:
         else:
             replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix)
         non_claims: Dict = json.loads(replaced_json)
-        non_claims["sitelinks"] = {"dewikisource": {
-            "site": "dewikisource",
-            "title": self.re_page.lemma,
-            "badges": self._proofread_badge
-        }}
+        non_claims["sitelinks"] = {
+            "dewikisource": {"site": "dewikisource", "title": self.re_page.lemma, "badges": self._proofread_badge}
+        }
         return non_claims
 
     @property
@@ -64,10 +60,11 @@ class NonClaims:
         # remove all languages, that are not set by this bot
         for labels_or_descriptions in ("labels", "descriptions"):
             try:
-                old_non_claims[labels_or_descriptions] = {key: value
-                                                          for (key, value)
-                                                          in old_non_claims[labels_or_descriptions].items()
-                                                          if key in self._languages(labels_or_descriptions)}
+                old_non_claims[labels_or_descriptions] = {
+                    key: value
+                    for (key, value) in old_non_claims[labels_or_descriptions].items()
+                    if key in self._languages(labels_or_descriptions)
+                }
             except KeyError:
                 # if there is no key, doesn't matter, the diff will show it then.
                 pass

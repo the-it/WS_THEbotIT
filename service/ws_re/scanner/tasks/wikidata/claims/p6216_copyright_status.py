@@ -50,25 +50,29 @@ class P6216CopyrightStatus(ClaimFactory):
 
     @property
     def published_95_years_ago(self) -> JsonClaimDict:
-        qualifier_jur = SnakParameter(self._APPLIES_TO_JURISDICTION, "wikibase-item",
-                                      self._UNITED_STATES_OF_AMERICA)
-        qualifier_det = SnakParameter(self._DETERMINATION_METHOD, "wikibase-item",
-                                      self._PUBLISHED_MORE_THAN_THAN_95_YEARS_AGO)
+        qualifier_jur = SnakParameter(self._APPLIES_TO_JURISDICTION, "wikibase-item", self._UNITED_STATES_OF_AMERICA)
+        qualifier_det = SnakParameter(
+            self._DETERMINATION_METHOD, "wikibase-item", self._PUBLISHED_MORE_THAN_THAN_95_YEARS_AGO
+        )
         claim_parameter = SnakParameter(self._COPYRIGHT_STATUS, "wikibase-item", self._PUBLIC_DOMAIN)
-        claim = self.create_claim_json(claim_parameter,
-                                       qualifiers=[qualifier_jur, qualifier_det],
-                                       references=[[self._IMPORTED_FROM_WIKISOURCE]])
+        claim = self.create_claim_json(
+            claim_parameter, qualifiers=[qualifier_jur, qualifier_det], references=[[self._IMPORTED_FROM_WIKISOURCE]]
+        )
         return claim
 
     def xx_years_after_authors_death(self, years) -> JsonClaimDict:
-        qualifier_jur = SnakParameter(self._APPLIES_TO_JURISDICTION, "wikibase-item",
-                                      getattr(self, f"_COUNTRIES_WITH_{years}_YEARS_PMA_OR_SHORTER"))
-        qualifier_det = SnakParameter(self._DETERMINATION_METHOD, "wikibase-item",
-                                      getattr(self, f"_{years}_YEARS_AFTER_AUTHORS_DEATH"))
+        qualifier_jur = SnakParameter(
+            self._APPLIES_TO_JURISDICTION,
+            "wikibase-item",
+            getattr(self, f"_COUNTRIES_WITH_{years}_YEARS_PMA_OR_SHORTER"),
+        )
+        qualifier_det = SnakParameter(
+            self._DETERMINATION_METHOD, "wikibase-item", getattr(self, f"_{years}_YEARS_AFTER_AUTHORS_DEATH")
+        )
         claim_parameter = SnakParameter(self._COPYRIGHT_STATUS, "wikibase-item", self._PUBLIC_DOMAIN)
-        claim = self.create_claim_json(claim_parameter,
-                                       qualifiers=[qualifier_jur, qualifier_det],
-                                       references=[[self._IMPORTED_FROM_WIKISOURCE]])
+        claim = self.create_claim_json(
+            claim_parameter, qualifiers=[qualifier_jur, qualifier_det], references=[[self._IMPORTED_FROM_WIKISOURCE]]
+        )
         return claim
 
     @property
@@ -95,10 +99,9 @@ class P6216CopyrightStatus(ClaimFactory):
 
     @property
     def threshold_of_originality(self) -> JsonClaimDict:
-        qualifier_det = SnakParameter(self._DETERMINATION_METHOD, "wikibase-item",
-                                      self._THRESHOLD_OF_ORIGINALITY)
+        qualifier_det = SnakParameter(self._DETERMINATION_METHOD, "wikibase-item", self._THRESHOLD_OF_ORIGINALITY)
         claim_parameter = SnakParameter(self._COPYRIGHT_STATUS, "wikibase-item", self._PUBLIC_DOMAIN)
-        claim = self.create_claim_json(claim_parameter,
-                                       qualifiers=[qualifier_det],
-                                       references=[[self._IMPORTED_FROM_WIKISOURCE]])
+        claim = self.create_claim_json(
+            claim_parameter, qualifiers=[qualifier_det], references=[[self._IMPORTED_FROM_WIKISOURCE]]
+        )
         return claim

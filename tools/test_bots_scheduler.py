@@ -1,6 +1,6 @@
 # pylint: disable=protected-access
 from datetime import datetime
-from unittest import  mock
+from unittest import mock
 
 from testfixtures import LogCapture, compare
 
@@ -26,22 +26,26 @@ class TestBotScheduler(TestCloudBase):
             compare(expectation[i - 1], self.bot_scheduler.now().weekday())
 
     def test_last_day_of_month(self):
-        dates = (datetime(year=2010, month=1, day=31),
-                 datetime(year=2010, month=2, day=28),
-                 datetime(year=2010, month=3, day=31),
-                 datetime(year=2010, month=7, day=31),
-                 datetime(year=2010, month=8, day=31),
-                 datetime(year=2010, month=9, day=30),
-                 datetime(year=2010, month=12, day=31))
+        dates = (
+            datetime(year=2010, month=1, day=31),
+            datetime(year=2010, month=2, day=28),
+            datetime(year=2010, month=3, day=31),
+            datetime(year=2010, month=7, day=31),
+            datetime(year=2010, month=8, day=31),
+            datetime(year=2010, month=9, day=30),
+            datetime(year=2010, month=12, day=31),
+        )
         for date in dates:
             self.now_mock.return_value = date
             self.assertTrue(self.bot_scheduler._last_day_of_month())
 
-        dates = (datetime(year=2010, month=1, day=30),
-                 datetime(year=2010, month=2, day=27),
-                 datetime(year=2010, month=3, day=1),
-                 datetime(year=2010, month=7, day=26),
-                 datetime(year=2010, month=8, day=19))
+        dates = (
+            datetime(year=2010, month=1, day=30),
+            datetime(year=2010, month=2, day=27),
+            datetime(year=2010, month=3, day=1),
+            datetime(year=2010, month=7, day=26),
+            datetime(year=2010, month=8, day=19),
+        )
         for date in dates:
             self.now_mock.return_value = date
             self.assertFalse(self.bot_scheduler._last_day_of_month())

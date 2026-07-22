@@ -2,8 +2,7 @@
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
-from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import \
-    BaseTestClaimFactory
+from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import BaseTestClaimFactory
 from tools.test import real_wiki_test
 
 
@@ -57,8 +56,9 @@ class TestP50Author(BaseTestClaimFactory):
         compare(1296093, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
     def test__get_claim_json_bug_mylonas(self):
-        re_page = self._create_mock_page(text="{{REDaten|BAND=III,1}}\ntext\n{{REAutor|G. Mylonas und E. Kirsten.}}",
-                                         title="RE:Bla")
+        re_page = self._create_mock_page(
+            text="{{REDaten|BAND=III,1}}\ntext\n{{REAutor|G. Mylonas und E. Kirsten.}}", title="RE:Bla"
+        )
         factory = P50Author(re_page, self.logger)
         claim_json = factory._get_claim_json()
         # must be two authors
@@ -66,10 +66,12 @@ class TestP50Author(BaseTestClaimFactory):
         compare(1358958, claim_json[1]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
     def test__get_claim_json_bug_circus(self):
-        re_page = self._create_mock_page(text="{{REDaten\n|BAND=III,2\n}}\ntext\n{{REAutor|Pollack.}}\n"
-                                              "{{REAbschnitt}}\ntext\n{{REAutor|Hülsen.}}\n"
-                                              "{{REAbschnitt}}\ntext\n{{REAutor|Pollack.}}",
-                                         title="RE:Bla")
+        re_page = self._create_mock_page(
+            text="{{REDaten\n|BAND=III,2\n}}\ntext\n{{REAutor|Pollack.}}\n"
+            "{{REAbschnitt}}\ntext\n{{REAutor|Hülsen.}}\n"
+            "{{REAbschnitt}}\ntext\n{{REAutor|Pollack.}}",
+            title="RE:Bla",
+        )
         factory = P50Author(re_page, self.logger)
         claim_json = factory._get_claim_json()
         compare(2, len(claim_json))

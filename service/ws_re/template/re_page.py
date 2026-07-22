@@ -66,7 +66,7 @@ class SplittedArticleList:
         return self._splitted_list[0].daten
 
     @property
-    def list(self) -> list[ArticleList]:
+    def article_lists(self) -> list[ArticleList]:
         return self._splitted_list
 
 
@@ -94,27 +94,27 @@ class RePage:
         if RE_DATEN not in re_starts[0].text:
             raise ReDatenException("First template isn't of type REDaten. Corrupt structure.")
         if len(re_starts) != len(re_author_pos):
-            raise ReDatenException(
-                "The count of start templates doesn't match the count of end templates.")
+            raise ReDatenException("The count of start templates doesn't match the count of end templates.")
         # iterate over start and end templates of the articles and create ReArticles of them
         last_handled_char = 0
         for pos_daten, pos_author in zip(re_starts, re_author_pos):
             if last_handled_char < pos_daten.start:
                 # there is plain text in front of the article
-                text_to_handle = self.pre_text[last_handled_char:pos_daten.start].strip()
+                text_to_handle = self.pre_text[last_handled_char : pos_daten.start].strip()
                 if text_to_handle:
                     # not just whitespaces
                     self._article_list.append(text_to_handle)
-            self._article_list.append(
-                Article.from_text(self.pre_text[pos_daten.start:pos_author.end]))
+            self._article_list.append(Article.from_text(self.pre_text[pos_daten.start : pos_author.end]))
             last_handled_char = pos_author.end
         # handle text after the last complete article
         if last_handled_char < len(self.pre_text):
-            self._article_list.append(self.pre_text[last_handled_char:len(self.pre_text)].strip())
+            self._article_list.append(self.pre_text[last_handled_char : len(self.pre_text)].strip())
 
     def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} (articles: {len(self), len(self.splitted_article_list)}, " \
+        return (
+            f"<{self.__class__.__name__} (articles: {len(self), len(self.splitted_article_list)}, "
             f"lemma: {self.lemma_without_prefix})>"
+        )
 
     def __getitem__(self, idx: int) -> Union[Article, str]:
         return self._article_list[idx]
@@ -171,8 +171,7 @@ class RePage:
             except pywikibot.exceptions.LockedPageError as error:
                 raise ReDatenException(f"Page {self.page.title} is locked, it can't be saved.") from error
         else:
-            raise ReDatenException(f"Page {self.page.title} is protected for normal users, "
-                                   f"it can't be saved.")
+            raise ReDatenException(f"Page {self.page.title} is protected for normal users, it can't be saved.")
 
     def append(self, new_article: Article):
         if isinstance(new_article, Article):
@@ -236,9 +235,9 @@ class RePage:
         :param category: Category that should be removed
         """
         if isinstance(self._article_list[-1], str):
-            self._article_list[-1] = re.sub(rf"\n?\[\[Kategorie:{category}\]\][^\n]*",
-                                            "",
-                                            self._article_list[-1]).strip()
+            self._article_list[-1] = re.sub(
+                rf"\n?\[\[Kategorie:{category}\]\][^\n]*", "", self._article_list[-1]
+            ).strip()
             if not self._article_list[-1]:
                 del self._article_list[-1]
 

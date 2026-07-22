@@ -14,19 +14,16 @@ class TemplatePosition:
     text: str
 
 
-class TemplateFinder():
+class TemplateFinder:
     def __init__(self, text_to_search: str):
         self.text = text_to_search
 
     def get_positions(self, template_name: str) -> List[TemplatePosition]:
         templates: List[TemplatePosition] = []
-        for start_position_template in \
-                self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
-            pos_start_brackets = \
-                self.get_start_positions_of_regex(r"\{\{", self.text[start_position_template + 2:])
+        for start_position_template in self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
+            pos_start_brackets = self.get_start_positions_of_regex(r"\{\{", self.text[start_position_template + 2 :])
             pos_start_brackets.reverse()
-            pos_end_brackets = \
-                self.get_start_positions_of_regex(r"\}\}", self.text[start_position_template + 2:])
+            pos_end_brackets = self.get_start_positions_of_regex(r"\}\}", self.text[start_position_template + 2 :])
             pos_end_brackets.reverse()
             open_brackets = 1
             while pos_end_brackets:
@@ -42,9 +39,13 @@ class TemplateFinder():
                         end_position_template += 4
                         # add start position (end only searched after)
                         end_position_template += start_position_template
-                        templates.append(TemplatePosition(start_position_template,
-                                                          end_position_template,
-                                                          self.text[start_position_template:end_position_template]))
+                        templates.append(
+                            TemplatePosition(
+                                start_position_template,
+                                end_position_template,
+                                self.text[start_position_template:end_position_template],
+                            )
+                        )
                         break
                     pos_end_brackets.pop(-1)
             else:
@@ -55,5 +56,5 @@ class TemplateFinder():
     def get_start_positions_of_regex(regex_pattern: str, text: str) -> List[int]:
         list_of_positions: List[int] = []
         for match in re.finditer(regex_pattern, text):
-            list_of_positions.append(match.regs[0][0])  # type: ignore # false positive, there is the attribute regs
+            list_of_positions.append(match.regs[0][0])  # false positive, there is the attribute regs
         return list_of_positions

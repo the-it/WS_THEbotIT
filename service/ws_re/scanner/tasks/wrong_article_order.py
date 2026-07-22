@@ -15,7 +15,7 @@ class WAORTask(ReScannerTask):
         # article redirects to another lemma
         if isinstance(get_redirect(self.re_page.first_article), str):
             return
-        for sub_article_list in self.re_page.splitted_article_list.list[1:]:
+        for sub_article_list in self.re_page.splitted_article_list.article_lists[1:]:
             if not sub_article_list.daten["VERWEIS"].value and len(sub_article_list.daten.text) > 100:
                 self.re_page.add_error_category(category=self.MAINTENANCE_CAT)
                 break

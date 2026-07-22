@@ -7,15 +7,13 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from tools import save_if_changed
 from tools.bots.logger import WikiLogger
 
-REGEX_TRANSLATION = str.maketrans({"(": r"\(",
-                                   ")": r"\)",
-                                   "?": r"\?"})
+REGEX_TRANSLATION = str.maketrans({"(": r"\(", ")": r"\)", "?": r"\?"})
 
 
 class CHRETask(ReScannerTask):
     error_category = "RE:Links führen auf Redirects"
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.filter_regex = re.compile(
             r"(Benutzer|"
@@ -83,8 +81,7 @@ class CHRETask(ReScannerTask):
     def replace_redirect_links(text: str, redirects: list[str], target: str):
         # any title in the redirect chain resolves to the target; match all of them
         # at once, longest first so the alternation prefers the most specific title
-        escaped = sorted((redirect.translate(REGEX_TRANSLATION) for redirect in redirects),
-                         key=len, reverse=True)
+        escaped = sorted((redirect.translate(REGEX_TRANSLATION) for redirect in redirects), key=len, reverse=True)
         redirect_re = "|".join(escaped)
         # [[RE:Redirect(#part)(|Something)]] -> [[RE:Target(#part)(|Something)]]
         temp_text = re.sub(rf"\[\[RE:(?:{redirect_re})(#|\||\]\])", rf"[[RE:{target}\g<1>", text)

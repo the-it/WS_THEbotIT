@@ -26,7 +26,7 @@ class RELITask(ReScannerTask):
         "Leben(a)",
     ]
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         # Pre-compile the regex patterns for each lemma
         self._compiled_patterns = [self._build_patterns(lemma) for lemma in self.TARGET_LEMMAS]

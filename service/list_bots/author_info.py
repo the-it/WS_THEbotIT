@@ -1,25 +1,27 @@
 import re
 from contextlib import suppress
 from math import ceil
-from typing import Optional
+from typing import Optional, cast
 
 from pywikibot import Page, ItemPage, Claim
 from pywikibot.exceptions import NoPageError
 
 from service.list_bots._base import get_page_infos, is_empty_value, assign_value
 
-NUMBER_TO_MONTH = {1: "Januar",
-                   2: "Februar",
-                   3: "März",
-                   4: "April",
-                   5: "Mai",
-                   6: "Juni",
-                   7: "Juli",
-                   8: "August",
-                   9: "September",
-                   10: "Oktober",
-                   11: "November",
-                   12: "Dezember"}
+NUMBER_TO_MONTH = {
+    1: "Januar",
+    2: "Februar",
+    3: "März",
+    4: "April",
+    5: "Mai",
+    6: "Juni",
+    7: "Juli",
+    8: "August",
+    9: "September",
+    10: "Oktober",
+    11: "November",
+    12: "Dezember",
+}
 
 
 class AuthorInfo:
@@ -69,15 +71,14 @@ class AuthorInfo:
             elif is_empty_value("first_name", author_dict):
                 sortkey = author_dict["last_name"]
             else:
-                sortkey = \
-                    author_dict["last_name"] + ", " + author_dict["first_name"]
+                sortkey = author_dict["last_name"] + ", " + author_dict["first_name"]
             sortkey = sortkey.replace("von ", "")
             author_dict["sortkey"] = sortkey
 
     @staticmethod
     def get_highest_claim(data_item: ItemPage, property_str: str) -> Optional[Claim]:
         try:
-            claims: list[Claim] = data_item.text["claims"][property_str]
+            claims: list[Claim] = cast(dict, data_item.text)["claims"][property_str]
         except KeyError:
             return None
         filtered_claims = []
@@ -117,9 +118,7 @@ class AuthorInfo:
             elif claim_date.precision < 11:
                 date_from_claim = NUMBER_TO_MONTH[claim_date.month] + " " + str(claim_date.year)
             else:
-                date_from_claim = f"{claim_date.day}. " \
-                                  f"{NUMBER_TO_MONTH[claim_date.month]} " \
-                                  f"{claim_date.year}"
+                date_from_claim = f"{claim_date.day}. {NUMBER_TO_MONTH[claim_date.month]} {claim_date.year}"
             if date_from_claim:
                 if re.search("-", date_from_claim):
                     date_from_claim = date_from_claim.replace("-", "") + " v. Chr."

@@ -71,7 +71,7 @@ class TestUpdater(BaseTestRegister):
         copy_tst_data("I_1_update_previous_wrong", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "previous": "Aal", "next": "Aba 1", "sort_key": "Aarassos"}
-        with self.assertRaisesRegex(RegisterException, "!= next lemma name \"Ab 1\""):
+        with self.assertRaisesRegex(RegisterException, '!= next lemma name "Ab 1"'):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
@@ -83,7 +83,7 @@ class TestUpdater(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos"}
-        with self.assertRaisesRegex(RegisterException, "!= previous lemma name \"Aal\""):
+        with self.assertRaisesRegex(RegisterException, '!= previous lemma name "Aal"'):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
@@ -91,7 +91,7 @@ class TestUpdater(BaseTestRegister):
         next_lemma = register.get_lemma_by_name("Aba 1")
         compare("Aarassos", next_lemma.previous)
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal"}
-        with self.assertRaisesRegex(RegisterException, "!= next lemma name \"Aba 1\""):
+        with self.assertRaisesRegex(RegisterException, '!= next lemma name "Aba 1"'):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
@@ -102,11 +102,13 @@ class TestUpdater(BaseTestRegister):
     def test_update_no_update_possible(self):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
-        update_dict = {"lemma": "bubum",
-                       "redirect": True,
-                       "sort_key": "babam",
-                       "previous": "rubbish",
-                       "next": "something"}
+        update_dict = {
+            "lemma": "bubum",
+            "redirect": True,
+            "sort_key": "babam",
+            "previous": "rubbish",
+            "next": "something",
+        }
         with self.assertRaisesRegex(RegisterException, "No strategy available"):
             with Updater(register) as updater:
                 updater.update_lemma(update_dict, [])
@@ -267,11 +269,13 @@ class TestUpdater(BaseTestRegister):
         compare("Ö", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
         compare(None, post_lemma_next_next.previous)
-        self.assertTrue(register.get_index_of_lemma("A") <
-                        register.get_index_of_lemma("N") <
-                        register.get_index_of_lemma("Ö") <
-                        register.get_index_of_lemma("P") <
-                        register.get_index_of_lemma("U"))
+        self.assertTrue(
+            register.get_index_of_lemma("A")
+            < register.get_index_of_lemma("N")
+            < register.get_index_of_lemma("Ö")
+            < register.get_index_of_lemma("P")
+            < register.get_index_of_lemma("U")
+        )
 
     def test_update_create_next_previous_supplement_by_name(self):
         copy_tst_data("I_1_sorting2", "R")
@@ -290,11 +294,13 @@ class TestUpdater(BaseTestRegister):
         compare("O", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
         compare(None, post_lemma_next_next.previous)
-        self.assertTrue(register.get_index_of_lemma("A") <
-                        register.get_index_of_lemma("N") <
-                        register.get_index_of_lemma("O") <
-                        register.get_index_of_lemma("P") <
-                        register.get_index_of_lemma("U"))
+        self.assertTrue(
+            register.get_index_of_lemma("A")
+            < register.get_index_of_lemma("N")
+            < register.get_index_of_lemma("O")
+            < register.get_index_of_lemma("P")
+            < register.get_index_of_lemma("U")
+        )
 
     def test_update_create_next_previous_supplement_by_name_pre_exists(self):
         copy_tst_data("I_1_sorting2", "S I")
@@ -313,11 +319,13 @@ class TestUpdater(BaseTestRegister):
         compare("O", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("U")
         compare(None, post_lemma_next_next.previous)
-        self.assertTrue(register.get_index_of_lemma("Vor A") <
-                        register.get_index_of_lemma("Ä") <
-                        register.get_index_of_lemma("O") <
-                        register.get_index_of_lemma("P") <
-                        register.get_index_of_lemma("U"))
+        self.assertTrue(
+            register.get_index_of_lemma("Vor A")
+            < register.get_index_of_lemma("Ä")
+            < register.get_index_of_lemma("O")
+            < register.get_index_of_lemma("P")
+            < register.get_index_of_lemma("U")
+        )
 
     def test_update_create_next_previous_supplement_by_name_next_exists(self):
         copy_tst_data("I_1_sorting2", "R")
@@ -336,11 +344,13 @@ class TestUpdater(BaseTestRegister):
         compare("O", post_lemma_next.previous)
         post_lemma_next_next = register.get_lemma_by_name("D")
         compare("Ü", post_lemma_next_next.previous)
-        self.assertTrue(register.get_index_of_lemma("A") <
-                        register.get_index_of_lemma("N") <
-                        register.get_index_of_lemma("O") <
-                        register.get_index_of_lemma("Ü") <
-                        register.get_index_of_lemma("D"))
+        self.assertTrue(
+            register.get_index_of_lemma("A")
+            < register.get_index_of_lemma("N")
+            < register.get_index_of_lemma("O")
+            < register.get_index_of_lemma("Ü")
+            < register.get_index_of_lemma("D")
+        )
 
     def test_update_pre_and_next_not_possible(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -377,10 +387,12 @@ class TestBugUpdates(BaseTestRegister):
         post_lemma = register.get_lemma_by_name("A")
         compare("O", post_lemma.previous)
         compare("blab", post_lemma.next)
-        self.assertTrue(register.get_index_of_lemma("A") <
-                        register.get_index_of_lemma("blab") <
-                        register.get_index_of_lemma("blub") <
-                        register.get_index_of_lemma("O"))
+        self.assertTrue(
+            register.get_index_of_lemma("A")
+            < register.get_index_of_lemma("blab")
+            < register.get_index_of_lemma("blub")
+            < register.get_index_of_lemma("O")
+        )
 
     def test_update_create_next_previous_supplement_by_sort_key(self):
         copy_tst_data("I_1_sorting2", "S I")
@@ -399,10 +411,12 @@ class TestBugUpdates(BaseTestRegister):
         post_lemma = register.get_lemma_by_name("Ä")
         compare("Ö", post_lemma.previous)
         compare("blab", post_lemma.next)
-        self.assertTrue(register.get_index_of_lemma("Ä") <
-                        register.get_index_of_lemma("blab") <
-                        register.get_index_of_lemma("blub") <
-                        register.get_index_of_lemma("Ö"))
+        self.assertTrue(
+            register.get_index_of_lemma("Ä")
+            < register.get_index_of_lemma("blab")
+            < register.get_index_of_lemma("blub")
+            < register.get_index_of_lemma("Ö")
+        )
 
     def test_acutius_1a(self):
         copy_tst_data("acutius_1a_bug", "S I")
@@ -435,14 +449,36 @@ class TestBugUpdates(BaseTestRegister):
     def test_bug_multi_issues_on_lemma_page(self):
         copy_tst_data("Iaxartes_bug", "IX_1")
         register = VolumeRegister(Volumes()["IX,1"], Authors())
-        update_dict_1 = {"lemma": "Iaxartes","previous": "Iaxartae", "next": "Iazyges",
-                         "proof_read": 2, "chapters": [{"start": 1181, "end": 1189}]}
-        update_dict_2 = {"lemma": "Iaxartes", "previous": "Iavolenus 2", "next": "Iazer",
-                         "proof_read": 3, "redirect": True, "chapters": [{"start": 806}]}
-        update_dict_3 = {"lemma": "Iazyges", "previous": "Iaxartes", "next": "Ibis",
-                         "proof_read": 2, "chapters": [{"start": 1189, "end": 1191}]}
-        update_dict_4 = {"lemma": "Iazyges", "previous": "Iazer", "next": "Ibe",
-                         "proof_read": 3, "redirect": True, "chapters": [{"start": 806}]}
+        update_dict_1 = {
+            "lemma": "Iaxartes",
+            "previous": "Iaxartae",
+            "next": "Iazyges",
+            "proof_read": 2,
+            "chapters": [{"start": 1181, "end": 1189}],
+        }
+        update_dict_2 = {
+            "lemma": "Iaxartes",
+            "previous": "Iavolenus 2",
+            "next": "Iazer",
+            "proof_read": 3,
+            "redirect": True,
+            "chapters": [{"start": 806}],
+        }
+        update_dict_3 = {
+            "lemma": "Iazyges",
+            "previous": "Iaxartes",
+            "next": "Ibis",
+            "proof_read": 2,
+            "chapters": [{"start": 1189, "end": 1191}],
+        }
+        update_dict_4 = {
+            "lemma": "Iazyges",
+            "previous": "Iazer",
+            "next": "Ibe",
+            "proof_read": 3,
+            "redirect": True,
+            "chapters": [{"start": 806}],
+        }
         with Updater(register) as updater:
             updater.update_lemma(update_dict_1, [], self_supplement=True)
             updater.update_lemma(update_dict_2, [], self_supplement=True)

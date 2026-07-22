@@ -8,10 +8,11 @@ from moto import mock_aws
 from tools.bots.base import is_aws_test_env
 
 JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
-JSON_TEST_EXTEND = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },' \
-                   '\n  "time": "2020-01-14 00:00:00"\n}'
-DATA_TEST = {'data': {'a': [1, 2]}, 'time': '2020-01-14 00:00:00'}
-DATA_TEST_EXTEND = {'data': {'a': [1, 2], 'b': 2}, 'time': '2020-01-14 00:00:00'}
+JSON_TEST_EXTEND = (
+    '{\n  "data": {\n    "a": [\n      1,\n      2\n    ],\n    "b": 2\n  },\n  "time": "2020-01-14 00:00:00"\n}'
+)
+DATA_TEST = {"data": {"a": [1, 2]}, "time": "2020-01-14 00:00:00"}
+DATA_TEST_EXTEND = {"data": {"a": [1, 2], "b": 2}, "time": "2020-01-14 00:00:00"}
 BUCKET_NAME = f"wiki-bots-persisted-data-{'tst' if is_aws_test_env() else 'prd'}"
 TABLE_NAME = f"wiki_bots_manage_table_{'tst' if is_aws_test_env() else 'prd'}"
 
@@ -57,24 +58,18 @@ class TestCloudBase(TestCase):
             KeySchema=[
                 {
                     "AttributeName": "bot_name",
-                    "KeyType": "HASH"  # Partition key
+                    "KeyType": "HASH",  # Partition key
                 },
                 {
                     "AttributeName": "start_time",
-                    "KeyType": "RANGE"  # Partition key
-                }
+                    "KeyType": "RANGE",  # Partition key
+                },
             ],
             AttributeDefinitions=[
-                {
-                    "AttributeName": "bot_name",
-                    "AttributeType": "S"
-                },
-                {
-                    "AttributeName": "start_time",
-                    "AttributeType": "S"
-                }
+                {"AttributeName": "bot_name", "AttributeType": "S"},
+                {"AttributeName": "start_time", "AttributeType": "S"},
             ],
-            BillingMode="PAY_PER_REQUEST"
+            BillingMode="PAY_PER_REQUEST",
         )
 
     def _truncate_manage_table(self):

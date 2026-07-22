@@ -2,8 +2,10 @@ import re
 from contextlib import suppress
 from datetime import timedelta, datetime
 from functools import lru_cache
+from typing import cast
 
 from pywikibot import Site, Page
+from pywikibot.site import BaseSite
 from pywikibot.exceptions import InvalidTitleError
 
 from service.list_bots._base import is_empty_value, has_value, get_page_infos
@@ -24,7 +26,9 @@ class PoemList(ListBot):
     }
     LIST_LEMMA = "Liste der Gedichte"
 
-    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(
+        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+    ):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 3, 15, 23)
         self.timeout = timedelta(minutes=2)
@@ -51,7 +55,7 @@ class PoemList(ListBot):
                     "title": "TITEL",
                     "author": "AUTOR",
                     "publish": "JAHR",
-                }
+                },
             )
         if "{{Kapitel" in page.text:
             return_dict = self.get_kapitel_page_infos(page)
@@ -66,7 +70,7 @@ class PoemList(ListBot):
             "Kapitel",
             {
                 "part": "TITELTEIL",
-            }
+            },
         )
         part = 2
         if has_value("part", kapitel_dict):
@@ -95,7 +99,7 @@ class PoemList(ListBot):
                 item_dict["first_name"] = author_dict["first_name"]
                 item_dict["last_name"] = author_dict["last_name"]
                 item_dict["sortkey_auth"] = author_dict["sortkey"]
-            except (ValueError, InvalidTitleError):
+            except ValueError, InvalidTitleError:
                 self.logger.debug(f"Can't process author {item_dict['author']} of lemma {item_dict['lemma']}")
                 item_dict["no_lemma_auth"] = "yes"
         if has_value("title", item_dict):
@@ -107,8 +111,7 @@ class PoemList(ListBot):
             item_dict.pop("creation")
         with suppress(KeyError):
             item_dict.pop("publish")
-        for item in ["title", "author", "first_name", "last_name",
-                     "sortkey_auth", "year", "sortkey", "first_line"]:
+        for item in ["title", "author", "first_name", "last_name", "sortkey_auth", "year", "sortkey", "first_line"]:
             if item not in item_dict:
                 item_dict[item] = ""
 
@@ -129,25 +132,32 @@ class PoemList(ListBot):
             alternative_sortkey = item_dict["title"]
         if match := self.ARTIKEL_REGEX.search(alternative_sortkey):
             alternative_sortkey = f"{match.group(2)} #{match.group(1)}"
-        return alternative_sortkey.strip("\"")
+        return alternative_sortkey.strip('"')
 
     def print_list(self, item_list: list[dict[str, str]]) -> str:
         start_of_run = self.status.current_run.start_time
         string_list = []
-        string_list.append(f"Diese Liste der Gedichte enthält alle {len(self.data)}<ref>Stand: "
-                           f"{start_of_run.day}.{start_of_run.month}.{start_of_run.year}, "
-                           f"{start_of_run.strftime('%H:%M')} (UTC)</ref> Gedichte, "
-                           f"die in Wikisource digitalisiert wurden.")
-        string_list.append("Die Liste kann mit den Buttons neben den Spaltenüberschriften"
-                           " nach der jeweiligen Spalte sortiert werden.")
-        string_list.append("Diese Liste wurde durch ein Computerprogramm erstellt, "
-                           "das die Daten verwendet, "
-                           "die aus den Infoboxen auf den Gedichtseiten stammen.")
+        string_list.append(
+            f"Diese Liste der Gedichte enthält alle {len(self.data)}<ref>Stand: "
+            f"{start_of_run.day}.{start_of_run.month}.{start_of_run.year}, "
+            f"{start_of_run.strftime('%H:%M')} (UTC)</ref> Gedichte, "
+            f"die in Wikisource digitalisiert wurden."
+        )
+        string_list.append(
+            "Die Liste kann mit den Buttons neben den Spaltenüberschriften nach der jeweiligen Spalte sortiert werden."
+        )
+        string_list.append(
+            "Diese Liste wurde durch ein Computerprogramm erstellt, "
+            "das die Daten verwendet, "
+            "die aus den Infoboxen auf den Gedichtseiten stammen."
+        )
         string_list.append("Fehler in der Liste müssen auf der Gedichtseiten korrigiert werden.")
-        string_list.append("Sollte eine erste Zeile falsch erkannt worden sein vom Algorithmus, "
-                           "kann man dies korrigieren, indem man in der Quellseite der ersten Zeile "
-                           "<code><nowiki><!-- erste Zeile --></nowiki></code> hinzufügt:")
-        string_list.append("{|class=\"prettytable sortable tabelle-kopf-fixiert\" {{prettytable}}")
+        string_list.append(
+            "Sollte eine erste Zeile falsch erkannt worden sein vom Algorithmus, "
+            "kann man dies korrigieren, indem man in der Quellseite der ersten Zeile "
+            "<code><nowiki><!-- erste Zeile --></nowiki></code> hinzufügt:"
+        )
+        string_list.append('{|class="prettytable sortable tabelle-kopf-fixiert" {{prettytable}}')
         string_list.append("! Autor")
         string_list.append("! Titel")
         string_list.append("! Gedichtanfang")
@@ -159,11 +169,11 @@ class PoemList(ListBot):
             string_list.append(f"|{poem_dict['first_line']}")
             string_list.append(f"|{poem_dict['year']}")
         string_list.append("|}")
-        string_list.append('')
+        string_list.append("")
         string_list.append("== Fußnoten ==")
         string_list.append("{{References|LIN}}")
         string_list.append("{{References|TIT|WS}}")
-        string_list.append('')
+        string_list.append("")
         string_list.append("{{SORTIERUNG:Gedichte #Liste der}}")
         string_list.append("[[Kategorie:Listen]]")
         return "\n".join(string_list)
@@ -173,11 +183,11 @@ class PoemList(ListBot):
         title = poem_dict["lemma"]
         link = f"{title}"
         if has_value("title", poem_dict) and poem_dict["title"] != poem_dict["lemma"]:
-            title = poem_dict['title']
+            title = poem_dict["title"]
             link = f"{poem_dict['lemma']}|{title}"
         sortkey = ""
-        if has_value("sortkey", poem_dict) and poem_dict['sortkey'] != title:
-            sortkey = f"data-sort-value=\"{poem_dict['sortkey']}\"|"
+        if has_value("sortkey", poem_dict) and poem_dict["sortkey"] != title:
+            sortkey = f'data-sort-value="{poem_dict["sortkey"]}"|'
 
         return f"{sortkey}[[{link}]]"
 
@@ -192,7 +202,7 @@ class PoemList(ListBot):
         else:
             show_author = f"{poem_dict['last_name']}, {poem_dict['first_name']}"
         if has_value("sortkey_auth", poem_dict) and poem_dict["sortkey_auth"] != show_author:
-            return f"data-sort-value=\"{poem_dict['sortkey_auth']}\"|[[{poem_dict['author']}|{show_author}]]"
+            return f'data-sort-value="{poem_dict["sortkey_auth"]}"|[[{poem_dict["author"]}|{show_author}]]'
         if not show_author and not poem_dict["author"]:
             return ""
         if has_value("no_lemma_auth", poem_dict):
@@ -210,7 +220,7 @@ class PoemList(ListBot):
 
     def get_first_line(self, text):
         try:
-            text = TemplateExpansion(text, self.wiki).expand()
+            text = TemplateExpansion(text, cast(BaseSite, self.wiki)).expand()
         except ValueError as e:
             self.logger.error(f"Couldn't expand lemma. {e}")
             return ""
@@ -249,8 +259,15 @@ class PoemList(ListBot):
     CLEAN_CENTER_1 = re.compile(r"\{\{Center\|<small>1\.<\/small>\}\}")
 
     def _clean_first_line(self, line: str) -> str:
-        for regex in [self.CLEAN_POEM_REGEX, self.CLEAN_SEITE_REGEX, self.CLEAN_IDT, self.CLEAN_INFO_BOX,
-                      self.CLEAN_PRZU_REGEX, self.CLEAN_0, self.CLEAN_CENTER_1]:
+        for regex in [
+            self.CLEAN_POEM_REGEX,
+            self.CLEAN_SEITE_REGEX,
+            self.CLEAN_IDT,
+            self.CLEAN_INFO_BOX,
+            self.CLEAN_PRZU_REGEX,
+            self.CLEAN_0,
+            self.CLEAN_CENTER_1,
+        ]:
             line = regex.sub("", line)
         if line == "}}":
             return ""
@@ -279,11 +296,11 @@ class PoemList(ListBot):
         if has_value("creation", item_dict):
             year = item_dict["creation"]
         elif has_value("publish", item_dict):
-            year = item_dict['publish']
+            year = item_dict["publish"]
         year = year.strip("[]")
         if year and not self.YEAR_REGEX.search(year):
             with suppress(ValueError):
-                year = f"data-sort-value=\"{DateConversion(year)}\"|{year}"
+                year = f'data-sort-value="{DateConversion(year)}"|{year}'
         return year
 
     def post_infos(self):

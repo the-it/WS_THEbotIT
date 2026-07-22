@@ -38,7 +38,7 @@ class TestDEWPTask(TaskTestCase):
             re_page = RePage(self.page_mock)
             task = DEWPTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
-            compare({"not_exists": [], "redirect":[], "disambiguous": []}, task.data)
+            compare({"not_exists": [], "redirect": [], "disambiguous": []}, task.data)
 
     def test_link_is_existend_but_redirect(self):
         with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
@@ -95,10 +95,14 @@ class TestDEWPTask(TaskTestCase):
             re_page = RePage(self.page_mock)
             task = DEWPTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
-            compare({"not_exists": [("Blub", "Title"), ("Blab", "Title")],
-                     "redirect":[("Blob", "Title")],
-                     "disambiguous": [("Bleb", "Title")]},
-                    task.data)
+            compare(
+                {
+                    "not_exists": [("Blub", "Title"), ("Blab", "Title")],
+                    "redirect": [("Blob", "Title")],
+                    "disambiguous": [("Bleb", "Title")],
+                },
+                task.data,
+            )
 
             self.page_mock.text = """{{REDaten|WP=Bli}}
 {{REAutor|Autor.}}"""
@@ -106,14 +110,22 @@ class TestDEWPTask(TaskTestCase):
             page_mock.return_value.exists.side_effect = [False]
             re_page = RePage(self.page_mock)
             compare({"success": True, "changed": False}, task.run(re_page))
-            compare({"not_exists": [("Blub", "Title"), ("Blab", "Title"), ("Bli", "Title2")],
-                     "redirect": [("Blob", "Title")], "disambiguous": [("Bleb", "Title")]}, task.data)
+            compare(
+                {
+                    "not_exists": [("Blub", "Title"), ("Blab", "Title"), ("Bli", "Title2")],
+                    "redirect": [("Blob", "Title")],
+                    "disambiguous": [("Bleb", "Title")],
+                },
+                task.data,
+            )
 
     def test_build_entries(self):
         task = DEWPTask(None, self.logger)
-        task.data = {"not_exists": [("One", "First_Lemma"), ("Two", "Second_Lemma")],
-                     "redirect": [("Three", "Second_Lemma")],
-                     "disambiguous": [("Four", "Second_Lemma")]}
+        task.data = {
+            "not_exists": [("One", "First_Lemma"), ("Two", "Second_Lemma")],
+            "redirect": [("Three", "Second_Lemma")],
+            "disambiguous": [("Four", "Second_Lemma")],
+        }
         expect = [
             "=== Artikel existieren in Wikipedia nicht ===",
             "* Wikipedia-Artikel: [[w:One]] (verlinkt von [[RE:First_Lemma]]) existiert nicht",
@@ -122,26 +134,18 @@ class TestDEWPTask(TaskTestCase):
             "* Wikipedia-Artikel: [[w:Three]] (verlinkt von [[RE:Second_Lemma]]) ist ein Redirect",
             "=== Linkziel ist eine Begriffsklärungsseite ===",
             "* Wikipedia-Artikel: [[w:Four]] (verlinkt von [[RE:Second_Lemma]]) ist eine Begriffsklärungsseite",
-            ]
+        ]
         compare(expect, task._build_entry().split("\n")[-7:])
 
     def test_data_exists(self):
         task = DEWPTask(None, self.logger)
-        task.data = {"not_exists": [("One", "First_Lemma")],
-                     "redirect": [],
-                     "disambiguous": []}
+        task.data = {"not_exists": [("One", "First_Lemma")], "redirect": [], "disambiguous": []}
         self.assertTrue(task._data_exists())
-        task.data = {"not_exists": [],
-                     "redirect": [("One", "First_Lemma")],
-                     "disambiguous": []}
+        task.data = {"not_exists": [], "redirect": [("One", "First_Lemma")], "disambiguous": []}
         self.assertTrue(task._data_exists())
-        task.data = {"not_exists": [],
-                     "redirect": [],
-                     "disambiguous": [("One", "First_Lemma")]}
+        task.data = {"not_exists": [], "redirect": [], "disambiguous": [("One", "First_Lemma")]}
         self.assertTrue(task._data_exists())
-        task.data = {"not_exists": [],
-                     "redirect": [],
-                     "disambiguous": []}
+        task.data = {"not_exists": [], "redirect": [], "disambiguous": []}
         self.assertFalse(task._data_exists())
 
     def test_bug_invalid_title(self):
@@ -149,10 +153,12 @@ class TestDEWPTask(TaskTestCase):
             self.page_mock.text = """{{REDaten|WP=<!-- Nicht Megiddo -->}}
 {{REAutor|Autor.}}"""
             self.page_mock.title_str = "Re:Title"
-            page_mock.return_value.exists.side_effect = \
-                pywikibot.exceptions.InvalidTitleError("contains illegal char(s) '<'")
+            page_mock.return_value.exists.side_effect = pywikibot.exceptions.InvalidTitleError(
+                "contains illegal char(s) '<'"
+            )
             re_page = RePage(self.page_mock)
             task = DEWPTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
-            compare({"not_exists": [('<!-- Nicht Megiddo -->', 'Title')], "redirect": [], "disambiguous": []},
-                    task.data)
+            compare(
+                {"not_exists": [("<!-- Nicht Megiddo -->", "Title")], "redirect": [], "disambiguous": []}, task.data
+            )

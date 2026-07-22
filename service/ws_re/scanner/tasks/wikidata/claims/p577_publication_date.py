@@ -15,6 +15,6 @@ class P577PublicationDate(ClaimFactory):
         return [self.create_claim_json(self.get_snack(self.re_page.first_article))]
 
     def get_snack(self, article: Article) -> SnakParameter:
-        return SnakParameter(property_str=self.get_property_string(),
-                             target_type="time",
-                             target=self._volume_of_article(article).year)
+        return SnakParameter(
+            property_str=self.get_property_string(), target_type="time", target=self._volume_of_article(article).year
+        )

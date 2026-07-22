@@ -144,15 +144,17 @@ class TestAuthorRegister(BaseTestRegister):
 
     def test_overview_line(self):
         abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
-        compare("|-\n"
-                "|data-sort-value=\"Abel, Herman\""
-                "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
-                "|data-sort-value=\"0004\"|4\n"
-                "|data-sort-value=\"075.0\"|75.0%\n"
-                "|<span style=\"color:#669966\">██████████</span>"
-                "<span style=\"color:#556B2F\">█████</span>"
-                "<span style=\"color:#AA0000\">█████</span>",
-                abel_register.overview_line)
+        compare(
+            "|-\n"
+            '|data-sort-value="Abel, Herman"'
+            "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
+            '|data-sort-value="0004"|4\n'
+            '|data-sort-value="075.0"|75.0%\n'
+            '|<span style="color:#669966">██████████</span>'
+            '<span style="color:#556B2F">█████</span>'
+            '<span style="color:#AA0000">█████</span>',
+            abel_register.overview_line,
+        )
 
     def test_proofread_parts_of_20(self):
         compare((10, 5, 5), AuthorRegister.proofread_parts_of_20(4, 2, 1))
@@ -171,12 +173,14 @@ class TestAuthorRegister(BaseTestRegister):
         registers["I,1"] = VolumeRegister(self.volumes["I,1"], self.authors)
         registers["III,1"] = VolumeRegister(self.volumes["III,1"], self.authors)
         abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, registers)
-        compare("|-\n"
-                "|data-sort-value=\"Abel, Herman\""
-                "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
-                "|data-sort-value=\"0005\"|5\n"
-                "|data-sort-value=\"100.0\"|100.0%\n"
-                "|<span style=\"color:#669966\">████████████████████</span>"
-                "<span style=\"color:#556B2F\"></span>"
-                "<span style=\"color:#AA0000\"></span>",
-                abel_register.overview_line)
+        compare(
+            "|-\n"
+            '|data-sort-value="Abel, Herman"'
+            "|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/Herman Abel|Herman Abel]]\n"
+            '|data-sort-value="0005"|5\n'
+            '|data-sort-value="100.0"|100.0%\n'
+            '|<span style="color:#669966">████████████████████</span>'
+            '<span style="color:#556B2F"></span>'
+            '<span style="color:#AA0000"></span>',
+            abel_register.overview_line,
+        )

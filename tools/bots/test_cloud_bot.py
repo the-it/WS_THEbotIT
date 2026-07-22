@@ -100,8 +100,7 @@ class TestCloudBot(TestCloudBase):
                 bot.run()
             self.assertEqual(mock.call(None, "Benutzer:THEbotIT/Logs/MinimalBot"), mock_page.mock_calls[0])
             self.assertEqual(mock.call().text.__iadd__(mock.ANY), mock_page.mock_calls[1])  # pylint: disable=unnecessary-dunder-call
-            self.assertEqual(mock.call().save("Update of Bot MinimalBot", bot=True),
-                             mock_page.mock_calls[2])
+            self.assertEqual(mock.call().save("Update of Bot MinimalBot", bot=True), mock_page.mock_calls[2])
 
     def test_save_if_changed_positive(self):
         page_mock = mock.Mock()
@@ -170,8 +169,9 @@ class TestCloudBot(TestCloudBase):
         with suppress(AssertionError):
             with LogCapture() as log_catcher:
                 with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
-                    self.assertIn("DataOutdatedBot WARNING\n  The data is thrown away. It is out of date",
-                                  str(log_catcher))
+                    self.assertIn(
+                        "DataOutdatedBot WARNING\n  The data is thrown away. It is out of date", str(log_catcher)
+                    )
                     self.assertDictEqual({}, bot.data._data)
                     bot.run()
 
@@ -204,10 +204,12 @@ class TestCloudBot(TestCloudBase):
                         log_catcher.clear()
                         bot.run()
                     mock_dump.assert_called_once_with(success=False)
-                    self.assertIn("DataThrowException CRITICAL\n"
-                                  "  There was an error in the general procedure. "
-                                  "The broken data and a backup of the old will be keept.",
-                                  str(log_catcher))
+                    self.assertIn(
+                        "DataThrowException CRITICAL\n"
+                        "  There was an error in the general procedure. "
+                        "The broken data and a backup of the old will be keept.",
+                        str(log_catcher),
+                    )
 
     @freeze_time("2001-01-01", auto_tick_seconds=60)
     def test_set_timestamp_for_searcher(self):

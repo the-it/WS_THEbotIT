@@ -22,25 +22,21 @@ update :
 ###############
 ### QUALITY ###
 ###############
-pycodestyle :
-	echo "########## PYCODESTYLE #########"
-	uv run pycodestyle --show-source --statistics --count
-
-pylint :
-	echo "############ PYLINT ############"
-	uv run pylint -j4 --rcfile .pylintrc service tools
-
 bandit :
 	echo "############ BANDIT ############"
 	uv run bandit -r service tools
 
-mypy :
-	echo "############# MYPY #############"
-	uv run mypy --check-untyped-defs  service tools
+ruff :
+	echo "############# RUFF #############"
+	uv run ruff check service tools
 
-flake8 :
-	echo "############ FLAKE8 ############"
-	uv run flake8
+ruff-format-check :
+	echo "######## RUFF FORMAT ##########"
+	uv run ruff format --check service tools
+
+ty :
+	echo "############## TY ##############"
+	uv run ty check service tools
 
 ############################
 ### TESTING AND COVERAGE ###
@@ -125,6 +121,6 @@ clean : clean-pyc clean-coverage
 
 pre-commit : update quality unittest
 
-quality : flake8 pycodestyle pylint mypy unittest
+quality : ruff ruff-format-check ty unittest
 
-.PHONY : clean, quality, pre-commit
+.PHONY : clean, quality, pre-commit, ruff, ruff-format-check, ty

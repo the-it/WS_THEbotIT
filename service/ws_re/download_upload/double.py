@@ -14,8 +14,7 @@ class Double(DownloadTarget):
         self.issue = issue
         self.page_2 = ((page + 2) // 4 * 4) + 1
         self.page_1 = self.page_2 - 2
-        self.path_issue = Path(BASE_PATH, "doubles",
-                               f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
+        self.path_issue = Path(BASE_PATH, "doubles", f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
         self.path_page_2 = self.path_issue.joinpath(f"{self.page_2:04d}.png")
         self.path_page_1 = self.path_issue.joinpath(f"{self.page_1:04d}.png")
         self.quadrupel = Quadrupel(issue=self.issue, page=self.page_2)

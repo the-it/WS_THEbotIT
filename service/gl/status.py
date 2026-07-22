@@ -38,18 +38,29 @@ class GlStatus(CloudBot):
 
     def projektstand(self, temp_text, alle, fertig, korrigiert, unkorrigiert, articles):
         # pylint: disable=too-many-arguments
-        composed_text = "".join(["<!--new line: "
-                                 "Liste wird von einem Bot aktuell gehalten.-->\n|-\n",
-                                 "|",
-                                 self.status.current_run.start_time.strftime("%d.%m.%Y"),
-                                 "|| ", str(alle),
-                                 " || ", str(unkorrigiert), self.to_percent(unkorrigiert, alle),
-                                 " || ", str(korrigiert), self.to_percent(korrigiert, alle),
-                                 " || ", str(fertig), self.to_percent(fertig, alle),
-                                 " || ", str(articles) + "/18500", self.to_percent(articles, 18500),
-                                 " ||"])
-        return re.sub("<!--new line: Liste wird von einem Bot aktuell gehalten.-->",
-                      composed_text, temp_text)
+        composed_text = "".join(
+            [
+                "<!--new line: Liste wird von einem Bot aktuell gehalten.-->\n|-\n",
+                "|",
+                self.status.current_run.start_time.strftime("%d.%m.%Y"),
+                "|| ",
+                str(alle),
+                " || ",
+                str(unkorrigiert),
+                self.to_percent(unkorrigiert, alle),
+                " || ",
+                str(korrigiert),
+                self.to_percent(korrigiert, alle),
+                " || ",
+                str(fertig),
+                self.to_percent(fertig, alle),
+                " || ",
+                str(articles) + "/18500",
+                self.to_percent(articles, 18500),
+                " ||",
+            ]
+        )
+        return re.sub("<!--new line: Liste wird von einem Bot aktuell gehalten.-->", composed_text, temp_text)
 
     @staticmethod
     def alle_seiten(temp_text, all_lemmas):
@@ -60,15 +71,13 @@ class GlStatus(CloudBot):
     @staticmethod
     def korrigierte_seiten(temp_text, korrigiert):
         composed_text = "".join(["<!--GLStatus:korrigierte_Seiten-->", str(korrigiert), "<!---->"])
-        temp_text = \
-            re.sub(r"<!--GLStatus:korrigierte_Seiten-->\d{5}<!---->", composed_text, temp_text)
+        temp_text = re.sub(r"<!--GLStatus:korrigierte_Seiten-->\d{5}<!---->", composed_text, temp_text)
         return temp_text
 
     @staticmethod
     def fertige_seiten(temp_text, fertig):
         composed_text = "".join(["<!--GLStatus:fertige_Seiten-->", str(fertig), "<!---->"])
-        temp_text = \
-            re.sub(r"<!--GLStatus:fertige_Seiten-->\d{4,5}<!---->", composed_text, temp_text)
+        temp_text = re.sub(r"<!--GLStatus:fertige_Seiten-->\d{4,5}<!---->", composed_text, temp_text)
         return temp_text
 
     def year(self, year, temp_text):
@@ -80,24 +89,26 @@ class GlStatus(CloudBot):
         if rest > 0:
             temp_text = regex.sub(
                 f"<!--GLStatus:{year}-->"
-                "|span style=\"background-color:#4876FF; "
-                f"font-weight: bold\"|ca. {str(round(((fertig + korrigiert) / alle) * 100, 1)).replace('.', ',')} "
+                '|span style="background-color:#4876FF; '
+                f'font-weight: bold"|ca. {str(round(((fertig + korrigiert) / alle) * 100, 1)).replace(".", ",")} '
                 "% korrigiert oder fertig"
                 "<!---->",
-                temp_text)
+                temp_text,
+            )
         elif korrigiert > 0:
             temp_text = regex.sub(
                 f"<!--GLStatus:{year}-->"
-                "|span style=\"background-color:#F7D700; "
-                f"font-weight: bold\"|{str(round((fertig / alle) * 100, 1)).replace('.', ',')} "
+                '|span style="background-color:#F7D700; '
+                f'font-weight: bold"|{str(round((fertig / alle) * 100, 1)).replace(".", ",")} '
                 "% fertig, Rest korrigiert"
                 "<!---->",
-                temp_text)
+                temp_text,
+            )
         else:
             temp_text = regex.sub(
-                f"<!--GLStatus:{year}-->|span style=\"background-color:#00FF00; "
-                f"font-weight: bold\"|Fertig<!---->",
-                temp_text)
+                f'<!--GLStatus:{year}-->|span style="background-color:#00FF00; font-weight: bold"|Fertig<!---->',
+                temp_text,
+            )
         return temp_text
 
     def petscan(self, categories, not_categories=None, article=False, year=None):

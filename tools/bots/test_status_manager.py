@@ -14,13 +14,17 @@ class TestStatusManager(TestCloudBase):
     @freeze_time("2001-01-01")
     def test_init(self):
         StatusManager("TestBot")
-        compare({"bot_name": "TestBot",
-                 "finish": mock.ANY,
-                 "success": mock.ANY,
-                 "start_time": "2001-01-01T00:00:00",
-                 "finish_time": mock.ANY,
-                 "output": mock.ANY},
-                self.manage_table.get_item(Key={"bot_name": "TestBot", "start_time": "2001-01-01T00:00:00"})["Item"])
+        compare(
+            {
+                "bot_name": "TestBot",
+                "finish": mock.ANY,
+                "success": mock.ANY,
+                "start_time": "2001-01-01T00:00:00",
+                "finish_time": mock.ANY,
+                "output": mock.ANY,
+            },
+            self.manage_table.get_item(Key={"bot_name": "TestBot", "start_time": "2001-01-01T00:00:00"})["Item"],
+        )
 
     @freeze_time("2001-01-01", auto_tick_seconds=60)
     def test_get_last_runs(self):
@@ -52,10 +56,12 @@ class TestStatusManager(TestCloudBase):
         status_manager_last_runs = StatusManager("TestBot")
         compare(2, len(status_manager_last_runs.last_finished_runs))
         # newest entry first in array
-        compare(datetime(year=2001, month=1, day=1, minute=9),
-                status_manager_last_runs.last_finished_runs[0].start_time)
-        compare(datetime(year=2001, month=1, day=1, minute=0),
-                status_manager_last_runs.last_finished_runs[1].start_time)
+        compare(
+            datetime(year=2001, month=1, day=1, minute=9), status_manager_last_runs.last_finished_runs[0].start_time
+        )
+        compare(
+            datetime(year=2001, month=1, day=1, minute=0), status_manager_last_runs.last_finished_runs[1].start_time
+        )
 
     @freeze_time("2001-01-01", auto_tick_seconds=60)
     def test_get_last_successful_runs(self):
@@ -68,10 +74,12 @@ class TestStatusManager(TestCloudBase):
         status_manager_last_runs = StatusManager("TestBot")
         compare(2, len(status_manager_last_runs.last_successful_runs))
         # newest entry first in array
-        compare(datetime(year=2001, month=1, day=1, minute=12),
-                status_manager_last_runs.last_successful_runs[0].start_time)
-        compare(datetime(year=2001, month=1, day=1, minute=0),
-                status_manager_last_runs.last_successful_runs[1].start_time)
+        compare(
+            datetime(year=2001, month=1, day=1, minute=12), status_manager_last_runs.last_successful_runs[0].start_time
+        )
+        compare(
+            datetime(year=2001, month=1, day=1, minute=0), status_manager_last_runs.last_successful_runs[1].start_time
+        )
 
     @freeze_time("2001-01-01", auto_tick_seconds=60)
     def test_finish_run(self):

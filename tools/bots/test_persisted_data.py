@@ -18,8 +18,11 @@ class TestPersistedData(TestCloudBase):
         self._make_json_file()
         self.data.load()
         compare(1, self.data["a"][0])
-        deprecated_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.deprecated.json")
-                                     ["Body"].read().decode("utf-8"))
+        deprecated_data = json.loads(
+            self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.deprecated.json")["Body"]
+            .read()
+            .decode("utf-8")
+        )
         compare(1, deprecated_data["data"]["a"][0])
 
     def test_load_from_bucket_no_data(self):
@@ -30,7 +33,7 @@ class TestPersistedData(TestCloudBase):
         self.data["a"] = 1
         del self.data["a"]
         with self.assertRaises(KeyError):
-            dummy = self.data["a"]
+            _ = self.data["a"]
 
     def test_iter_over_keys(self):
         self.data["a"] = [1, 2]
@@ -57,8 +60,9 @@ class TestPersistedData(TestCloudBase):
     def test_dump(self):
         self.data["tada"] = "tada"
         self.data.dump()
-        data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json")
-                          ["Body"].read().decode("utf-8"))
+        data = json.loads(
+            self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json")["Body"].read().decode("utf-8")
+        )
         compare("tada", data["data"]["tada"])
 
     def test_dump_unsucessful(self):
@@ -67,11 +71,15 @@ class TestPersistedData(TestCloudBase):
         del self.data["a"]
         self.data["tada"] = "tada"
         self.data.dump(success=False)
-        deprecated_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.deprecated.json")
-                                     ["Body"].read().decode("utf-8"))
+        deprecated_data = json.loads(
+            self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.deprecated.json")["Body"]
+            .read()
+            .decode("utf-8")
+        )
         compare([1, 2], deprecated_data["data"]["a"])
-        broken_data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.broken.json")
-                                 ["Body"].read().decode("utf-8"))
+        broken_data = json.loads(
+            self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.broken.json")["Body"].read().decode("utf-8")
+        )
         compare("tada", broken_data["data"]["tada"])
 
     def test_load_data_from_file_no_format(self):
@@ -139,6 +147,7 @@ class TestPersistedData(TestCloudBase):
     def test_persitence_date(self):
         self.data["data"] = "present"
         self.data.dump()
-        data = json.loads(self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json")
-                          ["Body"].read().decode("utf-8"))
+        data = json.loads(
+            self.s3_client.get_object(Bucket=BUCKET_NAME, Key="TestBot.data.json")["Body"].read().decode("utf-8")
+        )
         compare("2020-01-14 00:00:00", data["time"])

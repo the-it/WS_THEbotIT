@@ -20,34 +20,17 @@ class TestDATATask(TestCase):
             self.id = pseudo_id
 
     def test__create_add_summary(self):
-        add_dict = {
-            'claims': {
-                'P31': [],
-                'P361': [],
-                'P1476': []
-            },
-            'labels': {},
-            'descriptions': {},
-            'sitelinks': []
-        }
+        add_dict = {"claims": {"P31": [], "P361": [], "P1476": []}, "labels": {}, "descriptions": {}, "sitelinks": []}
         compare("non_claims, P31, P361, P1476", DATATask._create_add_summary(add_dict))
 
     def test__create_add_summary_just_claims(self):
         add_dict = {
-            'claims': {
-                'P31': [],
-                'P361': [],
-                'P1476': []
-            },
+            "claims": {"P31": [], "P361": [], "P1476": []},
         }
         compare("P31, P361, P1476", DATATask._create_add_summary(add_dict))
 
     def test__create_add_summary_no_claims(self):
-        add_dict = {
-            'labels': {},
-            'descriptions': {},
-            'sitelinks': []
-        }
+        add_dict = {"labels": {}, "descriptions": {}, "sitelinks": []}
         compare("non_claims", DATATask._create_add_summary(add_dict))
 
     def test__create_remove_summary(self):
@@ -57,18 +40,18 @@ class TestDATATask(TestCase):
 
     class P50AuthorFake(ClaimFactory):
         def _get_claim_json(self) -> list[JsonClaimDict]:
-            return [self.create_claim_json(SnakParameter(property_str="P50",
-                                                         target_type="wikibase-item",
-                                                         target="Q123456789"))]
+            return [
+                self.create_claim_json(
+                    SnakParameter(property_str="P50", target_type="wikibase-item", target="Q123456789")
+                )
+            ]
 
     class NonClaimsFake(mock.MagicMock):
         @property
         def dict(self) -> dict:
-            non_claims = {"sitelinks": {"dewikisource": {
-                "site": "dewikisource",
-                "title": "something",
-                "badges": "blub"
-            }}}
+            non_claims = {
+                "sitelinks": {"dewikisource": {"site": "dewikisource", "title": "something", "badges": "blub"}}
+            }
             return non_claims
 
         def labels_and_sitelinks_has_changed(self, _) -> bool:
@@ -76,100 +59,84 @@ class TestDATATask(TestCase):
 
     @real_wiki_test
     def test_integration(self):
-        edit_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity",
-                               new_callable=mock.MagicMock).start()
-        remove_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.removeClaims",
-                                 new_callable=mock.MagicMock).start()
-        mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims",
-                   new_callable=self.NonClaimsFake).start()
+        edit_mock = mock.patch(
+            "service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity", new_callable=mock.MagicMock
+        ).start()
+        remove_mock = mock.patch(
+            "service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.removeClaims", new_callable=mock.MagicMock
+        ).start()
+        mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims", new_callable=self.NonClaimsFake).start()
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         lemma = pywikibot.Page(WS_WIKI, "RE:Aal")  # existing wikidata_item
-        data_task = DATATask(WS_WIKI,
-                             WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False),
-                             True)
+        data_task = DATATask(
+            WS_WIKI, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False), True
+        )
         data_task.claim_factories = (self.P50AuthorFake,)
         self.assertTrue(data_task.run(RePage(lemma)))
         edit_args = edit_mock.call_args_list
         remove_args = remove_mock.call_args_list
-        edit_expect = {'claims':
-            {'P50': [
-                {'mainsnak':
-                     {'datatype': 'wikibase-item',
-                      'datavalue':
-                          {'type': 'wikibase-entityid',
-                           'value':
-                               {'entity-type': 'item',
-                                'numeric-id': 123456789
-                                }
-                           },
-                      'property': 'P50',
-                      'snaktype': 'value'
-                      },
-                 'rank': 'normal',
-                 'type': 'statement'
-                 }
-            ]},
-            'sitelinks':
-                {'dewikisource':
-                     {'badges': 'blub',
-                      'site': 'dewikisource',
-                      'title': 'something'
-                      }
-                 }
+        edit_expect = {
+            "claims": {
+                "P50": [
+                    {
+                        "mainsnak": {
+                            "datatype": "wikibase-item",
+                            "datavalue": {
+                                "type": "wikibase-entityid",
+                                "value": {"entity-type": "item", "numeric-id": 123456789},
+                            },
+                            "property": "P50",
+                            "snaktype": "value",
+                        },
+                        "rank": "normal",
+                        "type": "statement",
+                    }
+                ]
+            },
+            "sitelinks": {"dewikisource": {"badges": "blub", "site": "dewikisource", "title": "something"}},
         }
         compare(edit_expect, edit_args[0].kwargs["data"])
-        remove_expect = {'datatype': 'wikibase-item',
-                         'datavalue':
-                             {'type': 'wikibase-entityid',
-                              'value':
-                                  {'entity-type': 'item',
-                                   'numeric-id': 1372802
-                                   }
-                              },
-                         'property': 'P50',
-                         'snaktype': 'value'
-                         }
-        compare(remove_expect, remove_args[0].kwargs["claims"][0].toJSON()['mainsnak'])
+        remove_expect = {
+            "datatype": "wikibase-item",
+            "datavalue": {"type": "wikibase-entityid", "value": {"entity-type": "item", "numeric-id": 1372802}},
+            "property": "P50",
+            "snaktype": "value",
+        }
+        compare(remove_expect, remove_args[0].kwargs["claims"][0].toJSON()["mainsnak"])
 
     @real_wiki_test
     def test_integration_create_page(self):
-        edit_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity",
-                               new_callable=mock.MagicMock).start()
-        mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims",
-                   new_callable=self.NonClaimsFake).start()
+        edit_mock = mock.patch(
+            "service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity", new_callable=mock.MagicMock
+        ).start()
+        mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims", new_callable=self.NonClaimsFake).start()
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         lemma = pywikibot.Page(WS_WIKI, "Benutzer:THE IT/RE:Aba 1")  # existing wikidata_item
-        data_task = DATATask(WS_WIKI,
-                             WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False),
-                             True)
+        data_task = DATATask(
+            WS_WIKI, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False), True
+        )
         data_task.claim_factories = (self.P50AuthorFake,)
         self.assertTrue(data_task.run(RePage(lemma)))
         edit_args = edit_mock.call_args_list
-        edit_expect = {'claims':
-            {'P50': [
-                {'mainsnak':
-                     {'datatype': 'wikibase-item',
-                      'datavalue':
-                          {'type': 'wikibase-entityid',
-                           'value':
-                               {'entity-type': 'item',
-                                'numeric-id': 123456789
-                                }
-                           },
-                      'property': 'P50',
-                      'snaktype': 'value'
-                      },
-                 'rank': 'normal',
-                 'type': 'statement'
-                 }
-            ]},
-            'sitelinks':
-                {'dewikisource':
-                     {'badges': 'blub',
-                      'site': 'dewikisource',
-                      'title': 'something'
-                      }
-                 }
+        edit_expect = {
+            "claims": {
+                "P50": [
+                    {
+                        "mainsnak": {
+                            "datatype": "wikibase-item",
+                            "datavalue": {
+                                "type": "wikibase-entityid",
+                                "value": {"entity-type": "item", "numeric-id": 123456789},
+                            },
+                            "property": "P50",
+                            "snaktype": "value",
+                        },
+                        "rank": "normal",
+                        "type": "statement",
+                    }
+                ]
+            },
+            "sitelinks": {"dewikisource": {"badges": "blub", "site": "dewikisource", "title": "something"}},
         }
         compare(edit_expect, edit_args[0].args[0])
 
@@ -178,7 +145,7 @@ class TestDATATask(TestCase):
     def test_debug(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         lemma = RePage(pywikibot.Page(WS_WIKI, "RE:Menephron 1"))
-        data_task = DATATask(WS_WIKI,
-                             WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False),
-                             True)
+        data_task = DATATask(
+            WS_WIKI, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False), True
+        )
         self.assertTrue(data_task.run(lemma))

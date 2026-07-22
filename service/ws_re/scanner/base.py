@@ -1,7 +1,7 @@
 import traceback
 from contextlib import suppress
 from datetime import timedelta, datetime
-from typing import List, Optional, Dict, Callable
+from typing import List, Optional, Dict, Callable, cast
 
 import pywikibot
 
@@ -14,6 +14,7 @@ from service.ws_re.scanner.tasks.categorize_redirects import CARETask
 from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
 from service.ws_re.scanner.tasks.correct_korrekturstand import COKSTask
 from service.ws_re.scanner.tasks.correct_pd_dates import COPDTask
+
 # from service.ws_re.scanner.tasks.create_ocr import COCRTask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
@@ -33,8 +34,13 @@ from tools.petscan import PetScan, get_processed_time
 
 
 class ReScanner(CloudBot):
-    def __init__(self, wiki: pywikibot.Site = None, debug: bool = True,
-                 log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(
+        self,
+        wiki: pywikibot.site.BaseSite | None = None,
+        debug: bool = True,
+        log_to_screen: bool = True,
+        log_to_wiki: bool = True,
+    ):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout = timedelta(hours=8)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
@@ -135,7 +141,7 @@ class ReScanner(CloudBot):
 
     def task(self) -> bool:
         active_tasks = self._activate_tasks()
-        error_task = ERROTask(wiki=self.wiki, debug=self.debug, logger=self.logger)
+        error_task = ERROTask(wiki=cast(pywikibot.site.BaseSite, self.wiki), debug=self.debug, logger=self.logger)
         self.logger.info("Start processing the lemmas.")
         processed_lemmas = 0
         for idx, lemma in enumerate(self.lemma_list):

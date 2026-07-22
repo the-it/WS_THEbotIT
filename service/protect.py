@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 
 import pywikibot
 from pywikibot import Site, Page, exceptions
+from pywikibot.site import BaseSite
 
 from tools.bots import BotException
 from tools.bots.cloud_bot import CloudBot
@@ -10,7 +11,9 @@ from tools.petscan import PetScan, get_processed_time
 
 
 class Protect(CloudBot):
-    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(
+        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+    ):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout: timedelta = timedelta(minutes=30)
 
@@ -55,8 +58,9 @@ class Protect(CloudBot):
             if not lemma.protection():
                 self.logger.debug(f"protect lemma {lemma.title()}")
                 try:
-                    lemma.protect(reason="Schutz fertiger Seiten",
-                                  protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
+                    lemma.protect(
+                        reason="Schutz fertiger Seiten", protections={"move": "autoconfirmed", "edit": "autoconfirmed"}
+                    )
                     protected_lemmas += 1
                 except exceptions.APIError as error:
                     self.logger.error(f"Wasn't able to protect {lemma.title()}, error was {error}")

@@ -9,10 +9,7 @@ from service.ws_re.register.register_types.volume import VolumeRegister
 
 
 class PublicDomainRegister(Register):
-    def __init__(self,
-                 year: int,
-                 authors: Authors,
-                 registers: Dict[str, VolumeRegister]):
+    def __init__(self, year: int, authors: Authors, registers: Dict[str, VolumeRegister]):
         super().__init__()
         self._registers = registers
         self.year: int = year

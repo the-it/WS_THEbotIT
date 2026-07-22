@@ -23,5 +23,5 @@ class LemmaChapter:
         return return_dict
 
     @classmethod
-    def from_dict(cls, lemma_dict: ChapterDict) -> 'LemmaChapter':
+    def from_dict(cls, lemma_dict: ChapterDict) -> "LemmaChapter":
         return cls(**lemma_dict)

@@ -15,8 +15,7 @@ from tools.test import PageMock
 class TaskTestCase(TestCase):
     def setUp(self):
         self.page_mock = PageMock()
-        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
-                                 log_to_screen=False)
+        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
 
 
 class TestReScannerTask(TaskTestCase):
@@ -35,8 +34,9 @@ class TestReScannerTask(TaskTestCase):
     def test_name(self):
         bot = self.NAMETask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAME", bot.name)
-        bot = self.NAMEMoreExplanationTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
-                                                            log_to_screen=False))
+        bot = self.NAMEMoreExplanationTask(
+            None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
+        )
         self.assertEqual("NAME", bot.name)
         bot = self.NAM1Task(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAM1", bot.name)
@@ -83,8 +83,7 @@ class TestReScannerTask(TaskTestCase):
         with LogCapture() as log_catcher:
             with self.EXCETask(None, self.logger) as task:
                 result = task.run(re_page)
-            log_catcher.check(("Test", "INFO", "opening task EXCE"),
-                              ("Test", "ERROR", "Logging a caught exception"))
+            log_catcher.check(("Test", "INFO", "opening task EXCE"), ("Test", "ERROR", "Logging a caught exception"))
         self.assertFalse(result["success"])
         self.assertFalse(result["changed"])
 
@@ -112,8 +111,9 @@ class TestReScannerTask(TaskTestCase):
         with LogCapture() as log_catcher:
             with self.MXLGTask(None, self.logger) as task:
                 result = task.run(re_page)
-            log_catcher.check(("Test", "INFO", "opening task MXLG"),
-                              ("Test", "ERROR", "Maxlag timeout occurred, retries failed."))
+            log_catcher.check(
+                ("Test", "INFO", "opening task MXLG"), ("Test", "ERROR", "Maxlag timeout occurred, retries failed.")
+            )
         self.assertFalse(result["success"])
         self.assertFalse(result["changed"])
 

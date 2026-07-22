@@ -25,22 +25,28 @@ class TestAuthorInfo(TestCase):
                 "birth": "22. Mai 1864",
                 "death": "31. Mai 1931",
                 "sortkey": "Stöwer, Willy",
-                "description": "deutscher Marinemaler der Kaiserzeit"
+                "description": "deutscher Marinemaler der Kaiserzeit",
             },
-            author_dict)
+            author_dict,
+        )
 
     @real_wiki_test
     def test_enrich_eschenbach(self):
         lemma = pywikibot.Page(self.wiki, "Wolfram von Eschenbach")
         data_item = lemma.data_item()
-        author_dict = {"first_name": "Wolfram", "last_name": "von Eschenbach", }
+        author_dict = {
+            "first_name": "Wolfram",
+            "last_name": "von Eschenbach",
+        }
         self.author_info.enrich_author_dict(author_dict, data_item)
         compare("Eschenbach, Wolfram", author_dict["sortkey"])
 
     @real_wiki_test
     def test_enrich_zinke_has_no_data_item(self):
         lemma = pywikibot.Page(self.wiki, "Gustav Zinke")
-        author_dict = {"last_name": "Zinke", }
+        author_dict = {
+            "last_name": "Zinke",
+        }
         self.author_info.enrich_author_dict(author_dict, lemma)
         compare("Zinke", author_dict["sortkey"])
 
@@ -55,9 +61,10 @@ class TestAuthorInfo(TestCase):
                 "birth": "22. Mai 1864",
                 "death": "31. Mai 1931",
                 "sortkey": "Stöwer",
-                "description": "deutscher Marinemaler der Kaiserzeit"
+                "description": "deutscher Marinemaler der Kaiserzeit",
             },
-            author_dict)
+            author_dict,
+        )
 
         author_dict = {"first_name": "Willy"}
         self.author_info.enrich_author_dict(author_dict, lemma)
@@ -67,9 +74,10 @@ class TestAuthorInfo(TestCase):
                 "birth": "22. Mai 1864",
                 "death": "31. Mai 1931",
                 "sortkey": "Willy",
-                "description": "deutscher Marinemaler der Kaiserzeit"
+                "description": "deutscher Marinemaler der Kaiserzeit",
             },
-            author_dict)
+            author_dict,
+        )
 
         author_dict = {}
         self.author_info.enrich_author_dict(author_dict, lemma)
@@ -80,9 +88,10 @@ class TestAuthorInfo(TestCase):
                 "birth": "22. Mai 1864",
                 "death": "31. Mai 1931",
                 "sortkey": "Stöwer, Willy",
-                "description": "deutscher Marinemaler der Kaiserzeit"
+                "description": "deutscher Marinemaler der Kaiserzeit",
             },
-            author_dict)
+            author_dict,
+        )
 
     @real_wiki_test
     def test_get_highest_claim_filter_out(self):
@@ -139,9 +148,7 @@ class TestAuthorInfo(TestCase):
         lemma = pywikibot.Page(self.wiki, "Ernst Wunschmann")
         author_dict = {}
         self.author_info.enrich_author_dict(author_dict, lemma)
-        compare(
-            "",
-            author_dict["death"])
+        compare("", author_dict["death"])
 
     @real_wiki_test
     def test_enrich_aristoteles(self):
@@ -195,4 +202,5 @@ class TestAuthorInfo(TestCase):
                 "sortkey": "Stöwer, Willy",
                 "description": "Maler, Illustrator",
             },
-            AuthorInfo(lemma).get_author_dict())
+            AuthorInfo(lemma).get_author_dict(),
+        )

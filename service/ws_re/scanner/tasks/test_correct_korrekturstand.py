@@ -15,7 +15,7 @@ class TestCOKSTask(TaskTestCase):
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': True}, task.run(re_page))
+        compare({"success": True, "changed": True}, task.run(re_page))
         compare("unvollständig", re_page.first_article["KORREKTURSTAND"].value)
 
     def test_fertig_to_lowercase(self):
@@ -27,7 +27,7 @@ something
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': True}, task.run(re_page))
+        compare({"success": True, "changed": True}, task.run(re_page))
         compare("fertig", re_page.first_article["KORREKTURSTAND"].value)
 
     def test_korrigiert_to_lowercase(self):
@@ -39,7 +39,7 @@ something
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': True}, task.run(re_page))
+        compare({"success": True, "changed": True}, task.run(re_page))
         compare("korrigiert", re_page.first_article["KORREKTURSTAND"].value)
 
     def test_unkorrigiert_to_lowercase(self):
@@ -51,7 +51,7 @@ something
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': True}, task.run(re_page))
+        compare({"success": True, "changed": True}, task.run(re_page))
         compare("unkorrigiert", re_page.first_article["KORREKTURSTAND"].value)
 
     def test_no_change_when_already_correct(self):
@@ -63,7 +63,7 @@ something
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': False}, task.run(re_page))
+        compare({"success": True, "changed": False}, task.run(re_page))
         compare("fertig", re_page.first_article["KORREKTURSTAND"].value)
 
     def test_unvollstaendig(self):
@@ -75,7 +75,7 @@ something
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': True}, task.run(re_page))
+        compare({"success": True, "changed": True}, task.run(re_page))
         compare("unvollständig", re_page.first_article["KORREKTURSTAND"].value)
 
     def test_no_change_when_empty(self):
@@ -87,5 +87,5 @@ something
 something
 {{REAutor|OFF}}"""
         re_page = RePage(self.page_mock)
-        compare({'success': True, 'changed': False}, task.run(re_page))
+        compare({"success": True, "changed": False}, task.run(re_page))
         compare("", re_page.first_article["KORREKTURSTAND"].value)

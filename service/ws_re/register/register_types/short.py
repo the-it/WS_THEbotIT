@@ -6,9 +6,7 @@ from service.ws_re.volumes import Volumes
 
 
 class ShortRegister(Register):
-    def __init__(self,
-                 main_issue: str,
-                 registers: Dict[str, VolumeRegister]):
+    def __init__(self, main_issue: str, registers: Dict[str, VolumeRegister]):
         super().__init__()
         self.main_issue: str = main_issue
         self._registers = registers

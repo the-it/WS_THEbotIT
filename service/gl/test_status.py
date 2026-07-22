@@ -19,15 +19,21 @@ bbb"""
 bbb"""
         bot = GlStatus(None, False)
         bot.status.current_run.start_time = datetime(year=2000, month=1, day=1)
-        compare(result, bot.projektstand(temp_text=given_file, alle=50000, fertig=10000,
-                                         korrigiert=15000, unkorrigiert=25000, articles=9250))
+        compare(
+            result,
+            bot.projektstand(
+                temp_text=given_file, alle=50000, fertig=10000, korrigiert=15000, unkorrigiert=25000, articles=9250
+            ),
+        )
 
     def test_to_percent(self):
-        test_array = (((0, 1), " (0,00 %)"),
-                      ((1, 4), " (25,00 %)"),
-                      ((1, 3), " (33,33 %)"),
-                      ((2, 3), " (66,67 %)"),
-                      ((3, 3), " (100,00 %)"))
+        test_array = (
+            ((0, 1), " (0,00 %)"),
+            ((1, 4), " (25,00 %)"),
+            ((1, 3), " (33,33 %)"),
+            ((2, 3), " (66,67 %)"),
+            ((3, 3), " (100,00 %)"),
+        )
 
         bot = GlStatus(None, False)
         for pair in test_array:

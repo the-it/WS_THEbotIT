@@ -1,6 +1,7 @@
 """
 This is a little helper_script, which updates the matching wikidata data items to the page of the volume categories.
 """
+
 import json
 from pathlib import Path
 

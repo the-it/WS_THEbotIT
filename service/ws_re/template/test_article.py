@@ -94,16 +94,16 @@ class TestReArticle(TestCase):
         self.assertEqual(article["SPALTE_START"].value, "1")
 
     def test_from_text_wrong_keywords(self):
-        article_text = "{{REDaten|WHATEVER=I}}" \
-                       "\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "REDaten has wrong key word. --> {.*?}"):
+        article_text = "{{REDaten|WHATEVER=I}}\ntext\n{{REAutor|Some Author.}}"
+        with self.assertRaisesRegex(ReDatenException, "REDaten has wrong key word. --> {.*?}"):
             Article.from_text(article_text)
 
     def test_from_text_short_keywords(self):
-        article_text = "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB" \
-                       "|GND=1234|KSCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}" \
-                       "\ntext\n{{REAutor|Some Author.}}"
+        article_text = (
+            "{{REDaten|BD=I|SS=1|SE=2|VG=A|NF=B|SRT=TADA|KOR=fertig|WS=BLUB|WP=BLAB"
+            "|GND=1234|KSCH=OFF|TJ=1949|ÜB=ON|VW=OFF|NT=ON}}"
+            "\ntext\n{{REAutor|Some Author.}}"
+        )
         article = Article.from_text(article_text)
         self.assertEqual("I", article["BAND"].value)
         self.assertEqual("1", article["SPALTE_START"].value)
@@ -123,38 +123,36 @@ class TestReArticle(TestCase):
 
     def test_from_text_wrong_property_in_REDaten(self):
         article_text = "{{REDaten\n|III\n|SPALTE_START=1\n}}\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "REDaten has property without a key word. --> {.*?}"):
+        with self.assertRaisesRegex(ReDatenException, "REDaten has property without a key word. --> {.*?}"):
             Article.from_text(article_text)
 
     def test_from_text_two_REDaten_templates(self):
         article_text = "{{REDaten}}{{REDaten}}\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
-                                                      "There must be one start template"):
+        with self.assertRaisesRegex(
+            ReDatenException, "Article has the wrong structure. There must be one start template"
+        ):
             Article.from_text(article_text)
 
     def test_from_text_no_REDaten_templates(self):
         article_text = "\ntext\n{{REAutor|Some Author.}}"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
-                                                      "There must be one start template"):
+        with self.assertRaisesRegex(
+            ReDatenException, "Article has the wrong structure. There must be one start template"
+        ):
             Article.from_text(article_text)
 
     def test_from_text_two_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n{{REAutor|Some Author.}}{{REAutor}}"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
-                                                      "There must one stop template"):
+        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. There must one stop template"):
             Article.from_text(article_text)
 
     def test_from_text_no_REAuthor_templates(self):
         article_text = "{{REDaten}}\ntext\n"
-        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. "
-                                                      "There must one stop template"):
+        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. There must one stop template"):
             Article.from_text(article_text)
 
     def test_from_text_wrong_order_of_templates(self):
         article_text = "{{REAutor}}{{REDaten}}\ntext"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. Wrong order of templates."):
+        with self.assertRaisesRegex(ReDatenException, "Article has the wrong structure. Wrong order of templates."):
             Article.from_text(article_text)
 
     def test_complete_article(self):
@@ -168,16 +166,16 @@ class TestReArticle(TestCase):
 
     def test_from_text_text_in_front_of_article(self):
         article_text = "text{{REDaten}}text{{REAutor}}"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. "
-                                    "There is text in front of the article."):
+        with self.assertRaisesRegex(
+            ReDatenException, "Article has the wrong structure. There is text in front of the article."
+        ):
             Article.from_text(article_text)
 
     def test_from_text_text_after_article(self):
         article_text = "{{REDaten}}text{{REAutor}}text"
-        with self.assertRaisesRegex(ReDatenException,
-                                    "Article has the wrong structure. "
-                                    "There is text after the article."):
+        with self.assertRaisesRegex(
+            ReDatenException, "Article has the wrong structure. There is text after the article."
+        ):
             Article.from_text(article_text)
 
     def test_from_text_bug_bad_whitespace(self):
@@ -200,9 +198,11 @@ text
         self.assertEqual(text, self.article.to_text())
 
     def test_to_text_changed_properties(self):
-        text = ARTICLE_TEMPLATE.replace("BAND=", "BAND=II")\
-                               .replace("SPALTE_START=", "SPALTE_START=1000")\
-                               .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
+        text = (
+            ARTICLE_TEMPLATE.replace("BAND=", "BAND=II")
+            .replace("SPALTE_START=", "SPALTE_START=1000")
+            .replace("WIKIPEDIA=", "WIKIPEDIA=Test")
+        )
         self.article.text = "text"
         self.article.author = REAuthor("Autor.")
         self.article["BAND"].value = "II"
@@ -311,7 +311,7 @@ text
         self.assertIn("{{REAutor|A. Author.}}", article.to_text())
 
     def test_common_free(self):
-        year_common_free = datetime.now().year -71
+        year_common_free = datetime.now().year - 71
         article = Article()
         self.assertTrue(article.common_free)
         # long enough dead
