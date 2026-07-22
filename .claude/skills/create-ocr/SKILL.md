@@ -64,6 +64,36 @@ re-derive:
   (On this Mac the python.org Python lacks CA certs — run the fetch with
   `SSL_CERT_FILE=/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/certifi/cacert.pem`.)
 
+### Alternative source: the Artikelwunsch (requested-articles) page
+
+The requested-articles page
+**`Paulys Realencyclopädie der classischen Altertumswissenschaft/Artikelwunsch`**
+(dewikisource ns 0) is a **second worklist source, used in addition to the PetScan list** —
+not a replacement. Always harvest its listed lemmas and merge them into the batch alongside
+the PetScan worklist. **Work the Artikelwunsch lemmas first** (they're explicitly requested),
+then continue with the shortest-first PetScan selection to fill out the batch size.
+
+1. Fetch the page wikitext (`…action=raw`) and pull out every listed article — each is a
+   wikilink. Keep only links whose target is a real RE lemma (starts with `RE:`); ignore
+   plain text, section headings, and non-`RE:` links.
+2. **Skip any line whose entry has the word `ok` appended** (the maintainers' "already
+   handled" marker) — and likewise skip a line already carrying `OCR erstellt` from a
+   previous run (idempotency).
+3. For each remaining `RE:` lemma, bulk-fetch its wikitext + categories and apply the
+   **per-article guards below**, plus one extra guard specific to this source:
+   **`TODESJAHR` must be unset** (empty or `OFF`). A filled `TODESJAHR` means the author's
+   death year is on record as a copyright watch → the text is not yet free → skip &
+   report. (This is in addition to — not a replacement for — the `Wikisource:Gemeinfreiheit`
+   category legal guard.)
+4. OCR the qualifying lemmas through the normal pipeline (fetch → proofread → assemble →
+   structural check → edit pass). Report the ones you skipped, with the failing criterion.
+5. **After** the OCR edit pass succeeds for a lemma, mark it done on the Artikelwunsch
+   page: in **one** additional pywikibot edit (as THEbotIT), append ` OCR erstellt` to the
+   end of each successfully-created article's line. Guard per line: the line is still
+   present and does not already say `OCR erstellt`; if the line moved or the page changed
+   under you, re-fetch and re-match by lemma rather than by line number. Summary e.g.
+   `OCR für gewünschte Artikel erstellt vermerkt`.
+
 ### Per-article guards (skip & report instead of forcing)
 
 1. **Pristine skeleton:** the body is exactly the bold headword line, a `[...]` line, the
