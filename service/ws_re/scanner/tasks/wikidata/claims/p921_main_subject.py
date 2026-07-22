@@ -35,9 +35,9 @@ class P921MainSubject(ClaimFactory):
         if not target_item_id:
             return []
         # finally create the claim
-        snak = SnakParameter(property_str=self.get_property_string(),
-                             target_type="wikibase-item",
-                             target=target_item_id)
+        snak = SnakParameter(
+            property_str=self.get_property_string(), target_type="wikibase-item", target=target_item_id
+        )
 
         return [self.create_claim_json(snak, references=[[self._IMPORTED_FROM_WIKISOURCE]])]
 
@@ -55,7 +55,7 @@ class P921MainSubject(ClaimFactory):
         # try to fetch the data item of the page, if not there is nothing to connect
         try:
             wp_data_item: pywikibot.ItemPage = wp_page.data_item()
-        except (pywikibot.exceptions.NoPageError, pywikibot.exceptions.InvalidTitleError):
+        except pywikibot.exceptions.NoPageError, pywikibot.exceptions.InvalidTitleError:
             return None
         return str(wp_data_item.id)
 
@@ -100,8 +100,7 @@ class P921MainSubject(ClaimFactory):
             return self._create_claim_dictionary([new_claim], [])
         # if the existing claim is a redirect, replace it
         if cast(pywikibot.Page, old_claims[0].target).isRedirectPage():
-            return self._create_claim_dictionary([self.replace_redirect(old_claims[0])],
-                                                 [old_claims[0]])
+            return self._create_claim_dictionary([self.replace_redirect(old_claims[0])], [old_claims[0]])
         if not new_claim.same_as(old_claims[0]):
             self.re_page.add_error_category(self.ERROR_CAT)
         else:

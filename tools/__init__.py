@@ -42,8 +42,8 @@ def _has_category(lemma: Page, category_to_find: str) -> bool:
 
 
 def has_fertig_category(lemma: Page) -> bool:
-    return _has_category(lemma, 'Fertig')
+    return _has_category(lemma, "Fertig")
 
 
 def has_korrigiert_category(lemma: Page) -> bool:
-    return _has_category(lemma, 'Korrigiert')
+    return _has_category(lemma, "Korrigiert")

@@ -6,12 +6,14 @@ from service.ws_re.register.register_types.volume import VolumeRegister
 
 
 class AlphabeticRegister(Register):
-    def __init__(self,
-                 start: str,
-                 end: str,
-                 before_start: Optional[str],
-                 after_next_start: Optional[str],
-                 registers: Dict[str, VolumeRegister]):
+    def __init__(
+        self,
+        start: str,
+        end: str,
+        before_start: Optional[str],
+        after_next_start: Optional[str],
+        registers: Dict[str, VolumeRegister],
+    ):
         super().__init__()
         self._registers = registers
         self._start: str = start

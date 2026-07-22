@@ -10,6 +10,7 @@ from service.ws_re.template.re_page import RePage
 
 BASE_TASK_PYWIKIBOT_PAGE = "service.ws_re.scanner.tasks.base_task.pywikibot.Page"
 
+
 @ddt
 class TestDEALTask(TaskTestCase):
     def test_process_next_previous_process_two(self):
@@ -51,6 +52,5 @@ class TestDEALTask(TaskTestCase):
     def test_build_entries(self):
         task = DEALTask(None, self.logger)
         task.data = [("One", "First_Lemma"), ("Two", "Second_Lemma")]
-        expect = ["* [[RE:One]] verlinkt von [[RE:First_Lemma]]",
-                  "* [[RE:Two]] verlinkt von [[RE:Second_Lemma]]"]
+        expect = ["* [[RE:One]] verlinkt von [[RE:First_Lemma]]", "* [[RE:Two]] verlinkt von [[RE:Second_Lemma]]"]
         compare(expect, task._build_entry().split("\n")[-2:])

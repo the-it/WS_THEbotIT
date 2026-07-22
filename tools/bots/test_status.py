@@ -20,10 +20,9 @@ class TestStatus(TestCase):
         compare(False, status.finish)
 
     def test_from_dict(self):
-        status = Status.from_dict({"bot_name": "TestBot",
-                                   "start_time": '2000-01-01T00:00:00',
-                                   "finish_time": '2000-01-01T00:10:00'
-                                   })
+        status = Status.from_dict(
+            {"bot_name": "TestBot", "start_time": "2000-01-01T00:00:00", "finish_time": "2000-01-01T00:10:00"}
+        )
         compare("TestBot", status.bot_name)
         compare(datetime(year=2000, month=1, day=1), status.start_time)
         compare(datetime(year=2000, month=1, day=1, minute=10), status.finish_time)
@@ -31,13 +30,17 @@ class TestStatus(TestCase):
     @freeze_time("2001-01-01")
     def test_to_dict(self):
         status = Status(bot_name="TestBot")
-        compare({"bot_name": "TestBot",
-                 "success": False,
-                 "finish": False,
-                 "start_time": '2001-01-01T00:00:00',
-                 "finish_time": '0001-01-01T00:00:00',
-                 "output": None},
-                status.to_dict())
+        compare(
+            {
+                "bot_name": "TestBot",
+                "success": False,
+                "finish": False,
+                "start_time": "2001-01-01T00:00:00",
+                "finish_time": "0001-01-01T00:00:00",
+                "output": None,
+            },
+            status.to_dict(),
+        )
 
     def test_create_start_time(self):
         now = datetime.now()
@@ -59,13 +62,17 @@ class TestStatus(TestCase):
         return_dict = status.close_run(success=True, finish=True)
         compare(True, status.finish)
         compare(True, status.success)
-        compare({"bot_name": "TestBot",
-                 "success": True,
-                 "finish": True,
-                 "start_time": '2001-01-01T00:00:00',
-                 "finish_time": '2001-01-01T00:00:15',
-                 "output": None},
-                return_dict)
+        compare(
+            {
+                "bot_name": "TestBot",
+                "success": True,
+                "finish": True,
+                "start_time": "2001-01-01T00:00:00",
+                "finish_time": "2001-01-01T00:00:15",
+                "output": None,
+            },
+            return_dict,
+        )
 
     def test_output(self):
         status = Status(bot_name="TestBot")

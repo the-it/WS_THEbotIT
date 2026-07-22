@@ -22,8 +22,7 @@ class TestCOCRTask(TestCloudBase):
 
     def setUp(self):
         self.page_mock = PageMock()
-        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1),
-                                 log_to_screen=False)
+        self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
         self.task = COCRTask(None, self.logger)
 
     @classmethod
@@ -52,7 +51,7 @@ class TestCOCRTask(TestCloudBase):
 
     @file_data("test_data/create_ocr/test_get_texts.yml")
     def test_get_text_start_end(self, given, expect):
-        self.put_page_to_cloud(f"{given["issue"]}_{str(given["page"]).zfill(4)}")
+        self.put_page_to_cloud(f"{given['issue']}_{str(given['page']).zfill(4)}")
         page_mock = PageMock()
         page_mock.title_str = f"RE:{given['title']}"
         page_mock.text = "{{REDaten}}{{REAutor|OFF}}"
@@ -76,16 +75,15 @@ class TestCOCRTask(TestCloudBase):
         self.task.re_page = RePage(page_mock)
         # Create a placeholder article with single page range
         article = Article()
-        article["BAND"].value = given['issue']
-        article["SPALTE_START"].value = str(given['start_page'])
-        article["SPALTE_END"].value = str(given['end_page'])
+        article["BAND"].value = given["issue"]
+        article["SPALTE_START"].value = str(given["start_page"])
+        article["SPALTE_END"].value = str(given["end_page"])
 
         # Act
         text = self.task._get_text_for_article(article)
 
         # Assert
         compare(expect.strip(), text)
-
 
     @skip
     def test_task_appends_ocr_for_rages(self):
@@ -95,21 +93,25 @@ class TestCOCRTask(TestCloudBase):
         page_mock = PageMock()
         page_mock.title_str = "RE:Rages"
         # Placeholder article: KORREKTURSTAND=Unvollständig triggers OCR append
-        page_mock.text = ("{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=128|KORREKTURSTAND=Unvollständig}}"
-                          "'''Rages'''{{REAutor|OFF}}"
-                          "{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=OFF|KORREKTURSTAND=Unvollständig}}"
-                          "'''Rages'''{{REAutor|OFF}}"
-                          "{{REDaten|BAND=I A,1|SPALTE_START=267|SPALTE_END=OFF"
-                          "|KORREKTURSTAND=Unvollständig|TODESJAHR=2100}}"
-                          "'''Rages'''{{REAutor|OFF}}")
+        page_mock.text = (
+            "{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=128|KORREKTURSTAND=Unvollständig}}"
+            "'''Rages'''{{REAutor|OFF}}"
+            "{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=OFF|KORREKTURSTAND=Unvollständig}}"
+            "'''Rages'''{{REAutor|OFF}}"
+            "{{REDaten|BAND=I A,1|SPALTE_START=267|SPALTE_END=OFF"
+            "|KORREKTURSTAND=Unvollständig|TODESJAHR=2100}}"
+            "'''Rages'''{{REAutor|OFF}}"
+        )
         self.task.re_page = RePage(page_mock)
 
         # Act: run the task to append OCR to placeholder
         self.task.task()
 
         # Assert: the first article's text should now be the OCR section for Rages
-        expected = ("'''Rages'''\n[[Kategorie:RE:OCR_erstellt]]\n'''Rages''' s. {{Polytonisch|'Pάγα}} ta."
-                    "\n{{Seite|128}}\n[[Kategorie:RE:OCR_Seite_nicht_gefunden]]")
+        expected = (
+            "'''Rages'''\n[[Kategorie:RE:OCR_erstellt]]\n'''Rages''' s. {{Polytonisch|'Pάγα}} ta."
+            "\n{{Seite|128}}\n[[Kategorie:RE:OCR_Seite_nicht_gefunden]]"
+        )
         compare(expected, self.task.re_page.first_article.text.strip())
         expected = "'''Rages'''"
         compare(expected, self.task.re_page.splitted_article_list[2][0].text.strip())

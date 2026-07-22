@@ -79,65 +79,67 @@ class PetScan:
             category = f"{category}|{search_depth}"
         self.categories["negative"].append(category)
 
-    NAMESPACE_MAPPING = {"Article": 0,
-                         "Diskussion": 1,
-                         "Benutzer": 2,
-                         "Benutzer Diskussion": 3,
-                         "Wikisource": 4,
-                         "Wikisource Diskussion": 5,
-                         "Wikipedia": 4,
-                         "Wikipedia Diskussion": 5,
-                         "Wikibooks": 4,
-                         "Wikibooks Diskussion": 5,
-                         "Wikiquote": 4,
-                         "Wikiquote Diskussion": 5,
-                         "Wikispecies": 4,
-                         "Wikispecies Diskussion": 5,
-                         "Wikinews": 4,
-                         "Wikinews Diskussion": 5,
-                         "Wikionary": 4,
-                         "Wikionary Diskussion": 5,
-                         "Datei": 6,
-                         "Datei Diskussion": 7,
-                         "MediaWiki": 8,
-                         "MediaWiki Diskussion": 9,
-                         "Vorlage": 10,
-                         "Vorlage Diskussion": 11,
-                         "Hilfe": 12,
-                         "Hilfe Diskussion": 13,
-                         "Kategorie": 14,
-                         "Kategorie Diskussion": 15,
-                         "Portal": 100,
-                         "Portal Diskussion": 101,
-                         "Seite": 102,
-                         "Seite Diskussion": 103,
-                         "Wahl": 102,
-                         "Wahl Diskussion": 103,
-                         "Meinungen": 102,
-                         "Meinungen Diskussion": 103,
-                         "Verzeichnis": 102,
-                         "Verzeichnis Diskussion": 103,
-                         "Index": 104,
-                         "Index Diskussion": 105,
-                         "Thesaurus": 104,
-                         "Thesaurus Diskussion": 105,
-                         "Kurs": 106,
-                         "Kurs Diskussion": 107,
-                         "Reim": 106,
-                         "Reim Diskussion": 107,
-                         "Projekt": 108,
-                         "Projekt Diskussion": 109,
-                         "Flexion": 108,
-                         "Flexion Diskussion": 109,
-                         "Education Program": 446,
-                         "Education Program Diskussion": 447,
-                         "Modul": 828,
-                         "Modul Diskussion": 829,
-                         "Gadget ": 2300,
-                         "Gadget  Diskussion": 2301,
-                         "Gadget-Definition": 2302,
-                         "Gadget-Definition Diskussion": 2303,
-                         "Thema": 2600}
+    NAMESPACE_MAPPING = {
+        "Article": 0,
+        "Diskussion": 1,
+        "Benutzer": 2,
+        "Benutzer Diskussion": 3,
+        "Wikisource": 4,
+        "Wikisource Diskussion": 5,
+        "Wikipedia": 4,
+        "Wikipedia Diskussion": 5,
+        "Wikibooks": 4,
+        "Wikibooks Diskussion": 5,
+        "Wikiquote": 4,
+        "Wikiquote Diskussion": 5,
+        "Wikispecies": 4,
+        "Wikispecies Diskussion": 5,
+        "Wikinews": 4,
+        "Wikinews Diskussion": 5,
+        "Wikionary": 4,
+        "Wikionary Diskussion": 5,
+        "Datei": 6,
+        "Datei Diskussion": 7,
+        "MediaWiki": 8,
+        "MediaWiki Diskussion": 9,
+        "Vorlage": 10,
+        "Vorlage Diskussion": 11,
+        "Hilfe": 12,
+        "Hilfe Diskussion": 13,
+        "Kategorie": 14,
+        "Kategorie Diskussion": 15,
+        "Portal": 100,
+        "Portal Diskussion": 101,
+        "Seite": 102,
+        "Seite Diskussion": 103,
+        "Wahl": 102,
+        "Wahl Diskussion": 103,
+        "Meinungen": 102,
+        "Meinungen Diskussion": 103,
+        "Verzeichnis": 102,
+        "Verzeichnis Diskussion": 103,
+        "Index": 104,
+        "Index Diskussion": 105,
+        "Thesaurus": 104,
+        "Thesaurus Diskussion": 105,
+        "Kurs": 106,
+        "Kurs Diskussion": 107,
+        "Reim": 106,
+        "Reim Diskussion": 107,
+        "Projekt": 108,
+        "Projekt Diskussion": 109,
+        "Flexion": 108,
+        "Flexion Diskussion": 109,
+        "Education Program": 446,
+        "Education Program Diskussion": 447,
+        "Modul": 828,
+        "Modul Diskussion": 829,
+        "Gadget ": 2300,
+        "Gadget  Diskussion": 2301,
+        "Gadget-Definition": 2302,
+        "Gadget-Definition Diskussion": 2303,
+        "Thema": 2600,
+    }
 
     def add_namespace(self, namespace: Union[Union[int, str], List[Union[int, str]]]):
         # is there a list to process or only a single instance
@@ -246,7 +248,7 @@ class PetScan:
     def _construct_options(self):
         opt_string = ""
         for key in self.options:  # pylint: disable=consider-using-dict-items
-            opt_string += ("&" + key + "=" + str(self.options[key]))
+            opt_string += "&" + key + "=" + str(self.options[key])
         return opt_string
 
     def _construct_string(self):
@@ -255,41 +257,30 @@ class PetScan:
         question_string.append("&project=" + self.project)
         # categories
         if self.categories["positive"]:
-            question_string.append(
-                "&categories=" + (self._construct_list_argument(self.categories["positive"])))
+            question_string.append("&categories=" + (self._construct_list_argument(self.categories["positive"])))
         if self.categories["negative"]:
-            question_string.append(
-                "&negcats=" + (self._construct_list_argument(self.categories["negative"])))
+            question_string.append("&negcats=" + (self._construct_list_argument(self.categories["negative"])))
         # templates
         if self.templates["yes"]:
-            question_string.append(
-                "&templates_yes=" + (self._construct_list_argument(self.templates["yes"])))
+            question_string.append("&templates_yes=" + (self._construct_list_argument(self.templates["yes"])))
         if self.templates["any"]:
-            question_string.append(
-                "&templates_any=" + (self._construct_list_argument(self.templates["any"])))
+            question_string.append("&templates_any=" + (self._construct_list_argument(self.templates["any"])))
         if self.templates["no"]:
-            question_string.append(
-                "&templates_no=" + (self._construct_list_argument(self.templates["no"])))
+            question_string.append("&templates_no=" + (self._construct_list_argument(self.templates["no"])))
         # outlinks
         if self.outlinks["yes"]:
-            question_string.append(
-                "&outlinks_yes=" + (self._construct_list_argument(self.outlinks["yes"])))
+            question_string.append("&outlinks_yes=" + (self._construct_list_argument(self.outlinks["yes"])))
         if self.outlinks["any"]:
-            question_string.append(
-                "&outlinks_any=" + (self._construct_list_argument(self.outlinks["any"])))
+            question_string.append("&outlinks_any=" + (self._construct_list_argument(self.outlinks["any"])))
         if self.outlinks["no"]:
-            question_string.append(
-                "&outlinks_no=" + (self._construct_list_argument(self.outlinks["no"])))
+            question_string.append("&outlinks_no=" + (self._construct_list_argument(self.outlinks["no"])))
         # links_to
         if self.links_to["yes"]:
-            question_string.append(
-                "&links_to_all=" + (self._construct_list_argument(self.links_to["yes"])))
+            question_string.append("&links_to_all=" + (self._construct_list_argument(self.links_to["yes"])))
         if self.links_to["any"]:
-            question_string.append(
-                "&links_to_any=" + (self._construct_list_argument(self.links_to["any"])))
+            question_string.append("&links_to_any=" + (self._construct_list_argument(self.links_to["any"])))
         if self.links_to["no"]:
-            question_string.append(
-                "&links_to_no=" + (self._construct_list_argument(self.links_to["no"])))
+            question_string.append("&links_to_no=" + (self._construct_list_argument(self.links_to["no"])))
         # rest of the options
         if self.options:
             question_string.append(self._construct_options())

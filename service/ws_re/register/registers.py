@@ -12,9 +12,52 @@ from service.ws_re.register.register_types.volume import VolumeRegister
 from service.ws_re.register.repo import DataRepo
 from service.ws_re.volumes import Volumes
 
-RE_ALPHABET = ["a", "ak", "an", "ar", "as", "b", "c", "ch", "d", "di", "e", "er", "f", "g", "h", "hi", "i", "k",
-               "kl", "l", "lf", "m", "mb", "mi", "n", "o", "p", "pe", "pi", "po", "pr", "q", "r", "s", "se", "so",
-               "t", "th", "ti", "u", "uf", "x", "y", "z"]
+RE_ALPHABET = [
+    "a",
+    "ak",
+    "an",
+    "ar",
+    "as",
+    "b",
+    "c",
+    "ch",
+    "d",
+    "di",
+    "e",
+    "er",
+    "f",
+    "g",
+    "h",
+    "hi",
+    "i",
+    "k",
+    "kl",
+    "l",
+    "lf",
+    "m",
+    "mb",
+    "mi",
+    "n",
+    "o",
+    "p",
+    "pe",
+    "pi",
+    "po",
+    "pr",
+    "q",
+    "r",
+    "s",
+    "se",
+    "so",
+    "t",
+    "th",
+    "ti",
+    "u",
+    "uf",
+    "x",
+    "y",
+    "z",
+]
 
 
 class Registers:
@@ -49,9 +92,7 @@ class Registers:
                 after_next_start = RE_ALPHABET[idx + 2]
             except IndexError:
                 after_next_start = None
-            yield AlphabeticRegister(start, end,
-                                     before_start, after_next_start,
-                                     self._registers)
+            yield AlphabeticRegister(start, end, before_start, after_next_start, self._registers)
 
     @property
     def author(self) -> Generator[AuthorRegister, None, None]:

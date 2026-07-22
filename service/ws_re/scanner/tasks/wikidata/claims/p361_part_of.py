@@ -11,7 +11,7 @@ class P361PartOf(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        snak_parameter = SnakParameter(property_str=self.get_property_string(),
-                                       target_type="wikibase-item",
-                                       target=self.ITEM_RE)
+        snak_parameter = SnakParameter(
+            property_str=self.get_property_string(), target_type="wikibase-item", target=self.ITEM_RE
+        )
         return [self.create_claim_json(snak_parameter)]

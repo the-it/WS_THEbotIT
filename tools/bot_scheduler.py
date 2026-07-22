@@ -12,8 +12,9 @@ BotList = List[Type[CloudBot]]
 
 
 class BotScheduler(CloudBot):
-    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
-                 log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(
+        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+    ):
         self.daily_bots: BotList = []
         self.weekly_bots: Dict[int, BotList] = {}
         self.monthly_bots: Dict[int, BotList] = {}
@@ -33,11 +34,13 @@ class BotScheduler(CloudBot):
             success = bot_to_run.run()
         path_to_log = f"{cast(BaseSite, self.wiki).username()}/Logs/{bot_to_run.bot_name}"
         start_run = bot_to_run.status.current_run.start_time
-        self.logger.info(f"Log @ [https://de.wikisource.org/wiki/Benutzer:{path_to_log}"
-                         f"#{start_run:%y-%m-%d_%H:%M:%S} {path_to_log}]")
+        self.logger.info(
+            f"Log @ [https://de.wikisource.org/wiki/Benutzer:{path_to_log}#{start_run:%y-%m-%d_%H:%M:%S} {path_to_log}]"
+        )
         if not success:
-            self.logger.error(f"<span style=\"background:#FF0000\">"
-                              f"The bot {bot_to_run.bot_name} wasn't successful.</span>")
+            self.logger.error(
+                f'<span style="background:#FF0000">The bot {bot_to_run.bot_name} wasn\'t successful.</span>'
+            )
         return success
 
     def run_dailys(self):

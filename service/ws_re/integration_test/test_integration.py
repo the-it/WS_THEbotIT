@@ -63,14 +63,12 @@ class TestIntegrationRegister(parent_class):
     def test_length_of_alphabetic(self):
         for register in self.registers.alphabetic:
             size = len(register.get_register_str())
-            self.assertGreater(_MAX_SIZE_WIKI_PAGE, size,
-                               f"register {register} is now to big.")
+            self.assertGreater(_MAX_SIZE_WIKI_PAGE, size, f"register {register} is now to big.")
 
     def test_length_of_volumes(self):
         for register in self.registers.volumes.values():
-            size = len(register.get_register_str(print_details=register.volume.name!="R"))
-            self.assertGreater(_MAX_SIZE_WIKI_PAGE, size,
-                               f"register {register} is now to big.")
+            size = len(register.get_register_str(print_details=register.volume.name != "R"))
+            self.assertGreater(_MAX_SIZE_WIKI_PAGE, size, f"register {register} is now to big.")
 
     def test_previous_next_in_order(self):
         errors = []
@@ -79,14 +77,18 @@ class TestIntegrationRegister(parent_class):
                 pre_lemma = register[i - 1] if i > 0 else None
                 if pre_lemma and pre_lemma.next:
                     if not pre_lemma.next == lemma.lemma:  # pragma: no cover
-                        errors.append(f"PRE lemma name {lemma.lemma} /{i} in register {register.volume.name} "
-                                      f"not the same as pre lemma")
+                        errors.append(
+                            f"PRE lemma name {lemma.lemma} /{i} in register {register.volume.name} "
+                            f"not the same as pre lemma"
+                        )
                 with contextlib.suppress(IndexError):
                     post_lemma = register[i + 1]
                     if post_lemma and post_lemma.previous:
                         if not post_lemma.previous == lemma.lemma:  # pragma: no cover
-                            errors.append(f"POST lemma name {lemma.lemma} /{i} in register {register.volume.name} "
-                                          f"not the same as post lemma")
+                            errors.append(
+                                f"POST lemma name {lemma.lemma} /{i} in register {register.volume.name} "
+                                f"not the same as post lemma"
+                            )
         _raise_count_errors(errors)
 
     _DOUBLE_LEMMAS = {
@@ -122,8 +124,9 @@ class TestIntegrationRegister(parent_class):
                     if chapter.author:
                         if chapter.author[-1] == "." and chapter.author not in mappings:  # pragma: no cover
                             # only check author shortcuts set by human operators
-                            errors.append(f"Author {chapter.author}, {lemma.lemma}, "
-                                      f"{register.volume.name} not in mappings.")
+                            errors.append(
+                                f"Author {chapter.author}, {lemma.lemma}, {register.volume.name} not in mappings."
+                            )
         _raise_count_errors(errors)
 
     # ... a check for a difference of 5 or 3 would be better, but not possible at the moment
@@ -135,15 +138,21 @@ class TestIntegrationRegister(parent_class):
             for index, lemma in enumerate(register):
                 try:
                     if index:
-                        if abs(lemma.chapter_objects[0].start - register[index - 1].chapter_objects[-1].end) \
-                                > self._alarming_distance:  # pragma: no cover
-                            errors.append(f"{lemma['lemma']}, {register.volume.name} "
-                                          f"has difference in columns to pre lemma.")
-                        if abs(lemma.chapter_objects[-1].end - register[index + 1].chapter_objects[0].start) \
-                                > self._alarming_distance:  # pragma: no cover
-                            errors.append(f"{lemma['lemma']}, {register.volume.name} "
-                                          f"has difference in columns to post lemma.")
-                except (IndexError, TypeError):
+                        if (
+                            abs(lemma.chapter_objects[0].start - register[index - 1].chapter_objects[-1].end)
+                            > self._alarming_distance
+                        ):  # pragma: no cover
+                            errors.append(
+                                f"{lemma['lemma']}, {register.volume.name} has difference in columns to pre lemma."
+                            )
+                        if (
+                            abs(lemma.chapter_objects[-1].end - register[index + 1].chapter_objects[0].start)
+                            > self._alarming_distance
+                        ):  # pragma: no cover
+                            errors.append(
+                                f"{lemma['lemma']}, {register.volume.name} has difference in columns to post lemma."
+                            )
+                except IndexError, TypeError:
                     pass
         _raise_count_errors(errors)
 
@@ -165,5 +174,4 @@ class TestAnalyse(TestCase):
         lemma_2 = "lemma 1"
         for i, char in enumerate(lemma_1):
             if char != lemma_2[i]:
-                raise AssertionError(f"position {i} {char}({ord(char)}) "
-                                     f"!= {lemma_2[i]}({ord(lemma_2[i])})")
+                raise AssertionError(f"position {i} {char}({ord(char)}) != {lemma_2[i]}({ord(lemma_2[i])})")

@@ -26,8 +26,11 @@ text.
 
     @real_wiki_test
     def test_no_redirect_no_change(self):
-        self.page_mock.text = self._base_text("", "Ἀγράφου μετάλλου γραφή") + "something" + \
-                              self._base_text("Ἀγραφίου γραφή", "Ἀγράφου μετάλλου γραφή")
+        self.page_mock.text = (
+            self._base_text("", "Ἀγράφου μετάλλου γραφή")
+            + "something"
+            + self._base_text("Ἀγραφίου γραφή", "Ἀγράφου μετάλλου γραφή")
+        )
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
         self.task.task()

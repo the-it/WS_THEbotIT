@@ -14,8 +14,7 @@ class Single(DownloadTarget):
         self.issue = issue
         self.page_1 = (page // 2 * 2) + 1
         self.page_2 = self.page_1 + 1
-        self.path_issue = Path(BASE_PATH, "singles",
-                               f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
+        self.path_issue = Path(BASE_PATH, "singles", f"{Volumes()[self.issue].sort_key.replace('_', '')}_{self.issue}")
         self.path_page_2 = self.path_issue.joinpath(f"{self.page_2:04d}.png")
         self.path_page_1 = self.path_issue.joinpath(f"{self.page_1:04d}.png")
         self.double = Double(issue=self.issue, page=self.page_1)
@@ -68,7 +67,10 @@ if __name__ == "__main__":
     #     "S VI", "S VII", "S VIII", "S IX", "S X",
     #     "S XI", "S XII", "S XIII", "S XIV", "S XV",
     # ]
-    issues = ["XII,1", "XII,2",]
+    issues = [
+        "XII,1",
+        "XII,2",
+    ]
     for string in issues:
         volume = volumes[string]
         if volume.start_column and volume.end_column:

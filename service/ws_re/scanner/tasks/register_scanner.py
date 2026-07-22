@@ -51,7 +51,7 @@ class SCANTask(ReScannerTask):
 
     def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
-        if wp_value := str(article['WIKIPEDIA'].value):
+        if wp_value := str(article["WIKIPEDIA"].value):
             wp_link: Optional[str] = f"w:de:{wp_value}" if ":" not in wp_value else f"w:{wp_value}"
         else:
             wp_link = self._get_link_from_wd("wikipedia")
@@ -61,7 +61,7 @@ class SCANTask(ReScannerTask):
 
     def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
-        if article['WIKISOURCE'].value:
+        if article["WIKISOURCE"].value:
             ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
         else:
             ws_link = self._get_link_from_wd("wikisource")
@@ -154,8 +154,7 @@ class SCANTask(ReScannerTask):
                 return {"chapters": [chapter_dict]}, []
             return {}, []
         if self.re_page.complex_construction:
-            self.logger.error(f"The construct of {self.re_page.lemma_as_link} "
-                              f"is too complex, can't analyse.")
+            self.logger.error(f"The construct of {self.re_page.lemma_as_link} is too complex, can't analyse.")
             return {}, []
         return {"chapters": self._analyse_complex_article_list(article_list)}, []
 
@@ -243,11 +242,9 @@ class SCANTask(ReScannerTask):
             self_supplement = issues_in_articles[band_info] > 1
             self._update_lemma(band_info, delete_list, self_supplement, update_dict)
 
-    def _update_lemma(self,
-                      band_info: str,
-                      delete_list: UpdaterRemoveList,
-                      self_supplement: bool,
-                      update_dict: LemmaDict):
+    def _update_lemma(
+        self, band_info: str, delete_list: UpdaterRemoveList, self_supplement: bool, update_dict: LemmaDict
+    ):
         register = self.registers.volumes[band_info]
         if register:
             try:
@@ -256,9 +253,11 @@ class SCANTask(ReScannerTask):
                 self._write_strategy_statistic(strategy, update_dict, band_info)
                 self.re_page.remove_error_category(self.ERROR_CAT)
             except RegisterException as error:
-                self.logger.error(f"No available Lemma in Registers for issue {band_info} "
-                                  f"and lemma {self.re_page.lemma_as_link}. "
-                                  f"Reason is: {error.args[0]}")
+                self.logger.error(
+                    f"No available Lemma in Registers for issue {band_info} "
+                    f"and lemma {self.re_page.lemma_as_link}. "
+                    f"Reason is: {error.args[0]}"
+                )
                 self.re_page.add_error_category(self.ERROR_CAT)
 
     def _write_strategy_statistic(self, strategy: str, update_dict: LemmaDict, issue_no: str):

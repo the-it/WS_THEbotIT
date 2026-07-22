@@ -37,7 +37,7 @@ text.
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
 
-        with mock.patch.object(re_page, 'get_redirects', return_value=[]):
+        with mock.patch.object(re_page, "get_redirects", return_value=[]):
             result = self.task.task()
             self.assertTrue(result)
 
@@ -57,7 +57,7 @@ text.
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
 
-        with mock.patch.object(re_page, 'get_redirects', return_value=[redirect_mock]):
+        with mock.patch.object(re_page, "get_redirects", return_value=[redirect_mock]):
             result = self.task.task()
             self.assertTrue(result)
             # Check that SORTIERUNG was set in the article
@@ -79,7 +79,7 @@ text.
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
 
-        with mock.patch.object(re_page, 'get_redirects', return_value=[redirect_mock]):
+        with mock.patch.object(re_page, "get_redirects", return_value=[redirect_mock]):
             result = self.task.task()
             self.assertTrue(result)
             # Check that SORTIERUNG was NOT set (main lemma is better)
@@ -107,7 +107,7 @@ text.
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
 
-        with mock.patch.object(re_page, 'get_redirects', return_value=[redirect1, redirect2, redirect3]):
+        with mock.patch.object(re_page, "get_redirects", return_value=[redirect1, redirect2, redirect3]):
             result = self.task.task()
             self.assertTrue(result)
             # Should use one of the good redirects (Abdera or Abdhera, both better than Greek)
@@ -124,7 +124,7 @@ text.
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
 
-        with mock.patch.object(re_page, 'get_redirects', side_effect=Exception("API Error")):
+        with mock.patch.object(re_page, "get_redirects", side_effect=Exception("API Error")):
             result = self.task.task()
             self.assertTrue(result)
             # Should not crash
@@ -158,7 +158,7 @@ text article 3.
         # Verify we have 3 articles
         self.assertEqual(3, len(re_page.splitted_article_list))
 
-        with mock.patch.object(re_page, 'get_redirects', return_value=[redirect_mock]):
+        with mock.patch.object(re_page, "get_redirects", return_value=[redirect_mock]):
             result = self.task.task()
             self.assertTrue(result)
             # Check that SORTIERUNG was set in ALL articles

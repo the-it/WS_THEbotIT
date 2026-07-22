@@ -34,15 +34,17 @@ class TestAlphabeticRegister(BaseTestRegister):
 
     def test_squash_lemmas(self):
         register = AlphabeticRegister("a", "be", None, "zzzzzz", OrderedDict())
-        lemma1 = Lemma.from_dict({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
-                       Volumes()["I,1"],
-                       self.authors)
-        lemma2 = Lemma.from_dict({"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
-                       Volumes()["III,1"],
-                       self.authors)
-        lemma3 = Lemma.from_dict({"lemma": "lemma2", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
-                       Volumes()["III,1"],
-                       self.authors)
+        lemma1 = Lemma.from_dict(
+            {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}, Volumes()["I,1"], self.authors
+        )
+        lemma2 = Lemma.from_dict(
+            {"lemma": "lemma", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]}, Volumes()["III,1"], self.authors
+        )
+        lemma3 = Lemma.from_dict(
+            {"lemma": "lemma2", "chapters": [{"start": 1, "end": 1, "author": "Abel"}]},
+            Volumes()["III,1"],
+            self.authors,
+        )
         lemmas = [lemma1, lemma2, lemma3]
         expection = [[lemma1, lemma2], [lemma3]]
         compare(expection, register.squash_lemmas(lemmas))

@@ -91,6 +91,7 @@ blub
         compare(False, first_article["KEINE_SCHÖPFUNGSHÖHE"].value)
         compare("", first_article["GEBURTSJAHR"].value)
         compare("", first_article["TODESJAHR"].value)
+
     def test_set_years_relevant_protected_set_years(self):
         self.page_mock.text = """{{REDaten
 |BAND=XIII,2
@@ -319,7 +320,8 @@ something
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
         self.task.task()
-        compare("""{{REDaten
+        compare(
+            """{{REDaten
 |BAND=XIII,2
 |SPALTE_START=
 |SPALTE_END=
@@ -360,4 +362,6 @@ blub
 |VERWEIS=OFF
 }}
 something
-{{REAutor|Werner Eck.}}""", str(re_page))
+{{REAutor|Werner Eck.}}""",
+            str(re_page),
+        )

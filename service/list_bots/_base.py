@@ -11,8 +11,7 @@ def _strip_spaces(raw_string: str):
     return _SPACE_REGEX.subn(raw_string.strip(), " ")[0]
 
 
-def get_single_page_info(info: str, template_str: str, extractor: TemplateHandler,
-                         info_dict: dict):
+def get_single_page_info(info: str, template_str: str, extractor: TemplateHandler, info_dict: dict):
     try:
         info_dict[info] = _strip_spaces(extractor.get_parameter(template_str)["value"])
     except TemplateHandlerException:

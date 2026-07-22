@@ -60,8 +60,9 @@ def _color_for_lemma(lemma: dict, authors: Authors, volume_name: str) -> Color:
     return COLOR_BLACK
 
 
-def _build_row_articles(lemmas: List[dict], start_column: int, length: int,
-                        authors: Authors, volume_name: str) -> List[List[Color]]:
+def _build_row_articles(
+    lemmas: List[dict], start_column: int, length: int, authors: Authors, volume_name: str
+) -> List[List[Color]]:
     spans: List[List] = []
     for lemma in lemmas:
         chapters = lemma.get("chapters", [])
@@ -128,11 +129,13 @@ def create_picture(output_path: Path) -> None:
         with open(json_file, "r", encoding="utf-8") as fp:
             lemmas = json.load(fp)
         length = end_column - start_column + 1
-        rows.append((
-            volume.name,
-            start_column,
-            _build_row_articles(lemmas, start_column, length, authors, volume.name),
-        ))
+        rows.append(
+            (
+                volume.name,
+                start_column,
+                _build_row_articles(lemmas, start_column, length, authors, volume.name),
+            )
+        )
 
     def _gridline_count(start: int, length: int) -> int:
         # Count of marked columns c (multiples of COLUMN_GRID_INTERVAL) strictly
@@ -142,10 +145,7 @@ def create_picture(output_path: Path) -> None:
         end = start + length - 1
         return end // COLUMN_GRID_INTERVAL - start // COLUMN_GRID_INTERVAL
 
-    bar_width = max(
-        len(articles) + _gridline_count(start, len(articles))
-        for _, start, articles in rows
-    )
+    bar_width = max(len(articles) + _gridline_count(start, len(articles)) for _, start, articles in rows)
     row_block = HEADER_HEIGHT + LINE_HEIGHT
     width = LABEL_WIDTH + bar_width
     height = len(rows) * row_block
@@ -212,9 +212,7 @@ class ReStatistic(CloudBot):
             create_picture(output_path)
             self.logger.info(f"Upload {self.WIKI_FILE_NAME} to wikisource.")
             file_page = FilePage(self.wiki, f"File:{self.WIKI_FILE_NAME}")
-            file_page.upload(str(output_path),
-                             comment=self.UPLOAD_COMMENT,
-                             ignore_warnings=True)
+            file_page.upload(str(output_path), comment=self.UPLOAD_COMMENT, ignore_warnings=True)
         return True
 
 

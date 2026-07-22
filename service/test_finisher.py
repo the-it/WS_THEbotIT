@@ -29,10 +29,22 @@ class TestFinisher(TestCloudBase):
         has_korrigiert_mock.side_effect = side_effect
         list_of_pages = ["Seite:Meyers b11 s0001.jpg", "Seite:Meyers b11 s0002.jpg"]
         expected_lemmas = [
-            ':MKL1888:Luzŭla', ':MKL1888:Luzzāra', ':MKL1888:Lwow', ':MKL1888:LXX', ':MKL1888:Lyǟos', ':MKL1888:Lycée',
-            ':MKL1888:Lycēum', ':MKL1888:Lychen', ':MKL1888:Lychnis', ':MKL1888:Lychnītis', ':MKL1888:Lycīn',
-            ':MKL1888:Lycĭum', ':MKL1888:Lycopérdon', ':MKL1888:Lycopersĭcum', ':MKL1888:Lycopodinae',
-            ':MKL1888:Lycopodĭum'
+            ":MKL1888:Luzŭla",
+            ":MKL1888:Luzzāra",
+            ":MKL1888:Lwow",
+            ":MKL1888:LXX",
+            ":MKL1888:Lyǟos",
+            ":MKL1888:Lycée",
+            ":MKL1888:Lycēum",
+            ":MKL1888:Lychen",
+            ":MKL1888:Lychnis",
+            ":MKL1888:Lychnītis",
+            ":MKL1888:Lycīn",
+            ":MKL1888:Lycĭum",
+            ":MKL1888:Lycopérdon",
+            ":MKL1888:Lycopersĭcum",
+            ":MKL1888:Lycopodinae",
+            ":MKL1888:Lycopodĭum",
         ]
         compare(expected_lemmas, self.finisher._get_checked_lemmas_from_current_pages(list_of_pages))
 
@@ -56,14 +68,25 @@ class TestFinisher(TestCloudBase):
 
     @real_wiki_test
     def test_is_overview_page(self):
-        compare(True, self.finisher.is_overview_page(
-            Page(self.wiki, "Mathematische Principien der Naturlehre")))
-        compare(True, self.finisher.is_overview_page(
-            Page(self.wiki, "Interessante Kriminal-Prozesse von kulturhistorischer Bedeutung, Band 4")))
-        compare(True, self.finisher.is_overview_page(
-            Page(self.wiki, "Deutsche Zeitschrift für Geschichtswissenschaft Bd. 01 (1889)")))
-        compare(False, self.finisher.is_overview_page(
-            Page(self.wiki, "Der Ausdruck der Gemüthsbewegungen bei dem Menschen und den Thieren/Zwölftes Capitel")))
+        compare(True, self.finisher.is_overview_page(Page(self.wiki, "Mathematische Principien der Naturlehre")))
+        compare(
+            True,
+            self.finisher.is_overview_page(
+                Page(self.wiki, "Interessante Kriminal-Prozesse von kulturhistorischer Bedeutung, Band 4")
+            ),
+        )
+        compare(
+            True,
+            self.finisher.is_overview_page(
+                Page(self.wiki, "Deutsche Zeitschrift für Geschichtswissenschaft Bd. 01 (1889)")
+            ),
+        )
+        compare(
+            False,
+            self.finisher.is_overview_page(
+                Page(self.wiki, "Der Ausdruck der Gemüthsbewegungen bei dem Menschen und den Thieren/Zwölftes Capitel")
+            ),
+        )
 
     def test_task_skips_band_and_bd_lemmas(self):
         mock.patch.object(self.finisher, "_get_proofread_pages", return_value=set()).start()
@@ -120,37 +143,53 @@ __TOC__
         petscan_mock = mock.patch("service.finisher.PetScan").start()
         save_mock = mock.patch("service.finisher.save_if_changed").start()
         petscan_mock.return_value.run.side_effect = [
-            [{"title": "THE_IT/unittest/finisher/Seite:1"},
-             {"title": "THE_IT/unittest/finisher/Seite:2"},
-             {"title": "Die_Gartenlaube_(1886)_497.jpg"},
-             {"title": "Die_Gartenlaube_(1886)_498.jpg"},
-             {"title": "Die_Gartenlaube_(1886)_499.jpg"}, ],
-            [{"title": "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages korrigiert", }]
+            [
+                {"title": "THE_IT/unittest/finisher/Seite:1"},
+                {"title": "THE_IT/unittest/finisher/Seite:2"},
+                {"title": "Die_Gartenlaube_(1886)_497.jpg"},
+                {"title": "Die_Gartenlaube_(1886)_498.jpg"},
+                {"title": "Die_Gartenlaube_(1886)_499.jpg"},
+            ],
+            [
+                {
+                    "title": "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages korrigiert",
+                }
+            ],
         ]
         petscan_mock.return_value.get_combined_lemma_list.side_effect = [
-            ([
-                 "Benutzer:THE IT/unittest/finisher/Lemma fertig pages fertig",
-                 "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig",
-                 "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages korrigiert",
-                 "Benutzer:THE IT/unittest/finisher/Lemma korrigiert overview",
-                 "Benutzer:THE IT/unittest/finisher/Lemma no included pages",
-                 "Benutzer:THE IT/unittest/finisher/Lemma underscores",
-                 "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig autocorrect"
-             ], 2)
+            (
+                [
+                    "Benutzer:THE IT/unittest/finisher/Lemma fertig pages fertig",
+                    "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig",
+                    "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages korrigiert",
+                    "Benutzer:THE IT/unittest/finisher/Lemma korrigiert overview",
+                    "Benutzer:THE IT/unittest/finisher/Lemma no included pages",
+                    "Benutzer:THE IT/unittest/finisher/Lemma underscores",
+                    "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig autocorrect",
+                ],
+                2,
+            )
         ]
         WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
         with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=False) as bot:
             bot.run()
         compare(3, save_mock.call_count)
-        compare("""{{#lst:Seite:THE IT/unittest/finisher/Seite:1}}
+        compare(
+            """{{#lst:Seite:THE IT/unittest/finisher/Seite:1}}
 {{#lst:Seite:THE IT/unittest/finisher/Seite:2}}
 [[Kategorie:Korrigiert]]
-[[Kategorie:Wikisource:Lemma korrigiert, alle Unterseiten fertig]]""", save_mock.call_args_list[0].kwargs["text"])
-        compare("Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig",
-                save_mock.call_args_list[0].kwargs["page"].title())
-        compare("Benutzer:THE IT/unittest/finisher/Lemma underscores",
-                save_mock.call_args_list[1].kwargs["page"].title())
-        compare("""{{Navigation2
+[[Kategorie:Wikisource:Lemma korrigiert, alle Unterseiten fertig]]""",
+            save_mock.call_args_list[0].kwargs["text"],
+        )
+        compare(
+            "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig",
+            save_mock.call_args_list[0].kwargs["page"].title(),
+        )
+        compare(
+            "Benutzer:THE IT/unittest/finisher/Lemma underscores", save_mock.call_args_list[1].kwargs["page"].title()
+        )
+        compare(
+            """{{Navigation2
  |AUTOR      = [[Friedrich von Boetticher]]
  |ÜBERSETZER =
  |ARTIKEL    = [[Malerwerke des neunzehnten Jahrhunderts – Erster Band]]
@@ -164,6 +203,9 @@ __TOC__
 {{#lst:Seite:THE IT/unittest/finisher/Seite:1}}
 {{#lst:Seite:THE IT/unittest/finisher/Seite:2}}
 [[Kategorie:Korrigiert]]""",
-                save_mock.call_args_list[2].kwargs["text"])
-        compare("Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig autocorrect",
-                save_mock.call_args_list[2].kwargs["page"].title())
+            save_mock.call_args_list[2].kwargs["text"],
+        )
+        compare(
+            "Benutzer:THE IT/unittest/finisher/Lemma korrigiert pages fertig autocorrect",
+            save_mock.call_args_list[2].kwargs["page"].title(),
+        )

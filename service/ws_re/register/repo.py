@@ -38,7 +38,7 @@ class DataRepo:
             try:
                 repo = Repo(path=PATH_REAL_DATA)
                 if update_repo:
-                    repo.git.reset('--hard')
+                    repo.git.reset("--hard")
                     repo.remotes.origin.pull()
                 return repo
             except GitError:

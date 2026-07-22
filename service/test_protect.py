@@ -32,7 +32,7 @@ class TestProtect(TestCloudBase):
 
     def test_page_already_protected(self):
         self.get_combined_lemma_list_mock.return_value = ([":lemma"], 1)
-        self.page_mock.return_value.protection.return_value = {'move': 'autoconfirmed', 'edit': 'autoconfirmed'}
+        self.page_mock.return_value.protection.return_value = {"move": "autoconfirmed", "edit": "autoconfirmed"}
         self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
         with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
             bot.run()
@@ -44,8 +44,9 @@ class TestProtect(TestCloudBase):
         self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
         with Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
             bot.run()
-        self.protect_mock.assert_called_once_with(reason= "Schutz fertiger Seiten",
-                                                  protections={'move': 'autoconfirmed', 'edit': 'autoconfirmed'})
+        self.protect_mock.assert_called_once_with(
+            reason="Schutz fertiger Seiten", protections={"move": "autoconfirmed", "edit": "autoconfirmed"}
+        )
 
     def test_3_pages_one_is_protected(self):
         self.get_combined_lemma_list_mock.return_value = ([":lemma1", "Seite:lemma2", "Index:Lemma3"], 3)

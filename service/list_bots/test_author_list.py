@@ -16,8 +16,11 @@ class TestAuthorList(TestCloudBase):
         self.author_list = AuthorList()
 
     def test_manual_date_sort(self):
-        result = {"birth": "4. Dezember zwischen 1825 und 1850<!--1837-00-00-->",
-                  "death": "frühestens 1916, spätestens 1921<!--1918-00-00-->", "sortkey": "Emilie Schröder"}
+        result = {
+            "birth": "4. Dezember zwischen 1825 und 1850<!--1837-00-00-->",
+            "death": "frühestens 1916, spätestens 1921<!--1918-00-00-->",
+            "sortkey": "Emilie Schröder",
+        }
 
         self.author_list.data.assign_dict({"Emilie Schröder": result})
         sorted_list = self.author_list.sort_to_list()
@@ -26,10 +29,12 @@ class TestAuthorList(TestCloudBase):
 
     @real_wiki_test
     def test_integration(self):
-        lemma_mock = mock.patch("service.list_bots.author_list.PetScan.get_combined_lemma_list",
-                                new_callable=mock.MagicMock).start()
-        lemma_raw_mock = mock.patch("service.list_bots.author_list.PetScan.make_plain_list",
-                                new_callable=mock.MagicMock).start()
+        lemma_mock = mock.patch(
+            "service.list_bots.author_list.PetScan.get_combined_lemma_list", new_callable=mock.MagicMock
+        ).start()
+        lemma_raw_mock = mock.patch(
+            "service.list_bots.author_list.PetScan.make_plain_list", new_callable=mock.MagicMock
+        ).start()
         mock.patch("service.list_bots.author_list.Page.save").start()
         lemma_mock.return_value = ([":Willy_Stöwer", "something"], 2)
         lemma_raw_mock.return_value = [":Willy_Stöwer", "something"]
@@ -40,44 +45,27 @@ class TestAuthorList(TestCloudBase):
             del bot.data._data[":Willy_Stöwer"]["check"]
             del bot.data._data["something"]["check"]
             compare(
-                {":Willy_Stöwer":
-                    {
+                {
+                    ":Willy_Stöwer": {
                         "lemma": "Willy Stöwer",
                         "first_name": "Willy",
                         "last_name": "Stöwer",
                         "birth": "22. Mai 1864",
                         "death": "31. Mai 1931",
                         "sortkey": "Stöwer, Willy",
-                        "description": "Maler, Illustrator"
+                        "description": "Maler, Illustrator",
                     },
-                    "something": {"lemma": "something"}
+                    "something": {"lemma": "something"},
                 },
-                bot.data._data
+                bot.data._data,
             )
-
 
     def test_sorting(self):
         self.author_list.data.assign_dict(
             {
-                    "A (second one)": {
-                        "title": "A (second one)",
-                        "sortkey": "A",
-                        "birth": "2.1.1900",
-                        "death": "2.1.2000"
-                    },
-                    "B": {
-                        "title": "B",
-                        "sortkey": "B",
-                        "birth": "3.3.2000"
-                        ,
-                        "death": "3.3.2100"
-                    },
-                    "A (first one)": {
-                        "title": "A (first one)",
-                        "sortkey": "A",
-                        "birth": "1.1.1900",
-                        "death": "1.1.2000"
-                    }
+                "A (second one)": {"title": "A (second one)", "sortkey": "A", "birth": "2.1.1900", "death": "2.1.2000"},
+                "B": {"title": "B", "sortkey": "B", "birth": "3.3.2000", "death": "3.3.2100"},
+                "A (first one)": {"title": "A (first one)", "sortkey": "A", "birth": "1.1.1900", "death": "1.1.2000"},
             }
         )
         compare(
@@ -105,9 +93,9 @@ class TestAuthorList(TestCloudBase):
                     "birth_sort": "2000-03-03",
                     "death": "3.3.2100",
                     "death_sort": "2100-03-03",
-                }
+                },
             ],
-            self.author_list.sort_to_list()
+            self.author_list.sort_to_list(),
         )
 
     def test_printing(self):
@@ -132,7 +120,7 @@ class TestAuthorList(TestCloudBase):
                 "birth_sort": "1900-01-02",
                 "death": "2.1.2000",
                 "death_sort": "2000-01-02",
-                "description": "A (second one)"
+                "description": "A (second one)",
             },
             {
                 "lemma": "B",
@@ -143,7 +131,7 @@ class TestAuthorList(TestCloudBase):
                 "death": "3.3.2100",
                 "death_sort": "2100-03-03",
                 "description": "B",
-            }
+            },
         ]
 
         compare(
@@ -180,8 +168,10 @@ Sollten daher Fehler vorhanden sein, sollten diese jeweils dort korrigiert werde
 
 {{SORTIERUNG:Autoren #Liste der}}
 [[Kategorie:Listen]]
-[[Kategorie:Autoren|!]]""" in self.author_list.print_list(test_list),
-            True)
+[[Kategorie:Autoren|!]]"""
+            in self.author_list.print_list(test_list),
+            True,
+        )
 
     def test_get_check_list(self):
         self.author_list.data.assign_dict({"A": {"check": "2024"}, "B": {"check": "2023"}})

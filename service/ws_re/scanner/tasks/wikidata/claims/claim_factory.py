@@ -7,8 +7,14 @@ import pywikibot
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
-from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ChangedClaimsDict, JsonDataValue, \
-    JsonSnakDict, ReferencesList, JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims._typing import (
+    ClaimList,
+    ChangedClaimsDict,
+    JsonDataValue,
+    JsonSnakDict,
+    ReferencesList,
+    JsonClaimDict,
+)
 from service.ws_re.template.article import Article
 from service.ws_re.template.re_page import RePage, ArticleList
 from service.ws_re.volumes import Volume, Volumes
@@ -18,9 +24,7 @@ from tools.bots.logger import WikiLogger
 
 class ClaimFactory:
     ITEM_RE = "Q1138524"
-    _IMPORTED_FROM_WIKISOURCE = SnakParameter(property_str="P143",
-                                              target_type="wikibase-item",
-                                              target="Q15522295")
+    _IMPORTED_FROM_WIKISOURCE = SnakParameter(property_str="P143", target_type="wikibase-item", target="Q15522295")
 
     def __init__(self, re_page: RePage, logger: WikiLogger):
         self.wikisource: pywikibot.site.BaseSite = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
@@ -47,8 +51,9 @@ class ClaimFactory:
         :returns: A dictionary with claims to add and to remove is returned
         """
 
-        claim_list = [pywikibot.Claim.fromJSON(self.wikidata, cast(dict, claim_json))
-                      for claim_json in self._get_claim_json()]
+        claim_list = [
+            pywikibot.Claim.fromJSON(self.wikidata, cast(dict, claim_json)) for claim_json in self._get_claim_json()
+        ]
         return self.get_diff_claims_for_replacement(claim_list, data_item)
 
     @classmethod
@@ -61,9 +66,9 @@ class ClaimFactory:
         raise ValueError("Class name doesn't match regex")
 
     @classmethod
-    def filter_new_vs_old_claim_list(cls,
-                                     new_claim_list: ClaimList,
-                                     old_claim_list: ClaimList) -> Tuple[ClaimList, ClaimList]:
+    def filter_new_vs_old_claim_list(
+        cls, new_claim_list: ClaimList, old_claim_list: ClaimList
+    ) -> Tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -100,9 +105,9 @@ class ClaimFactory:
             claims_to_add_dict[self.get_property_string()] = claims_to_add
         return {"add": claims_to_add_dict, "remove": claims_to_remove}
 
-    def get_diff_claims_for_replacement(self,
-                                        claim_list: ClaimList,
-                                        data_item: Optional[pywikibot.ItemPage]) -> ChangedClaimsDict:
+    def get_diff_claims_for_replacement(
+        self, claim_list: ClaimList, data_item: Optional[pywikibot.ItemPage]
+    ) -> ChangedClaimsDict:
         old_claims = self.get_old_claims(data_item)
         claims_to_add, claims_to_remove = self.filter_new_vs_old_claim_list(claim_list, old_claims)
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
@@ -110,15 +115,17 @@ class ClaimFactory:
     def get_old_claims(self, data_item) -> List[pywikibot.Claim]:
         try:
             old_claims: List[pywikibot.Claim] = data_item.claims[self.get_property_string()]
-        except (AttributeError, KeyError):
+        except AttributeError, KeyError:
             # if data_item didn't existed -> AttributeError, if claim not exists -> KeyError
             old_claims = []
         return old_claims
 
     @staticmethod
-    def create_claim_json(snak_parameter: SnakParameter,
-                          qualifiers: Optional[List[SnakParameter]] = None,
-                          references: Optional[List[List[SnakParameter]]] = None) -> JsonClaimDict:
+    def create_claim_json(
+        snak_parameter: SnakParameter,
+        qualifiers: Optional[List[SnakParameter]] = None,
+        references: Optional[List[List[SnakParameter]]] = None,
+    ) -> JsonClaimDict:
         """
         This factory function create json representations of claims from some basic parameters.
 
@@ -129,9 +136,7 @@ class ClaimFactory:
         :return: dictionary representation of a claim
         """
         snak = ClaimFactory.create_snak_json(snak_parameter)
-        claim_json: JsonClaimDict = {"mainsnak": snak,
-                                     "type": "statement",
-                                     "rank": "normal"}
+        claim_json: JsonClaimDict = {"mainsnak": snak, "type": "statement", "rank": "normal"}
         if qualifiers:
             qualifiers_dict, qualifiers_order_list = ClaimFactory._add_qualifiers(qualifiers)
             claim_json["qualifiers"] = qualifiers_dict
@@ -171,38 +176,35 @@ class ClaimFactory:
     def create_snak_json(snak_parameter: SnakParameter) -> JsonSnakDict:
         datavalue: JsonDataValue
         if snak_parameter.target_type == "wikibase-item":
-            datavalue = {"value": {"entity-type": "item",
-                                   "numeric-id": int(snak_parameter.target.strip("Q"))
-                                   },
-                         "type": "wikibase-entityid"
-                         }
+            datavalue = {
+                "value": {"entity-type": "item", "numeric-id": int(snak_parameter.target.strip("Q"))},
+                "type": "wikibase-entityid",
+            }
         elif snak_parameter.target_type == "string":
-            datavalue = {"value": snak_parameter.target,
-                         "type": "string"
-                         }
+            datavalue = {"value": snak_parameter.target, "type": "string"}
         elif snak_parameter.target_type == "time":
             # only for years at the moment ... extend if necessary
-            datavalue = {"value": {"time": f"+0000000{int(snak_parameter.target)}-01-01T00:00:00Z",
-                                   "precision": 9,
-                                   "after": 0,
-                                   "before": 0,
-                                   "timezone": 0,
-                                   "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-                                   },
-                         "type": "time"
-                         }
+            datavalue = {
+                "value": {
+                    "time": f"+0000000{int(snak_parameter.target)}-01-01T00:00:00Z",
+                    "precision": 9,
+                    "after": 0,
+                    "before": 0,
+                    "timezone": 0,
+                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+                },
+                "type": "time",
+            }
         elif snak_parameter.target_type == "monolingualtext":
-            datavalue = {"value": {"text": snak_parameter.target,
-                                   "language": "mul"
-                                   },
-                         "type": "monolingualtext"
-                         }
+            datavalue = {"value": {"text": snak_parameter.target, "language": "mul"}, "type": "monolingualtext"}
         else:
-            raise BotException(f"target_type \"{snak_parameter.target_type}\" not supported")
-        return {"snaktype": "value",
-                "property": snak_parameter.property_str,
-                "datatype": snak_parameter.target_type,
-                "datavalue": datavalue}
+            raise BotException(f'target_type "{snak_parameter.target_type}" not supported')
+        return {
+            "snaktype": "value",
+            "property": snak_parameter.property_str,
+            "datatype": snak_parameter.target_type,
+            "datavalue": datavalue,
+        }
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 

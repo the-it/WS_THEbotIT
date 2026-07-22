@@ -11,7 +11,9 @@ class P1476Title(ClaimFactory):
     """
 
     def _get_claim_json(self) -> List[JsonClaimDict]:
-        snak_parameter = SnakParameter(property_str=self.get_property_string(),
-                                       target_type="monolingualtext",
-                                       target=self.re_page.lemma_without_prefix)
+        snak_parameter = SnakParameter(
+            property_str=self.get_property_string(),
+            target_type="monolingualtext",
+            target=self.re_page.lemma_without_prefix,
+        )
         return [self.create_claim_json(snak_parameter)]

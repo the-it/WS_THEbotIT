@@ -13,30 +13,32 @@ from service.ws_re.volumes import Volume
 
 
 def _generate_translation_dict():
-    _TRANSLATION_DICT_RAW = {"a": "α",
-                             "b": "β",
-                             "ch": "χ",
-                             "d": "δ",
-                             "e": "εη",
-                             "g": "γ",
-                             "i": "jι",
-                             "k": "κ",
-                             "l": "λ",
-                             "m": "μ",
-                             "n": "ν",
-                             "o": "ωο",  # don't get confused this is an omikron
-                             "p": "π",
-                             "ph": "φ",
-                             "ps": "ψ",
-                             "r": "ρ",
-                             "s": "σ",
-                             "t": "τ",
-                             "th": "θ",
-                             "v": "uw",
-                             "x": "ξ",
-                             "y": "υ",
-                             "z": "ζ",
-                             "": "()?\'ʾʿ–-"}
+    _TRANSLATION_DICT_RAW = {
+        "a": "α",
+        "b": "β",
+        "ch": "χ",
+        "d": "δ",
+        "e": "εη",
+        "g": "γ",
+        "i": "jι",
+        "k": "κ",
+        "l": "λ",
+        "m": "μ",
+        "n": "ν",
+        "o": "ωο",  # don't get confused this is an omikron
+        "p": "π",
+        "ph": "φ",
+        "ps": "ψ",
+        "r": "ρ",
+        "s": "σ",
+        "t": "τ",
+        "th": "θ",
+        "v": "uw",
+        "x": "ξ",
+        "y": "υ",
+        "z": "ζ",
+        "": "()?'ʾʿ–-",
+    }
     _TMP_DICT = {}
     for key in _TRANSLATION_DICT_RAW:  # pylint: disable=consider-using-dict-items
         for character in _TRANSLATION_DICT_RAW[key]:
@@ -80,7 +82,7 @@ def _generate_pre_finalize_regex() -> List[Tuple[Pattern, str]]:
         (r"^[a-z]?\. ", ""),
         # unify numbers
         (r"(?<!\d)(\d)(?!\d)", r"00\g<1>"),
-        (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>")
+        (r"(?<!\d)(\d\d)(?!\d)", r"0\g<1>"),
     ]
     return _generate_regex_list(raw)
 
@@ -91,8 +93,20 @@ PRE_FINALIZE_REGEX = _generate_pre_finalize_regex()
 TRANSLATION_DICT = _generate_translation_dict()
 
 
-LemmaKeys = Literal["lemma", "previous", "next", "sort_key", "redirect", "proof_read",
-                    "short_description", "wp_link", "ws_link", "wd_link", "no_creative_height", "chapters"]
+LemmaKeys = Literal[
+    "lemma",
+    "previous",
+    "next",
+    "sort_key",
+    "redirect",
+    "proof_read",
+    "short_description",
+    "wp_link",
+    "ws_link",
+    "wd_link",
+    "no_creative_height",
+    "chapters",
+]
 
 
 UpdaterRemoveList = List[str]
@@ -169,8 +183,11 @@ class Lemma:
 
     @staticmethod
     def _strip_accents(accent_string: str) -> str:
-        return ''.join(unicode_char for unicode_char in unicodedata.normalize('NFD', accent_string)
-                       if unicodedata.category(unicode_char) != 'Mn')
+        return "".join(
+            unicode_char
+            for unicode_char in unicodedata.normalize("NFD", accent_string)
+            if unicodedata.category(unicode_char) != "Mn"
+        )
 
     @classmethod
     def make_sort_key(cls, lemma: str) -> str:
@@ -210,7 +227,7 @@ class Lemma:
         return return_dict
 
     @classmethod
-    def from_dict(cls, lemma_dict: LemmaDict, volume: Volume, authors: Authors) -> 'Lemma':
+    def from_dict(cls, lemma_dict: LemmaDict, volume: Volume, authors: Authors) -> "Lemma":
         try:
             return Lemma(**lemma_dict, volume=volume, authors=authors)
         except TypeError as error:
@@ -222,9 +239,7 @@ class Lemma:
             chapter_list.append(chapter.to_dict())
         return chapter_list
 
-    def get_table_row(self, print_volume: bool = False,
-                      print_author: bool = True,
-                      print_colour: bool = True) -> str:
+    def get_table_row(self, print_volume: bool = False, print_author: bool = True, print_colour: bool = True) -> str:
         row_string = ["|-"]
         multi_row = ""
         if len(self.chapter_objects) > 1:
@@ -232,7 +247,7 @@ class Lemma:
         if print_volume:
             row_string.append(f"{multi_row}|{self.volume.name}".strip())
         status = self.status
-        background = f" style=\"background:{status[1]}\"" if print_colour else ""
+        background = f' style="background:{status[1]}"' if print_colour else ""
         if self.chapter_objects:
             for idx, chapter in enumerate(self.chapter_objects):
                 row_string.append(self._get_pages(chapter))
@@ -280,7 +295,7 @@ class Lemma:
             sort_keys.append(f"{self.wd_link}")
         if links:
             link = "<br/>".join(links)
-            sort_key = f"data-sort-value=\"{sort_keys[0]}\""
+            sort_key = f'data-sort-value="{sort_keys[0]}"'
         return link, sort_key
 
     def _process_wiki_link(self, wiki_type: Literal["wp", "ws"]) -> Tuple[str, str]:
@@ -288,9 +303,11 @@ class Lemma:
         if wiki_type == "wp":
             link_type = "wp_link"
         parts = getattr(self, link_type).split(":")
-        return f"[[{getattr(self, link_type)}|{self._escape_link_for_templates(parts[-1])}" \
-               f"<sup>({wiki_type.upper()} {parts[1]})</sup>]]", \
-               f"{parts[0]}:{parts[1]}:{self.make_sort_key(':'.join(parts[2:]))}"
+        return (
+            f"[[{getattr(self, link_type)}|{self._escape_link_for_templates(parts[-1])}"
+            f"<sup>({wiki_type.upper()} {parts[1]})</sup>]]",
+            f"{parts[0]}:{parts[1]}:{self.make_sort_key(':'.join(parts[2:]))}",
+        )
 
     def _get_start_column(self, lemma_chapter: LemmaChapter) -> int:
         columns_on_page = 4
@@ -299,8 +316,10 @@ class Lemma:
         return ((math.ceil((lemma_chapter.start + (columns_on_page / 2)) / columns_on_page) - 1) * columns_on_page) + 1
 
     def _get_pages(self, lemma_chapter: LemmaChapter) -> str:
-        pages_str = f"[https://elexikon.ch/RE/{self.volume.name.replace(' ', '')}_" \
-                    f"{self._get_start_column(lemma_chapter)} {lemma_chapter.start}]"
+        pages_str = (
+            f"[https://elexikon.ch/RE/{self.volume.name.replace(' ', '')}_"
+            f"{self._get_start_column(lemma_chapter)} {lemma_chapter.start}]"
+        )
         if lemma_chapter.end and lemma_chapter.start != lemma_chapter.end:
             pages_str += f"-{lemma_chapter.end}"
         return pages_str
@@ -308,8 +327,7 @@ class Lemma:
     def _get_author_str(self, lemma_chapter: LemmaChapter) -> str:
         author_str = ""
         if lemma_chapter.author:
-            mapped_author = self.authors.get_author_by_mapping(lemma_chapter.author,
-                                                               self.volume.name)
+            mapped_author = self.authors.get_author_by_mapping(lemma_chapter.author, self.volume.name)
             if mapped_author:
                 author_str = ", ".join([author.name for author in mapped_author])
             else:

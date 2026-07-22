@@ -20,16 +20,21 @@ class DEALTask(ReScannerTask, ReporterMixin):
         ReScannerTask.__init__(self, wiki, logger, debug)
         ReporterMixin.__init__(self, wiki)
         regex_start_characters = self._start_characters + self._start_characters.upper()
-        self.re_siehe_regex = re.compile(rf"(?:\{{\{{RE siehe\||\[\[RE:)"
-                                         rf"([{regex_start_characters}][^\|\}}\]]+)")
+        self.re_siehe_regex = re.compile(
+            rf"(?:\{{\{{RE siehe\||\[\[RE:)"
+            rf"([{regex_start_characters}][^\|\}}\]]+)"
+        )
 
     def task(self):
         for article in self.re_page:
             # check properties of REDaten Block first
             if isinstance(article, Article):
                 # check only proofread articles
-                if cast(str, article["KORREKTURSTAND"].value).lower() \
-                        in ["platzhalter", "unvollständig", "unkorrigiert"]:
+                if cast(str, article["KORREKTURSTAND"].value).lower() in [
+                    "platzhalter",
+                    "unvollständig",
+                    "unkorrigiert",
+                ]:
                     continue
                 for prop in ["VORGÄNGER", "NACHFOLGER"]:
                     # VORGÄNGER NACHFOLGER are string properties

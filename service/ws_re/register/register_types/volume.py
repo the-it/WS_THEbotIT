@@ -15,8 +15,7 @@ class VolumeRegister(Register):
         self._authors = authors
         self._volume = volume
         self.repo = DataRepo()
-        with open(self.repo.get_data_path().joinpath(f"{volume.file_name}.json"),
-                  "r", encoding="utf-8") as json_file:
+        with open(self.repo.get_data_path().joinpath(f"{volume.file_name}.json"), "r", encoding="utf-8") as json_file:
             try:
                 lemma_list = json.load(json_file)
             except JSONDecodeError as exception:
@@ -65,21 +64,22 @@ class VolumeRegister(Register):
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def get_register_str(self, print_details: bool = True) -> str:
-        table = self._get_table(print_volume=False,
-                                print_description=print_details,
-                                print_author=print_details,
-                                print_all_links=print_details,
-                                print_colour=print_details)
-        return f"{self._get_header()}" \
-               f"\n{table}" \
-               f"\n[[Kategorie:RE:Register|!]]"
+        table = self._get_table(
+            print_volume=False,
+            print_description=print_details,
+            print_author=print_details,
+            print_all_links=print_details,
+            print_colour=print_details,
+        )
+        return f"{self._get_header()}\n{table}\n[[Kategorie:RE:Register|!]]"
 
     def persist(self):
         persist_list = []
         for lemma in self.lemmas:
             persist_list.append(lemma.to_dict())
-        with open(self.repo.get_data_path().joinpath(f"{self._volume.file_name}.json"),
-                  "w", encoding="utf-8") as json_file:
+        with open(
+            self.repo.get_data_path().joinpath(f"{self._volume.file_name}.json"), "w", encoding="utf-8"
+        ) as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
 
     def get_lemma_by_name(self, lemma_name: str, self_supplement: bool = False) -> Optional[Lemma]:

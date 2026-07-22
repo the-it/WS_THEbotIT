@@ -12,16 +12,17 @@ from tools.bots.status_manager import StatusManager
 
 
 class CloudBot(ABC):
-    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
-                 log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(
+        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+    ):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
         self.status: StatusManager = StatusManager(bot_name=self.bot_name)
         self.data: PersistedData = PersistedData(bot_name=self.bot_name)
-        self.logger: WikiLogger = WikiLogger(bot_name=self.bot_name,
-                                             start_time=self.status.current_run.start_time,
-                                             log_to_screen=self.log_to_screen)
+        self.logger: WikiLogger = WikiLogger(
+            bot_name=self.bot_name, start_time=self.status.current_run.start_time, log_to_screen=self.log_to_screen
+        )
         self.wiki: BaseSite | None = wiki
         self.debug: bool = debug
         self.timeout: timedelta = timedelta(days=1)
@@ -36,8 +37,7 @@ class CloudBot(ABC):
     def __exit__(self, exc_type, exc_val, exc_tb):
         self._dump_data()
         self.status.finish_run(self.success)
-        self.logger.info(f"Finish bot {self.bot_name} in "
-                         f"{datetime.now() - self.status.current_run.start_time}.")
+        self.logger.info(f"Finish bot {self.bot_name} in {datetime.now() - self.status.current_run.start_time}.")
         if self.log_to_wiki:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
@@ -45,7 +45,7 @@ class CloudBot(ABC):
     def _load_data(self):
         if not self.status.last_run or not self.status.last_run.success:
             self.data.assign_dict({})
-            self.logger.warning("The last run wasn\'t successful. The data is thrown away.")
+            self.logger.warning("The last run wasn't successful. The data is thrown away.")
         elif self.data_outdated():
             self.data.clean_data()
             self.logger.warning("The data is thrown away. It is out of date")
@@ -57,8 +57,9 @@ class CloudBot(ABC):
             self.data.dump(success=True)
         else:
             self.data.dump(success=False)
-            self.logger.critical("There was an error in the general procedure. "
-                                 "The broken data and a backup of the old will be keept.")
+            self.logger.critical(
+                "There was an error in the general procedure. The broken data and a backup of the old will be keept."
+            )
 
     @abstractmethod
     def task(self) -> bool:

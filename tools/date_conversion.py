@@ -1,41 +1,43 @@
 import re
 
-MONTH_MAPPING = {"Januar": "01",
-                 "Jänner": "01",
-                 "Februar": "02",
-                 "März": "03",
-                 "April": "04",
-                 "Mai": "05",
-                 "Juni": "06",
-                 "Juli": "07",
-                 "August": "08",
-                 "September": "09",
-                 "Oktober": "10",
-                 "November": "11",
-                 "Dezember": "12",
-                 "Jan": "01",
-                 "Feb": "02",
-                 "Mär": "03",
-                 "Apr": "04",
-                 "Jun": "06",
-                 "Jul": "07",
-                 "Aug": "08",
-                 "Sept": "09",
-                 "Okt": "10",
-                 "Nov": "11",
-                 "Dez": "12",
-                 "1.": "01",
-                 "2.": "02",
-                 "3.": "03",
-                 "4.": "04",
-                 "5.": "05",
-                 "6.": "06",
-                 "7.": "07",
-                 "8.": "08",
-                 "9.": "09",
-                 "10.": "10",
-                 "11.": "11",
-                 "12.": "12"}
+MONTH_MAPPING = {
+    "Januar": "01",
+    "Jänner": "01",
+    "Februar": "02",
+    "März": "03",
+    "April": "04",
+    "Mai": "05",
+    "Juni": "06",
+    "Juli": "07",
+    "August": "08",
+    "September": "09",
+    "Oktober": "10",
+    "November": "11",
+    "Dezember": "12",
+    "Jan": "01",
+    "Feb": "02",
+    "Mär": "03",
+    "Apr": "04",
+    "Jun": "06",
+    "Jul": "07",
+    "Aug": "08",
+    "Sept": "09",
+    "Okt": "10",
+    "Nov": "11",
+    "Dez": "12",
+    "1.": "01",
+    "2.": "02",
+    "3.": "03",
+    "4.": "04",
+    "5.": "05",
+    "6.": "06",
+    "7.": "07",
+    "8.": "08",
+    "9.": "09",
+    "10.": "10",
+    "11.": "11",
+    "12.": "12",
+}
 
 
 class DateConversion:
@@ -47,8 +49,7 @@ class DateConversion:
     regex_preset = re.compile(r"<!--(\d{4}-\d{2}-\d{2})-->")
     regex_before_domino = re.compile(r"v. Chr")
     regex_only_century = re.compile(r"(\d{1,2})\. (Jahrhundert|Jh.)")
-    regex_complete_date = \
-        re.compile(r"\d{1,2}(\.|\. | )(\d\d?|" + _months + r")\w*(\.|\. | )(\d{1,4})")
+    regex_complete_date = re.compile(r"\d{1,2}(\.|\. | )(\d\d?|" + _months + r")\w*(\.|\. | )(\d{1,4})")
     regex_no_day = re.compile(r"(\d{1,2}\.|" + _months + r")\w*(\.|\. | )(\d{1,4})")
     regex_only_year = re.compile(r"\d{1,4}")
 

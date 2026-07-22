@@ -10,6 +10,7 @@ class P31InstanceOf(ClaimFactory):
     """
     Returns the Claim **instance of** -> **(encyclopedic article|cross-reference)**
     """
+
     ENCYCLOPEDIC_ARTICLE_ITEM = "Q13433827"
     CROSS_REFERENCE_ITEM = "Q1302249"
     INDEX = "Q873506"
@@ -25,7 +26,7 @@ class P31InstanceOf(ClaimFactory):
             target = self.CROSS_REFERENCE_ITEM
         else:
             target = self.ENCYCLOPEDIC_ARTICLE_ITEM
-        snak_parameter = SnakParameter(property_str=self.get_property_string(),
-                                       target_type="wikibase-item",
-                                       target=target)
+        snak_parameter = SnakParameter(
+            property_str=self.get_property_string(), target_type="wikibase-item", target=target
+        )
         return [self.create_claim_json(snak_parameter)]

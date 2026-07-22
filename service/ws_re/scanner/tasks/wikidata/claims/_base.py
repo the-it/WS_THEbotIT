@@ -12,6 +12,7 @@ class SnakParameter:
                         "geo-shape", "tabular-data"
     :param target: actual value of the target
     """
+
     property_str: str
     target_type: str
     target: str

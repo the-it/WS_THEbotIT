@@ -40,7 +40,7 @@ class Status:
             "finish": self.finish,
             "start_time": self.start_time.isoformat(),
             "finish_time": self.finish_time.isoformat(),
-            "output": self.output
+            "output": self.output,
         }
         return return_dict
 

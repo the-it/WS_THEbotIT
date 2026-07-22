@@ -28,7 +28,8 @@ class KURZTask(ReScannerTask):
         for letter in RE_ALPHABET:
             try:
                 complete_descriptions_dict.update(
-                    self._parse_short_description(self._get_short_description_text_from_source(letter)))
+                    self._parse_short_description(self._get_short_description_text_from_source(letter))
+                )
             except ValueError:
                 self.logger.error(f"Couldn't load {self.SHORT_TEXT_URL}{letter}.")
         return complete_descriptions_dict
@@ -53,8 +54,9 @@ class KURZTask(ReScannerTask):
         if article["KURZTEXT"].value:
             return
         try:
-            article["KURZTEXT"].value = \
-                self.short_description_lookup[Lemma.make_sort_key(self.re_page.lemma_without_prefix)]
+            article["KURZTEXT"].value = self.short_description_lookup[
+                Lemma.make_sort_key(self.re_page.lemma_without_prefix)
+            ]
             self.re_page.add_error_category(category=self.MAINTENANCE_CAT)
         except KeyError:
             pass

@@ -5,21 +5,18 @@ import pywikibot
 from pywikibot import ItemPage
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, \
-    ChangedClaimsDict
+from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, ChangedClaimsDict
 from service.ws_re.scanner.tasks.wikidata.claims.non_claims import NonClaims
 from service.ws_re.scanner.tasks.wikidata.claims.p13269_directs_readers_to import P13269DirectsReadersTo
 from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
-from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, \
-    P156FollowedBy
+from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, P156FollowedBy
 from service.ws_re.scanner.tasks.wikidata.claims.p2567_amended_by import P2567AmendedBy
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
-from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import \
-    P407LanguageOfWorkOrName
+from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
 from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
@@ -45,7 +42,7 @@ class DATATask(ReScannerTask):
         P2567AmendedBy,
         P3903Column,
         P6216CopyrightStatus,
-        P13269DirectsReadersTo
+        P13269DirectsReadersTo,
     )
 
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
@@ -86,8 +83,9 @@ class DATATask(ReScannerTask):
         try:
             self.back_link_main_topic()
         except pywikibot.exceptions.IsRedirectPageError:
-            self.logger.warning(f"Backlink to main topic failed for {self.re_page.lemma_as_link}"
-                                ", because target is a redirect.")
+            self.logger.warning(
+                f"Backlink to main topic failed for {self.re_page.lemma_as_link}, because target is a redirect."
+            )
 
     def back_link_main_topic(self):
         p1343_factory = P1343DescribedBySource(self.re_page, self.logger)
@@ -99,11 +97,14 @@ class DATATask(ReScannerTask):
         if claim_dict["add"] or claim_dict["remove"]:
             self.logger.debug(f"Backlinking {claim_dict['add']} to {main_topic} on {self.re_page.lemma_as_link}")
             if claim_dict["add"]:
-                main_topic.editEntity(data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
-                                      summary="Add reference to a lexicon article.")
+                main_topic.editEntity(
+                    data={"claims": self._serialize_claims_to_add(claim_dict["add"])},
+                    summary="Add reference to a lexicon article.",
+                )
             if claim_dict["remove"]:
-                main_topic.removeClaims(claims=claim_dict["remove"],
-                                        summary="Remove old reference to a lexicon article.")
+                main_topic.removeClaims(
+                    claims=claim_dict["remove"], summary="Remove old reference to a lexicon article."
+                )
 
     @staticmethod
     def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:

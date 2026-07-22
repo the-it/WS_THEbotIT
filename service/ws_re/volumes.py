@@ -18,22 +18,25 @@ class VolumeType(Enum):
 
 
 _BASIC_REGEX = r"([IVX]{1,5})"
-_REGEX_MAPPING = {VolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,([1234]))?$"),
-                  VolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,([12]))?$"),
-                  VolumeType.SUPPLEMENTS: re.compile(r"^S " + _BASIC_REGEX + "$"),
-                  VolumeType.REGISTER: re.compile(r"^R$")}
+_REGEX_MAPPING = {
+    VolumeType.FIRST_SERIES: re.compile("^" + _BASIC_REGEX + r"(?:,([1234]))?$"),
+    VolumeType.SECOND_SERIES: re.compile("^" + _BASIC_REGEX + r" A(?:,([12]))?$"),
+    VolumeType.SUPPLEMENTS: re.compile(r"^S " + _BASIC_REGEX + "$"),
+    VolumeType.REGISTER: re.compile(r"^R$"),
+}
 
 
 class Volume:
-    def __init__(self,
-                 name: str,
-                 year: Union[str, int],
-                 data_item: str,
-                 start: Optional[str] = None,
-                 end: Optional[str] = None,
-                 start_column: Optional[str] = None,
-                 end_column: Optional[str] = None
-                 ):
+    def __init__(
+        self,
+        name: str,
+        year: Union[str, int],
+        data_item: str,
+        start: Optional[str] = None,
+        end: Optional[str] = None,
+        start_column: Optional[str] = None,
+        end_column: Optional[str] = None,
+    ):
         self._name = name
         self._year = str(year)
         self._data_item = data_item
@@ -44,8 +47,10 @@ class Volume:
         self._sortkey = self._compute_sortkey()
 
     def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} - name:{self.name}, year:{self.year}, start:{self.start}, " \
-               f"end:{self.end}, sort:{self.sort_key}>"
+        return (
+            f"<{self.__class__.__name__} - name:{self.name}, year:{self.year}, start:{self.start}, "
+            f"end:{self.end}, sort:{self.sort_key}>"
+        )
 
     @property
     def name(self) -> str:

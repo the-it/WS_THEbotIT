@@ -15,6 +15,8 @@ class P1433PublishedIn(ClaimFactory):
         return [self.create_claim_json(self.get_volume_snak(self.re_page.first_article))]
 
     def get_volume_snak(self, article: Article) -> SnakParameter:
-        return SnakParameter(property_str=self.get_property_string(),
-                             target_type="wikibase-item",
-                             target=self._volume_of_article(article).data_item)
+        return SnakParameter(
+            property_str=self.get_property_string(),
+            target_type="wikibase-item",
+            target=self._volume_of_article(article).data_item,
+        )

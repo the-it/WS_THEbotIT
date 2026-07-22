@@ -22,9 +22,9 @@ class RawFiles(DownloadTarget):
             print(f"Raw Files {path_raw_files} doesn't exists, unpack them now ")
             self.get_source()
             os.makedirs(path_raw_files, exist_ok=True)
-            patoolib.extract_archive(str(Path(BASE_PATH, "archives", self.source)),
-                                     outdir=str(path_raw_files),
-                                     interactive=False)
+            patoolib.extract_archive(
+                str(Path(BASE_PATH, "archives", self.source)), outdir=str(path_raw_files), interactive=False
+            )
         else:
             print(f"Raw Files {path_raw_files} exists")
 

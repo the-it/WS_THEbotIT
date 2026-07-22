@@ -9,8 +9,7 @@ from service.ws_re.volumes import Volume, Volumes, VolumeType
 
 class TestVolume(TestCase):
     def test_init(self):
-        volume = Volume("I,1", "1900", "Q26414644",
-                        "Aal", "Bethel", "1", "2")
+        volume = Volume("I,1", "1900", "Q26414644", "Aal", "Bethel", "1", "2")
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
         compare("1900", volume.year)
@@ -21,8 +20,9 @@ class TestVolume(TestCase):
         compare(2, volume.end_column)
 
     def test_init_by_name(self):
-        volume = Volume(name="I,1", year="1900", start="Aal", end="Bethel",
-                        data_item="Q26414644", start_column="1", end_column="2")
+        volume = Volume(
+            name="I,1", year="1900", start="Aal", end="Bethel", data_item="Q26414644", start_column="1", end_column="2"
+        )
         compare("I,1", volume.name)
         compare("I_1", volume.file_name)
         compare("1900", volume.year)
@@ -125,9 +125,7 @@ class TestVolumes(TestCase):
     def test_iter_all_volumes(self):
         counter = 0
         current_type = VolumeType.FIRST_SERIES
-        following_types = [VolumeType.SECOND_SERIES,
-                           VolumeType.SUPPLEMENTS,
-                           VolumeType.REGISTER]
+        following_types = [VolumeType.SECOND_SERIES, VolumeType.SUPPLEMENTS, VolumeType.REGISTER]
         for volume in self.re_volumes.all_volumes:
             compare(Volume, type(volume))
             if volume.type == current_type:

@@ -7,6 +7,7 @@ from service.ws_re.template.re_page import RePage
 
 BASE_TASK_PYWIKIBOT_PAGE = "service.ws_re.scanner.tasks.base_task.pywikibot.Page"
 
+
 class TestDEALTask(TaskTestCase):
     def test_only_one_article(self):
         self.page_mock.text = """{{REDaten

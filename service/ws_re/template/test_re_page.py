@@ -13,8 +13,7 @@ from tools.test import real_wiki_test
 
 class TestSplittedArticleList(TestCase):
     @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text",
-                new_callable=mock.PropertyMock)
+    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text", new_callable=mock.PropertyMock)
     # pylint: disable=arguments-differ
     def setUp(self, text_mock, page_mock):
         self.page_mock = page_mock
@@ -44,8 +43,7 @@ class TestSplittedArticleList(TestCase):
 
 class TestRePage(TestCase):
     @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
-    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text",
-                new_callable=mock.PropertyMock)
+    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text", new_callable=mock.PropertyMock)
     # pylint: disable=arguments-differ
     def setUp(self, text_mock, page_mock):
         self.page_mock = page_mock
@@ -64,8 +62,7 @@ class TestRePage(TestCase):
         self.assertEqual(REAuthor("Autor."), re_article.author)
 
     def test_double_article(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\n" \
-                                      "text1\n{{REAutor|Autor1.}}"
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REDaten}}\ntext1\n{{REAutor|Autor1.}}"
         re_page = RePage(self.page_mock)
         re_article_0 = re_page[0]
         re_article_1 = re_page[1]
@@ -73,8 +70,9 @@ class TestRePage(TestCase):
         self.assertEqual("text1", re_article_1.text)
 
     def test_combined_article_with_abschnitt(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}" \
-                                      "\n{{REAbschnitt}}\ntext1\n{{REAutor|Autor1.}}"
+        self.text_mock.return_value = (
+            "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\n{{REAbschnitt}}\ntext1\n{{REAutor|Autor1.}}"
+        )
         re_page = RePage(self.page_mock)
         re_article_0 = re_page[0]
         re_article_1 = re_page[1]
@@ -83,9 +81,11 @@ class TestRePage(TestCase):
         self.assertEqual("REAbschnitt", re_article_1.article_type)
 
     def test_combined_article_with_abschnitt_and_normal_article(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}" \
-                                      "\n{{REAbschnitt}}\ntext1\n{{REAutor|Autor1.}}" \
-                                      "\n{{REDaten}}\ntext2\n{{REAutor|Autor2.}}"
+        self.text_mock.return_value = (
+            "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}"
+            "\n{{REAbschnitt}}\ntext1\n{{REAutor|Autor1.}}"
+            "\n{{REDaten}}\ntext2\n{{REAutor|Autor2.}}"
+        )
         re_page = RePage(self.page_mock)
         re_article_0 = re_page[0]
         re_article_1 = re_page[1]
@@ -95,8 +95,7 @@ class TestRePage(TestCase):
         self.assertEqual("text2", re_article_2.text)
 
     def test_wrong_structure_too_much_REAutor(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}" \
-                                      "\ntext1\n{{REAutor|Autor1.}}"
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REAutor|Autor0.}}\ntext1\n{{REAutor|Autor1.}}"
         with self.assertRaises(ReDatenException):
             RePage(self.page_mock)
 
@@ -106,8 +105,7 @@ class TestRePage(TestCase):
             RePage(self.page_mock)
 
     def test_wrong_structure_order_of_templates_not_correct(self):
-        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REDaten}}\n{{REAutor|Autor0.}}" \
-                                      "\ntext1\n{{REAutor|Autor1.}}"
+        self.text_mock.return_value = "{{REDaten}}\ntext0\n{{REDaten}}\n{{REAutor|Autor0.}}\ntext1\n{{REAutor|Autor1.}}"
         with self.assertRaises(ReDatenException):
             RePage(self.page_mock)
 
@@ -133,16 +131,19 @@ class TestRePage(TestCase):
     def test_back_to_str_combined(self):
         before = "{{REDaten}}\ntext\n{{REAutor|Autor.}}{{REDaten}}\ntext1\n{{REAutor|Autor1.}}"
         self.text_mock.return_value = before
-        after = ARTICLE_TEMPLATE + "\n" \
-                + ARTICLE_TEMPLATE.replace("text", "text1").replace("Autor.", "Autor1.")
+        after = ARTICLE_TEMPLATE + "\n" + ARTICLE_TEMPLATE.replace("text", "text1").replace("Autor.", "Autor1.")
         self.assertEqual(after, str(RePage(self.page_mock)))
 
     def test_back_to_str_combined_with_additional_text(self):
         before = "1{{REDaten}}\ntext\n{{REAutor|Autor.}}2{{REDaten}}\ntext1\n{{REAutor|Autor1.}}3"
         self.text_mock.return_value = before
-        after = "1\n" + ARTICLE_TEMPLATE \
-                + "\n2\n" + ARTICLE_TEMPLATE.replace("text", "text1").replace("Autor.", "Autor1.") \
-                + "\n3"
+        after = (
+            "1\n"
+            + ARTICLE_TEMPLATE
+            + "\n2\n"
+            + ARTICLE_TEMPLATE.replace("text", "text1").replace("Autor.", "Autor1.")
+            + "\n3"
+        )
         self.assertEqual(after, str(RePage(self.page_mock)))
 
     def test_save_because_of_changes(self):
@@ -171,9 +172,7 @@ class TestRePage(TestCase):
             re_page.append(1)
 
     def test_delete(self):
-        self.text_mock.return_value = ARTICLE_TEMPLATE \
-                                      + ARTICLE_TEMPLATE.replace("text.", "tada.") \
-                                      + ARTICLE_TEMPLATE
+        self.text_mock.return_value = ARTICLE_TEMPLATE + ARTICLE_TEMPLATE.replace("text.", "tada.") + ARTICLE_TEMPLATE
         re_page = RePage(self.page_mock)
         self.assertEqual(3, len(re_page))
         del re_page[1]
@@ -230,6 +229,7 @@ class TestRePage(TestCase):
 
         def side_effect(summary, bot):
             raise pywikibot.exceptions.LockedPageError(self.page_mock)
+
         self.page_mock.save.side_effect = side_effect
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"
@@ -239,8 +239,7 @@ class TestRePage(TestCase):
     def test_page_is_locked_detect_it(self):
         self.text_mock.return_value = ARTICLE_TEMPLATE
 
-        self.page_mock.protection.return_value = {"edit": ("sysop", "infinity"),
-                                                  "move": ("sysop", "infinity")}
+        self.page_mock.protection.return_value = {"edit": ("sysop", "infinity"), "move": ("sysop", "infinity")}
         re_page = RePage(self.page_mock)
         re_page[0].text = "bla"
         with self.assertRaises(ReDatenException):
@@ -280,8 +279,7 @@ class TestRePage(TestCase):
         compare("[[Kategorie:Name_of_Cat]]", re_page[1])
 
     def test_add_error_cat_no_dublicate_category(self):
-        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
-                                      f"\n[[Kategorie:Name_of_Cat]]"
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}\n[[Kategorie:Name_of_Cat]]"
         re_page = RePage(self.page_mock)
         re_page.add_error_category("Name_of_Cat")
         compare(2, len(re_page))
@@ -295,26 +293,24 @@ class TestRePage(TestCase):
         compare("[[Kategorie:Name_of_Cat]]<!--note-->", re_page[1])
 
     def test_add_error_cat_with_already_there(self):
-        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
-                                      f"\n[[Kategorie:Name_of_Cat]]<!--note-->" \
-                                      f"\n[[Kategorie:Other_Cat]]<!--other_error-->"
+        self.text_mock.return_value = (
+            f"{ARTICLE_TEMPLATE}\n[[Kategorie:Name_of_Cat]]<!--note-->\n[[Kategorie:Other_Cat]]<!--other_error-->"
+        )
         re_page = RePage(self.page_mock)
         re_page.add_error_category("Name_of_Cat", "note")
         compare(2, len(re_page))
-        compare("[[Kategorie:Name_of_Cat]]<!--note-->"
-                "\n[[Kategorie:Other_Cat]]<!--other_error-->", re_page[1])
+        compare("[[Kategorie:Name_of_Cat]]<!--note-->\n[[Kategorie:Other_Cat]]<!--other_error-->", re_page[1])
 
     def test_remove_error_cat(self):
-        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
-                                      f"\n[[Kategorie:Name_of_Cat]]<!--note-->"
+        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}\n[[Kategorie:Name_of_Cat]]<!--note-->"
         re_page = RePage(self.page_mock)
         re_page.remove_error_category("Name_of_Cat")
         compare(1, len(re_page))
 
     def test_remove_error_cat_other_cat_exists(self):
-        self.text_mock.return_value = f"{ARTICLE_TEMPLATE}" \
-                                      f"\n[[Kategorie:Name_of_Cat]]<!--note-->" \
-                                      f"\n[[Kategorie:Other_Cat]]<!--note-->"
+        self.text_mock.return_value = (
+            f"{ARTICLE_TEMPLATE}\n[[Kategorie:Name_of_Cat]]<!--note-->\n[[Kategorie:Other_Cat]]<!--note-->"
+        )
         re_page = RePage(self.page_mock)
         re_page.remove_error_category("Name_of_Cat")
         compare(2, len(re_page))

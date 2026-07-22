@@ -52,14 +52,18 @@ class DEWPTask(ReScannerTask, ReporterMixin):
                 entries.append(f"=== {headline} ===")
                 for item in self.data[label]:
                     if label == "not_exists":
-                        entries.append(f"* Wikipedia-Artikel: [[w:{item[0]}]] (verlinkt von [[RE:{item[1]}]]) "
-                                       f"existiert nicht")
+                        entries.append(
+                            f"* Wikipedia-Artikel: [[w:{item[0]}]] (verlinkt von [[RE:{item[1]}]]) existiert nicht"
+                        )
                     elif label == "redirect":
-                        entries.append(f"* Wikipedia-Artikel: [[w:{item[0]}]] (verlinkt von [[RE:{item[1]}]]) "
-                                       f"ist ein Redirect")
+                        entries.append(
+                            f"* Wikipedia-Artikel: [[w:{item[0]}]] (verlinkt von [[RE:{item[1]}]]) ist ein Redirect"
+                        )
                     elif label == "disambiguous":
-                        entries.append(f"* Wikipedia-Artikel: [[w:{item[0]}]] (verlinkt von [[RE:{item[1]}]]) "
-                                       f"ist eine Begriffsklärungsseite")
+                        entries.append(
+                            f"* Wikipedia-Artikel: [[w:{item[0]}]] (verlinkt von [[RE:{item[1]}]]) "
+                            f"ist eine Begriffsklärungsseite"
+                        )
         body = "\n".join(entries)
         return caption + body
 

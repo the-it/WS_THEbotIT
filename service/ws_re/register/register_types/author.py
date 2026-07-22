@@ -8,10 +8,7 @@ from service.ws_re.register.register_types.volume import VolumeRegister
 
 
 class AuthorRegister(Register):
-    def __init__(self,
-                 author: Author,
-                 authors: Authors,
-                 registers: Dict[str, VolumeRegister]):
+    def __init__(self, author: Author, authors: Authors, registers: Dict[str, VolumeRegister]):
         super().__init__()
         self._registers = registers
         self._author: Author = author
@@ -54,36 +51,41 @@ class AuthorRegister(Register):
         return f"[[Kategorie:RE:Register|{self.author.last_name}, {self.author.first_name}]]"
 
     def get_register_str(self, print_details: bool = True) -> str:
-        return f"{self._get_header()}" \
-               f"\n{self._get_table(print_description=print_details, print_author=print_details)}" \
-               f"\n{self._get_footer()}"
+        return (
+            f"{self._get_header()}"
+            f"\n{self._get_table(print_description=print_details, print_author=print_details)}"
+            f"\n{self._get_footer()}"
+        )
 
     def has_existing_article(self) -> bool:
         return any(lemma.exists for lemma in self._lemmas)
 
     def get_category_str(self):
-        return f"{{{{REKategorie/Autor|{self.author.ws_lemma_if_exists}"\
-               f"|{self.author.last_name}, {self.author.first_name}}}}}"
+        return (
+            f"{{{{REKategorie/Autor|{self.author.ws_lemma_if_exists}"
+            f"|{self.author.last_name}, {self.author.first_name}}}}}"
+        )
 
     @property
     def overview_line(self):
-        line = ["|-\n", f"|data-sort-value=\"{self.author.last_name}, {self.author.first_name}\""]
-        line.append(f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
-                    f"{self.author.ws_lemma_if_exists}|{self.author.ws_lemma_if_exists}]]\n")
-        line.append(f"|data-sort-value=\"{len(self):04d}\"|{len(self)}\n")
+        line = ["|-\n", f'|data-sort-value="{self.author.last_name}, {self.author.first_name}"']
+        line.append(
+            f"|[[Paulys Realencyclopädie der classischen Altertumswissenschaft/Register/"
+            f"{self.author.ws_lemma_if_exists}|{self.author.ws_lemma_if_exists}]]\n"
+        )
+        line.append(f'|data-sort-value="{len(self):04d}"|{len(self)}\n')
         fer, kor, _ = self.proof_read
-        parts_fertig, parts_korrigiert, parts_unkorrigiert = \
-            self.proofread_parts_of_20(len(self), fer, kor)
-        line.append("|data-sort-value=\"{percent:05.1f}\"|{percent:.1f}%\n"
-                    .format(percent=((fer + kor) / len(self)) * 100))
-        line.append(f"|<span style=\"color:#669966\">{parts_fertig * '█'}</span>")
-        line.append(f"<span style=\"color:#556B2F\">{parts_korrigiert * '█'}</span>")
-        line.append(f"<span style=\"color:#AA0000\">{parts_unkorrigiert * '█'}</span>")
+        parts_fertig, parts_korrigiert, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor)
+        line.append(
+            '|data-sort-value="{percent:05.1f}"|{percent:.1f}%\n'.format(percent=((fer + kor) / len(self)) * 100)
+        )
+        line.append(f'|<span style="color:#669966">{parts_fertig * "█"}</span>')
+        line.append(f'<span style="color:#556B2F">{parts_korrigiert * "█"}</span>')
+        line.append(f'<span style="color:#AA0000">{parts_unkorrigiert * "█"}</span>')
         return "".join(line)
 
     @staticmethod
-    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int) \
-            -> Tuple[int, int, int]:
+    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int) -> Tuple[int, int, int]:
         part_fer = round(fer / sum_lemmas * 20)
         part_kor = round((kor + fer) / sum_lemmas * 20) - part_fer
         part_unk = 20 - (part_fer + part_kor)

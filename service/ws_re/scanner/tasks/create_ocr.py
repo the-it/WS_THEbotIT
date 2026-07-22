@@ -81,12 +81,7 @@ class COCRTask(ReScannerTask):
         end_page = int(end_str) if end_str else start_page
         parts: list[str] = [f"[[Kategorie:{self._cut_category}]]"]
         for page in range(start_page, end_page + 1):
-            txt = self._get_text_for_section(
-                issue,
-                page,
-                start=(page == start_page),
-                end=(page == end_page)
-            )
+            txt = self._get_text_for_section(issue, page, start=page == start_page, end=page == end_page)
             if page != start_page:
                 parts.append(f"{{{{Seite|{page}||{{{{REEL|{issue}|{page}}}}}}}}}")
             if txt:
@@ -126,6 +121,6 @@ class COCRTask(ReScannerTask):
             response = self.s3_client.get_object(Bucket=self.bucket_name, Key=f"{page_id}.txt")
             return response["Body"].read().decode("utf-8")
         except ClientError as ex:
-            if ex.response['Error']['Code'] == 'NoSuchKey':
-                raise NoRawOCRFound(f'Page_ID {page_id} not found in OCR bucket') from ex
+            if ex.response["Error"]["Code"] == "NoSuchKey":
+                raise NoRawOCRFound(f"Page_ID {page_id} not found in OCR bucket") from ex
             raise

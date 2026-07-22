@@ -40,15 +40,16 @@ class Property:
             new_value = new_value.strip()
         if isinstance(new_value, type(self._default)):
             self._value = new_value
-        elif new_value in ("ON", "OFF", "", "on", "off") \
-                and isinstance(new_value, str) \
-                and isinstance(self._default, bool):
+        elif (
+            new_value in ("ON", "OFF", "", "on", "off")
+            and isinstance(new_value, str)
+            and isinstance(self._default, bool)
+        ):
             if new_value == "":
                 self._value = self._default
             self._value = self._set_bool_by_str(new_value)
         else:
-            raise TypeError(f"Value ({new_value}) is not the type "
-                            f"of default value ({self._default})")
+            raise TypeError(f"Value ({new_value}) is not the type of default value ({self._default})")
 
     @property
     def name(self) -> str:
@@ -61,5 +62,7 @@ class Property:
         return hash(self.name) + hash(self.value)
 
     def __repr__(self):  # pragma: no cover
-        return f"<{self.__class__.__name__} (name: {self.name}, value: {self.value}, " \
+        return (
+            f"<{self.__class__.__name__} (name: {self.name}, value: {self.value}, "
             f"type: {type(self._default).__name__})>"
+        )
