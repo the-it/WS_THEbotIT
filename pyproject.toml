@@ -28,15 +28,12 @@ dev = [
   "codecov==2.1.13",
   "coverage==7.15.2",
   "ddt==1.7.2",
-  "flake8==7.3.0",
   "freezegun==1.5.5",
   "internetarchive==5.10.1",
   "moto==5.2.2",
-  "mypy==2.3.0",
   "nose2==0.16.0",
   "patool==4.0.5",
   "pyfiglet==1.0.4",
-  "pylint==4.0.6",
   "pyyaml==6.0.3",
   "requests-mock==1.12.1",
   "ruff==0.15.22",
@@ -67,6 +64,6 @@ python-version = "3.14"
 exclude = [
   "archive",
   ".claude",
-  # test modules are excluded from type checking (mirrors mypy.ini)
+  # test modules are excluded from type checking
   "**/test_*.py",
 ]

@@ -16,24 +16,11 @@ jobs:
       - uses: actions/checkout@v7
       - name: Dependencies
         uses: "./.github/actions/dependencies"
-      - name: flake8
-        run: make flake8
-      - name: pycodestyle
-        run: make pycodestyle
-        if: always()
-      - name: pylint
-        run: make pylint
-        if: always()
-      # ruff/ty are non-blocking for now: report violations without failing the build.
       - name: ruff
         run: make ruff
-        if: always()
       - name: ruff-format-check
         run: make ruff-format-check
         if: always()
       - name: ty
         run: make ty
-        if: always()
-      - name: mypy
-        run: make mypy
         if: always()
