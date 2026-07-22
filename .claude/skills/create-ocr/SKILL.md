@@ -96,11 +96,20 @@ then continue with the shortest-first PetScan selection to fill out the batch si
 
 ### Per-article guards (skip & report instead of forcing)
 
-1. **Pristine skeleton:** the body is exactly the bold headword line, a `[...]` line, the
-   `{{Seite|…}}` lines, `{{REAutor|…}}`, categories. If there's already real text or no
-   `[...]`, someone started filling it — skip.
-2. **Exactly one `{{REDaten}}` block** and `NACHTRAG=OFF`. Multi-band/Nachtrag pages have
-   several chains on one page — out of scope, skip.
+1. **Pristine target block:** the block being filled has, as its body, exactly the bold
+   headword line (optionally preceded by a Nachtrag lead-in like
+   `: S. 299, 48 zum Art. '''[[RE:Helvius 15|Helvius]]:'''`), a `[...]` line, any
+   pre-generated `{{Seite|…}}` lines, and its `{{REAutor|…}}`. If there's already real text
+   or no `[...]`, someone started filling it — skip. (Older stubs, esp. Nachträge, carry
+   **no** pre-generated `{{Seite}}` lines — that's fine; see Assembly for generating them.)
+2. **Pick the fillable block.** One `{{REDaten}}` block → fill it. **Nachtrag / multi-band
+   pages stack several `{{REDaten}}` chains on one page** (e.g. a Supplement article plus a
+   Register `BAND=R` stub, as on `RE:Helvius 15a`) — do **not** skip them. Choose the **one
+   block whose `KORREKTURSTAND=unvollständig`** as the target and fill only that block; every
+   other block (its fields, body, and `{{REAutor}}`) stays byte-identical. Skip & report only
+   if the page has **zero** or **more than one** `unvollständig` block (ambiguous which to
+   fill). The `NACHTRAG=OFF` requirement is checked on the **target block** — sibling stubs
+   normally carry `NACHTRAG=ON` and are left untouched.
 3. `KORREKTURSTAND=unvollständig` (still).
 4. **Legal guard:** the page's categories (query `prop=categories`) contain no
    `Kategorie:Wikisource:Gemeinfreiheit…`. If one is there, do not fill the article,
@@ -160,10 +169,20 @@ lines:
    Keep the `{{Seite}}` lines on their own line inside the running paragraph (no blank
    lines around them unless the print has a paragraph break there); if a word is
    hyphen-split across the column break, join it on the side where the larger part sits.
-3. Everything else byte-identical: the `{{REDaten}}` block with **only**
+   **If the target block has no pre-generated `{{Seite}}` lines** (older Nachtrag stubs),
+   generate them from eLexikon's placed breaks instead: one line per column break in
+   `(SPALTE_START, SPALTE_END]` — none for the start column — so the count is
+   `SPALTE_END − SPALTE_START`. Even column N → `{{Seite|N}}`; odd column N →
+   `{{Seite|N||{{REIA|<BAND>|N}}}}` (e.g. `{{Seite|897||{{REIA|S III|897}}}}`), matching how
+   published S III articles carry the scan link. Confirm every break column against the scans
+   before trusting the count.
+3. Everything else byte-identical: the **target** `{{REDaten}}` block with **only**
    `KORREKTURSTAND=unvollständig` → `unkorrigiert` changed, then the proofread body, then
-   `{{REAutor|…}}` and all trailing `[[Kategorie:…]]` lines unchanged (never remove
-   maintenance categories — the user handles those).
+   its `{{REAutor|…}}` and all trailing `[[Kategorie:…]]` lines unchanged (never remove
+   maintenance categories — the user handles those). On a multi-block page, **only the target
+   block flips and only its `[...]` is filled** — every sibling `{{REDaten}}` block, its body,
+   and its `{{REAutor}}` stay byte-identical (`check_assembly.py` locates the target by the
+   flip, not by position).
 4. **Footnotes:** some eLexikon texts carry `<ref>…</ref>` tags plus a trailing
    `== Anmerkungen (Wikisource) ==` / `<references />` block. Keep the ref tags in the
    body, but move the Anmerkungen block to **after** `{{REAutor|…}}` (before any
@@ -239,8 +258,11 @@ Run `scripts/check_assembly.py <skeleton.wikitext> <new.wikitext>` for **every**
 It verifies mechanically what a tired eye skips: the REDaten diff is exactly the
 KORREKTURSTAND flip, all `{{Seite}}` lines survive byte-identically in order, REAutor and
 categories are intact, no `[...]`/BOM/`== RE:` heading remains, and the body length is
-plausible for the column count. Fix any FAIL before the edit pass; treat WARNs as review
-pointers.
+plausible for the column count. It targets the `unvollständig`→`unkorrigiert` block by the
+flip (so multi-block Nachtrag pages work regardless of block order); when the skeleton had no
+`{{Seite}}` lines it instead checks the generated ones are well-formed, strictly ascending,
+and match the column span; and it tolerates a Nachtrag `: … zum Art.` lead-in before the
+headword. Fix any FAIL before the edit pass; treat WARNs as review pointers.
 
 ## Edit pass (main session, sequential, pywikibot as THEbotIT)
 
