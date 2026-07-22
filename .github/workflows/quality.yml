@@ -24,6 +24,19 @@ jobs:
       - name: pylint
         run: make pylint
         if: always()
+      # ruff/ty are non-blocking for now: report violations without failing the build.
+      - name: ruff
+        run: make ruff
+        if: always()
+        continue-on-error: true
+      - name: ruff-format-check
+        run: make ruff-format-check
+        if: always()
+        continue-on-error: true
+      - name: ty
+        run: make ty
+        if: always()
+        continue-on-error: true
 #      - name: mypy
 #        run: make mypy
 #        if: always()
