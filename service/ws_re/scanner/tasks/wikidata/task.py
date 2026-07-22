@@ -48,9 +48,9 @@ class DATATask(ReScannerTask):
         P13269DirectsReadersTo
     )
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
-        self.wikidata: pywikibot.Site = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
+        self.wikidata: pywikibot.site.BaseSite = pywikibot.Site(code="wikidata", fam="wikidata", user="THEbotIT")
 
     def task(self):
         try:

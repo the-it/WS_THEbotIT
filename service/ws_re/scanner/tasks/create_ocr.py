@@ -1,6 +1,6 @@
 import re
 from functools import lru_cache
-from typing import cast, Optional
+from typing import Optional
 
 import boto3
 import pywikibot
@@ -29,7 +29,7 @@ class COCRTask(ReScannerTask):
     _re_square_brackets = re.compile(r"[\[\]]")
     _re_punct_only_line = re.compile(r"^[\W_]+$")
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         key, secret = get_aws_credentials()
         self.s3_client = boto3.client("s3", aws_access_key_id=key, aws_secret_access_key=secret)
@@ -38,7 +38,7 @@ class COCRTask(ReScannerTask):
         if "RE:Stammdaten überprüfen" in self.re_page.page.text:
             return True
         for article_list in self.re_page.splitted_article_list:
-            article = cast(Article, article_list[0])
+            article = article_list[0]
             # don't create if there is already a created
             if self.counter > 8 or self._ocr_category in article.text:
                 return True

@@ -51,7 +51,7 @@ class Register(ABC):
 !Seite
 {'!Autor' if print_author else ''}
 !Stat"""
-        table = [header]
+        table: list[str] = [header]
         for lemmas in self.squash_lemmas(self._lemmas):
             chapter_sum = 0
             table_rows = []

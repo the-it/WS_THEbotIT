@@ -3,6 +3,7 @@ from datetime import datetime
 from typing import Optional, Union
 
 from pywikibot import Site, Page, Category
+from pywikibot.site import BaseSite
 
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.registers import Registers
@@ -16,7 +17,7 @@ class ReImporter(CloudBot):
     _PER_NIGHT = 150
     _MAX_CAT = 1000
 
-    def __init__(self, wiki: Site = None, debug: bool = True,
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.registers = Registers(update_data=True)

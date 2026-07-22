@@ -1,5 +1,6 @@
 from os import makedirs
 from pathlib import Path
+from typing import Iterable, cast
 
 from PIL import Image
 
@@ -39,7 +40,8 @@ class Single(DownloadTarget):
             for j in range_slice:
                 im = double_image.convert("L")
                 crop_image = im.crop((half_width + j, 0, half_width + j + 1, height))
-                list_of_colorsums.append(sum(list(crop_image.getdata())) / height)
+                pixel_values = cast(Iterable[int], crop_image.getdata())
+                list_of_colorsums.append(sum(pixel_values) / height)
             # the slice with the highest colorvalue should
             first_max_index = list_of_colorsums.index(max(list_of_colorsums))
             half = half_width + range_slice[first_max_index]

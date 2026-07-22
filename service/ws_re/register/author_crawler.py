@@ -1,7 +1,7 @@
 import re
 from typing import List, Dict, Tuple, Optional
 
-from pywikibot import Site
+from pywikibot.site import BaseSite
 
 from service.ws_re.register._typing import AuthorDict, CrawlerDict
 from service.ws_re.register.authors import Authors
@@ -224,14 +224,14 @@ class AuthorCrawler:
         return author_dict
 
     @classmethod
-    def process_author_infos(cls, wiki: Site) -> Dict[str, AuthorDict]:
+    def process_author_infos(cls, wiki: BaseSite) -> Dict[str, AuthorDict]:
         text = fetch_text_from_wiki_site(wiki,
                                          "Paulys Realencyclopädie der classischen "
                                          "Altertumswissenschaft/Autoren")
         return cls.get_authors(text)
 
     @classmethod
-    def get_author_mapping(cls, wiki: Site, authors: Authors) -> CrawlerDict:
+    def get_author_mapping(cls, wiki: BaseSite, authors: Authors) -> CrawlerDict:
         text = fetch_text_from_wiki_site(wiki, "Modul:RE/Autoren")
         mapping = cls.get_mapping(text)
         text = fetch_text_from_wiki_site(wiki, "Vorlage:REAutor/Weiche")

@@ -3,7 +3,8 @@ from abc import ABC, abstractmethod
 from contextlib import contextmanager
 from datetime import datetime, timedelta
 
-from pywikibot import Site, Page
+from pywikibot import Page
+from pywikibot.site import BaseSite
 
 from tools.bots.logger import WikiLogger
 from tools.bots.persisted_data import PersistedData
@@ -11,7 +12,7 @@ from tools.bots.status_manager import StatusManager
 
 
 class CloudBot(ABC):
-    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
@@ -20,7 +21,7 @@ class CloudBot(ABC):
         self.logger: WikiLogger = WikiLogger(bot_name=self.bot_name,
                                              start_time=self.status.current_run.start_time,
                                              log_to_screen=self.log_to_screen)
-        self.wiki: Page = wiki
+        self.wiki: BaseSite | None = wiki
         self.debug: bool = debug
         self.timeout: timedelta = timedelta(days=1)
         self.new_data_model = datetime.min

@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Dict
+from typing import Dict, cast
 
 import pywikibot
 
@@ -12,7 +12,7 @@ class DEWPTask(ReScannerTask, ReporterMixin):
     _wiki_page = "RE:Wartung:Tote Links nach Wikipedia"
     _reason = "Neue tote Links"
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         ReporterMixin.__init__(self, wiki)
         self.wp_wiki = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
@@ -25,7 +25,7 @@ class DEWPTask(ReScannerTask, ReporterMixin):
             if isinstance(article, Article):
                 link_to_check = article["WIKIPEDIA"].value
                 if link_to_check:
-                    page = pywikibot.Page(self.wp_wiki, link_to_check)
+                    page = pywikibot.Page(self.wp_wiki, cast(str, link_to_check))
                     try:
                         if not page.exists():
                             reason = "not_exists"

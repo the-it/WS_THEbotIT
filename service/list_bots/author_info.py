@@ -1,7 +1,7 @@
 import re
 from contextlib import suppress
 from math import ceil
-from typing import Optional
+from typing import Optional, cast
 
 from pywikibot import Page, ItemPage, Claim
 from pywikibot.exceptions import NoPageError
@@ -77,7 +77,7 @@ class AuthorInfo:
     @staticmethod
     def get_highest_claim(data_item: ItemPage, property_str: str) -> Optional[Claim]:
         try:
-            claims: list[Claim] = data_item.text["claims"][property_str]
+            claims: list[Claim] = cast(dict, data_item.text)["claims"][property_str]
         except KeyError:
             return None
         filtered_claims = []

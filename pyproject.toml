@@ -67,4 +67,6 @@ python-version = "3.14"
 exclude = [
   "archive",
   ".claude",
+  # test modules are excluded from type checking (mirrors mypy.ini)
+  "**/test_*.py",
 ]

@@ -98,7 +98,7 @@ def adjust_author(input_str: str, mapping: dict[str, str]) -> str:
 
 
 class ADAUTask(ReScannerTask):
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         self.author_mapping = get_author_mapping()
         self.complex_short_names = set(COMPLEX_AUTHORS.values())
         super().__init__(wiki, logger, debug)

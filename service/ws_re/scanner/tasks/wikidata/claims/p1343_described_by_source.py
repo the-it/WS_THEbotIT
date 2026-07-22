@@ -1,4 +1,4 @@
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, cast
 
 import pywikibot
 
@@ -102,4 +102,4 @@ class P1343DescribedBySource(ClaimFactory):
         filtered_new_claims, filtered_old_claim_list = (
             ClaimFactory.filter_new_vs_old_claim_list(new_claim_list, old_claim_list))
         return filtered_new_claims, [claim for claim in filtered_old_claim_list
-                                     if claim.target.id == cls.ITEM_RE]
+                                     if cast(pywikibot.ItemPage, claim.target).id == cls.ITEM_RE]

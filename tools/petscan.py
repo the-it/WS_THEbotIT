@@ -3,7 +3,7 @@ import json
 import time
 from datetime import datetime
 from operator import itemgetter
-from typing import List, Union, Mapping, Optional, Tuple
+from typing import List, Union, Mapping, Optional, Tuple, cast
 from urllib.parse import quote
 
 import requests
@@ -316,7 +316,7 @@ class PetScan:
             response_byte = response.content
             response_dict = json.loads(response_byte.decode("utf8"))
             try:
-                return response_dict["*"][0]["a"]["*"]  # type: ignore
+                return cast(List[PetscanLemma], response_dict["*"][0]["a"]["*"])
             except KeyError:
                 time.sleep(float(60 * wait))
         raise PetScanException("Tried Petscan services 6 times. No valid answer from service.s")

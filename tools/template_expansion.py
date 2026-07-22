@@ -9,7 +9,7 @@ from tools.template_handler import TemplateHandler
 
 
 class TemplateExpansion:
-    def __init__(self, raw: str, wiki: pywikibot.Site):
+    def __init__(self, raw: str, wiki: pywikibot.site.BaseSite):
         self.raw = raw
         self.wiki = wiki
 

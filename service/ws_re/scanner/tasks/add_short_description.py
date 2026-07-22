@@ -13,7 +13,7 @@ class KURZTask(ReScannerTask):
     MAINTENANCE_CAT = "RE:Kurztext überprüfen"
     SHORT_TEXT_URL = "Wikisource:RE-Werkstatt/Kurzbeschreibung/"
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.short_description_lookup: Dict[str, str] = self._load_short_descriptions()
 

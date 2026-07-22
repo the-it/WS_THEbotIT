@@ -55,5 +55,5 @@ class TemplateFinder():
     def get_start_positions_of_regex(regex_pattern: str, text: str) -> List[int]:
         list_of_positions: List[int] = []
         for match in re.finditer(regex_pattern, text):
-            list_of_positions.append(match.regs[0][0])  # type: ignore # false positive, there is the attribute regs
+            list_of_positions.append(match.regs[0][0])  # false positive, there is the attribute regs
         return list_of_positions

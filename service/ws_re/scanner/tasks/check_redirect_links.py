@@ -15,7 +15,7 @@ REGEX_TRANSLATION = str.maketrans({"(": r"\(",
 class CHRETask(ReScannerTask):
     error_category = "RE:Links führen auf Redirects"
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         self.filter_regex = re.compile(
             r"(Benutzer|"

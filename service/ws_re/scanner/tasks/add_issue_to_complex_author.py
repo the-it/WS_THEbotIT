@@ -14,7 +14,7 @@ class AICATask(ReScannerTask):
     resolvable on its own.
     """
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         self.authors_mapping = Authors().authors_mapping
         super().__init__(wiki, logger, debug)
 

@@ -58,7 +58,7 @@ class PersistedData(Mapping):
         try:
             self._data = json.loads(
                 self.s3_client.get_object(Bucket=self._bucket_name, Key=f"{self.bot_name}.data{key_appendix}.json")
-                ["Body"].read().decode("utf-8"))["data"]  # type: ignore
+                ["Body"].read().decode("utf-8"))["data"]
         except exceptions.ClientError as error:
             if error.response['Error']['Code'] == 'NoSuchKey':
                 raise BotException(f"The data for {self.bot_name}.data{key_appendix}.json doesn't exists") from error

@@ -2,8 +2,10 @@ import re
 from contextlib import suppress
 from datetime import timedelta, datetime
 from functools import lru_cache
+from typing import cast
 
 from pywikibot import Site, Page
+from pywikibot.site import BaseSite
 from pywikibot.exceptions import InvalidTitleError
 
 from service.list_bots._base import is_empty_value, has_value, get_page_infos
@@ -24,7 +26,7 @@ class PoemList(ListBot):
     }
     LIST_LEMMA = "Liste der Gedichte"
 
-    def __init__(self, wiki: Site = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 3, 15, 23)
         self.timeout = timedelta(minutes=2)
@@ -210,7 +212,7 @@ class PoemList(ListBot):
 
     def get_first_line(self, text):
         try:
-            text = TemplateExpansion(text, self.wiki).expand()
+            text = TemplateExpansion(text, cast(BaseSite, self.wiki)).expand()
         except ValueError as e:
             self.logger.error(f"Couldn't expand lemma. {e}")
             return ""

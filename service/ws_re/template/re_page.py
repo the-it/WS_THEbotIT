@@ -66,7 +66,7 @@ class SplittedArticleList:
         return self._splitted_list[0].daten
 
     @property
-    def list(self) -> list[ArticleList]:
+    def article_lists(self) -> list[ArticleList]:
         return self._splitted_list
 
 

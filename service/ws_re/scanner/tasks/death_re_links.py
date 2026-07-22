@@ -16,7 +16,7 @@ class DEALTask(ReScannerTask, ReporterMixin):
 
     _start_characters = "abcdefghijkl"
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         ReScannerTask.__init__(self, wiki, logger, debug)
         ReporterMixin.__init__(self, wiki)
         regex_start_characters = self._start_characters + self._start_characters.upper()

@@ -21,7 +21,7 @@ class SCANTask(ReScannerTask):
     ERROR_CAT = "RE:Nicht ins Register einsortierbar"
     LANGUAGES = ("de", "en", "fr", "it", "es", "pt", "se", "ca", "la", "ar", "tr", "el")
 
-    def __init__(self, wiki: pywikibot.Site, logger: WikiLogger, debug: bool = True):
+    def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers(update_data=True)
         self._strategies: Dict[str, List[str]] = {}
@@ -86,7 +86,7 @@ class SCANTask(ReScannerTask):
 
     @staticmethod
     @lru_cache()
-    def _get_site_from_str(site_link_str: str) -> pywikibot.Site:
+    def _get_site_from_str(site_link_str: str) -> pywikibot.site.BaseSite:
         return pywikibot.Site(site_link_str)
 
     def _get_target_from_wd(self) -> Optional[pywikibot.ItemPage]:

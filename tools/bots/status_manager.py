@@ -26,7 +26,7 @@ class StatusManager:
     def last_runs(self) -> List[Status]:
         if not self._last_runs:
             raw_list = self._manage_table.query(
-                KeyConditionExpression=Key('bot_name').eq(self.bot_name))["Items"]  # type: ignore
+                KeyConditionExpression=Key('bot_name').eq(self.bot_name))["Items"]
             self._last_runs = [Status.from_dict(status_dict)
                                for status_dict
                                in raw_list[:-1][::-1]

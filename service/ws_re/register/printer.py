@@ -1,4 +1,5 @@
 from pywikibot import Site, Page
+from pywikibot.site import BaseSite
 
 from service.ws_re.register.registers import Registers
 from tools import save_if_changed
@@ -13,7 +14,7 @@ def _get_simple_number_sortkey(lemma: str) -> str:
 
 
 class ReRegisterPrinter(CloudBot):
-    def __init__(self, wiki: Site = None, debug: bool = True,
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
                  log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.registers = Registers()

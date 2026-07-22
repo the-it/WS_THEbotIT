@@ -1,6 +1,6 @@
 import re
 from datetime import datetime
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional, cast
 
 import pywikibot
 
@@ -23,8 +23,8 @@ class ClaimFactory:
                                               target="Q15522295")
 
     def __init__(self, re_page: RePage, logger: WikiLogger):
-        self.wikisource: pywikibot.Site = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        self.wikipedia: pywikibot.Site = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
+        self.wikisource: pywikibot.site.BaseSite = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
+        self.wikipedia: pywikibot.site.BaseSite = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
         self.wikidata: pywikibot.site.DataSite = self.wikisource.data_repository()
         self.re_page = re_page
         self.logger = logger
@@ -35,7 +35,7 @@ class ClaimFactory:
     def _get_claim_json(self) -> List[JsonClaimDict]:
         raise NotImplementedError
 
-    def get_claims_to_update(self, data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
+    def get_claims_to_update(self, data_item: Optional[pywikibot.ItemPage]) -> ChangedClaimsDict:
         """
         Every claim that is updated can possibly add new claims, but can also remove existing claims at the item.
         Which claims is removed or added depends on the specific implementation of the property factory. The standard
@@ -47,7 +47,7 @@ class ClaimFactory:
         :returns: A dictionary with claims to add and to remove is returned
         """
 
-        claim_list = [pywikibot.Claim.fromJSON(self.wikidata, claim_json)
+        claim_list = [pywikibot.Claim.fromJSON(self.wikidata, cast(dict, claim_json))
                       for claim_json in self._get_claim_json()]
         return self.get_diff_claims_for_replacement(claim_list, data_item)
 
@@ -102,7 +102,7 @@ class ClaimFactory:
 
     def get_diff_claims_for_replacement(self,
                                         claim_list: ClaimList,
-                                        data_item: pywikibot.ItemPage) -> ChangedClaimsDict:
+                                        data_item: Optional[pywikibot.ItemPage]) -> ChangedClaimsDict:
         old_claims = self.get_old_claims(data_item)
         claims_to_add, claims_to_remove = self.filter_new_vs_old_claim_list(claim_list, old_claims)
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
