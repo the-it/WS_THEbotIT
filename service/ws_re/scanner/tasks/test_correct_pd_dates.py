@@ -245,6 +245,60 @@ TEXT
         self.task.task()
         compare(expectation, str(re_page))
 
+    def test_remove_death_year_for_finished_article(self):
+        """
+        A fully proofread ("Fertig") article no longer needs its death year: it gets removed.
+        """
+        self.page_mock.text = """{{REDaten
+|BAND=XIII,2
+|KORREKTURSTAND=Fertig
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=1950
+|GEBURTSJAHR=
+}}
+blub
+{{REAutor|Obst.}}"""
+        re_page = RePage(self.page_mock)
+        article_list = re_page.splitted_article_list[0]
+        self.task.remove_death_year_for_finished_article(article_list)
+        compare("", article_list[0]["TODESJAHR"].value)
+
+    def test_remove_death_year_for_finished_article_lowercase(self):
+        """
+        The normalized lowercase state "fertig" is treated the same as "Fertig".
+        """
+        self.page_mock.text = """{{REDaten
+|BAND=XIII,2
+|KORREKTURSTAND=fertig
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=1950
+|GEBURTSJAHR=
+}}
+blub
+{{REAutor|Obst.}}"""
+        re_page = RePage(self.page_mock)
+        article_list = re_page.splitted_article_list[0]
+        self.task.remove_death_year_for_finished_article(article_list)
+        compare("", article_list[0]["TODESJAHR"].value)
+
+    def test_keep_death_year_for_unfinished_article(self):
+        """
+        An article that is not yet "Fertig" keeps its death year.
+        """
+        self.page_mock.text = """{{REDaten
+|BAND=XIII,2
+|KORREKTURSTAND=Korrigiert
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=1950
+|GEBURTSJAHR=
+}}
+blub
+{{REAutor|Obst.}}"""
+        re_page = RePage(self.page_mock)
+        article_list = re_page.splitted_article_list[0]
+        self.task.remove_death_year_for_finished_article(article_list)
+        compare("1950", article_list[0]["TODESJAHR"].value)
+
     def test_integration(self):
         self.page_mock.text = """{{REDaten
 |BAND=XIII,2

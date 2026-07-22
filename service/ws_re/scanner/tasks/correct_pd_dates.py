@@ -28,7 +28,15 @@ class COPDTask(ReScannerTask):
             years = self.get_max_pd_year(re_article_list)
             if years.pd:
                 self.set_year_values(re_article_list, years)
+            self.remove_death_year_for_finished_article(re_article_list)
         return True
+
+    def remove_death_year_for_finished_article(self, re_article_list: ArticleList):
+        # once an article is fully proofread ("Fertig"/"fertig") the death year is no longer
+        # needed and gets removed.
+        article = re_article_list[0]
+        if article["KORREKTURSTAND"].value.lower() == "fertig":
+            article["TODESJAHR"].value = ""
 
     def set_year_values(self, re_article_list: ArticleList, years: Years):
         article = re_article_list[0]
