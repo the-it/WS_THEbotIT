@@ -30,7 +30,7 @@ class TestPersistedData(TestCloudBase):
         self.data["a"] = 1
         del self.data["a"]
         with self.assertRaises(KeyError):
-            dummy = self.data["a"]
+            _ = self.data["a"]
 
     def test_iter_over_keys(self):
         self.data["a"] = [1, 2]

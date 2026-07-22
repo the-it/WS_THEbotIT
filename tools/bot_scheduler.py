@@ -12,7 +12,8 @@ BotList = List[Type[CloudBot]]
 
 
 class BotScheduler(CloudBot):
-    def __init__(self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
         self.daily_bots: BotList = []
         self.weekly_bots: Dict[int, BotList] = {}
         self.monthly_bots: Dict[int, BotList] = {}

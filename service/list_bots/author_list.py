@@ -14,7 +14,8 @@ from tools.petscan import PetScan
 class AuthorList(ListBot):
     LIST_LEMMA = "Liste der Autoren"
 
-    def __init__(self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 2, 17, 23)
         self.timeout = timedelta(minutes=2)

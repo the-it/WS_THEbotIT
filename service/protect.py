@@ -11,7 +11,8 @@ from tools.petscan import PetScan, get_processed_time
 
 
 class Protect(CloudBot):
-    def __init__(self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
         self.timeout: timedelta = timedelta(minutes=30)
 

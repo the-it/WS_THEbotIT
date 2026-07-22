@@ -26,7 +26,8 @@ class PoemList(ListBot):
     }
     LIST_LEMMA = "Liste der Gedichte"
 
-    def __init__(self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self.new_data_model = datetime(2025, 3, 15, 23)
         self.timeout = timedelta(minutes=2)

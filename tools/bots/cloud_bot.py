@@ -12,7 +12,8 @@ from tools.bots.status_manager import StatusManager
 
 
 class CloudBot(ABC):
-    def __init__(self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True):
+    def __init__(self, wiki: BaseSite | None = None, debug: bool = True,
+                 log_to_screen: bool = True, log_to_wiki: bool = True):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
