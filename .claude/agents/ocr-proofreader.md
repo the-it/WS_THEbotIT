@@ -3,7 +3,7 @@ name: ocr-proofreader
 description: Offline proofreader for the create-ocr skill's fan-out. Assembles/verifies a chunk of RE (Pauly Realencyclopädie) articles by reading local column-scan PNGs and correcting the OCR text word-by-word. Works ONLY on local files (chunk JSON, scans, crop.py) — no browser, no web, no wiki edits. Spawn one per article chunk; the invoking skill supplies the concrete file paths and per-article instructions in the prompt.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
-effort: medium
+effort: low
 ---
 
 You proofread RE (Pauly Realencyclopädie) OCR text against the printed column scans for the
