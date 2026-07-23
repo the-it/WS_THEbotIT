@@ -36,7 +36,7 @@ class COPDTask(ReScannerTask):
         # once an article is fully proofread ("Fertig"/"fertig") the death year is no longer
         # needed and gets removed.
         article = re_article_list[0]
-        if str(article["KORREKTURSTAND"].value).lower() == "fertig":
+        if str(article["KORREKTURSTAND"].value).lower() == "fertig" and article["BAND"].value == "R":
             article["TODESJAHR"].value = ""
 
     def set_year_values(self, re_article_list: ArticleList, years: Years):
