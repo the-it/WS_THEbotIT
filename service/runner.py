@@ -7,7 +7,6 @@ from service.finisher import Finisher
 from service.gl.status import GlStatus
 from service.list_bots.author_list import AuthorList
 from service.list_bots.poem_list import PoemList
-from service.ws_re.register.importer import ReImporter
 from service.ws_re.register.printer import ReRegisterPrinter
 from service.ws_re.register.statistic import ReStatistic
 from service.ws_re.scanner.base import ReScanner
@@ -17,7 +16,9 @@ if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())  # type: ignore
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
-    SCHEDULER.daily_bots = [AuthorList, PoemList, ReImporter, ReScanner, ReRegisterPrinter, Finisher]
+    # pause importer for a while
+    # SCHEDULER.daily_bots = [AuthorList, PoemList, ReImporter, ReScanner, ReRegisterPrinter, Finisher]
+    SCHEDULER.daily_bots = [AuthorList, PoemList, ReScanner, ReRegisterPrinter, Finisher]
     SCHEDULER.weekly_bots = {
         0: [ReStatistic],  # monday
         1: [],
