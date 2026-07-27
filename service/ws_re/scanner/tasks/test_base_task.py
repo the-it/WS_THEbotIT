@@ -75,7 +75,7 @@ class TestReScannerTask(TaskTestCase):
 
     class EXCETask(ReScannerTask):
         def task(self):
-            raise Exception("Buuuh")
+            raise Exception("Buuuh")  # noqa: TRY002 -- deliberately generic, exercises the broad except Exception
 
     def test_execute_with_exception(self):
         self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
@@ -90,7 +90,7 @@ class TestReScannerTask(TaskTestCase):
     class EXCEAlteredTask(ReScannerTask):
         def task(self):
             self.re_page[0].text = "text2"
-            raise Exception("Buuuh")
+            raise Exception("Buuuh")  # noqa: TRY002 -- deliberately generic, exercises the broad except Exception
 
     def test_execute_with_exception_altered(self):
         self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
