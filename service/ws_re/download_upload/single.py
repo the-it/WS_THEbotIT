@@ -1,6 +1,7 @@
+from collections.abc import Iterable
 from os import makedirs
 from pathlib import Path
-from typing import Iterable, cast
+from typing import cast
 
 from PIL import Image
 

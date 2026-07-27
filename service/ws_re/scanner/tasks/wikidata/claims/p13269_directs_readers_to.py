@@ -1,11 +1,9 @@
-from typing import List
-
 import pywikibot
 
 from service.ws_re.scanner.tasks.base import get_redirect
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 
 
 class P13269DirectsReadersTo(ClaimFactory):
@@ -13,7 +11,7 @@ class P13269DirectsReadersTo(ClaimFactory):
     Returns the Claim **directs readers to** -> **object of the RE lemma, that actually describes the topic**
     """
 
-    def _get_claim_json(self) -> List[JsonClaimDict]:
+    def _get_claim_json(self) -> list[JsonClaimDict]:
         redirect = get_redirect(self.re_page.first_article)
         if redirect and isinstance(redirect, str):
             redirected_lemma = pywikibot.Page(self.re_page.page.site, f"RE:{redirect}")

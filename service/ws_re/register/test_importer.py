@@ -74,7 +74,7 @@ class TestGetTextBackup(BaseTestRegister):
         self.authors = Authors()
         self.volume = Volumes()["I,1"]
 
-    def _make_lemma(self, lemma: str, previous: str = None, next_: str = None) -> Lemma:
+    def _make_lemma(self, lemma: str, previous: str | None = None, next_: str | None = None) -> Lemma:
         lemma_dict = {"lemma": lemma}
         if previous is not None:
             lemma_dict["previous"] = previous

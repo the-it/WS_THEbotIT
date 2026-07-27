@@ -1,7 +1,7 @@
 import re
 from abc import abstractmethod
 from datetime import timedelta
-from typing import List, Dict, Any
+from typing import Any
 
 import pywikibot
 
@@ -18,7 +18,7 @@ class ReScannerTask:
         self.debug = debug
         self.logger = logger
         self.re_page: RePage
-        self.processed_pages: List[str] = []
+        self.processed_pages: list[str] = []
         self.timeout = timedelta(minutes=1)
         self.load_task()
 
@@ -32,7 +32,7 @@ class ReScannerTask:
     def task(self) -> bool:
         pass
 
-    def run(self, re_page: RePage) -> Dict[str, bool]:
+    def run(self, re_page: RePage) -> dict[str, bool]:
         self.re_page = re_page
         preprocessed_hash = hash(self.re_page)
         result = {SUCCESS: False, CHANGED: False}
@@ -41,7 +41,7 @@ class ReScannerTask:
         except pywikibot.exceptions.MaxlagTimeoutError:
             self.logger.error("Maxlag timeout occurred, retries failed.")
         except Exception as exception:  # pylint: disable=broad-except
-            self.logger.exception("Logging a caught exception", exception)
+            self.logger.exception("Logging a caught exception", exc_info=exception)
         else:
             result[SUCCESS] = True
             self.processed_pages.append(re_page.lemma)

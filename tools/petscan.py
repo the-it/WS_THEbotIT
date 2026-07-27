@@ -1,9 +1,10 @@
 # pylint: disable=ungrouped-imports
 import json
 import time
+from collections.abc import Mapping
 from datetime import datetime
 from operator import itemgetter
-from typing import List, Union, Mapping, Optional, Tuple, cast
+from typing import ClassVar, cast
 from urllib.parse import quote
 
 import requests
@@ -79,7 +80,7 @@ class PetScan:
             category = f"{category}|{search_depth}"
         self.categories["negative"].append(category)
 
-    NAMESPACE_MAPPING = {
+    NAMESPACE_MAPPING: ClassVar[dict[str, int]] = {
         "Article": 0,
         "Diskussion": 1,
         "Benutzer": 2,
@@ -141,7 +142,7 @@ class PetScan:
         "Thema": 2600,
     }
 
-    def add_namespace(self, namespace: Union[Union[int, str], List[Union[int, str]]]):
+    def add_namespace(self, namespace: int | str | list[int | str]):
         # is there a list to process or only a single instance
         namespace = listify(namespace)
         for i in namespace:
@@ -229,7 +230,7 @@ class PetScan:
         else:
             self.add_options({f"edits[{type_of_user}]": "no"})
 
-    sort_criteria = ["title", "ns_title", "size", "date", "incoming_links", "random"]
+    sort_criteria: ClassVar[list[str]] = ["title", "ns_title", "size", "date", "incoming_links", "random"]
 
     def set_sort_criteria(self, criteria):
         if criteria in self.sort_criteria:
@@ -288,10 +289,10 @@ class PetScan:
         return "".join(question_string)
 
     @staticmethod
-    def make_plain_list(lemma_list: List[PetscanLemma]) -> List[str]:
+    def make_plain_list(lemma_list: list[PetscanLemma]) -> list[str]:
         return [item["nstext"] + ":" + item["title"] for item in lemma_list]
 
-    def run(self) -> List[PetscanLemma]:
+    def run(self) -> list[PetscanLemma]:
         """
         Execute the search query und returns the results as a list.
         @return: list of result dicionaries.
@@ -307,12 +308,12 @@ class PetScan:
             response_byte = response.content
             response_dict = json.loads(response_byte.decode("utf8"))
             try:
-                return cast(List[PetscanLemma], response_dict["*"][0]["a"]["*"])
+                return cast(list[PetscanLemma], response_dict["*"][0]["a"]["*"])
             except KeyError:
                 time.sleep(float(60 * wait))
         raise PetScanException("Tried Petscan services 6 times. No valid answer from service.s")
 
-    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: Optional[int] = None) -> Tuple[list[str], int]:
+    def get_combined_lemma_list(self, old_lemmas: Mapping, timeframe: int | None = None) -> tuple[list[str], int]:
         """
         Executes the search. Filters out all preprocessed lemmas from a provided dictionary.
         Interlaces this two lists to a combined list sorted by:

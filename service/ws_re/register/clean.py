@@ -1,5 +1,4 @@
 import copy
-from typing import Set, List
 
 from pywikibot import Site
 
@@ -23,7 +22,7 @@ class CleanAuthors:
                 author_set.remove(author_obj.redirect)
         return author_set
 
-    def _get_all_authors_from_mapping(self) -> Set[str]:
+    def _get_all_authors_from_mapping(self) -> set[str]:
         mapping_set = set()
         for mapping_key in self.authors.authors_mapping:
             mapping_value = self.authors.authors_mapping[mapping_key]
@@ -74,7 +73,7 @@ class CleanAuthors:
             if len(new_candidates) == 1:
                 self.authors.set_mappings({old_author.name: new_candidates[0].name})
 
-    def _create_candidates(self, old_author: Author) -> List[Author]:
+    def _create_candidates(self, old_author: Author) -> list[Author]:
         new_candidates = []
         for author in self.authors.authors_dict:
             if author.find(old_author.name) > -1:
@@ -82,7 +81,7 @@ class CleanAuthors:
         return new_candidates
 
     @staticmethod
-    def _filter_candidates(new_candidates: List[Author], old_author: Author) -> List[Author]:
+    def _filter_candidates(new_candidates: list[Author], old_author: Author) -> list[Author]:
         # eleminate old author
         new_candidates = list(filter(lambda x: x is not old_author, new_candidates))
         # eleminate dublicates

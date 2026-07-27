@@ -2,7 +2,7 @@ from contextlib import suppress
 from datetime import datetime, timedelta
 
 import pywikibot
-from pywikibot import Site, Page, exceptions
+from pywikibot import Page, Site, exceptions
 from pywikibot.site import BaseSite
 
 from tools.bots import BotException

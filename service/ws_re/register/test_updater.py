@@ -1,9 +1,9 @@
 # pylint: disable=protected-access, no-self-use
-from ddt import ddt, data
+from ddt import data, ddt
 from testfixtures import compare
 
-from service.ws_re.register.authors import Authors
 from service.ws_re.register._base import RegisterException
+from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.volume import VolumeRegister
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.register.updater import Updater
@@ -71,9 +71,11 @@ class TestUpdater(BaseTestRegister):
         copy_tst_data("I_1_update_previous_wrong", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "previous": "Aal", "next": "Aba 1", "sort_key": "Aarassos"}
-        with self.assertRaisesRegex(RegisterException, '!= next lemma name "Ab 1"'):
-            with Updater(register) as updater:
-                updater.update_lemma(update_dict, [])
+        with (
+            self.assertRaisesRegex(RegisterException, '!= next lemma name "Ab 1"'),
+            Updater(register) as updater,
+        ):
+            updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma.next)
         next_lemma = register.get_lemma_by_name("Ab 1")
@@ -83,17 +85,21 @@ class TestUpdater(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos"}
-        with self.assertRaisesRegex(RegisterException, '!= previous lemma name "Aal"'):
-            with Updater(register) as updater:
-                updater.update_lemma(update_dict, [])
+        with (
+            self.assertRaisesRegex(RegisterException, '!= previous lemma name "Aal"'),
+            Updater(register) as updater,
+        ):
+            updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma.next)
         next_lemma = register.get_lemma_by_name("Aba 1")
         compare("Aarassos", next_lemma.previous)
         update_dict = {"lemma": "Äarassos", "sort_key": "Aarassos", "previous": "Aal"}
-        with self.assertRaisesRegex(RegisterException, '!= next lemma name "Aba 1"'):
-            with Updater(register) as updater:
-                updater.update_lemma(update_dict, [])
+        with (
+            self.assertRaisesRegex(RegisterException, '!= next lemma name "Aba 1"'),
+            Updater(register) as updater,
+        ):
+            updater.update_lemma(update_dict, [])
         previous_lemma = register.get_lemma_by_name("Aal")
         compare("Aarassos", previous_lemma.next)
         next_lemma = register.get_lemma_by_name("Aba 1")
@@ -109,9 +115,8 @@ class TestUpdater(BaseTestRegister):
             "previous": "rubbish",
             "next": "something",
         }
-        with self.assertRaisesRegex(RegisterException, "No strategy available"):
-            with Updater(register) as updater:
-                updater.update_lemma(update_dict, [])
+        with self.assertRaisesRegex(RegisterException, "No strategy available"), Updater(register) as updater:
+            updater.update_lemma(update_dict, [])
 
     def test_update_next_and_previous(self):
         copy_tst_data("I_1_sorting2", "I_1")
@@ -356,9 +361,11 @@ class TestUpdater(BaseTestRegister):
         copy_tst_data("I_1_sorting2", "I_1")
         register = VolumeRegister(Volumes()["I,1"], Authors())
         update_dict = {"lemma": "B", "previous": "A", "next": "D"}
-        with self.assertRaisesRegex(RegisterException, "Diff between previous and next aren't 1 or 2"):
-            with Updater(register) as updater:
-                updater.update_lemma(update_dict, [])
+        with (
+            self.assertRaisesRegex(RegisterException, "Diff between previous and next aren't 1 or 2"),
+            Updater(register) as updater,
+        ):
+            updater.update_lemma(update_dict, [])
 
 
 class TestBugUpdates(BaseTestRegister):

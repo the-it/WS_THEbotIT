@@ -22,9 +22,7 @@ class TestFinisher(TestCloudBase):
         has_korrigiert_mock = mock.patch("service.finisher.has_korrigiert_category").start()
 
         def side_effect(arg: Page) -> bool:
-            if arg.title() == "MKL1888:Lyck":
-                return False
-            return True
+            return arg.title() != "MKL1888:Lyck"
 
         has_korrigiert_mock.side_effect = side_effect
         list_of_pages = ["Seite:Meyers b11 s0001.jpg", "Seite:Meyers b11 s0002.jpg"]

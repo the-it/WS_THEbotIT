@@ -1,11 +1,10 @@
 from datetime import datetime
-from typing import List, Optional
 
 import boto3
 from boto3.dynamodb.conditions import Key
 from mypy_boto3_dynamodb import DynamoDBServiceResource
 
-from tools.bots.base import is_aws_test_env, get_aws_credentials
+from tools.bots.base import get_aws_credentials, is_aws_test_env
 from tools.bots.status import Status
 
 MANAGE_TABLE = f"wiki_bots_manage_table_{'tst' if is_aws_test_env() else 'prd'}"
@@ -21,10 +20,10 @@ class StatusManager:
         self.current_run = Status(bot_name)
         self.bot_name = bot_name
         self._manage_table.put_item(Item=self.current_run.to_dict())  # type: ignore
-        self._last_runs: List[Status] = []
+        self._last_runs: list[Status] = []
 
     @property
-    def last_runs(self) -> List[Status]:
+    def last_runs(self) -> list[Status]:
         if not self._last_runs:
             raw_list = self._manage_table.query(KeyConditionExpression=Key("bot_name").eq(self.bot_name))["Items"]
             self._last_runs = [
@@ -35,21 +34,21 @@ class StatusManager:
         return self._last_runs
 
     @property
-    def last_run(self) -> Optional[Status]:
+    def last_run(self) -> Status | None:
         if self.last_runs:
             return self.last_runs[0]
         return None
 
     @property
-    def last_finished_runs(self) -> List[Status]:
+    def last_finished_runs(self) -> list[Status]:
         return [status for status in self.last_runs if status.finish]
 
     @property
-    def last_successful_runs(self) -> List[Status]:
+    def last_successful_runs(self) -> list[Status]:
         return [status for status in self.last_runs if status.success]
 
     @property
-    def last_successful_run(self) -> Optional[Status]:
+    def last_successful_run(self) -> Status | None:
         if self.last_successful_runs:
             return self.last_successful_runs[0]
         return None

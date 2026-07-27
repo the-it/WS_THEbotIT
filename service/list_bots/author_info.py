@@ -1,12 +1,12 @@
 import re
 from contextlib import suppress
 from math import ceil
-from typing import Optional, cast
+from typing import ClassVar, cast
 
-from pywikibot import Page, ItemPage, Claim
+from pywikibot import Claim, ItemPage, Page
 from pywikibot.exceptions import NoPageError
 
-from service.list_bots._base import get_page_infos, is_empty_value, assign_value
+from service.list_bots._base import assign_value, get_page_infos, is_empty_value
 
 NUMBER_TO_MONTH = {
     1: "Januar",
@@ -25,7 +25,7 @@ NUMBER_TO_MONTH = {
 
 
 class AuthorInfo:
-    PROPERTY_MAPPING = {
+    PROPERTY_MAPPING: ClassVar[dict[str, str]] = {
         "first_name": "VORNAMEN",
         "last_name": "NACHNAME",
         "birth": "GEBURTSDATUM",
@@ -76,7 +76,7 @@ class AuthorInfo:
             author_dict["sortkey"] = sortkey
 
     @staticmethod
-    def get_highest_claim(data_item: ItemPage, property_str: str) -> Optional[Claim]:
+    def get_highest_claim(data_item: ItemPage, property_str: str) -> Claim | None:
         try:
             claims: list[Claim] = cast(dict, data_item.text)["claims"][property_str]
         except KeyError:
@@ -92,7 +92,7 @@ class AuthorInfo:
         return filtered_claims[0]
 
     @staticmethod
-    def get_value_from_claim(claim: Optional[Claim]) -> Optional[str]:
+    def get_value_from_claim(claim: Claim | None) -> str | None:
         if not claim:
             return None
         # handling first_- and last_name
@@ -107,12 +107,10 @@ class AuthorInfo:
         # handling birth and death
         if claim.type == "time":
             claim_date = claim.getTarget()
-            if not claim_date:
-                date_from_claim = None
-            elif claim_date.precision < 7:
+            if not claim_date or claim_date.precision < 7:
                 date_from_claim = None
             elif claim_date.precision < 8:
-                date_from_claim = str(int(ceil(float(claim_date.year) / 100.0))) + ". Jh."
+                date_from_claim = str(ceil(float(claim_date.year) / 100.0)) + ". Jh."
             elif claim_date.precision < 10:
                 date_from_claim = str(claim_date.year)
             elif claim_date.precision < 11:

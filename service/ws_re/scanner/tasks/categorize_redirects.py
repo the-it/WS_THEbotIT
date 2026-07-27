@@ -1,5 +1,5 @@
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from tools import save_if_changed, add_category
+from tools import add_category, save_if_changed
 
 
 class CARETask(ReScannerTask):

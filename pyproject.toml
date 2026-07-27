@@ -55,6 +55,14 @@ extend-exclude = [
 ignore = [
   # E402: module level import not at top of file
   "E402",
+  # DTZ: naive datetime usage is deliberate for now; the codebase compares
+  # against wiki timestamps that are themselves naive. A real tz-aware
+  # refactor is tracked as separate follow-up work, not bundled into a
+  # ruff-version bump.
+  "DTZ001",
+  "DTZ005",
+  "DTZ007",
+  "DTZ901",
 ]
 
 [tool.ty.environment]

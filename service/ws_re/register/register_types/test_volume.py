@@ -1,7 +1,7 @@
 # pylint: disable=no-self-use,protected-access
 from unittest import TestCase, skip
 
-from testfixtures import compare, StringComparison
+from testfixtures import StringComparison, compare
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.volume import VolumeRegister

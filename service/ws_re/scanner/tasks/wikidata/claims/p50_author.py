@@ -1,5 +1,3 @@
-from typing import List
-
 import pywikibot
 
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
@@ -13,11 +11,11 @@ class P50Author(ClaimFactory):
     Returns the Claim **author** -> **<Item of author of RE lemma>**
     """
 
-    def _get_claim_json(self) -> List[JsonClaimDict]:
+    def _get_claim_json(self) -> list[JsonClaimDict]:
         return [self.create_claim_json(snak) for snak in self.get_author_list(self.re_page.splitted_article_list[0])]
 
-    def get_author_list(self, articles: ArticleList) -> List[SnakParameter]:
-        author_items: List[str] = []
+    def get_author_list(self, articles: ArticleList) -> list[SnakParameter]:
+        author_items: list[str] = []
         for author in self.get_authors_article(articles):
             author_lemma = None
             if author.ws_lemma:

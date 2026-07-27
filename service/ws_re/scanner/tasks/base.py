@@ -1,5 +1,4 @@
 import re
-from typing import Union
 
 from service.ws_re.template.article import Article
 
@@ -8,7 +7,7 @@ _REGEX_REDIRECT = re.compile(_REGEX_REDIRECT_RAW)
 _REGEX_REDIRECT_PICKY = re.compile(r"s\..*?" + _REGEX_REDIRECT_RAW)
 
 
-def get_redirect(article: Article) -> Union[bool, str]:
+def get_redirect(article: Article) -> bool | str:
     redirect = article["VERWEIS"].value
     if redirect:
         match = _REGEX_REDIRECT.findall(article.text)

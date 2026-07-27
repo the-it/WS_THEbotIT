@@ -47,7 +47,7 @@ class TestWikilogger(TestCase):
         self.assertRegex(self.logger.create_wiki_log_lines(), expected_output)
 
     def test_exception(self):
-        self.logger.exception("exception", Exception("test"))
+        self.logger.exception("exception", exc_info=Exception("test"))
         expected_output = (
             r"==00-01-01_00:00:00==\n\n"
             r"\[\d\d:\d\d:\d\d\]\s\[ERROR\s*?\]\s\[exception\]\n\n"

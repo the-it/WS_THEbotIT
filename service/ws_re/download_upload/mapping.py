@@ -1,11 +1,10 @@
 import re
 import shutil
-from os import listdir, symlink, makedirs
+from os import listdir, makedirs, symlink
 from os.path import isfile, join
 from pathlib import Path
-from typing import Dict
 
-from service.ws_re.download_upload.base import DownloadTarget, BASE_PATH
+from service.ws_re.download_upload.base import BASE_PATH, DownloadTarget
 from service.ws_re.download_upload.data import _MAPPINGS, _MISSING_PAGES
 from service.ws_re.download_upload.raw_files import RawFiles
 from service.ws_re.volumes import Volumes
@@ -20,7 +19,7 @@ class Mapping(DownloadTarget):
             BASE_PATH, "mappings", f"{Volumes()[self.target].sort_key.replace('_', '')}_{self.target}"
         )
 
-    def _get_raw_files_photo_mapping(self) -> Dict[int, str]:
+    def _get_raw_files_photo_mapping(self) -> dict[int, str]:
         regex_number = re.compile(r"\d{4,7}")
         onlyfiles = [f for f in listdir(self.path_raw_files) if isfile(join(self.path_raw_files, f))]
         mapping = {}
@@ -52,10 +51,10 @@ class Mapping(DownloadTarget):
                             # known absent pages
                             if error.args[0] in _MISSING_PAGES:
                                 continue
-                            raise error
-            except KeyError as error:
+                            raise
+            except KeyError:
                 shutil.rmtree(self.path_mapping)
-                raise error
+                raise
         else:
             print(f"Mapping {self.path_mapping} exists")
 

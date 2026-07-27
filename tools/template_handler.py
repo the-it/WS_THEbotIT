@@ -1,5 +1,4 @@
 import re
-from typing import List
 
 from tools._typing import TemplateParameterDict, TemplateParameterList
 
@@ -55,12 +54,12 @@ class TemplateHandler:
 
     def get_parameter(self, key) -> TemplateParameterDict:
         try:
-            return [item for item in self.parameters if item["key"] == key][0]
-        except IndexError as error:
+            return next(item for item in self.parameters if item["key"] == key)
+        except StopIteration as error:
             raise TemplateHandlerException("Parameter key not found") from error
 
     def get_str(self, str_complex: bool = True) -> str:
-        list_for_template: List[str] = ["{{" + self.title]
+        list_for_template: list[str] = ["{{" + self.title]
         for parameter in self.parameters:
             if parameter["key"]:
                 list_for_template.append(f"|{parameter['key']}={parameter['value']}")

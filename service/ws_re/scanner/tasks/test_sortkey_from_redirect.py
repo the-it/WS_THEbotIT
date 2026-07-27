@@ -124,7 +124,7 @@ text.
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
 
-        with mock.patch.object(re_page, "get_redirects", side_effect=Exception("API Error")):
+        with mock.patch.object(re_page, "get_redirects", side_effect=pywikibot.exceptions.Error("API Error")):
             result = self.task.task()
             self.assertTrue(result)
             # Should not crash

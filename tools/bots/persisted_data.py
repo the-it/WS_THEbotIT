@@ -1,9 +1,9 @@
 import json
-from collections.abc import Mapping
+from collections.abc import Iterator, Mapping
 from contextlib import suppress
 from datetime import datetime
 from io import BytesIO
-from typing import Dict, Any, Iterator
+from typing import Any
 
 import boto3
 from botocore import exceptions
@@ -14,7 +14,7 @@ from tools.bots.base import get_aws_credentials, is_aws_test_env
 
 class PersistedData(Mapping):
     def __init__(self, bot_name: str):
-        self._data: Dict = {}
+        self._data: dict = {}
         self._bucket_name = f"wiki-bots-persisted-data-{'tst' if is_aws_test_env() else 'prd'}"
         key, secret = get_aws_credentials()
         self.s3_client = boto3.client("s3", aws_access_key_id=key, aws_secret_access_key=secret)
@@ -37,7 +37,7 @@ class PersistedData(Mapping):
     def __iter__(self) -> Iterator:
         return iter(self._data)
 
-    def assign_dict(self, new_dict: Dict):
+    def assign_dict(self, new_dict: dict):
         if isinstance(new_dict, dict):
             self._data = new_dict
         else:
@@ -80,7 +80,7 @@ class PersistedData(Mapping):
         self._load_from_bucket()
         self._copy_to_deprecated()
 
-    def update(self, dict_to_update: Dict):
+    def update(self, dict_to_update: dict):
         self._data.update(dict_to_update)
 
     def get_broken(self):

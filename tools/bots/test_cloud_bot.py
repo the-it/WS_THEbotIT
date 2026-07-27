@@ -1,12 +1,13 @@
 # pylint: disable=protected-access,no-member,no-self-use,broad-exception-raised
 import time
 from contextlib import suppress
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 from unittest import mock
 
 from freezegun import freeze_time
 from testfixtures import LogCapture, compare
 
+from tools.bots import BotException
 from tools.bots.cloud_bot import CloudBot
 from tools.bots.logger import WikiLogger
 from tools.bots.status_manager import StatusManager
@@ -62,19 +63,18 @@ class TestCloudBot(TestCloudBase):
             self.assertFalse(bot.run())
 
     def test_logging(self):
-        with suppress(AssertionError):
-            with LogCapture() as log_catcher:
+        with suppress(AssertionError), LogCapture() as log_catcher:
+            log_catcher.clear()
+            with self.LogBot(log_to_screen=False, log_to_wiki=False) as bot:
+                # logging on enter
+                # log_catcher.check(("LogBot", "INFO", "Start the bot LogBot."))
                 log_catcher.clear()
-                with self.LogBot(log_to_screen=False, log_to_wiki=False) as bot:
-                    # logging on enter
-                    # log_catcher.check(("LogBot", "INFO", "Start the bot LogBot."))
-                    log_catcher.clear()
-                    bot.run()
-                    # logging on run
-                    log_catcher.check(("LogBot", "INFO", "Test"))
-                    log_catcher.clear()
-                # logging on exit
-                self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.\d{6}.")
+                bot.run()
+                # logging on run
+                log_catcher.check(("LogBot", "INFO", "Test"))
+                log_catcher.clear()
+            # logging on exit
+            self.assertRegex(str(log_catcher), r"LogBot INFO\n  Finish bot LogBot in 0:00:00.\d{6}.")
 
     def test_watchdog(self):
         class WatchdogBot(CloudBot):
@@ -85,11 +85,11 @@ class TestCloudBot(TestCloudBase):
             def task(self):
                 while True:
                     if self._watchdog():
-                        raise Exception("watchdog must not fire")  # pragma: no cover
+                        raise BotException("watchdog must not fire")  # pragma: no cover
                     time.sleep(0.3)
                     if self._watchdog():
                         return True
-                    raise Exception("watchdog must fire")  # pragma: no cover
+                    raise BotException("watchdog must fire")  # pragma: no cover
 
         with WatchdogBot(log_to_screen=False, log_to_wiki=False) as bot:
             self.assertTrue(bot.run())
@@ -123,16 +123,18 @@ class TestCloudBot(TestCloudBase):
 
     class ExceptionBot(CloudBot):
         def task(self):
-            raise Exception("Exception")
+            raise BotException("Exception")
 
     def test_throw_exception_in_task(self):
-        with suppress(AssertionError):
-            with LogCapture() as log_catcher:
-                with self.ExceptionBot(log_to_screen=False, log_to_wiki=False) as bot:
-                    log_catcher.clear()
-                    bot.run()
-                    log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
-                    self.assertFalse(bot.success)
+        with (
+            suppress(AssertionError),
+            LogCapture() as log_catcher,
+            self.ExceptionBot(log_to_screen=False, log_to_wiki=False) as bot,
+        ):
+            log_catcher.clear()
+            bot.run()
+            log_catcher.check(("ExceptionBot", "ERROR", "Logging an uncaught exception"))
+            self.assertFalse(bot.success)
 
     class AddDataBot(CloudBot):
         def task(self):
@@ -166,14 +168,14 @@ class TestCloudBot(TestCloudBase):
     def test_no_load_model_outdated(self):
         self._make_json_file(filename="DataOutdatedBot.data.json")
         StatusManager("DataOutdatedBot").finish_run(success=True)
-        with suppress(AssertionError):
-            with LogCapture() as log_catcher:
-                with self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot:
-                    self.assertIn(
-                        "DataOutdatedBot WARNING\n  The data is thrown away. It is out of date", str(log_catcher)
-                    )
-                    self.assertDictEqual({}, bot.data._data)
-                    bot.run()
+        with (
+            suppress(AssertionError),
+            LogCapture() as log_catcher,
+            self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot,
+        ):
+            self.assertIn("DataOutdatedBot WARNING\n  The data is thrown away. It is out of date", str(log_catcher))
+            self.assertDictEqual({}, bot.data._data)
+            bot.run()
 
     @freeze_time("2001-12-31", auto_tick_seconds=60)
     def test_data_outdated_not_outdated_1(self):
@@ -192,24 +194,26 @@ class TestCloudBot(TestCloudBase):
 
     class DataThrowException(CloudBot):
         def task(self):
-            raise Exception
+            raise BotException
 
     def test_keep_broken_data(self):
         self._make_json_file(filename="DataThrowException.data.json")
         StatusManager("DataThrowException").finish_run(success=True)
-        with suppress(AssertionError):
-            with LogCapture() as log_catcher:
-                with mock.patch("tools.bots.cloud_bot.PersistedData.dump") as mock_dump:
-                    with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
-                        log_catcher.clear()
-                        bot.run()
-                    mock_dump.assert_called_once_with(success=False)
-                    self.assertIn(
-                        "DataThrowException CRITICAL\n"
-                        "  There was an error in the general procedure. "
-                        "The broken data and a backup of the old will be keept.",
-                        str(log_catcher),
-                    )
+        with (
+            suppress(AssertionError),
+            LogCapture() as log_catcher,
+            mock.patch("tools.bots.cloud_bot.PersistedData.dump") as mock_dump,
+        ):
+            with self.DataThrowException(log_to_screen=False, log_to_wiki=False) as bot:
+                log_catcher.clear()
+                bot.run()
+            mock_dump.assert_called_once_with(success=False)
+            self.assertIn(
+                "DataThrowException CRITICAL\n"
+                "  There was an error in the general procedure. "
+                "The broken data and a backup of the old will be keept.",
+                str(log_catcher),
+            )
 
     @freeze_time("2001-01-01", auto_tick_seconds=60)
     def test_set_timestamp_for_searcher(self):

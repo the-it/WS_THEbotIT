@@ -1,7 +1,8 @@
 import traceback
+from collections.abc import Callable
 from contextlib import suppress
-from datetime import timedelta, datetime
-from typing import List, Optional, Dict, Callable, cast
+from datetime import datetime, timedelta
+from typing import cast
 
 import pywikibot
 
@@ -20,12 +21,12 @@ from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.nachtrag_ueberschrift import NAUETask
-from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
+from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
+from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
 from service.ws_re.scanner.tasks.wikidata.task import DATATask
 from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
-from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
 from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
@@ -46,7 +47,7 @@ class ReScanner(CloudBot):
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
         # Wikidata and the Registers.
-        self.tasks: List[Callable] = [
+        self.tasks: list[Callable] = [
             KURZTask,  # add short description
             COKSTask,  # correct Korrekturstand if it is not correct
             SKFRTask,  # set sortkey from redirect if it has a better match
@@ -68,7 +69,7 @@ class ReScanner(CloudBot):
         ]
         if self.debug:
             self.tasks = self.tasks + []
-        self.statistic: Dict[str, int] = {}
+        self.statistic: dict[str, int] = {}
 
     def __enter__(self):
         super().__enter__()
@@ -105,13 +106,13 @@ class ReScanner(CloudBot):
         result, _ = searcher.get_combined_lemma_list(self.data, timeframe=72)
         return result
 
-    def _activate_tasks(self) -> List[ReScannerTask]:
+    def _activate_tasks(self) -> list[ReScannerTask]:
         active_tasks = []
         for task in self.tasks:
             active_tasks.append(task(wiki=self.wiki, debug=self.debug, logger=self.logger))
         return active_tasks
 
-    def _save_re_page(self, re_page: RePage, list_of_done_tasks: List[str]):
+    def _save_re_page(self, re_page: RePage, list_of_done_tasks: list[str]):
         if not self.debug:
             save_message = f"ReScanner hat folgende Aufgaben bearbeitet: {', '.join(list_of_done_tasks)}"
             self.logger.debug(save_message)
@@ -120,7 +121,7 @@ class ReScanner(CloudBot):
             except ReDatenException:
                 self.logger.error("RePage can't be saved.")
 
-    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> Optional[str]:
+    def _process_task(self, task: ReScannerTask, re_page: RePage, lemma: str) -> str | None:
         task_name = None
         with task:
             result = task.run(re_page)

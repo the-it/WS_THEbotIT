@@ -1,8 +1,7 @@
 import re
-from typing import Optional
 
 from tools.template_finder import TemplateFinder, TemplateFinderException
-from tools.template_handler import TemplateHandlerException, TemplateHandler
+from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 _SPACE_REGEX = re.compile(r"\s+")
 
@@ -41,7 +40,7 @@ def has_value(key: str, dict_to_check: dict) -> bool:
     return not is_empty_value(key, dict_to_check)
 
 
-def assign_value(key: str, value: Optional[str], dict_to_assign: dict):
+def assign_value(key: str, value: str | None, dict_to_assign: dict):
     if value:
         dict_to_assign[key] = value
     else:

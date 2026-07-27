@@ -2,8 +2,8 @@
 from unittest import mock
 
 import pywikibot
-from ddt import file_data, ddt
-from testfixtures import compare, LogCapture, StringComparison
+from ddt import ddt, file_data
+from testfixtures import LogCapture, StringComparison, compare
 
 from service.ws_re.register.repo import DataRepo
 from service.ws_re.register.test_base import clear_tst_path, copy_tst_data

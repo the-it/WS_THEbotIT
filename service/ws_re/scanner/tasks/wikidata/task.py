@@ -1,30 +1,29 @@
 import time
-from typing import Dict, List, Optional
 
 import pywikibot
 from pywikibot import ItemPage
 
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, ClaimDictionary, ChangedClaimsDict
+from service.ws_re.scanner.tasks.wikidata.claims._typing import ChangedClaimsDict, ClaimDictionary, ClaimList
 from service.ws_re.scanner.tasks.wikidata.claims.non_claims import NonClaims
-from service.ws_re.scanner.tasks.wikidata.claims.p13269_directs_readers_to import P13269DirectsReadersTo
+from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
+from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
+from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, P156FollowedBy
+from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
+from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
+from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
+from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
 from service.ws_re.scanner.tasks.wikidata.claims.p1343_described_by_source import P1343DescribedBySource
 from service.ws_re.scanner.tasks.wikidata.claims.p1433_published_in import P1433PublishedIn
 from service.ws_re.scanner.tasks.wikidata.claims.p1476_title import P1476Title
-from service.ws_re.scanner.tasks.wikidata.claims.p155_follows_p156_followed_by import P155Follows, P156FollowedBy
 from service.ws_re.scanner.tasks.wikidata.claims.p2567_amended_by import P2567AmendedBy
-from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
-from service.ws_re.scanner.tasks.wikidata.claims.p361_part_of import P361PartOf
 from service.ws_re.scanner.tasks.wikidata.claims.p3903_column import P3903Column
-from service.ws_re.scanner.tasks.wikidata.claims.p407_language_of_work_or_name import P407LanguageOfWorkOrName
-from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
-from service.ws_re.scanner.tasks.wikidata.claims.p577_publication_date import P577PublicationDate
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
-from service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject import P921MainSubject
+from service.ws_re.scanner.tasks.wikidata.claims.p13269_directs_readers_to import P13269DirectsReadersTo
 from tools.bots.logger import WikiLogger
 
-SerializedClaimList = List[Dict]
-SerializedClaimDictionary = Dict[str, SerializedClaimList]
+SerializedClaimList = list[dict]
+SerializedClaimDictionary = dict[str, SerializedClaimList]
 
 
 class DATATask(ReScannerTask):
@@ -107,7 +106,7 @@ class DATATask(ReScannerTask):
                 )
 
     @staticmethod
-    def _create_remove_summary(claims_to_remove: List[pywikibot.Claim]) -> str:
+    def _create_remove_summary(claims_to_remove: list[pywikibot.Claim]) -> str:
         summary = []
         for claim in claims_to_remove:
             if claim.id not in summary:
@@ -115,13 +114,12 @@ class DATATask(ReScannerTask):
         return ", ".join(summary)
 
     @staticmethod
-    def _create_add_summary(item_dict_add: Dict) -> str:
+    def _create_add_summary(item_dict_add: dict) -> str:
         summary = []
         if "sitelinks" in item_dict_add:
             summary.append("non_claims")
         try:
-            for key in item_dict_add["claims"]:
-                summary.append(key)
+            summary.extend(item_dict_add["claims"])
         except KeyError:
             pass
         return ", ".join(summary)
@@ -135,7 +133,7 @@ class DATATask(ReScannerTask):
             claims_to_add_serialized[key] = [claim.toJSON() for claim in claim_list]
         return claims_to_add_serialized
 
-    def _get_claimes_to_change(self, data_item: Optional[pywikibot.ItemPage]) -> ChangedClaimsDict:
+    def _get_claimes_to_change(self, data_item: pywikibot.ItemPage | None) -> ChangedClaimsDict:
         """
         Iterates through all claim factories and aggregates the claims, that should be remove, and the claims, that
         should be added.

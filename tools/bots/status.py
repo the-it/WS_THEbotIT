@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
-from typing import TypedDict, Any, Dict, Optional, Union
+from typing import Any, TypedDict
 
 
 # typehints
@@ -10,7 +10,7 @@ class StatusDictType(TypedDict):
     finish: bool
     start_time: str
     finish_time: str
-    output: Optional[Dict[str, Union[int, str, bool]]]
+    output: dict[str, int | str | bool] | None
 
 
 @dataclass
@@ -20,7 +20,7 @@ class Status:
     finish: bool = False
     start_time: datetime = datetime.min
     finish_time: datetime = datetime.min
-    output: Optional[Dict[str, Any]] = None
+    output: dict[str, Any] | None = None
 
     def __post_init__(self):
         if self.start_time == datetime.min:

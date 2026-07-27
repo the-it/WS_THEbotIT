@@ -1,9 +1,9 @@
 import json
 import re
 from collections import OrderedDict
+from collections.abc import Generator, Iterator
 from enum import Enum
 from pathlib import Path
-from typing import Union, Generator, Optional, Tuple, Iterator, List, Dict
 
 import roman
 
@@ -30,12 +30,12 @@ class Volume:
     def __init__(
         self,
         name: str,
-        year: Union[str, int],
+        year: str | int,
         data_item: str,
-        start: Optional[str] = None,
-        end: Optional[str] = None,
-        start_column: Optional[str] = None,
-        end_column: Optional[str] = None,
+        start: str | None = None,
+        end: str | None = None,
+        start_column: str | None = None,
+        end_column: str | None = None,
     ):
         self._name = name
         self._year = str(year)
@@ -69,25 +69,25 @@ class Volume:
         return self._data_item
 
     @property
-    def start(self) -> Optional[str]:
+    def start(self) -> str | None:
         return self._start
 
     @property
-    def end(self) -> Optional[str]:
+    def end(self) -> str | None:
         return self._end
 
     @property
-    def start_column(self) -> Optional[int]:
+    def start_column(self) -> int | None:
         return self._start_column
 
     @property
-    def end_column(self) -> Optional[int]:
+    def end_column(self) -> int | None:
         return self._end_column
 
     @property
     def type(self) -> VolumeType:
-        for re_volume_type in _REGEX_MAPPING:  # pylint: disable=consider-using-dict-items
-            if _REGEX_MAPPING[re_volume_type].match(self.name):
+        for re_volume_type, regex in _REGEX_MAPPING.items():
+            if regex.match(self.name):
                 return re_volume_type
         raise ReDatenException(f"Name of Volume {self.name} is malformed.")
 
@@ -121,10 +121,10 @@ class Volumes(OrderedDict):
         path_to_file = Path(__file__).parent.joinpath("volumes.json")
         with open(str(path_to_file), encoding="utf-8") as json_file:
             _volume_list = json.load(json_file)
-        self._volume_mapping: Dict[str, Volume] = OrderedDict()
+        self._volume_mapping: dict[str, Volume] = OrderedDict()
         for item in _volume_list:
             self._volume_mapping[item["name"]] = Volume(**item)
-        self._volume_list: List[str] = list(self._volume_mapping.keys())
+        self._volume_list: list[str] = list(self._volume_mapping.keys())
 
     def __getitem__(self, item: str) -> Volume:
         try:
@@ -144,35 +144,35 @@ class Volumes(OrderedDict):
     def __iter__(self) -> Iterator[str]:
         yield from self._volume_mapping
 
-    def special_volume_iterator(self, volume_type: VolumeType) -> Generator[Volume, None, None]:
+    def special_volume_iterator(self, volume_type: VolumeType) -> Generator[Volume]:
         for volume_key in self:
             volume = self[volume_key]
             if volume.type == volume_type:
                 yield volume
 
     @property
-    def first_series(self) -> Generator[Volume, None, None]:
+    def first_series(self) -> Generator[Volume]:
         yield from self.special_volume_iterator(VolumeType.FIRST_SERIES)
 
     @property
-    def second_series(self) -> Generator[Volume, None, None]:
+    def second_series(self) -> Generator[Volume]:
         yield from self.special_volume_iterator(VolumeType.SECOND_SERIES)
 
     @property
-    def supplements(self) -> Generator[Volume, None, None]:
+    def supplements(self) -> Generator[Volume]:
         yield from self.special_volume_iterator(VolumeType.SUPPLEMENTS)
 
     @property
-    def register(self) -> Generator[Volume, None, None]:
+    def register(self) -> Generator[Volume]:
         yield from self.special_volume_iterator(VolumeType.REGISTER)
 
     @property
-    def all_volumes(self) -> Generator[Volume, None, None]:
+    def all_volumes(self) -> Generator[Volume]:
         for volume_key in self:
             yield self[volume_key]
 
     @property
-    def main_volumes(self) -> Generator[str, None, None]:
+    def main_volumes(self) -> Generator[str]:
         main_volumes = []
         for volume_key in self:
             main_volume = self._main_volume_of_volume(volume_key)
@@ -188,7 +188,7 @@ class Volumes(OrderedDict):
     def is_volume_part_of_main_volume(volume: str, main_volume: str) -> bool:
         return bool(main_volume == Volumes._main_volume_of_volume(volume))
 
-    def get_neighbours(self, volume_str: str) -> Tuple[str, str]:
+    def get_neighbours(self, volume_str: str) -> tuple[str, str]:
         idx = self._volume_list.index(volume_str)
         pre = post = ""
         if idx > 0:

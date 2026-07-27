@@ -1,5 +1,5 @@
 from copy import deepcopy
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 
 from pywikibot import Page, Site
 from pywikibot.site import BaseSite

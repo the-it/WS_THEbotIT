@@ -1,4 +1,4 @@
-from pywikibot import Site, Page
+from pywikibot import Page, Site
 from pywikibot.site import BaseSite
 
 from service.ws_re.register.registers import Registers
@@ -32,9 +32,11 @@ class ReRegisterPrinter(CloudBot):
     def _print_author(self):
         self.logger.info("Print author register.")
         overview = [
-            '{{Tabellenstile}}\n{|class ="wikitable sortable tabelle-kopf-fixiert" '
-            'style="text-align:right;"'
-            '\n!Autor\n!Artikel\n!colspan="2"|Erschließungsgrad'
+            (
+                '{{Tabellenstile}}\n{|class ="wikitable sortable tabelle-kopf-fixiert" '
+                'style="text-align:right;"'
+                '\n!Autor\n!Artikel\n!colspan="2"|Erschließungsgrad'
+            )
         ]
         for register in self.registers.author:
             if register.author.last_name:

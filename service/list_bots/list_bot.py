@@ -1,6 +1,6 @@
 import urllib.parse
 from abc import abstractmethod
-from typing import Tuple
+from typing import ClassVar
 
 from pywikibot import Page
 
@@ -13,7 +13,7 @@ from tools.petscan import PetScan, get_processed_time
 class ListBot(CloudBot):
     LIST_LEMMA = ""
     PROPERTY_TEMPLATE = ""
-    PROPERTY_MAPPING: dict[str, str] = {}
+    PROPERTY_MAPPING: ClassVar[dict[str, str]] = {}
 
     def __enter__(self):
         super().__enter__()
@@ -90,7 +90,7 @@ class ListBot(CloudBot):
     def get_searcher(self) -> PetScan:
         pass
 
-    def get_combined_lemma_list(self) -> Tuple[list[str], int]:
+    def get_combined_lemma_list(self) -> tuple[list[str], int]:
         searcher = self.get_searcher()
         self.logger.info(f"Searching for combined lemma list with {searcher}")
         return searcher.get_combined_lemma_list(self.get_check_dict(), timeframe=72)

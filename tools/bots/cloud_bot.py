@@ -104,9 +104,7 @@ class CloudBot(ABC):
 
     def data_outdated(self) -> bool:
         outdated = False
-        if not self.status.last_successful_run:
-            outdated = True
-        elif self.status.last_successful_run.start_time < self.new_data_model:
+        if not self.status.last_successful_run or self.status.last_successful_run.start_time < self.new_data_model:
             outdated = True
         return outdated
 

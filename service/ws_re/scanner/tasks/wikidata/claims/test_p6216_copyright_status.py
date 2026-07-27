@@ -1,4 +1,6 @@
 # pylint: disable=protected-access
+from typing import Any, ClassVar
+
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
@@ -17,7 +19,7 @@ HUNDRED_YEARS_OR_MORE_AFTER_AUTHORS_DEATH = 29940705
 
 @real_wiki_test
 class TestP6216CopyrightStatus(BaseTestClaimFactory):
-    PMA_CLAIM_50 = {
+    PMA_CLAIM_50: ClassVar[dict[str, Any]] = {
         "mainsnak": {
             "snaktype": "value",
             "property": "P6216",
@@ -165,7 +167,7 @@ class TestP6216CopyrightStatus(BaseTestClaimFactory):
         factory = P6216CopyrightStatus(re_page, self.logger)
         compare(self.PMA_CLAIM_50, factory._get_claim_json()[0])
 
-    PUBLISHED_CLAIM = {
+    PUBLISHED_CLAIM: ClassVar[dict[str, Any]] = {
         "mainsnak": {
             "snaktype": "value",
             "property": "P6216",
@@ -231,7 +233,7 @@ class TestP6216CopyrightStatus(BaseTestClaimFactory):
         factory = P6216CopyrightStatus(re_page, self.logger)
         compare([], factory._get_claim_json())
 
-    THRESHOLD_CLAIM = {
+    THRESHOLD_CLAIM: ClassVar[dict[str, Any]] = {
         "mainsnak": {
             "snaktype": "value",
             "property": "P6216",

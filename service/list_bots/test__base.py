@@ -4,7 +4,7 @@ from unittest import TestCase
 from ddt import ddt, file_data
 from testfixtures import compare
 
-from service.list_bots._base import get_page_infos, is_empty_value, assign_value
+from service.list_bots._base import assign_value, get_page_infos, is_empty_value
 
 
 @ddt

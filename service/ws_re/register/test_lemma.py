@@ -3,7 +3,7 @@ import copy
 from collections import OrderedDict
 from typing import cast
 
-from ddt import file_data, ddt
+from ddt import ddt, file_data
 from testfixtures import compare
 
 from service.ws_re.register._base import RegisterException
@@ -106,9 +106,11 @@ class TestLemma(BaseTestRegister):
         re_register_lemma = Lemma.from_dict(altered_dict, self.volumes["I,1"], self.authors)
         compare(
             (
-                "[[w:de:Lemma|Lemma<sup>(WP de)</sup>]]<br/>"
-                "[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]<br/>"
-                "[[d:Q123456|WD-Item]]",
+                (
+                    "[[w:de:Lemma|Lemma<sup>(WP de)</sup>]]<br/>"
+                    "[[s:de:Lemma|Lemma<sup>(WS de)</sup>]]<br/>"
+                    "[[d:Q123456|WD-Item]]"
+                ),
                 'data-sort-value="w:de:lemma"',
             ),
             re_register_lemma.get_wiki_links(),

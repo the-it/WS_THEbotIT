@@ -4,7 +4,7 @@ from unittest import TestCase, mock
 import pywikibot
 from testfixtures import compare
 
-from service.ws_re.template import ReDatenException, ARTICLE_TEMPLATE
+from service.ws_re.template import ARTICLE_TEMPLATE, ReDatenException
 from service.ws_re.template.article import Article
 from service.ws_re.template.re_author import REAuthor
 from service.ws_re.template.re_page import RePage

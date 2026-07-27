@@ -1,7 +1,7 @@
-from typing import TypedDict, Dict, Union
+from typing import TypedDict
 
-PropertyValueType = Union[str, bool]
-ArticleProperties = Dict[str, PropertyValueType]
+PropertyValueType = str | bool
+ArticleProperties = dict[str, PropertyValueType]
 
 
 class KeyValuePair(TypedDict):

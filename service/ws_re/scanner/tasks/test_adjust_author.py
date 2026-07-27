@@ -2,7 +2,7 @@
 from unittest import TestCase
 
 from ddt import ddt, file_data
-from testfixtures import compare, LogCapture
+from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.tasks.adjust_author import ADAUTask, adjust_author, get_author_mapping
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase

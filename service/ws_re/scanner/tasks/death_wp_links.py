@@ -1,9 +1,9 @@
 from datetime import datetime
-from typing import Dict, cast
+from typing import cast
 
 import pywikibot
 
-from service.ws_re.scanner.tasks.base_task import ReScannerTask, ReporterMixin
+from service.ws_re.scanner.tasks.base_task import ReporterMixin, ReScannerTask
 from service.ws_re.template.article import Article
 from tools.bots.logger import WikiLogger
 
@@ -16,7 +16,7 @@ class DEWPTask(ReScannerTask, ReporterMixin):
         ReScannerTask.__init__(self, wiki, logger, debug)
         ReporterMixin.__init__(self, wiki)
         self.wp_wiki = pywikibot.Site(code="de", fam="wikipedia", user="THEbotIT")
-        self.data: Dict = {"not_exists": [], "redirect": [], "disambiguous": []}
+        self.data: dict = {"not_exists": [], "redirect": [], "disambiguous": []}
 
     def task(self):  # pylint: disable=arguments-differ
         for article in self.re_page:

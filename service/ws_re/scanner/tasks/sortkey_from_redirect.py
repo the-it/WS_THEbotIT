@@ -1,6 +1,5 @@
-from typing import List
-
 import Levenshtein
+import pywikibot.exceptions
 
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
@@ -40,7 +39,7 @@ class SKFRTask(ReScannerTask):
 
         return True
 
-    def _get_redirects(self) -> List[str]:
+    def _get_redirects(self) -> list[str]:
         """Get list of redirect page titles without 'RE:' prefix."""
         try:
             redirects = []
@@ -49,11 +48,11 @@ class SKFRTask(ReScannerTask):
                 if redirect_title.startswith("RE:"):
                     redirects.append(redirect_title[3:])
             return redirects
-        except Exception as error:  # pylint: disable=broad-except
+        except pywikibot.exceptions.Error as error:
             self.logger.error(f"Error getting redirects for {self.re_page.lemma_as_link}: {error}")
             return []
 
-    def _find_best_redirect(self, redirects: List[str], computed_sortkey: str, main_lemma: str) -> str:
+    def _find_best_redirect(self, redirects: list[str], computed_sortkey: str, main_lemma: str) -> str:
         """
         Find redirect with smallest Levenshtein distance to computed sortkey.
 

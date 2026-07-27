@@ -1,5 +1,3 @@
-from typing import Dict, Optional
-
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.register_types._base import Register
 from service.ws_re.register.register_types.volume import VolumeRegister
@@ -10,9 +8,9 @@ class AlphabeticRegister(Register):
         self,
         start: str,
         end: str,
-        before_start: Optional[str],
-        after_next_start: Optional[str],
-        registers: Dict[str, VolumeRegister],
+        before_start: str | None,
+        after_next_start: str | None,
+        registers: dict[str, VolumeRegister],
     ):
         super().__init__()
         self._registers = registers
@@ -42,10 +40,7 @@ class AlphabeticRegister(Register):
     def _is_lemma_in_range(self, lemma: Lemma) -> bool:
         append = True
         # include start
-        if lemma.get_sort_key() < self._start:
-            append = False
-        # exclude end
-        elif lemma.get_sort_key() >= self._end:
+        if lemma.get_sort_key() < self._start or lemma.get_sort_key() >= self._end:
             append = False
         return append
 
