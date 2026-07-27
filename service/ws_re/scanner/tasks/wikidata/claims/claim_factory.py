@@ -1,6 +1,6 @@
 import re
 from datetime import datetime
-from typing import Dict, List, Tuple, Optional, cast
+from typing import cast
 
 import pywikibot
 
@@ -8,15 +8,15 @@ from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import (
-    ClaimList,
     ChangedClaimsDict,
+    ClaimList,
+    JsonClaimDict,
     JsonDataValue,
     JsonSnakDict,
     ReferencesList,
-    JsonClaimDict,
 )
 from service.ws_re.template.article import Article
-from service.ws_re.template.re_page import RePage, ArticleList
+from service.ws_re.template.re_page import ArticleList, RePage
 from service.ws_re.volumes import Volume, Volumes
 from tools.bots import BotException
 from tools.bots.logger import WikiLogger
@@ -36,10 +36,10 @@ class ClaimFactory:
         self._volumes = Volumes()
         self._current_year = datetime.now().year
 
-    def _get_claim_json(self) -> List[JsonClaimDict]:
+    def _get_claim_json(self) -> list[JsonClaimDict]:
         raise NotImplementedError
 
-    def get_claims_to_update(self, data_item: Optional[pywikibot.ItemPage]) -> ChangedClaimsDict:
+    def get_claims_to_update(self, data_item: pywikibot.ItemPage | None) -> ChangedClaimsDict:
         """
         Every claim that is updated can possibly add new claims, but can also remove existing claims at the item.
         Which claims is removed or added depends on the specific implementation of the property factory. The standard
@@ -68,7 +68,7 @@ class ClaimFactory:
     @classmethod
     def filter_new_vs_old_claim_list(
         cls, new_claim_list: ClaimList, old_claim_list: ClaimList
-    ) -> Tuple[ClaimList, ClaimList]:
+    ) -> tuple[ClaimList, ClaimList]:
         """
         If desired that the updated claims must exactly match the new_claim_list,
         this function searches throw the existing claims and the desired state. It only returns the claims that must
@@ -106,15 +106,15 @@ class ClaimFactory:
         return {"add": claims_to_add_dict, "remove": claims_to_remove}
 
     def get_diff_claims_for_replacement(
-        self, claim_list: ClaimList, data_item: Optional[pywikibot.ItemPage]
+        self, claim_list: ClaimList, data_item: pywikibot.ItemPage | None
     ) -> ChangedClaimsDict:
         old_claims = self.get_old_claims(data_item)
         claims_to_add, claims_to_remove = self.filter_new_vs_old_claim_list(claim_list, old_claims)
         return self._create_claim_dictionary(claims_to_add, claims_to_remove)
 
-    def get_old_claims(self, data_item) -> List[pywikibot.Claim]:
+    def get_old_claims(self, data_item) -> list[pywikibot.Claim]:
         try:
-            old_claims: List[pywikibot.Claim] = data_item.claims[self.get_property_string()]
+            old_claims: list[pywikibot.Claim] = data_item.claims[self.get_property_string()]
         except AttributeError, KeyError:
             # if data_item didn't existed -> AttributeError, if claim not exists -> KeyError
             old_claims = []
@@ -123,8 +123,8 @@ class ClaimFactory:
     @staticmethod
     def create_claim_json(
         snak_parameter: SnakParameter,
-        qualifiers: Optional[List[SnakParameter]] = None,
-        references: Optional[List[List[SnakParameter]]] = None,
+        qualifiers: list[SnakParameter] | None = None,
+        references: list[list[SnakParameter]] | None = None,
     ) -> JsonClaimDict:
         """
         This factory function create json representations of claims from some basic parameters.
@@ -159,7 +159,7 @@ class ClaimFactory:
         return references_snak
 
     @staticmethod
-    def _add_qualifiers(qualifiers: List[SnakParameter]) -> Tuple[Dict[str, List[JsonSnakDict]], List[str]]:
+    def _add_qualifiers(qualifiers: list[SnakParameter]) -> tuple[dict[str, list[JsonSnakDict]], list[str]]:
         qualifiers_dict = {}
         qualifiers_order_list = []
         for qualifier in qualifiers:
@@ -208,14 +208,13 @@ class ClaimFactory:
 
     # CLAIM FUNCTIONS THAT ARE NEEDED FOR MULTIPLE CLAIM FACTORIES
 
-    def get_authors_article(self, article_list: ArticleList) -> List[Author]:
-        author_list: List[Author] = []
+    def get_authors_article(self, article_list: ArticleList) -> list[Author]:
+        author_list: list[Author] = []
         for article_part in article_list:
             author = article_part.author.identification
-            band = article_list[0]["BAND"].value
+            band = str(article_list[0]["BAND"].value)
             possible_authors = self._authors.get_author_by_mapping(author, band)
-            for author in possible_authors:
-                author_list.append(author)
+            author_list.extend(possible_authors)
         return author_list
 
     def _volume_of_article(self, article: Article) -> Volume:

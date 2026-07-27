@@ -1,8 +1,8 @@
+import builtins
 import json
 from contextlib import suppress
 from pathlib import Path
 from string import Template
-from typing import Dict, List
 
 import dictdiffer
 
@@ -25,7 +25,7 @@ class NonClaims:
             self._non_claims_template_prologue = Template(non_claims_json.read())
 
     @property
-    def dict(self) -> Dict:
+    def dict(self) -> builtins.dict:
         article_type = get_article_type(self.re_page)
         if article_type == "index":
             replaced_json = self._non_claims_template_index.substitute(lemma=self.re_page.lemma_without_prefix)
@@ -35,14 +35,14 @@ class NonClaims:
             replaced_json = self._non_claims_template_crossref.substitute(lemma=self.re_page.lemma_without_prefix)
         else:
             replaced_json = self._non_claims_template_article.substitute(lemma=self.re_page.lemma_without_prefix)
-        non_claims: Dict = json.loads(replaced_json)
+        non_claims: dict = json.loads(replaced_json)
         non_claims["sitelinks"] = {
             "dewikisource": {"site": "dewikisource", "title": self.re_page.lemma, "badges": self._proofread_badge}
         }
         return non_claims
 
     @property
-    def _proofread_badge(self) -> List[str]:
+    def _proofread_badge(self) -> list[str]:
         proofread_badge = []
         try:
             proofread_badge.append(PROOFREAD_BADGES[str(self.re_page.first_article["KORREKTURSTAND"].value).lower()])
@@ -50,10 +50,10 @@ class NonClaims:
             pass
         return proofread_badge
 
-    def _languages(self, labels_or_descriptions: str) -> List[str]:
-        return [str(language) for language in self.dict[labels_or_descriptions].keys()]
+    def _languages(self, labels_or_descriptions: str) -> list[str]:
+        return [str(language) for language in self.dict[labels_or_descriptions]]
 
-    def labels_and_sitelinks_has_changed(self, old_non_claims: Dict) -> bool:
+    def labels_and_sitelinks_has_changed(self, old_non_claims: builtins.dict) -> bool:
         # claims are not relevant here
         with suppress(KeyError):
             del old_non_claims["claims"]

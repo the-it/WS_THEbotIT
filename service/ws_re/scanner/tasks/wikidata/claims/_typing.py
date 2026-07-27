@@ -1,9 +1,9 @@
-from typing import List, Dict, TypedDict, Union, Optional
+from typing import TypedDict
 
 import pywikibot
 
-ClaimList = List[pywikibot.Claim]
-ClaimDictionary = Dict[str, ClaimList]
+ClaimList = list[pywikibot.Claim]
+ClaimDictionary = dict[str, ClaimList]
 
 
 class ChangedClaimsDict(TypedDict):
@@ -20,7 +20,7 @@ JsonValueDictMonolingualtext = TypedDict("JsonValueDictMonolingualtext", {"text"
 
 
 class JsonDataValue(TypedDict):
-    value: Union[str, JsonValueDictItem, JsonValueDictTime, JsonValueDictMonolingualtext]
+    value: str | JsonValueDictItem | JsonValueDictTime | JsonValueDictMonolingualtext
     type: str
 
 
@@ -31,15 +31,15 @@ class JsonSnakDict(TypedDict):
     datavalue: JsonDataValue
 
 
-ReferencesList = List[Dict[str, Optional[Union[List[str], Dict[str, List[JsonSnakDict]]]]]]
+ReferencesList = list[dict[str, list[str] | dict[str, list[JsonSnakDict]] | None]]
 JsonClaimDict = TypedDict(
     "JsonClaimDict",
     {
         "mainsnak": JsonSnakDict,
         "type": str,
         "rank": str,
-        "qualifiers": Dict[str, List[JsonSnakDict]],
-        "qualifiers-order": List[str],
+        "qualifiers": dict[str, list[JsonSnakDict]],
+        "qualifiers-order": list[str],
         "references": ReferencesList,
     },
     total=False,

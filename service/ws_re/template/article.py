@@ -1,11 +1,11 @@
-from collections.abc import Mapping
 import contextlib
+from collections.abc import Generator, Mapping
 from datetime import datetime
-from typing import Generator, Optional, List, cast
+from typing import ClassVar, cast
 
 from service.ws_re import public_domain
-from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, ReDatenException, RE_AUTHOR
-from service.ws_re.template._typing import KeyValuePair, ArticleProperties
+from service.ws_re.template import RE_ABSCHNITT, RE_AUTHOR, RE_DATEN, ReDatenException
+from service.ws_re.template._typing import ArticleProperties, KeyValuePair
 from service.ws_re.template.property import Property
 from service.ws_re.template.re_author import REAuthor
 from tools._typing import TemplateParameterDict
@@ -14,7 +14,7 @@ from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 
 class Article(Mapping):
-    keywords = {
+    keywords: ClassVar[dict[str, str]] = {
         "BD": "BAND",
         "SS": "SPALTE_START",
         "SE": "SPALTE_END",
@@ -37,15 +37,15 @@ class Article(Mapping):
     def __init__(
         self,
         article_type: str = RE_DATEN,
-        re_daten_properties: Optional[ArticleProperties] = None,
+        re_daten_properties: ArticleProperties | None = None,
         text: str = "",
-        author: REAuthor = REAuthor(""),
+        author: REAuthor | None = None,
     ):
         self._article_type = ""
         self.article_type = article_type
         self._text = ""
         self.text = text
-        self.author = author
+        self.author = author if author is not None else REAuthor("")
         self._properties = (
             Property("BAND", ""),
             Property("SPALTE_START", ""),
@@ -73,7 +73,7 @@ class Article(Mapping):
     def __len__(self) -> int:
         return len(self._properties)
 
-    def __iter__(self) -> Generator[Property, None, None]:
+    def __iter__(self) -> Generator[Property]:
         yield from self._properties
 
     def __getitem__(self, item: str) -> Property:
@@ -118,18 +118,16 @@ class Article(Mapping):
             if (
                 self["TODESJAHR"].value
                 and int(self["TODESJAHR"].value) > current_year - public_domain.YEARS_AFTER_DEATH
-            ):
-                if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
-                    return False
+            ) and not self["KEINE_SCHÖPFUNGSHÖHE"].value:
+                return False
             if (
                 self["GEBURTSJAHR"].value
                 and int(self["GEBURTSJAHR"].value) > current_year - public_domain.YEARS_AFTER_BIRTH
-            ):
-                if not self["KEINE_SCHÖPFUNGSHÖHE"].value:
-                    return False
+            ) and not self["KEINE_SCHÖPFUNGSHÖHE"].value:
+                return False
         return True
 
-    def _init_properties(self, properties_dict: Optional[ArticleProperties]):
+    def _init_properties(self, properties_dict: ArticleProperties | None):
         if properties_dict:
             for item in properties_dict.items():
                 if item[0] in self:
@@ -139,7 +137,7 @@ class Article(Mapping):
                         raise ReDatenException(f"Keypair {item} is not permitted.") from property_error
 
     @classmethod
-    def from_text(cls, article_text: str) -> "Article":
+    def from_text(cls, article_text: str) -> Article:
         """
         main parser function for initiating a ReArticle from a given piece of text.
 
@@ -185,7 +183,7 @@ class Article(Mapping):
         )
 
     @classmethod
-    def _extract_properties(cls, parameters: List[KeyValuePair]) -> ArticleProperties:
+    def _extract_properties(cls, parameters: list[KeyValuePair]) -> ArticleProperties:
         """
         initialise all properties from the template handler to the article dict.
         If a wrong parameter is in the list the function will raise a ReDatenException.
@@ -194,7 +192,6 @@ class Article(Mapping):
         :return: complete list of extracted parameters
         """
         properties_dict = {}
-        #
         for template_property in parameters:
             keyword = cls._correct_keyword(template_property)
             properties_dict.update({keyword: template_property["value"]})

@@ -1,6 +1,6 @@
 import json
+from collections.abc import Iterator
 from json import JSONDecodeError
-from typing import Union, Optional, List, Iterator
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma, LemmaDict
@@ -44,7 +44,7 @@ class VolumeRegister(Register):
         return self._authors
 
     @property
-    def lemmas(self) -> List[Lemma]:
+    def lemmas(self) -> list[Lemma]:
         return self._lemmas
 
     def _get_header(self) -> str:
@@ -82,7 +82,7 @@ class VolumeRegister(Register):
         ) as json_file:
             json.dump(persist_list, json_file, indent=2, ensure_ascii=False)
 
-    def get_lemma_by_name(self, lemma_name: str, self_supplement: bool = False) -> Optional[Lemma]:
+    def get_lemma_by_name(self, lemma_name: str, self_supplement: bool = False) -> Lemma | None:
         found_before = False
         for lemma in self.lemmas:
             if lemma.lemma == lemma_name:
@@ -91,7 +91,7 @@ class VolumeRegister(Register):
                 found_before = True
         return None
 
-    def get_lemma_by_sort_key(self, sort_key: str, self_supplement: bool = False) -> Optional[Lemma]:
+    def get_lemma_by_sort_key(self, sort_key: str, self_supplement: bool = False) -> Lemma | None:
         # normalize it
         sort_key = Lemma.make_sort_key(sort_key)
         found_before = False
@@ -102,7 +102,7 @@ class VolumeRegister(Register):
                 found_before = True
         return None
 
-    def get_index_of_lemma(self, lemma_input: Union[str, Lemma], self_supplement: bool = False) -> Optional[int]:
+    def get_index_of_lemma(self, lemma_input: str | Lemma, self_supplement: bool = False) -> int | None:
         if isinstance(lemma_input, str):
             lemma = self.get_lemma_by_name(lemma_input, self_supplement)
         elif self_supplement:

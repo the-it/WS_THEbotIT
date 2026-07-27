@@ -75,7 +75,7 @@ class TestReScannerTask(TaskTestCase):
 
     class EXCETask(ReScannerTask):
         def task(self):
-            raise Exception("Buuuh")
+            raise Exception("Buuuh")  # noqa: TRY002 -- deliberately generic, exercises the broad except Exception
 
     def test_execute_with_exception(self):
         self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
@@ -90,14 +90,13 @@ class TestReScannerTask(TaskTestCase):
     class EXCEAlteredTask(ReScannerTask):
         def task(self):
             self.re_page[0].text = "text2"
-            raise Exception("Buuuh")
+            raise Exception("Buuuh")  # noqa: TRY002 -- deliberately generic, exercises the broad except Exception
 
     def test_execute_with_exception_altered(self):
         self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
         re_page = RePage(self.page_mock)
-        with LogCapture():
-            with self.EXCEAlteredTask(None, self.logger) as task:
-                result = task.run(re_page)
+        with LogCapture(), self.EXCEAlteredTask(None, self.logger) as task:
+            result = task.run(re_page)
         self.assertFalse(result["success"])
         self.assertTrue(result["changed"])
 
@@ -142,7 +141,6 @@ class TestReScannerTask(TaskTestCase):
         re_page1 = RePage(self.page_mock)
         self.page_mock.text = "{{REDaten}}\nother stuff\n{{REAutor|Autor.}}"
         re_page2 = RePage(self.page_mock)
-        with LogCapture():
-            with self.ALNAAltereNotAllTask(None, self.logger) as task:
-                compare({"success": True, "changed": True}, task.run(re_page1))
-                compare({"success": True, "changed": False}, task.run(re_page2))
+        with LogCapture(), self.ALNAAltereNotAllTask(None, self.logger) as task:
+            compare({"success": True, "changed": True}, task.run(re_page1))
+            compare({"success": True, "changed": False}, task.run(re_page2))

@@ -1,8 +1,7 @@
 import re
 from datetime import datetime
-from typing import Optional, Union
 
-from pywikibot import Site, Page, Category
+from pywikibot import Category, Page, Site
 from pywikibot.site import BaseSite
 
 from service.ws_re.register.lemma import Lemma
@@ -81,7 +80,7 @@ class ReImporter(CloudBot):
                     break
         return True
 
-    def get_text(self, band: str, article: str) -> Optional[str]:
+    def get_text(self, band: str, article: str) -> str | None:
         band_dict = self.new_articles.get(band, None)
         if band_dict:
             article_text = band_dict.get(article, None)
@@ -91,7 +90,7 @@ class ReImporter(CloudBot):
 
     @staticmethod
     def get_text_backup(
-        band: str, article: Lemma, pre_article: Optional[Lemma] = None, post_article: Optional[Lemma] = None
+        band: str, article: Lemma, pre_article: Lemma | None = None, post_article: Lemma | None = None
     ) -> str:
         if article.previous:
             vorgaenger = article.previous
@@ -106,7 +105,7 @@ class ReImporter(CloudBot):
         else:
             nachfolger = ""
         spalte_start = article.chapter_objects[0].start if article.chapter_objects else "OFF"
-        spalte_end: Union[str, int] = "OFF"
+        spalte_end: str | int = "OFF"
         if article.chapter_objects and article.chapter_objects[0].end:
             spalte_end = article.chapter_objects[0].end
         author = "OFF"

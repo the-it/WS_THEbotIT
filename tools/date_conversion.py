@@ -68,7 +68,7 @@ class DateConversion:
             else:
                 century_int = int(match.group(1)) - 1
             year = (str(century_int) + "00").zfill(4)
-            return_str = "".join([year, "-", "00", "-", "00"])
+            return_str = f"{year}-00-00"
             del year
         elif match := self.regex_complete_date.search(str_re_form):
             # Case: complete date

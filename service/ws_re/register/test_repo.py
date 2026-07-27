@@ -5,7 +5,7 @@ from pathlib import Path
 from unittest import TestCase, mock
 
 from git import Repo
-from testfixtures import compare, StringComparison
+from testfixtures import StringComparison, compare
 
 from service.ws_re.register.repo import DataRepo
 from service.ws_re.register.test_base import clear_tst_path

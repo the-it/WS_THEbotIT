@@ -1,5 +1,3 @@
-from typing import Optional
-
 from service.ws_re.template._typing import PropertyValueType
 
 
@@ -7,7 +5,7 @@ class Property:
     def __init__(self, name: str, default: PropertyValueType):
         self._name = name
         self._default: PropertyValueType = default
-        self._value: Optional[PropertyValueType] = None
+        self._value: PropertyValueType | None = None
 
     def _return_by_type(self, value: PropertyValueType) -> PropertyValueType:
         ret = value

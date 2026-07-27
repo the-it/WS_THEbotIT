@@ -87,8 +87,8 @@ def get_author_mapping() -> dict[str, str]:
 
 
 def adjust_author(input_str: str, mapping: dict[str, str]) -> str:
-    for author in mapping:
-        input_str = re.sub(rf"{{{{REAutor\|{author}}}}}", f"{{{{REAutor|{mapping[author]}}}}}", input_str)
+    for author, target in mapping.items():
+        input_str = re.sub(rf"{{{{REAutor\|{author}}}}}", f"{{{{REAutor|{target}}}}}", input_str)
     if REGEX_COMPLEX.search(input_str):
         article = Article.from_text(input_str.strip())
         input_str = REGEX_COMPLEX.sub(rf"REAutor|\g<author>|{article['BAND'].value}", input_str)

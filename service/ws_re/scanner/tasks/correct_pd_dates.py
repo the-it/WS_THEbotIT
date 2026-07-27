@@ -1,6 +1,5 @@
 import datetime
 from dataclasses import dataclass
-from typing import Optional
 
 import pywikibot
 
@@ -12,8 +11,8 @@ from tools.bots.logger import WikiLogger
 
 @dataclass
 class Years:
-    birth: Optional[int] = None
-    death: Optional[int] = None
+    birth: int | None = None
+    death: int | None = None
     pd: int = 0
 
 

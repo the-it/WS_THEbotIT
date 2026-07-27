@@ -3,8 +3,8 @@ from pywikibot import Site
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
-from service.ws_re.template.re_page import RePage
 from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
+from service.ws_re.template.re_page import RePage
 from tools.test import real_wiki_test
 
 
@@ -18,11 +18,11 @@ class TestVONATask(TaskTestCase):
     def _base_text(vorgaenger: str = "", nachfolger: str = "") -> str:
         vg = f"|VORGÄNGER={vorgaenger}\n" if vorgaenger is not None else ""
         nf = f"|NACHFOLGER={nachfolger}\n" if nachfolger is not None else ""
-        return """{{REDaten
+        return f"""{{{{REDaten
 |BAND=I,1
-%s%s}}
+{vg}{nf}}}}}
 text.
-{{REAutor|OFF}}""" % (vg, nf)
+{{{{REAutor|OFF}}}}"""
 
     @real_wiki_test
     def test_no_redirect_no_change(self):

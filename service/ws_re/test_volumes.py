@@ -81,15 +81,15 @@ class TestVolumes(TestCase):
     def test_iter(self):
         iterator = iter(self.re_volumes)
         self.assertEqual("I,1", next(iterator))
-        for _ in range(0, 47):
+        for _ in range(47):
             next(iterator)
         self.assertEqual("XXIV", next(iterator))
         self.assertEqual("I A,1", next(iterator))
-        for _ in range(0, 17):
+        for _ in range(17):
             next(iterator)
         self.assertEqual("X A", next(iterator))
         self.assertEqual("S I", next(iterator))
-        for _ in range(0, 13):
+        for _ in range(13):
             next(iterator)
         self.assertEqual("S XV", next(iterator))
         self.assertEqual("R", next(iterator))

@@ -6,7 +6,7 @@ from testfixtures import compare
 
 from tools.bots import BotException
 from tools.bots.persisted_data import PersistedData
-from tools.bots.test_base import TestCloudBase, BUCKET_NAME
+from tools.bots.test_base import BUCKET_NAME, TestCloudBase
 
 
 class TestPersistedData(TestCloudBase):

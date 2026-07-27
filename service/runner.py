@@ -4,10 +4,9 @@ import sys
 from pywikibot import Site
 
 from service.finisher import Finisher
-from service.list_bots.author_list import AuthorList
 from service.gl.status import GlStatus
+from service.list_bots.author_list import AuthorList
 from service.list_bots.poem_list import PoemList
-from service.ws_re.register.importer import ReImporter
 from service.ws_re.register.printer import ReRegisterPrinter
 from service.ws_re.register.statistic import ReStatistic
 from service.ws_re.scanner.base import ReScanner

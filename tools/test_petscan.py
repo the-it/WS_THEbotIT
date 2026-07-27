@@ -1,5 +1,6 @@
 # pylint: disable=protected-access
 from datetime import datetime
+from typing import Any, ClassVar
 from unittest import TestCase, mock
 from unittest.mock import patch
 
@@ -233,82 +234,80 @@ class TestPetScan(TestCase):
 
     @freeze_time("2000-12-31", auto_tick_seconds=60)
     def test_third_try(self):
-        with patch("time.sleep", return_value=None) as sleep_mock:
-            with requests_mock.mock() as request_mock:
-                request_mock.get(
-                    "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
-                    [
-                        {
-                            "status_code": 200,
-                            "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
-                            '"query": "https://petscan.wmflabs.org/?language=de'
-                            "&project=wikisource&categories=Autoren&get_q=1"
-                            "&show_redirects=no&ns[0]=1&max_age=48"
-                            '&format=json&doit=1"}}',
-                        },
-                        {
-                            "status_code": 200,
-                            "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
-                            '"query": "https://petscan.wmflabs.org/?language=de'
-                            "&project=wikisource&categories=Autoren&get_q=1"
-                            "&show_redirects=no&ns[0]=1&max_age=48"
-                            '&format=json&doit=1"}}',
-                        },
-                        {
-                            "status_code": 200,
-                            "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
-                            '"query": "https://petscan.wmflabs.org/?language=de'
-                            "&project=wikisource&categories=Autoren&get_q=1"
-                            "&show_redirects=no&ns[0]=1&max_age=48"
-                            '&format=json&doit=1"},'
-                            '"*": [{"n": "combination",'
-                            '"a": {"type": "subset",'
-                            '"*": [{"id": 3279,'
-                            '"len": 10197,'
-                            '"n": "page",'
-                            '"namespace": 0,'
-                            '"nstext": "",'
-                            '"q": "Q60644",'
-                            '"title": "Friedrich_Rückert",'
-                            '"touched": "20161024211701"}]}}]}',
-                        },
-                    ],
-                )
-                self.assertEqual(
-                    self.petscan.run(),
-                    [
-                        {
-                            "id": 3279,
-                            "len": 10197,
-                            "n": "page",
-                            "namespace": 0,
-                            "nstext": "",
-                            "q": "Q60644",
-                            "title": "Friedrich_Rückert",
-                            "touched": "20161024211701",
-                        }
-                    ],
-                )
-                compare(2, sleep_mock.call_count)
+        with patch("time.sleep", return_value=None) as sleep_mock, requests_mock.mock() as request_mock:
+            request_mock.get(
+                "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
+                [
+                    {
+                        "status_code": 200,
+                        "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
+                        '"query": "https://petscan.wmflabs.org/?language=de'
+                        "&project=wikisource&categories=Autoren&get_q=1"
+                        "&show_redirects=no&ns[0]=1&max_age=48"
+                        '&format=json&doit=1"}}',
+                    },
+                    {
+                        "status_code": 200,
+                        "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
+                        '"query": "https://petscan.wmflabs.org/?language=de'
+                        "&project=wikisource&categories=Autoren&get_q=1"
+                        "&show_redirects=no&ns[0]=1&max_age=48"
+                        '&format=json&doit=1"}}',
+                    },
+                    {
+                        "status_code": 200,
+                        "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
+                        '"query": "https://petscan.wmflabs.org/?language=de'
+                        "&project=wikisource&categories=Autoren&get_q=1"
+                        "&show_redirects=no&ns[0]=1&max_age=48"
+                        '&format=json&doit=1"},'
+                        '"*": [{"n": "combination",'
+                        '"a": {"type": "subset",'
+                        '"*": [{"id": 3279,'
+                        '"len": 10197,'
+                        '"n": "page",'
+                        '"namespace": 0,'
+                        '"nstext": "",'
+                        '"q": "Q60644",'
+                        '"title": "Friedrich_Rückert",'
+                        '"touched": "20161024211701"}]}}]}',
+                    },
+                ],
+            )
+            self.assertEqual(
+                self.petscan.run(),
+                [
+                    {
+                        "id": 3279,
+                        "len": 10197,
+                        "n": "page",
+                        "namespace": 0,
+                        "nstext": "",
+                        "q": "Q60644",
+                        "title": "Friedrich_Rückert",
+                        "touched": "20161024211701",
+                    }
+                ],
+            )
+            compare(2, sleep_mock.call_count)
 
     @freeze_time("2000-12-31", auto_tick_seconds=60)
     def test_timeout(self):
-        with patch("time.sleep", return_value=None) as sleep_mock:
-            with requests_mock.mock() as request_mock:
-                request_mock.get(
-                    "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
-                    text='{"n": "result","a": {"querytime_sec": 1.572163,'
-                    '"query": "https://petscan.wmflabs.org/?language=de'
-                    "&project=wikisource&categories=Autoren&get_q=1"
-                    "&show_redirects=no&ns[0]=1&max_age=48"
-                    '&format=json&doit=1"}}',
-                    status_code=200,
-                )
-                with self.assertRaises(PetScanException):
-                    self.petscan.run()
-                compare(5, sleep_mock.call_count)
+        with patch("time.sleep", return_value=None) as sleep_mock, requests_mock.mock() as request_mock:
+            request_mock.get(
+                "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
+                text='{"n": "result","a": {"querytime_sec": 1.572163,'
+                '"query": "https://petscan.wmflabs.org/?language=de'
+                "&project=wikisource&categories=Autoren&get_q=1"
+                "&show_redirects=no&ns[0]=1&max_age=48"
+                '&format=json&doit=1"}}',
+                status_code=200,
+            )
+            with self.assertRaises(PetScanException):
+                self.petscan.run()
+            compare(5, sleep_mock.call_count)
 
-    result_of_searcher = [
+    result_of_searcher: ClassVar[list[dict[str, Any]]] = [
         {
             "id": 42,
             "len": 42,
@@ -338,7 +337,7 @@ class TestPetScan(TestCase):
         },
     ]
 
-    result_of_searcher_max_age = [
+    result_of_searcher_max_age: ClassVar[list[dict[str, Any]]] = [
         {
             "id": 42,
             "len": 42,

@@ -1,5 +1,5 @@
 import re
-from typing import List
+from typing import ClassVar
 
 import pywikibot
 
@@ -21,7 +21,7 @@ class RELITask(ReScannerTask):
     """
 
     # This list can be populated/overwritten from outside if needed
-    TARGET_LEMMAS: List[str] = [
+    TARGET_LEMMAS: ClassVar[list[str]] = [
         "Λεβήν",
         "Leben(a)",
     ]

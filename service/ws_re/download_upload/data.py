@@ -1,4 +1,4 @@
-from typing import TypedDict, Tuple, Dict
+from typing import TypedDict
 
 _ARCHIVES = {
     "Pauly Supp.rar": "PaulySupp",
@@ -22,11 +22,11 @@ _RAW_FILES = {
 
 
 class MappingEntryType(TypedDict):
-    source: Tuple[str, str, str]
-    pages: Tuple[Tuple[int, int, int], ...]
+    source: tuple[str, str, str]
+    pages: tuple[tuple[int, int, int], ...]
 
 
-_MAPPINGS: Dict[str, MappingEntryType] = {
+_MAPPINGS: dict[str, MappingEntryType] = {
     "I,1": {"source": ("PaulyWissowa110", "Pauly-Wissowa_1-10", "Aal Apollokrates"), "pages": ((-1, 10010, 10370),)},
     "I,2": {"source": ("PaulyWissowa110", "Pauly-Wissowa_1-10", "Aal Apollokrates"), "pages": ((1439, 10370, 10735),)},
     "II,1": {"source": ("PaulyWissowa110", "Pauly-Wissowa_1-10", "Apollon Artemis"), "pages": ((-1, 30002, 30362),)},

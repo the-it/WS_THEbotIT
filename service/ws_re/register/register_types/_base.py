@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 from abc import ABC
-from typing import Tuple, List, Callable, Mapping
+from collections.abc import Callable, Mapping
 
 from service.ws_re.register.lemma import Lemma
 
 
 class Register(ABC):
     def __init__(self):
-        self._lemmas: List[Lemma] = []
+        self._lemmas: list[Lemma] = []
         self._registers: Mapping = {}
 
     def _init_lemmas(self, check_function: Callable):
@@ -20,13 +20,13 @@ class Register(ABC):
         self._lemmas = sorted(lemmas, key=lambda k: (k.get_sort_key(), k.volume.sort_key))
 
     @property
-    def lemmas(self) -> List[Lemma]:
+    def lemmas(self) -> list[Lemma]:
         return self._lemmas
 
     @staticmethod
-    def squash_lemmas(lemmas: List[Lemma]) -> List[List[Lemma]]:
+    def squash_lemmas(lemmas: list[Lemma]) -> list[list[Lemma]]:
         return_lemmas = []
-        last_lemmas: List[Lemma] = []
+        last_lemmas: list[Lemma] = []
         for lemma in lemmas:
             if last_lemmas:
                 if lemma.lemma == last_lemmas[-1].lemma:
@@ -109,7 +109,7 @@ class Register(ABC):
         return short_description if short_description else ""
 
     @property
-    def proof_read(self) -> Tuple[int, int, int]:
+    def proof_read(self) -> tuple[int, int, int]:
         fer = kor = unk = 0
         for lemma in self.lemmas:
             status, _ = lemma.status

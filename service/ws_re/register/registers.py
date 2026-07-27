@@ -1,7 +1,7 @@
 import contextlib
 from collections import OrderedDict
+from collections.abc import Generator
 from datetime import datetime
-from typing import Dict, Generator
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.alphabetic import AlphabeticRegister
@@ -64,8 +64,8 @@ class Registers:
     def __init__(self, update_data=False):
         self.repo = DataRepo(update_data)
         self._authors: Authors = Authors()
-        self._registers: Dict[str, VolumeRegister] = OrderedDict()
-        self._alphabetic_registers: Dict[str, AlphabeticRegister] = OrderedDict()
+        self._registers: dict[str, VolumeRegister] = OrderedDict()
+        self._alphabetic_registers: dict[str, AlphabeticRegister] = OrderedDict()
         for volume in Volumes().all_volumes:
             with contextlib.suppress(FileNotFoundError):
                 self._registers[volume.name] = VolumeRegister(volume, self._authors)
@@ -78,7 +78,7 @@ class Registers:
             register.persist()
 
     @property
-    def alphabetic(self) -> Generator[AlphabeticRegister, None, None]:
+    def alphabetic(self) -> Generator[AlphabeticRegister]:
         for idx, start in enumerate(RE_ALPHABET):
             try:
                 end = RE_ALPHABET[idx + 1]
@@ -95,27 +95,27 @@ class Registers:
             yield AlphabeticRegister(start, end, before_start, after_next_start, self._registers)
 
     @property
-    def author(self) -> Generator[AuthorRegister, None, None]:
+    def author(self) -> Generator[AuthorRegister]:
         for author in self.authors:
             register = AuthorRegister(author, self.authors, self._registers)
             if len(register) > 0:
                 yield register
 
     @property
-    def short(self) -> Generator[ShortRegister, None, None]:
+    def short(self) -> Generator[ShortRegister]:
         for main_volume in Volumes().main_volumes:
             register = ShortRegister(main_volume, self._registers)
             yield register
 
     @property
-    def pd(self) -> Generator[PublicDomainRegister, None, None]:
+    def pd(self) -> Generator[PublicDomainRegister]:
         current_year = datetime.now().year
         for year in range(current_year - 5, current_year + 5):
             register = PublicDomainRegister(year, self._authors, self._registers)
             yield register
 
     @property
-    def volumes(self) -> Dict[str, VolumeRegister]:
+    def volumes(self) -> dict[str, VolumeRegister]:
         return self._registers
 
     @property

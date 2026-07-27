@@ -1,8 +1,6 @@
-from typing import List, Optional
-
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 
 
 class P6216CopyrightStatus(ClaimFactory):
@@ -37,8 +35,8 @@ class P6216CopyrightStatus(ClaimFactory):
 
     _THRESHOLD_OF_ORIGINALITY = "Q707401"
 
-    def _get_claim_json(self) -> List[JsonClaimDict]:
-        claim_list: List[JsonClaimDict] = []
+    def _get_claim_json(self) -> list[JsonClaimDict]:
+        claim_list: list[JsonClaimDict] = []
         if self._current_year - int(self._volume_of_article(self.re_page.first_article).year) > 95:
             claim_list.append(self.published_95_years_ago)
         pma_claim = self.min_years_since_death
@@ -76,7 +74,7 @@ class P6216CopyrightStatus(ClaimFactory):
         return claim
 
     @property
-    def min_years_since_death(self) -> Optional[JsonClaimDict]:
+    def min_years_since_death(self) -> JsonClaimDict | None:
         max_death_year = 0
         for author in self.get_authors_article(self.re_page.splitted_article_list[0]):
             if not author.death:

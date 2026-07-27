@@ -1,5 +1,3 @@
-from typing import Dict, List
-
 from service.ws_re import public_domain
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
@@ -9,12 +7,12 @@ from service.ws_re.register.register_types.volume import VolumeRegister
 
 
 class PublicDomainRegister(Register):
-    def __init__(self, year: int, authors: Authors, registers: Dict[str, VolumeRegister]):
+    def __init__(self, year: int, authors: Authors, registers: dict[str, VolumeRegister]):
         super().__init__()
         self._registers = registers
         self.year: int = year
         self._authors: Authors = authors
-        self._pd_authors: List[Author] = self._get_pd_authors()
+        self._pd_authors: list[Author] = self._get_pd_authors()
         self._init_lemmas(self._is_lemma_of_author)
 
     def __repr__(self):
@@ -26,7 +24,7 @@ class PublicDomainRegister(Register):
     def __getitem__(self, item: int) -> Lemma:
         return self._lemmas[item]
 
-    def _get_pd_authors(self) -> List[Author]:
+    def _get_pd_authors(self) -> list[Author]:
         author_list = []
         for author in self._authors:
             if author.death:

@@ -1,15 +1,14 @@
 # pylint: disable=protected-access,no-self-use
 from datetime import datetime
-from typing import List, Optional
 from unittest import TestCase
-from unittest.mock import MagicMock, PropertyMock, Mock
+from unittest.mock import MagicMock, Mock, PropertyMock
 
 import pywikibot
 from testfixtures import compare
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
 from tools.bots.logger import WikiLogger
@@ -27,7 +26,7 @@ class BaseTestClaimFactory(TestCase):
         self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
 
     @staticmethod
-    def _create_mock_page(text: Optional[str] = None, title: Optional[str] = None):
+    def _create_mock_page(text: str | None = None, title: str | None = None):
         mock_item = MagicMock()
         if text:
             text_mock = PropertyMock(return_value=text)
@@ -54,7 +53,7 @@ class BaseTestClaimFactory(TestCase):
 @real_wiki_test
 class TestClaimFactory(BaseTestClaimFactory):
     class P1234FactoryDummy(ClaimFactory):
-        def _get_claim_json(self) -> List[JsonClaimDict]:
+        def _get_claim_json(self) -> list[JsonClaimDict]:
             return []
 
     def setUp(self) -> None:

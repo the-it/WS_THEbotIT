@@ -1,10 +1,10 @@
-from typing import List, Optional, Tuple, cast
+from typing import cast
 
 import pywikibot
 
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
-from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict, ClaimList
+from service.ws_re.scanner.tasks.wikidata.claims._typing import ClaimList, JsonClaimDict
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 from service.ws_re.scanner.tasks.wikidata.claims.p31_instance_of import P31InstanceOf
 from service.ws_re.template.re_page import RePage
 from tools.bots.logger import WikiLogger
@@ -24,7 +24,7 @@ class P1343DescribedBySource(ClaimFactory):
         self.data_item_re_source = self.re_page.page.data_item()
         self.claims_re_source = self.data_item_re_source.get()["claims"].toJSON()
 
-    def _get_claim_json(self) -> List[JsonClaimDict]:
+    def _get_claim_json(self) -> list[JsonClaimDict]:
         re_item_id = int(self.data_item_re_source.id[1:])
         if target_id := self.get_main_topic_id():
             qualifier_snaks = self.get_qualifiers(re_item_id, target_id)
@@ -41,7 +41,7 @@ class P1343DescribedBySource(ClaimFactory):
             return claim_json
         return []
 
-    def get_qualifiers(self, re_item_id: int, target_id: int) -> List[SnakParameter]:
+    def get_qualifiers(self, re_item_id: int, target_id: int) -> list[SnakParameter]:
         target_item = pywikibot.ItemPage(self.re_page.page.data_repository, f"Q{target_id}")
         existing_qualifiers = self.get_existing_qualifiers(target_item)
         if re_item_id not in existing_qualifiers:
@@ -58,7 +58,7 @@ class P1343DescribedBySource(ClaimFactory):
             )
         return qualifier_snaks
 
-    def get_main_topic_id(self) -> Optional[int]:
+    def get_main_topic_id(self) -> int | None:
         if self.MAIN_TOPIC_PROP in self.claims_re_source:
             return int(self.claims_re_source[self.MAIN_TOPIC_PROP][0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
         return None
@@ -77,9 +77,8 @@ class P1343DescribedBySource(ClaimFactory):
         for claim in filtered_described_in_claims:
             try:
                 for qualifier in claim["qualifiers"][self.DESCRIBED_OBJECT_PROP]:
-                    if value := qualifier["datavalue"]["value"]["numeric-id"]:
-                        if value not in existing_qualifiers:
-                            existing_qualifiers.append(value)
+                    if (value := qualifier["datavalue"]["value"]["numeric-id"]) and value not in existing_qualifiers:
+                        existing_qualifiers.append(value)
             except KeyError:
                 self.logger.warning(
                     f"[https://www.wikidata.org/wiki/{target_item.id} Target item]"
@@ -107,7 +106,7 @@ class P1343DescribedBySource(ClaimFactory):
     @classmethod
     def filter_new_vs_old_claim_list(
         cls, new_claim_list: ClaimList, old_claim_list: ClaimList
-    ) -> Tuple[ClaimList, ClaimList]:
+    ) -> tuple[ClaimList, ClaimList]:
         filtered_new_claims, filtered_old_claim_list = ClaimFactory.filter_new_vs_old_claim_list(
             new_claim_list, old_claim_list
         )

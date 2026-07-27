@@ -4,11 +4,12 @@ import re
 import unicodedata
 from dataclasses import dataclass
 from datetime import datetime
-from typing import List, Tuple, Optional, Literal, Pattern, TypedDict, get_args, Union, cast
+from re import Pattern
+from typing import Literal, TypedDict, cast, get_args
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.lemma_chapter import LemmaChapter, ChapterDict
+from service.ws_re.register.lemma_chapter import ChapterDict, LemmaChapter
 from service.ws_re.volumes import Volume
 
 
@@ -40,20 +41,20 @@ def _generate_translation_dict():
         "": "()?'ʾʿ–-",
     }
     _TMP_DICT = {}
-    for key in _TRANSLATION_DICT_RAW:  # pylint: disable=consider-using-dict-items
-        for character in _TRANSLATION_DICT_RAW[key]:
+    for key, characters in _TRANSLATION_DICT_RAW.items():
+        for character in characters:
             _TMP_DICT[character] = key
     return str.maketrans(_TMP_DICT)
 
 
-def _generate_regex_list(raw_list: List[Tuple[str, str]]) -> List[Tuple[Pattern, str]]:
+def _generate_regex_list(raw_list: list[tuple[str, str]]) -> list[tuple[Pattern, str]]:
     regex_list = []
     for regex_pair in raw_list:
         regex_list.append((re.compile(regex_pair[0]), regex_pair[1]))
     return regex_list
 
 
-def _generate_pre_striping_regex() -> List[Tuple[Pattern, str]]:
+def _generate_pre_striping_regex() -> list[tuple[Pattern, str]]:
     raw = [
         (r"(^| )(?:ἅ)", r"\1ha"),
         (r"(^| )(?:ἑ|ἡ|ἥ)", r"\1he"),
@@ -64,7 +65,7 @@ def _generate_pre_striping_regex() -> List[Tuple[Pattern, str]]:
     return _generate_regex_list(raw)
 
 
-def _generate_pre_translate_regex() -> List[Tuple[Pattern, str]]:
+def _generate_pre_translate_regex() -> list[tuple[Pattern, str]]:
     raw = [
         (r"αυ", "au"),
         (r"ευ", "eu"),
@@ -74,7 +75,7 @@ def _generate_pre_translate_regex() -> List[Tuple[Pattern, str]]:
     return _generate_regex_list(raw)
 
 
-def _generate_pre_finalize_regex() -> List[Tuple[Pattern, str]]:
+def _generate_pre_finalize_regex() -> list[tuple[Pattern, str]]:
     raw = [
         # catching of "a ...", "ab ..." and "ad ..."
         (r"^a[db]? ", ""),
@@ -109,7 +110,7 @@ LemmaKeys = Literal[
 ]
 
 
-UpdaterRemoveList = List[str]
+UpdaterRemoveList = list[str]
 
 
 class LemmaDict(TypedDict, total=False):
@@ -117,30 +118,30 @@ class LemmaDict(TypedDict, total=False):
     previous: str
     next: str
     sort_key: str
-    redirect: Union[str, bool]
+    redirect: str | bool
     proof_read: int
     short_description: str
     wp_link: str
     ws_link: str
     wd_link: str
     no_creative_height: bool
-    chapters: List[ChapterDict]
+    chapters: list[ChapterDict]
 
 
 @dataclass(kw_only=True)
 class Lemma:
     lemma: str
-    previous: Optional[str] = None
-    next: Optional[str] = None
-    sort_key: Optional[str] = None
-    redirect: Optional[Union[str, bool]] = None
-    proof_read: Optional[int] = None
-    short_description: Optional[str] = None
-    wp_link: Optional[str] = None
-    ws_link: Optional[str] = None
-    wd_link: Optional[str] = None
-    no_creative_height: Optional[bool] = None
-    chapters: Optional[List[ChapterDict]] = None
+    previous: str | None = None
+    next: str | None = None
+    sort_key: str | None = None
+    redirect: str | bool | None = None
+    proof_read: int | None = None
+    short_description: str | None = None
+    wp_link: str | None = None
+    ws_link: str | None = None
+    wd_link: str | None = None
+    no_creative_height: bool | None = None
+    chapters: list[ChapterDict] | None = None
     volume: Volume
     authors: Authors
 
@@ -167,7 +168,7 @@ class Lemma:
                         raise RegisterException(f"Error init a Lemma chapter from {chapter}") from error
 
     @property
-    def chapter_objects(self) -> List[LemmaChapter]:
+    def chapter_objects(self) -> list[LemmaChapter]:
         return self._chapter_objects
 
     def get_sort_key(self) -> str:
@@ -227,13 +228,13 @@ class Lemma:
         return return_dict
 
     @classmethod
-    def from_dict(cls, lemma_dict: LemmaDict, volume: Volume, authors: Authors) -> "Lemma":
+    def from_dict(cls, lemma_dict: LemmaDict, volume: Volume, authors: Authors) -> Lemma:
         try:
             return Lemma(**lemma_dict, volume=volume, authors=authors)
         except TypeError as error:
             raise RegisterException(f"Error creating a Lemma object from dict {lemma_dict}") from error
 
-    def _get_chapter_dicts(self) -> List[ChapterDict]:
+    def _get_chapter_dicts(self) -> list[ChapterDict]:
         chapter_list = []
         for chapter in self.chapter_objects:
             chapter_list.append(chapter.to_dict())
@@ -277,7 +278,7 @@ class Lemma:
             link = f"[[RE:{self.lemma}|'''{{{{Anker2|{self._escape_link_for_templates(str(self.lemma))}}}}}''']]"
         return link
 
-    def get_wiki_links(self, print_all_links: bool = True) -> Tuple[str, str]:
+    def get_wiki_links(self, print_all_links: bool = True) -> tuple[str, str]:
         link = ""
         sort_key = ""
         links = []
@@ -298,14 +299,16 @@ class Lemma:
             sort_key = f'data-sort-value="{sort_keys[0]}"'
         return link, sort_key
 
-    def _process_wiki_link(self, wiki_type: Literal["wp", "ws"]) -> Tuple[str, str]:
+    def _process_wiki_link(self, wiki_type: Literal["wp", "ws"]) -> tuple[str, str]:
         link_type: Literal["ws_link", "wp_link"] = "ws_link"
         if wiki_type == "wp":
             link_type = "wp_link"
         parts = getattr(self, link_type).split(":")
         return (
-            f"[[{getattr(self, link_type)}|{self._escape_link_for_templates(parts[-1])}"
-            f"<sup>({wiki_type.upper()} {parts[1]})</sup>]]",
+            (
+                f"[[{getattr(self, link_type)}|{self._escape_link_for_templates(parts[-1])}"
+                f"<sup>({wiki_type.upper()} {parts[1]})</sup>]]"
+            ),
             f"{parts[0]}:{parts[1]}:{self.make_sort_key(':'.join(parts[2:]))}",
         )
 
@@ -348,7 +351,7 @@ class Lemma:
         return year
 
     @property
-    def status(self) -> Tuple[str, str]:
+    def status(self) -> tuple[str, str]:
         unkorrigiert = "#AA0000"
         fertig = "#669966"
         korrigiert = "#556B2F"
@@ -364,17 +367,16 @@ class Lemma:
 
         if pd_year := self.get_public_domain_year():
             current_year = datetime.now().year
-            if pd_year > current_year:
-                if not self.no_creative_height:
-                    if self.exists:
-                        return str(pd_year), orange
-                    return str(pd_year), white
+            if pd_year > current_year and not self.no_creative_height:
+                if self.exists:
+                    return str(pd_year), orange
+                return str(pd_year), white
 
         if self.proof_read == 0:
             return "", orange
         return "", white
 
-    def update_lemma_dict(self, update_dict: LemmaDict, remove_items: Optional[List[str]] = None):
+    def update_lemma_dict(self, update_dict: LemmaDict, remove_items: list[str] | None = None):
         """Update lemma attributes from a dictionary."""
         # Update attributes from the dictionary
         for key in update_dict:
@@ -391,6 +393,4 @@ class Lemma:
 
     @property
     def exists(self) -> bool:
-        if self.proof_read is not None:
-            return True
-        return False
+        return self.proof_read is not None

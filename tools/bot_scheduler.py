@@ -1,14 +1,14 @@
 import contextlib
 import sys
 from datetime import datetime, timedelta
-from typing import Dict, List, Type, cast
+from typing import cast
 
 from pywikibot import Site
 from pywikibot.site import BaseSite
 
 from tools.bots.cloud_bot import CloudBot
 
-BotList = List[Type[CloudBot]]
+BotList = list[type[CloudBot]]
 
 
 class BotScheduler(CloudBot):
@@ -16,8 +16,8 @@ class BotScheduler(CloudBot):
         self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
     ):
         self.daily_bots: BotList = []
-        self.weekly_bots: Dict[int, BotList] = {}
-        self.monthly_bots: Dict[int, BotList] = {}
+        self.weekly_bots: dict[int, BotList] = {}
+        self.monthly_bots: dict[int, BotList] = {}
         self.bots_on_last_day_of_month: BotList = []
         super().__init__(wiki, debug, log_to_screen, log_to_wiki)
         self._now = datetime.now()
@@ -59,10 +59,9 @@ class BotScheduler(CloudBot):
             with contextlib.suppress(KeyError):
                 for monthly_bot in self.monthly_bots[self.now().day]:
                     self.run_bot(monthly_bot(wiki=self.wiki, debug=self.debug))
-        if self.bots_on_last_day_of_month:
-            if self._last_day_of_month():
-                for last_day_monthly_bot in self.bots_on_last_day_of_month:
-                    self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=self.debug))
+        if self.bots_on_last_day_of_month and self._last_day_of_month():
+            for last_day_monthly_bot in self.bots_on_last_day_of_month:
+                self.run_bot(last_day_monthly_bot(wiki=self.wiki, debug=self.debug))
 
     def task(self):
         self.logger.info(f"Running on Python Version: {sys.version}")

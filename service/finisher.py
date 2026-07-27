@@ -1,16 +1,15 @@
 import re
 from contextlib import suppress
-from datetime import timedelta, datetime
-from typing import Tuple
+from datetime import datetime, timedelta
 
 import pywikibot
-from pywikibot import Site, Page
+from pywikibot import Page, Site
 from pywikibot.site import BaseSite
 
+from tools import add_category, has_korrigiert_category, remove_category, save_if_changed
 from tools.bots import BotException
 from tools.bots.cloud_bot import CloudBot
 from tools.petscan import PetScan, get_processed_time
-from tools import has_korrigiert_category, save_if_changed, add_category, remove_category
 
 
 class Finisher(CloudBot):
@@ -110,12 +109,10 @@ class Finisher(CloudBot):
         linked_pages = [page.title() for page in lemma.linkedPages() if page.namespace() in (0, 2)]
         # if some of those links contain the title of the lemma itself, it is very likely, that we have an overview
         # lemma.
-        if [page for page in linked_pages if f"{lemma.title()}/" in page]:
-            return True
-        return False
+        return bool([page for page in linked_pages if f"{lemma.title()}/" in page])
 
     @staticmethod
-    def try_autocorrect(text: str) -> Tuple[str, bool]:
+    def try_autocorrect(text: str) -> tuple[str, bool]:
         new = re.sub(r"\|STATUS(\s{0,10}=\s{0,10})korrigiert", r"|STATUS\1fertig", text)
         return new, text != new
 

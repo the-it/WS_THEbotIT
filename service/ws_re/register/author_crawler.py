@@ -1,5 +1,4 @@
 import re
-from typing import List, Dict, Tuple, Optional
 
 from pywikibot.site import BaseSite
 
@@ -32,7 +31,7 @@ class AuthorCrawler:
         return cls._COMMENT_LINE_REGEX.sub("", mapping)
 
     @staticmethod
-    def _split_mappings(mapping: str) -> List[str]:
+    def _split_mappings(mapping: str) -> list[str]:
         mapping = re.sub(r"^return \{\n", "", mapping)
         mapping = re.sub(r"\}\s?$", "", mapping)
         splitted_mapping = mapping.split("\n[")
@@ -84,7 +83,7 @@ class AuthorCrawler:
         return mapping_dict
 
     @classmethod
-    def get_authors(cls, text: str) -> Dict[str, AuthorDict]:
+    def get_authors(cls, text: str) -> dict[str, AuthorDict]:
         return_dict = {}
         author_list = cls._split_author_table(text)
         for author_sub_table in author_list:
@@ -92,7 +91,7 @@ class AuthorCrawler:
         return return_dict
 
     @staticmethod
-    def _split_author_table(raw_table: str) -> List[str]:
+    def _split_author_table(raw_table: str) -> list[str]:
         hit = re.search(
             r"\{\|class=\"wikitable sortable tabelle-kopf-fixiert\"[^\|]*?\|-\s+(.*)\s+\|\}", raw_table, re.DOTALL
         )
@@ -103,11 +102,11 @@ class AuthorCrawler:
         raise ValueError("raw_table not compatible to regex.")
 
     @staticmethod
-    def _split_author(author_sub_table: str) -> List[str]:
+    def _split_author(author_sub_table: str) -> list[str]:
         return author_sub_table.split("\n|")
 
     @staticmethod
-    def _extract_author_infos(author: str) -> Tuple[str, str, str]:
+    def _extract_author_infos(author: str) -> tuple[str, str, str]:
         author = author.lstrip("|")
         # replace all templates
         author = re.sub(r"\{\{.*?\}\}", "", author)
@@ -143,7 +142,7 @@ class AuthorCrawler:
         return names[1].strip(), names[0].strip(), author_lemma
 
     @staticmethod
-    def _extract_years(years: str) -> Tuple[Optional[int], Optional[int]]:
+    def _extract_years(years: str) -> tuple[int | None, int | None]:
         # Dates don't have to be present. If alternatives are present like 1991/92 the second alternative counts.
         # Pattern groups:
         #  - birth1: 4-digit birth year (optional)
@@ -165,7 +164,7 @@ class AuthorCrawler:
             # Birth processing
             birth_main = hit.group("birth1")
             birth_suffix = hit.group("birth2")
-            birth: Optional[int]
+            birth: int | None
             if birth_suffix:
                 if len(birth_suffix) == 2 and birth_main and len(birth_main) == 4:
                     birth = int(birth_main[:2] + birth_suffix)
@@ -177,7 +176,7 @@ class AuthorCrawler:
             # Death processing
             death_main = hit.group("death1")
             death_suffix = hit.group("death2")
-            death: Optional[int]
+            death: int | None
             if death_suffix:
                 # Case like 1991/92 or 1991/1992 -> keep the second year; if 2 digits, keep the century of the first
                 if len(death_suffix) == 2 and death_main and len(death_main) == 4:
@@ -190,14 +189,14 @@ class AuthorCrawler:
         return None, None
 
     @staticmethod
-    def _extract_wp_lemma(wp_column: str) -> Optional[str]:
+    def _extract_wp_lemma(wp_column: str) -> str | None:
         hit = re.search(r"\[\[w:([^\|]*)\|", wp_column)
         if hit:
             return hit.group(1)
         return None
 
     @classmethod
-    def _get_author(cls, author_lines: str) -> Dict[str, AuthorDict]:
+    def _get_author(cls, author_lines: str) -> dict[str, AuthorDict]:
         lines = cls._split_author(re.sub(r"<!--.*?-->", "", author_lines, flags=re.DOTALL))
         author_tuple = cls._extract_author_infos(lines[0])
         years = cls._extract_years(lines[1])
@@ -207,7 +206,7 @@ class AuthorCrawler:
         # Use the ws_lemma as key if present, fall back to the wp_lemma, and use
         # the plain first/last name only as a last resort.
         key = ws_lemma or name
-        author_dict: Dict[str, AuthorDict] = {key: {"last_name": author_tuple[1]}}
+        author_dict: dict[str, AuthorDict] = {key: {"last_name": author_tuple[1]}}
         if author_tuple[0]:
             author_dict[key]["first_name"] = author_tuple[0]
         if ws_lemma:
@@ -223,7 +222,7 @@ class AuthorCrawler:
         return author_dict
 
     @classmethod
-    def process_author_infos(cls, wiki: BaseSite) -> Dict[str, AuthorDict]:
+    def process_author_infos(cls, wiki: BaseSite) -> dict[str, AuthorDict]:
         text = fetch_text_from_wiki_site(wiki, "Paulys Realencyclopädie der classischen Altertumswissenschaft/Autoren")
         return cls.get_authors(text)
 

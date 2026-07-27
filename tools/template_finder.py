@@ -1,6 +1,5 @@
 import re
 from dataclasses import dataclass
-from typing import List
 
 
 class TemplateFinderException(Exception):
@@ -18,8 +17,8 @@ class TemplateFinder:
     def __init__(self, text_to_search: str):
         self.text = text_to_search
 
-    def get_positions(self, template_name: str) -> List[TemplatePosition]:
-        templates: List[TemplatePosition] = []
+    def get_positions(self, template_name: str) -> list[TemplatePosition]:
+        templates: list[TemplatePosition] = []
         for start_position_template in self.get_start_positions_of_regex(r"\{\{" + template_name, self.text):
             pos_start_brackets = self.get_start_positions_of_regex(r"\{\{", self.text[start_position_template + 2 :])
             pos_start_brackets.reverse()
@@ -53,8 +52,8 @@ class TemplateFinder:
         return templates
 
     @staticmethod
-    def get_start_positions_of_regex(regex_pattern: str, text: str) -> List[int]:
-        list_of_positions: List[int] = []
+    def get_start_positions_of_regex(regex_pattern: str, text: str) -> list[int]:
+        list_of_positions: list[int] = []
         for match in re.finditer(regex_pattern, text):
             list_of_positions.append(match.regs[0][0])  # false positive, there is the attribute regs
         return list_of_positions

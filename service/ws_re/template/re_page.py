@@ -1,12 +1,12 @@
 import re
-from typing import Union, Optional, Iterator
+from collections.abc import Iterator
 
 import pywikibot
 
-from service.ws_re.template import RE_DATEN, RE_ABSCHNITT, RE_AUTHOR, ReDatenException
+from service.ws_re.template import RE_ABSCHNITT, RE_AUTHOR, RE_DATEN, ReDatenException
 from service.ws_re.template.article import Article
 from tools import save_if_changed
-from tools.template_finder import TemplateFinderException, TemplateFinder, TemplatePosition
+from tools.template_finder import TemplateFinder, TemplateFinderException, TemplatePosition
 
 
 class ArticleList:
@@ -31,7 +31,7 @@ class ArticleList:
 
 
 class SplittedArticleList:
-    def __init__(self, article_list: list[Union[Article, str]]):
+    def __init__(self, article_list: list[Article | str]):
         self._article_list = article_list
         self._splitted_list = self._create_splitted_article_list()
 
@@ -74,7 +74,7 @@ class RePage:
     def __init__(self, wiki_page: pywikibot.Page):
         self.page: pywikibot.Page = wiki_page
         self.pre_text: str = self.page.text
-        self._article_list: list[Union[Article, str]] = []
+        self._article_list: list[Article | str] = []
         self._init_page_dict()
         self.splitted_article_list = SplittedArticleList(self._article_list)
 
@@ -116,19 +116,19 @@ class RePage:
             f"lemma: {self.lemma_without_prefix})>"
         )
 
-    def __getitem__(self, idx: int) -> Union[Article, str]:
+    def __getitem__(self, idx: int) -> Article | str:
         return self._article_list[idx]
 
     def __len__(self) -> int:
         return len(self._article_list)
 
-    def __iter__(self) -> Iterator[Union[Article, str]]:
+    def __iter__(self) -> Iterator[Article | str]:
         yield from self._article_list
 
     def __delitem__(self, idx: int):
         del self._article_list[idx]
 
-    def __setitem__(self, idx: int, item: Union[Article, str]):
+    def __setitem__(self, idx: int, item: Article | str):
         self._article_list[idx] = item
 
     def __str__(self) -> str:
@@ -159,10 +159,7 @@ class RePage:
         checks if there is a writing protection on that wiki page, aka only admins are able to edit this page
         """
         protection_dict = self.page.protection()
-        if "edit" in protection_dict.keys():
-            if protection_dict["edit"][0] == "sysop":
-                return False
-        return True
+        return not ("edit" in protection_dict and protection_dict["edit"][0] == "sysop")
 
     def save(self, reason: str):
         if self.is_writable:
@@ -211,11 +208,9 @@ class RePage:
         todo: make this obsolete by construction the page as rendered in wiki
         raise a flag is the page has a complex construction, marked by sub lemmas inserted via ... {{#lst: ...
         """
-        if re.search(r"\{\{#lst:", self.page.text):
-            return True
-        return False
+        return bool(re.search(r"\{\{#lst:", self.page.text))
 
-    def add_error_category(self, category: str, note: Optional[str] = None):
+    def add_error_category(self, category: str, note: str | None = None):
         """
         Adds an error category at the end of the RE lemma
 

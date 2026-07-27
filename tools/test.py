@@ -1,5 +1,5 @@
 import os
-from unittest import skipUnless, mock
+from unittest import mock, skipUnless
 
 REAL_DATA_TEST = "WS_REAL_DATA" in os.environ
 REAL_WIKI_TEST = "WS_REAL_WIKI" in os.environ

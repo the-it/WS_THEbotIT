@@ -1,5 +1,3 @@
-from typing import Dict, Tuple
-
 from service.ws_re.register.author import Author
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.lemma import Lemma
@@ -8,7 +6,7 @@ from service.ws_re.register.register_types.volume import VolumeRegister
 
 
 class AuthorRegister(Register):
-    def __init__(self, author: Author, authors: Authors, registers: Dict[str, VolumeRegister]):
+    def __init__(self, author: Author, authors: Authors, registers: dict[str, VolumeRegister]):
         super().__init__()
         self._registers = registers
         self._author: Author = author
@@ -85,7 +83,7 @@ class AuthorRegister(Register):
         return "".join(line)
 
     @staticmethod
-    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int) -> Tuple[int, int, int]:
+    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int) -> tuple[int, int, int]:
         part_fer = round(fer / sum_lemmas * 20)
         part_kor = round((kor + fer) / sum_lemmas * 20) - part_fer
         part_unk = 20 - (part_fer + part_kor)

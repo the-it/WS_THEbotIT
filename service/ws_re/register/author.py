@@ -1,4 +1,4 @@
-from typing import Literal, Optional, Tuple
+from typing import Literal
 
 from service.ws_re import public_domain
 from service.ws_re.register._typing import AuthorDict
@@ -15,44 +15,44 @@ class Author:
         return f"<{self.__class__.__name__} - name:{self.name}, birth:{self.birth}, death:{self.death}>"
 
     @property
-    def death(self) -> Optional[int]:
-        if "death" in self._dict.keys():
+    def death(self) -> int | None:
+        if "death" in self._dict:
             return self._dict["death"]
         return None
 
     @property
-    def birth(self) -> Optional[int]:
-        if "birth" in self._dict.keys():
+    def birth(self) -> int | None:
+        if "birth" in self._dict:
             return self._dict["birth"]
         return None
 
     @property
-    def first_name(self) -> Optional[str]:
-        if "first_name" in self._dict.keys():
+    def first_name(self) -> str | None:
+        if "first_name" in self._dict:
             return self._dict["first_name"]
         return None
 
     @property
     def last_name(self) -> str:
-        if "last_name" in self._dict.keys():
+        if "last_name" in self._dict:
             return self._dict["last_name"]
         return ""
 
     @property
-    def redirect(self) -> Optional[str]:
-        if "redirect" in self._dict.keys():
+    def redirect(self) -> str | None:
+        if "redirect" in self._dict:
             return self._dict["redirect"]
         return None
 
     @property
-    def ws_lemma(self) -> Optional[str]:
-        if "ws_lemma" in self._dict.keys():
+    def ws_lemma(self) -> str | None:
+        if "ws_lemma" in self._dict:
             return self._dict["ws_lemma"]
         return None
 
     @property
-    def wp_lemma(self) -> Optional[str]:
-        if "wp_lemma" in self._dict.keys():
+    def wp_lemma(self) -> str | None:
+        if "wp_lemma" in self._dict:
             return self._dict["wp_lemma"]
         return None
 
@@ -68,7 +68,7 @@ class Author:
         return name
 
     def update_internal_dict(self, author_dict: AuthorDict):
-        keys: Tuple[Literal["birth", "death", "first_name", "last_name", "wp_lemma", "ws_lemma", "redirect"], ...] = (
+        keys: tuple[Literal["birth", "death", "first_name", "last_name", "wp_lemma", "ws_lemma", "redirect"], ...] = (
             "birth",
             "death",
             "first_name",

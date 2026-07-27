@@ -1,9 +1,7 @@
-from typing import List
-
-from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
+from service.ws_re.scanner.tasks.wikidata.base import get_article_type
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
-from service.ws_re.scanner.tasks.wikidata.base import get_article_type
+from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
 
 
 class P31InstanceOf(ClaimFactory):
@@ -16,7 +14,7 @@ class P31InstanceOf(ClaimFactory):
     INDEX = "Q873506"
     PROLOGUE = "Q920285"
 
-    def _get_claim_json(self) -> List[JsonClaimDict]:
+    def _get_claim_json(self) -> list[JsonClaimDict]:
         article_type = get_article_type(self.re_page)
         if article_type == "index":
             target = self.INDEX

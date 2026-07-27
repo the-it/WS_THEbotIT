@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional, cast
+from typing import cast
 
 import pywikibot
 from pywikibot.data import sparql
@@ -25,9 +25,9 @@ class P921MainSubject(ClaimFactory):
     pq:P958 ?REArticle.
 }"""
     # lazy initialized mapping <lemma without prefix> -> <item id>, shared by all instances
-    _backlink_mapping: Optional[Dict[str, str]] = None
+    _backlink_mapping: dict[str, str] | None = None
 
-    def _get_claim_json(self) -> List[JsonClaimDict]:
+    def _get_claim_json(self) -> list[JsonClaimDict]:
         target_item_id = self._get_item_of_wp_article()
         if not target_item_id:
             target_item_id = self.get_backlink_mapping().get(self.re_page.lemma_without_prefix)
@@ -41,7 +41,7 @@ class P921MainSubject(ClaimFactory):
 
         return [self.create_claim_json(snak, references=[[self._IMPORTED_FROM_WIKISOURCE]])]
 
-    def _get_item_of_wp_article(self) -> Optional[str]:
+    def _get_item_of_wp_article(self) -> str | None:
         wp_article = str(self.re_page.first_article["WIKIPEDIA"].value)
         # if no wp_article is present, there is nothing to connect
         if not wp_article:
@@ -60,15 +60,15 @@ class P921MainSubject(ClaimFactory):
         return str(wp_data_item.id)
 
     @classmethod
-    def get_backlink_mapping(cls) -> Dict[str, str]:
+    def get_backlink_mapping(cls) -> dict[str, str]:
         if cls._backlink_mapping is None:
             query_result = sparql.SparqlQuery().select(cls._BACKLINK_QUERY)
             cls._backlink_mapping = cls._process_backlink_query(query_result or [])
         return cls._backlink_mapping
 
     @staticmethod
-    def _process_backlink_query(query_result: List[Dict[str, str]]) -> Dict[str, str]:
-        mapping: Dict[str, str] = {}
+    def _process_backlink_query(query_result: list[dict[str, str]]) -> dict[str, str]:
+        mapping: dict[str, str] = {}
         ambiguous_lemmas = set()
         for row in query_result:
             lemma = row["REArticle"]
@@ -81,7 +81,7 @@ class P921MainSubject(ClaimFactory):
             del mapping[lemma]
         return mapping
 
-    def get_claims_to_update(self, data_item: Optional[pywikibot.ItemPage]) -> ChangedClaimsDict:
+    def get_claims_to_update(self, data_item: pywikibot.ItemPage | None) -> ChangedClaimsDict:
         """
         Only add claims, if no claim already exist.
         Alert with an error if existing claim and added claim are different.

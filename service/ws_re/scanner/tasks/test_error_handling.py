@@ -39,31 +39,35 @@ class TestERROTask(TestCase):
             )
 
     def test_finish_up(self):
-        with mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page") as page_mock:
-            with mock.patch(
+        with (
+            mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page") as page_mock,
+            mock.patch(
                 "service.ws_re.scanner.tasks.base_task.pywikibot.Page.text",
                 new_callable=mock.PropertyMock(return_value="bla"),
-            ) as text_mock:
-                type(page_mock).text = text_mock
-                with LogCapture():
-                    task = ERROTask(None, self.logger, debug=False)
-                    task.append_error(
-                        ":RE:Lemma1",
-                        "service.ws_re.template.ReDatenException: "
-                        "The count of start templates doesn't "
-                        "match the count of end templates.",
-                    )
-                    task.finish_task()
-                    self.assertEqual(1, page_mock.call_count)
+            ) as text_mock,
+        ):
+            type(page_mock).text = text_mock
+            with LogCapture():
+                task = ERROTask(None, self.logger, debug=False)
+                task.append_error(
+                    ":RE:Lemma1",
+                    "service.ws_re.template.ReDatenException: "
+                    "The count of start templates doesn't "
+                    "match the count of end templates.",
+                )
+                task.finish_task()
+                self.assertEqual(1, page_mock.call_count)
 
     def test_finish_up_no_errors(self):
-        with mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page") as page_mock:
-            with mock.patch(
+        with (
+            mock.patch("service.ws_re.scanner.tasks.base_task.pywikibot.Page") as page_mock,
+            mock.patch(
                 "service.ws_re.scanner.tasks.base_task.pywikibot.Page.text",
                 new_callable=mock.PropertyMock(return_value="bla"),
-            ) as text_mock:
-                type(page_mock).text = text_mock
-                with LogCapture():
-                    task = ERROTask(None, self.logger, debug=False)
-                    task.finish_task()
-                    self.assertEqual(0, page_mock.call_count)
+            ) as text_mock,
+        ):
+            type(page_mock).text = text_mock
+            with LogCapture():
+                task = ERROTask(None, self.logger, debug=False)
+                task.finish_task()
+                self.assertEqual(0, page_mock.call_count)

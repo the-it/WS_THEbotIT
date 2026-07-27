@@ -3,9 +3,8 @@ import os
 import shutil
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
 
-from git import Repo, GitError
+from git import GitError, Repo
 
 REPO_URL = "git@github.com:the-it/re_register_data.git"
 if "GITHUB_TOKEN" in os.environ:
@@ -33,7 +32,7 @@ class DataRepo:
         return PATH_MOCK_DATA
 
     @classmethod
-    def _get_git_repo(cls, update_repo) -> Optional[Repo]:
+    def _get_git_repo(cls, update_repo) -> Repo | None:
         if cls.data_is_real:
             try:
                 repo = Repo(path=PATH_REAL_DATA)
@@ -48,13 +47,12 @@ class DataRepo:
         return None
 
     def push(self) -> bool:
-        if self._git_repo:
-            if self._git_repo.index.diff(None):
-                self._git_repo.git.add(str(PATH_REAL_DATA))
-                now = datetime.now().strftime("%y%m%d_%H%M%S")
-                self._git_repo.index.commit(f"Updating the register at {now}")
-                self._git_repo.git.push("origin", self._git_repo.active_branch.name)
-                return True
+        if self._git_repo and self._git_repo.index.diff(None):
+            self._git_repo.git.add(str(PATH_REAL_DATA))
+            now = datetime.now().strftime("%y%m%d_%H%M%S")
+            self._git_repo.index.commit(f"Updating the register at {now}")
+            self._git_repo.git.push("origin", self._git_repo.active_branch.name)
+            return True
         return False
 
     def checkout_commit_after(self, target: datetime) -> None:

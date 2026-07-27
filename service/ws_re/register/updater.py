@@ -1,5 +1,4 @@
 import contextlib
-from typing import Optional
 
 from service.ws_re.register._base import RegisterException
 from service.ws_re.register.lemma import Lemma, LemmaDict, UpdaterRemoveList
@@ -141,16 +140,18 @@ class Updater:
             if self_supplement and pre_idx and post_idx:
                 pre_idx_list: list[int] = [pre_idx]
                 post_idx_list: list[int] = [post_idx]
-                if pre_lemma := self._register.get_lemma_by_sort_key(
-                    Lemma.make_sort_key(lemma_dict["previous"]), self_supplement
-                ):
-                    if idx := self._register.get_index_of_lemma(pre_lemma, self_supplement=True):
-                        pre_idx_list.append(idx)
-                if post_lemma := self._register.get_lemma_by_sort_key(
-                    Lemma.make_sort_key(lemma_dict["next"]), self_supplement
-                ):
-                    if idx := self._register.get_index_of_lemma(post_lemma, self_supplement=True):
-                        post_idx_list.append(idx)
+                if (
+                    pre_lemma := self._register.get_lemma_by_sort_key(
+                        Lemma.make_sort_key(lemma_dict["previous"]), self_supplement
+                    )
+                ) and (idx := self._register.get_index_of_lemma(pre_lemma, self_supplement=True)):
+                    pre_idx_list.append(idx)
+                if (
+                    post_lemma := self._register.get_lemma_by_sort_key(
+                        Lemma.make_sort_key(lemma_dict["next"]), self_supplement
+                    )
+                ) and (idx := self._register.get_index_of_lemma(post_lemma, self_supplement=True)):
+                    post_idx_list.append(idx)
                 for pre_idx_tmp in pre_idx_list:
                     for post_idx_tmp in post_idx_list:
                         if abs(post_idx_tmp - pre_idx_tmp) <= 2:
@@ -229,7 +230,7 @@ class Updater:
                 with contextlib.suppress(IndexError):
                     next_lemma = self._register[idx + 1]
                     next_lemma_dict: LemmaDict = {"lemma": new_lemma_dict["next"], "previous": new_lemma_dict["lemma"]}
-                    next_next_lemma: Optional[str] = str(next_lemma.next) if next_lemma.next else None
+                    next_next_lemma: str | None = str(next_lemma.next) if next_lemma.next else None
                     if next_next_lemma:
                         next_lemma_dict["next"] = next_next_lemma
                     if Lemma.make_sort_key(str(next_lemma_dict["lemma"])) == next_lemma.get_sort_key():
@@ -245,7 +246,7 @@ class Updater:
                     return
                 pre_lemma = self._register[idx - 1]
                 pre_lemma_dict: LemmaDict = {"lemma": new_lemma_dict["previous"], "next": new_lemma_dict["lemma"]}
-                pre_pre_lemma: Optional[str] = str(pre_lemma.previous) if pre_lemma.previous else None
+                pre_pre_lemma: str | None = str(pre_lemma.previous) if pre_lemma.previous else None
                 if pre_pre_lemma:
                     pre_lemma_dict["previous"] = pre_pre_lemma
                 if Lemma.make_sort_key(pre_lemma_dict["lemma"]) == pre_lemma.get_sort_key():

@@ -2,7 +2,6 @@ import json
 import tempfile
 from datetime import datetime
 from pathlib import Path
-from typing import List, Tuple, Union
 
 from PIL import Image, ImageDraw, ImageFont
 from pywikibot import FilePage, Site
@@ -28,7 +27,7 @@ COLOR_WHITE = (255, 255, 255)
 COLOR_BACKGROUND = (255, 255, 255)
 COLOR_TEXT = (0, 0, 0)
 
-Color = Tuple[int, int, int]
+Color = tuple[int, int, int]
 
 
 def _is_public_domain(lemma: dict, authors: Authors, volume_name: str) -> bool:
@@ -61,9 +60,9 @@ def _color_for_lemma(lemma: dict, authors: Authors, volume_name: str) -> Color:
 
 
 def _build_row_articles(
-    lemmas: List[dict], start_column: int, length: int, authors: Authors, volume_name: str
-) -> List[List[Color]]:
-    spans: List[List] = []
+    lemmas: list[dict], start_column: int, length: int, authors: Authors, volume_name: str
+) -> list[list[Color]]:
+    spans: list[list] = []
     for lemma in lemmas:
         chapters = lemma.get("chapters", [])
         if not chapters:
@@ -96,7 +95,7 @@ def _build_row_articles(
                 new_last = min(new_last, other[0] - 1)
         span[1] = max(original_last, new_last)
 
-    articles_per_column: List[List[Color]] = [[] for _ in range(length)]
+    articles_per_column: list[list[Color]] = [[] for _ in range(length)]
     for first, last, color, _ in spans:
         for column in range(first, last + 1):
             idx = column - start_column
@@ -105,7 +104,7 @@ def _build_row_articles(
     return articles_per_column
 
 
-def _load_font(size: int = 13) -> Union[ImageFont.FreeTypeFont, ImageFont.ImageFont]:
+def _load_font(size: int = 13) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     for candidate in ("DejaVuSans.ttf", "Arial.ttf", "Helvetica.ttf"):
         try:
             return ImageFont.truetype(candidate, size)
@@ -117,7 +116,7 @@ def _load_font(size: int = 13) -> Union[ImageFont.FreeTypeFont, ImageFont.ImageF
 def create_picture(output_path: Path) -> None:
     data_path = DataRepo().get_data_path()
     authors = Authors()
-    rows: List[Tuple[str, int, List[List[Color]]]] = []
+    rows: list[tuple[str, int, list[list[Color]]]] = []
     for volume in Volumes().all_volumes:
         start_column = volume.start_column
         end_column = volume.end_column
@@ -163,7 +162,7 @@ def create_picture(output_path: Path) -> None:
         bar_y = header_y + HEADER_HEIGHT
 
         bar_offset = 0
-        gridline_positions: List[Tuple[int, int]] = []
+        gridline_positions: list[tuple[int, int]] = []
         for col_idx, article_colors in enumerate(articles_per_column):
             c = start_column + col_idx
             if col_idx > 0 and c % COLUMN_GRID_INTERVAL == 0:

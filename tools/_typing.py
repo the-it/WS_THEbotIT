@@ -1,12 +1,12 @@
-from typing import TypedDict, Optional, List
+from typing import TypedDict
 
 
 class TemplateParameterDict(TypedDict):
-    key: Optional[str]
+    key: str | None
     value: str
 
 
-TemplateParameterList = List[TemplateParameterDict]
+TemplateParameterList = list[TemplateParameterDict]
 
 
 class PetscanLemma(TypedDict):

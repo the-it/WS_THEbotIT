@@ -1,7 +1,6 @@
 import contextlib
 import re
 from functools import lru_cache
-from typing import List, Tuple, Dict, Optional
 
 import pywikibot
 
@@ -24,7 +23,7 @@ class SCANTask(ReScannerTask):
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self.registers = Registers(update_data=True)
-        self._strategies: Dict[str, List[str]] = {}
+        self._strategies: dict[str, list[str]] = {}
 
     def task(self) -> bool:
         if "RE:Stammdaten überprüfen" in self.re_page.page.text:
@@ -49,32 +48,32 @@ class SCANTask(ReScannerTask):
         self.logger.info("Push changes for authors and registers.")
         self.registers.repo.push()
 
-    def _fetch_wp_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_wp_link(self, article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         if wp_value := str(article["WIKIPEDIA"].value):
-            wp_link: Optional[str] = f"w:de:{wp_value}" if ":" not in wp_value else f"w:{wp_value}"
+            wp_link: str | None = f"w:de:{wp_value}" if ":" not in wp_value else f"w:{wp_value}"
         else:
             wp_link = self._get_link_from_wd("wikipedia")
         if wp_link:
             return {"wp_link": wp_link}, []
         return {}, ["wp_link"]
 
-    def _fetch_ws_link(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_ws_link(self, article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         if article["WIKISOURCE"].value:
-            ws_link: Optional[str] = f"s:de:{article['WIKISOURCE'].value}"
+            ws_link: str | None = f"s:de:{article['WIKISOURCE'].value}"
         else:
             ws_link = self._get_link_from_wd("wikisource")
         if ws_link:
             return {"ws_link": ws_link}, []
         return {}, ["ws_link"]
 
-    def _fetch_wd_link(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_wd_link(self, _) -> tuple[LemmaDict, UpdaterRemoveList]:
         if target := self._get_target_from_wd():
             return {"wd_link": f"d:{target.id}"}, []
         return {}, ["wd_link"]
 
-    def _get_link_from_wd(self, wiki: str) -> Optional[str]:
+    def _get_link_from_wd(self, wiki: str) -> str | None:
         target = self._get_target_from_wd()
         if target:
             wiki_prefix = "s" if wiki == "wikisource" else "w"
@@ -85,29 +84,29 @@ class SCANTask(ReScannerTask):
         return None
 
     @staticmethod
-    @lru_cache()
+    @lru_cache
     def _get_site_from_str(site_link_str: str) -> pywikibot.site.BaseSite:
         return pywikibot.Site(site_link_str)
 
-    def _get_target_from_wd(self) -> Optional[pywikibot.ItemPage]:
+    def _get_target_from_wd(self) -> pywikibot.ItemPage | None:
         with contextlib.suppress(pywikibot.exceptions.NoPageError):
             wp_item = self.re_page.page.data_item()
             with contextlib.suppress(KeyError):
                 return wp_item.claims["P921"][0].target
         return None
 
-    def _fetch_sort_key(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_sort_key(self, _) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list.first_article
         sort_key = str(article["SORTIERUNG"].value)
         if sort_key:
             return {"sort_key": sort_key}, []
         return {}, ["sort_key"]
 
-    def _fetch_lemma(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_lemma(self, _) -> tuple[LemmaDict, UpdaterRemoveList]:
         return {"lemma": self.re_page.lemma_without_prefix}, []
 
     @staticmethod
-    def _fetch_redirect(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_redirect(article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         redirect = get_redirect(article)
         if redirect:
@@ -115,7 +114,7 @@ class SCANTask(ReScannerTask):
         return {}, ["redirect"]
 
     @staticmethod
-    def _fetch_previous(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_previous(article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         previous = str(article["VORGÄNGER"].value)
         if previous and previous != "OFF":
@@ -123,14 +122,14 @@ class SCANTask(ReScannerTask):
         return {}, ["previous"]
 
     @staticmethod
-    def _fetch_next(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_next(article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         next_lemma = str(article["NACHFOLGER"].value)
         if next_lemma and next_lemma != "OFF":
             return {"next": next_lemma}, []
         return {}, ["next"]
 
-    def _fetch_short_description(self, _) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_short_description(self, _) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = self.re_page.splitted_article_list.first_article
         short_description = str(article["KURZTEXT"].value)
         if short_description:
@@ -138,14 +137,14 @@ class SCANTask(ReScannerTask):
         return {}, ["short_description"]
 
     @staticmethod
-    def _fetch_no_creative_height(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_no_creative_height(article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         no_creative_height = bool(article["KEINE_SCHÖPFUNGSHÖHE"].value)
         if no_creative_height:
             return {"no_creative_height": no_creative_height}, []
         return {}, ["no_creative_height"]
 
-    def _fetch_pages(self, article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_pages(self, article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         # if there is something outside an article ignore it
         article_list = [article for article in article_list if isinstance(article, Article)]
         if len(article_list) == 1:
@@ -158,7 +157,7 @@ class SCANTask(ReScannerTask):
             return {}, []
         return {"chapters": self._analyse_complex_article_list(article_list)}, []
 
-    def _analyse_simple_article_list(self, article_list: List[Article]) -> ChapterDict:
+    def _analyse_simple_article_list(self, article_list: list[Article]) -> ChapterDict:
         article = article_list[0]
         try:
             spalte_start = int(article["SPALTE_START"].value)
@@ -173,10 +172,10 @@ class SCANTask(ReScannerTask):
         single_article_dict = self._create_chapter_dict(article, spalte_end, spalte_start)
         return single_article_dict
 
-    def _analyse_complex_article_list(self, article_list: List[Article]) -> List[ChapterDict]:
+    def _analyse_complex_article_list(self, article_list: list[Article]) -> list[ChapterDict]:
         simple_dict = self._analyse_simple_article_list(article_list)
         article_start = int(simple_dict["start"])
-        chapter_list: List[ChapterDict] = []
+        chapter_list: list[ChapterDict] = []
         for article in article_list:
             # if there will be no findings of the regex, the article continues on the next page as the predecessor
             spalte_start: int = article_start
@@ -204,17 +203,16 @@ class SCANTask(ReScannerTask):
         return single_article_dict
 
     @staticmethod
-    def _fetch_proof_read(article_list: List[Article]) -> Tuple[LemmaDict, UpdaterRemoveList]:
+    def _fetch_proof_read(article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
         proof_read = str(article["KORREKTURSTAND"].value).lower().strip()
-        if article.common_free:
-            if proof_read:
-                if proof_read == "fertig":
-                    return {"proof_read": 3}, []
-                if proof_read == "korrigiert":
-                    return {"proof_read": 2}, []
-                if proof_read == "unkorrigiert":
-                    return {"proof_read": 1}, []
+        if article.common_free and proof_read:
+            if proof_read == "fertig":
+                return {"proof_read": 3}, []
+            if proof_read == "korrigiert":
+                return {"proof_read": 2}, []
+            if proof_read == "unkorrigiert":
+                return {"proof_read": 1}, []
         return {"proof_read": 0}, []
 
     def _process_from_article_list(self):

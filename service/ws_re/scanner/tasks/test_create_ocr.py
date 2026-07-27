@@ -7,8 +7,8 @@ from ddt import ddt, file_data
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.create_ocr import COCRTask, NoRawOCRFound
-from service.ws_re.template.re_page import RePage
 from service.ws_re.template.article import Article
+from service.ws_re.template.re_page import RePage
 from tools.bots.logger import WikiLogger
 from tools.bots.test_base import TestCloudBase
 from tools.test import PageMock

@@ -1,6 +1,5 @@
+import contextlib
 import re
-from functools import lru_cache
-from typing import Optional
 
 import boto3
 import pywikibot
@@ -33,6 +32,7 @@ class COCRTask(ReScannerTask):
         ReScannerTask.__init__(self, wiki, logger, debug)
         key, secret = get_aws_credentials()
         self.s3_client = boto3.client("s3", aws_access_key_id=key, aws_secret_access_key=secret)
+        self._raw_page_cache: dict[str, str] = {}
 
     def task(self):
         if "RE:Stammdaten überprüfen" in self.re_page.page.text:
@@ -42,14 +42,16 @@ class COCRTask(ReScannerTask):
             # don't create if there is already a created
             if self.counter > 8 or self._ocr_category in article.text:
                 return True
-            if article["KORREKTURSTAND"].value == "Unvollständig" and article.common_free:
-                if self._detect_empty_content(article.text):
-                    if ocr := self._get_text_for_article(article):
-                        article.text = article.text + f"\n{ocr}"
-                        self.counter += 1
+            if (
+                article["KORREKTURSTAND"].value == "Unvollständig"
+                and article.common_free
+                and self._detect_empty_content(article.text)
+            ) and (ocr := self._get_text_for_article(article)):
+                article.text = article.text + f"\n{ocr}"
+                self.counter += 1
         return True
 
-    def _get_text_for_section(self, issue: str, page: int, start: bool = False, end: bool = False) -> Optional[str]:
+    def _get_text_for_section(self, issue: str, page: int, start: bool = False, end: bool = False) -> str | None:
         try:
             raw_text = self.get_raw_page(f"{issue}_{str(page).zfill(4)}").replace("\ufeff", "")
         except NoRawOCRFound:
@@ -115,12 +117,15 @@ class COCRTask(ReScannerTask):
         # After cleaning, if nothing meaningful remains, it's empty
         return len(text) == 0
 
-    @lru_cache(maxsize=1000)
     def get_raw_page(self, page_id: str) -> str:
+        with contextlib.suppress(KeyError):
+            return self._raw_page_cache[page_id]
         try:
             response = self.s3_client.get_object(Bucket=self.bucket_name, Key=f"{page_id}.txt")
-            return response["Body"].read().decode("utf-8")
+            raw_page = response["Body"].read().decode("utf-8")
         except ClientError as ex:
             if ex.response["Error"]["Code"] == "NoSuchKey":
                 raise NoRawOCRFound(f"Page_ID {page_id} not found in OCR bucket") from ex
             raise
+        self._raw_page_cache[page_id] = raw_page
+        return raw_page

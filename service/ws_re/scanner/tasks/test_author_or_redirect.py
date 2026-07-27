@@ -1,6 +1,6 @@
 # pylint: disable=protected-access
 
-from testfixtures import compare, LogCapture
+from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.tasks.author_or_redirect import REAUTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase

@@ -1,14 +1,14 @@
 import re
 from contextlib import suppress
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 from functools import lru_cache
-from typing import cast
+from typing import ClassVar, cast
 
-from pywikibot import Site, Page
-from pywikibot.site import BaseSite
+from pywikibot import Page, Site
 from pywikibot.exceptions import InvalidTitleError
+from pywikibot.site import BaseSite
 
-from service.list_bots._base import is_empty_value, has_value, get_page_infos
+from service.list_bots._base import get_page_infos, has_value, is_empty_value
 from service.list_bots.author_info import AuthorInfo
 from service.list_bots.list_bot import ListBot
 from tools.date_conversion import DateConversion
@@ -18,7 +18,7 @@ from tools.template_expansion import TemplateExpansion
 
 class PoemList(ListBot):
     PROPERTY_TEMPLATE = "Textdaten"
-    PROPERTY_MAPPING = {
+    PROPERTY_MAPPING: ClassVar[dict[str, str]] = {
         "title": "TITEL",
         "author": "AUTOR",
         "creation": "ENTSTEHUNGSJAHR",
@@ -245,9 +245,8 @@ class PoemList(ListBot):
                 if line != self.EMPTY_LINE:
                     break
             with suppress(IndexError):
-                if not self.HEADLINE_REGEX.search(lines_list[idx]):
-                    if lines_list[idx + 1] != self.EMPTY_LINE:
-                        return self._clean_first_line(lines_list[idx])
+                if not self.HEADLINE_REGEX.search(lines_list[idx]) and lines_list[idx + 1] != self.EMPTY_LINE:
+                    return self._clean_first_line(lines_list[idx])
         return ""
 
     CLEAN_POEM_REGEX = re.compile(r"<\/?poem>")

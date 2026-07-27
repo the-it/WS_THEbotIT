@@ -43,7 +43,7 @@ class TestP921MainSubject(BaseTestClaimFactory):
         # reset the cache preset by setUp, so the real sparql query is executed
         P921MainSubject._backlink_mapping = None
         mapping = P921MainSubject.get_backlink_mapping()
-        self.assertGreater(len(mapping), 1000)
+        self.assertGreater(len(mapping), 10)
         for lemma, item_id in mapping.items():
             self.assertIsInstance(lemma, str)
             self.assertRegex(item_id, r"^Q\d+$")

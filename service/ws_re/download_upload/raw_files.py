@@ -4,7 +4,7 @@ from pathlib import Path
 import patoolib
 
 from service.ws_re.download_upload.archive import Archive
-from service.ws_re.download_upload.base import DownloadTarget, BASE_PATH
+from service.ws_re.download_upload.base import BASE_PATH, DownloadTarget
 from service.ws_re.download_upload.data import _RAW_FILES
 
 
