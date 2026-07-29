@@ -35,7 +35,7 @@ class TestRegister(BaseTestRegister):
         copy_tst_data("I_1_base", "I_1")
         i1 = VolumeRegister(Volumes()["I,1"], Authors())._get_header().replace("\n", "")
         compare(StringComparison(".*SUM=8.*"), i1)
-        compare(StringComparison(".*UNK=3.*"), i1)
+        compare(StringComparison(".*UNK=1.*"), i1)
         compare(StringComparison(".*KOR=2.*"), i1)
         compare(StringComparison(".*FER=3.*"), i1)
 
@@ -50,6 +50,7 @@ class TestRegister(BaseTestRegister):
 |FER=1
 |KOR=1
 |UNK=0
+|UNV=0
 }}
 
 {{Tabellenstile}}
@@ -87,6 +88,7 @@ class TestRegister(BaseTestRegister):
 |FER=1
 |KOR=1
 |UNK=0
+|UNV=0
 }}
 
 {{Tabellenstile}}

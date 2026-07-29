@@ -31,7 +31,8 @@ class TestAuthorRegister(BaseTestRegister):
 |SUM=4
 |FER=2
 |KOR=1
-|UNK=1
+|UNK=0
+|UNV=0
 }}
 
 {{Tabellenstile}}
@@ -86,7 +87,8 @@ class TestAuthorRegister(BaseTestRegister):
 |SUM=4
 |FER=2
 |KOR=1
-|UNK=1
+|UNK=0
+|UNV=0
 }}
 
 {{Tabellenstile}}

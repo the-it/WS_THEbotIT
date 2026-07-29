@@ -39,10 +39,11 @@ class AuthorRegister(Register):
         header.append(f"AUTHOR={self._author.ws_lemma_if_exists}")
         header.append(f"SUM={len(self)}")
         # calculate proof_read status
-        fer, kor, unk = self.proof_read
+        fer, kor, unk, unv = self.proof_read
         header.append(f"FER={fer}")
         header.append(f"KOR={kor}")
         header.append(f"UNK={unk}")
+        header.append(f"UNV={unv}")
         return "{{" + "\n|".join(header) + "\n}}\n"
 
     def _get_footer(self) -> str:
@@ -72,7 +73,7 @@ class AuthorRegister(Register):
             f"{self.author.ws_lemma_if_exists}|{self.author.ws_lemma_if_exists}]]\n"
         )
         line.append(f'|data-sort-value="{len(self):04d}"|{len(self)}\n')
-        fer, kor, _ = self.proof_read
+        fer, kor, _, _ = self.proof_read
         parts_fertig, parts_korrigiert, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor)
         line.append(
             '|data-sort-value="{percent:05.1f}"|{percent:.1f}%\n'.format(percent=((fer + kor) / len(self)) * 100)
