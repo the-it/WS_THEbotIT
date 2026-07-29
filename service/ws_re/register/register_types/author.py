@@ -73,19 +73,23 @@ class AuthorRegister(Register):
             f"{self.author.ws_lemma_if_exists}|{self.author.ws_lemma_if_exists}]]\n"
         )
         line.append(f'|data-sort-value="{len(self):04d}"|{len(self)}\n')
-        fer, kor, _, _ = self.proof_read
-        parts_fertig, parts_korrigiert, parts_unkorrigiert = self.proofread_parts_of_20(len(self), fer, kor)
+        fer, kor, _, unv = self.proof_read
+        parts_fertig, parts_korrigiert, parts_unvollstaendig, parts_unkorrigiert = self.proofread_parts_of_20(
+            len(self), fer, kor, unv
+        )
         line.append(
             '|data-sort-value="{percent:05.1f}"|{percent:.1f}%\n'.format(percent=((fer + kor) / len(self)) * 100)
         )
         line.append(f'|<span style="color:#669966">{parts_fertig * "█"}</span>')
         line.append(f'<span style="color:#556B2F">{parts_korrigiert * "█"}</span>')
         line.append(f'<span style="color:#AA0000">{parts_unkorrigiert * "█"}</span>')
+        line.append(f'<span style="color:#FF7777">{parts_unvollstaendig * "█"}</span>')
         return "".join(line)
 
     @staticmethod
-    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int) -> tuple[int, int, int]:
+    def proofread_parts_of_20(sum_lemmas: int, fer: int, kor: int, unv: int) -> tuple[int, int, int, int]:
         part_fer = round(fer / sum_lemmas * 20)
         part_kor = round((kor + fer) / sum_lemmas * 20) - part_fer
-        part_unk = 20 - (part_fer + part_kor)
-        return part_fer, part_kor, part_unk
+        part_unv = round((unv + kor + fer) / sum_lemmas * 20) - part_fer - part_kor
+        part_unk = 20 - (part_fer + part_kor + part_unv)
+        return part_fer, part_kor, part_unv, part_unk

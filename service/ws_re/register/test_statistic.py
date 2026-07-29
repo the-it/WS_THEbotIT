@@ -13,6 +13,7 @@ from service.ws_re.register.statistic import (
     COLOR_GREEN,
     COLOR_LIGHT_RED,
     COLOR_RED,
+    COLOR_UNVOLLSTAENDIG,
     COLOR_WHITE,
     COLOR_YELLOW,
     HEADER_HEIGHT,
@@ -93,12 +94,16 @@ class TestColorForLemma(BaseTestRegister):
         lemma = {"proof_read": 1, "no_creative_height": True}
         compare(COLOR_RED, _color_for_lemma(lemma, self.authors, "I,1"))
 
-    def test_proof_read_0_public_domain_is_red(self):
+    def test_proof_read_0_public_domain_is_unvollstaendig(self):
         lemma = {"proof_read": 0, "no_creative_height": True}
-        compare(COLOR_RED, _color_for_lemma(lemma, self.authors, "I,1"))
+        compare(COLOR_UNVOLLSTAENDIG, _color_for_lemma(lemma, self.authors, "I,1"))
 
     def test_proof_read_1_not_public_domain_is_light_red(self):
         lemma = {"proof_read": 1, "chapters": [{"start": 1, "author": "Abel"}]}
+        compare(COLOR_LIGHT_RED, _color_for_lemma(lemma, self.authors, "I,1"))
+
+    def test_proof_read_0_not_public_domain_is_light_red(self):
+        lemma = {"proof_read": 0, "chapters": [{"start": 1, "author": "Abel"}]}
         compare(COLOR_LIGHT_RED, _color_for_lemma(lemma, self.authors, "I,1"))
 
     def test_missing_proof_read_falls_through_to_black(self):

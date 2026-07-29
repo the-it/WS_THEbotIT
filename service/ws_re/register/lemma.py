@@ -356,7 +356,6 @@ class Lemma:
         unvollstaendig = "#FF7777"
         fertig = "#669966"
         korrigiert = "#556B2F"
-        orange = "#FFA300"
         white = "#FFFFFF"
 
         if self.proof_read == 1:
@@ -375,8 +374,6 @@ class Lemma:
         if self.proof_read == 0:
             return "UNV", unvollstaendig
 
-        if self.proof_read == 0:
-            return "", orange
         return "", white
 
     def update_lemma_dict(self, update_dict: LemmaDict, remove_items: list[str] | None = None):
