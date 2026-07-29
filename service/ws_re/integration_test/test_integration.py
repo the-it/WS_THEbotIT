@@ -95,6 +95,7 @@ class TestIntegrationRegister(parent_class):
         ("Pausippos", "XVIII,4"),
         ("Piathris", "XX,1"),
         ("Pibechis", "XX,1"),
+        ("Valeria", "VIII A,1"),
         ("Victor 69", "S XV"),
     }
 
