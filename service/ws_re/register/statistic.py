@@ -22,6 +22,7 @@ COLOR_GREEN = (102, 153, 102)
 COLOR_YELLOW = (255, 215, 0)
 COLOR_RED = (170, 0, 0)
 COLOR_LIGHT_RED = (255, 130, 130)
+COLOR_UNVOLLSTAENDIG = (212, 65, 65)  # midpoint between COLOR_RED and COLOR_LIGHT_RED
 COLOR_BLACK = (0, 0, 0)
 COLOR_WHITE = (255, 255, 255)
 COLOR_BACKGROUND = (255, 255, 255)
@@ -52,10 +53,14 @@ def _color_for_lemma(lemma: dict, authors: Authors, volume_name: str) -> Color:
         return COLOR_GREEN
     if proof_read == 2:
         return COLOR_YELLOW
-    if proof_read in (0, 1):
+    if proof_read == 1:
         if not _is_public_domain(lemma, authors, volume_name):
             return COLOR_LIGHT_RED
         return COLOR_RED
+    if proof_read == 0:
+        if not _is_public_domain(lemma, authors, volume_name):
+            return COLOR_LIGHT_RED
+        return COLOR_UNVOLLSTAENDIG
     return COLOR_BLACK
 
 

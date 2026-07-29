@@ -71,12 +71,12 @@ no_public_domain_but_placeholder:
         author: Abel
   expect:
     label: "2069"
-    color: "#FFA300"
+    color: "#FF7777"
 
 placeholder:
   given:
     lemma: lemma
     proof_read: 0
   expect:
-    label: ""
-    color: "#FFA300"
+    label: "UNV"
+    color: "#FF7777"

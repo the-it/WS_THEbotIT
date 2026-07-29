@@ -65,7 +65,8 @@ class TestAlphabeticRegister(BaseTestRegister):
 |SUM=5
 |FER=1
 |KOR=1
-|UNK=3
+|UNK=2
+|UNV=0
 }}
 """
         compare(expected_header, a_register._get_header())
@@ -78,6 +79,7 @@ class TestAlphabeticRegister(BaseTestRegister):
 |FER=1
 |KOR=0
 |UNK=1
+|UNV=0
 }}
 """
         compare(expected_header, b_register._get_header())
@@ -88,7 +90,8 @@ class TestAlphabeticRegister(BaseTestRegister):
 |SUM=4
 |FER=2
 |KOR=1
-|UNK=1
+|UNK=0
+|UNV=0
 }}
 """
         compare(expected_header, c_register._get_header())
@@ -102,7 +105,8 @@ class TestAlphabeticRegister(BaseTestRegister):
 |SUM=6
 |FER=3
 |KOR=1
-|UNK=2
+|UNK=1
+|UNV=0
 }}
 
 {{Tabellenstile}}

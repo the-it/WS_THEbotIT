@@ -353,9 +353,9 @@ class Lemma:
     @property
     def status(self) -> tuple[str, str]:
         unkorrigiert = "#AA0000"
+        unvollstaendig = "#FF7777"
         fertig = "#669966"
         korrigiert = "#556B2F"
-        orange = "#FFA300"
         white = "#FFFFFF"
 
         if self.proof_read == 1:
@@ -369,11 +369,11 @@ class Lemma:
             current_year = datetime.now().year
             if pd_year > current_year and not self.no_creative_height:
                 if self.exists:
-                    return str(pd_year), orange
+                    return str(pd_year), unvollstaendig
                 return str(pd_year), white
-
         if self.proof_read == 0:
-            return "", orange
+            return "UNV", unvollstaendig
+
         return "", white
 
     def update_lemma_dict(self, update_dict: LemmaDict, remove_items: list[str] | None = None):
