@@ -55,7 +55,7 @@ integrationtest : clean-coverage
 	unset WS_REAL_WIKI && \
 	export PYWIKIBOT_NO_USER_CONFIG=1 && \
 	export PYTHONUNBUFFERED=1 && \
-	.venv/bin/pytest -v --cov service tools && \
+	.venv/bin/pytest -v --cov=. service tools && \
 	uv run coverage xml
 
 wikitest : clean-coverage
@@ -63,7 +63,7 @@ wikitest : clean-coverage
 	export WS_REAL_WIKI=1 && \
 	unset WS_REAL_DATA && \
 	export PYTHONUNBUFFERED=1 && \
-	.venv/bin/pytest -v --cov service tools && \
+	.venv/bin/pytest -v --cov=. service tools && \
 	uv run coverage xml
 
 coverage : clean-coverage
