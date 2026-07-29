@@ -31,9 +31,10 @@ dev = [
   "freezegun==1.5.5",
   "internetarchive==5.11.0",
   "moto==5.2.2",
-  "nose2==0.16.0",
   "patool==4.0.5",
   "pyfiglet==1.0.4",
+  "pytest==8.4.1",
+  "pytest-cov==6.2.1",
   "pyyaml==6.0.3",
   "requests-mock==1.12.1",
   "ruff==0.16.0",
@@ -64,6 +65,9 @@ ignore = [
   "DTZ007",
   "DTZ901",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["service", "tools"]
 
 [tool.ty.environment]
 python-version = "3.14"
