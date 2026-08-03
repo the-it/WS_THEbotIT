@@ -28,9 +28,7 @@ Text mit Links: [[RE:Leben(a)]] und [[RE:Leben(a)|Leben]].
 
     def test_replacements_in_plain_text_segments(self):
         self.page_mock.text = (
-            "Vorab [[RE:Leben(a)|Leben]].\n"
-            "{{REDaten}}\nText im Artikel.\n{{REAutor|Autor.}}\n"
-            "Nachlauf [[RE:Leben(a)]]."
+            "Vorab [[RE:Leben(a)|Leben]].\n{{REDaten}}\nText im Artikel.\n{{REAutor|Autor.}}\nNachlauf [[RE:Leben(a)]]."
         )
         re_page = RePage(self.page_mock)
 
