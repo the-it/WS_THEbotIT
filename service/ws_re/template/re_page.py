@@ -176,6 +176,12 @@ class RePage:
         else:
             raise TypeError("You can only append Elements of the type ReArticle")
 
+    def insert(self, index: int, new_item: Article | str):
+        if isinstance(new_item, Article | str):
+            self._article_list.insert(index, new_item)
+        else:
+            raise TypeError("You can only insert Elements of the type ReArticle or plain text")
+
     def __hash__(self):
         hash_value = 0
         for counter, article in enumerate(self._article_list):
