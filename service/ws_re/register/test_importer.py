@@ -1,11 +1,14 @@
 # pylint: disable=protected-access,no-self-use
-from unittest import TestCase
+from unittest import TestCase, mock
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.importer import ReImporter
 from service.ws_re.register.lemma import Lemma
 from service.ws_re.register.registers import Registers
 from service.ws_re.register.test_base import BaseTestRegister
+from service.ws_re.template import ReDatenException
+from service.ws_re.template.article import Article
+from service.ws_re.template.re_page import RePage
 from service.ws_re.volumes import Volumes
 from tools.test import real_wiki_test
 
@@ -110,3 +113,87 @@ class TestGetTextBackup(BaseTestRegister):
         result = ReImporter.get_text_backup("I,1", article, None, post)
         self.assertIn("|VORGÄNGER=Pre", result)
         self.assertIn("|NACHFOLGER=NeighborPost", result)
+
+
+def _article(band: str) -> str:
+    return (
+        f"{{{{REDaten\n|BAND={band}\n|NACHTRAG=OFF\n|ÜBERSCHRIFT=OFF\n}}}}\ntext {band}\n{{{{REAutor|Some Author.}}}}"
+    )
+
+
+class TestAddArticleToLemma(TestCase):
+    @mock.patch("service.ws_re.template.re_page.pywikibot.Page")
+    @mock.patch("service.ws_re.template.re_page.pywikibot.Page.text", new_callable=mock.PropertyMock)
+    # pylint: disable=arguments-differ
+    def setUp(self, text_mock, page_mock):
+        self.page_mock = page_mock
+        self.text_mock = text_mock
+        type(self.page_mock).text = self.text_mock
+
+    def _re_page(self, *parts: str) -> RePage:
+        self.text_mock.return_value = "\n".join(parts)
+        return RePage(self.page_mock)
+
+    def test_position_before_later_issue(self):
+        re_page = self._re_page(_article("I A,1"), _article("R"))
+        self.assertEqual(1, ReImporter.get_insert_position(re_page, "S XIV"))
+
+    def test_position_in_front_of_all_articles(self):
+        re_page = self._re_page(_article("R"))
+        self.assertEqual(0, ReImporter.get_insert_position(re_page, "I A,1"))
+
+    def test_position_behind_all_articles(self):
+        re_page = self._re_page(_article("I A,1"))
+        self.assertEqual(1, ReImporter.get_insert_position(re_page, "S XIV"))
+
+    def test_position_in_front_of_categories(self):
+        re_page = self._re_page(_article("I A,1"), "[[Kategorie:RE:Stammdaten überprüfen]]")
+        self.assertEqual(1, ReImporter.get_insert_position(re_page, "S XIV"))
+
+    def test_position_behind_text_of_last_article(self):
+        re_page = self._re_page(_article("I A,1"), "<references/>")
+        self.assertEqual(2, ReImporter.get_insert_position(re_page, "S XIV"))
+
+    def test_split_trailing_categories(self):
+        re_page = self._re_page(
+            _article("I A,1"), "<references/>\n\n[[Kategorie:RE:Stammdaten überprüfen]]\n[[Kategorie:Tada]]"
+        )
+        ReImporter.split_trailing_categories(re_page)
+        self.assertEqual("<references/>", re_page[1])
+        self.assertEqual("[[Kategorie:RE:Stammdaten überprüfen]]\n[[Kategorie:Tada]]", re_page[2])
+        self.assertEqual(2, ReImporter.get_insert_position(re_page, "S XIV"))
+
+    def test_split_trailing_categories_nothing_to_split(self):
+        re_page = self._re_page(_article("I A,1"), "[[Kategorie:Tada]]")
+        ReImporter.split_trailing_categories(re_page)
+        self.assertEqual(2, len(re_page))
+        re_page = self._re_page(_article("I A,1"), "<references/>")
+        ReImporter.split_trailing_categories(re_page)
+        self.assertEqual(2, len(re_page))
+        re_page = self._re_page(_article("I A,1"))
+        ReImporter.split_trailing_categories(re_page)
+        self.assertEqual(1, len(re_page))
+
+    def test_no_position_issue_already_there(self):
+        re_page = self._re_page(_article("I A,1"), _article("S XIV"), _article("R"))
+        self.assertIsNone(ReImporter.get_insert_position(re_page, "S XIV"))
+
+    def test_unknown_issue_on_page(self):
+        re_page = self._re_page(_article("Tada"))
+        with self.assertRaises(ReDatenException):
+            ReImporter.get_insert_position(re_page, "S XIV")
+
+    def test_adjust_nachtrag(self):
+        re_page = self._re_page(_article("I A,1"), _article("S XIV"), _article("R"))
+        ReImporter.adjust_nachtrag(re_page)
+        flags = [(article["NACHTRAG"].value, article["ÜBERSCHRIFT"].value) for article in re_page.only_articles]
+        self.assertEqual([(False, False), (True, True), (True, False)], flags)
+
+    def test_insert_article_in_page(self):
+        re_page = self._re_page(_article("I A,1"), "[[Kategorie:RE:Stammdaten überprüfen]]")
+        position = ReImporter.get_insert_position(re_page, "S XIV")
+        re_page.insert(position, Article.from_text(_article("S XIV")))
+        ReImporter.adjust_nachtrag(re_page)
+        page_text = str(re_page)
+        self.assertLess(page_text.index("BAND=I A,1"), page_text.index("BAND=S XIV"))
+        self.assertLess(page_text.index("BAND=S XIV"), page_text.index("[[Kategorie:"))

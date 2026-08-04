@@ -171,6 +171,18 @@ class TestRePage(TestCase):
         with self.assertRaises(TypeError):
             re_page.append(1)
 
+    def test_insert(self):
+        self.text_mock.return_value = ARTICLE_TEMPLATE
+        re_page = RePage(self.page_mock)
+        article = Article.from_text("{{REDaten}}\ntada\n{{REAutor|Some Author.}}")
+        re_page.insert(0, article)
+        self.assertEqual(2, len(re_page))
+        self.assertEqual("tada", re_page[0].text)
+        re_page.insert(1, "[[Kategorie:Tada]]")
+        self.assertEqual("[[Kategorie:Tada]]", re_page[1])
+        with self.assertRaises(TypeError):
+            re_page.insert(0, 1)
+
     def test_delete(self):
         self.text_mock.return_value = ARTICLE_TEMPLATE + ARTICLE_TEMPLATE.replace("text.", "tada.") + ARTICLE_TEMPLATE
         re_page = RePage(self.page_mock)
