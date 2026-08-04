@@ -36,7 +36,7 @@ def _split_categories(text: str) -> tuple[str, str]:
 class ReImporter(CloudBot):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen"
     _SHORT_TEXT_CATEGORY = "RE:Kurztext überprüfen"
-    _PER_NIGHT = 20
+    _PER_NIGHT = 5
     _MAX_CAT = 1000
 
     def __init__(
@@ -146,10 +146,14 @@ class ReImporter(CloudBot):
         except ReDatenException as error:
             self.logger.error(f"Can't create an article of {band} for [[{lemma.title()}]]. {error.args[0]}")
             return False
+        if short_text := self.get_short_text(re_page):
+            # the lemma has a checked short text already, use it instead of the one from the register
+            new_article["KURZTEXT"].value = short_text
+        else:
+            re_page.add_error_category(self._SHORT_TEXT_CATEGORY)
         re_page.insert(position, new_article)
         self.adjust_nachtrag(re_page)
         re_page.add_error_category(self._STORE_CATEGORY)
-        re_page.add_error_category(self._SHORT_TEXT_CATEGORY)
         try:
             re_page.save(f"Automatisch ergänzter Artikel aus Band {band}")
         except ReDatenException as error:
@@ -187,6 +191,14 @@ class ReImporter(CloudBot):
             if categories and not text:
                 return len(re_page) - 1
         return len(re_page)
+
+    @staticmethod
+    def get_short_text(re_page: RePage) -> str:
+        """the short text that is already present on the page, empty if no article of the page has one"""
+        for article in re_page.only_articles:
+            if article.article_type == RE_DATEN and (short_text := str(article["KURZTEXT"].value)):
+                return short_text
+        return ""
 
     @staticmethod
     def split_trailing_categories(re_page: RePage):

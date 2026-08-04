@@ -115,9 +115,10 @@ class TestGetTextBackup(BaseTestRegister):
         self.assertIn("|NACHFOLGER=NeighborPost", result)
 
 
-def _article(band: str) -> str:
+def _article(band: str, short_text: str = "") -> str:
     return (
-        f"{{{{REDaten\n|BAND={band}\n|NACHTRAG=OFF\n|ÜBERSCHRIFT=OFF\n}}}}\ntext {band}\n{{{{REAutor|Some Author.}}}}"
+        f"{{{{REDaten\n|BAND={band}\n|KURZTEXT={short_text}\n|NACHTRAG=OFF\n|ÜBERSCHRIFT=OFF\n}}}}"
+        f"\ntext {band}\n{{{{REAutor|Some Author.}}}}"
     )
 
 
@@ -153,6 +154,18 @@ class TestAddArticleToLemma(TestCase):
     def test_position_behind_text_of_last_article(self):
         re_page = self._re_page(_article("I A,1"), "<references/>")
         self.assertEqual(2, ReImporter.get_insert_position(re_page, "S XIV"))
+
+    def test_get_short_text(self):
+        re_page = self._re_page(_article("I A,1", "a short text"), _article("R", "another short text"))
+        self.assertEqual("a short text", ReImporter.get_short_text(re_page))
+
+    def test_get_short_text_of_a_later_article(self):
+        re_page = self._re_page(_article("I A,1"), _article("R", "another short text"))
+        self.assertEqual("another short text", ReImporter.get_short_text(re_page))
+
+    def test_get_short_text_no_short_text_present(self):
+        re_page = self._re_page(_article("I A,1"), _article("R"))
+        self.assertEqual("", ReImporter.get_short_text(re_page))
 
     def test_split_trailing_categories(self):
         re_page = self._re_page(
