@@ -500,6 +500,61 @@ class TestBugUpdates(BaseTestRegister):
         compare(1189, register.lemmas[10].chapters[0]["start"])
         compare(2, register.lemmas[10].proof_read)
 
+    def test_neighbour_with_deviating_sort_key_next(self):
+        # RE:Pylos, NACHFOLGER "Register (Band XXIII)" is sorted as "!23 Register"
+        copy_tst_data("pylos_bug", "XXIII_2")
+        register = VolumeRegister(Volumes()["XXIII,2"], Authors())
+        update_dict_1 = {
+            "lemma": "Pylos",
+            "previous": "Pyloros 3",
+            "next": "Pylos 1",
+            "proof_read": 1,
+            "chapters": [{"start": 2113, "end": 2114}],
+        }
+        update_dict_2 = {
+            "lemma": "Pylos",
+            "previous": "Puteoli",
+            "next": "Register (Band XXIII)",
+            "proof_read": 2,
+            "chapters": [{"start": 2517, "end": 2520}],
+        }
+        with Updater(register) as updater:
+            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_1, [], self_supplement=True))
+            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_2, [], self_supplement=True))
+        # both lemmas are updated in place, no new one is created
+        compare(6, len(register.lemmas))
+        compare(1, register.lemmas[1].proof_read)
+        compare(2, register.lemmas[4].proof_read)
+        compare("Register (Band XXIII)", register.lemmas[4].next)
+        compare("Pylos", register.lemmas[5].previous)
+
+    def test_neighbour_with_deviating_sort_key_previous(self):
+        # RE:Valeria, VORGÄNGER "Valerius" is sorted as "Valerius 500"
+        copy_tst_data("valeria_bug", "VIII A_1")
+        register = VolumeRegister(Volumes()["VIII A,1"], Authors())
+        update_dict_1 = {
+            "lemma": "Valeria",
+            "previous": "Valerius 382",
+            "next": "Valerius 383",
+            "proof_read": 2,
+            "chapters": [{"start": 241, "end": 241}],
+        }
+        update_dict_2 = {
+            "lemma": "Valeria",
+            "previous": "Valerius",
+            "next": "Valesianus",
+            "proof_read": 3,
+            "chapters": [{"start": 259, "end": 259}],
+        }
+        with Updater(register) as updater:
+            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_1, [], self_supplement=True))
+            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_2, [], self_supplement=True))
+        compare(7, len(register.lemmas))
+        compare(2, register.lemmas[1].proof_read)
+        compare(3, register.lemmas[5].proof_read)
+        compare("Valerius", register.lemmas[5].previous)
+        compare("Valeria", register.lemmas[6].previous)
+
 
 @ddt
 class TestMissingIndices(BaseTestRegister):
