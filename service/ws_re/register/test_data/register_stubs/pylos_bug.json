@@ -1,0 +1,42 @@
+[
+  {
+    "lemma": "Pyloros 3",
+    "previous": "Pyloros 2",
+    "next": "Pylos",
+    "redirect": true,
+    "chapters": [{"start": 2113, "end": 2113}]
+  },
+  {
+    "lemma": "Pylos",
+    "previous": "Pyloros 3",
+    "next": "Pylos 1",
+    "short_description": "Nachtrag",
+    "chapters": [{"start": 2113, "end": 2114}]
+  },
+  {
+    "lemma": "Pylos 1",
+    "previous": "Pylos",
+    "next": "Pylos 2",
+    "chapters": [{"start": 2114, "end": 2128}]
+  },
+  {
+    "lemma": "Puteoli",
+    "previous": "Pulpitum",
+    "next": "Pylos",
+    "chapters": [{"start": 2517}]
+  },
+  {
+    "lemma": "Pylos",
+    "previous": "Puteoli",
+    "next": "Register (Band XXIII)",
+    "short_description": "Nachtrag",
+    "chapters": [{"start": 2517, "end": 2520}]
+  },
+  {
+    "lemma": "Register (Band XXIII)",
+    "previous": "Pylos",
+    "next": "Pyramos 1",
+    "sort_key": "!23 Register",
+    "chapters": [{"start": 2521, "end": 2576}]
+  }
+]

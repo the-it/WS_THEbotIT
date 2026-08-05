@@ -103,6 +103,17 @@ class VolumeRegister(Register):
                 found_before = True
         return None
 
+    def get_lemma_by_name_or_sort_key(self, lemma_name: str, self_supplement: bool = False) -> Lemma | None:
+        """Resolve a lemma by its exact title first and fall back to the sort key.
+
+        Neighbours are referenced by title in VORGÄNGER/NACHFOLGER. A lemma with a manually
+        deviating sort key (e.g. "Register (Band XXIII)" sorted as "!023 register") can't be
+        found by sort key alone.
+        """
+        return self.get_lemma_by_name(lemma_name, self_supplement) or self.get_lemma_by_sort_key(
+            lemma_name, self_supplement
+        )
+
     def get_index_of_lemma(self, lemma_input: str | Lemma, self_supplement: bool = False) -> int | None:
         if isinstance(lemma_input, str):
             lemma = self.get_lemma_by_name(lemma_input, self_supplement)
