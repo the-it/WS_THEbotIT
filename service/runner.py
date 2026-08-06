@@ -12,7 +12,7 @@ from service.ws_re.register.statistic import ReStatistic
 from service.ws_re.scanner.base import ReScanner
 from tools.bot_scheduler import BotScheduler
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())  # type: ignore
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)

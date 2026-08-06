@@ -110,6 +110,19 @@ class TestFinisher(TestCloudBase):
         compare(False, ":Some Overview, Band 4" in self.finisher.data)
         compare(False, ":Another Bd. 01 (1889)" in self.finisher.data)
 
+    def test_task_stops_on_watchdog(self):
+        mock.patch.object(self.finisher, "_get_proofread_pages", return_value=set()).start()
+        mock.patch.object(self.finisher, "_get_current_pages", return_value=[]).start()
+        mock.patch.object(self.finisher, "_get_checked_lemmas_from_current_pages", return_value=[]).start()
+        mock.patch.object(self.finisher, "_get_checked_lemmas_from_petscan", return_value=[":Regular Lemma"]).start()
+        mock.patch.object(self.finisher, "_watchdog", return_value=True).start()
+        has_korrigiert_mock = mock.patch("service.finisher.has_korrigiert_category", return_value=False).start()
+
+        self.finisher.task()
+
+        has_korrigiert_mock.assert_not_called()
+        compare(False, ":Regular Lemma" in self.finisher.data)
+
     def test_try_autocorrect(self):
         before = """{{Navigation2
  |AUTOR      = [[Friedrich von Boetticher]]

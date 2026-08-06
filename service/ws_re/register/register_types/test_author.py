@@ -1,7 +1,7 @@
 # pylint: disable=no-self-use,protected-access
 from collections import OrderedDict
 
-from testfixtures import compare
+from testfixtures import StringComparison, compare
 
 from service.ws_re.register.authors import Authors
 from service.ws_re.register.register_types.author import AuthorRegister
@@ -23,6 +23,24 @@ class TestAuthorRegister(BaseTestRegister):
     def test_init(self):
         abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
         compare(4, len(abel_register))
+
+    def test_repr(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        compare(
+            StringComparison(r"<AuthorRegister - author:<Author - name:Herman Abel.*>, lemmas:4>"), repr(abel_register)
+        )
+
+    def test_get_item(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        compare("Aba 1", abel_register[0].lemma)
+
+    def test_proof_read_counts_open_lemma_of_living_author_as_unv(self):
+        abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)
+        compare((2, 1, 0, 0), abel_register.proof_read)
+        # Abel died 1998, so the lemma is not public domain yet and its status is the public domain
+        # year rather than "UNV" - a proof_read of 0 still has to be counted as unvollständig
+        abel_register[0].proof_read = 0
+        compare((2, 1, 0, 1), abel_register.proof_read)
 
     def test_make_table(self):
         abel_register = AuthorRegister(self.authors.get_author("Herman Abel"), self.authors, self.registers)

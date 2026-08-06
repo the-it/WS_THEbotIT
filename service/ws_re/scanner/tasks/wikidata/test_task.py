@@ -3,7 +3,7 @@ from datetime import datetime
 from unittest import TestCase, mock, skip
 
 import pywikibot
-from testfixtures import compare
+from testfixtures import LogCapture, StringComparison, compare
 
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims._typing import JsonClaimDict
@@ -56,6 +56,62 @@ class TestDATATask(TestCase):
 
         def labels_and_sitelinks_has_changed(self, _) -> bool:
             return True
+
+    def test_back_link_main_topic_without_a_main_topic(self):
+        with (
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.Site"),
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.P1343DescribedBySource") as factory_mock,
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.ItemPage") as item_page_mock,
+        ):
+            factory_mock.return_value.get_main_topic_id.return_value = None
+            task = DATATask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
+            task.re_page = mock.MagicMock()
+            task.back_link_main_topic()
+        item_page_mock.assert_not_called()
+
+    def test_back_link_main_topic_adds_and_removes_the_reference(self):
+        claim = mock.MagicMock()
+        with (
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.Site"),
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.P1343DescribedBySource") as factory_mock,
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.ItemPage") as item_page_mock,
+        ):
+            factory_mock.return_value.get_main_topic_id.return_value = 42
+            factory_mock.return_value.get_claims_to_update.return_value = {
+                "add": {"P1343": [claim]},
+                "remove": [claim],
+            }
+            task = DATATask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
+            task.re_page = mock.MagicMock()
+            task.back_link_main_topic()
+        compare("Q42", item_page_mock.call_args[0][1])
+        item_page_mock.return_value.editEntity.assert_called_once_with(
+            data={"claims": {"P1343": [claim.toJSON.return_value]}}, summary="Add reference to a lexicon article."
+        )
+        item_page_mock.return_value.removeClaims.assert_called_once_with(
+            claims=[claim], summary="Remove old reference to a lexicon article."
+        )
+
+    def test_task_warns_when_the_backlink_target_is_a_redirect(self):
+        redirect_error = pywikibot.exceptions.IsRedirectPageError(mock.MagicMock())
+        with (
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.Site"),
+            mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims") as non_claims_mock,
+            mock.patch.object(DATATask, "_get_claimes_to_change", mock.Mock(return_value={"add": {}, "remove": []})),
+            mock.patch.object(DATATask, "back_link_main_topic", mock.Mock(side_effect=redirect_error)),
+            LogCapture() as log_catcher,
+        ):
+            non_claims_mock.return_value.labels_and_sitelinks_has_changed.return_value = False
+            task = DATATask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
+            task.re_page = mock.MagicMock()
+            task.task()
+        log_catcher.check_present(
+            (
+                "Test",
+                "WARNING",
+                StringComparison("Backlink to main topic failed for .*, because target is a redirect."),
+            )
+        )
 
     @real_wiki_test
     def test_integration(self):
@@ -142,7 +198,7 @@ class TestDATATask(TestCase):
 
     @skip("For debuging.")
     @real_wiki_test
-    def test_debug(self):
+    def test_debug(self):  # pragma: no cover
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
         lemma = RePage(pywikibot.Page(WS_WIKI, "RE:Menephron 1"))
         data_task = DATATask(

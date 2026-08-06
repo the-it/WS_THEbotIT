@@ -4,6 +4,7 @@ from typing import Any, ClassVar
 from unittest import TestCase, mock
 from unittest.mock import patch
 
+import requests
 import requests_mock
 from freezegun import freeze_time
 from testfixtures import compare
@@ -102,6 +103,23 @@ class TestPetScan(TestCase):
         self.assertDictEqual(
             {"edits[bots]": "yes", "edits[anons]": "no", "edits[flagged]": "yes"}, self.petscan.options
         )
+
+    def test_set_sort_criteria(self):
+        self.petscan.set_sort_criteria("date")
+        self.assertDictEqual({"sortby": "date"}, self.petscan.options)
+
+    def test_set_sort_criteria_invalid(self):
+        with self.assertRaises(PetScanException):
+            self.petscan.set_sort_criteria("not a criteria")
+
+    def test_run_with_a_broken_connection(self):
+        with requests_mock.mock() as request_mock:
+            request_mock.get(
+                "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
+                exc=requests.exceptions.ConnectTimeout,
+            )
+            with self.assertRaises(PetScanException):
+                self.petscan.run()
 
     def test_construct_cat_string(self):
         self.petscan.add_positive_category("pos 1")

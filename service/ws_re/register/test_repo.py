@@ -1,4 +1,6 @@
 # pylint: disable=protected-access,no-self-use
+import importlib.util
+import os
 from datetime import datetime, timedelta
 from os import path
 from pathlib import Path
@@ -20,6 +22,17 @@ class TestDataRepo(TestCase):
     @classmethod
     def tearDownClass(cls):
         clear_tst_path(renew_path=False)
+
+    def test_module_constants_from_the_environment(self):
+        # the module level constants are only evaluated on import, so execute a fresh copy of the
+        # module in its own namespace instead of touching the one the rest of the suite uses
+        spec = importlib.util.find_spec("service.ws_re.register.repo")
+        module = importlib.util.module_from_spec(spec)
+        environment = {"GITHUB_TOKEN": "token", "REGISTER_DATA_PATH": "/tmp/register_data"}
+        with mock.patch.dict(os.environ, environment):
+            spec.loader.exec_module(module)
+        compare("https://token@github.com/the-it/re_register_data.git", module.REPO_URL)
+        compare(Path("/tmp/register_data"), module.PATH_REAL_DATA)
 
     def test_data_path(self):
         compare(Path(__file__).parent.joinpath("data").joinpath("registers"), DataRepo.get_data_path())

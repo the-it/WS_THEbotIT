@@ -4,6 +4,9 @@ omit =
     archive/*,
     # offline functions for one time purposes
     service/ws_re/download_upload/*,
+    service/ws_re/_update_items_in_volumes.py,
+    # the integration suite runs in its own scheduled job (WS_REAL_DATA), it is skipped everywhere else
+    service/ws_re/integration_test/*,
     # potential python virtual env
     venv/*,
     # the runner suite copies test modules temporary to a directory, ignore this files

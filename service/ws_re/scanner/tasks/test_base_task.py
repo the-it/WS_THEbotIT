@@ -41,6 +41,15 @@ class TestReScannerTask(TaskTestCase):
         bot = self.NAM1Task(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
         self.assertEqual("NAM1", bot.name)
 
+    class WrongNamedTask(ReScannerTask):
+        def task(self):
+            pass
+
+    def test_name_of_a_wrong_named_class(self):
+        # the name is already needed while loading the task, so the constructor is the one to fail
+        with self.assertRaises(ValueError):
+            self.WrongNamedTask(None, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False))
+
     class MINITask(ReScannerTask):
         def task(self):
             return True

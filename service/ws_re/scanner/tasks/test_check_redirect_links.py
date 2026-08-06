@@ -81,6 +81,35 @@ class TestCHRETaskUnittests(TaskTestCase):
         task = CHRETask(None, self.logger)
         compare(expect, task.replace_redirect_links(text, ["Ab", "Abc"], "Target"))
 
+    def test_task_repairs_backlinks_and_reports_them(self):
+        redirect = self._redirect_mock("RE:Alias")
+        redirect.backlinks.return_value = [mock.Mock(**{"title.return_value": "Literatur"})]
+        task = CHRETask(None, self.logger)
+        task.re_page = mock.Mock()
+        # collect_redirect_chain pops from the returned list, so hand out a fresh one per call
+        task.re_page.get_redirects.side_effect = lambda: [redirect]
+        task.re_page.lemma_without_prefix = "Target"
+        with (
+            mock.patch("service.ws_re.scanner.tasks.check_redirect_links.pywikibot.Page") as page_mock,
+            mock.patch("service.ws_re.scanner.tasks.check_redirect_links.time.sleep") as sleep_mock,
+            mock.patch("service.ws_re.scanner.tasks.check_redirect_links.save_if_changed") as save_mock,
+        ):
+            page_mock.return_value.text = "[[RE:Alias]]"
+            self.assertTrue(task.task())
+        compare("[[RE:Target]]", save_mock.call_args[0][1])
+        sleep_mock.assert_called_once_with(2)
+        task.re_page.add_error_category.assert_called_once_with(CHRETask.error_category)
+
+    def test_task_removes_error_category_without_backlinks(self):
+        redirect = self._redirect_mock("RE:Alias")
+        redirect.backlinks.return_value = []
+        task = CHRETask(None, self.logger)
+        task.re_page = mock.Mock()
+        task.re_page.get_redirects.side_effect = lambda: [redirect]
+        self.assertTrue(task.task())
+        task.re_page.add_error_category.assert_not_called()
+        compare(2, task.re_page.remove_error_category.call_count)
+
     def test_filter_link_list(self):
         link_list = [
             "Literatur",

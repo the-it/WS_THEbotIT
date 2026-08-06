@@ -169,13 +169,12 @@ class TestCloudBot(TestCloudBase):
         self._make_json_file(filename="DataOutdatedBot.data.json")
         StatusManager("DataOutdatedBot").finish_run(success=True)
         with (
-            suppress(AssertionError),
             LogCapture() as log_catcher,
             self.DataOutdatedBot(log_to_screen=False, log_to_wiki=False) as bot,
         ):
-            self.assertIn("DataOutdatedBot WARNING\n  The data is thrown away. It is out of date", str(log_catcher))
+            log_catcher.check_present(("DataOutdatedBot", "WARNING", "The data is thrown away. It is out of date"))
             self.assertDictEqual({}, bot.data._data)
-            bot.run()
+            self.assertTrue(bot.run())
 
     @freeze_time("2001-12-31", auto_tick_seconds=60)
     def test_data_outdated_not_outdated_1(self):

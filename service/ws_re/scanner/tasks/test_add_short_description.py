@@ -2,7 +2,7 @@
 from unittest import mock, skip
 
 import pywikibot
-from testfixtures import compare
+from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.tasks.add_short_description import KURZTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
@@ -107,9 +107,43 @@ text
         compare({"success": True, "changed": False}, task.run(re_page))
         compare("", re_page.first_article["KURZTEXT"].value)
 
+    def test_no_short_description_available(self):
+        self.page_mock.text = """{{REDaten}}
+text
+{{REAutor|Autor.}}"""
+        self.page_mock.title_str = "Re:Lemma without a short description"
+        re_page = RePage(self.page_mock)
+        task = KURZTask(None, self.logger)
+        compare({"success": True, "changed": False}, task.run(re_page))
+        compare("", re_page.first_article["KURZTEXT"].value)
+
+
+class TestKURZTaskSourcePages(TaskTestCase):
+    def setUp(self):
+        super().setUp()
+        mock.patch("service.ws_re.scanner.tasks.add_short_description.RE_ALPHABET", ["a"]).start()
+        self.source_page_mock = mock.patch("service.ws_re.scanner.tasks.add_short_description.pywikibot.Page").start()
+        self.addCleanup(mock.patch.stopall)
+
+    def tearDown(self):
+        mock.patch.stopall()
+
+    def test_reads_the_lookup_from_the_source_page(self):
+        self.source_page_mock.return_value.text = TEXT_A
+        task = KURZTask(None, self.logger)
+        compare("Zoologisch", task.short_description_lookup["aal"])
+        compare("Wikisource:RE-Werkstatt/Kurzbeschreibung/a", self.source_page_mock.call_args[0][1])
+
+    def test_logs_an_error_for_an_empty_source_page(self):
+        self.source_page_mock.return_value.text = ""
+        with LogCapture() as log_catcher:
+            task = KURZTask(None, self.logger)
+        compare({}, task.short_description_lookup)
+        log_catcher.check_present(("Test", "ERROR", "Couldn't load Wikisource:RE-Werkstatt/Kurzbeschreibung/a."))
+
 
 @skip("only for analysis")
 class TestKURZTaskProcessSourceLoadReality(TaskTestCase):
-    def test_load_real_sources(self):
+    def test_load_real_sources(self):  # pragma: no cover
         task = KURZTask(pywikibot.Site(code="de", fam="wikisource", user="THEbotIT"), self.logger)
         self.assertGreater(len(task.short_description_lookup), 14000)

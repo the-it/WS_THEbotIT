@@ -20,3 +20,19 @@ class TestP31InstanceOf(BaseTestClaimFactory):
         factory = P31InstanceOf(re_page, None)
         claim_json = factory._get_claim_json()
         compare(1302249, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+    def test__get_claim_json_index(self):
+        re_page = self._create_mock_page(
+            text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Register (Band XI)"
+        )
+        factory = P31InstanceOf(re_page, None)
+        claim_json = factory._get_claim_json()
+        compare(873506, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+    def test__get_claim_json_prologue(self):
+        re_page = self._create_mock_page(
+            text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Vorwort (Band I)"
+        )
+        factory = P31InstanceOf(re_page, None)
+        claim_json = factory._get_claim_json()
+        compare(920285, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])

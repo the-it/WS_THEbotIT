@@ -315,7 +315,7 @@ class PoemList(ListBot):
         return self.TITLE_LINK_REGEX.sub(r"\1", potential_link)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with PoemList(wiki=WS_WIKI, debug=True) as bot:
         bot.run()

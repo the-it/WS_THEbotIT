@@ -1,6 +1,8 @@
 # pylint: disable=protected-access
+from unittest import mock
+
 import pywikibot
-from testfixtures import compare
+from testfixtures import LogCapture, StringComparison, compare
 
 from service.ws_re.scanner.tasks.wikidata.claims._base import SnakParameter
 from service.ws_re.scanner.tasks.wikidata.claims.claim_factory import ClaimFactory
@@ -12,6 +14,29 @@ from tools.test import real_wiki_test
 
 @real_wiki_test
 class TestP1343DescribedBySource(BaseTestClaimFactory):
+    def test__get_claim_json_without_valid_qualifiers(self):
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Aal"))
+        factory = P1343DescribedBySource(re_page, self.logger)
+        with mock.patch.object(factory, "get_qualifiers", mock.Mock(return_value=[])):
+            compare([], factory._get_claim_json())
+
+    def test_existing_qualifier_of_a_claim_without_p805(self):
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Aal"))
+        factory = P1343DescribedBySource(re_page, self.logger)
+        claim = mock.MagicMock()
+        claim.toJSON.return_value = {"mainsnak": {"datavalue": {"value": {"numeric-id": 1138524}}}}
+        target_item = mock.MagicMock(id="Q4711")
+        target_item.get.return_value = {"claims": {"P1343": [claim]}}
+        with LogCapture() as log_catcher:
+            compare([], factory.get_existing_qualifiers(target_item))
+        log_catcher.check_present(
+            (
+                "Test",
+                "WARNING",
+                StringComparison(".*doesn't have P805 to specify the claim P1343. This entry was wiped."),
+            )
+        )
+
     def test__get_claim_json(self):
         re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Aal"))
         factory = P1343DescribedBySource(re_page, self.logger)

@@ -42,11 +42,12 @@ class TestRegisters(BaseTestRegister):
             if register.start == "d":
                 compare(1, len(register))
                 continue
-            if register.start == "u":
-                compare(0, len(register))
-                continue
-            if register.start == "uf":
+            # u is unified to v, so the "Ueee" lemma has to show up in the v register
+            if register.start == "v":
                 compare(2, len(register))
+                continue
+            if register.start == "vf":
+                compare(0, len(register))
                 continue
         compare(43, i)
 

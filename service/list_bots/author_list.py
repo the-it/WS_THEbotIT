@@ -97,7 +97,7 @@ class AuthorList(ListBot):
         return author_dict["last_name"]
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with AuthorList(wiki=WS_WIKI, debug=True) as bot:
         bot.run()

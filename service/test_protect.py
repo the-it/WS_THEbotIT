@@ -4,7 +4,7 @@ from datetime import timedelta
 from unittest import mock
 
 import pywikibot
-from testfixtures import compare
+from testfixtures import LogCapture, StringComparison, compare
 
 from service.protect import Protect
 from tools.bots.test_base import TestCloudBase
@@ -46,6 +46,17 @@ class TestProtect(TestCloudBase):
             bot.run()
         self.protect_mock.assert_called_once_with(
             reason="Schutz fertiger Seiten", protections={"move": "autoconfirmed", "edit": "autoconfirmed"}
+        )
+
+    def test_page_protection_fails_with_an_api_error(self):
+        self.get_combined_lemma_list_mock.return_value = ([":lemma"], 1)
+        self.page_mock.return_value.protection.return_value = {}  # no protection
+        self.page_mock.return_value.categories.return_value = ["Kategorie:Fertig"]
+        self.protect_mock.side_effect = pywikibot.exceptions.APIError("protectednamespace", "not allowed here")
+        with LogCapture() as log_catcher, Protect(wiki=None, debug=False, log_to_wiki=False) as bot:
+            bot.run()
+        log_catcher.check_present(
+            ("Protect", "ERROR", StringComparison("Wasn't able to protect .*, error was .*not allowed here.*"))
         )
 
     def test_3_pages_one_is_protected(self):

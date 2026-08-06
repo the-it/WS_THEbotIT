@@ -277,6 +277,75 @@ text.
                 ("Test", "ERROR", StringComparison("No available Lemma in Registers for issue I,1 .* Reason is:.*")),
             )
 
+    def test_fetch_wd_link_no_item(self):
+        with mock.patch.object(SCANTask, "_get_target_from_wd", mock.Mock(return_value=None)):
+            compare(({}, ["wd_link"]), self.task._fetch_wd_link(None))
+
+    def test_get_link_from_wd_without_sitelink(self):
+        target = mock.Mock()
+        target.getSitelink.side_effect = pywikibot.exceptions.NoSiteLinkError(mock.MagicMock(), "dewiki")
+        with (
+            mock.patch.object(SCANTask, "_get_target_from_wd", mock.Mock(return_value=target)),
+            mock.patch.object(SCANTask, "_get_site_from_str", mock.Mock()),
+        ):
+            compare(None, self.task._get_link_from_wd("wikipedia"))
+
+    def test_get_target_from_wd_without_data_item(self):
+        self.page_mock.data_item.side_effect = pywikibot.exceptions.NoPageError(mock.MagicMock())
+        self.page_mock.text = "{{REDaten|BAND=I,1}}\ntext.\n{{REAutor|OFF}}"
+        self.task.re_page = RePage(self.page_mock)
+        compare(None, self.task._get_target_from_wd())
+
+    def test_fetch_pages_construction_too_complex(self):
+        self.page_mock.title_str = "RE:Aal"
+        self.page_mock.text = """{{REDaten
+|BAND=I,1
+|SPALTE_START=1
+}}
+text.
+{{REAutor|Abel.}}
+{{REDaten
+|BAND=I,1
+|SPALTE_START=1
+}}
+text.
+{{REAutor|Abel.}}"""
+        self.task.re_page = RePage(self.page_mock)
+        article_list = list(self.task.re_page.splitted_article_list[0]) + list(
+            self.task.re_page.splitted_article_list[1]
+        )
+        with (
+            mock.patch.object(type(self.task.re_page), "complex_construction", True),
+            LogCapture() as log_catcher,
+        ):
+            compare(({}, []), self.task._fetch_pages(article_list))
+            log_catcher.check(("Test", "ERROR", "The construct of [[RE:Aal|Aal]] is too complex, can't analyse."))
+
+    def test_finish_task(self):
+        self.task._strategies = {"update_lemma_by_name": ["Aal"], "update_lemma_by_sortkey": ["Aas"]}
+        with (
+            mock.patch(
+                "service.ws_re.scanner.tasks.register_scanner.AuthorCrawler.get_author_mapping",
+                mock.Mock(return_value={}),
+            ),
+            mock.patch(
+                "service.ws_re.scanner.tasks.register_scanner.AuthorCrawler.process_author_infos",
+                mock.Mock(return_value={}),
+            ),
+            LogCapture() as log_catcher,
+        ):
+            self.task.finish_task()
+        log_catcher.check_present(
+            ("Test", "INFO", "STRATEGY_update_lemma_by_name: 1"),
+            ("Test", "INFO", "STRATEGY_update_lemma_by_sortkey: 1"),
+            ("Test", "INFO", "['Aas']"),
+            ("Test", "INFO", "Fetch changes for the authors."),
+            ("Test", "INFO", "Persist the author data."),
+            ("Test", "INFO", "Persist the register data."),
+            ("Test", "INFO", "Push changes for authors and registers."),
+            order_matters=True,
+        )
+
     @real_wiki_test
     def test_get_wd_sitelink(self):
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
