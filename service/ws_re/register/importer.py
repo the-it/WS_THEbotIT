@@ -17,9 +17,14 @@ class ReImporter(CloudBot):
     _MAX_CAT = 1000
 
     def __init__(
-        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+        self,
+        wiki: BaseSite | None = None,
+        debug: bool = True,
+        log_to_screen: bool = True,
+        log_to_wiki: bool = True,
+        send_metrics: bool = False,
     ):
-        super().__init__(wiki, debug, log_to_screen, log_to_wiki)
+        super().__init__(wiki, debug, log_to_screen, log_to_wiki, send_metrics)
         self.registers = Registers(update_data=True)
         self.new_articles: dict[str, dict[str, str]] = {}
         self.author_mapping = get_author_mapping()

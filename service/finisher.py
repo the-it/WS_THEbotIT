@@ -22,9 +22,14 @@ class Finisher(CloudBot):
     CATEGORY = "Wikisource:Lemma korrigiert, alle Unterseiten fertig"
 
     def __init__(
-        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+        self,
+        wiki: BaseSite | None = None,
+        debug: bool = True,
+        log_to_screen: bool = True,
+        log_to_wiki: bool = True,
+        send_metrics: bool = False,
     ):
-        CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
+        CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki, send_metrics)
         self.timeout: timedelta = timedelta(minutes=15)
         self.proofread_pages_set: set[str] = set()
 
