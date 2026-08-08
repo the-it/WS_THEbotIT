@@ -1,8 +1,9 @@
 # pylint: disable=protected-access
 from datetime import datetime
 from pathlib import Path
-from unittest import skip
+from unittest import mock
 
+from botocore.exceptions import ClientError
 from ddt import ddt, file_data
 from testfixtures import compare
 
@@ -63,7 +64,6 @@ class TestCOCRTask(TestCloudBase):
     def test_detect_empty_content(self, given, expect):
         compare(expect, self.task._detect_empty_content(given))
 
-    @skip
     @file_data("test_data/create_ocr/test_get_text_for_article.yml")
     def test_get_text_for_article_single_page(self, given, expect):
         # Arrange: upload OCR page and set page/lemma from fixture
@@ -85,7 +85,6 @@ class TestCOCRTask(TestCloudBase):
         # Assert
         compare(expect.strip(), text)
 
-    @skip
     def test_task_appends_ocr_for_rages(self):
         # Arrange: upload OCR page and create a placeholder article for RE:Rages on page 127
         self.put_page_to_cloud("I A,1_0127")
@@ -109,9 +108,43 @@ class TestCOCRTask(TestCloudBase):
 
         # Assert: the first article's text should now be the OCR section for Rages
         expected = (
-            "'''Rages'''\n[[Kategorie:RE:OCR_erstellt]]\n'''Rages''' s. {{Polytonisch|'Pάγα}} ta."
-            "\n{{Seite|128}}\n[[Kategorie:RE:OCR_Seite_nicht_gefunden]]"
+            "'''Rages'''\n[[Kategorie:RE:OCR_erstellt]]\n[[Kategorie:RE:OCR_nicht_zugeschnitten]]"
+            "\n'''Rages''' s. {{Polytonisch|'Pάγα}} ta."
+            "\n{{Seite|128||{{REEL|I A,1|128}}}}\n[[Kategorie:RE:OCR_Seite_nicht_gefunden]]"
         )
         compare(expected, self.task.re_page.first_article.text.strip())
         expected = "'''Rages'''"
         compare(expected, self.task.re_page.splitted_article_list[2][0].text.strip())
+
+    def _placeholder_page(self, article_text: str) -> RePage:
+        page_mock = PageMock()
+        page_mock.title_str = "RE:Rages"
+        page_mock.text = (
+            "{{REDaten|BAND=I A,1|SPALTE_START=127|SPALTE_END=OFF|KORREKTURSTAND=Unvollständig}}"
+            f"{article_text}{{{{REAutor|OFF}}}}"
+        )
+        return RePage(page_mock)
+
+    def test_task_skips_page_flagged_for_stammdaten_check(self):
+        self.put_page_to_cloud("I A,1_0127")
+        self.task.re_page = self._placeholder_page("'''Rages'''[[Kategorie:RE:Stammdaten überprüfen]]")
+        self.assertTrue(self.task.task())
+        compare("'''Rages'''[[Kategorie:RE:Stammdaten überprüfen]]", self.task.re_page.first_article.text.strip())
+
+    def test_task_skips_article_that_has_ocr_already(self):
+        self.put_page_to_cloud("I A,1_0127")
+        self.task.re_page = self._placeholder_page("'''Rages'''[[Kategorie:RE:OCR_erstellt]]")
+        self.assertTrue(self.task.task())
+        compare("'''Rages'''[[Kategorie:RE:OCR_erstellt]]", self.task.re_page.first_article.text.strip())
+
+    def test_task_stops_when_the_run_limit_is_reached(self):
+        self.put_page_to_cloud("I A,1_0127")
+        self.task.counter = 9
+        self.task.re_page = self._placeholder_page("'''Rages'''")
+        self.assertTrue(self.task.task())
+        compare("'''Rages'''", self.task.re_page.first_article.text.strip())
+
+    def test_get_raw_page_reraises_unexpected_client_error(self):
+        error = ClientError({"Error": {"Code": "AccessDenied"}}, "GetObject")
+        with mock.patch.object(self.task.s3_client, "get_object", side_effect=error), self.assertRaises(ClientError):
+            self.task.get_raw_page("I A,1_0127")

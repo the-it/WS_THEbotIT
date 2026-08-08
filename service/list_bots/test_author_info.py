@@ -1,4 +1,4 @@
-from unittest import TestCase
+from unittest import TestCase, mock
 
 import pywikibot
 from testfixtures import compare
@@ -12,6 +12,13 @@ class TestAuthorInfo(TestCase):
 
     def setUp(self):
         self.author_info = AuthorInfo(None)
+
+    def test_enrich_without_a_german_description(self):
+        page = mock.MagicMock()
+        page.data_item.return_value.get.return_value = {"descriptions": {"en": "only english"}}
+        author_dict = {"first_name": "A", "last_name": "B", "birth": "1900", "death": "2000", "sortkey": "B, A"}
+        self.author_info.enrich_author_dict(author_dict, page)
+        compare("", author_dict["description"])
 
     @real_wiki_test
     def test_enrich(self):

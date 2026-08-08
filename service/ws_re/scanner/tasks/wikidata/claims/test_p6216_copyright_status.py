@@ -1,8 +1,10 @@
 # pylint: disable=protected-access
 from typing import Any, ClassVar
+from unittest import mock
 
 from testfixtures import compare
 
+from service.ws_re.register.author import Author
 from service.ws_re.scanner.tasks.wikidata.claims.p6216_copyright_status import P6216CopyrightStatus
 from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import BaseTestClaimFactory
 from tools.test import real_wiki_test
@@ -155,6 +157,13 @@ class TestP6216CopyrightStatus(BaseTestClaimFactory):
         factory = P6216CopyrightStatus(re_page, self.logger)
         claim_boethius = factory.min_years_since_death
         compare(None, claim_boethius)
+
+    def test_min_years_since_death_author_without_death_year(self):
+        # an author without a death year has to be treated as if they died this year
+        re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Boethius}}", title="RE:Bla")
+        factory = P6216CopyrightStatus(re_page, self.logger)
+        with mock.patch.object(factory, "get_authors_article", mock.Mock(return_value=[Author("Anonymous", {})])):
+            compare(None, factory.min_years_since_death)
 
     def test_min_years_since_death_author_not_known(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=II,2}}\ntext\n{{REAutor|Blablub}}", title="RE:Bla")

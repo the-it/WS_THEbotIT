@@ -1,7 +1,7 @@
 # pylint: disable=protected-access,line-too-long
 from unittest import TestCase
 
-from tools.template_handler import TemplateHandler
+from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 test_title = "vorlage"
 test_title_sperr = "Sperrsatz"
@@ -231,6 +231,10 @@ class TestTemplateHandler(TestCase):
         handler = TemplateHandler(test_string_bug)
         real_dict = handler.get_parameterlist()
         self.assertEqual(test_list_bug, real_dict)
+
+    def test_template_without_title(self):
+        with self.assertRaises(TemplateHandlerException):
+            TemplateHandler("{{|1=test1}}")
 
     def test_bug_poemlist(self):
         handler = TemplateHandler("{{SeitePR|[I] Schmutztitel|Mittelalterliches Hausbuch 1887 0001.jpg}}")

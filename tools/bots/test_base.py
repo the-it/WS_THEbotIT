@@ -1,11 +1,13 @@
 # pylint: disable=protected-access,no-member,no-self-use
+import os
 import typing
-from unittest import TestCase
+from unittest import TestCase, mock
 
 import boto3
 from moto import mock_aws
+from testfixtures import compare
 
-from tools.bots.base import is_aws_test_env
+from tools.bots.base import get_aws_credentials, is_aws_test_env
 
 JSON_TEST = '{\n  "data": {\n    "a": [\n      1,\n      2\n    ]\n  },\n  "time": "2020-01-14 00:00:00"\n}'
 JSON_TEST_EXTEND = (
@@ -15,6 +17,24 @@ DATA_TEST = {"data": {"a": [1, 2]}, "time": "2020-01-14 00:00:00"}
 DATA_TEST_EXTEND = {"data": {"a": [1, 2], "b": 2}, "time": "2020-01-14 00:00:00"}
 BUCKET_NAME = f"wiki-bots-persisted-data-{'tst' if is_aws_test_env() else 'prd'}"
 TABLE_NAME = f"wiki_bots_manage_table_{'tst' if is_aws_test_env() else 'prd'}"
+
+
+class TestAwsCredentials(TestCase):
+    def test_credentials_of_the_test_environment(self):
+        test_env = {"WS_AWS_TST_ENV": "1", "WS_AWS_TST_KEY": "tst_key", "WS_AWS_TST_SECRET": "tst_secret"}
+        with mock.patch.dict(os.environ, test_env, clear=True):
+            compare(True, is_aws_test_env())
+            compare(("tst_key", "tst_secret"), get_aws_credentials())
+
+    def test_credentials_of_the_production_environment(self):
+        prd_env = {"WS_AWS_PRD_KEY": "prd_key", "WS_AWS_PRD_SECRET": "prd_secret"}
+        with mock.patch.dict(os.environ, prd_env, clear=True):
+            compare(False, is_aws_test_env())
+            compare(("prd_key", "prd_secret"), get_aws_credentials())
+
+    def test_credentials_without_any_environment(self):
+        with mock.patch.dict(os.environ, {}, clear=True):
+            compare(("", ""), get_aws_credentials())
 
 
 class TestCloudBase(TestCase):

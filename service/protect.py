@@ -85,7 +85,7 @@ class Protect(CloudBot):
 
 # PYWIKIBOT_DIR=/home/erik/.pywikibot_protect
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = Site(code="de", fam="wikisource", user="THEprotectIT")
     with Protect(wiki=WS_WIKI, debug=False) as bot:
         bot.run()

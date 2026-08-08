@@ -1,6 +1,8 @@
 # pylint: disable=protected-access
+from unittest import mock
+
 import pywikibot
-from testfixtures import compare
+from testfixtures import LogCapture, StringComparison, compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p13269_directs_readers_to import P13269DirectsReadersTo
 from service.ws_re.scanner.tasks.wikidata.claims.test_claim_factory import BaseTestClaimFactory
@@ -10,6 +12,19 @@ from tools.test import real_wiki_test
 
 @real_wiki_test
 class TestP13269DirectsReadersTo(BaseTestClaimFactory):
+    def test__get_claim_json_target_page_without_data_item(self):
+        re_page = RePage(pywikibot.Page(self.wikisource_site, "RE:Amantes 2"))
+        factory = P13269DirectsReadersTo(re_page, self.logger)
+        with (
+            mock.patch(
+                "service.ws_re.scanner.tasks.wikidata.claims.p13269_directs_readers_to.pywikibot.Page.data_item",
+                mock.Mock(side_effect=pywikibot.exceptions.NoPageError(mock.MagicMock())),
+            ),
+            LogCapture() as log_catcher,
+        ):
+            compare([], factory._get_claim_json())
+        log_catcher.check_present(("Test", "ERROR", StringComparison("P13269: Page existed for .*, but no data item.")))
+
     def test__get_claim_json_no_redirect(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Some Author.}}", title="RE:Bla")
         factory = P13269DirectsReadersTo(re_page, self.logger)

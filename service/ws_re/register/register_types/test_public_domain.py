@@ -29,6 +29,10 @@ class TestPublicDomainRegister(BaseTestRegister):
         pd_2021_register = PublicDomainRegister(2021, self.authors, self.registers)
         compare(6, len(pd_2021_register))
 
+    def test_get_item(self):
+        pd_2021_register = PublicDomainRegister(2021, self.authors, self.registers)
+        compare("Aal", pd_2021_register[0].lemma)
+
     def test_make_table(self):
         pd_2021_register = PublicDomainRegister(2021, self.authors, self.registers)
         expected_table = """{{Tabellenstile}}

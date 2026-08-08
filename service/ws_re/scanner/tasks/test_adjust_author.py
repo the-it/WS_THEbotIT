@@ -65,6 +65,20 @@ test
             compare({"success": True, "changed": False}, task.run(re_page))
         compare("Arthur Stein", re_page[0].author.short_string)
 
+    def test_skip_text_outside_of_an_article(self):
+        self.page_mock.text = """{{REDaten
+|BAND=I,1
+|KORREKTURSTAND=unvollständig
+}}
+test
+{{REAutor|Arthur Stein}}
+[[Kategorie:RE:Wartung]]"""
+        re_page = RePage(self.page_mock)
+        with LogCapture():
+            task = ADAUTask(None, self.logger)
+            compare({"success": True, "changed": True}, task.run(re_page))
+        compare("[[Kategorie:RE:Wartung]]", re_page[1])
+
     def test_no_change_for_unknown_author(self):
         self.page_mock.text = """{{REDaten
 |BAND=I,1

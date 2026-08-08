@@ -590,3 +590,31 @@ class TestMissingIndices(BaseTestRegister):
         update_dict = {"lemma": "B", "previous": "Ä", "next": "Ö"}
         with Updater(register) as updater:
             updater.update_lemma(update_dict, [])
+
+    def test_repr(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        compare("<Updater - register:I,1>", repr(Updater(register)))
+
+    def test_update_pre_and_post_exists_without_neighbours(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        update_dict = {"lemma": "B", "previous": "Not there", "next": "Also not there"}
+        with Updater(register) as updater, self.assertRaises(RegisterException):
+            updater._update_pre_and_post_exists(update_dict, False)
+
+    def test_update_pre_exists_without_previous_lemma(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        pre_length = len(register)
+        with Updater(register) as updater:
+            updater._update_pre_exists({"lemma": "B", "previous": "Not there"})
+        compare(pre_length, len(register))
+
+    def test_update_post_exists_without_next_lemma(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        pre_length = len(register)
+        with Updater(register) as updater:
+            updater._update_post_exists({"lemma": "B", "next": "Not there"})
+        compare(pre_length, len(register))

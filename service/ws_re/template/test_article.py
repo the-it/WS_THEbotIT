@@ -1,12 +1,13 @@
 # pylint: disable=no-self-use,protected-access
 from datetime import datetime
-from unittest import TestCase
+from unittest import TestCase, mock
 
 from testfixtures import compare
 
 from service.ws_re.template import ARTICLE_TEMPLATE, ReDatenException
 from service.ws_re.template.article import Article
 from service.ws_re.template.re_author import REAuthor
+from tools.template_handler import TemplateHandlerException
 
 
 class TestReArticle(TestCase):
@@ -177,6 +178,13 @@ class TestReArticle(TestCase):
             ReDatenException, "Article has the wrong structure. There is text after the article."
         ):
             Article.from_text(article_text)
+
+    def test_from_text_author_template_with_wrong_structure(self):
+        with (
+            mock.patch.object(REAuthor, "from_template", mock.Mock(side_effect=TemplateHandlerException("no title"))),
+            self.assertRaisesRegex(ReDatenException, "Author-Template has the wrong structure."),
+        ):
+            Article.from_text("{{REDaten}}\ntext\n{{REAutor|Some Author.}}")
 
     def test_from_text_bug_bad_whitespace(self):
         article_text = "{{REDaten \n|BAND=I,1}}\ntext\n{{REAutor|Some Author.}}"

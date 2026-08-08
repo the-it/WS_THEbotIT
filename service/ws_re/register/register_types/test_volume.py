@@ -199,6 +199,19 @@ class TestRegister(BaseTestRegister):
         compare(4, register.get_index_of_lemma(lemma))
         compare(None, register.get_index_of_lemma("Lemma not there"))
 
+    def test_contains(self):
+        copy_tst_data("I_1_base", "I_1")
+        register = VolumeRegister(Volumes()["I,1"], Authors())
+        self.assertTrue("Aal" in register)
+        self.assertFalse("Abracadabra" in register)
+
+    def test_broken_json_file(self):
+        with open(DataRepo.get_data_path().joinpath("I_1.json"), mode="w", encoding="utf-8") as register_file:
+            register_file.write("[{no valid json]")
+        with self.assertRaises(ValueError) as context:
+            VolumeRegister(Volumes()["I,1"], Authors())
+        compare("Decoding error in file I_1", str(context.exception))
+
 
 @skip("only for analysis")
 class TestIntegrationRegister(TestCase):

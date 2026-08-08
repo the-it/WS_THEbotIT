@@ -2,7 +2,7 @@
 from unittest import mock
 
 from ddt import ddt, file_data
-from testfixtures import compare
+from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
@@ -48,6 +48,24 @@ class TestDEALTask(TaskTestCase):
             task = DEALTask(None, self.logger)
             compare({"success": True, "changed": False}, task.run(re_page))
             compare(expect, task.data)
+
+    def test_process_stops_after_50_links_in_the_text(self):
+        with mock.patch(BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:
+            links = "".join(f"[[RE:Aal {idx}]]" for idx in range(60))
+            self.page_mock.text = f"{{{{REDaten\n|KORREKTURSTAND=fertig\n}}}}\n{links}\n{{{{REAutor|Autor.}}}}"
+            self.page_mock.title_str = "Re:Title"
+            page_mock.return_value.exists.return_value = False
+            re_page = RePage(self.page_mock)
+            task = DEALTask(None, self.logger)
+            compare({"success": True, "changed": False}, task.run(re_page))
+            compare(51, len(task.data))
+
+    def test_finish_task(self):
+        task = DEALTask(None, self.logger)
+        with mock.patch.object(DEALTask, "report_data_entries") as report_mock, LogCapture() as log_catcher:
+            task.finish_task()
+        report_mock.assert_called_once_with()
+        log_catcher.check_present(("Test", "INFO", "closing task DEAL"))
 
     def test_build_entries(self):
         task = DEALTask(None, self.logger)

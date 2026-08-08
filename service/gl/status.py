@@ -134,7 +134,7 @@ class GlStatus(CloudBot):
         return len(searcher.run())
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     with GlStatus(wiki=WIKI, debug=False) as bot:
         bot.run()
