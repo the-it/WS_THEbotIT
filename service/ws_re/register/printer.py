@@ -15,9 +15,14 @@ def _get_simple_number_sortkey(lemma: str) -> str:
 
 class ReRegisterPrinter(CloudBot):
     def __init__(
-        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+        self,
+        wiki: BaseSite | None = None,
+        debug: bool = True,
+        log_to_screen: bool = True,
+        log_to_wiki: bool = True,
+        send_metrics: bool = False,
     ):
-        super().__init__(wiki, debug, log_to_screen, log_to_wiki)
+        super().__init__(wiki, debug, log_to_screen, log_to_wiki, send_metrics)
         self.registers = Registers()
 
     def task(self):
