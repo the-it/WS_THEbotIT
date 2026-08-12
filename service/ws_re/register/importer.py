@@ -250,7 +250,13 @@ class ReImporter(CloudBot):
             nachfolger = post_article.lemma
         else:
             nachfolger = ""
-        spalte_start = article.chapter_objects[0].start if article.chapter_objects else "OFF"
+        if article.chapter_objects:
+            spalte_start: str | int = article.chapter_objects[0].start
+        elif pre_article is not None and pre_article.chapter_objects:
+            pre_chapter = pre_article.chapter_objects[-1]
+            spalte_start = pre_chapter.end or pre_chapter.start
+        else:
+            spalte_start = "OFF"
         spalte_end: str | int = "OFF"
         if article.chapter_objects and article.chapter_objects[0].end:
             spalte_end = article.chapter_objects[0].end
