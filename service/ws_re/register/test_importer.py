@@ -152,6 +152,18 @@ class TestGetTextBackup(BaseTestRegister):
         self.assertIn("|SPALTE_END=OFF", result)
         self.assertIn("{{REAutor|OFF}}", result)
 
+    def test_start_column_falls_back_to_predecessor_end_column(self):
+        article = self._make_lemma("Main")
+        pre = self._make_lemma("Pre", chapters=[{"start": 12, "end": 14}])
+        result = ReImporter.get_text_backup("I,1", article, pre)
+        self.assertIn("|SPALTE_START=14", result)
+
+    def test_start_column_falls_back_to_predecessor_start_column_without_end(self):
+        article = self._make_lemma("Main")
+        pre = self._make_lemma("Pre", chapters=[{"start": 12}])
+        result = ReImporter.get_text_backup("I,1", article, pre)
+        self.assertIn("|SPALTE_START=12", result)
+
 
 def _article(band: str, short_text: str = "") -> str:
     return (
