@@ -152,8 +152,8 @@ class ReImporter(CloudBot):
         else:
             re_page.add_error_category(self._SHORT_TEXT_CATEGORY)
         re_page.insert(position, new_article)
+        re_page.insert(position + 1, f"[[Kategorie:{self._STORE_CATEGORY}]]")
         self.adjust_nachtrag(re_page)
-        re_page.add_error_category(self._STORE_CATEGORY)
         try:
             re_page.save(f"Automatisch ergänzter Artikel aus Band {band}")
         except ReDatenException as error:
