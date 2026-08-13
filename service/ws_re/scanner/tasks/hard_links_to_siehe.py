@@ -10,18 +10,25 @@ from tools.bots.logger import WikiLogger
 
 class HLTSTask(ReScannerTask):
     """
-    Converts hard wiki links to RE articles into the {{RE siehe}} template.
+    Converts hard wiki links to RE articles into the {{RE siehe}} template, and vice versa.
 
-    Only links whose target is NOT a lemma of the local register data are converted, the template
-    handles those gracefully. Links to known lemmas are kept as they are. Links with a section
-    anchor ("[[RE:Lemma#Abschnitt]]") are never converted, the template can't express them.
+    A hard link whose target is NOT a lemma of the local register data is converted to
+    {{RE siehe}}, the template handles missing lemmas gracefully. A hard link to a known lemma is
+    kept as it is. Links with a section anchor ("[[RE:Lemma#Abschnitt]]") are never converted, the
+    template can't express them.
+
+    Conversely, a {{RE siehe}} template whose target IS a lemma of the local register data is
+    converted to a hard link, since the target article actually exists.
 
     Replacements:
-    - "[[RE:Lemma]]" -> "{{RE siehe|Lemma}}"
-    - "[[RE:Lemma|Anchor]]" -> "{{RE siehe|Lemma|Anchor}}"
+    - "[[RE:Lemma]]" -> "{{RE siehe|Lemma}}" (Lemma unknown in register)
+    - "[[RE:Lemma|Anchor]]" -> "{{RE siehe|Lemma|Anchor}}" (Lemma unknown in register)
+    - "{{RE siehe|Lemma}}" -> "[[RE:Lemma]]" (Lemma known in register)
+    - "{{RE siehe|Lemma|Anchor}}" -> "[[RE:Lemma|Anchor]]" (Lemma known in register)
     """
 
     _link_regex = re.compile(r"\[\[RE:([^|\]]+)(?:\|([^\]]+))?]]")
+    _siehe_regex = re.compile(r"\{\{RE siehe\|([^|{}]+)(?:\|([^{}]+))?}}")
 
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
@@ -60,8 +67,19 @@ class HLTSTask(ReScannerTask):
             return f"{{{{RE siehe|{target}|{anchor}}}}}"
         return f"{{{{RE siehe|{target}}}}}"
 
+    def _replace_siehe(self, match: re.Match) -> str:
+        target = match.group(1)
+        anchor = match.group(2)
+        if not self._resolve_lemma(target):
+            # lemma is unknown in the register, the template stays as it is
+            return match.group(0)
+        if anchor:
+            return f"[[RE:{target}|{anchor}]]"
+        return f"[[RE:{target}]]"
+
     def _fix_text(self, text: str) -> str:
-        return self._link_regex.sub(self._replace, text)
+        text = self._link_regex.sub(self._replace, text)
+        return self._siehe_regex.sub(self._replace_siehe, text)
 
     def task(self) -> bool:
         for idx, part in enumerate(self.re_page):
