@@ -52,7 +52,7 @@ class ReScanner(CloudBot):
             KURZTask,  # add short description
             COKSTask,  # correct Korrekturstand if it is not correct
             SKFRTask,  # set sortkey from redirect if it has a better match
-            HLTSTask,  # convert hard wiki links to RE siehe template
+            HLTSTask,  # convert hard wiki links to RE siehe template and back, based on register
             RELITask,  # remove unwanted RE cross-reference syntax
             DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia
