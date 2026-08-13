@@ -22,9 +22,9 @@ class HLTSTask(ReScannerTask):
 
     Replacements:
     - "[[RE:Lemma]]" -> "{{RE siehe|Lemma}}" (Lemma unknown in register)
-    - "[[RE:Lemma|Anchor]]" -> "{{RE siehe|Lemma|Anchor}}" (Lemma unknown in register)
+    - "[[RE:Lemma|Anzeigetext]]" -> "{{RE siehe|Lemma|Anzeigetext}}" (Lemma unknown in register)
     - "{{RE siehe|Lemma}}" -> "[[RE:Lemma]]" (Lemma known in register)
-    - "{{RE siehe|Lemma|Anchor}}" -> "[[RE:Lemma|Anchor]]" (Lemma known in register)
+    - "{{RE siehe|Lemma|Anzeigetext}}" -> "[[RE:Lemma|Anzeigetext]]" (Lemma known in register)
     """
 
     _link_regex = re.compile(r"\[\[RE:([^|\]]+)(?:\|([^\]]+))?]]")
@@ -56,25 +56,25 @@ class HLTSTask(ReScannerTask):
 
     def _replace(self, match: re.Match) -> str:
         target = match.group(1)
-        anchor = match.group(2)
+        display_text = match.group(2)
         if "#" in target:
             return match.group(0)
         if self._resolve_lemma(target):
             # lemma is known in the register, the hard link stays as it is
             return match.group(0)
         self._unknown_targets.add((target, self.re_page.lemma_without_prefix))
-        if anchor:
-            return f"{{{{RE siehe|{target}|{anchor}}}}}"
+        if display_text:
+            return f"{{{{RE siehe|{target}|{display_text}}}}}"
         return f"{{{{RE siehe|{target}}}}}"
 
     def _replace_siehe(self, match: re.Match) -> str:
         target = match.group(1)
-        anchor = match.group(2)
+        display_text = match.group(2)
         if not self._resolve_lemma(target):
             # lemma is unknown in the register, the template stays as it is
             return match.group(0)
-        if anchor:
-            return f"[[RE:{target}|{anchor}]]"
+        if display_text:
+            return f"[[RE:{target}|{display_text}]]"
         return f"[[RE:{target}]]"
 
     def _fix_text(self, text: str) -> str:
