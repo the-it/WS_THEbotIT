@@ -25,15 +25,21 @@ class HLTSTask(ReScannerTask):
     - "[[RE:Lemma|Anzeigetext]]" -> "{{RE siehe|Lemma|Anzeigetext}}" (Lemma unknown in register)
     - "{{RE siehe|Lemma}}" -> "[[RE:Lemma]]" (Lemma known in register)
     - "{{RE siehe|Lemma|Anzeigetext}}" -> "[[RE:Lemma|Anzeigetext]]" (Lemma known in register)
+
+    While this task is still being rolled out carefully, it only changes MAX_CHANGED_ARTICLES
+    articles per scanner run (the scanner runs once a night), then leaves the rest untouched
+    until the next run.
     """
 
     _link_regex = re.compile(r"\[\[RE:([^|\]]+)(?:\|([^\]]+))?]]")
     _siehe_regex = re.compile(r"\{\{RE siehe\|([^|{}]+)(?:\|([^{}]+))?}}")
+    MAX_CHANGED_ARTICLES = 10
 
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self._lemma_names: set[str] | None = None
         self._unknown_targets: set[tuple[str, str]] = set()
+        self._changed_articles = 0
 
     @property
     def lemma_names(self) -> set[str]:
@@ -82,15 +88,22 @@ class HLTSTask(ReScannerTask):
         return self._siehe_regex.sub(self._replace_siehe, text)
 
     def task(self) -> bool:
+        if self._changed_articles >= self.MAX_CHANGED_ARTICLES:
+            return True
+        page_changed = False
         for idx, part in enumerate(self.re_page):
             if isinstance(part, Article):
                 fixed = self._fix_text(part.text)
                 if fixed != part.text:
                     part.text = fixed
+                    page_changed = True
             elif isinstance(part, str):
                 fixed = self._fix_text(part)
                 if fixed != part:
                     self.re_page[idx] = fixed
+                    page_changed = True
+        if page_changed:
+            self._changed_articles += 1
         return True
 
     def finish_task(self):
