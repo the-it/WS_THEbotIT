@@ -51,8 +51,24 @@ def main():
                 if isinstance(hw, dict) and hw.get('move_target'):
                     e.setdefault('title_fix', hw['move_target'])
             rows.append(e)
+    # hard guard: a printed REAutor signature always ends in "." (except the literal OFF
+    # sentinel). A subagent that dropped the period is a common, easy-to-miss mistake — catch
+    # it here instead of letting it reach the edit pass.
+    period_fixed = []
+    for r in rows:
+        fix = r.get('reautor_fix')
+        if fix and fix != 'OFF' and '|' not in fix and not fix.endswith('.'):
+            r['reautor_fix'] = fix + '.'
+            period_fixed.append((r['title'], fix))
+
     json.dump(rows, open(f'{outdir}/all_findings.json', 'w'), ensure_ascii=False, indent=1)
     print(f'total findings: {len(rows)}\n')
+
+    if period_fixed:
+        print(f'=== REAUTOR missing trailing period, auto-fixed: {len(period_fixed)}')
+        for title, fix in period_fixed:
+            print(f'  {title:24} {fix!r} -> {fix!r}.')
+        print()
 
     def show(label, pred, fmt):
         hits = [r for r in rows if pred(r)]
