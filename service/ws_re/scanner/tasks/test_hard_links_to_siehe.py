@@ -56,25 +56,27 @@ Text mit Links: [[RE:Leben(a)]] und [[RE:Leben(a)|Leben]].
         self.assertIn("Vorab {{RE siehe|Leben(a)|Leben}}.", full_text)
         self.assertIn("Nachlauf {{RE siehe|Leben(b)}}.", full_text)
 
-    def test_no_replacement_when_lemma_in_register(self):
+    def test_hardlink_gets_display_text_when_lemma_in_register(self):
         self.page_mock.text = """{{REDaten}}
 Text mit Links: [[RE:Aal]] und [[RE:Aarassos|Leben]].
 {{REAutor|Autor.}}"""
         re_page = RePage(self.page_mock)
 
         result = self.task.run(re_page)
-        compare({"success": True, "changed": False}, result)
-        self.assertIn("[[RE:Aal]]", re_page[0].text)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("[[RE:Aal|Aal]]", re_page[0].text)
         self.assertIn("[[RE:Aarassos|Leben]]", re_page[0].text)
 
-    def test_no_replacement_for_register_lemma_with_underscore_or_lowercase(self):
+    def test_hardlink_for_register_lemma_with_underscore_or_lowercase_gets_display_text(self):
         self.page_mock.text = """{{REDaten}}
 Links: [[RE:Aba_1]] und [[RE:aba 2]].
 {{REAutor|Autor.}}"""
         re_page = RePage(self.page_mock)
 
         result = self.task.run(re_page)
-        compare({"success": True, "changed": False}, result)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("[[RE:Aba_1|Aba_1]]", re_page[0].text)
+        self.assertIn("[[RE:aba 2|aba 2]]", re_page[0].text)
 
     def test_no_replacement_for_links_with_anchor(self):
         self.page_mock.text = """{{REDaten}}
@@ -96,7 +98,7 @@ Text mit Vorlagen: {{RE siehe|Aal}} und {{RE siehe|Aarassos|Leben}}.
         compare({"success": True, "changed": True}, result)
 
         after = re_page[0].text
-        self.assertIn("[[RE:Aal]]", after)
+        self.assertIn("[[RE:Aal|Aal]]", after)
         self.assertIn("[[RE:Aarassos|Leben]]", after)
         self.assertNotIn("{{RE siehe|Aal}}", after)
         self.assertNotIn("{{RE siehe|Aarassos|Leben}}", after)

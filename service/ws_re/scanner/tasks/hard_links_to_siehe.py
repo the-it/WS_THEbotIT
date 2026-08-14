@@ -23,7 +23,8 @@ class HLTSTask(ReScannerTask):
     Replacements:
     - "[[RE:Lemma]]" -> "{{RE siehe|Lemma}}" (Lemma unknown in register)
     - "[[RE:Lemma|Anzeigetext]]" -> "{{RE siehe|Lemma|Anzeigetext}}" (Lemma unknown in register)
-    - "{{RE siehe|Lemma}}" -> "[[RE:Lemma]]" (Lemma known in register)
+    - "[[RE:Lemma]]" -> "[[RE:Lemma|Lemma]]" (Lemma known in register)
+    - "{{RE siehe|Lemma}}" -> "[[RE:Lemma|Lemma]]" (Lemma known in register)
     - "{{RE siehe|Lemma|Anzeigetext}}" -> "[[RE:Lemma|Anzeigetext]]" (Lemma known in register)
 
     While this task is still being rolled out carefully, it only changes MAX_CHANGED_ARTICLES
@@ -66,8 +67,8 @@ class HLTSTask(ReScannerTask):
         if "#" in target:
             return match.group(0)
         if self._resolve_lemma(target):
-            # lemma is known in the register, the hard link stays as it is
-            return match.group(0)
+            # lemma is known in the register, keep the hard link but hide the "RE:" prefix
+            return f"[[RE:{target}|{display_text or target}]]"
         self._unknown_targets.add((target, self.re_page.lemma_without_prefix))
         if display_text:
             return f"{{{{RE siehe|{target}|{display_text}}}}}"
@@ -79,9 +80,8 @@ class HLTSTask(ReScannerTask):
         if not self._resolve_lemma(target):
             # lemma is unknown in the register, the template stays as it is
             return match.group(0)
-        if display_text:
-            return f"[[RE:{target}|{display_text}]]"
-        return f"[[RE:{target}]]"
+        # keep the "RE:" prefix out of the rendered text
+        return f"[[RE:{target}|{display_text or target}]]"
 
     def _fix_text(self, text: str) -> str:
         text = self._link_regex.sub(self._replace, text)
