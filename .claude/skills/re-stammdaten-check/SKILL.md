@@ -245,6 +245,21 @@ as a diff. Do not assume an already-plausible full name is correct. (Regression:
 kept `Rudolf Güngerich` when the print reads `[Güngerich.]` — it was never re-checked against the
 scan.)
 
+**Hard rule: every `reautor_fix` you write ends with `.` — no exceptions except the literal
+sentinel `OFF` and the band-disambiguation form `Autor.|Band`.** The printed signature inside
+`[ ... ]` always closes with a period before the `]`; if your fix string doesn't have one, you
+copied the name but dropped the punctuation — go back and fix it, don't ship it. This is not a
+cosmetic nit: a batch run (2026-08-14) shipped REAutor fixes with the period stripped on most
+entries, and the user had to catch it after the fact. Two backstops, both required:
+- **Subagents**: before writing `findings_NN.json`, re-read each `reautor_fix` value you're about
+  to emit and confirm it ends in `.` (unless `OFF`/disambiguated). Fix it inline if not.
+- **Aggregation**: `scripts/aggregate_findings.py` now hard-guards this — it appends a missing
+  `.` to any `reautor_fix` that lacks one (excluding `OFF` and `|`-disambiguated forms) and prints
+  a `REAUTOR missing trailing period, auto-fixed` list. **Always run aggregate_findings.py and
+  read that list before applying edits** — a non-empty list means subagents are dropping periods
+  again and the root cause (prompt/instructions to that subagent batch) should be checked, not
+  just silently patched.
+
 **Do NOT overwrite these REAutor forms — they are deliberate author-template syntax, not raw
 signatures (flag for the user instead):**
 - **Band-disambiguation `Autor|Band`** (e.g. `{{REAutor|Nagl.|VII A,2}}`) — the `|VII A,2`
