@@ -118,18 +118,26 @@ then continue with the shortest-first PetScan selection to fill out the batch si
 
 ## eLexikon endpoints (what to fetch)
 
-- **Whole-article enriched text (primary):** `https://elexikon.ch/?Typ=REt&Text=<lemma>`
-  with the wikisource lemma minus the `RE:` prefix, spaces→underscores (`Tuba_2`,
-  `Tubantes`). The content is the **last `<pre>` inside `div.ml15`** (the first `<pre>` is
-  a nav bar). It is ready wikitext: `[[links]]`, `{{RE siehe|…}}`, `{{Polytonisch|…}}`,
-  `{{SperrSchrift|…}}`, `''italics''` — **and `{{Seite|N}}` lines already placed at the
-  exact column breaks**. The first line is a `RE:<lemma>` heading (drop it), and the
-  printed end-signature `[…]` is already stripped (the skeleton's `{{REAutor}}` carries
-  it — never re-add it to the body).
-- **Per-column text (fallback):** `https://elexikon.ch/?Typ=REt&Text=<BAND-no-space>_<col>`
+- **Per-column text (primary — default to this):** `https://elexikon.ch/?Typ=REt&Text=<BAND-no-space>_<col>`
   (e.g. `VIIA,1_749`; the padded space form `VII+A,1_0749` also works). One printed column
-  per page, article boundaries marked by `== RE:<lemma> ==` headings. Use when the
-  by-lemma fetch fails or its `{{Seite}}` breaks don't match the skeleton.
+  per page, article boundaries marked by `== RE:<lemma> ==` headings, letting you see the
+  full run of neighbouring articles on that column. **Fetch this for every column, always
+  — do not rely on the by-lemma cut.** The 2026-08 batch4 run found eLexikon's by-lemma
+  cutter unreliable in a large minority of articles across nearly every chunk: silent
+  mid-column truncation, wrong/adjacent-article content spliced in (predecessor's tail,
+  successor's head), and mislabeled `== RE:… ==` headings — often in articles a
+  by-lemma-only heuristic never flagged as suspect. Reading the column text (and the scan)
+  yourself and cutting the article boundary at the real headword/signature is the only
+  reliable way; treat any by-lemma text as a hint at best.
+- **Whole-article enriched text (secondary — cross-check only):**
+  `https://elexikon.ch/?Typ=REt&Text=<lemma>` with the wikisource lemma minus the `RE:`
+  prefix, spaces→underscores (`Tuba_2`, `Tubantes`). The content is the **last `<pre>`
+  inside `div.ml15`** (the first `<pre>` is a nav bar). When it agrees with the per-column
+  text it saves proofreading time (it's the same OCR, already segmented and often correctly
+  cut) — but confirm its opening and closing lines against the per-column text/scan before
+  trusting its boundaries; don't use it as the sole source. The first line is a
+  `RE:<lemma>` heading (drop it), and the printed end-signature `[…]` is already stripped
+  (the skeleton's `{{REAutor}}` carries it — never re-add it to the body).
 - **Column scans (for proofreading):**
   `https://elexikon.ch/meyers/REo/<dir>/<BAND>_<col %04d>.png` — one printed column per
   PNG (≈700–1000 px wide, full column height). `<dir>` is the **half-band letter**: `A`
@@ -146,8 +154,11 @@ Subagents cannot reach elexikon — **pre-fetch everything to local files**, the
 In one evaluate call, loop the articles (~700 ms pacing), save the results with the
 `filename:` parameter so multi-MB blobs never enter your context:
 
-- *Texts:* `fetch(url, {credentials:'include'})` → `DOMParser` →
-  `[...doc.querySelectorAll('div.ml15 pre')].pop().textContent` → return `{lemma: text}`.
+- *Texts:* fetch **per-column** by default (one fetch per unique `<BAND>_<col>` in the
+  batch, dedup across articles that share a column) — `fetch(url, {credentials:'include'})`
+  → `DOMParser` → `[...doc.querySelectorAll('div.ml15 pre')].pop().textContent` → return
+  `{"<BAND>_<col>": text}`. Optionally also fetch the by-lemma text per article for a
+  quick cross-check, but the per-column text is what subagents should cut articles from.
 - *Scans:* `fetch` → `arrayBuffer` → base64 (chunk `String.fromCharCode` in ~8 KB slices)
   → return `{"<BAND>_<col %04d>.png": b64}`; decode locally with
   `scripts/decode_b64_files.py <batch.json> <scansdir>`.
@@ -157,9 +168,18 @@ In one evaluate call, loop the articles (~700 ms pacing), save the results with 
 Build the new page text from three parts, in place of the skeleton's headword + `[...]`
 lines:
 
-1. eLexikon body: drop the `RE:<lemma>` heading line and strip BOM/zero-width chars
-   (U+FEFF — one hides at the start of each column's text). The nav bar is the other
-   `<pre>` and never part of the extract.
+1. **Cut the article body from the per-column text**, not from the by-lemma text. The
+   per-column text for each column in `[SPALTE_START, SPALTE_END]` contains every article
+   printed on that column, separated by `== RE:<lemma> ==` headings (headings can
+   themselves be mislabeled — trust the printed headword/signature on the scan over the
+   heading string). Find this lemma's span across its column(s): start at its own heading
+   (or, if the article's start column is shared with the tail of a Vorgänger, drop that
+   leading tail entirely) and end at the Nachfolger's heading (or the scan's true end-of-
+   article signature) — don't stop early just because the by-lemma cut suggested a shorter
+   span. Strip BOM/zero-width chars (U+FEFF — one hides at the start of each column's
+   text). Cross-check against the by-lemma text where it exists: if the two agree, it
+   confirms the cut and saves rereading the scan line-by-line; where they disagree, the
+   scan is the tiebreaker.
 2. **Replace each eLexikon `{{Seite|N}}` line with the skeleton's exact `{{Seite|…}}`
    line for that N** — odd columns carry a `{{REIA|…}}` scan-link parameter that must
    survive (`{{Seite|753||{{REIA|VII A,1|753}}}}`). Every skeleton `{{Seite}}` line must
@@ -240,9 +260,11 @@ haiku proofreads Greek and letter-spaced names too unreliably to publish. **Neve
 more than 10 subagents in total for a batch.** Up to 10 articles: one subagent per
 article. More than 10: split the articles into at most 10 chunks (round-robin or
 contiguous, ~⌈N/10⌉ articles each) and give each subagent its whole chunk to process
-sequentially. Give each subagent, per article: the skeleton wikitext path, the eLexikon
-text path, the column PNG paths, and the article meta (lemma, BAND, SPALTE_START/END).
-For each article the subagent writes:
+sequentially. Give each subagent, per article: the skeleton wikitext path, **the
+per-column text(s) for its column span** (the primary source to cut from), the by-lemma
+text if fetched (cross-check only — tell subagents explicitly not to trust its cut
+without verifying against the column text/scan), the column PNG paths, and the article
+meta (lemma, BAND, SPALTE_START/END). For each article the subagent writes:
 
 - `<workdir>/out/<lemma>.wikitext` — the complete new page text, and
 - `<workdir>/out/<lemma>.notes.json` —
@@ -291,11 +313,18 @@ odd V/N) for a `re-stammdaten-check` pass instead of fixing them here.
 
 ## Gotchas
 
+- **Never trust the by-lemma cut** (see "eLexikon endpoints" above) — cut from the
+  per-column text and scan instead; use by-lemma only as a cross-check when it happens to
+  agree.
 - **eLexikon lemma key ≠ wikisource lemma** (rare; Greek titles, special chars): if the
   by-lemma URL misses, open the per-column page of `SPALTE_START` — its nav bar links
   "show this Article completely" with eLexikon's own key for the lemma.
 - **Article not digitized / empty text** on eLexikon → skip & report.
 - **`{{Seite}}` mismatch = probable Stammdaten error** — never "fix" SPALTE here; report.
+- **`check_assembly.py` checks Seite-line presence/count/order, not position** — it will
+  pass an assembly that moved a `{{Seite|N}}` tag to right before `{{REAutor}}` instead of
+  its real mid-body column break (seen in batch4). When proofreading, place each Seite tag
+  exactly where the column text/scan shows the break, not wherever is convenient.
 - **Do not touch** VORGÄNGER/NACHFOLGER, SORTIERUNG, KURZTEXT, maintenance categories, or
   anything else in the skeleton beyond the KORREKTURSTAND flip and the body.
 - The state goes to **unkorrigiert** even after a full proofread — wikisource's
