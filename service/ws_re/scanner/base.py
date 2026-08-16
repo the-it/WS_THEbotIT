@@ -44,7 +44,7 @@ class ReScanner(CloudBot):
         log_to_wiki: bool = True,
     ):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(hours=8)
+        self.timeout = timedelta(hours=1)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
         # Wikidata and the Registers.
@@ -105,7 +105,7 @@ class ReScanner(CloudBot):
     @property
     def lemma_list(self) -> list[str]:
         searcher = self._prepare_searcher()
-        result, _ = searcher.get_combined_lemma_list(self.data, timeframe=72)
+        result, _ = searcher.get_combined_lemma_list(self.data, timeframe=168)
         return result
 
     def _activate_tasks(self) -> list[ReScannerTask]:
