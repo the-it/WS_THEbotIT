@@ -54,7 +54,7 @@ class ReScanner(CloudBot):
             # SKFRTask,  # set sortkey from redirect if it has a better match
             HLTSTask,  # convert hard wiki links to RE siehe template and back, based on register
             RELITask,  # remove unwanted RE cross-reference syntax
-            DEALTask,  # check for dead links RE internal
+            # DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia
             REAUTask,  # check for integrity article must have an author, or it is a soft redirect
             ADAUTask,  # adjust author full names to short names
