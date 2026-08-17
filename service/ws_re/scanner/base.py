@@ -3,6 +3,7 @@ from collections.abc import Callable
 from contextlib import suppress
 from datetime import datetime, timedelta
 from typing import cast
+from urllib.parse import quote
 
 import pywikibot
 
@@ -148,7 +149,7 @@ class ReScanner(CloudBot):
         self.logger.info("Start processing the lemmas.")
         processed_lemmas = 0
         for idx, lemma in enumerate(self.lemma_list):
-            self.logger.debug(f"Process [https://de.wikisource.org/wiki/{lemma} {lemma}]")
+            self.logger.debug(f"Process [https://de.wikisource.org/wiki/{quote(lemma)} {lemma}]")
             list_of_done_tasks = []
             try:
                 raw_page = pywikibot.Page(self.wiki, lemma)
