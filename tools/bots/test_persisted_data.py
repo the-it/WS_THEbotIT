@@ -1,6 +1,8 @@
 # pylint: disable=protected-access,no-member,no-self-use
 import json
+from unittest import mock
 
+from botocore.exceptions import ClientError
 from freezegun import freeze_time
 from testfixtures import compare
 
@@ -27,6 +29,11 @@ class TestPersistedData(TestCloudBase):
 
     def test_load_from_bucket_no_data(self):
         with self.assertRaises(BotException):
+            self.data.load()
+
+    def test_load_from_bucket_unexpected_client_error(self):
+        error = ClientError({"Error": {"Code": "AccessDenied"}}, "GetObject")
+        with mock.patch.object(self.data.s3_client, "get_object", side_effect=error), self.assertRaises(ClientError):
             self.data.load()
 
     def test_delete_key(self):

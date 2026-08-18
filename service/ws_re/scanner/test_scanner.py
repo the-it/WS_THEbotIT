@@ -1,10 +1,10 @@
 # pylint: disable=protected-access
 from contextlib import suppress
 from datetime import datetime
-from unittest import mock, skip
+from unittest import mock
 
-from freezegun import freeze_time
-from testfixtures import LogCapture
+import pywikibot
+from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.base import ReScanner
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
@@ -89,6 +89,8 @@ class TestReScanner(TestCloudBase):
         self.page_mock = page_patcher.start()
         self.page_error_mock = page_patcher_error.start()
         self.re_page_mock = re_page_patcher.start()
+        # both page patchers point at the same pywikibot.Page attribute, so the last one started wins
+        self.page_error_mock.return_value.isRedirectPage.return_value = False
 
     def _mock_task(self):
         # pylint: disable=attribute-defined-outside-init
@@ -286,63 +288,41 @@ class TestReScanner(TestCloudBase):
             )
             log_catcher.check_present(*expected_logging, order_matters=True)
 
-    @skip("I quit this task for the moment")
     def test_save_going_wrong(self):
         self._mock_surroundings()
-
-        def side_effect(*args, **kwargs):
-            raise ReDatenException(args, kwargs)
-
-        save_mock = mock.patch("service.ws_re.scanner.RePage.save", new_callable=mock.Mock()).start()
-        type(self.re_page_mock).save = save_mock.start()
-        save_mock.side_effect = side_effect
+        self.re_page_mock.return_value.save.side_effect = ReDatenException("no save possible")
         self.lemma_mock.return_value = [":RE:Lemma1"]
         with LogCapture() as log_catcher, ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
             log_catcher.clear()
             bot.tasks = [self.ONE1Task]
             bot.run()
             expected_logging = (
-                ("ReScanner", "INFO", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
+                ("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma1 :RE:Lemma1]"),
                 ("ReScanner", "INFO", "I"),
-                ("ReScanner", "INFO", "ReScanner hat folgende Aufgaben bearbeitet: BASE"),
+                ("ReScanner", "DEBUG", "ReScanner hat folgende Aufgaben bearbeitet: BASE"),
                 ("ReScanner", "ERROR", "RePage can't be saved."),
             )
             log_catcher.check_present(*expected_logging, order_matters=True)
 
-    class WAITTask(ReScannerTask):
-        def task(self):
-            pass
-
-    @skip("skipped after changing to CloudBot")
-    @freeze_time("Jan 14th, 2020", auto_tick_seconds=1)
-    def test_lemma_processed_are_saved(self):
+    def test_lemma_creation_runs_into_api_timeout(self):
         self._mock_surroundings()
-        self.lemma_mock.return_value = [":RE:Lemma0", ":RE:Lemma1", ":RE:Lemma2"]
-        self.re_page_mock.side_effect = [ReDatenException, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT, mock.DEFAULT]
-        bot = ReScanner(log_to_screen=False, log_to_wiki=False)
-        bot.tasks = [self.WAITTask]
-        with bot:
+        self.lemma_mock.return_value = [":RE:Lemma1", ":RE:Lemma2"]
+        self.re_page_mock.side_effect = [pywikibot.exceptions.ApiTimeoutError("too slow"), mock.DEFAULT]
+        with LogCapture() as log_catcher, ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+            log_catcher.clear()
+            bot.tasks = [self.ONE1Task]
             bot.run()
-        # with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
-        #     data = json.load(data_file)
-        #     self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY},
-        #                      data)
-        #     self.assertLessEqual(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-        #                          datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
-        self.lemma_mock.return_value = [":RE:Lemma3", ":RE:Lemma4"]
-        with bot:
-            bot.run()
-        # with open(bot.data.data_folder + os.sep + "ReScanner.data.json", encoding="utf-8") as data_file:
-        #     data = json.load(data_file)
-        #     self.assertEqual({":RE:Lemma1": mock.ANY, ":RE:Lemma2": mock.ANY,
-        #                       ":RE:Lemma3": mock.ANY, ":RE:Lemma4": mock.ANY},
-        #                      data)
-        #     self.assertLess(datetime.strptime(data[":RE:Lemma1"], "%Y%m%d%H%M%S"),
-        #                     datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"))
-        #     self.assertLess(datetime.strptime(data[":RE:Lemma2"], "%Y%m%d%H%M%S"),
-        #                     datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"))
-        #     self.assertLess(datetime.strptime(data[":RE:Lemma3"], "%Y%m%d%H%M%S"),
-        #                     datetime.strptime(data[":RE:Lemma4"], "%Y%m%d%H%M%S"))
+            expected_logging = (
+                ("ReScanner", "ERROR", "Timeout at lemma (:RE:Lemma1) creation"),
+                ("ReScanner", "DEBUG", "Process [https://de.wikisource.org/wiki/:RE:Lemma2 :RE:Lemma2]"),
+            )
+            log_catcher.check_present(*expected_logging, order_matters=True)
+
+    def test_lemma_list(self):
+        self.petscan_mock.return_value = ([":RE:Lemma1", ":RE:Lemma2"], 2)
+        with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
+            compare([":RE:Lemma1", ":RE:Lemma2"], bot.lemma_list)
+        self.petscan_mock.assert_called_once_with(mock.ANY, timeframe=72)
 
     def test_reload_deprecated_lemma_data_none_there(self):
         self._mock_surroundings()
@@ -359,21 +339,3 @@ class TestReScanner(TestCloudBase):
                 ("ReScanner", "WARNING", "There isn't deprecated data to reload."),
             )
             log_catcher.check_present(*expected_logging, order_matters=True)
-
-    @skip("skipped after changing to CloudBot")
-    def test_reload_deprecated_lemma_data(self):
-        self._mock_surroundings()
-        self.lemma_mock.return_value = [":RE:Lemma1"]
-        # with open(_DATA_PATH_TEST + os.sep + "ReScanner.data.json.deprecated", mode="w", encoding="utf-8") \
-        #         as persist_json:
-        #     json.dump({":RE:Lemma1": "20000101000000"}, persist_json)
-        with (
-            suppress(AssertionError),
-            LogCapture() as log_catcher,
-            ReScanner(log_to_screen=False, log_to_wiki=False, debug=False),
-        ):
-            log_catcher.check(
-                ("ReScanner", "INFO", "Start the bot ReScanner."),
-                ("ReScanner", "WARNING", "The last run wasn't successful. The data is thrown away."),
-                ("ReScanner", "WARNING", "Try to get the deprecated data back."),
-            )

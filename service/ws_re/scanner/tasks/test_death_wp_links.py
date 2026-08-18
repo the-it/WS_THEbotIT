@@ -2,7 +2,7 @@
 from unittest import mock
 
 import pywikibot
-from testfixtures import compare
+from testfixtures import LogCapture, compare
 
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.test_base_task import TaskTestCase
@@ -147,6 +147,13 @@ class TestDEWPTask(TaskTestCase):
         self.assertTrue(task._data_exists())
         task.data = {"not_exists": [], "redirect": [], "disambiguous": []}
         self.assertFalse(task._data_exists())
+
+    def test_finish_task(self):
+        task = DEWPTask(None, self.logger)
+        with mock.patch.object(DEWPTask, "report_data_entries") as report_mock, LogCapture() as log_catcher:
+            task.finish_task()
+        report_mock.assert_called_once_with()
+        log_catcher.check_present(("Test", "INFO", "closing task DEWP"))
 
     def test_bug_invalid_title(self):
         with mock.patch(_BASE_TASK_PYWIKIBOT_PAGE, new_callable=mock.MagicMock) as page_mock:

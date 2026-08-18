@@ -20,7 +20,7 @@ class BaseTestClaimFactory(TestCase):
         if REAL_WIKI_TEST:
             self.wikisource_site = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
             self.wikidata_site = self.wikisource_site.data_repository()
-        else:
+        else:  # pragma: no cover - only taken in the plain unittest run, coverage is measured against the wiki
             self.wikidata_site = MagicMock()
             self.wikisource_site = MagicMock()
         self.logger = WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False)
@@ -67,6 +67,20 @@ class TestClaimFactory(BaseTestClaimFactory):
 
     def test_property_string(self):
         compare("P1234", self.P1234FactoryDummy.get_property_string())
+
+    def test_property_string_of_a_class_without_property(self):
+        class NoPropertyFactory(ClaimFactory):
+            pass
+
+        with self.assertRaises(ValueError):
+            NoPropertyFactory.get_property_string()
+
+    def test_get_claim_json_of_the_base_factory_is_not_implemented(self):
+        with self.assertRaises(NotImplementedError):
+            ClaimFactory(MagicMock(), self.logger)._get_claim_json()
+
+    def test_get_claim_json_of_the_dummy_is_empty(self):
+        compare([], self.factory_dummy._get_claim_json())
 
     def test__filter_new_vs_old_claim_list(self):
         compare(

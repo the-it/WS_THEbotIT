@@ -4,6 +4,7 @@ from pathlib import Path
 
 from testfixtures import compare
 
+from service.ws_re.register.author import Author
 from service.ws_re.register.clean import CleanAuthors
 from service.ws_re.register.repo import DataRepo
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
@@ -40,6 +41,11 @@ class TestCleanAuthors(BaseTestRegister):
             open(DataRepo.get_data_path().joinpath("authors_mapping.json"), encoding="utf-8") as cleaned_file,
         ):
             compare(json.load(expection_file), json.load(cleaned_file))
+
+    def test_filter_candidates_of_an_author_without_death_year(self):
+        # without a death year at the old author there is nothing to match against
+        old_author = Author("Old Author", {})
+        compare([], CleanAuthors._filter_candidates([Author("New Author", {"death": 1900})], old_author))
 
 
 class TestRemapAuthors(BaseTestRegister):

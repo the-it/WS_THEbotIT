@@ -1,4 +1,7 @@
 # pylint: disable=protected-access
+from unittest import mock
+
+import pywikibot
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
@@ -8,6 +11,15 @@ from tools.test import real_wiki_test
 
 @real_wiki_test
 class TestP50Author(BaseTestClaimFactory):
+    def test__get_claim_json_author_lemma_has_no_data_item(self):
+        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Wagner.}}", title="RE:Bla")
+        factory = P50Author(re_page, self.logger)
+        with mock.patch(
+            "service.ws_re.scanner.tasks.wikidata.claims.p50_author.pywikibot.Page.data_item",
+            mock.Mock(side_effect=pywikibot.exceptions.NoPageError(mock.MagicMock())),
+        ):
+            compare(0, len(factory._get_claim_json()))
+
     def test__get_claim_json_no_author_available(self):
         re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|Blub}}", title="RE:Bla")
         factory = P50Author(re_page, self.logger)

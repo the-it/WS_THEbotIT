@@ -19,6 +19,7 @@ from service.ws_re.register.statistic import (
     HEADER_HEIGHT,
     LABEL_WIDTH,
     LINE_HEIGHT,
+    ReStatistic,
     _build_row_articles,
     _color_for_lemma,
     _is_public_domain,
@@ -27,6 +28,7 @@ from service.ws_re.register.statistic import (
 )
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.volumes import Volume
+from tools.bots.test_base import TestCloudBase
 
 
 class TestIsPublicDomain(BaseTestRegister):
@@ -437,3 +439,18 @@ class TestCreatePicture(BaseTestRegister):
                     compare(COLOR_GREEN, pixels[LABEL_WIDTH + 48, bar_y])
                     compare(COLOR_GREEN, pixels[LABEL_WIDTH + 50, bar_y])
                     compare(COLOR_GREEN, pixels[LABEL_WIDTH + 101, bar_y])
+
+
+class TestReStatistic(TestCloudBase):
+    def test_task_uploads_the_rendered_overview(self):
+        with (
+            mock.patch("service.ws_re.register.statistic.create_picture") as picture_mock,
+            mock.patch("service.ws_re.register.statistic.FilePage") as file_page_mock,
+            ReStatistic(wiki=None, debug=True, log_to_wiki=False) as bot,
+        ):
+            self.assertTrue(bot.run())
+        compare(1, picture_mock.call_count)
+        compare("File:RE Register Statistik.png", file_page_mock.call_args[0][1])
+        file_page_mock.return_value.upload.assert_called_once_with(
+            mock.ANY, comment="Bearbeitungsstand aktualisiert", ignore_warnings=True
+        )

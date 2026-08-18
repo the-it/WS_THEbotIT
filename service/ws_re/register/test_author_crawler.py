@@ -97,6 +97,18 @@ class TestAuthorCrawler(TestCase):
         expect = {"Wünsch.": {"*": "Richard Wünsch", "R": "Albert Wünsch"}}
         compare(expect, self.crawler._extract_mapping(mapping_text))
 
+    def test_extract_mapping_not_compatible_to_regex(self):
+        with self.assertRaises(ValueError):
+            self.crawler._extract_mapping("no mapping at all")
+
+    def test_extract_complex_mapping_not_compatible_to_regex(self):
+        with self.assertRaises(ValueError):
+            self.crawler._extract_complex_mapping("{no complex mapping at all")
+
+    def test_split_author_table_not_compatible_to_regex(self):
+        with self.assertRaises(ValueError):
+            self.crawler._split_author_table("no table at all")
+
     def test_get_mapping(self):
         test_str = """return {
 ["Karlhans Abel."] = "Karlhans Abel",
