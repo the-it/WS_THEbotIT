@@ -43,8 +43,9 @@ class ReScanner(CloudBot):
         debug: bool = True,
         log_to_screen: bool = True,
         log_to_wiki: bool = True,
+        send_metrics: bool = False,
     ):
-        CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
+        CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki, send_metrics)
         self.timeout = timedelta(hours=8)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
@@ -190,5 +191,5 @@ class ReScanner(CloudBot):
 
 if __name__ == "__main__":  # pragma: no cover
     WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-    with ReScanner(wiki=WS_WIKI, debug=False, log_to_wiki=False) as bot:
+    with ReScanner(wiki=WS_WIKI, debug=False, log_to_wiki=False, send_metrics=True) as bot:
         bot.run()
