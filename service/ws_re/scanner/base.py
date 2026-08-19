@@ -16,14 +16,11 @@ from service.ws_re.scanner.tasks.categorize_redirects import CARETask
 from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
 from service.ws_re.scanner.tasks.correct_korrekturstand import COKSTask
 from service.ws_re.scanner.tasks.correct_pd_dates import COPDTask
-
-# from service.ws_re.scanner.tasks.create_ocr import COCRTask
 from service.ws_re.scanner.tasks.death_re_links import DEALTask
 from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.hard_links_to_siehe import HLTSTask
 from service.ws_re.scanner.tasks.nachtrag_ueberschrift import NAUETask
-from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
 from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
@@ -64,7 +61,6 @@ class ReScanner(CloudBot):
             CARETask,  # put hard redirects to lemma in a category
             VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
             CHRETask,  # check if backlinks go over redirect pages
-            # COCRTask,  # create OCR for empty articles
             DATATask,  # write out to Wikidata
             # SCANTask,  # write out to Registers
             WAORTask,  # look for Lemma where the content article isn't the first on the page

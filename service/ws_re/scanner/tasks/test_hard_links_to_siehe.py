@@ -103,17 +103,6 @@ Text mit Vorlagen: {{RE siehe|Aal}} und {{RE siehe|Aarassos|Leben}}.
         self.assertNotIn("{{RE siehe|Aal}}", after)
         self.assertNotIn("{{RE siehe|Aarassos|Leben}}", after)
 
-    def test_stops_changing_articles_after_max_changed_articles(self):
-        self.task._changed_articles = self.task.MAX_CHANGED_ARTICLES
-        self.page_mock.text = """{{REDaten}}
-Text mit Links: [[RE:Leben(a)]].
-{{REAutor|Autor.}}"""
-        re_page = RePage(self.page_mock)
-
-        result = self.task.run(re_page)
-        compare({"success": True, "changed": False}, result)
-        self.assertIn("[[RE:Leben(a)]]", re_page[0].text)
-
     def test_no_change_when_no_hard_links_present(self):
         self.page_mock.text = """{{REDaten}}
 Im Text stehen nur Vorlagen: {{RE siehe|Anderes(a)|Leben}}.

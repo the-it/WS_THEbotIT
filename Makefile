@@ -102,18 +102,6 @@ clean_data :
 	echo "########## CLEAN DATA ###########"
 	rm -rf service/ws_re/register/data
 
-############
-### OCRS ###
-############
-
-upload_ocrs_prd :
-	echo "####### UPLOAD OCRS PRD ########"
-	aws s3 sync service/ws_re/download_upload/ocrs/txt s3://wiki-bots-re-ocr-prd --profile ersotech_prd
-
-upload_ocrs_tst :
-	echo "####### UPLOAD OCRS TST ########"
-	aws s3 sync service/ws_re/download_upload/ocrs/txt s3://wiki-bots-re-ocr-tst --profile ersotech_tst
-
 #############
 ### PHONY ###
 #############
