@@ -62,13 +62,6 @@ resource "aws_s3_bucket_logging" "logging_state_bucket" {
   target_prefix = "log/${aws_s3_bucket.state_bucket.id}/"
 }
 
-resource "aws_s3_bucket_logging" "logging_re_ocr_bucket" {
-  bucket = aws_s3_bucket.re_ocr_bucket.id
-
-  target_bucket = var.logging_bucket
-  target_prefix = "log/${aws_s3_bucket.re_ocr_bucket.id}/"
-}
-
 resource "aws_iam_user" "ws_bot_user" {
   name = "ws_bot_user_${var.environment}"
 }
