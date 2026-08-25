@@ -39,7 +39,7 @@ class PetScan:
 
     def __init__(self):
         self.header = {"User-Agent": "Python-urllib/3.1"}
-        self.base_address = "https://petscan.wmflabs.org/"
+        self.base_address = "https://petscan.wmcloud.org/"
         self._timeout = 30
         self.options = {}
         self.categories: dict[str, list[str]] = {"positive": [], "negative": []}

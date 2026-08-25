@@ -124,7 +124,7 @@ class TestPetScan(TestCase):
         self.petscan.add_no_template("no2")
         self.assertEqual(
             str(self.petscan),
-            "https://petscan.wmflabs.org/?language=de"
+            "https://petscan.wmcloud.org/?language=de"
             "&project=wikisource"
             "&templates_yes=yes1%0D%0Ayes2"
             "&templates_any=any1%0D%0Aany2%0D%0Aany3"
@@ -141,7 +141,7 @@ class TestPetScan(TestCase):
         self.petscan.add_no_outlink("no2")
         self.assertEqual(
             str(self.petscan),
-            "https://petscan.wmflabs.org/?language=de"
+            "https://petscan.wmcloud.org/?language=de"
             "&project=wikisource"
             "&outlinks_yes=yes1%0D%0Ayes2"
             "&outlinks_any=any1%0D%0Aany2%0D%0Aany3"
@@ -158,7 +158,7 @@ class TestPetScan(TestCase):
         self.petscan.add_no_links_to("no2")
         self.assertEqual(
             str(self.petscan),
-            "https://petscan.wmflabs.org/?language=de"
+            "https://petscan.wmcloud.org/?language=de"
             "&project=wikisource"
             "&links_to_all=yes1%0D%0Ayes2"
             "&links_to_any=any1%0D%0Aany2%0D%0Aany3"
@@ -177,23 +177,23 @@ class TestPetScan(TestCase):
         # only a positive category
         self.petscan.add_positive_category("test")
         self.assertEqual(
-            str(self.petscan), "https://petscan.wmflabs.org/?language=en&project=wikipedia&categories=test"
+            str(self.petscan), "https://petscan.wmcloud.org/?language=en&project=wikipedia&categories=test"
         )
         # only a negative category
         self.petscan.categories = {"positive": [], "negative": []}
         self.petscan.add_negative_category("test")
-        self.assertEqual(str(self.petscan), "https://petscan.wmflabs.org/?language=en&project=wikipedia&negcats=test")
+        self.assertEqual(str(self.petscan), "https://petscan.wmcloud.org/?language=en&project=wikipedia&negcats=test")
         # only a option
         self.petscan.categories = {"positive": [], "negative": []}
         self.petscan.add_options({"max_age": "10"})
-        self.assertEqual(str(self.petscan), "https://petscan.wmflabs.org/?language=en&project=wikipedia&max_age=10")
+        self.assertEqual(str(self.petscan), "https://petscan.wmcloud.org/?language=en&project=wikipedia&max_age=10")
 
     def test_do_positive(self):
         with requests_mock.mock() as request_mock:
             request_mock.get(
-                "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
+                "https://petscan.wmcloud.org/?language=de&project=wikisource&format=json&doit=1",
                 text='{"n": "result","a": {"querytime_sec": 1.572163,'
-                '"query": "https://petscan.wmflabs.org/?language=de'
+                '"query": "https://petscan.wmcloud.org/?language=de'
                 "&project=wikisource&categories=Autoren&get_q=1"
                 "&show_redirects=no&ns[0]=1&max_age=48"
                 '&format=json&doit=1"},'
@@ -227,7 +227,7 @@ class TestPetScan(TestCase):
     def test_do_negative(self):
         with requests_mock.mock() as request_mock:
             request_mock.get(
-                "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1", status_code=404
+                "https://petscan.wmcloud.org/?language=de&project=wikisource&format=json&doit=1", status_code=404
             )
             with self.assertRaises(PetScanException):
                 self.petscan.run()
@@ -236,12 +236,12 @@ class TestPetScan(TestCase):
     def test_third_try(self):
         with patch("time.sleep", return_value=None) as sleep_mock, requests_mock.mock() as request_mock:
             request_mock.get(
-                "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
+                "https://petscan.wmcloud.org/?language=de&project=wikisource&format=json&doit=1",
                 [
                     {
                         "status_code": 200,
                         "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
-                        '"query": "https://petscan.wmflabs.org/?language=de'
+                        '"query": "https://petscan.wmcloud.org/?language=de'
                         "&project=wikisource&categories=Autoren&get_q=1"
                         "&show_redirects=no&ns[0]=1&max_age=48"
                         '&format=json&doit=1"}}',
@@ -249,7 +249,7 @@ class TestPetScan(TestCase):
                     {
                         "status_code": 200,
                         "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
-                        '"query": "https://petscan.wmflabs.org/?language=de'
+                        '"query": "https://petscan.wmcloud.org/?language=de'
                         "&project=wikisource&categories=Autoren&get_q=1"
                         "&show_redirects=no&ns[0]=1&max_age=48"
                         '&format=json&doit=1"}}',
@@ -257,7 +257,7 @@ class TestPetScan(TestCase):
                     {
                         "status_code": 200,
                         "text": '{"n": "result","a": {"querytime_sec": 1.572163,'
-                        '"query": "https://petscan.wmflabs.org/?language=de'
+                        '"query": "https://petscan.wmcloud.org/?language=de'
                         "&project=wikisource&categories=Autoren&get_q=1"
                         "&show_redirects=no&ns[0]=1&max_age=48"
                         '&format=json&doit=1"},'
@@ -295,9 +295,9 @@ class TestPetScan(TestCase):
     def test_timeout(self):
         with patch("time.sleep", return_value=None) as sleep_mock, requests_mock.mock() as request_mock:
             request_mock.get(
-                "https://petscan.wmflabs.org/?language=de&project=wikisource&format=json&doit=1",
+                "https://petscan.wmcloud.org/?language=de&project=wikisource&format=json&doit=1",
                 text='{"n": "result","a": {"querytime_sec": 1.572163,'
-                '"query": "https://petscan.wmflabs.org/?language=de'
+                '"query": "https://petscan.wmcloud.org/?language=de'
                 "&project=wikisource&categories=Autoren&get_q=1"
                 "&show_redirects=no&ns[0]=1&max_age=48"
                 '&format=json&doit=1"}}',
