@@ -21,6 +21,7 @@ from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.hard_links_to_siehe import HLTSTask
 from service.ws_re.scanner.tasks.nachtrag_ueberschrift import NAUETask
+from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
 from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
