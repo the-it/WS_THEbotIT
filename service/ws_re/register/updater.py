@@ -56,6 +56,15 @@ class Updater:
         ):
             self._update_post_exists(lemma_dict)
             return "update_post_exists"
+        if (
+            self_supplement
+            and "previous" in lemma_dict
+            and "next" not in lemma_dict
+            and "next" in remove_items
+            and len(self._register) > 0
+        ):
+            self._update_last_lemma_self_supplement(lemma_dict, remove_items)
+            return "update_last_lemma_self_supplement"
         raise RegisterException(
             f"The update of the register {self._register.volume.name} "
             f"with the dict {lemma_dict} is not possible. "
@@ -214,6 +223,37 @@ class Updater:
                 post_idx, Lemma.from_dict(lemma_dict, self._register.volume, self._register.authors)
             )
             self._try_update_next(lemma_dict, self._register[post_idx])
+
+    def _update_last_lemma_self_supplement(self, lemma_dict: LemmaDict, remove_items: UpdaterRemoveList):
+        """Place a lemma that appears twice in the same volume at the very end of the register.
+
+        A lemma with a supplement in its own volume (e.g. RE:Tarne 2 with an article in the
+        alphabetical run and a second one in the "Nachträge" at the end of the volume) can't be
+        matched by name or sort key, because that would hit the first occurrence. The usual
+        strategy for those lemmas needs both neighbours to pin down the second occurrence, which
+        isn't possible if the supplement is the last lemma of the volume - there simply is no
+        NACHFOLGER. In that case the missing NACHFOLGER is the anchor itself: the lemma belongs
+        behind the last lemma of the register.
+        """
+        last_idx = len(self._register) - 1
+        previous = lemma_dict["previous"]
+        if self._is_lemma(previous, self._register[last_idx]):
+            # the supplement isn't part of the register yet, append it behind its predecessor
+            self._register.lemmas.append(Lemma.from_dict(lemma_dict, self._register.volume, self._register.authors))
+        elif (
+            last_idx > 0
+            and self._is_lemma(previous, self._register[last_idx - 1])
+            and self._is_lemma(str(lemma_dict["lemma"]), self._register[last_idx])
+        ):
+            self._register[last_idx].update_lemma_dict(lemma_dict, remove_items)
+        else:
+            raise RegisterException(
+                f"The update of the register {self._register.volume.name} "
+                f"with the dict {lemma_dict} is not possible. "
+                f'The lemma has no NACHFOLGER, but neither the last lemma "{self._register[last_idx].lemma}" '
+                f'nor the one before it matches the VORGÄNGER "{previous}"'
+            )
+        self._try_update_previous(lemma_dict, self._register[len(self._register) - 1])
 
     @staticmethod
     def _is_lemma(lemma_name: str, lemma: Lemma) -> bool:
