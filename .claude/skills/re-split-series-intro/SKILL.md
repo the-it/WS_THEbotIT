@@ -132,9 +132,13 @@ Two targeted, edit-conflict-safe edits (guard that the exact old string exists f
 The user keeps the final Stammdaten check and removes the maintenance category themselves —
 touch **only** the Vorgänger/Nachfolger field.
 
-> Note: the nightly ReScanner regenerates Vorgänger/Nachfolger from register data, so these
-> two field edits (and the new lemma's position) may need the register data updated too, or
-> can be reverted overnight. Mention this to the user; keep the edits minimal.
+> Note: the nightly ReScanner does **not** regenerate Vorgänger/Nachfolger from register data —
+> these two field edits are durable, don't warn the user about an overnight revert. The only V/N
+> thing it does is **resolve redirects** (`VONATask`,
+> `service/ws_re/scanner/tasks/vorgaenger_nachfolger_redirects.py`): if a V/N value names an RE
+> page that is a *redirect*, it is rewritten to the redirect target. So the one thing to get
+> right is that `<Name>` is a real article, not a redirect — then the chain stays as you set it.
+> Keep the edits minimal anyway.
 
 ## Step 5 — Verify and report
 
