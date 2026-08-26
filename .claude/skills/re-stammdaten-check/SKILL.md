@@ -398,7 +398,8 @@ correct while the title is still wrong (that is exactly how `RE:Turba` was misse
   register. If the register still holds the single name (`Turba`), the move may be regenerated
   back to `RE:X N` overnight. Flag this to the user — the durable fix is in the register data, not
   just the on-wiki move. (This applies to the lemma name/title only — **V/N do not regenerate
-  nightly**, so V/N hand-edits are durable.)
+  nightly**, so V/N hand-edits are durable. The scanner's only V/N action is redirect resolution:
+  `VONATask` rewrites a V/N value that names an RE *redirect* to that redirect's target.)
 
 ## Greek headwords → move to the Greek lemma
 
