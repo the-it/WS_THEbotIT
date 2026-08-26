@@ -559,26 +559,27 @@ class TestBugUpdates(BaseTestRegister):
         # RE:Tarne 2, the supplement in the "Nachträge" is the last lemma of the volume
         copy_tst_data("tarne_bug", "IV A_2")
         register = VolumeRegister(Volumes()["IV A,2"], Authors())
+        # the order of the dicts is the order of the blocks on the page, the "Nachträge" first
         update_dict_1 = {
-            "lemma": "Tarne 2",
-            "previous": "Tarne 1",
-            "next": "Tarneum",
-            "proof_read": 3,
-            "chapters": [{"start": 2328, "end": 2328}],
-        }
-        update_dict_2 = {
             "lemma": "Tarne 2",
             "previous": "Symmachia 3",
             "proof_read": 3,
             "no_creative_height": True,
             "chapters": [{"start": 2548, "end": 2548}],
         }
+        update_dict_2 = {
+            "lemma": "Tarne 2",
+            "previous": "Tarne 1",
+            "next": "Tarneum",
+            "proof_read": 3,
+            "chapters": [{"start": 2328, "end": 2328}],
+        }
         with Updater(register) as updater:
-            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_1, [], self_supplement=True))
             compare(
                 "update_last_lemma_self_supplement",
-                updater.update_lemma(update_dict_2, ["next"], self_supplement=True),
+                updater.update_lemma(update_dict_1, ["next"], self_supplement=True),
             )
+            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_2, [], self_supplement=True))
         # both lemmas are updated in place, no new one is created
         compare(7, len(register.lemmas))
         compare(3, register.lemmas[1].proof_read)

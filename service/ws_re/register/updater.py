@@ -234,6 +234,12 @@ class Updater:
         isn't possible if the supplement is the last lemma of the volume - there simply is no
         NACHFOLGER. In that case the missing NACHFOLGER is the anchor itself: the lemma belongs
         behind the last lemma of the register.
+
+        Unlike the strategies that match by name or sort key this doesn't branch on the volume
+        type. Supplement and register volumes need _update_in_supplements_with_neighbour_creation
+        to create missing neighbour entries, but here there is no NACHFOLGER to create and the
+        VORGÄNGER has to be in the register already, so appending at the end is correct for every
+        volume type.
         """
         last_idx = len(self._register) - 1
         previous = lemma_dict["previous"]
