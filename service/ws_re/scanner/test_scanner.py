@@ -27,7 +27,7 @@ class TestReScanner(TestCloudBase):
         with ReScanner(log_to_screen=False, log_to_wiki=False) as bot:
             checker = SearchStringChecker(str(bot._prepare_searcher()))
             self.assertTrue(
-                checker.is_part_of_searchstring(r"https://petscan.wmflabs.org/?language=de&project=wikisource")
+                checker.is_part_of_searchstring(r"https://petscan.wmcloud.org/?language=de&project=wikisource")
             )
             self.assertTrue(checker.is_part_of_searchstring("&templates_yes=REDaten"))
             self.assertTrue(checker.is_part_of_searchstring("&ns%5B2%5D=1"))
@@ -38,7 +38,7 @@ class TestReScanner(TestCloudBase):
         with ReScanner(log_to_screen=False, log_to_wiki=False, debug=False) as bot:
             checker = SearchStringChecker(str(bot._prepare_searcher()))
             self.assertTrue(
-                checker.is_part_of_searchstring("https://petscan.wmflabs.org/?language=de&project=wikisource")
+                checker.is_part_of_searchstring("https://petscan.wmcloud.org/?language=de&project=wikisource")
             )
             self.assertTrue(
                 checker.is_part_of_searchstring(
