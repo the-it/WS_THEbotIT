@@ -56,13 +56,7 @@ class Updater:
         ):
             self._update_post_exists(lemma_dict)
             return "update_post_exists"
-        if (
-            self_supplement
-            and "previous" in lemma_dict
-            and "next" not in lemma_dict
-            and "next" in remove_items
-            and len(self._register) > 0
-        ):
+        if self_supplement and "previous" in lemma_dict and "next" not in lemma_dict and len(self._register) > 0:
             self._update_last_lemma_self_supplement(lemma_dict, remove_items)
             return "update_last_lemma_self_supplement"
         raise RegisterException(

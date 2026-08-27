@@ -603,7 +603,7 @@ class TestBugUpdates(BaseTestRegister):
         with Updater(register) as updater:
             compare(
                 "update_last_lemma_self_supplement",
-                updater.update_lemma(update_dict, ["next"], self_supplement=True),
+                updater.update_lemma(update_dict, [], self_supplement=True),
             )
         compare(7, len(register.lemmas))
         compare("Tarne 2", str(register.lemmas[6].lemma))
