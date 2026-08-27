@@ -555,6 +555,90 @@ class TestBugUpdates(BaseTestRegister):
         compare("Valerius", register.lemmas[5].previous)
         compare("Valeria", register.lemmas[6].previous)
 
+    def test_self_supplement_as_last_lemma(self):
+        # RE:Tarne 2, the supplement in the "Nachträge" is the last lemma of the volume
+        copy_tst_data("tarne_bug", "IV A_2")
+        register = VolumeRegister(Volumes()["IV A,2"], Authors())
+        # the order of the dicts is the order of the blocks on the page, the "Nachträge" first
+        update_dict_1 = {
+            "lemma": "Tarne 2",
+            "previous": "Symmachia 3",
+            "proof_read": 3,
+            "no_creative_height": True,
+            "chapters": [{"start": 2548, "end": 2548}],
+        }
+        update_dict_2 = {
+            "lemma": "Tarne 2",
+            "previous": "Tarne 1",
+            "next": "Tarneum",
+            "proof_read": 3,
+            "chapters": [{"start": 2328, "end": 2328}],
+        }
+        with Updater(register) as updater:
+            compare(
+                "update_last_lemma_self_supplement",
+                updater.update_lemma(update_dict_1, ["next"], self_supplement=True),
+            )
+            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_2, [], self_supplement=True))
+        # both lemmas are updated in place, no new one is created
+        compare(7, len(register.lemmas))
+        compare(3, register.lemmas[1].proof_read)
+        compare(3, register.lemmas[6].proof_read)
+        compare(True, register.lemmas[6].no_creative_height)
+        # the stale NACHFOLGER pointing out of the volume is removed
+        self.assertIsNone(register.lemmas[6].next)
+        compare("Symmachia 3", register.lemmas[6].previous)
+        compare("Tarne 2", register.lemmas[5].next)
+
+    def test_self_supplement_as_last_lemma_append(self):
+        # same as above, but the supplement isn't part of the register yet
+        copy_tst_data("tarne_bug_missing", "IV A_2")
+        register = VolumeRegister(Volumes()["IV A,2"], Authors())
+        update_dict = {
+            "lemma": "Tarne 2",
+            "previous": "Symmachia 3",
+            "proof_read": 3,
+            "chapters": [{"start": 2548, "end": 2548}],
+        }
+        with Updater(register) as updater:
+            compare(
+                "update_last_lemma_self_supplement",
+                updater.update_lemma(update_dict, [], self_supplement=True),
+            )
+        compare(7, len(register.lemmas))
+        compare("Tarne 2", str(register.lemmas[6].lemma))
+        compare(3, register.lemmas[6].proof_read)
+        compare("Symmachia 3", register.lemmas[6].previous)
+        compare("Tarne 2", register.lemmas[5].next)
+
+    def test_self_supplement_as_last_lemma_previous_mismatch(self):
+        # a VORGÄNGER that matches neither of the two last lemmas is a data error, don't guess
+        copy_tst_data("tarne_bug", "IV A_2")
+        register = VolumeRegister(Volumes()["IV A,2"], Authors())
+        update_dict = {
+            "lemma": "Tarne 2",
+            "previous": "Symmachia",
+            "proof_read": 3,
+            "chapters": [{"start": 2548, "end": 2548}],
+        }
+        with (
+            self.assertRaisesRegex(RegisterException, "matches the VORGÄNGER"),
+            Updater(register) as updater,
+        ):
+            updater.update_lemma(update_dict, ["next"], self_supplement=True)
+        compare(7, len(register.lemmas))
+        self.assertIsNone(register.lemmas[6].proof_read)
+
+    def test_last_lemma_without_self_supplement_uses_pre_exists(self):
+        # a plain lemma without NACHFOLGER must still take the old strategy
+        copy_tst_data("tarne_bug_missing", "IV A_2")
+        register = VolumeRegister(Volumes()["IV A,2"], Authors())
+        update_dict = {"lemma": "Symmachia 3a", "previous": "Symmachia 3", "proof_read": 1}
+        with Updater(register) as updater:
+            compare("update_pre_exists", updater.update_lemma(update_dict, ["next"]))
+        compare(7, len(register.lemmas))
+        compare("Symmachia 3a", str(register.lemmas[6].lemma))
+
 
 @ddt
 class TestMissingIndices(BaseTestRegister):

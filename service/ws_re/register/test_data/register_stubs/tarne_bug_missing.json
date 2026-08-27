@@ -1,0 +1,35 @@
+[
+  {
+    "lemma": "Tarne 1",
+    "previous": "Tarne",
+    "next": "Tarne 2",
+    "chapters": [{"start": 2327, "end": 2328}]
+  },
+  {
+    "lemma": "Tarne 2",
+    "previous": "Tarne 1",
+    "next": "Tarneum",
+    "chapters": [{"start": 2328, "end": 2328}]
+  },
+  {
+    "lemma": "Tarneum",
+    "previous": "Tarne 2",
+    "next": "Tauris",
+    "chapters": [{"start": 2328, "end": 2328}]
+  },
+  {
+    "lemma": "Tauris",
+    "previous": "Tarneum",
+    "next": "Συμβολαιογράφος",
+    "chapters": [{"start": 2546, "end": 2548}]
+  },
+  {
+    "lemma": "Συμβολαιογράφος",
+    "previous": "Tauris",
+    "chapters": [{"start": 2547}]
+  },
+  {
+    "lemma": "Symmachia 3",
+    "chapters": [{"start": 2547, "end": 2548}]
+  }
+]
