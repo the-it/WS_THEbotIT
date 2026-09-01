@@ -18,8 +18,9 @@ class HLTSTask(ReScannerTask):
     ("[[RE:Lemma#Abschnitt]]") are never converted, the template can't express them.
 
     Conversely, a {{RE siehe}} template whose target lemma's article exists is converted to a
-    hard link, using the register's exact casing of the lemma name (a case mismatch between the
-    template's target and the register would otherwise produce a red link).
+    hard link. The target must match the register lemma name exactly, including case (page
+    titles on de.wikisource are case-sensitive even in their first character); a mismatch is
+    left as {{RE siehe}} rather than risking a link to the wrong, differently-cased page.
 
     Replacements:
     - "[[RE:Lemma]]" -> "{{RE siehe|Lemma}}" (Lemma's article doesn't exist)
@@ -51,15 +52,16 @@ class HLTSTask(ReScannerTask):
         return self._existing_lemma_names
 
     def _resolve_lemma(self, target: str) -> str | None:
-        """Return the existing register lemma a link target points to, None if there is none."""
+        """Return the existing register lemma a link target points to, None if there is none.
+
+        Page titles on de.wikisource are case-sensitive even in their first character (the RE
+        register has genuine lowercase-first lemmas, e.g. "ab actis 1"), so only an exact match
+        (up to the underscore/space equivalence MediaWiki does apply) is resolved. Guessing a
+        different case would risk linking to the wrong, differently-cased page.
+        """
         normalized = target.replace("_", " ").strip()
         if normalized in self.existing_lemma_names:
             return normalized
-        # MediaWiki capitalizes the first character of a page title
-        if normalized:
-            capitalized = normalized[0].upper() + normalized[1:]
-            if capitalized in self.existing_lemma_names:
-                return capitalized
         return None
 
     def _replace(self, match: re.Match) -> str:
@@ -80,9 +82,8 @@ class HLTSTask(ReScannerTask):
         display_text = match.group(2)
         resolved = self._resolve_lemma(target)
         if not resolved:
-            # lemma is unknown in the register or its article doesn't exist yet, stays as it is
+            # lemma doesn't exactly match an existing register lemma, stays as it is
             return match.group(0)
-        # link the resolved (correctly cased) lemma; a mismatched case would be a red link
         return f"[[RE:{resolved}|{display_text or target}]]"
 
     def _fix_text(self, text: str) -> str:

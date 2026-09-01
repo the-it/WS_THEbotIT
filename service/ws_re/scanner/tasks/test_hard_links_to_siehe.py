@@ -67,16 +67,28 @@ Text mit Links: [[RE:Aal]] und [[RE:Aarassos|Leben]].
         self.assertIn("[[RE:Aal|Aal]]", re_page[0].text)
         self.assertIn("[[RE:Aarassos|Leben]]", re_page[0].text)
 
-    def test_hardlink_for_register_lemma_with_underscore_or_lowercase_gets_display_text(self):
+    def test_hardlink_for_register_lemma_with_underscore_gets_display_text(self):
         self.page_mock.text = """{{REDaten}}
-Links: [[RE:Aba_1]] und [[RE:aba 2]].
+Link: [[RE:Aba_1]].
 {{REAutor|Autor.}}"""
         re_page = RePage(self.page_mock)
 
         result = self.task.run(re_page)
         compare({"success": True, "changed": True}, result)
         self.assertIn("[[RE:Aba_1|Aba_1]]", re_page[0].text)
-        self.assertIn("[[RE:aba 2|aba 2]]", re_page[0].text)
+
+    def test_hardlink_downgraded_to_siehe_when_case_does_not_exactly_match_register(self):
+        # Page titles are case-sensitive even in the first character (the register has genuine
+        # lowercase-first lemmas, e.g. "ab actis 1"), so "aba 2" must NOT be guessed to be "Aba 2".
+        self.page_mock.text = """{{REDaten}}
+Link: [[RE:aba 2]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("{{RE siehe|aba 2}}", re_page[0].text)
+        self.assertNotIn("[[RE:aba 2", re_page[0].text)
 
     def test_hardlink_downgraded_to_siehe_when_lemma_not_yet_written(self):
         self.page_mock.title_str = "RE:Quelllemma"
@@ -125,18 +137,17 @@ Text mit Vorlage: {{RE siehe|Ababa}}.
         compare({"success": True, "changed": False}, result)
         self.assertIn("{{RE siehe|Ababa}}", re_page[0].text)
 
-    def test_siehe_converted_to_correctly_cased_hardlink_when_target_case_differs(self):
+    def test_siehe_not_converted_when_case_does_not_exactly_match_register(self):
+        # "aal" must not be guessed to be register lemma "Aal" - de.wikisource titles are
+        # case-sensitive, including the first character, so a wrong guess would be a red link.
         self.page_mock.text = """{{REDaten}}
 Text mit Vorlage: {{RE siehe|aal}}.
 {{REAutor|Autor.}}"""
         re_page = RePage(self.page_mock)
 
         result = self.task.run(re_page)
-        compare({"success": True, "changed": True}, result)
-
-        after = re_page[0].text
-        self.assertIn("[[RE:Aal|aal]]", after)
-        self.assertNotIn("[[RE:aal", after)
+        compare({"success": True, "changed": False}, result)
+        self.assertIn("{{RE siehe|aal}}", re_page[0].text)
 
     def test_no_change_when_no_hard_links_present(self):
         self.page_mock.text = """{{REDaten}}
