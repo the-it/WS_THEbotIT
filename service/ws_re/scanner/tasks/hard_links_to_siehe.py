@@ -17,8 +17,10 @@ class HLTSTask(ReScannerTask):
     kept as it is. Links with a section anchor ("[[RE:Lemma#Abschnitt]]") are never converted, the
     template can't express them.
 
-    Conversely, a {{RE siehe}} template whose target IS a lemma of the local register data is
-    converted to a hard link, since the target article actually exists.
+    Conversely, a {{RE siehe}} template whose target IS a lemma of the local register data AND
+    whose article has actually been written (Lemma.exists, i.e. proof_read is set) is converted
+    to a hard link. A lemma that is merely reserved in the register but not yet written is left
+    as {{RE siehe}}, since a hard link would point at a non-existent page.
 
     Replacements:
     - "[[RE:Lemma]]" -> "{{RE siehe|Lemma}}" (Lemma unknown in register)
@@ -38,6 +40,7 @@ class HLTSTask(ReScannerTask):
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self._lemma_names: set[str] | None = None
+        self._existing_lemma_names: set[str] | None = None
         self._unknown_targets: set[tuple[str, str]] = set()
 
     @property
@@ -47,15 +50,25 @@ class HLTSTask(ReScannerTask):
             self._lemma_names = {lemma.lemma for register in Registers().volumes.values() for lemma in register.lemmas}
         return self._lemma_names
 
-    def _resolve_lemma(self, target: str) -> str | None:
+    @property
+    def existing_lemma_names(self) -> set[str]:
+        """Lemma names of the local register data whose article page actually exists."""
+        if self._existing_lemma_names is None:
+            self._existing_lemma_names = {
+                lemma.lemma for register in Registers().volumes.values() for lemma in register.lemmas if lemma.exists
+            }
+        return self._existing_lemma_names
+
+    def _resolve_lemma(self, target: str, require_exists: bool = False) -> str | None:
         """Return the register lemma a link target points to, None if there is none."""
+        names = self.existing_lemma_names if require_exists else self.lemma_names
         normalized = target.replace("_", " ").strip()
-        if normalized in self.lemma_names:
+        if normalized in names:
             return normalized
         # MediaWiki capitalizes the first character of a page title
         if normalized:
             capitalized = normalized[0].upper() + normalized[1:]
-            if capitalized in self.lemma_names:
+            if capitalized in names:
                 return capitalized
         return None
 
@@ -75,11 +88,12 @@ class HLTSTask(ReScannerTask):
     def _replace_siehe(self, match: re.Match) -> str:
         target = match.group(1)
         display_text = match.group(2)
-        if not self._resolve_lemma(target):
-            # lemma is unknown in the register, the template stays as it is
+        resolved = self._resolve_lemma(target, require_exists=True)
+        if not resolved:
+            # lemma is unknown in the register or its article doesn't exist yet, stays as it is
             return match.group(0)
-        # keep the "RE:" prefix out of the rendered text
-        return f"[[RE:{target}|{display_text or target}]]"
+        # link the resolved (correctly cased) lemma; a mismatched case would be a red link
+        return f"[[RE:{resolved}|{display_text or target}]]"
 
     def _fix_text(self, text: str) -> str:
         text = self._link_regex.sub(self._replace, text)
