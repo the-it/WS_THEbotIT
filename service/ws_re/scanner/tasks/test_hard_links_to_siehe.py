@@ -78,6 +78,18 @@ Links: [[RE:Aba_1]] und [[RE:aba 2]].
         self.assertIn("[[RE:Aba_1|Aba_1]]", re_page[0].text)
         self.assertIn("[[RE:aba 2|aba 2]]", re_page[0].text)
 
+    def test_hardlink_downgraded_to_siehe_when_lemma_not_yet_written(self):
+        self.page_mock.title_str = "RE:Quelllemma"
+        self.page_mock.text = """{{REDaten}}
+Text mit Link: [[RE:Ababa]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("{{RE siehe|Ababa}}", re_page[0].text)
+        self.assertNotIn("[[RE:Ababa", re_page[0].text)
+
     def test_no_replacement_for_links_with_anchor(self):
         self.page_mock.text = """{{REDaten}}
 Text mit Link: [[RE:Leben(a)#Abschnitt]].
