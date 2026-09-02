@@ -53,11 +53,6 @@ class HLTSTask(ReScannerTask):
 
     def _resolve_lemma(self, target: str) -> str | None:
         """Return the existing register lemma a link target points to, None if there is none.
-
-        Page titles on de.wikisource are case-sensitive even in their first character (the RE
-        register has genuine lowercase-first lemmas, e.g. "ab actis 1"), so only an exact match
-        (up to the underscore/space equivalence MediaWiki does apply) is resolved. Guessing a
-        different case would risk linking to the wrong, differently-cased page.
         """
         normalized = target.replace("_", " ").strip()
         if normalized in self.existing_lemma_names:
