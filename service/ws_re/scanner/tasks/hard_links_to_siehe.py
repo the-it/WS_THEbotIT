@@ -52,8 +52,7 @@ class HLTSTask(ReScannerTask):
         return self._existing_lemma_names
 
     def _resolve_lemma(self, target: str) -> str | None:
-        """Return the existing register lemma a link target points to, None if there is none.
-        """
+        """Return the existing register lemma a link target points to, None if there is none."""
         normalized = target.replace("_", " ").strip()
         if normalized in self.existing_lemma_names:
             return normalized
