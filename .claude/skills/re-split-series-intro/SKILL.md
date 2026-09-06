@@ -135,8 +135,10 @@ already `KORREKTURSTAND=fertig`:
    generally (bold `'''<Name>,'''` opener through the full stop right before `'''1)'''`) — this
    is the *only* text that moves, nothing from inside `1)` itself.
 2. Create `RE:<Name>` (Step 3's template) with that sentence as the body **instead of the
-   `[...]` placeholder**, and set `KORREKTURSTAND=fertig` (it's real, verified print text, not
-   a stub) — **drop** `[[Kategorie:RE:Kurztext überprüfen]]` accordingly (nothing left to flag).
+   `[...]` placeholder**, and set `KORREKTURSTAND=korrigiert` (it's real, verified print text,
+   not a stub, but still gets a human proofread pass like any other transcription — not
+   `fertig`). **Keep** `[[Kategorie:RE:Kurztext überprüfen]]` — the user still does the final
+   check and removes the category themselves, same as everywhere else in this skill.
 3. Edit `RE:<Name> 1`: delete that leading sentence so the body starts clean at `'''1)'''`.
    Guard on the *combined* string (`<sentence> '''1)'''` → `'''1)'''`) so the edit only applies
    if the exact text is still there.
@@ -182,8 +184,8 @@ After the three writes, re-read all four lemmas and confirm the chain is consist
 Also confirm `RE:<Name>` renders (no template error) and, if Greek, that the old title is a
 redirect. Then hand the user a short written report — the new lemma's verified Stammdaten and
 the two chain edits — so they can do the final Stammdaten sign-off. If Step 3b applied, say so
-explicitly (real text moved, `KORREKTURSTAND=fertig`, nothing left to fill); otherwise note the
-placeholder is still theirs to write.
+explicitly (real text moved, `KORREKTURSTAND=korrigiert`, category kept for their check);
+otherwise note the placeholder is still theirs to write.
 
 ## Gotchas
 
