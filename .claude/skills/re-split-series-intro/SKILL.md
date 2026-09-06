@@ -118,6 +118,36 @@ the user fills the real intro text later.
 - Header is the **bare bold name** (`'''<Name>.'''`), no `1)`. Body `[...]` is a deliberate
   placeholder; `KORREKTURSTAND=unvollständig` + `RE:Kurztext überprüfen` mark it for later.
 - Summary e.g. `Namensartikel angelegt / aus der Serie herausgelöst`.
+- **Check first whether the real text is a placeholder or already sitting in `RE:<Name> 1`** —
+  see Step 3b before defaulting to the `[...]` placeholder.
+
+## Step 3b — extract the real intro text when it's already inline in entry 1
+
+RE's print often does **not** give the name note its own paragraph break: the bold header
+`'''<Name>,''' ... .` runs straight into `'''1)'''` in the **same column and same running
+prose** as entry 1 (worked case: `RE:Lugudunum 1`, col 1718, `'''Lugudunum,''' auch
+''Lugdunum'', oft vorkommender gallisch-keltischer Ortsname. '''1)''' Die berühmteste …`). When
+that's what the scan shows (and it usually is, for an unsigned single-sentence name note),
+**don't invent a placeholder — move the real printed sentence**, even if `RE:<Name> 1` is
+already `KORREKTURSTAND=fertig`:
+
+1. In `RE:<Name> 1`'s wikitext, identify the exact leading sentence(s) that describe the name
+   generally (bold `'''<Name>,'''` opener through the full stop right before `'''1)'''`) — this
+   is the *only* text that moves, nothing from inside `1)` itself.
+2. Create `RE:<Name>` (Step 3's template) with that sentence as the body **instead of the
+   `[...]` placeholder**, and set `KORREKTURSTAND=korrigiert` (it's real, verified print text,
+   not a stub, but still gets a human proofread pass like any other transcription — not
+   `fertig`). **Keep** `[[Kategorie:RE:Kurztext überprüfen]]` — the user still does the final
+   check and removes the category themselves, same as everywhere else in this skill.
+3. Edit `RE:<Name> 1`: delete that leading sentence so the body starts clean at `'''1)'''`.
+   Guard on the *combined* string (`<sentence> '''1)'''` → `'''1)'''`) so the edit only applies
+   if the exact text is still there.
+4. Do the create and the strip as one pass (plus Step 4's relink) — don't leave entry 1
+   permanently holding a sentence that's been duplicated into the new lemma.
+
+If the scan instead shows the name note as its own separated block (a genuine paragraph break,
+or a **different/no signature** than entry 1), fall back to the Step 3 placeholder — don't
+force-split prose that wasn't printed as one continuous run.
 
 ## Step 4 — Relink the two neighbours
 
@@ -153,7 +183,9 @@ After the three writes, re-read all four lemmas and confirm the chain is consist
 
 Also confirm `RE:<Name>` renders (no template error) and, if Greek, that the old title is a
 redirect. Then hand the user a short written report — the new lemma's verified Stammdaten and
-the two chain edits — so they can fill the intro text and do the final Stammdaten sign-off.
+the two chain edits — so they can do the final Stammdaten sign-off. If Step 3b applied, say so
+explicitly (real text moved, `KORREKTURSTAND=korrigiert`, category kept for their check);
+otherwise note the placeholder is still theirs to write.
 
 ## Gotchas
 
