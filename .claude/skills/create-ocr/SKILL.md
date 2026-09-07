@@ -213,6 +213,15 @@ lines:
 The opening bold headword comes from eLexikon **as printed** (e.g.
 `'''Tubantes''' (im laterculus …`) and replaces the skeleton's bare `'''Tubantes'''` line.
 
+## Genealogical Stammtafeln — use the `re-stammbaum` skill
+
+If an article's scan or column text shows a printed genealogical stemma, **invoke the
+`re-stammbaum` skill** and follow it. A stemma is not a reason to skip an article. That skill
+owns the whole subject: deciding which article the tree belongs to (bad OCR splices page-wide
+tables into the *preceding* article), the four placement patterns that mirror the print, the
+`{{Stammbaum}}` row/connector syntax, plate `{{Seite}}` lines with Commons file names, and the
+one expected `check_assembly.py` failure such a line causes.
+
 ## Proofread word-by-word against the scans
 
 The target state is *unkorrigiert*, but the user wants a **full proofread** while
@@ -270,6 +279,13 @@ meta (lemma, BAND, SPALTE_START/END). For each article the subagent writes:
 - `<workdir>/out/<lemma>.notes.json` —
   `{lemma, status: "ok"|"skip", reason, uncertain: ["col 753: Greek accent on …"], fixes: {line_numbers, hyphens, misreads, paragraph_joins}}`.
 
+**Stammtafeln stay with the main loop.** A subagent is offline and cannot make the decisions
+the `re-stammbaum` skill requires. Tell subagents: if the column text or scan shows a
+genealogical tree, transcribe the surrounding prose normally, leave the tree out of
+`<lemma>.wikitext`, and record it in the notes as
+`stammbaum: {columns: [...], printed_under: "<headword on the scan>", points_at_it: "<the sentence that references it>"}`.
+The main loop then works `re-stammbaum` for each flagged article.
+
 Subagents die on transient API errors; the output files are the source of truth — re-spawn
 for any articles whose files are missing (idempotent, still within the 10-subagent cap).
 Parallel is fine.
@@ -325,6 +341,10 @@ odd V/N) for a `re-stammdaten-check` pass instead of fixing them here.
   pass an assembly that moved a `{{Seite|N}}` tag to right before `{{REAutor}}` instead of
   its real mid-body column break (seen in batch4). When proofreading, place each Seite tag
   exactly where the column text/scan shows the break, not wherever is convenient.
+- **A printed Stammtafel is not a skip reason** — invoke the `re-stammbaum` skill. It also
+  covers the two traps: the tree may belong to the *neighbouring* article (`RE:Makartatos 1`
+  carried `RE:Makartatos 2`'s tree), and a plate `{{Seite}}` line makes `check_assembly.py`
+  FAIL on "no extra {{Seite templates" by design.
 - **Do not touch** VORGÄNGER/NACHFOLGER, SORTIERUNG, KURZTEXT, maintenance categories, or
   anything else in the skeleton beyond the KORREKTURSTAND flip and the body.
 - The state goes to **unkorrigiert** even after a full proofread — wikisource's
