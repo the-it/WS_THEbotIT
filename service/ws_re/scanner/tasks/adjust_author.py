@@ -97,7 +97,7 @@ def adjust_author(input_str: str, mapping: dict[str, str]) -> str:
         input_str = re.sub(rf"{{{{REAutor\|{author}}}}}", f"{{{{REAutor|{target}}}}}", input_str)
     if REGEX_COMPLEX.search(input_str):
         article = Article.from_text(input_str.strip())
-        input_str = REGEX_COMPLEX.sub(r"{{REAutor|\g<author>|" + article["BAND"].value + "}}", input_str)
+        input_str = REGEX_COMPLEX.sub(r"{{REAutor|\g<author>|" + str(article["BAND"].value) + "}}", input_str)
     return input_str
 
 
