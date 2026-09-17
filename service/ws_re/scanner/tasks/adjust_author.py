@@ -52,10 +52,9 @@ COMPLEX_AUTHORS: dict[str, str] = {
     "Hans Schaefer": "Hans Schaefer.",
 }
 
+
 def _to_optional_dot_pattern(value: str) -> str:
-    if value.endswith("."):
-        return re.escape(value[:-1]) + r"\.?"
-    return re.escape(value)
+    return re.escape(value.rstrip(".")) + r"\.?"
 
 
 _COMPLEX_AUTHORS_PATTERN = "|".join(_to_optional_dot_pattern(value) for value in set(COMPLEX_AUTHORS.values()))
