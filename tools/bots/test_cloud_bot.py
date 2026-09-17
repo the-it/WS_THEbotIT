@@ -10,6 +10,7 @@ from testfixtures import LogCapture, compare
 from tools.bots import BotException
 from tools.bots.cloud_bot import CloudBot
 from tools.bots.logger import WikiLogger
+from tools.bots.metrics import BotMetrics
 from tools.bots.status_manager import StatusManager
 from tools.bots.test_base import TestCloudBase
 
@@ -256,3 +257,48 @@ class TestCloudBot(TestCloudBase):
             time_bot = self.TimeBot(log_to_screen=True, log_to_wiki=False)
             time_bot.run()
             compare("step_name took 1.00 seconds", log_catcher.records[-1].msg)
+
+    def test_metrics_composed_and_disabled_without_endpoint(self):
+        with self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot:
+            self.assertIsInstance(bot.metrics, BotMetrics)
+            self.assertFalse(bot.metrics.enabled)
+
+    def test_metrics_enabled_via_send_metrics_flag_and_endpoint_env_var(self):
+        with (
+            mock.patch.dict("os.environ", {"OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4318"}),
+            self.MinimalBot(log_to_screen=False, log_to_wiki=False, send_metrics=True) as bot,
+        ):
+            self.assertTrue(bot.metrics.enabled)
+
+    def test_metrics_disabled_via_send_metrics_flag_even_with_endpoint_set(self):
+        with (
+            mock.patch.dict("os.environ", {"OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4318"}),
+            self.MinimalBot(log_to_screen=False, log_to_wiki=False, send_metrics=False) as bot,
+        ):
+            self.assertFalse(bot.metrics.enabled)
+
+    def test_metrics_record_run_total_and_duration(self):
+        with mock.patch.object(BotMetrics, "flush") as mock_flush:
+            with self.SuccessBot(success=True, log_to_screen=False, log_to_wiki=False) as bot:
+                bot.run()
+            self.assertEqual(1, bot.metrics._data[("counter", "bot_run_total", frozenset({("success", "True")}))])
+            self.assertIn(("gauge", "bot_run_duration_seconds", frozenset()), bot.metrics._data)
+            mock_flush.assert_called_once()
+
+    def test_metrics_flushed_before_logger_torn_down(self):
+        manager = mock.Mock()
+        with (
+            mock.patch.object(BotMetrics, "flush", manager.metrics_flush),
+            mock.patch.object(WikiLogger, "tear_down", manager.logger_tear_down),
+            self.MinimalBot(log_to_screen=False, log_to_wiki=False) as bot,
+        ):
+            bot.run()
+        self.assertEqual(
+            [mock.call.metrics_flush(), mock.call.logger_tear_down()],
+            manager.mock_calls,
+        )
+
+    def test_time_step_records_step_duration_metric(self):
+        with self.TimeBot(log_to_screen=False, log_to_wiki=False) as bot:
+            bot.run()
+            self.assertIn(("gauge", "bot_step_duration_seconds", frozenset({("step", "step_name")})), bot.metrics._data)

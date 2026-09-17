@@ -7,21 +7,34 @@ from pywikibot import Page
 from pywikibot.site import BaseSite
 
 from tools.bots.logger import WikiLogger
+from tools.bots.metrics import BotMetrics
 from tools.bots.persisted_data import PersistedData
 from tools.bots.status_manager import StatusManager
 
 
 class CloudBot(ABC):
     def __init__(
-        self, wiki: BaseSite | None = None, debug: bool = True, log_to_screen: bool = True, log_to_wiki: bool = True
+        self,
+        wiki: BaseSite | None = None,
+        debug: bool = True,
+        log_to_screen: bool = True,
+        log_to_wiki: bool = True,
+        send_metrics: bool = False,
     ):
         self.success: bool = False
         self.log_to_screen: bool = log_to_screen
         self.log_to_wiki: bool = log_to_wiki
+        self.send_metrics: bool = send_metrics
         self.status: StatusManager = StatusManager(bot_name=self.bot_name)
         self.data: PersistedData = PersistedData(bot_name=self.bot_name)
         self.logger: WikiLogger = WikiLogger(
             bot_name=self.bot_name, start_time=self.status.current_run.start_time, log_to_screen=self.log_to_screen
+        )
+        self.metrics: BotMetrics = BotMetrics(
+            bot_name=self.bot_name,
+            start_time=self.status.current_run.start_time,
+            enabled=None if self.send_metrics else False,
+            log_error=self.logger.error,
         )
         self.wiki: BaseSite | None = wiki
         self.debug: bool = debug
@@ -38,6 +51,12 @@ class CloudBot(ABC):
         self._dump_data()
         self.status.finish_run(self.success)
         self.logger.info(f"Finish bot {self.bot_name} in {datetime.now() - self.status.current_run.start_time}.")
+        self.metrics.increment("bot_run_total", success=str(self.success))
+        self.metrics.gauge(
+            "bot_run_duration_seconds",
+            (datetime.now() - self.status.current_run.start_time).total_seconds(),
+        )
+        self.metrics.__exit__(exc_type, exc_val, exc_tb)
         if self.log_to_wiki:
             self.send_log_to_wiki()
         self.logger.__exit__(exc_type, exc_val, exc_tb)
@@ -119,3 +138,4 @@ class CloudBot(ABC):
         yield
         elapsed_time = time.time() - start_time
         self.logger.info(f"{step_name} took {elapsed_time:.2f} seconds")
+        self.metrics.gauge("bot_step_duration_seconds", elapsed_time, step=step_name)
