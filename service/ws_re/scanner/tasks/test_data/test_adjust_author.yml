@@ -20,6 +20,17 @@ nagl:
     |BAND=I,1
     }}
     {{REAutor|Nagl.|I,1}}
+berger_missing_dot:
+  given: |
+    {{REDaten
+    |BAND=XVII,2
+    }}
+    {{REAutor|Berger}}
+  expect: |
+    {{REDaten
+    |BAND=XVII,2
+    }}
+    {{REAutor|Berger|XVII,2}}
 nothing_to_change:
   given: |
     {{REDaten

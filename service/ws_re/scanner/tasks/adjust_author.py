@@ -52,7 +52,14 @@ COMPLEX_AUTHORS: dict[str, str] = {
     "Hans Schaefer": "Hans Schaefer.",
 }
 
-REGEX_COMPLEX = re.compile(rf"REAutor\|(?P<author>{'|'.join(set(COMPLEX_AUTHORS.values()))})")
+def _to_optional_dot_pattern(value: str) -> str:
+    if value.endswith("."):
+        return re.escape(value[:-1]) + r"\.?"
+    return re.escape(value)
+
+
+_COMPLEX_AUTHORS_PATTERN = "|".join(_to_optional_dot_pattern(value) for value in set(COMPLEX_AUTHORS.values()))
+REGEX_COMPLEX = re.compile(r"\{\{REAutor\|(?P<author>" + _COMPLEX_AUTHORS_PATTERN + r")\}\}")
 
 
 def get_author_mapping() -> dict[str, str]:
@@ -91,7 +98,7 @@ def adjust_author(input_str: str, mapping: dict[str, str]) -> str:
         input_str = re.sub(rf"{{{{REAutor\|{author}}}}}", f"{{{{REAutor|{target}}}}}", input_str)
     if REGEX_COMPLEX.search(input_str):
         article = Article.from_text(input_str.strip())
-        input_str = REGEX_COMPLEX.sub(rf"REAutor|\g<author>|{article['BAND'].value}", input_str)
+        input_str = REGEX_COMPLEX.sub(r"{{REAutor|\g<author>|" + article["BAND"].value + "}}", input_str)
     return input_str
 
 
