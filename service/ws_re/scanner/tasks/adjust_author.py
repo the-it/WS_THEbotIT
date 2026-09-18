@@ -35,6 +35,7 @@ ADDITIONAL_AUTHORS: dict[str, str] = {
     "Ernst Meyer": "Ernst Meyer.",
     "George MacDonald": "G. Macdonald.",
     "Josef Göhler": "G. Göhler.",
+    "Friedrich Walter Lenz": "Lenz.",
 }
 
 COMPLEX_AUTHORS: dict[str, str] = {
