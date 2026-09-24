@@ -40,6 +40,54 @@ re-derive:
 - `../re-stammdaten-check/scripts/fetch_wikitext.py` (bulk wikitext+meta) and
   `scripts/crop.py` (zoom into a scan region) are used below.
 
+## Pipeline scripts — use these, don't write per-batch scripts
+
+Every stage below has a reusable script in `scripts/`. Don't write new selection, manifest,
+fetch, chunk, check, or edit scripts per batch; if a stage needs something new, extend the
+script. All scripts take the **batch dir** as their first argument and share one layout
+(documented in `scripts/common.py`): `skel_ref/` (clean snapshot), `skel/` (subagent copy),
+`coltext/` and `scans/` (`<BAND>_<col:04d>.txt|.png`), `chunks/`, `out/`, plus JSON state
+files. Each stage appends its skips with a reason to `skipped.json`. Run everything from the
+repo root with the repo venv python. It has CA certs, Pillow and pywikibot. Write every command
+out literally: replace `<YYYYMMDD>` with the batch date and set no shell variables. The user's
+permission rules reject `$VAR`, globs and `&&` chains.
+
+```
+# 1  worklist: live PetScan -> titles.txt (raw dump kept as petscan.json)
+.venv/bin/python .claude/skills/create-ocr/scripts/petscan_titles.py .claude_work_dir/ocr_batch_<YYYYMMDD>/titles.txt --limit 600
+# 1b open Artikelwunsch lemmas (skips "ok" / "OCR erstellt" lines); append them to titles.txt too
+.venv/bin/python .claude/skills/create-ocr/scripts/artikelwunsch_titles.py .claude_work_dir/ocr_batch_<YYYYMMDD>/priority.txt
+# 2  bulk wikitext + meta -> all_wikitext.json, all_meta.json
+.venv/bin/python .claude/skills/re-stammdaten-check/scripts/fetch_wikitext.py .claude_work_dir/ocr_batch_<YYYYMMDD>/titles.txt .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 3  per-article guards; priority first, then shortest -> selected.json (--priority/--exclude optional)
+.venv/bin/python .claude/skills/create-ocr/scripts/select_candidates.py .claude_work_dir/ocr_batch_<YYYYMMDD> --n 100 --priority .claude_work_dir/ocr_batch_<YYYYMMDD>/priority.txt
+# 4  API legal guard: drops Wikisource:Gemeinfreiheit hits from selected.json
+.venv/bin/python .claude/skills/create-ocr/scripts/legal_guard.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 5  skel_ref/ + skel/ + manifest.json + columns.json
+.venv/bin/python .claude/skills/create-ocr/scripts/build_manifest.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 6  browser_evaluate functions -> fetch_js/texts_NN.js, fetch_js/scans_NN.js (re-run resumes)
+.venv/bin/python .claude/skills/create-ocr/scripts/gen_fetch_js.py .claude_work_dir/ocr_batch_<YYYYMMDD> --kind texts
+.venv/bin/python .claude/skills/create-ocr/scripts/gen_fetch_js.py .claude_work_dir/ocr_batch_<YYYYMMDD> --kind scans
+# 7  store the browser results (list every result file explicitly)
+.venv/bin/python .claude/skills/create-ocr/scripts/save_coltexts.py .claude_work_dir/ocr_batch_<YYYYMMDD> .claude_work_dir/ocr_batch_<YYYYMMDD>/fetch_js/texts_01.result.json
+.venv/bin/python .claude/skills/create-ocr/scripts/decode_b64_files.py .claude_work_dir/ocr_batch_<YYYYMMDD>/fetch_js/scans_01.result.json .claude_work_dir/ocr_batch_<YYYYMMDD>/scans
+# 8  input check (empty text, blank scan), scan sizes, <=10 balanced chunks, prompts.json
+.venv/bin/python .claude/skills/create-ocr/scripts/build_chunks.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 9  fan-out: one Agent call (subagent_type "ocr-proofreader") per prompts.json entry -> out/
+# 10 move inline {{Seite}} tags onto their own line
+.venv/bin/python .claude/skills/create-ocr/scripts/fix_seite_ownline.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 11 check_assembly vs skel_ref/ + ref-block audit + Stammbaum list -> check_results.json
+.venv/bin/python .claude/skills/create-ocr/scripts/run_checks.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 12 edit pass: dry run first, then the same command with --save (THEbotIT) -> edit_results.json
+.venv/bin/python .claude/skills/create-ocr/scripts/apply_edits.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 13 Artikelwunsch "OCR erstellt" marks in one edit: dry run first, then with --save
+.venv/bin/python .claude/skills/create-ocr/scripts/mark_artikelwunsch.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+```
+
+`stitch_parts.py <skel> <out> <part1> …` assembles one long article (dozens of columns)
+from body parts proofread by several subagents. Each part covers a contiguous column range.
+`scripts/check_assembly.py` is the per-article structural check that `run_checks.py` wraps.
+
 ## Worklist & scope
 
 - **Source:** PetScan — category `RE:Unvollständig`, **minus** everything under
@@ -61,8 +109,8 @@ re-derive:
   worklist titles (`fetch_wikitext.py` accepts a one-title-per-line `.txt`), compute the
   column span (`1` if `SPALTE_END=OFF`, else `END−START+1`), and take the N shortest that
   pass the per-article guards. Short articles = few columns = quick proofreads.
-  (On this Mac the python.org Python lacks CA certs — run the fetch with
-  `SSL_CERT_FILE=/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/certifi/cacert.pem`.)
+  `select_candidates.py` does all of this. Run it with the repo venv python: the
+  python.org Python on this Mac lacks CA certs.
 
 ### Alternative source: the Artikelwunsch (requested-articles) page
 
@@ -88,7 +136,8 @@ then continue with the shortest-first PetScan selection to fill out the batch si
 4. OCR the qualifying lemmas through the normal pipeline (fetch → proofread → assemble →
    structural check → edit pass). Report the ones you skipped, with the failing criterion.
 5. **After** the OCR edit pass succeeds for a lemma, mark it done on the Artikelwunsch
-   page: in **one** additional pywikibot edit (as THEbotIT), append ` OCR erstellt` to the
+   page (`mark_artikelwunsch.py <batch>`, dry run first, then `--save`):
+   in **one** additional pywikibot edit (as THEbotIT), append ` OCR erstellt` to the
    end of each successfully-created article's line. Guard per line: the line is still
    present and does not already say `OCR erstellt`; if the line moved or the page changed
    under you, re-fetch and re-match by lemma rather than by line number. Summary e.g.
@@ -151,8 +200,11 @@ then continue with the shortest-first PetScan selection to fill out the batch si
 ### Bulk-fetch pattern (main session, one `browser_evaluate` loop)
 
 Subagents cannot reach elexikon — **pre-fetch everything to local files**, then fan out.
-In one evaluate call, loop the articles (~700 ms pacing), save the results with the
-`filename:` parameter so multi-MB blobs never enter your context:
+`gen_fetch_js.py` writes the loops below as ready-to-paste functions. Read each
+`fetch_js/<kind>_NN.js` and pass its content as the `function` of one `browser_evaluate`
+call, with `filename: <batch>/fetch_js/<kind>_NN.result.json`. In one evaluate call, loop
+the columns (~700 ms pacing), save the results with the `filename:` parameter so multi-MB
+blobs never enter your context:
 
 - *Texts:* fetch **per-column** by default (one fetch per unique `<BAND>_<col>` in the
   batch, dedup across articles that share a column) — `fetch(url, {credentials:'include'})`
@@ -162,6 +214,11 @@ In one evaluate call, loop the articles (~700 ms pacing), save the results with 
 - *Scans:* `fetch` → `arrayBuffer` → base64 (chunk `String.fromCharCode` in ~8 KB slices)
   → return `{"<BAND>_<col %04d>.png": b64}`; decode locally with
   `scripts/decode_b64_files.py <batch.json> <scansdir>`.
+- The generated functions return `{files, errs}` and stop after 3 consecutive HTTP errors.
+  Then re-navigate, wait 10 s, and re-run `gen_fetch_js.py`: it lists only the columns that
+  are still missing.
+- eLexikon serves a ~1 KB blank placeholder PNG for some single columns. `build_chunks.py`
+  holds such articles back in `not_ready.json`. Fetch the 4-column spread for them instead.
 
 ## Assembly (per article)
 
@@ -269,7 +326,11 @@ haiku proofreads Greek and letter-spaced names too unreliably to publish. **Neve
 more than 10 subagents in total for a batch.** Up to 10 articles: one subagent per
 article. More than 10: split the articles into at most 10 chunks (round-robin or
 contiguous, ~⌈N/10⌉ articles each) and give each subagent its whole chunk to process
-sequentially. Give each subagent, per article: the skeleton wikitext path, **the
+sequentially. `build_chunks.py` does the split (balanced by column count) and renders
+each chunk's full prompt from `scripts/prompt_template.md` into `prompts.json`. Pass each
+entry's `prompt` unchanged, and improve the template, not the individual prompt. Give each
+subagent the `skel/` working copy, never the `skel_ref/` snapshot: subagents sometimes
+edit the skeleton in place. Give each subagent, per article: the skeleton wikitext path, **the
 per-column text(s) for its column span** (the primary source to cut from), the by-lemma
 text if fetched (cross-check only — tell subagents explicitly not to trust its cut
 without verifying against the column text/scan), the column PNG paths, and the article
@@ -287,13 +348,17 @@ genealogical tree, transcribe the surrounding prose normally, leave the tree out
 The main loop then works `re-stammbaum` for each flagged article.
 
 Subagents die on transient API errors; the output files are the source of truth — re-spawn
-for any articles whose files are missing (idempotent, still within the 10-subagent cap).
-Parallel is fine.
+for any articles whose files are missing (idempotent, still within the 10-subagent cap):
+`run_checks.py` lists them as MISSING; put those titles in a file and run
+`build_chunks.py <batch> --only <file>`. Parallel is fine.
 
 ## Structural check before saving
 
-Run `scripts/check_assembly.py <skeleton.wikitext> <new.wikitext>` for **every** article.
-It verifies mechanically what a tired eye skips: the REDaten diff is exactly the
+Run `fix_seite_ownline.py <batch>` first: subagents often leave `{{Seite}}` tags inline. Then
+run `run_checks.py <batch>`. It runs `scripts/check_assembly.py <skel_ref/…> <out/…>` for
+**every** article against the clean snapshot. It also audits the `<references />` placement
+and lists Stammbaum-flagged articles. Pass an expected plate-line FAIL with `--allow-fail`.
+`check_assembly.py` verifies mechanically what a tired eye skips: the REDaten diff is exactly the
 KORREKTURSTAND flip, all `{{Seite}}` lines survive byte-identically in order, REAutor and
 categories are intact, no `[...]`/BOM/`== RE:` heading remains, and the body length is
 plausible for the column count. It targets the `unvollständig`→`unkorrigiert` block by the
@@ -305,13 +370,14 @@ headword. Fix any FAIL before the edit pass; treat WARNs as review pointers.
 ## Edit pass (main session, sequential, pywikibot as THEbotIT)
 
 Edits run as **THEbotIT** through pywikibot (repo venv + `~/.pywikibot/user-config.py`
-OAuth — see the stammdaten skill's "Making edits" section for the pattern and how to run
-the script). Put the edit script in `.claude_work_dir`, feed it the `out/` directory, and
-process each article in **one edit** (never split):
+OAuth — see the stammdaten skill's "Making edits" section). Use `scripts/apply_edits.py <batch>`.
+It is a dry run by default: it fetches every live page and reports `WOULD_SAVE` or SKIP. Then
+run it with `--save`. It saves only PASS/ALLOWED articles from `check_results.json`, skips
+lemmas already `SAVED` on a re-run, and processes each article in **one edit** (never split):
 
-1. `page = pywikibot.Page(site, lemma)`; **guard:** `page.exists()` and `page.text` still
-   contains the `[...]` line and `KORREKTURSTAND=unvollständig` — otherwise someone
-   touched it meanwhile: SKIP and report.
+1. `page = pywikibot.Page(site, lemma)`; **guard:** `page.exists()` and the live text still
+   equals the `skel_ref/` snapshot — otherwise someone touched it meanwhile: SKIP and
+   report.
 2. Set `page.text` to the full new text and `page.save(summary=..., minor=False)` with
    summary
    `OCR-Text von elexikon.ch eingefügt und am Scan korrekturgelesen, Korrekturstand: unkorrigiert`.
