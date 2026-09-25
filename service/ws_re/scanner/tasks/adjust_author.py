@@ -1,4 +1,6 @@
+import json
 import re
+from pathlib import Path
 
 import pywikibot
 
@@ -7,36 +9,8 @@ from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.article import Article
 from tools.bots.logger import WikiLogger
 
-ADDITIONAL_AUTHORS: dict[str, str] = {
-    "Franz Heinrich Weissbach": "Weissbach.",
-    "Hans von Arnim": "v. Arnim.",
-    "Paul Friedländer": "P. Friedländer.",
-    "Felix Jacoby": "F. Jacoby.",
-    "Hans von Geisau": "v. Geisau.",
-    "Paul Schoch-Bodmer": "Schoch.",
-    "Max Fluß": "Fluss.",
-    "August Burckhardt-Brandenberg": "Burckhardt.",
-    "Johannes Geffcken": "Geffcken.",
-    "Walther Eltester": "Eltester.",
-    "Fritz Geyer": "Geyer.",
-    "Bernhard große Kruse": "gr. Kruse.",
-    "Wilhelm Enßlin": "W. Enßlin.",
-    "Walter Friedrich Otto": "W. F. Otto.",
-    "Hans Philipp": "Philipp.",
-    "Schmidt": "Johanna Schmidt.",
-    "Albert William Van Buren": "A. W. Van Buren.",
-    "Judith Andrée-Hanslik": "Judith Andrée-Hanslik.",
-    "Anthony Eric Raubitschek": "A. Raubitschek.",
-    "Hans Georg Gundel": "H. Gundel.",
-    "Max Lambertz": "Lambertz.",
-    "Karl Wolf": "Wolf.",
-    "Franz Poland": "Poland.",
-    "Friedrich Ebert": "Friedr. Ebert.",
-    "Ernst Meyer": "Ernst Meyer.",
-    "George MacDonald": "G. Macdonald.",
-    "Josef Göhler": "G. Göhler.",
-    "Friedrich Walter Lenz": "Lenz.",
-}
+with open(Path(__file__).parent.joinpath("additional_authors.json"), encoding="utf-8") as additional_authors_json:
+    ADDITIONAL_AUTHORS: dict[str, str] = json.load(additional_authors_json)
 
 COMPLEX_AUTHORS: dict[str, str] = {
     "Ernst Hugo Berger": "Berger.",
@@ -95,7 +69,7 @@ def get_author_mapping() -> dict[str, str]:
 
 def adjust_author(input_str: str, mapping: dict[str, str]) -> str:
     for author, target in mapping.items():
-        input_str = re.sub(rf"{{{{REAutor\|{author}}}}}", f"{{{{REAutor|{target}}}}}", input_str)
+        input_str = input_str.replace(f"{{{{REAutor|{author}}}}}", f"{{{{REAutor|{target}}}}}")
     if REGEX_COMPLEX.search(input_str):
         article = Article.from_text(input_str.strip())
         input_str = REGEX_COMPLEX.sub(r"{{REAutor|\g<author>|" + str(article["BAND"].value) + "}}", input_str)
