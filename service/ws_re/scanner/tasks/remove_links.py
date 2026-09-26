@@ -24,6 +24,7 @@ class RELITask(ReScannerTask):
     TARGET_LEMMAS: ClassVar[list[str]] = [
         "Λεβήν",
         "Leben(a)",
+        "Λίστη",
     ]
 
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
