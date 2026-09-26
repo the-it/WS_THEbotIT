@@ -9,7 +9,8 @@ For EACH article:
 1. Read the skeleton wikitext file given below (your working copy; the main loop keeps a clean snapshot elsewhere).
 2. Read the eLexikon per-column OCR text file(s) given below. They are the primary source. A column file may hold several articles separated by "== RE:<lemma> ==" headings. Headings can be mislabeled or off by one: trust the printed headword and end signature on the scan over the heading string.
 3. Read the column scan PNG(s) given below. Crop them into 3-4 vertical strips with crop.py (`$python $crop <png> 0 <y0> <width> <y1> <out.png> 2`, x in pixels of the PNG's real width given below, y as height fractions) and actually read the crops. Write crops only under $batch/crops/.
-4. Cut this article's body from the column text: start at its own printed headword (drop a predecessor's tail on a shared start column), end at the successor's headword or the printed end signature. If the article spans several columns, join the column texts at each {{Seite}} break. If the text ends mid-sentence at SPALTE_END, the article probably runs into the next column (bad Stammdaten): set status "skip" with that reason; do not publish a partial text.
+4. Cut this article's body from the column text: start at its own printed headword (drop a predecessor's tail on a shared start column), end at the successor's headword or the printed end signature. If the article spans several columns, join the column texts at each {{Seite}} break. If the text ends mid-sentence at SPALTE_END, the article runs into the next column (SPALTE_END too small): set status "needs_columns" with "columns": [the extra column numbers] and a "stammdaten_fix" entry (see step 9); write no wikitext file and no partial text. The main loop fixes the field, fetches the columns and re-spawns you.
+4b. Check the Stammdaten wherever your scans show them: SPALTE_START/SPALTE_END (SPALTE_END is the column holding the article's last line; OFF if that is the start column), VORGÄNGER/NACHFOLGER (the headwords printed directly before and after this article), and the printed end signature against {{REAutor|…}}. If a value is wrong on the scan, record it in "stammdaten_fix" (step 9) and assemble the page as it will be after the fix (step 6). If a neighbour's headword is not on your columns, note it as "unverifiable" in "uncertain"; never guess.
 5. Proofread word-by-word against the scan:
    - delete margin line-counters (10, 20, … 60, sometimes mangled like `4·`) swallowed into the text, but confirm on the scan first: RE text has genuine numbers;
    - rejoin hyphen line-breaks (keep genuine hyphens) and false paragraph breaks;
@@ -23,11 +24,15 @@ For EACH article:
    - replace the bare headword line + "[...]" with the opening bold headword AS PRINTED, followed by the proofread body;
    - reuse the skeleton's {{Seite|…}} lines exactly, each once, in order, EACH ON ITS OWN LINE, placed exactly at the real column break (not collected before {{REAutor}}). If the skeleton has no {{Seite}} lines, generate one per column break: even N -> {{Seite|N}}, odd N -> {{Seite|N||{{REIA|<BAND>|N}}}};
    - everything else stays byte-identical: other REDaten fields, {{REAutor|…}}, categories, sibling REDaten blocks. Never re-add the printed end signature to the body.
+   - Exception - a Stammdaten fix from step 4b: write the corrected values into the REDaten fields / {{REAutor|…}} as well, and use the {{Seite}} lines of the corrected span (drop the skeleton lines outside it; for added columns use the same format: even N -> {{Seite|N}}, odd N -> {{Seite|N||{{REIA|<BAND>|N}}}}; if the skeleton had no {{Seite}} lines, generate them as above). Change nothing else.
 7. Footnotes: keep <ref> tags in the body; put the "== Anmerkungen (Wikisource) ==" + <references /> block AFTER {{REAutor|…}} and BEFORE the [[Kategorie:…]] lines. Every <ref>-bearing article needs that block.
 8. Genealogical tree (Stammtafel) on the scan or in the column text: transcribe the prose normally, leave the tree out, and record it in the notes as "stammbaum": {"columns": [...], "printed_under": "<headword on the scan>", "points_at_it": "<sentence that references it>"}.
 9. Write the complete new page text to the "out" path. Write the notes JSON to the "notes" path:
-   {"lemma": ..., "status": "ok"|"skip", "reason": "...", "uncertain": ["col N: …"], "fixes": {"line_numbers": n, "hyphens": n, "misreads": [...], "paragraph_joins": n}}
-   For status "skip" (not digitized, ambiguous, Stammdaten problem) do NOT write a wikitext file.
+   {"lemma": ..., "status": "ok"|"skip"|"needs_columns", "reason": "...", "uncertain": ["col N: …"], "fixes": {"line_numbers": n, "hyphens": n, "misreads": [...], "paragraph_joins": n}}
+   With a Stammdaten fix, add:
+   "stammdaten_fix": {"fields": {"SPALTE_END": {"old": "<value in the skeleton now>", "new": "<value the scan shows>"}}, "evidence": "col N: <what the scan shows>", "neighbours": {"RE:<neighbour>": {"fields": {"NACHFOLGER": {"old": "...", "new": "..."}}}}}
+   Field names: SPALTE_START, SPALTE_END, VORGÄNGER, NACHFOLGER, REAUTOR (the {{REAutor|…}} value). "old" is always the CURRENT skeleton value, "new" the corrected one. List a neighbour only for the reciprocal V/N change, and only when you can see its headword on your scans.
+   A Stammdaten problem is NOT a skip reason: status stays "ok" with the corrected page written. Use "skip" only for not digitized / genuinely ambiguous cases, and then do NOT write a wikitext file.
 
 $articles
 

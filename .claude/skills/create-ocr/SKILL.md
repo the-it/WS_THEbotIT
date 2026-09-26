@@ -18,7 +18,9 @@ An *unvollständig* RE article on **de.wikisource.org** is a metadata skeleton: 
 placeholder with the **eLexikon enriched OCR text**, proofread **word-by-word against the
 printed column scans**, and flips `KORREKTURSTAND=unvollständig` → `unkorrigiert`.
 Everything else in the skeleton (Stammdaten, `{{Seite}}` lines, `{{REAutor}}`, categories)
-stays byte-identical.
+stays byte-identical in the OCR edit. **Stammdaten errors found on the scan are fixed, not
+skipped**: they go in a separate, scan-verified edit *before* the OCR edit (see "Stammdaten
+fixes" below).
 
 ## Shared machinery — reuse `re-stammdaten-check`
 
@@ -76,8 +78,12 @@ permission rules reject `$VAR`, globs and `&&` chains.
 # 9  fan-out: one Agent call (subagent_type "ocr-proofreader") per prompts.json entry -> out/
 # 10 move inline {{Seite}} tags onto their own line
 .venv/bin/python .claude/skills/create-ocr/scripts/fix_seite_ownline.py .claude_work_dir/ocr_batch_<YYYYMMDD>
-# 11 check_assembly vs skel_ref/ + ref-block audit + Stammbaum list -> check_results.json
+# 11 check_assembly vs skel_ref/ + ref-block audit + Stammbaum/Stammdaten lists -> check_results.json
 .venv/bin/python .claude/skills/create-ocr/scripts/run_checks.py .claude_work_dir/ocr_batch_<YYYYMMDD>
+# 11b Stammdaten fixes (only if run_checks lists any): draft, verify each on the scan, dry run, --save;
+#     then fetch new columns / re-spawn NEEDS_COLUMNS articles, and re-run step 11
+.venv/bin/python .claude/skills/create-ocr/scripts/fix_stammdaten.py .claude_work_dir/ocr_batch_<YYYYMMDD> --collect
+.venv/bin/python .claude/skills/create-ocr/scripts/fix_stammdaten.py .claude_work_dir/ocr_batch_<YYYYMMDD>
 # 12 edit pass: dry run first, then the same command with --save (THEbotIT) -> edit_results.json
 .venv/bin/python .claude/skills/create-ocr/scripts/apply_edits.py .claude_work_dir/ocr_batch_<YYYYMMDD>
 # 13 Artikelwunsch "OCR erstellt" marks in one edit: dry run first, then with --save
@@ -102,7 +108,9 @@ from body parts proofread by several subagents. Each part covers a contiguous co
 - The `RE:Stammdaten überprüfen` negcat **excludes articles whose metadata isn't verified yet**:
   their auto-generated `SPALTE_*`/`BAND` can be wrong, which makes the OCR insert fail (the
   scan column doesn't match, the article spans a column you didn't fetch, etc. — the exact cause
-  of the skips in batch 2026-07-18). Let those go through `re-stammdaten-check` first.
+  of the skips in batch 2026-07-18). Let those go through `re-stammdaten-check` first. Keep this
+  negcat: the rule "fix Stammdaten yourself" (below) covers errors you *encounter* in a batch, it
+  does not widen the worklist.
 - **Ask the user how many articles to work on if they didn't say.** If they named
   specific lemmas, use those.
 - **Selection: shortest first.** Bulk-fetch the wikitext of the first few hundred
@@ -241,8 +249,9 @@ lines:
    line for that N** — odd columns carry a `{{REIA|…}}` scan-link parameter that must
    survive (`{{Seite|753||{{REIA|VII A,1|753}}}}`). Every skeleton `{{Seite}}` line must
    be used exactly once, in order. A count/number mismatch usually means the skeleton's
-   `SPALTE_*` values and eLexikon disagree — don't force it; verify against the scan,
-   note it in the report, and skip (Stammdaten fixes belong to `re-stammdaten-check`).
+   `SPALTE_*` values and eLexikon disagree — don't force it; verify against the scan
+   and **fix the Stammdaten** (see "Stammdaten fixes" below), then assemble against the
+   corrected span.
    Keep the `{{Seite}}` lines on their own line inside the running paragraph (no blank
    lines around them unless the print has a paragraph break there); if a word is
    hyphen-split across the column break, join it on the side where the larger part sits.
@@ -338,7 +347,7 @@ meta (lemma, BAND, SPALTE_START/END). For each article the subagent writes:
 
 - `<workdir>/out/<lemma>.wikitext` — the complete new page text, and
 - `<workdir>/out/<lemma>.notes.json` —
-  `{lemma, status: "ok"|"skip", reason, uncertain: ["col 753: Greek accent on …"], fixes: {line_numbers, hyphens, misreads, paragraph_joins}}`.
+  `{lemma, status: "ok"|"skip"|"needs_columns", reason, uncertain: ["col 753: Greek accent on …"], fixes: {line_numbers, hyphens, misreads, paragraph_joins}, stammdaten_fix?: {fields, evidence, neighbours}}`.
 
 **Stammtafeln stay with the main loop.** A subagent is offline and cannot make the decisions
 the `re-stammbaum` skill requires. Tell subagents: if the column text or scan shows a
@@ -367,6 +376,44 @@ flip (so multi-block Nachtrag pages work regardless of block order); when the sk
 and match the column span; and it tolerates a Nachtrag `: … zum Art.` lead-in before the
 headword. Fix any FAIL before the edit pass; treat WARNs as review pointers.
 
+## Stammdaten fixes (fix, don't skip)
+
+When the scan shows a Stammdaten error — `SPALTE_END` one too far (the article ends flush at a
+column break and the next lemma opens the following column; the nightly ReScanner over-counts
+exactly this case), `SPALTE_END` too short (text runs on into the next column), a wrong
+`VORGÄNGER`/`NACHFOLGER`, or a `{{REAutor}}` that doesn't match the printed signature — **fix it
+yourself** as part of the batch. Do not skip the article and do not hand it off to
+`re-stammdaten-check`. The rules for *what* is correct come from `../re-stammdaten-check/SKILL.md`
+("What to verify against the scan", "REAutor = the EXACT printed signature"); in particular, when
+you touch an article re-verify Spalte + V/N + REAutor together.
+
+1. **Subagents report, they don't skip.** They record the fix in their notes as
+   `stammdaten_fix: {fields: {FIELD: {old, new}}, evidence, neighbours}` and write `out/` as the
+   page will look *after* the fix (corrected REDaten fields, `{{Seite}}` lines of the corrected
+   span). If `SPALTE_END` is too short they return `status: "needs_columns"` with the extra
+   columns instead of a partial text.
+2. `run_checks.py` lists these articles. Such an article FAILs the REDaten-diff check until
+   the fix is live — that is expected; don't `--allow-fail` it.
+3. `fix_stammdaten.py <batch> --collect` drafts `stammdaten_fixes.json` from the notes. **Verify
+   every entry on a scan crop yourself** (fan-out agents sometimes put the current value into
+   the "new" slot — the script's `old`-must-match-live guard catches swaps, not wrong readings).
+   Add the reciprocal V/N change on the neighbour page when a chain link changes (both outside
+   neighbours, as in the stammdaten skill).
+4. Dry run, then `--save`. One edit per page, summary
+   `Stammdaten am Scan korrigiert: SPALTE_END 2236 → OFF`. For batch lemmas the script then
+   refreshes `skel_ref/`, `skel/`, `manifest.json` and `columns.json` from the live page, and
+   regenerates the skeleton's pre-generated `{{Seite}}` lines for the new span (a skeleton
+   without them stays without them).
+5. For `NEEDS_COLUMNS`: `gen_fetch_js.py` now lists the new columns — fetch them, then
+   `build_chunks.py <batch> --only <file>` and re-spawn.
+6. Re-run `run_checks.py`; the fixed articles now PASS against the refreshed snapshot. Then the
+   normal edit pass.
+
+Out of scope for `fix_stammdaten.py`: lemma **moves** (Greek headword, letter case, macrons,
+double lemmas) and structural splits (a "zum Namen" header, see `re-split-series-intro`). Do
+those with the respective skill in the same session when the scan is unambiguous, and report
+them; skip & report only if the scan itself leaves the correct structure ambiguous.
+
 ## Edit pass (main session, sequential, pywikibot as THEbotIT)
 
 Edits run as **THEbotIT** through pywikibot (repo venv + `~/.pywikibot/user-config.py`
@@ -390,8 +437,8 @@ No post-edit re-fetch/verification step — pywikibot confirms each save, and th
 structural check already guarantees the invariants; trust the save results. Just hand the
 user a written report — a table
 `lemma | columns | fixes (line-nrs/hyphens/misreads) | uncertainties | status` plus the
-skipped articles with reasons. Flag any suspected Stammdaten problems (wrong SPALTE,
-odd V/N) for a `re-stammdaten-check` pass instead of fixing them here.
+skipped articles with reasons. List every Stammdaten fix you saved (lemma, field, old → new,
+scan evidence) prominently, including neighbour V/N changes.
 
 ## Gotchas
 
@@ -402,7 +449,8 @@ odd V/N) for a `re-stammdaten-check` pass instead of fixing them here.
   by-lemma URL misses, open the per-column page of `SPALTE_START` — its nav bar links
   "show this Article completely" with eLexikon's own key for the lemma.
 - **Article not digitized / empty text** on eLexikon → skip & report.
-- **`{{Seite}}` mismatch = probable Stammdaten error** — never "fix" SPALTE here; report.
+- **`{{Seite}}` mismatch = probable Stammdaten error** — verify on the scan and fix it via
+  `fix_stammdaten.py` (see "Stammdaten fixes"); never bend the OCR text to fit a wrong span.
 - **`check_assembly.py` checks Seite-line presence/count/order, not position** — it will
   pass an assembly that moved a `{{Seite|N}}` tag to right before `{{REAutor}}` instead of
   its real mid-body column break (seen in batch4). When proofreading, place each Seite tag
@@ -411,7 +459,9 @@ odd V/N) for a `re-stammdaten-check` pass instead of fixing them here.
   covers the two traps: the tree may belong to the *neighbouring* article (`RE:Makartatos 1`
   carried `RE:Makartatos 2`'s tree), and a plate `{{Seite}}` line makes `check_assembly.py`
   FAIL on "no extra {{Seite templates" by design.
-- **Do not touch** VORGÄNGER/NACHFOLGER, SORTIERUNG, KURZTEXT, maintenance categories, or
-  anything else in the skeleton beyond the KORREKTURSTAND flip and the body.
+- **In the OCR edit, do not touch** VORGÄNGER/NACHFOLGER, SORTIERUNG, KURZTEXT, maintenance
+  categories, or anything else in the skeleton beyond the KORREKTURSTAND flip and the body.
+  Scan-verified SPALTE/V/N/REAutor corrections go in the separate Stammdaten edit before it;
+  SORTIERUNG, KURZTEXT and maintenance categories stay untouched.
 - The state goes to **unkorrigiert** even after a full proofread — wikisource's
   correction workflow needs an independent second reader for *korrigiert*.

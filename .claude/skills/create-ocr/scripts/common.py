@@ -16,6 +16,7 @@ Batch directory layout (every script takes the batch dir as first argument):
     <batch>/chunks/chunk_NN.json, prompts.json   build_chunks.py
     <batch>/out/<f>.wikitext, <f>.notes.json      subagent output
     <batch>/check_results.json    run_checks.py
+    <batch>/stammdaten_fixes.json, stammdaten_results.json   fix_stammdaten.py
     <batch>/edit_results.json     apply_edits.py
 """
 import json
