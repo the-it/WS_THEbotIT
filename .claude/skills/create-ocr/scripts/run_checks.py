@@ -8,6 +8,9 @@ out/<f>.wikitext against the CLEAN snapshot skel_ref/<f>.wikitext (never the
 subagents' skel/ copy). Extra audits beyond check_assembly.py:
   - <ref> present  -> <references /> must exist and sit after the last {{REAutor}}
   - notes carry a "stammbaum" flag -> listed for the re-stammbaum skill
+  - notes carry a "stammdaten_fix" -> listed for fix_stammdaten.py (the article FAILs
+    the REDaten-diff check until the fix is saved and skel_ref/ refreshed)
+  - status "needs_columns" -> NEEDS_COLUMNS (fix SPALTE, fetch, re-spawn)
 --allow-fail marks an expected FAIL as accepted (e.g. a Stammbaum plate {{Seite}}
 line, which fails "no extra {{Seite templates" by design); apply_edits.py saves
 PASS and ALLOWED only.
@@ -53,7 +56,12 @@ def main() -> int:
             results[title] = {"status": "MISSING", "detail": "no notes.json (re-spawn)"}
             continue
         notes = load_json(notes_path)
-        entry = {"uncertain": notes.get("uncertain", []), "stammbaum": notes.get("stammbaum")}
+        entry = {"uncertain": notes.get("uncertain", []), "stammbaum": notes.get("stammbaum"),
+                 "stammdaten_fix": notes.get("stammdaten_fix")}
+        if notes.get("status") == "needs_columns":
+            results[title] = {**entry, "status": "NEEDS_COLUMNS",
+                              "detail": f"columns {notes.get('columns')}: {notes.get('reason', '')}"}
+            continue
         if notes.get("status") != "ok":
             results[title] = {**entry, "status": "SKIP", "detail": notes.get("reason", "")}
             continue
@@ -78,7 +86,7 @@ def main() -> int:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
     print(" ".join(f"{k}: {v}" for k, v in sorted(counts.items())) + f"  TOTAL: {len(results)}")
     for title, r in results.items():
-        if r["status"] in ("FAIL", "MISSING", "SKIP", "ALLOWED"):
+        if r["status"] in ("FAIL", "MISSING", "SKIP", "ALLOWED", "NEEDS_COLUMNS"):
             print(f"\n{r['status']}  {title}\n  " + (r["detail"] or "").replace("\n", "\n  "))
             if r.get("full"):
                 print(r["full"])
@@ -87,7 +95,11 @@ def main() -> int:
     flagged = [t for t, r in results.items() if r.get("stammbaum")]
     if flagged:
         print("\nStammbaum flagged (work re-stammbaum): " + ", ".join(flagged))
-    return 1 if counts.get("FAIL") or counts.get("MISSING") else 0
+    fixes = [t for t, r in results.items() if r.get("stammdaten_fix")]
+    if fixes:
+        print("\nStammdaten fix in notes (fix_stammdaten.py --collect, verify, fix pass, then re-run checks): "
+              + ", ".join(fixes))
+    return 1 if counts.get("FAIL") or counts.get("MISSING") or counts.get("NEEDS_COLUMNS") else 0
 
 
 if __name__ == "__main__":
