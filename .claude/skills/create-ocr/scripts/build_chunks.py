@@ -9,6 +9,7 @@ Reads <batch>/manifest.json, checks every article's local inputs, and writes
                         subagent_type "ocr-proofreader"
   not_ready.json        articles held back (missing/empty column text, missing or
                         blank placeholder scan) - re-fetch, or use the 4-column spread
+  crops/<HHMMSS>_chunk_NN/  one private crop dir per chunk and run
 Chunks are balanced by column count (largest article first into the lightest
 chunk). --only restricts to the given titles, e.g. to re-spawn articles whose
 out/ files are missing (idempotent; stay within 10 subagents per batch).
@@ -18,6 +19,7 @@ import glob
 import os
 import string
 import sys
+import time
 
 from common import col_key, load_json, save_json
 from PIL import Image
@@ -62,7 +64,7 @@ def article_entry(b, title, m):
     }, problems
 
 
-def render(b, chunk, template):
+def render(b, chunk, template, crops):
     blocks = []
     for i, a in enumerate(chunk, 1):
         end = a["spalte_end"] if a["spalte_end"] != a["spalte_start"] else "OFF"
@@ -72,7 +74,7 @@ def render(b, chunk, template):
             scans=scans, band=a["band"], start=a["spalte_start"], end=end,
             out=a["out"], notes=a["notes"]))
     return template.safe_substitute(batch=b, crop=CROP, python=PYTHON, n=len(chunk),
-                                    articles="\n\n".join(blocks))
+                                    crops=crops, articles="\n\n".join(blocks))
 
 
 def main() -> int:
@@ -109,12 +111,17 @@ def main() -> int:
         os.remove(old)
     with open(os.path.join(HERE, "prompt_template.md"), encoding="utf-8") as fh:
         template = string.Template(fh.read())
+    # One crop dir per chunk and run: parallel subagents (and re-spawns next to a
+    # still-running chunk) must never overwrite or read each other's crops.
+    run = time.strftime("%H%M%S")
     prompts = []
     for i, chunk in enumerate(chunks):
         save_json(os.path.join(b, "chunks", f"chunk_{i:02d}.json"), chunk)
+        crops = os.path.join(b, "crops", f"{run}_chunk_{i:02d}")
+        os.makedirs(crops, exist_ok=True)
         names = ", ".join(a["lemma"].removeprefix("RE:") for a in chunk)
         prompts.append({"description": f"OCR chunk {i:02d}"[:40], "lemmas": names,
-                        "prompt": render(b, chunk, template)})
+                        "prompt": render(b, chunk, template, crops)})
         print(f"chunk_{i:02d}: {len(chunk)} articles, {load[i]} columns")
     save_json(os.path.join(b, "prompts.json"), prompts)
     save_json(os.path.join(b, "not_ready.json"), not_ready)
