@@ -27,6 +27,7 @@ def main() -> int:
     ap.add_argument("--json", help="existing PetScan JSON dump instead of a live query")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
+    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
 
     if args.json:
         data = load_json(args.json)
@@ -41,7 +42,6 @@ def main() -> int:
     total = len(titles)
     if args.limit:
         titles = titles[:args.limit]
-    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:
         fh.write("".join(t + "\n" for t in titles))
     print(f"worklist: {total} titles; wrote {len(titles)} to {args.out}")

@@ -227,6 +227,15 @@ blobs never enter your context:
   are still missing.
 - eLexikon serves a ~1 KB blank placeholder PNG for some single columns. `build_chunks.py`
   holds such articles back in `not_ready.json`. Fetch the 4-column spread for them instead.
+- **Keep the Mac awake.** Unattended runs stall when macOS idles: browser fetches and
+  `browser_wait_for` run up to 10× slow, and a long `browser_evaluate` can hit the MCP idle
+  timeout (batch 2026-10-03 lost ~2 h). Start `caffeinate -dimsu -t 43200` with
+  `run_in_background` at batch start and stop it at the end.
+- PetScan sometimes times out (300 s). Then build `titles.txt` from the previous batch's dump
+  with `petscan_titles.py <titles.txt> --json <old batch>/petscan.json --limit N`. The live
+  guards still run (`select_candidates.py`, `legal_guard.py`), but the dump's
+  `RE:Stammdaten überprüfen` negcat is stale, so exclude titles whose text now carries that
+  category (`--exclude`).
 
 ## Assembly (per article)
 
