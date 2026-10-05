@@ -1,4 +1,5 @@
 from unittest import TestCase
+from unittest.mock import MagicMock
 
 import pywikibot
 from testfixtures import compare
@@ -163,32 +164,38 @@ class TestAuthorInfo(TestCase):
         data_item = pywikibot.Page(self.wiki, "Johann Georg Reizer").data_item()
         compare(None, self.author_info.get_highest_claim(data_item, "P570"))
 
-    @real_wiki_test
+    @staticmethod
+    def _time_claim(year: int, precision: int, month: int = 1, day: int = 1) -> MagicMock:
+        claim = MagicMock()
+        claim.type = "time"
+        claim.getTarget.return_value = MagicMock(year=year, month=month, day=day, precision=precision)
+        return claim
+
     def test_get_value_dates(self):
+        compare(None, self.author_info.get_value_from_claim(self._time_claim(-1000, 6)))
+        compare("12. Jh.", self.author_info.get_value_from_claim(self._time_claim(1150, 7)))
+        compare("4. Jh. v. Chr.", self.author_info.get_value_from_claim(self._time_claim(-400, 7)))
+        compare("1170", self.author_info.get_value_from_claim(self._time_claim(1170, 9)))
+        compare("322 v. Chr.", self.author_info.get_value_from_claim(self._time_claim(-322, 9)))
+        compare("Dezember 1981", self.author_info.get_value_from_claim(self._time_claim(1981, 10, month=12)))
+        compare(
+            "7. März 322 v. Chr.", self.author_info.get_value_from_claim(self._time_claim(-322, 11, month=3, day=7))
+        )
+        compare("6. Dezember 1981", self.author_info.get_value_from_claim(self._time_claim(1981, 11, month=12, day=6)))
+
+    def test_get_value_dates_no_target(self):
+        claim = MagicMock()
+        claim.type = "time"
+        claim.getTarget.return_value = None
+        compare(None, self.author_info.get_value_from_claim(claim))
+
+    @real_wiki_test
+    def test_get_value_dates_real_claim(self):
         data_item = pywikibot.Page(self.wiki, "Aristoteles").data_item()
 
         claim = data_item.text["claims"]["P570"][0]
         value = self.author_info.get_value_from_claim(claim)
         compare(value, "322 v. Chr.")
-
-        claim = data_item.text["claims"]["P570"][1]
-        value = self.author_info.get_value_from_claim(claim)
-        compare(value, "7. März 322 v. Chr.")
-
-        data_item = pywikibot.Page(self.wiki, "Walther von der Vogelweide").data_item()
-        claim = data_item.text["claims"]["P569"][0]
-        value = self.author_info.get_value_from_claim(claim)
-        compare(value, "1170")
-
-        data_item = pywikibot.Page(self.wiki, "Theokrit").data_item()
-        claim = data_item.text["claims"]["P569"][0]
-        value = self.author_info.get_value_from_claim(claim)
-        compare(value, "4. Jh. v. Chr.")
-
-        data_item = pywikibot.Page(self.wiki, "Fritz Herbert Alma").data_item()
-        claim = data_item.text["claims"]["P570"][0]
-        value = self.author_info.get_value_from_claim(claim)
-        compare(value, "Dezember 1981")
 
     @real_wiki_test
     def test_end_to_end(self):
