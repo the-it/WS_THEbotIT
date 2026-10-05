@@ -215,11 +215,24 @@ bla
         compare("", first_article["GEBURTSJAHR"].value)
         compare("", first_article["TODESJAHR"].value)
 
+    def test_get_pd_no_dates(self):
+        self.page_mock.text = """{{REDaten
+|BAND=S XIV
+|KEINE_SCHÖPFUNGSHÖHE=OFF
+|TODESJAHR=
+|GEBURTSJAHR=
+}}
+something
+{{REAutor|Garth Thomas.}}"""
+        re_page = RePage(self.page_mock)
+        article_list = re_page.splitted_article_list[0]
+        compare(Years(None, 2029, 2100), self.task.get_max_pd_year(article_list))
+
     def test_no_author_information(self):
         """
-        We have neither a birth nor a death year for the author ... change nothing.
+        We have neither a birth nor a death year for the author ... set the placeholder death year 2029.
         """
-        expectation = """{{REDaten
+        self.page_mock.text = """{{REDaten
 |BAND=S XIV
 |SPALTE_START=104
 |SPALTE_END=105
@@ -240,11 +253,13 @@ bla
 }}
 TEXT
 {{REAutor|Garth Thomas.}}"""
-        self.page_mock.text = expectation
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
         self.task.task()
-        compare(expectation, str(re_page))
+        article = re_page.splitted_article_list[0][0]
+        compare(False, article["KEINE_SCHÖPFUNGSHÖHE"].value)
+        compare("2029", article["TODESJAHR"].value)
+        compare("", article["GEBURTSJAHR"].value)
 
     def test_remove_death_year_for_finished_article_not_R(self):
         """

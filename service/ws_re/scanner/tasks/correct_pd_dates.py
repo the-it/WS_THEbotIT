@@ -3,6 +3,7 @@ from dataclasses import dataclass
 
 import pywikibot
 
+from service.ws_re import public_domain
 from service.ws_re.register.authors import Authors
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template.re_page import ArticleList
@@ -64,5 +65,11 @@ class COPDTask(ReScannerTask):
                     elif author.birth:
                         years.birth = author.birth
                         years.death = None
+                        years.pd = author.year_public_domain
+                    else:
+                        # neither birth nor death is known, the article is protected until the fallback year
+                        # of year_public_domain, expressed as a placeholder death year
+                        years.birth = None
+                        years.death = author.year_public_domain - public_domain.YEARS_AFTER_DEATH
                         years.pd = author.year_public_domain
         return years
