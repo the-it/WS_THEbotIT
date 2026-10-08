@@ -126,6 +126,7 @@ class LemmaDict(TypedDict, total=False):
     wd_link: str
     no_creative_height: bool
     chapters: list[ChapterDict]
+    history: dict[int, int]
 
 
 @dataclass(kw_only=True)

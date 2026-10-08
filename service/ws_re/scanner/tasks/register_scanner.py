@@ -24,6 +24,7 @@ class SCANTask(ReScannerTask):
         super().__init__(wiki, logger, debug)
         self.registers = Registers(update_data=True)
         self._strategies: dict[str, list[str]] = {}
+        self.history: <type not yet known> = None
 
     def task(self) -> bool:
         if "RE:Stammdaten überprüfen" in self.re_page.page.text:
@@ -215,6 +216,13 @@ class SCANTask(ReScannerTask):
                 return {"proof_read": 1}, []
         return {"proof_read": 0}, []
 
+    def _fetch_history(self, article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
+        article = article_list[0]
+        issue = article["BAND"].value
+        start_column = article[]
+        # crawl the history to find out if the currently processet article was present in the past and which state it has
+        return {"history": {1: 101120}}, []
+
     def _process_from_article_list(self):
         function_list_properties = []
         for item in dir(self):
@@ -228,6 +236,7 @@ class SCANTask(ReScannerTask):
                 issues_in_articles[band_info] = 1
                 continue
             issues_in_articles[band_info] += 1
+        self.history = self.re_page.page.getVersionHistoryTable()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             update_dict: LemmaDict = {}
