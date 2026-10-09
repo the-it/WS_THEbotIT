@@ -30,6 +30,12 @@ class TestLemma(BaseTestRegister):
             ],
         }
 
+    def test_history_keys_from_json(self):
+        # json persists the keys as strings
+        test_dict = cast(LemmaDict, {**self.basic_dict, "history": {"0": "101120", "2": "171024"}})
+        lemma = Lemma.from_dict(test_dict, Volumes()["I,1"], self.authors)
+        compare({0: "101120", 2: "171024"}, lemma.to_dict()["history"])
+
     def test_from_dict_errors(self):
         for entry in ["lemma"]:
             test_dict = copy.deepcopy(self.basic_dict)

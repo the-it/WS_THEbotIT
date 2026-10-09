@@ -107,6 +107,7 @@ LemmaKeys = Literal[
     "wd_link",
     "no_creative_height",
     "chapters",
+    "history",
 ]
 
 
@@ -126,6 +127,7 @@ class LemmaDict(TypedDict, total=False):
     wd_link: str
     no_creative_height: bool
     chapters: list[ChapterDict]
+    history: dict[int, str]
 
 
 @dataclass(kw_only=True)
@@ -142,6 +144,7 @@ class Lemma:
     wd_link: str | None = None
     no_creative_height: bool | None = None
     chapters: list[ChapterDict] | None = None
+    history: dict[int, str] | None = None
     volume: Volume
     authors: Authors
 
@@ -152,6 +155,9 @@ class Lemma:
         self._recalc_lemma()
 
     def _recalc_lemma(self):
+        # json persists the integer keys of the history as strings
+        if self.history:
+            self.history = {int(state): date for state, date in self.history.items()}
         if self.chapters:
             self._init_chapters()
         self.set_sort_key()
