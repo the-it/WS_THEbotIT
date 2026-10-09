@@ -7,26 +7,9 @@ from urllib.parse import quote
 
 import pywikibot
 
-from service.ws_re.scanner.tasks.add_issue_to_complex_author import AICATask
-from service.ws_re.scanner.tasks.add_short_description import KURZTask
-from service.ws_re.scanner.tasks.adjust_author import ADAUTask
-from service.ws_re.scanner.tasks.author_or_redirect import REAUTask
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from service.ws_re.scanner.tasks.categorize_redirects import CARETask
-from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
-from service.ws_re.scanner.tasks.correct_korrekturstand import COKSTask
-from service.ws_re.scanner.tasks.correct_pd_dates import COPDTask
-from service.ws_re.scanner.tasks.death_re_links import DEALTask
-from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
-from service.ws_re.scanner.tasks.hard_links_to_siehe import HLTSTask
-from service.ws_re.scanner.tasks.nachtrag_ueberschrift import NAUETask
 from service.ws_re.scanner.tasks.register_scanner import SCANTask
-from service.ws_re.scanner.tasks.remove_links import RELITask
-from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
-from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
-from service.ws_re.scanner.tasks.wikidata.task import DATATask
-from service.ws_re.scanner.tasks.wrong_article_order import WAORTask
 from service.ws_re.template import ReDatenException
 from service.ws_re.template.re_page import RePage
 from tools.bots import BotException
@@ -43,7 +26,7 @@ class ReScanner(CloudBot):
         log_to_wiki: bool = True,
     ):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(minutes=2)
+        self.timeout = timedelta(hours=8)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
         # Wikidata and the Registers.
