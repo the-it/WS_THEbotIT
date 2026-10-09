@@ -21,6 +21,7 @@ from service.ws_re.scanner.tasks.death_wp_links import DEWPTask
 from service.ws_re.scanner.tasks.error_handling import ERROTask
 from service.ws_re.scanner.tasks.hard_links_to_siehe import HLTSTask
 from service.ws_re.scanner.tasks.nachtrag_ueberschrift import NAUETask
+from service.ws_re.scanner.tasks.register_scanner import SCANTask
 from service.ws_re.scanner.tasks.remove_links import RELITask
 from service.ws_re.scanner.tasks.sortkey_from_redirect import SKFRTask
 from service.ws_re.scanner.tasks.vorgaenger_nachfolger_redirects import VONATask
@@ -42,29 +43,29 @@ class ReScanner(CloudBot):
         log_to_wiki: bool = True,
     ):
         CloudBot.__init__(self, wiki, debug, log_to_screen, log_to_wiki)
-        self.timeout = timedelta(hours=8)
+        self.timeout = timedelta(minutes=2)
         # This tasks are handled in that order for every scanned RePage, the order is not hard important,
         # but it makes sense to execute tasks that alter the lemma, before the metadata is written to
         # Wikidata and the Registers.
         self.tasks: list[Callable] = [
-            KURZTask,  # add short description
-            COKSTask,  # correct Korrekturstand if it is not correct
-            SKFRTask,  # set sortkey from redirect if it has a better match
-            HLTSTask,  # convert hard wiki links to RE siehe template and back, based on register
-            RELITask,  # remove unwanted RE cross-reference syntax
-            DEALTask,  # check for dead links RE internal
-            DEWPTask,  # check for dead links to Wikipedia
-            REAUTask,  # check for integrity article must have an author, or it is a soft redirect
-            ADAUTask,  # adjust author full names to short names
-            AICATask,  # add issue number to authors with a complex mapping
-            COPDTask,  # removes properties after article is in common domain and corrects the birth and death date
-            CARETask,  # put hard redirects to lemma in a category
-            VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
-            CHRETask,  # check if backlinks go over redirect pages
-            DATATask,  # write out to Wikidata
-            # SCANTask,  # write out to Registers
-            WAORTask,  # look for Lemma where the content article isn't the first on the page
-            NAUETask,  # correct NACHTRAG/ÜBERSCHRIFT values on multi-article pages
+            # KURZTask,  # add short description
+            # COKSTask,  # correct Korrekturstand if it is not correct
+            # SKFRTask,  # set sortkey from redirect if it has a better match
+            # HLTSTask,  # convert hard wiki links to RE siehe template and back, based on register
+            # RELITask,  # remove unwanted RE cross-reference syntax
+            # DEALTask,  # check for dead links RE internal
+            # DEWPTask,  # check for dead links to Wikipedia
+            # REAUTask,  # check for integrity article must have an author, or it is a soft redirect
+            # ADAUTask,  # adjust author full names to short names
+            # AICATask,  # add issue number to authors with a complex mapping
+            # COPDTask,  # removes properties after article is in common domain and corrects the birth and death date
+            # CARETask,  # put hard redirects to lemma in a category
+            # VONATask,  # resolve VORGÄNGER/NACHFOLGER redirects
+            # CHRETask,  # check if backlinks go over redirect pages
+            # DATATask,  # write out to Wikidata
+            SCANTask,  # write out to Registers
+            # WAORTask,  # look for Lemma where the content article isn't the first on the page
+            # NAUETask,  # correct NACHTRAG/ÜBERSCHRIFT values on multi-article pages
         ]
         if self.debug:
             self.tasks = self.tasks + []
