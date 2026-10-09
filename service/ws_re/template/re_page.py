@@ -71,9 +71,13 @@ class SplittedArticleList:
 
 
 class RePage:
-    def __init__(self, wiki_page: pywikibot.Page):
+    def __init__(self, wiki_page: pywikibot.Page, text: str | None = None):
+        """
+        :param wiki_page: the wiki page of the lemma
+        :param text: parse this text instead of the current text of the page (e.g. an old revision)
+        """
         self.page: pywikibot.Page = wiki_page
-        self.pre_text: str = self.page.text
+        self.pre_text: str = self.page.text if text is None else text
         self._article_list: list[Article | str] = []
         self._init_page_dict()
         self.splitted_article_list = SplittedArticleList(self._article_list)

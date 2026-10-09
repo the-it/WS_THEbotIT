@@ -1,5 +1,6 @@
 import contextlib
 import re
+from collections.abc import Iterable
 from functools import lru_cache
 
 import pywikibot
@@ -12,8 +13,14 @@ from service.ws_re.register.registers import Registers
 from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base import get_redirect
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
+from service.ws_re.template import ReDatenException
 from service.ws_re.template.article import Article
+from service.ws_re.template.re_page import RePage, SplittedArticleList
 from tools.bots.logger import WikiLogger
+from tools.template_finder import TemplateFinder, TemplateFinderException
+from tools.template_handler import TemplateHandler, TemplateHandlerException
+
+LEGACY_PROOF_READ_STATES = ("unvollständig", "unkorrigiert", "korrigiert", "fertig")
 
 
 class SCANTask(ReScannerTask):
@@ -24,7 +31,8 @@ class SCANTask(ReScannerTask):
         super().__init__(wiki, logger, debug)
         self.registers = Registers(update_data=True)
         self._strategies: dict[str, list[str]] = {}
-        self.history: <type not yet known> = None
+        # last revision of each day as (datestamp in the format yymmdd, parsed articles), oldest first
+        self.history: list[tuple[str, SplittedArticleList]] = []
 
     def task(self) -> bool:
         if "RE:Stammdaten überprüfen" in self.re_page.page.text:
@@ -204,24 +212,121 @@ class SCANTask(ReScannerTask):
         return single_article_dict
 
     @staticmethod
-    def _fetch_proof_read(article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
-        article = article_list[0]
+    def _get_proof_read_state(article: Article) -> int:
+        if not article.common_free:
+            return 0
         proof_read = str(article["KORREKTURSTAND"].value).lower().strip()
-        if article.common_free and proof_read:
-            if proof_read == "fertig":
-                return {"proof_read": 3}, []
-            if proof_read == "korrigiert":
-                return {"proof_read": 2}, []
-            if proof_read == "unkorrigiert":
-                return {"proof_read": 1}, []
-        return {"proof_read": 0}, []
+        return {"fertig": 3, "korrigiert": 2, "unkorrigiert": 1}.get(proof_read, 0)
+
+    @classmethod
+    def _fetch_proof_read(cls, article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
+        return {"proof_read": cls._get_proof_read_state(article_list[0])}, []
+
+    @staticmethod
+    def _get_last_revision_per_day(revisions: Iterable[pywikibot.page.Revision]) -> list[tuple[str, str]]:
+        """
+        Reduces the revisions to the last one of each day.
+
+        :return: chronological list of (datestamp in the format yymmdd, text of the revision)
+        """
+        revisions_per_day: dict[str, str] = {}
+        for revision in sorted(revisions, key=lambda rev: rev.timestamp):
+            if revision.text is None:
+                # the content of the revision is hidden
+                continue
+            revisions_per_day[revision.timestamp.strftime("%y%m%d")] = revision.text
+        return list(revisions_per_day.items())
+
+    @staticmethod
+    def _add_state_to_history(history: dict[int, str], state: int, datestamp: str):
+        """
+        Records the date the article entered the state. If the state drops back, all states above lose their entry
+        and the state gets the date of the drop.
+        """
+        if history and max(history) == state:
+            return
+        for recorded_state in [recorded_state for recorded_state in history if recorded_state > state]:
+            del history[recorded_state]
+        history[state] = datestamp
+
+    @staticmethod
+    def _parse_legacy_revision(text: str) -> SplittedArticleList:
+        """
+        Until 2016 the articles started with the positional template {{RE|BAND|SPALTE_START|...}} instead of REDaten.
+        Only band and start column have a fixed position, the positions of the following parameters changed over
+        time. That's why the proof read state is identified by its value.
+        """
+        articles: list[Article | str] = []
+        for position in TemplateFinder(text).get_positions(r"RE\|"):
+            parameters = [
+                str(parameter["value"]).strip() for parameter in TemplateHandler(position.text).get_parameterlist()
+            ]
+            if len(parameters) < 2:
+                continue
+            proof_read = next(
+                (parameter for parameter in parameters[2:] if parameter.lower() in LEGACY_PROOF_READ_STATES), ""
+            )
+            articles.append(
+                Article(
+                    re_daten_properties={
+                        "BAND": parameters[0],
+                        "SPALTE_START": parameters[1],
+                        "KORREKTURSTAND": proof_read,
+                    }
+                )
+            )
+        return SplittedArticleList(articles)
+
+    def _crawl_history(self) -> list[tuple[str, SplittedArticleList]]:
+        history: list[tuple[str, SplittedArticleList]] = []
+        for datestamp, text in self._get_last_revision_per_day(self.re_page.page.revisions(content=True)):
+            try:
+                if "{{REDaten" not in text and "{{RE|" in text:
+                    splitted_article_list = self._parse_legacy_revision(text)
+                else:
+                    splitted_article_list = RePage(self.re_page.page, text).splitted_article_list
+            except ReDatenException, TemplateFinderException, TemplateHandlerException:
+                # old revisions can have a corrupt structure
+                continue
+            if len(splitted_article_list):
+                history.append((datestamp, splitted_article_list))
+        return history
+
+    @staticmethod
+    def _find_article_in_revision(
+        article: Article, splitted_article_list: SplittedArticleList, unique_issue: bool
+    ) -> Article | None:
+        """
+        Finds the counterpart of the article in an old revision. The issue identifies the article, only if there are
+        multiple articles of the same issue on the page the start column decides. That way corrections of the start
+        column in the Stammdaten don't break the history.
+        """
+        issue = str(article["BAND"].value)
+        candidates = [
+            article_list.daten
+            for article_list in splitted_article_list
+            if str(article_list.daten["BAND"].value) == issue
+        ]
+        if unique_issue and len(candidates) == 1:
+            return candidates[0]
+        start_column = str(article["SPALTE_START"].value)
+        for candidate in candidates:
+            if str(candidate["SPALTE_START"].value) == start_column:
+                return candidate
+        return None
 
     def _fetch_history(self, article_list: list[Article]) -> tuple[LemmaDict, UpdaterRemoveList]:
         article = article_list[0]
-        issue = article["BAND"].value
-        start_column = article[]
-        # crawl the history to find out if the currently processet article was present in the past and which state it has
-        return {"history": {1: 101120}}, []
+        issue = str(article["BAND"].value)
+        issues = [str(current_list.daten["BAND"].value) for current_list in self.re_page.splitted_article_list]
+        unique_issue = issues.count(issue) == 1
+        history: dict[int, str] = {}
+        for datestamp, splitted_article_list in self.history:
+            if old_article := self._find_article_in_revision(article, splitted_article_list, unique_issue):
+                self._add_state_to_history(history, self._get_proof_read_state(old_article), datestamp)
+        if history:
+            return {"history": history}, []
+        return {}, ["history"]
 
     def _process_from_article_list(self):
         function_list_properties = []
@@ -236,7 +341,7 @@ class SCANTask(ReScannerTask):
                 issues_in_articles[band_info] = 1
                 continue
             issues_in_articles[band_info] += 1
-        self.history = self.re_page.page.getVersionHistoryTable()
+        self.history = self._crawl_history()
         for article_list in self.re_page.splitted_article_list:
             # fetch from properties
             update_dict: LemmaDict = {}

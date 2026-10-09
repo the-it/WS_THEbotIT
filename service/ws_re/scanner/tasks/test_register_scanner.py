@@ -259,6 +259,177 @@ text Verweis, aber früher im Band abgedruckt.
             compare("Something", post_lemma_append.to_dict()["previous"])
             compare("Dummy-End", post_lemma_append.to_dict()["next"])
 
+    @staticmethod
+    def _article_text(korrekturstand: str, spalte_start: int = 1) -> str:
+        return f"""{{{{REDaten
+|BAND=I,1
+|SPALTE_START={spalte_start}
+|KORREKTURSTAND={korrekturstand}
+}}}}
+text.
+{{{{REAutor|OFF}}}}"""
+
+    def _revision(self, timestamp: str, korrekturstand: str | None, spalte_start: int = 1) -> mock.Mock:
+        revision = mock.Mock()
+        revision.timestamp = pywikibot.Timestamp.fromISOformat(timestamp)
+        revision.text = None
+        if korrekturstand is not None:
+            revision.text = self._article_text(korrekturstand, spalte_start)
+        return revision
+
+    def test_get_last_revision_per_day(self):
+        revisions = [
+            self._revision("2017-10-24T20:00:00Z", "korrigiert"),
+            self._revision("2009-03-05T10:00:00Z", "Platzhalter"),
+            self._revision("2017-10-24T08:00:00Z", "unkorrigiert"),
+            self._revision("2018-01-01T08:00:00Z", None),
+        ]
+        result = self.task._get_last_revision_per_day(revisions)
+        compare(["090305", "171024"], [datestamp for datestamp, _ in result])
+        self.assertIn("KORREKTURSTAND=korrigiert", result[1][1])
+
+    def test_add_state_to_history(self):
+        history: dict[int, str] = {}
+        SCANTask._add_state_to_history(history, 0, "170101")
+        SCANTask._add_state_to_history(history, 0, "170102")
+        compare({0: "170101"}, history)
+        SCANTask._add_state_to_history(history, 2, "170103")
+        compare({0: "170101", 2: "170103"}, history)
+        SCANTask._add_state_to_history(history, 3, "170104")
+        SCANTask._add_state_to_history(history, 1, "170105")
+        compare({0: "170101", 1: "170105"}, history)
+        SCANTask._add_state_to_history(history, 0, "170106")
+        compare({0: "170106"}, history)
+
+    def test_fetch_history(self):
+        self.page_mock.text = self._article_text("fertig")
+        self.page_mock.revisions.return_value = [
+            self._revision("2010-11-20T10:00:00Z", "Platzhalter"),
+            self._revision("2012-02-01T10:00:00Z", "unkorrigiert"),
+            self._revision("2012-02-01T12:00:00Z", "korrigiert"),
+            self._revision("2015-07-14T12:00:00Z", "fertig"),
+        ]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        article_list = re_page.splitted_article_list[0]
+        compare(({"history": {0: "101120", 2: "120201", 3: "150714"}}, []), self.task._fetch_history(article_list))
+
+    def test_fetch_history_corrupt_revision(self):
+        self.page_mock.text = """{{REDaten
+|BAND=I,1
+|SPALTE_START=1
+}}
+text.
+{{REAutor|OFF}}"""
+        corrupt_revision = self._revision("2010-11-20T10:00:00Z", "unkorrigiert")
+        corrupt_revision.text = "{{REDaten|BAND=I,1}}\ntext without author"
+        self.page_mock.revisions.return_value = [
+            corrupt_revision,
+            self._revision("2011-11-20T10:00:00Z", "unvollständig"),
+        ]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(({"history": {0: "111120"}}, []), self.task._fetch_history(re_page.splitted_article_list[0]))
+
+    def test_fetch_history_corrected_start_column(self):
+        self.page_mock.text = self._article_text("unkorrigiert", spalte_start=2)
+        self.page_mock.revisions.return_value = [
+            self._revision("2010-11-20T10:00:00Z", "Platzhalter", spalte_start=1),
+            self._revision("2012-02-01T10:00:00Z", "unkorrigiert", spalte_start=1),
+            self._revision("2026-07-17T10:00:00Z", "unkorrigiert", spalte_start=2),
+        ]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(
+            ({"history": {0: "101120", 1: "120201"}}, []), self.task._fetch_history(re_page.splitted_article_list[0])
+        )
+
+    def test_fetch_history_same_issue_twice(self):
+        main_article = self._article_text("korrigiert", spalte_start=5)
+        self.page_mock.text = f"{main_article}\n{self._article_text('Platzhalter', spalte_start=1)}"
+        old_revision = self._revision("2010-11-20T10:00:00Z", None)
+        old_revision.text = self._article_text("unkorrigiert", spalte_start=5)
+        new_revision = self._revision("2012-02-01T10:00:00Z", None)
+        new_revision.text = self.page_mock.text
+        self.page_mock.revisions.return_value = [old_revision, new_revision]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(
+            ({"history": {1: "101120", 2: "120201"}}, []), self.task._fetch_history(re_page.splitted_article_list[0])
+        )
+        compare(({"history": {0: "120201"}}, []), self.task._fetch_history(re_page.splitted_article_list[1]))
+
+    def test_fetch_history_not_common_free(self):
+        protected_text = self._article_text("korrigiert").replace("|BAND=I,1", "|BAND=I,1\n|TODESJAHR=2000")
+        self.page_mock.text = protected_text
+        revision = self._revision("2010-11-20T10:00:00Z", None)
+        revision.text = protected_text
+        self.page_mock.revisions.return_value = [revision]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(({"history": {0: "101120"}}, []), self.task._fetch_history(re_page.splitted_article_list[0]))
+
+    def test_parse_legacy_revision(self):
+        layouts = [
+            # until 2008 without SPALTE_END
+            ("{{RE|I,1|1|Abkürzungen|Aarassos|Aal||unkorrigiert|Flussaale||Pauly-Wissowa I,1, 0001.jpg}}\ntext", "1"),
+            # stray empty parameter
+            ("{{RE|I,1|4|||Aal|Aba 1|Aarassos||unkorrigiert|||Pauly-Wissowa I,1, 0003.jpg}}\ntext", "4"),
+            # with SPALTE_END and embedded templates, no REAutor
+            (
+                (
+                    "{{RE|S I|159|219|Athenadas|Athenaios 9a|Athenai 1a||unkorrigiert|Athen|Athen|"
+                    "{{REIA|S I|159}}|{{REIA|S I|219}}}}\ntext"
+                ),
+                "159",
+            ),
+        ]
+        for text, spalte_start in layouts:
+            splitted_article_list = SCANTask._parse_legacy_revision(text)
+            compare(1, len(splitted_article_list))
+            article = splitted_article_list[0].daten
+            compare(spalte_start, article["SPALTE_START"].value)
+            compare(1, SCANTask._get_proof_read_state(article))
+        compare("S I", SCANTask._parse_legacy_revision(layouts[2][0])[0].daten["BAND"].value)
+
+    def test_fetch_history_legacy_template(self):
+        self.page_mock.text = self._article_text("fertig")
+        legacy_created = self._revision("2007-06-04T08:00:00Z", None)
+        legacy_created.text = "{{RE|I,1|1|Abkürzungen|Aarassos|Aal||unvollständig|Flussaale}}"
+        legacy_unkorrigiert = self._revision("2007-06-05T08:00:00Z", None)
+        legacy_unkorrigiert.text = (
+            "{{RE|I,1|1|4|Abkürzungen|Aarassos|Aal||unkorrigiert|Flussaale}}\ntext\n{{REAutor|Oder.}}"
+        )
+        self.page_mock.revisions.return_value = [
+            legacy_created,
+            legacy_unkorrigiert,
+            self._revision("2016-11-01T07:26:22Z", "korrigiert"),
+            self._revision("2017-01-01T07:26:22Z", "fertig"),
+        ]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(
+            ({"history": {0: "070604", 1: "070605", 2: "161101", 3: "170101"}}, []),
+            self.task._fetch_history(re_page.splitted_article_list[0]),
+        )
+
+    def test_fetch_history_no_history(self):
+        self.page_mock.text = """{{REDaten
+|BAND=I,1
+|SPALTE_START=1
+}}
+text.
+{{REAutor|OFF}}"""
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        compare(({}, ["history"]), self.task._fetch_history(re_page.splitted_article_list[0]))
+
     def test_fetch_from_properties_lemma_not_found(self):
         self.page_mock.title_str = "RE:Aas"
         self.page_mock.text = """{{REDaten
