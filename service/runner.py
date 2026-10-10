@@ -16,9 +16,7 @@ if __name__ == "__main__":
     sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())  # type: ignore
     WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
-    # pause importer for a while
-    # SCHEDULER.daily_bots = [ReScanner]
-    SCHEDULER.daily_bots = [AuthorList, PoemList, ReScanner, ReRegisterPrinter, Finisher]
+    SCHEDULER.daily_bots = [AuthorList, PoemList, ReScanner, ReScanner, ReScanner, ReRegisterPrinter, Finisher]
     SCHEDULER.weekly_bots = {
         0: [ReStatistic],  # monday
         1: [],
