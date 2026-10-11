@@ -419,6 +419,72 @@ text.
             self.task._fetch_history(re_page.splitted_article_list[0]),
         )
 
+    def test_repair_keyword(self):
+        compare("KORREKTURSTAND", SCANTask._repair_keyword("KORREKTURSTAND"))
+        # greek capitals
+        compare("KEINE_SCHÖPFUNGSHÖHE", SCANTask._repair_keyword("ΚΕΙΝΕ_SCHÖPFUNGSHÖHE"))
+        # cyrillic capitals
+        compare("TODESJAHR", SCANTask._repair_keyword("ТОDЕSJАНR"))
+        # typos
+        compare("KORREKTURSTAND", SCANTask._repair_keyword("KORREKTURSTAD"))
+        compare("KEINE_SCHÖPFUNGSHÖHE", SCANTask._repair_keyword("keine_schoepfungshoehe"))
+        compare("VORGÄNGER", SCANTask._repair_keyword("VORGANGER"))
+        # obsolete properties
+        compare(None, SCANTask._repair_keyword("EXTSCAN_START"))
+        compare(None, SCANTask._repair_keyword("EXTSCAN_END"))
+
+    def test_repair_properties(self):
+        text = """{{REDaten
+|BAND=I A,1
+|SPALTE_START=1
+|KORREKTURSTAD=fertig
+|ΚΕΙΝΕ_SCHÖPFUNGSHÖHE=ON
+|EXTSCAN_START={{REIA|I A,1|1}}
+|EXTSCAN_END=OFF
+}}
+text.
+{{REAutor|OFF}}"""
+        compare(
+            "{{REDaten\n|BAND=I A,1\n|SPALTE_START=1\n|KORREKTURSTAND=fertig\n|KEINE_SCHÖPFUNGSHÖHE=ON\n}}"
+            "\ntext.\n{{REAutor|OFF}}",
+            SCANTask._repair_properties(text),
+        )
+
+    def test_fetch_history_misspelled_no_creative_height(self):
+        # the author isn't in the public domain, but the article has no creative height
+        self.page_mock.text = self._article_text("fertig").replace(
+            "|BAND=I,1", "|BAND=I,1\n|TODESJAHR=2000\n|KEINE_SCHÖPFUNGSHÖHE=ON"
+        )
+        revision = self._revision("2017-06-19T10:00:00Z", None)
+        revision.text = self._article_text("fertig").replace(
+            "|BAND=I,1", "|BAND=I,1\n|TODESJAHR=2000\n|ΚΕΙΝΕ_SCHÖPFUNGSHÖHE=ON"
+        )
+        self.page_mock.revisions.return_value = [revision]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(({"history": {3: "170619"}}, []), self.task._fetch_history(re_page.splitted_article_list[0]))
+
+    def test_fetch_history_obsolete_properties(self):
+        # RE:Ra became fertig in 2017, while REDaten still had the properties EXTSCAN_START/EXTSCAN_END
+        self.page_mock.text = self._article_text("fertig")
+        obsolete_revision = self._revision("2017-01-12T10:00:00Z", None)
+        obsolete_revision.text = self._article_text("fertig").replace(
+            "|KORREKTURSTAND=fertig", "|KORREKTURSTAND=fertig\n|EXTSCAN_START={{REIA|I,1|1}}\n|EXTSCAN_END=OFF"
+        )
+        self.page_mock.revisions.return_value = [
+            self._revision("2013-03-05T10:00:00Z", "unkorrigiert"),
+            obsolete_revision,
+            self._revision("2022-01-17T10:00:00Z", "fertig"),
+        ]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(
+            ({"history": {1: "130305", 3: "170112"}}, []),
+            self.task._fetch_history(re_page.splitted_article_list[0]),
+        )
+
     def test_fetch_history_no_history(self):
         self.page_mock.text = """{{REDaten
 |BAND=I,1
