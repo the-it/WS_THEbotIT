@@ -2,6 +2,7 @@ import contextlib
 import re
 from collections.abc import Iterable
 from functools import lru_cache
+from typing import cast
 
 import pywikibot
 
@@ -13,7 +14,8 @@ from service.ws_re.register.registers import Registers
 from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base import get_redirect
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
-from service.ws_re.template import ReDatenException
+from service.ws_re.template import RE_DATEN, ReDatenException
+from service.ws_re.template._typing import KeyValuePair
 from service.ws_re.template.article import Article
 from service.ws_re.template.re_page import RePage, SplittedArticleList
 from tools.bots.logger import WikiLogger
@@ -277,6 +279,26 @@ class SCANTask(ReScannerTask):
             )
         return SplittedArticleList(articles)
 
+    @staticmethod
+    def _remove_unknown_properties(text: str) -> str:
+        """
+        Old revisions of REDaten can contain properties that don't exist anymore (e.g. EXTSCAN_START from 2016 to
+        2022). The parser rejects them, so they are removed before the revision is parsed.
+        """
+        for position in reversed(TemplateFinder(text).get_positions(RE_DATEN)):
+            template = TemplateHandler(position.text)
+            known_parameters = []
+            for parameter in template.get_parameterlist():
+                try:
+                    # pylint: disable=protected-access
+                    Article._correct_keyword(cast(KeyValuePair, parameter))
+                except ReDatenException:
+                    continue
+                known_parameters.append(parameter)
+            template.update_parameters(known_parameters)
+            text = text[: position.start] + template.get_str() + text[position.end :]
+        return text
+
     def _crawl_history(self) -> list[tuple[str, SplittedArticleList]]:
         history: list[tuple[str, SplittedArticleList]] = []
         for datestamp, text in self._get_last_revision_per_day(self.re_page.page.revisions(content=True)):
@@ -284,7 +306,9 @@ class SCANTask(ReScannerTask):
                 if "{{REDaten" not in text and "{{RE|" in text:
                     splitted_article_list = self._parse_legacy_revision(text)
                 else:
-                    splitted_article_list = RePage(self.re_page.page, text).splitted_article_list
+                    splitted_article_list = RePage(
+                        self.re_page.page, self._remove_unknown_properties(text)
+                    ).splitted_article_list
             except ReDatenException, TemplateFinderException, TemplateHandlerException:
                 # old revisions can have a corrupt structure
                 continue
