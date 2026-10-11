@@ -1,8 +1,8 @@
 import contextlib
+import difflib
 import re
 from collections.abc import Iterable
 from functools import lru_cache
-from typing import cast
 
 import pywikibot
 
@@ -15,14 +15,18 @@ from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base import get_redirect
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template import RE_DATEN, ReDatenException
-from service.ws_re.template._typing import KeyValuePair
 from service.ws_re.template.article import Article
 from service.ws_re.template.re_page import RePage, SplittedArticleList
+from tools._typing import TemplateParameterList
 from tools.bots.logger import WikiLogger
 from tools.template_finder import TemplateFinder, TemplateFinderException
 from tools.template_handler import TemplateHandler, TemplateHandlerException
 
 LEGACY_PROOF_READ_STATES = ("unvollständig", "unkorrigiert", "korrigiert", "fertig")
+# greek and cyrillic capitals that look like latin ones, they sneak into keywords of old revisions
+LOOKALIKE_CAPITALS = str.maketrans("ΑΒΕΖΗΙΚΜΝΟΡΤΥΧАВЕКМНОРСТХ", "ABEZHIKMNOPTYXABEKMHOPCTX")
+# misspelled keywords score >= 0.84 against the correct one, keywords of obsolete properties <= 0.56
+KEYWORD_MATCH_CUTOFF = 0.8
 
 
 class SCANTask(ReScannerTask):
@@ -280,21 +284,34 @@ class SCANTask(ReScannerTask):
         return SplittedArticleList(articles)
 
     @staticmethod
-    def _remove_unknown_properties(text: str) -> str:
+    def _repair_keyword(keyword: str) -> str | None:
         """
-        Old revisions of REDaten can contain properties that don't exist anymore (e.g. EXTSCAN_START from 2016 to
-        2022). The parser rejects them, so they are removed before the revision is parsed.
+        Finds the property a misspelled keyword of an old revision stands for, e.g. ΚΕΙΝΕ_SCHÖPFUNGSHÖHE written with
+        greek capitals or KORREKTURSTAD.
+
+        :return: the correct keyword, None if the keyword doesn't belong to any property (e.g. EXTSCAN_START)
+        """
+        keyword = keyword.upper().translate(LOOKALIKE_CAPITALS)
+        try:
+            # pylint: disable=protected-access
+            return Article._correct_keyword({"key": keyword, "value": ""})
+        except ReDatenException:
+            matches = difflib.get_close_matches(keyword, Article.keywords.values(), n=1, cutoff=KEYWORD_MATCH_CUTOFF)
+            return matches[0] if matches else None
+
+    @classmethod
+    def _repair_properties(cls, text: str) -> str:
+        """
+        Old revisions of REDaten can contain misspelled properties or properties that don't exist anymore (e.g.
+        EXTSCAN_START from 2016 to 2022). The parser rejects them, so before the revision is parsed the misspelled
+        keywords are corrected and the unknown properties are removed.
         """
         for position in reversed(TemplateFinder(text).get_positions(RE_DATEN)):
             template = TemplateHandler(position.text)
-            known_parameters = []
+            known_parameters: TemplateParameterList = []
             for parameter in template.get_parameterlist():
-                try:
-                    # pylint: disable=protected-access
-                    Article._correct_keyword(cast(KeyValuePair, parameter))
-                except ReDatenException:
-                    continue
-                known_parameters.append(parameter)
+                if parameter["key"] and (keyword := cls._repair_keyword(parameter["key"])):
+                    known_parameters.append({"key": keyword, "value": parameter["value"]})
             template.update_parameters(known_parameters)
             text = text[: position.start] + template.get_str() + text[position.end :]
         return text
@@ -307,7 +324,7 @@ class SCANTask(ReScannerTask):
                     splitted_article_list = self._parse_legacy_revision(text)
                 else:
                     splitted_article_list = RePage(
-                        self.re_page.page, self._remove_unknown_properties(text)
+                        self.re_page.page, self._repair_properties(text)
                     ).splitted_article_list
             except ReDatenException, TemplateFinderException, TemplateHandlerException:
                 # old revisions can have a corrupt structure
