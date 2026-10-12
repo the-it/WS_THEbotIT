@@ -19,7 +19,15 @@ For EACH article:
    - mark letter-spaced (gesperrt) words as {{SperrSchrift|…}};
    - match punctuation, dashes and quotes to the print: RE prints ‚…‘ and „…“, never ,…' with comma and apostrophe;
    - remove fabricated enrichment (invented Greek, {{RE siehe}} or links where the print has nothing).
-   KEEP genuine enrichment: wikilinks, {{RE siehe|…}}, italics, and eLexikon's `<ref name="CIL …">{{CIL|…}}</ref>` tags. Those refs are Wikisource enrichment ("Anmerkungen (Wikisource)"), not printed footnotes, so "the print has no footnote" is no reason to drop them; drop a ref only when it is itself broken (e.g. it cites a truncated number: `CIL VI 32` where the print has `CIL VI 32414`). Fix the displayed text inside a link rather than deleting it. Judge a link by context: keep it when its display text matches the print and the target fits (Boier → RE:Boii 1); that a target page exists proves nothing. Correct a link target only when it is internally confirmed wrong (Epidauros Limera is RE:Epidauros 2, not 1; Arat in a Sikyon context is RE:Aratos 2, not Aratos von Soloi). Known false enrichment: `[[Flavius Josephus|Jos.]]` followed by chapter, verse (`Jos. 15, 37`) is the Book of Joshua, so unlink it (Josephus is cited as `Joseph. ant./bell.`); links on a fragment or an unrelated word (`Cara` in "Cara-callas", German "Liste" → RE:Λίστη, "Col." for a papyrus column, "Trag." for Tragödie) are bogus; a link on the article's own headword name to a sibling number is bogus too.
+   KEEP genuine enrichment: wikilinks, {{RE siehe|…}}, italics, and eLexikon's `<ref name="CIL …">{{CIL|…}}</ref>` tags. Those refs are Wikisource enrichment ("Anmerkungen (Wikisource)"), not printed footnotes, so "the print has no footnote" is no reason to drop them; drop a ref only when it is itself broken (e.g. it cites a truncated number: `CIL VI 32` where the print has `CIL VI 32414`). Fix the displayed text inside a link rather than deleting it.
+   LINK RULE: keep EVERY eLexikon link and {{RE siehe}} whose display text can be made to match the print. This includes author/source links (Mommsen, Dess., Plin., Strab., Hom., Rh. Mus., Denkschr. Akad. Wien …), [[RE:…]] place/person links and "Nr. N" / "Bd. X S. N" cross-references. Your doubts about the target are not a reason to drop a link; leave targets to the main loop. Remove ONLY these bogus classes:
+   (a) links on a word fragment (`Cara` in "Cara-callas", `Ale` in "Ale-xander", `Korne` in "Korne-mann");
+   (b) links on German common nouns (Liste → RE:Λίστη, Familie, Geld, Grenze, Malerei, Schlange, Haus, Märchen, Befestigung …);
+   (c) links on Greek words inside {{Polytonisch}} (`[[RE:Φρούριον|φρούριον]]`);
+   (d) a link on the article's own headword to itself or a sibling number;
+   (e) `[[Flavius Josephus|Jos.]]` + chapter/verse (`Jos. 15, 37` is the Book of Joshua; Josephus is cited `Joseph. ant./bell.`), "Col." for a papyrus column, "Trag." for Tragödie;
+   (f) a link inside a book or journal title (McCrindle, *Anc. India* → not RE:India).
+   Correct a target only when the article itself confirms it is wrong (Margiana says Antiocheia Margiane is Nr. 13, so Merw → RE:Antiocheia 13; Epidauros Limera is RE:Epidauros 2; Arat in a Sikyon context is RE:Aratos 2). Never move a link from a neighbouring article's segment into yours.
 6. Assemble the new page from the skeleton:
    - flip only KORREKTURSTAND=unvollständig to unkorrigiert in the target {{REDaten}} block;
    - replace the bare headword line + "[...]" with the opening bold headword AS PRINTED, followed by the proofread body;
@@ -37,7 +45,8 @@ For EACH article:
    A Stammdaten problem is NOT a skip reason: status stays "ok" with the corrected page written. Use "skip" only for not digitized / genuinely ambiguous cases, and then do NOT write a wikitext file.
 
 MANDATORY RULES (each violation below was seen in earlier runs):
-- Process EVERY article in this chunk before you report back. Never stop after the first one.
+- Process EVERY article in this chunk before you report back. Never stop after the first one, and never stop partway to ask whether to continue: ~10 tool calls per article is the expected pace, even for a 50-article chunk.
+- Before you report back, run a link pass. For each article, diff the links of its OWN segment in the column text against your output, not the whole column. Restore every link you removed that is outside the bogus classes (a)–(f) of the LINK RULE. Do not restore class (a)–(f) links. Do not count links of neighbouring articles on the same column. In your report, list per article the links you removed, with their class letter.
 - Read every line of every article on the scan crops, from the headword to the last line. Never take any part from the OCR text unread ("OCR-only").
 - Never skip an article because its OCR is garbled: read the scan instead. "skip" is only for undigitized/empty scans.
 - Copy the skeleton byte-for-byte outside the target body: every {{REDaten}} block (including later BAND=R / Nachtrag sibling blocks and their bodies and {{REAutor}}), every [[Kategorie:…]] line exactly as written (e.g. `[[Kategorie:RE:Kurztext überprüfen]]` keeps its `RE:`), every {{Seite}} line.
