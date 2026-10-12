@@ -330,7 +330,11 @@ text.
         ]
         re_page = RePage(self.page_mock)
         self.task.re_page = re_page
-        self.task.history = self.task._crawl_history()
+        with LogCapture() as log_catcher:
+            self.task.history = self.task._crawl_history()
+            log_catcher.check(
+                ("Test", "WARNING", StringComparison("History of .*: skipped revision of 101120, can't analyse.*")),
+            )
         compare(({"history": {0: "111120"}}, []), self.task._fetch_history(re_page.splitted_article_list[0]))
 
     def test_fetch_history_corrected_start_column(self):
