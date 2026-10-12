@@ -332,7 +332,31 @@ Systematic OCR artifacts, all seen in real output — hunt for each:
 **Keep the enrichment.** The `[[…|…]]` links, `{{RE siehe|…}}`, `#Seite_…` anchors and
 italics are curated added value; the rule is that the **displayed text** must match the
 print exactly. Fix display text inside links rather than deleting the link; don't invent
-new links; drop a link only if its display text cannot be made to match the print.
+new links; drop a link only if its display text cannot be made to match the print, or if it
+falls in one of the bogus classes of the template's LINK RULE: (a) word fragment, (b) German
+common noun, (c) Greek word, (d) self/sibling headword link, (e) `Jos.` + chapter, "Col.",
+"Trag.", (f) inside a book or journal title.
+
+**Link handling in the fan-out (batch 2026-10-12c, 500 articles, sonnet).** Sonnet agents
+dropped many valid author and `[[RE:…]]` links because they judged the targets wrong. When
+told "keep regardless of target", they over-corrected the other way: they relinked common
+nouns and self-links, kept a Megasthenes link on "Bd. XV S. 2311", and one agent's script
+re-linked by counting links across the whole column, which grafts links from neighbouring
+articles. Lessons:
+- The template now carries the exact keep/remove rule (classes a–f) and a final link-diff
+  pass restricted to the article's own segment. Don't send agents vaguer guidance on top of it.
+  If you need to correct them, quote the class letters.
+- Pass the template's rule unchanged. Don't send "keep regardless of target" or "judge the
+  target".
+- In the main loop, triage the `dropped link` WARNs by class. Restore the rest with a script
+  that wraps the first unlinked whole-word occurrence of the display text in the article body.
+  Text inside `{{SperrSchrift|…}}` needs the link around the template
+  (`[[Immanuel Bekker|{{SperrSchrift|Bekker}}]]`). Re-run the checks first: many "drops" have
+  already been restored by the agents' own link pass.
+- Also audit *added* links (`qa_audit.py` only reports drops). Flag every out link whose target
+  appears nowhere in the span's column texts, which means it was invented. Then sample the ones
+  that appear only in a neighbour's segment. Mislabeled or stacked `== RE:… ==` headings make
+  most of those false positives.
 
 ## Fan-out: one subagent per article, max 10 subagents
 
@@ -341,8 +365,10 @@ edits (there is only one browser session, and it belongs to the main loop). **Al
 the fan-out subagents as the `ocr-proofreader` agent type** (pass
 `subagent_type: "ocr-proofreader"` to the Agent tool for every fan-out subagent). That
 definition (`.claude/agents/ocr-proofreader.md`) pins the model to **opus** and reasoning
-**effort to medium**. Do not pass `effort` on the Agent call: the tool ignores it, and the
-frontmatter is the only place it takes effect. A `model` on the Agent call does override the
+**effort to low**. Do not pass `effort` on the Agent call: the tool ignores it, and the
+frontmatter is the only place it takes effect. Low effort leaves more plain OCR misreads
+per article, so the main loop's cross-checks are mandatory: the Greek spot-check and the
+REAutor verification by a second agent. A `model` on the Agent call does override the
 frontmatter.
 
 **The model is chosen per chunk by `build_chunks.py`, and the Agent call passes it through.**
@@ -433,7 +459,9 @@ FAIL:
 WARN (triage each one):
 - A dropped eLexikon `<ref>`. Restore it unless the ref itself is broken; add the Anmerkungen
   block.
-- A dropped link or `{{RE siehe}}`. Judge by context, not by whether the target exists.
+- A dropped link or `{{RE siehe}}`. Triage by the bogus classes a–f (see "Keep the
+  enrichment"). Restore everything else, and judge it by context, not by whether the target
+  exists.
 - `,quote'` instead of `‚…‘`.
 - An article whose segment is the last one on its column. Confirm that the next column opens
   with a new headword: fetch its text, and add the PNG if the text is unclear. Otherwise
