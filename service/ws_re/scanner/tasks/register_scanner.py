@@ -326,8 +326,12 @@ class SCANTask(ReScannerTask):
                     splitted_article_list = RePage(
                         self.re_page.page, self._repair_properties(text)
                     ).splitted_article_list
-            except ReDatenException, TemplateFinderException, TemplateHandlerException:
-                # old revisions can have a corrupt structure
+            except (ReDatenException, TemplateFinderException, TemplateHandlerException) as error:
+                # old revisions can have a corrupt structure, a skipped revision can falsify the history
+                self.logger.warning(
+                    f"History of {self.re_page.lemma_as_link}: skipped revision of {datestamp}, can't analyse. "
+                    f"{type(error).__name__}: {error}"
+                )
                 continue
             if len(splitted_article_list):
                 history.append((datestamp, splitted_article_list))
