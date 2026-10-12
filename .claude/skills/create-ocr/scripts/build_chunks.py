@@ -2,14 +2,20 @@
 """Split the batch into fan-out chunks and render one ocr-proofreader prompt per chunk.
 
 Usage: build_chunks.py <batch> [--chunks 10] [--only <titles.txt>]
+                        [--big-cols 3] [--model auto|opus|sonnet]
 
 Reads <batch>/manifest.json, checks every article's local inputs, and writes
   chunks/chunk_NN.json  the articles of each chunk (paths, meta, scan sizes)
-  prompts.json          [{description, prompt}] - one Agent call each,
-                        subagent_type "ocr-proofreader"
+  prompts.json          [{description, lemmas, model, prompt}] - one Agent call each,
+                        subagent_type "ocr-proofreader", model = the entry's "model"
   not_ready.json        articles held back (missing/empty column text, missing or
                         blank placeholder scan) - re-fetch, or use the 4-column spread
   crops/<HHMMSS>_chunk_NN/  one private crop dir per chunk and run
+Model per article (--model auto, the default): articles spanning --big-cols columns or
+more go to opus, shorter ones to sonnet (sonnet proofreads short articles about as well
+at ~60 % of the cost; see SKILL.md "Fan-out"). A chunk never mixes models. The chunk
+budget is split between the two models in proportion to their column load, at least one
+chunk each. --model opus|sonnet puts the whole batch on one model.
 Chunks are balanced by column count (largest article first into the lightest
 chunk). --only restricts to the given titles, e.g. to re-spawn articles whose
 out/ files are missing (idempotent; stay within 10 subagents per batch).
@@ -77,11 +83,46 @@ def render(b, chunk, template, crops):
                                     crops=crops, articles="\n\n".join(blocks))
 
 
+def model_for(article, big_cols, forced):
+    if forced != "auto":
+        return forced
+    return "opus" if article["span"] >= big_cols else "sonnet"
+
+
+def chunk_budget(loads, counts, total):
+    """Split `total` chunks across groups by column load: >= 1 each, <= the group's size."""
+    groups = [g for g in loads if counts[g]]
+    total = max(total, len(groups))
+    budget = {g: 1 for g in groups}
+    for _ in range(total - len(groups)):
+        open_ = [g for g in groups if budget[g] < counts[g]]
+        if not open_:
+            break
+        # give the next chunk to the group with the most columns per chunk
+        g = max(open_, key=lambda x: loads[x] / budget[x])
+        budget[g] += 1
+    return budget
+
+
+def balance(articles, n):
+    """Largest article first into the lightest chunk. Returns (chunks, loads)."""
+    chunks, load = [[] for _ in range(n)], [0] * n
+    for a in sorted(articles, key=lambda a: -a["span"]):
+        i = load.index(min(load))
+        chunks[i].append(a)
+        load[i] += a["span"]
+    return chunks, load
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("batch")
     ap.add_argument("--chunks", type=int, default=10)
     ap.add_argument("--only", help="restrict to these titles (one per line)")
+    ap.add_argument("--big-cols", type=int, default=3,
+                    help="articles with at least this many columns go to opus (default 3)")
+    ap.add_argument("--model", choices=("auto", "opus", "sonnet"), default="auto",
+                    help="auto = per article by --big-cols; opus/sonnet = whole batch")
     args = ap.parse_args()
     b = os.path.abspath(args.batch)
     manifest = load_json(os.path.join(b, "manifest.json"))
@@ -98,12 +139,21 @@ def main() -> int:
         else:
             ready.append(entry)
 
-    n = max(1, min(args.chunks, len(ready)))
-    chunks, load = [[] for _ in range(n)], [0] * n
-    for a in sorted(ready, key=lambda a: -a["span"]):
-        i = load.index(min(load))
-        chunks[i].append(a)
-        load[i] += a["span"]
+    groups = {}
+    for a in ready:
+        groups.setdefault(model_for(a, args.big_cols, args.model), []).append(a)
+    budget = chunk_budget({g: sum(a["span"] for a in arts) for g, arts in groups.items()},
+                          {g: len(arts) for g, arts in groups.items()},
+                          min(args.chunks, len(ready)))
+    chunks, load, models = [], [], []
+    for g in ("opus", "sonnet"):
+        if g not in groups:
+            continue
+        c, ld = balance(groups[g], budget[g])
+        chunks += c
+        load += ld
+        models += [g] * len(c)
+    n = len(chunks)
 
     os.makedirs(os.path.join(b, "chunks"), exist_ok=True)
     os.makedirs(os.path.join(b, "out"), exist_ok=True)
@@ -120,9 +170,9 @@ def main() -> int:
         crops = os.path.join(b, "crops", f"{run}_chunk_{i:02d}")
         os.makedirs(crops, exist_ok=True)
         names = ", ".join(a["lemma"].removeprefix("RE:") for a in chunk)
-        prompts.append({"description": f"OCR chunk {i:02d}"[:40], "lemmas": names,
-                        "prompt": render(b, chunk, template, crops)})
-        print(f"chunk_{i:02d}: {len(chunk)} articles, {load[i]} columns")
+        prompts.append({"description": f"OCR chunk {i:02d} ({models[i]})"[:40], "lemmas": names,
+                        "model": models[i], "prompt": render(b, chunk, template, crops)})
+        print(f"chunk_{i:02d}: {models[i]:6s} {len(chunk)} articles, {load[i]} columns")
     save_json(os.path.join(b, "prompts.json"), prompts)
     save_json(os.path.join(b, "not_ready.json"), not_ready)
     print(f"{len(ready)} ready in {n} chunks; {len(not_ready)} not ready")

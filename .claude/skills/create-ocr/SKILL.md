@@ -74,11 +74,12 @@ permission rules reject `$VAR`, globs and `&&` chains.
 .venv/bin/python .claude/skills/create-ocr/scripts/save_coltexts.py .claude_work_dir/ocr_batch_<YYYYMMDD> .claude_work_dir/ocr_batch_<YYYYMMDD>/fetch_js/texts_01.result.json
 .venv/bin/python .claude/skills/create-ocr/scripts/decode_b64_files.py .claude_work_dir/ocr_batch_<YYYYMMDD>/fetch_js/scans_01.result.json .claude_work_dir/ocr_batch_<YYYYMMDD>/scans
 # 8  input check (empty text, blank scan), scan sizes, <=10 balanced chunks, prompts.json
+#    (model per chunk: >= 3 columns -> opus, shorter -> sonnet; --big-cols N, --model opus|sonnet)
 .venv/bin/python .claude/skills/create-ocr/scripts/build_chunks.py .claude_work_dir/ocr_batch_<YYYYMMDD>
-# 9  fan-out: one Agent call (subagent_type "ocr-proofreader") per prompts.json entry -> out/
+# 9  fan-out: one Agent call (subagent_type "ocr-proofreader", model = the entry's "model") per prompts.json entry -> out/
 # 10 move inline {{Seite}} tags onto their own line
 .venv/bin/python .claude/skills/create-ocr/scripts/fix_seite_ownline.py .claude_work_dir/ocr_batch_<YYYYMMDD>
-# 11 check_assembly vs skel_ref/ + ref-block audit + Stammbaum/Stammdaten lists -> check_results.json
+# 11 check_assembly vs skel_ref/ + ref-block audit + qa_audit content audits + Stammbaum/Stammdaten lists -> check_results.json
 .venv/bin/python .claude/skills/create-ocr/scripts/run_checks.py .claude_work_dir/ocr_batch_<YYYYMMDD>
 # 11b Stammdaten fixes (only if run_checks lists any): draft, verify each on the scan, dry run, --save;
 #     then fetch new columns / re-spawn NEEDS_COLUMNS articles, and re-run step 11
@@ -231,11 +232,13 @@ blobs never enter your context:
   `browser_wait_for` run up to 10× slow, and a long `browser_evaluate` can hit the MCP idle
   timeout (batch 2026-10-03 lost ~2 h). Start `caffeinate -dimsu -t 43200` with
   `run_in_background` at batch start and stop it at the end.
-- PetScan sometimes times out (300 s). Then build `titles.txt` from the previous batch's dump
-  with `petscan_titles.py <titles.txt> --json <old batch>/petscan.json --limit N`. The live
-  guards still run (`select_candidates.py`, `legal_guard.py`), but the dump's
-  `RE:Stammdaten überprüfen` negcat is stale, so exclude titles whose text now carries that
-  category (`--exclude`).
+- PetScan sometimes times out (300 s) or answers 502. Then build `titles.txt` from the
+  previous batch's dump with `petscan_titles.py <titles.txt> --json <old batch>/petscan.json
+  --limit N`. Take a larger N (e.g. 1200), because the dump's first titles are already done.
+  The live guards still run (`select_candidates.py`, `legal_guard.py`), but the dump's
+  `RE:Stammdaten überprüfen` negcat is stale. Exclude titles that now carry that category
+  (`--exclude`). The category is template-added, so a wikitext search misses it: query
+  `prop=categories` through the API (`legal_guard.categories()` does this).
 
 ## Assembly (per article)
 
@@ -338,17 +341,43 @@ edits (there is only one browser session, and it belongs to the main loop). **Al
 the fan-out subagents as the `ocr-proofreader` agent type** (pass
 `subagent_type: "ocr-proofreader"` to the Agent tool for every fan-out subagent). That
 definition (`.claude/agents/ocr-proofreader.md`) pins the model to **opus** and reasoning
-**effort to medium** — do NOT pass `model`/`effort` on the Agent call itself (the tool
-ignores `effort`; the frontmatter is the only place it takes effect). Opus is the default:
-it reads hard Greek, letter-spaced names and mislabeled eLexikon headings most reliably
-(batch 2026-09-30: 10 opus agents × ~30 articles ran clean, no stalls); haiku proofreads
-Greek and letter-spaced names too unreliably to publish. **Never spawn
+**effort to medium**. Do not pass `effort` on the Agent call: the tool ignores it, and the
+frontmatter is the only place it takes effect. A `model` on the Agent call does override the
+frontmatter.
+
+**The model is chosen per chunk by `build_chunks.py`, and the Agent call passes it through.**
+Every `prompts.json` entry carries `"model"`; pass it as the Agent call's `model`, unchanged.
+By default (`--model auto`), articles of `--big-cols` columns or more (default 3) go to opus
+and shorter ones to sonnet. A chunk never mixes models. The 10-chunk budget is split by
+column load, with at least one chunk per model. Override:
+- `--big-cols N` to move the threshold. Use a lower N for a Greek-heavy batch of short
+  articles (inscriptions, papyri, coin legends).
+- `--model opus` or `--model sonnet` to put the whole batch on one model. Use opus for
+  batches with Stammtafeln.
+
+The user may name a model for the batch; that wins (`--model`). Why these defaults:
+
+- **sonnet** for short articles (1–2 columns). Batch 2026-10-12 (100 one-column articles)
+  cost about 60 % of an opus run. Its text
+  was close to opus quality (0–1 errors per column on full scan reads). Its weak spot is
+  editorial: it dropped eLexikon CIL refs and valid links as "bogus", and one agent left
+  articles partly OCR-only. The prompt template rules and the `qa_audit.py` checks in
+  `run_checks.py` target exactly these failure modes, so triage every audit WARN.
+- **opus** for long articles (3+ columns), Greek-heavy subjects (inscriptions, papyri, coin
+  legends) and batches with Stammtafeln. It reads hard Greek, letter-spaced
+  names and mislabeled eLexikon headings most reliably (batch 2026-09-30: 10 opus agents ×
+  ~30 articles ran clean, no stalls).
+- **haiku** proofreads Greek and letter-spaced names too unreliably to publish.
+
+**Never spawn
 more than 10 subagents in total for a batch.** Up to 10 articles: one subagent per
 article. More than 10: split the articles into at most 10 chunks (round-robin or
 contiguous, ~⌈N/10⌉ articles each) and give each subagent its whole chunk to process
 sequentially. `build_chunks.py` does the split (balanced by column count) and renders
 each chunk's full prompt from `scripts/prompt_template.md` into `prompts.json`. Pass each
-entry's `prompt` unchanged, and improve the template, not the individual prompt. Give each
+entry's `prompt` and `model` unchanged, and improve the template, not the individual prompt.
+A re-spawn with `--only` classifies its articles the same way, so a long article goes back
+to opus. Give each
 subagent the `skel/` working copy, never the `skel_ref/` snapshot: subagents sometimes
 edit the skeleton in place. Give each subagent, per article: the skeleton wikitext path, **the
 per-column text(s) for its column span** (the primary source to cut from), the by-lemma
@@ -358,7 +387,11 @@ meta (lemma, BAND, SPALTE_START/END). For each article the subagent writes:
 
 - `<workdir>/out/<lemma>.wikitext` — the complete new page text, and
 - `<workdir>/out/<lemma>.notes.json` —
-  `{lemma, status: "ok"|"skip"|"needs_columns", reason, uncertain: ["col 753: Greek accent on …"], fixes: {line_numbers, hyphens, misreads, paragraph_joins}, stammdaten_fix?: {fields, evidence, neighbours}}`.
+  `{lemma, status: "ok"|"skip"|"needs_columns", reason, end_check: "what the scan shows after the last line", uncertain: ["col 753: Greek accent on …"], fixes: {line_numbers, hyphens, misreads, paragraph_joins}, stammdaten_fix?: {fields, evidence, neighbours}}`.
+
+If an agent reports that it took parts of articles from the OCR text without reading the scan,
+resume that agent with SendMessage to finish the reads. Do not spawn a new agent for this,
+because the 10-subagent cap includes re-spawns.
 
 **Stammtafeln stay with the main loop.** A subagent is offline and cannot make the decisions
 the `re-stammbaum` skill requires. Tell subagents: if the column text or scan shows a
@@ -386,6 +419,28 @@ flip (so multi-block Nachtrag pages work regardless of block order); when the sk
 `{{Seite}}` lines it instead checks the generated ones are well-formed, strictly ascending,
 and match the column span; and it tolerates a Nachtrag `: … zum Art.` lead-in before the
 headword. Fix any FAIL before the edit pass; treat WARNs as review pointers.
+
+`run_checks.py` also runs the content audits of `scripts/qa_audit.py`. Run that script
+alone to see only those findings. The audits catch what the fan-out got wrong in earlier
+batches.
+
+FAIL:
+- A bare `|` inside `{{Polytonisch}}`/`{{SperrSchrift}}`. It splits the template; write `{{!}}`.
+- Notes without `end_check`. Resume the agent to confirm the article end on the scan.
+- An overlapping cut between two batch neighbours (A's tail in B or B's head in A). Two
+  agents cut the same text from a mislabeled eLexikon column.
+
+WARN (triage each one):
+- A dropped eLexikon `<ref>`. Restore it unless the ref itself is broken; add the Anmerkungen
+  block.
+- A dropped link or `{{RE siehe}}`. Judge by context, not by whether the target exists.
+- `,quote'` instead of `‚…‘`.
+- An article whose segment is the last one on its column. Confirm that the next column opens
+  with a new headword: fetch its text, and add the PNG if the text is unclear. Otherwise
+  `SPALTE_END` is too small.
+
+The checks cannot see Greek misreads. Before the edit pass, spot-check on zoomed crops the
+Greek of a few articles per chunk, including the ones the notes flag as uncertain.
 
 ## Stammdaten fixes (fix, don't skip)
 

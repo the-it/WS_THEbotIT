@@ -11,6 +11,10 @@ subagents' skel/ copy). Extra audits beyond check_assembly.py:
   - notes carry a "stammdaten_fix" -> listed for fix_stammdaten.py (the article FAILs
     the REDaten-diff check until the fix is saved and skel_ref/ refreshed)
   - status "needs_columns" -> NEEDS_COLUMNS (fix SPALTE, fetch, re-spawn)
+  - qa_audit.py content audits: FAIL on a bare | inside {{Polytonisch}}/{{SperrSchrift}},
+    a missing notes "end_check" and overlapping cuts between batch neighbours; WARN on
+    dropped eLexikon <ref>s / links, ,quotes' and articles ending at a column bottom.
+    Triage every WARN before the edit pass (see qa_audit.py for how to judge each).
 --allow-fail marks an expected FAIL as accepted (e.g. a Stammbaum plate {{Seite}}
 line, which fails "no extra {{Seite templates" by design); apply_edits.py saves
 PASS and ALLOWED only.
@@ -23,6 +27,7 @@ import subprocess
 import sys
 
 from common import load_json, save_json
+from qa_audit import batch_audit
 
 CHECK = os.path.join(os.path.dirname(os.path.abspath(__file__)), "check_assembly.py")
 
@@ -48,6 +53,7 @@ def main() -> int:
     manifest = load_json(os.path.join(b, "manifest.json"))
 
     results = {}
+    audits = batch_audit(b, manifest)
     for title, m in manifest.items():
         notes_path = os.path.join(b, "out", m["fname"] + ".notes.json")
         new_path = os.path.join(b, "out", m["fname"] + ".wikitext")
@@ -75,7 +81,9 @@ def main() -> int:
             audit = ref_audit(fh.read())
         if audit:
             fails.append(f"FAIL  {audit}")
-        failed = proc.returncode != 0 or bool(audit)
+        hits = audits.get(title, [])
+        fails.extend(f"{level}  {msg}" for level, msg in hits)
+        failed = proc.returncode != 0 or bool(audit) or any(level == "FAIL" for level, _ in hits)
         status = "PASS" if not failed else ("ALLOWED" if title in args.allow_fail else "FAIL")
         results[title] = {**entry, "status": status, "detail": "\n".join(fails),
                           "full": proc.stdout if failed and args.verbose else ""}
