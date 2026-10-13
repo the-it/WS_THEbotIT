@@ -15,9 +15,9 @@ from service.ws_re.register.updater import Updater
 from service.ws_re.scanner.tasks.base import get_redirect
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.template import RE_DATEN, ReDatenException
+from service.ws_re.template._typing import ArticleProperties
 from service.ws_re.template.article import Article
-from service.ws_re.template.re_page import RePage, SplittedArticleList
-from tools._typing import TemplateParameterList
+from service.ws_re.template.re_page import SplittedArticleList
 from tools.bots.logger import WikiLogger
 from tools.template_finder import TemplateFinder, TemplateFinderException
 from tools.template_handler import TemplateHandler, TemplateHandlerException
@@ -258,12 +258,13 @@ class SCANTask(ReScannerTask):
     @staticmethod
     def _parse_legacy_revision(text: str) -> SplittedArticleList:
         """
-        Until 2016 the articles started with the positional template {{RE|BAND|SPALTE_START|...}} instead of REDaten.
-        Only band and start column have a fixed position, the positions of the following parameters changed over
-        time. That's why the proof read state is identified by its value.
+        Until 2016 the articles started with the positional template {{RE|BAND|SPALTE_START|...}} instead of REDaten,
+        placeholders with {{RE/Platzhalter|BAND|SPALTE_START|...}}. Only band and start column have a fixed position,
+        the positions of the following parameters changed over time. That's why the proof read state is identified by
+        its value.
         """
         articles: list[Article | str] = []
-        for position in TemplateFinder(text).get_positions(r"RE\|"):
+        for position in TemplateFinder(text).get_positions(r"RE(/Platzhalter)?\|"):
             parameters = [
                 str(parameter["value"]).strip() for parameter in TemplateHandler(position.text).get_parameterlist()
             ]
@@ -300,38 +301,43 @@ class SCANTask(ReScannerTask):
             return matches[0] if matches else None
 
     @classmethod
-    def _repair_properties(cls, text: str) -> str:
+    def _parse_revision(cls, text: str) -> SplittedArticleList:
         """
+        The history only needs the properties of REDaten, so old revisions are parsed by these templates alone. The
+        structure of the page (REAbschnitt, REAutor) is ignored, old revisions often don't fit it, e.g. a cross
+        reference without REAutor.
+
         Old revisions of REDaten can contain misspelled properties or properties that don't exist anymore (e.g.
-        EXTSCAN_START from 2016 to 2022). The parser rejects them, so before the revision is parsed the misspelled
-        keywords are corrected and the unknown properties are removed.
+        EXTSCAN_START from 2016 to 2022). The misspelled keywords are corrected and the unknown properties are
+        dropped.
         """
-        for position in reversed(TemplateFinder(text).get_positions(RE_DATEN)):
-            template = TemplateHandler(position.text)
-            known_parameters: TemplateParameterList = []
-            for parameter in template.get_parameterlist():
+        articles: list[Article | str] = []
+        for position in TemplateFinder(text).get_positions(RE_DATEN):
+            properties: ArticleProperties = {}
+            for parameter in TemplateHandler(position.text).get_parameterlist():
                 if parameter["key"] and (keyword := cls._repair_keyword(parameter["key"])):
-                    known_parameters.append({"key": keyword, "value": parameter["value"]})
-            template.update_parameters(known_parameters)
-            text = text[: position.start] + template.get_str() + text[position.end :]
-        return text
+                    properties[keyword] = parameter["value"]
+            articles.append(Article(re_daten_properties=properties))
+        return SplittedArticleList(articles)
 
     def _crawl_history(self) -> list[tuple[str, SplittedArticleList]]:
         history: list[tuple[str, SplittedArticleList]] = []
+        warned = False
         for datestamp, text in self._get_last_revision_per_day(self.re_page.page.revisions(content=True)):
             try:
-                if "{{REDaten" not in text and "{{RE|" in text:
-                    splitted_article_list = self._parse_legacy_revision(text)
+                if "{{REDaten" in text:
+                    splitted_article_list = self._parse_revision(text)
                 else:
-                    splitted_article_list = RePage(
-                        self.re_page.page, self._repair_properties(text)
-                    ).splitted_article_list
+                    splitted_article_list = self._parse_legacy_revision(text)
             except (ReDatenException, TemplateFinderException, TemplateHandlerException) as error:
                 # old revisions can have a corrupt structure, a skipped revision can falsify the history
-                self.logger.warning(
-                    f"History of {self.re_page.lemma_as_link}: skipped revision of {datestamp}, can't analyse. "
-                    f"{type(error).__name__}: {error}"
-                )
+                # warn only for the first skipped revision of the page
+                if not warned:
+                    self.logger.warning(
+                        f"History of {self.re_page.lemma_as_link}: skipped revision of {datestamp}, can't analyse. "
+                        f"{type(error).__name__}: {error}"
+                    )
+                    warned = True
                 continue
             if len(splitted_article_list):
                 history.append((datestamp, splitted_article_list))
