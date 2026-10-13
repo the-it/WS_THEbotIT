@@ -323,9 +323,12 @@ text.
 text.
 {{REAutor|OFF}}"""
         corrupt_revision = self._revision("2010-11-20T10:00:00Z", "unkorrigiert")
-        corrupt_revision.text = "{{REDaten|BAND=I,1}}\ntext without author"
+        corrupt_revision.text = "{{REDaten|BAND=I,1|KORREKTURSTAND=unkorrigiert\ntext of an unclosed template"
+        second_corrupt_revision = self._revision("2011-01-05T10:00:00Z", "unkorrigiert")
+        second_corrupt_revision.text = corrupt_revision.text
         self.page_mock.revisions.return_value = [
             corrupt_revision,
+            second_corrupt_revision,
             self._revision("2011-11-20T10:00:00Z", "unvollständig"),
         ]
         re_page = RePage(self.page_mock)
@@ -401,6 +404,29 @@ text.
             compare(1, SCANTask._get_proof_read_state(article))
         compare("S I", SCANTask._parse_legacy_revision(layouts[2][0])[0].daten["BAND"].value)
 
+    def test_fetch_history_legacy_placeholder(self):
+        self.page_mock.text = self._article_text("korrigiert")
+        legacy_placeholder = self._revision("2015-11-23T08:00:00Z", None)
+        legacy_placeholder.text = (
+            "{{RE/Platzhalter|I,1|1|2|Abkürzungen|Aarassos|Aal| |2018|||{{REIA|I,1|1}}|{{REIA|I,1|2}}}}\n"
+            "text\n{{REAutor|Cumont.}}"
+        )
+        placeholder = self._revision("2016-11-04T08:00:00Z", None)
+        placeholder.text = (
+            "{{REDaten/Platzhalter\n|BAND=I,1\n|SPALTE_START=1\n|GEMEINFREI=2018\n}}\ntext\n{{REAutor|Cumont.}}"
+        )
+        self.page_mock.revisions.return_value = [
+            legacy_placeholder,
+            placeholder,
+            self._revision("2017-10-30T08:00:00Z", "korrigiert"),
+        ]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(
+            ({"history": {0: "151123", 2: "171030"}}, []), self.task._fetch_history(re_page.splitted_article_list[0])
+        )
+
     def test_fetch_history_legacy_template(self):
         self.page_mock.text = self._article_text("fertig")
         legacy_created = self._revision("2007-06-04T08:00:00Z", None)
@@ -437,7 +463,7 @@ text.
         compare(None, SCANTask._repair_keyword("EXTSCAN_START"))
         compare(None, SCANTask._repair_keyword("EXTSCAN_END"))
 
-    def test_repair_properties(self):
+    def test_parse_revision(self):
         text = """{{REDaten
 |BAND=I A,1
 |SPALTE_START=1
@@ -448,10 +474,54 @@ text.
 }}
 text.
 {{REAutor|OFF}}"""
+        splitted_article_list = SCANTask._parse_revision(text)
+        compare(1, len(splitted_article_list))
+        article = splitted_article_list[0][0]
+        compare("I A,1", article["BAND"].value)
+        compare("1", article["SPALTE_START"].value)
+        compare("fertig", article["KORREKTURSTAND"].value)
+        compare(True, article["KEINE_SCHÖPFUNGSHÖHE"].value)
+
+    def test_parse_revision_structure_not_fitting(self):
+        # a cross reference without REAutor, followed by an article with a REAbschnitt but just one REAutor
+        text = """{{REDaten
+|BAND=XVI,2
+|SPALTE_START=1583
+|KORREKTURSTAND=fertig
+}}
+'''Nagnata''' s. Magnata.
+{{REDaten
+|BAND=S I
+|SPALTE_START=10
+|KORREKTURSTAND=korrigiert
+}}
+text.
+{{REAbschnitt}}
+more text.
+{{REAutor|OFF}}"""
+        splitted_article_list = SCANTask._parse_revision(text)
+        compare(2, len(splitted_article_list))
         compare(
-            "{{REDaten\n|BAND=I A,1\n|SPALTE_START=1\n|KORREKTURSTAND=fertig\n|KEINE_SCHÖPFUNGSHÖHE=ON\n}}"
-            "\ntext.\n{{REAutor|OFF}}",
-            SCANTask._repair_properties(text),
+            [("XVI,2", "1583", "fertig"), ("S I", "10", "korrigiert")],
+            [
+                (articles[0]["BAND"].value, articles[0]["SPALTE_START"].value, articles[0]["KORREKTURSTAND"].value)
+                for articles in splitted_article_list
+            ],
+        )
+
+    def test_fetch_history_revision_without_author(self):
+        self.page_mock.text = self._article_text("fertig")
+        revision_without_author = self._revision("2017-01-29T10:00:00Z", "fertig")
+        revision_without_author.text = revision_without_author.text.replace("{{REAutor|OFF}}", "")
+        self.page_mock.revisions.return_value = [
+            self._revision("2013-03-05T10:00:00Z", "unkorrigiert"),
+            revision_without_author,
+        ]
+        re_page = RePage(self.page_mock)
+        self.task.re_page = re_page
+        self.task.history = self.task._crawl_history()
+        compare(
+            ({"history": {1: "130305", 3: "170129"}}, []), self.task._fetch_history(re_page.splitted_article_list[0])
         )
 
     def test_fetch_history_misspelled_no_creative_height(self):
