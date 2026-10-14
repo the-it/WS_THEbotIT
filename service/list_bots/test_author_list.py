@@ -1,12 +1,13 @@
 # pylint: disable=protected-access,line-too-long
 from unittest import mock
 
+from pywikibot.exceptions import NoPageError
 from pywikibot.scripts.generate_user_files import pywikibot
 from testfixtures import compare
 
 from service.list_bots.author_list import AuthorList
 from tools.bots.test_base import TestCloudBase
-from tools.test import real_wiki_test
+from tools.test import PageMock
 
 
 class TestAuthorList(TestCloudBase):
@@ -27,15 +28,33 @@ class TestAuthorList(TestCloudBase):
         compare("1837-00-00", sorted_list[0]["birth_sort"])
         compare("1918-00-00", sorted_list[0]["death_sort"])
 
-    @real_wiki_test
     def test_integration(self):
+        page_texts = {
+            ":Willy_Stöwer": """{{Personendaten
+|NACHNAME=Stöwer
+|VORNAMEN=Willy
+|KURZBESCHREIBUNG=Maler, Illustrator
+|SORTIERUNG=Stöwer, Willy
+|GEBURTSDATUM=22. Mai 1864
+|STERBEDATUM=31. Mai 1931
+}}""",
+        }
+
+        def page_factory(_wiki, title):
+            page = PageMock()
+            page.title_str = title
+            page.text = page_texts.get(title, "")
+            page.data_item.side_effect = NoPageError(mock.MagicMock())
+            return page
+
+        mock.patch("service.list_bots.list_bot.Page", side_effect=page_factory).start()
+        mock.patch("service.list_bots.author_list.PetScan.run", return_value=[]).start()
         lemma_mock = mock.patch(
             "service.list_bots.author_list.PetScan.get_combined_lemma_list", new_callable=mock.MagicMock
         ).start()
         lemma_raw_mock = mock.patch(
             "service.list_bots.author_list.PetScan.make_plain_list", new_callable=mock.MagicMock
         ).start()
-        mock.patch("service.list_bots.author_list.Page.save").start()
         lemma_mock.return_value = ([":Willy_Stöwer", "something"], 2)
         lemma_raw_mock.return_value = [":Willy_Stöwer", "something"]
         self.addCleanup(mock.patch.stopall)
