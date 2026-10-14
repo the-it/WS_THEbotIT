@@ -58,7 +58,7 @@ class TestAuthorList(TestCloudBase):
         lemma_mock.return_value = ([":Willy_Stöwer", "something"], 2)
         lemma_raw_mock.return_value = [":Willy_Stöwer", "something"]
         self.addCleanup(mock.patch.stopall)
-        with AuthorList(self.wiki) as bot:
+        with AuthorList(self.wiki, log_to_wiki=False) as bot:
             bot.data.assign_dict({})
             bot.run()
             del bot.data._data[":Willy_Stöwer"]["check"]
