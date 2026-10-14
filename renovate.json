@@ -3,9 +3,11 @@
   "extends": [
     "config:recommended"
   ],
+  "mode": "full",
+  "minimumReleaseAge": "14 days",
   "packageRules": [
     {
-      "matchPackagePatterns": [
+      "matchPackageNames": [
         "*"
       ],
       "matchUpdateTypes": [
