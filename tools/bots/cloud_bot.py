@@ -3,12 +3,26 @@ from abc import ABC, abstractmethod
 from contextlib import contextmanager
 from datetime import datetime, timedelta
 
-from pywikibot import Page
+from pywikibot import Page, config
+from pywikibot.data.api import Request
 from pywikibot.site import BaseSite
 
 from tools.bots.logger import WikiLogger
 from tools.bots.persisted_data import PersistedData
 from tools.bots.status_manager import StatusManager
+
+_orig_add_defaults = Request._add_defaults
+
+
+# pywikibot sends maxlag with every request; restrict it to writes so reads don't stall on Wikidata (WDQS) lag
+def _add_defaults_maxlag_writes_only(self) -> None:
+    _orig_add_defaults(self)
+    if not self.write:
+        self._params.pop("maxlag", None)
+
+
+config.maxlag = 20  # type: ignore
+Request._add_defaults = _add_defaults_maxlag_writes_only
 
 
 class CloudBot(ABC):

@@ -2,13 +2,15 @@
 import time
 from contextlib import suppress
 from datetime import datetime, timedelta
-from unittest import mock
+from unittest import TestCase, mock
 
 from freezegun import freeze_time
+from pywikibot import config
+from pywikibot.data.api import Request
 from testfixtures import LogCapture, compare
 
 from tools.bots import BotException
-from tools.bots.cloud_bot import CloudBot
+from tools.bots.cloud_bot import CloudBot, _add_defaults_maxlag_writes_only
 from tools.bots.logger import WikiLogger
 from tools.bots.status_manager import StatusManager
 from tools.bots.test_base import TestCloudBase
@@ -256,3 +258,23 @@ class TestCloudBot(TestCloudBase):
             time_bot = self.TimeBot(log_to_screen=True, log_to_wiki=False)
             time_bot.run()
             compare("step_name took 1.00 seconds", log_catcher.records[-1].msg)
+
+
+class TestMaxlagWritesOnly(TestCase):
+    def test_request_patched(self):
+        compare(_add_defaults_maxlag_writes_only, Request._add_defaults)
+
+    def test_maxlag_value(self):
+        compare(20, config.maxlag)
+
+    @mock.patch("tools.bots.cloud_bot._orig_add_defaults")
+    def test_read_drops_maxlag(self, _orig_mock):
+        request = mock.Mock(write=False, _params={"maxlag": ["5"], "format": ["json"]})
+        _add_defaults_maxlag_writes_only(request)
+        compare({"format": ["json"]}, request._params)
+
+    @mock.patch("tools.bots.cloud_bot._orig_add_defaults")
+    def test_write_keeps_maxlag(self, _orig_mock):
+        request = mock.Mock(write=True, _params={"maxlag": ["5"], "format": ["json"]})
+        _add_defaults_maxlag_writes_only(request)
+        compare({"maxlag": ["5"], "format": ["json"]}, request._params)
