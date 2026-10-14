@@ -135,7 +135,8 @@ class ReScanner(CloudBot):
                     raise RuntimeError(error_message)
                 self.logger.error(f"Error in {task.name}/[[{lemma}]], no data was altered.")
                 # reprocess it next run
-                del self.data[lemma]
+                with suppress(KeyError):
+                    del self.data[lemma]
         return task_name
 
     def get_oldest_datetime(self) -> datetime:
