@@ -36,7 +36,7 @@ def _split_categories(text: str) -> tuple[str, str]:
 class ReImporter(CloudBot):
     _STORE_CATEGORY = "RE:Stammdaten überprüfen"
     _SHORT_TEXT_CATEGORY = "RE:Kurztext überprüfen"
-    _PER_NIGHT = 40
+    _PER_NIGHT = 20
     _MAX_CAT = 1000
 
     def __init__(
