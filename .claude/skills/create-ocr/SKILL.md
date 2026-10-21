@@ -74,7 +74,7 @@ permission rules reject `$VAR`, globs and `&&` chains.
 .venv/bin/python .claude/skills/create-ocr/scripts/save_coltexts.py .claude_work_dir/ocr_batch_<YYYYMMDD> .claude_work_dir/ocr_batch_<YYYYMMDD>/fetch_js/texts_01.result.json
 .venv/bin/python .claude/skills/create-ocr/scripts/decode_b64_files.py .claude_work_dir/ocr_batch_<YYYYMMDD>/fetch_js/scans_01.result.json .claude_work_dir/ocr_batch_<YYYYMMDD>/scans
 # 8  input check (empty text, blank scan), scan sizes, <=10 balanced chunks, prompts.json
-#    (model per chunk: >= 3 columns -> opus, shorter -> sonnet; --big-cols N, --model opus|sonnet)
+#    (every chunk runs on sonnet)
 .venv/bin/python .claude/skills/create-ocr/scripts/build_chunks.py .claude_work_dir/ocr_batch_<YYYYMMDD>
 # 9  fan-out: one Agent call (subagent_type "ocr-proofreader", model = the entry's "model") per prompts.json entry -> out/
 # 10 move inline {{Seite}} tags onto their own line
@@ -364,35 +364,24 @@ Subagents work **offline only** — local files + `crop.py`; no browser, no web,
 edits (there is only one browser session, and it belongs to the main loop). **Always spawn
 the fan-out subagents as the `ocr-proofreader` agent type** (pass
 `subagent_type: "ocr-proofreader"` to the Agent tool for every fan-out subagent). That
-definition (`.claude/agents/ocr-proofreader.md`) pins the model to **opus** and reasoning
+definition (`.claude/agents/ocr-proofreader.md`) pins the model to **sonnet** and reasoning
 **effort to low**. Do not pass `effort` on the Agent call: the tool ignores it, and the
 frontmatter is the only place it takes effect. Low effort leaves more plain OCR misreads
 per article, so the main loop's cross-checks are mandatory: the Greek spot-check and the
 REAutor verification by a second agent. A `model` on the Agent call does override the
 frontmatter.
 
-**The model is chosen per chunk by `build_chunks.py`, and the Agent call passes it through.**
-Every `prompts.json` entry carries `"model"`; pass it as the Agent call's `model`, unchanged.
-By default (`--model auto`), articles of `--big-cols` columns or more (default 3) go to opus
-and shorter ones to sonnet. A chunk never mixes models. The 10-chunk budget is split by
-column load, with at least one chunk per model. Override:
-- `--big-cols N` to move the threshold. Use a lower N for a Greek-heavy batch of short
-  articles (inscriptions, papyri, coin legends).
-- `--model opus` or `--model sonnet` to put the whole batch on one model. Use opus for
-  batches with Stammtafeln.
+**Every fan-out subagent runs on sonnet**, for every article length and subject. Every
+`prompts.json` entry carries `"model": "sonnet"`; pass it as the Agent call's `model`,
+unchanged. Also for hand-built prompts (e.g. the column-range parts of one long article for
+`stitch_parts.py`).
 
-The user may name a model for the batch; that wins (`--model`). Why these defaults:
-
-- **sonnet** for short articles (1–2 columns). Batch 2026-10-12 (100 one-column articles)
-  cost about 60 % of an opus run. Its text
-  was close to opus quality (0–1 errors per column on full scan reads). Its weak spot is
-  editorial: it dropped eLexikon CIL refs and valid links as "bogus", and one agent left
-  articles partly OCR-only. The prompt template rules and the `qa_audit.py` checks in
-  `run_checks.py` target exactly these failure modes, so triage every audit WARN.
-- **opus** for long articles (3+ columns), Greek-heavy subjects (inscriptions, papyri, coin
-  legends) and batches with Stammtafeln. It reads hard Greek, letter-spaced
-  names and mislabeled eLexikon headings most reliably (batch 2026-09-30: 10 opus agents ×
-  ~30 articles ran clean, no stalls).
+- **sonnet** costs about 60 % of an opus run (batch 2026-10-12, 100 one-column articles).
+  Its text was close to opus quality (0–1 errors per column on full scan reads). Its weak
+  spot is editorial: it dropped eLexikon CIL refs and valid links as "bogus", and one agent
+  left articles partly OCR-only. The prompt template rules and the `qa_audit.py` checks in
+  `run_checks.py` target exactly these failure modes, so triage every audit WARN. On
+  Greek-heavy articles and Stammtafeln, extend the main loop's Greek spot-check.
 - **haiku** proofreads Greek and letter-spaced names too unreliably to publish.
 
 **Never spawn
@@ -402,8 +391,7 @@ contiguous, ~⌈N/10⌉ articles each) and give each subagent its whole chunk to
 sequentially. `build_chunks.py` does the split (balanced by column count) and renders
 each chunk's full prompt from `scripts/prompt_template.md` into `prompts.json`. Pass each
 entry's `prompt` and `model` unchanged, and improve the template, not the individual prompt.
-A re-spawn with `--only` classifies its articles the same way, so a long article goes back
-to opus. Give each
+Give each
 subagent the `skel/` working copy, never the `skel_ref/` snapshot: subagents sometimes
 edit the skeleton in place. Give each subagent, per article: the skeleton wikitext path, **the
 per-column text(s) for its column span** (the primary source to cut from), the by-lemma
