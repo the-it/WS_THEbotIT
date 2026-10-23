@@ -25,6 +25,7 @@ class RELITask(ReScannerTask):
         "Λεβήν",
         "Leben(a)",
         "Λίστη",
+        "Νευη",
     ]
 
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
