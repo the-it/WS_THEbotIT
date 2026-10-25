@@ -28,6 +28,12 @@ class HLTSTask(ReScannerTask):
     - "[[RE:Lemma]]" -> "[[RE:Lemma|Lemma]]" (Lemma's article exists)
     - "{{RE siehe|Lemma}}" -> "[[RE:Lemma|Lemma]]" (Lemma's article exists)
     - "{{RE siehe|Lemma|Anzeigetext}}" -> "[[RE:Lemma|Anzeigetext]]" (Lemma's article exists)
+    - "{{RE siehe|Lemma|Anzeigetext|Anker}}" -> "[[RE:Lemma#Anker|Anzeigetext]]" (Lemma's article exists)
+
+    Earlier versions of this task ignored the anchor parameter of {{RE siehe}} and produced broken
+    links like "[[RE:Lemma|Anzeigetext|Anker]]". Those are repaired:
+    - "[[RE:Lemma|Anzeigetext|Anker]]" -> "[[RE:Lemma#Anker|Anzeigetext]]" (Lemma's article exists)
+    - "[[RE:Lemma|Anzeigetext|Anker]]" -> "{{RE siehe|Lemma|Anzeigetext|Anker}}" (Lemma's article doesn't exist)
 
     While this task is still being rolled out carefully, it only changes MAX_CHANGED_ARTICLES
     articles per scanner run (the scanner runs once a night), then leaves the rest untouched
@@ -35,7 +41,7 @@ class HLTSTask(ReScannerTask):
     """
 
     _link_regex = re.compile(r"\[\[RE:([^|\]]+)(?:\|([^\]]+))?]]")
-    _siehe_regex = re.compile(r"\{\{RE siehe\|([^|{}]+)(?:\|([^{}]+))?}}")
+    _siehe_regex = re.compile(r"\{\{RE siehe\|([^|{}]+)(?:\|([^|{}]*))?(?:\|([^|{}]*))?}}")
 
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
@@ -58,11 +64,27 @@ class HLTSTask(ReScannerTask):
             return normalized
         return None
 
+    @staticmethod
+    def _hard_link(lemma: str, display_text: str, anchor: str | None) -> str:
+        if anchor:
+            return f"[[RE:{lemma}#{anchor}|{display_text}]]"
+        return f"[[RE:{lemma}|{display_text}]]"
+
+    def _repair_anchor_link(self, target: str, display_text: str) -> str:
+        """Repairs "[[RE:Lemma|Anzeigetext|Anker]]", a broken conversion of an earlier version of this task."""
+        display_text, anchor = display_text.split("|")
+        if self._resolve_lemma(target):
+            return self._hard_link(target, display_text or target, anchor)
+        self._unknown_targets.add((target, self.re_page.lemma_without_prefix))
+        return f"{{{{RE siehe|{target}|{display_text}|{anchor}}}}}"
+
     def _replace(self, match: re.Match) -> str:
         target = match.group(1)
         display_text = match.group(2)
         if "#" in target:
             return match.group(0)
+        if display_text and display_text.count("|") == 1:
+            return self._repair_anchor_link(target, display_text)
         if self._resolve_lemma(target):
             # lemma's article exists, keep the hard link but hide the "RE:" prefix
             return f"[[RE:{target}|{display_text or target}]]"
@@ -74,11 +96,12 @@ class HLTSTask(ReScannerTask):
     def _replace_siehe(self, match: re.Match) -> str:
         target = match.group(1)
         display_text = match.group(2)
+        anchor = match.group(3)
         resolved = self._resolve_lemma(target)
         if not resolved:
             # lemma doesn't exactly match an existing register lemma, stays as it is
             return match.group(0)
-        return f"[[RE:{resolved}|{display_text or target}]]"
+        return self._hard_link(resolved, display_text or target, anchor)
 
     def _fix_text(self, text: str) -> str:
         text = self._link_regex.sub(self._replace, text)

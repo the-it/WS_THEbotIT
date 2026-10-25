@@ -127,6 +127,85 @@ Text mit Vorlagen: {{RE siehe|Aal}} und {{RE siehe|Aarassos|Leben}}.
         self.assertNotIn("{{RE siehe|Aal}}", after)
         self.assertNotIn("{{RE siehe|Aarassos|Leben}}", after)
 
+    def test_siehe_with_anchor_converted_to_hardlink_with_anchor(self):
+        self.page_mock.text = """{{REDaten}}
+Über die Lage vgl. u. {{RE siehe|Aarassos|Bd. V A S. 586|Seite_586}}, 49 und {{RE siehe|Aal||Abschnitt}}.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+
+        after = re_page[0].text
+        self.assertIn("[[RE:Aarassos#Seite_586|Bd. V A S. 586]], 49", after)
+        self.assertIn("[[RE:Aal#Abschnitt|Aal]]", after)
+        self.assertNotIn("{{RE siehe", after)
+
+    def test_siehe_with_empty_anchor_converted_to_hardlink_without_anchor(self):
+        self.page_mock.text = """{{REDaten}}
+Text mit Vorlage: {{RE siehe|Aarassos|Leben|}}.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("[[RE:Aarassos|Leben]].", re_page[0].text)
+
+    def test_siehe_with_anchor_not_converted_when_lemma_not_yet_written(self):
+        self.page_mock.text = """{{REDaten}}
+Text mit Vorlage: {{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": False}, result)
+        self.assertIn("{{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}", re_page[0].text)
+
+    def test_siehe_with_too_many_parameters_stays_as_it_is(self):
+        self.page_mock.text = """{{REDaten}}
+Text mit Vorlage: {{RE siehe|Aarassos|Leben|Abschnitt|Unsinn}}.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": False}, result)
+
+    def test_broken_anchor_hardlink_repaired_when_lemma_in_register(self):
+        # earlier versions of the task produced "[[RE:Lemma|Anzeigetext|Anker]]" from
+        # "{{RE siehe|Lemma|Anzeigetext|Anker}}"
+        self.page_mock.text = """{{REDaten}}
+Über die Lage vgl. u. [[RE:Aarassos|Bd. V A S. 586|Seite_586]], 49 und [[RE:Aal||Abschnitt]] und [[RE:Aal|Aal|]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+
+        after = re_page[0].text
+        self.assertIn("[[RE:Aarassos#Seite_586|Bd. V A S. 586]], 49", after)
+        self.assertIn("[[RE:Aal#Abschnitt|Aal]] und [[RE:Aal|Aal]].", after)
+
+    def test_broken_anchor_hardlink_repaired_to_siehe_when_lemma_not_yet_written(self):
+        self.page_mock.title_str = "RE:Quelllemma"
+        self.page_mock.text = """{{REDaten}}
+Text mit Link: [[RE:Ababa|Bd. V A S. 586|Seite_586]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("{{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}.", re_page[0].text)
+        compare({("Ababa", "Quelllemma")}, self.task._unknown_targets)  # pylint: disable=protected-access
+
+    def test_repaired_anchor_hardlink_stays_stable(self):
+        self.page_mock.text = """{{REDaten}}
+Text mit Link: [[RE:Aarassos#Seite_586|Bd. V A S. 586]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": False}, result)
+
     def test_siehe_not_converted_when_lemma_not_yet_written(self):
         self.page_mock.text = """{{REDaten}}
 Text mit Vorlage: {{RE siehe|Ababa}}.
