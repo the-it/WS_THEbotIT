@@ -35,9 +35,6 @@ class HLTSTask(ReScannerTask):
     - "[[RE:Lemma|Anzeigetext|Anker]]" -> "[[RE:Lemma#Anker|Anzeigetext]]" (Lemma's article exists)
     - "[[RE:Lemma|Anzeigetext|Anker]]" -> "{{RE siehe|Lemma|Anzeigetext|Anker}}" (Lemma's article doesn't exist)
 
-    A pipe inside a template in the display text ("[[RE:Lemma|{{SperrSchrift|Text}}]]") is no anchor,
-    such links aren't repaired.
-
     While this task is still being rolled out carefully, it only changes MAX_CHANGED_ARTICLES
     articles per scanner run (the scanner runs once a night), then leaves the rest untouched
     until the next run.
