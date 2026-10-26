@@ -197,6 +197,32 @@ Text mit Link: [[RE:Ababa|Bd. V A S. 586|Seite_586]].
         self.assertIn("{{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}.", re_page[0].text)
         compare({("Ababa", "Quelllemma")}, self.task._unknown_targets)  # pylint: disable=protected-access
 
+    def test_pipe_inside_template_of_display_text_is_no_anchor(self):
+        self.page_mock.text = """{{REDaten}}
+Link: [[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} bei Phokis]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": False}, result)
+        self.assertIn(
+            "[[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} bei Phokis]].", re_page[0].text
+        )
+
+    def test_template_display_text_taken_for_anchor_restored(self):
+        # an earlier version of the repair produced "[[RE:Lemma#Text}}|{{SperrSchrift]]" from
+        # "[[RE:Lemma|{{SperrSchrift|Text}}]]"
+        self.page_mock.text = """{{REDaten}}
+Link: [[RE:Aal#Delphi}}|{{SperrSchrift]] und [[RE:Aal#Delphi}} bei Phokis|{{SperrSchrift]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn(
+            "[[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} bei Phokis]].", re_page[0].text
+        )
+
     def test_repaired_anchor_hardlink_stays_stable(self):
         self.page_mock.text = """{{REDaten}}
 Text mit Link: [[RE:Aarassos#Seite_586|Bd. V A S. 586]].
