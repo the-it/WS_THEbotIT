@@ -35,9 +35,8 @@ class HLTSTask(ReScannerTask):
     - "[[RE:Lemma|Anzeigetext|Anker]]" -> "[[RE:Lemma#Anker|Anzeigetext]]" (Lemma's article exists)
     - "[[RE:Lemma|Anzeigetext|Anker]]" -> "{{RE siehe|Lemma|Anzeigetext|Anker}}" (Lemma's article doesn't exist)
 
-    A pipe inside a template in the display text ("[[RE:Lemma|{{SperrSchrift|Text}}]]") is no anchor.
-    An earlier version of the repair split such links anyway, those are restored:
-    - "[[RE:Lemma#Text}}|{{SperrSchrift]]" -> "[[RE:Lemma|{{SperrSchrift|Text}}]]"
+    A pipe inside a template in the display text ("[[RE:Lemma|{{SperrSchrift|Text}}]]") is no anchor,
+    such links aren't repaired.
 
     While this task is still being rolled out carefully, it only changes MAX_CHANGED_ARTICLES
     articles per scanner run (the scanner runs once a night), then leaves the rest untouched
@@ -87,22 +86,11 @@ class HLTSTask(ReScannerTask):
         """The display text contains exactly one pipe, and it isn't part of a template."""
         return display_text.count("|") == 1 and "{" not in display_text and "}" not in display_text
 
-    @staticmethod
-    def _restore_template_display_text(target: str, display_text: str | None) -> str | None:
-        """
-        Restores "[[RE:Lemma#Text}}|{{SperrSchrift]]" to "[[RE:Lemma|{{SperrSchrift|Text}}]]", an earlier
-        version of the repair took the template argument for an anchor. None if the link isn't broken this way.
-        """
-        lemma, anchor = target.split("#", 1)
-        if display_text and "{" in display_text and "}" in anchor:
-            return f"[[RE:{lemma}|{display_text}|{anchor}]]"
-        return None
-
     def _replace(self, match: re.Match) -> str:
         target = match.group(1)
         display_text = match.group(2)
         if "#" in target:
-            return self._restore_template_display_text(target, display_text) or match.group(0)
+            return match.group(0)
         if display_text and self._is_broken_anchor_link(display_text):
             return self._repair_anchor_link(target, display_text)
         if self._resolve_lemma(target):

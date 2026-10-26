@@ -209,20 +209,6 @@ Link: [[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} be
             "[[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} bei Phokis]].", re_page[0].text
         )
 
-    def test_template_display_text_taken_for_anchor_restored(self):
-        # an earlier version of the repair produced "[[RE:Lemma#Text}}|{{SperrSchrift]]" from
-        # "[[RE:Lemma|{{SperrSchrift|Text}}]]"
-        self.page_mock.text = """{{REDaten}}
-Link: [[RE:Aal#Delphi}}|{{SperrSchrift]] und [[RE:Aal#Delphi}} bei Phokis|{{SperrSchrift]].
-{{REAutor|Autor.}}"""
-        re_page = RePage(self.page_mock)
-
-        result = self.task.run(re_page)
-        compare({"success": True, "changed": True}, result)
-        self.assertIn(
-            "[[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} bei Phokis]].", re_page[0].text
-        )
-
     def test_repaired_anchor_hardlink_stays_stable(self):
         self.page_mock.text = """{{REDaten}}
 Text mit Link: [[RE:Aarassos#Seite_586|Bd. V A S. 586]].
