@@ -1,4 +1,5 @@
 # pylint: disable=protected-access
+from dataclasses import replace
 from unittest import TestCase, mock
 
 from pywikibot.exceptions import APIError
@@ -50,7 +51,7 @@ class TestIsAlreadyReverted(TestCase):
         self.assertFalse(is_already_reverted(EDIT, "parent", []))
 
     def test_tagged_reverted(self):
-        edit = ReScannerEdit(**{**EDIT.__dict__, "tags": ("mw-reverted",)})
+        edit = replace(EDIT, tags=("mw-reverted",))
         self.assertTrue(is_already_reverted(edit, "parent", []))
 
     def test_later_revision_restores_parent_content(self):
@@ -145,7 +146,7 @@ class TestReScannerReverter(TestCase):
         compare("conflict, later edits prevent the undo", ReScannerReverter(self.wiki, apply=True).revert(EDIT))
 
     def test_page_creation_is_skipped(self):
-        edit = ReScannerEdit(**{**EDIT.__dict__, "parentid": 0})
+        edit = replace(EDIT, parentid=0)
         compare("skipped, page creation", ReScannerReverter(self.wiki, apply=True).revert(edit))
         self.wiki.simple_request.assert_not_called()
 

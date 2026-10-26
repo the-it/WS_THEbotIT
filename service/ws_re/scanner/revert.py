@@ -15,6 +15,7 @@ import argparse
 import re
 from collections.abc import Iterable
 from dataclasses import dataclass
+from typing import cast
 
 import pywikibot
 from pywikibot.exceptions import APIError, EditConflictError
@@ -142,7 +143,7 @@ def main():  # pragma: no cover
     parser.add_argument("--user", default="THEbotIT")
     parser.add_argument("--apply", action="store_true", help="actually edit, otherwise dry run")
     args = parser.parse_args()
-    wiki = pywikibot.Site(code="de", fam="wikisource", user=args.user)
+    wiki = cast(pywikibot.site.APISite, pywikibot.Site(code="de", fam="wikisource", user=args.user))
     end = args.end or pywikibot.Timestamp.utcnow().isoformat()
     tasks = set(args.task) if args.task else None
     ReScannerReverter(wiki, apply=args.apply, user=args.user).run(args.start, end, tasks, args.reason)
