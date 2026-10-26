@@ -197,6 +197,18 @@ Text mit Link: [[RE:Ababa|Bd. V A S. 586|Seite_586]].
         self.assertIn("{{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}.", re_page[0].text)
         compare({("Ababa", "Quelllemma")}, self.task._unknown_targets)  # pylint: disable=protected-access
 
+    def test_pipe_inside_template_of_display_text_is_no_anchor(self):
+        self.page_mock.text = """{{REDaten}}
+Link: [[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} bei Phokis]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": False}, result)
+        self.assertIn(
+            "[[RE:Aal|{{SperrSchrift|Delphi}}]] und [[RE:Aal|{{SperrSchrift|Delphi}} bei Phokis]].", re_page[0].text
+        )
+
     def test_repaired_anchor_hardlink_stays_stable(self):
         self.page_mock.text = """{{REDaten}}
 Text mit Link: [[RE:Aarassos#Seite_586|Bd. V A S. 586]].
@@ -227,6 +239,28 @@ Text mit Vorlage: {{RE siehe|aal}}.
         result = self.task.run(re_page)
         compare({"success": True, "changed": False}, result)
         self.assertIn("{{RE siehe|aal}}", re_page[0].text)
+
+    def test_stops_changing_articles_after_max_changed_articles(self):
+        self.task._changed_articles = self.task.MAX_CHANGED_ARTICLES  # pylint: disable=protected-access
+        self.page_mock.text = """{{REDaten}}
+Text mit Links: [[RE:Leben(a)]].
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": False}, result)
+        self.assertIn("[[RE:Leben(a)]]", re_page[0].text)
+
+    def test_counts_only_changed_articles(self):
+        self.page_mock.text = """{{REDaten}}
+Text mit Links: [[RE:Leben(a)]].
+{{REAutor|Autor.}}"""
+        self.task.run(RePage(self.page_mock))
+        self.page_mock.text = """{{REDaten}}
+Kein Link.
+{{REAutor|Autor.}}"""
+        self.task.run(RePage(self.page_mock))
+        compare(1, self.task._changed_articles)  # pylint: disable=protected-access
 
     def test_no_change_when_no_hard_links_present(self):
         self.page_mock.text = """{{REDaten}}
