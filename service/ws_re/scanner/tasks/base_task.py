@@ -40,6 +40,12 @@ class ReScannerTask:
             self.task()
         except pywikibot.exceptions.MaxlagTimeoutError:
             self.logger.error("Maxlag timeout occurred, retries failed.")
+        except pywikibot.exceptions.OtherPageSaveError as exception:
+            # pywikibot wraps a MaxlagTimeoutError during a save (e.g. editEntity) into an OtherPageSaveError
+            if isinstance(exception.reason, pywikibot.exceptions.MaxlagTimeoutError):
+                self.logger.error("Maxlag timeout occurred, retries failed.")
+            else:
+                self.logger.exception("Logging a caught exception", exc_info=exception)
         except Exception as exception:  # pylint: disable=broad-except
             self.logger.exception("Logging a caught exception", exc_info=exception)
         else:
