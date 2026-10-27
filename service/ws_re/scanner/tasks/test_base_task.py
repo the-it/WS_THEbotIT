@@ -116,6 +116,38 @@ class TestReScannerTask(TaskTestCase):
         self.assertFalse(result["success"])
         self.assertFalse(result["changed"])
 
+    class MXLWTask(ReScannerTask):
+        def task(self):
+            raise pywikibot.exceptions.OtherPageSaveError(
+                self.re_page.page, pywikibot.exceptions.MaxlagTimeoutError("maxlag exceeded")
+            )
+
+    def test_execute_with_wrapped_maxlag_timeout(self):
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        re_page = RePage(self.page_mock)
+        with LogCapture() as log_catcher:
+            with self.MXLWTask(None, self.logger) as task:
+                result = task.run(re_page)
+            log_catcher.check(
+                ("Test", "INFO", "opening task MXLW"), ("Test", "ERROR", "Maxlag timeout occurred, retries failed.")
+            )
+        self.assertFalse(result["success"])
+        self.assertFalse(result["changed"])
+
+    class OPSETask(ReScannerTask):
+        def task(self):
+            raise pywikibot.exceptions.OtherPageSaveError(self.re_page.page, "something else")
+
+    def test_execute_with_other_page_save_error(self):
+        self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
+        re_page = RePage(self.page_mock)
+        with LogCapture() as log_catcher:
+            with self.OPSETask(None, self.logger) as task:
+                result = task.run(re_page)
+            log_catcher.check(("Test", "INFO", "opening task OPSE"), ("Test", "ERROR", "Logging a caught exception"))
+        self.assertFalse(result["success"])
+        self.assertFalse(result["changed"])
+
     def test_register_processed_title(self):
         self.page_mock.title_str = "RE:Page"
         self.page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Autor.}}"
