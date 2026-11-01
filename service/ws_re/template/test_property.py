@@ -48,6 +48,20 @@ class TestReProperty(TestCase):
         re_property_text.value = "foo              "
         compare("foo", re_property_text.value)
 
+    def test_set_bool_with_stray_punctuation(self):
+        re_property = Property(name="Test", default=False)
+        re_property.value = "ON-"
+        self.assertTrue(re_property.value)
+        re_property.value = ".OFF "
+        self.assertFalse(re_property.value)
+        with self.assertRaises(TypeError):
+            re_property.value = "O-N"
+
+    def test_set_text_keeps_punctuation(self):
+        re_property = Property(name="Text", default="")
+        re_property.value = "foo-"
+        compare("foo-", re_property.value)
+
     def test_hash(self):
         re_property = Property(name="Test", default=False)
         pre_hash = hash(re_property)

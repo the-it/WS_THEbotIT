@@ -1,3 +1,5 @@
+import string
+
 from service.ws_re.template._typing import PropertyValueType
 
 
@@ -36,6 +38,9 @@ class Property:
     def value(self, new_value: PropertyValueType):
         if isinstance(new_value, str):
             new_value = new_value.strip()
+            if isinstance(self._default, bool):
+                # tolerate stray punctuation around ON/OFF, e.g. "ON-" in old revisions
+                new_value = new_value.strip(string.punctuation + string.whitespace)
         if isinstance(new_value, type(self._default)):
             self._value = new_value
         elif (
