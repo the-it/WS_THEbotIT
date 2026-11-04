@@ -173,6 +173,13 @@ then continue with the shortest-first PetScan selection to fill out the batch si
    `Kategorie:Wikisource:Gemeinfreiheit…`. If one is there, do not fill the article,
    whatever the worklist said.
 5. `VERWEIS=ON` articles are fine (tiny bodies like `'''2) s. Turba.'''`).
+6. **eLexikon source exists:** some lemmas' columns have neither OCR text nor scan on
+   eLexikon (empty per-column text, no PNG, and the 4-column spread fails too). Skip them
+   silently: do not fan out, do not publish, do not retry. Known lemmas are listed in the
+   user memory file `reference_create_ocr_no_elexikon_source.md` (as of 2026-11-04: Keras 5,
+   Kerkinion, Königsverzeichnisse, Herotimos). Pass them to `select_candidates.py` via
+   `--exclude`. When a batch finds a new such lemma, append it to that memory file and
+   mention it in the report as "no eLexikon source", not as a failure.
 
 ## eLexikon endpoints (what to fetch)
 
