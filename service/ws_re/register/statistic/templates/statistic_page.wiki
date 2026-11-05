@@ -1,0 +1,8 @@
+== Bearbeitungsstand ==
+=== Artikel ===
+{{#chart:${article_chart}.chart}}
+
+=== Spalten ===
+Jeder Artikel zählt mit seinen Anteilen an den Spalten, über die er sich erstreckt. Teilen sich mehrere Artikel eine Spalte, erhält jeder Artikel den gleichen Anteil an dieser Spalte. Eine Spalte ist also nur dann vollständig fertig, wenn alle ihre Artikel fertig sind.
+
+{{#chart:${column_chart}.chart}}

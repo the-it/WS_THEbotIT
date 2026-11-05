@@ -1,0 +1,17 @@
+{
+ "license": "CC0-1.0",
+ "description": {
+  "de": "Anzahl der ${counted_de} der Paulys Realencyclopädie der classischen Altertumswissenschaft auf de.wikisource nach Bearbeitungsstand, jeweils zum Ende eines Quartals",
+  "en": "Number of ${counted_en} of Paulys Realencyclopädie der classischen Altertumswissenschaft on de.wikisource by proofreading status, at the end of every quarter"
+ },
+ "sources": "Erzeugt von THEbotIT aus dem Register, siehe [[:s:de:${statistic_page}]]",
+ "schema": {
+  "fields": [
+   {"name": "datum", "type": "string", "title": {"de": "Datum", "en": "Date"}},
+   {"name": "erfasst", "type": "number", "title": {"de": "Erfasst"}},
+   {"name": "korrigiert", "type": "number", "title": {"de": "Korrigiert"}},
+   {"name": "unkorrigiert", "type": "number", "title": {"de": "Unkorrigiert"}},
+   {"name": "fertig", "type": "number", "title": {"de": "Fertig"}}
+  ]
+ }
+}

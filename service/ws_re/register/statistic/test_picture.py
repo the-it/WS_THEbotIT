@@ -7,8 +7,7 @@ from unittest import mock
 from PIL import Image, ImageFont
 from testfixtures import compare
 
-from service.ws_re.register.authors import Authors
-from service.ws_re.register.statistic import (
+from service.ws_re.register.statistic.picture import (
     COLOR_BLACK,
     COLOR_GREEN,
     COLOR_LIGHT_RED,
@@ -19,11 +18,7 @@ from service.ws_re.register.statistic import (
     HEADER_HEIGHT,
     LABEL_WIDTH,
     LINE_HEIGHT,
-    _build_row_articles,
-    _color_for_lemma,
-    _is_public_domain,
-    _load_font,
-    create_picture,
+    ProofReadPicture,
 )
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.volumes import Volume
@@ -31,7 +26,7 @@ from service.ws_re.volumes import Volume
 
 class TestIsPublicDomain(BaseTestRegister):
     def setUp(self):
-        self.authors = Authors()
+        self.picture = ProofReadPicture(mock.Mock(), mock.Mock())
 
     def test_no_creative_height_short_circuits(self):
         # year_public_domain of Herman Abel (death 1998) would be 2069 — would normally not be PD,
@@ -40,29 +35,29 @@ class TestIsPublicDomain(BaseTestRegister):
             "no_creative_height": True,
             "chapters": [{"start": 1, "author": "Abel"}],
         }
-        compare(True, _is_public_domain(lemma, self.authors, "I,1"))
+        compare(True, self.picture._is_public_domain(lemma, "I,1"))
 
     def test_no_chapters_returns_true(self):
-        compare(True, _is_public_domain({"chapters": []}, self.authors, "I,1"))
+        compare(True, self.picture._is_public_domain({"chapters": []}, "I,1"))
 
     def test_chapter_without_author_returns_true(self):
         lemma = {"chapters": [{"start": 1}]}
-        compare(True, _is_public_domain(lemma, self.authors, "I,1"))
+        compare(True, self.picture._is_public_domain(lemma, "I,1"))
 
     def test_unknown_author_treated_as_public_domain(self):
         # Unmapped author yields no Author objects, so max_pd_year stays 0 → True.
         lemma = {"chapters": [{"start": 1, "author": "Unknown"}]}
-        compare(True, _is_public_domain(lemma, self.authors, "I,1"))
+        compare(True, self.picture._is_public_domain(lemma, "I,1"))
 
     def test_author_in_public_domain(self):
         # Abert death 1927 + 71 = 1998 ≤ current year → PD.
         lemma = {"chapters": [{"start": 1, "author": "Abert"}]}
-        compare(True, _is_public_domain(lemma, self.authors, "I,1"))
+        compare(True, self.picture._is_public_domain(lemma, "I,1"))
 
     def test_author_not_in_public_domain(self):
         # Herman Abel death 1998 + 71 = 2069 > current year → not PD.
         lemma = {"chapters": [{"start": 1, "author": "Abel"}]}
-        compare(False, _is_public_domain(lemma, self.authors, "I,1"))
+        compare(False, self.picture._is_public_domain(lemma, "I,1"))
 
     def test_max_year_is_used_across_chapters(self):
         # Abert (1998 PD) plus Abel (2069 PD) → max is 2069 → not PD.
@@ -72,50 +67,50 @@ class TestIsPublicDomain(BaseTestRegister):
                 {"start": 2, "author": "Abel"},
             ]
         }
-        compare(False, _is_public_domain(lemma, self.authors, "I,1"))
+        compare(False, self.picture._is_public_domain(lemma, "I,1"))
 
     def test_volume_specific_mapping_is_respected(self):
         # For volume "XVI,1" the "Abel" mapping resolves to Abel_XVI,1 (death 1987 → PD 2058).
         lemma = {"chapters": [{"start": 1, "author": "Abel"}]}
-        compare(False, _is_public_domain(lemma, self.authors, "XVI,1"))
+        compare(False, self.picture._is_public_domain(lemma, "XVI,1"))
 
 
 class TestColorForLemma(BaseTestRegister):
     def setUp(self):
-        self.authors = Authors()
+        self.picture = ProofReadPicture(mock.Mock(), mock.Mock())
 
     def test_proof_read_3_is_green(self):
-        compare(COLOR_GREEN, _color_for_lemma({"proof_read": 3}, self.authors, "I,1"))
+        compare(COLOR_GREEN, self.picture._color_for_lemma({"proof_read": 3}, "I,1"))
 
     def test_proof_read_2_is_yellow(self):
-        compare(COLOR_YELLOW, _color_for_lemma({"proof_read": 2}, self.authors, "I,1"))
+        compare(COLOR_YELLOW, self.picture._color_for_lemma({"proof_read": 2}, "I,1"))
 
     def test_proof_read_1_public_domain_is_red(self):
         lemma = {"proof_read": 1, "no_creative_height": True}
-        compare(COLOR_RED, _color_for_lemma(lemma, self.authors, "I,1"))
+        compare(COLOR_RED, self.picture._color_for_lemma(lemma, "I,1"))
 
     def test_proof_read_0_public_domain_is_unvollstaendig(self):
         lemma = {"proof_read": 0, "no_creative_height": True}
-        compare(COLOR_UNVOLLSTAENDIG, _color_for_lemma(lemma, self.authors, "I,1"))
+        compare(COLOR_UNVOLLSTAENDIG, self.picture._color_for_lemma(lemma, "I,1"))
 
     def test_proof_read_1_not_public_domain_is_light_red(self):
         lemma = {"proof_read": 1, "chapters": [{"start": 1, "author": "Abel"}]}
-        compare(COLOR_LIGHT_RED, _color_for_lemma(lemma, self.authors, "I,1"))
+        compare(COLOR_LIGHT_RED, self.picture._color_for_lemma(lemma, "I,1"))
 
     def test_proof_read_0_not_public_domain_is_light_red(self):
         lemma = {"proof_read": 0, "chapters": [{"start": 1, "author": "Abel"}]}
-        compare(COLOR_LIGHT_RED, _color_for_lemma(lemma, self.authors, "I,1"))
+        compare(COLOR_LIGHT_RED, self.picture._color_for_lemma(lemma, "I,1"))
 
     def test_missing_proof_read_falls_through_to_black(self):
-        compare(COLOR_BLACK, _color_for_lemma({}, self.authors, "I,1"))
+        compare(COLOR_BLACK, self.picture._color_for_lemma({}, "I,1"))
 
 
 class TestBuildRowArticles(BaseTestRegister):
     def setUp(self):
-        self.authors = Authors()
+        self.picture = ProofReadPicture(mock.Mock(), mock.Mock())
 
     def test_skips_lemmas_without_chapters(self):
-        result = _build_row_articles([{"chapters": []}], 1, 3, self.authors, "I,1")
+        result = self.picture._build_row_articles([{"chapters": []}], 1, 3, "I,1")
         compare([[], [], []], result)
 
     def test_assigns_color_to_columns_in_span(self):
@@ -123,7 +118,7 @@ class TestBuildRowArticles(BaseTestRegister):
             "proof_read": 3,
             "chapters": [{"start": 2, "end": 3, "author": "Abert"}],
         }
-        result = _build_row_articles([lemma], 1, 5, self.authors, "I,1")
+        result = self.picture._build_row_articles([lemma], 1, 5, "I,1")
         compare([[], [COLOR_GREEN], [COLOR_GREEN], [], []], result)
 
     def test_uses_start_when_end_missing_and_no_following_span(self):
@@ -132,13 +127,13 @@ class TestBuildRowArticles(BaseTestRegister):
             "proof_read": 2,
             "chapters": [{"start": 2, "author": "Abert"}],
         }
-        result = _build_row_articles([lemma], 1, 5, self.authors, "I,1")
+        result = self.picture._build_row_articles([lemma], 1, 5, "I,1")
         compare([[], [COLOR_YELLOW], [COLOR_YELLOW], [COLOR_YELLOW], [COLOR_YELLOW]], result)
 
     def test_open_ended_span_clipped_to_next_span_start(self):
         first = {"proof_read": 2, "chapters": [{"start": 1, "author": "Abert"}]}
         second = {"proof_read": 3, "chapters": [{"start": 4, "end": 4, "author": "Abert"}]}
-        result = _build_row_articles([first, second], 1, 5, self.authors, "I,1")
+        result = self.picture._build_row_articles([first, second], 1, 5, "I,1")
         compare(
             [[COLOR_YELLOW], [COLOR_YELLOW], [COLOR_YELLOW], [COLOR_GREEN], []],
             result,
@@ -152,7 +147,7 @@ class TestBuildRowArticles(BaseTestRegister):
             "proof_read": 3,
             "chapters": [{"start": 5, "end": 9, "author": "Abert"}],
         }
-        result = _build_row_articles([open_ended, long_span], 1, 10, self.authors, "I,1")
+        result = self.picture._build_row_articles([open_ended, long_span], 1, 10, "I,1")
         compare(
             [
                 [],
@@ -181,7 +176,7 @@ class TestBuildRowArticles(BaseTestRegister):
         open_ended = {"proof_read": 2, "chapters": [{"start": 5, "author": "Abert"}]}
         far = {"proof_read": 3, "chapters": [{"start": 12, "end": 12, "author": "Abert"}]}
         # Order matters: long_span first ensures it sorts before open_ended at col 5.
-        result = _build_row_articles([long_span, open_ended, far], 1, 13, self.authors, "I,1")
+        result = self.picture._build_row_articles([long_span, open_ended, far], 1, 13, "I,1")
         expected = [
             [],
             [],
@@ -202,7 +197,7 @@ class TestBuildRowArticles(BaseTestRegister):
     def test_overlapping_spans_stack_colors(self):
         first = {"proof_read": 3, "chapters": [{"start": 1, "end": 3, "author": "Abert"}]}
         second = {"proof_read": 2, "chapters": [{"start": 2, "end": 4, "author": "Abert"}]}
-        result = _build_row_articles([first, second], 1, 4, self.authors, "I,1")
+        result = self.picture._build_row_articles([first, second], 1, 4, "I,1")
         compare(
             [[COLOR_GREEN], [COLOR_GREEN, COLOR_YELLOW], [COLOR_GREEN, COLOR_YELLOW], [COLOR_YELLOW]],
             result,
@@ -211,7 +206,7 @@ class TestBuildRowArticles(BaseTestRegister):
     def test_columns_outside_volume_window_are_clipped(self):
         # Span 1..10 but window only covers columns 3..5.
         lemma = {"proof_read": 3, "chapters": [{"start": 1, "end": 10, "author": "Abert"}]}
-        result = _build_row_articles([lemma], 3, 3, self.authors, "I,1")
+        result = self.picture._build_row_articles([lemma], 3, 3, "I,1")
         compare([[COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN]], result)
 
     def test_multiple_chapters_use_widest_extent(self):
@@ -222,21 +217,21 @@ class TestBuildRowArticles(BaseTestRegister):
                 {"start": 4, "end": 5, "author": "Abert"},
             ],
         }
-        result = _build_row_articles([lemma], 1, 6, self.authors, "I,1")
+        result = self.picture._build_row_articles([lemma], 1, 6, "I,1")
         compare([[], [], [], [COLOR_GREEN], [COLOR_GREEN], []], result)
 
 
 class TestLoadFont:
     def test_returns_a_font_object(self):
-        font = _load_font()
+        font = ProofReadPicture._load_font()
         assert font is not None
 
     def test_falls_back_to_default_when_truetype_unavailable(self):
         with mock.patch(
-            "service.ws_re.register.statistic.ImageFont.truetype",
+            "service.ws_re.register.statistic.picture.ImageFont.truetype",
             side_effect=OSError,
         ):
-            font = _load_font()
+            font = ProofReadPicture._load_font()
         compare(True, isinstance(font, (ImageFont.ImageFont, ImageFont.FreeTypeFont)))
 
 
@@ -246,11 +241,11 @@ class TestCreatePicture(BaseTestRegister):
 
     def test_creates_png_with_expected_dimensions(self):
         volume = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="10")
-        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
-                create_picture(out_path)
+                ProofReadPicture(mock.Mock(), mock.Mock()).create(out_path)
                 compare(True, out_path.exists())
                 with Image.open(out_path) as image:
                     compare("PNG", image.format)
@@ -260,22 +255,22 @@ class TestCreatePicture(BaseTestRegister):
         # The volume without columns is skipped; only I,1 contributes a row.
         volume_with_columns = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="5")
         volume_no_columns = Volume(name="R", year=1980, data_item="Q9")
-        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume_with_columns, volume_no_columns]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
-                create_picture(out_path)
+                ProofReadPicture(mock.Mock(), mock.Mock()).create(out_path)
                 with Image.open(out_path) as image:
                     compare((LABEL_WIDTH + 5, HEADER_HEIGHT + LINE_HEIGHT), image.size)
 
     def test_skips_volumes_without_json_file(self):
         present = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column="5")
         missing = Volume(name="II,1", year=1896, data_item="Q2", start_column="1", end_column="5")
-        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [present, missing]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
-                create_picture(out_path)
+                ProofReadPicture(mock.Mock(), mock.Mock()).create(out_path)
                 with Image.open(out_path) as image:
                     # Only one row (the present volume) is rendered.
                     compare(HEADER_HEIGHT + LINE_HEIGHT, image.size[1])
@@ -291,14 +286,14 @@ class TestCreatePicture(BaseTestRegister):
                 "chapters": [{"start": 1, "end": 6, "author": "Abert"}],
             }
         ]
-        json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
+        json_file = Path(__file__).parent.parent.joinpath("mock_data", "I_1.json")
         with open(json_file, "w", encoding="utf-8") as fp:
             json.dump(lemmas, fp)
-        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
-                create_picture(out_path)
+                ProofReadPicture(mock.Mock(), mock.Mock()).create(out_path)
                 with Image.open(out_path) as image:
                     pixels = image.load()
                     # Bar pixels are green inside the span.
@@ -329,14 +324,14 @@ class TestCreatePicture(BaseTestRegister):
                 "chapters": [{"start": 51, "end": 55, "author": "Abert"}],
             },
         ]
-        json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
+        json_file = Path(__file__).parent.parent.joinpath("mock_data", "I_1.json")
         with open(json_file, "w", encoding="utf-8") as fp:
             json.dump(lemmas, fp)
-        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
-                create_picture(out_path)
+                ProofReadPicture(mock.Mock(), mock.Mock()).create(out_path)
                 with Image.open(out_path) as image:
                     pixels = image.load()
                     bar_y = HEADER_HEIGHT + 1
@@ -369,16 +364,16 @@ class TestCreatePicture(BaseTestRegister):
                 "chapters": [{"start": 1439, "end": 1700, "author": "Abert"}],
             }
         ]
-        mock_dir = Path(__file__).parent.joinpath("mock_data")
+        mock_dir = Path(__file__).parent.parent.joinpath("mock_data")
         with open(mock_dir.joinpath("I_1.json"), "w", encoding="utf-8") as fp:
             json.dump(lemmas_a, fp)
         with open(mock_dir.joinpath("I_2.json"), "w", encoding="utf-8") as fp:
             json.dump(lemmas_b, fp)
-        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume_a, volume_b]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
-                create_picture(out_path)
+                ProofReadPicture(mock.Mock(), mock.Mock()).create(out_path)
                 with Image.open(out_path) as image:
                     pixels = image.load()
                     row_block = HEADER_HEIGHT + LINE_HEIGHT
@@ -417,14 +412,14 @@ class TestCreatePicture(BaseTestRegister):
                 "chapters": [{"start": 1, "end": 250, "author": "Abert"}],
             }
         ]
-        json_file = Path(__file__).parent.joinpath("mock_data", "I_1.json")
+        json_file = Path(__file__).parent.parent.joinpath("mock_data", "I_1.json")
         with open(json_file, "w", encoding="utf-8") as fp:
             json.dump(lemmas, fp)
-        with mock.patch("service.ws_re.register.statistic.Volumes") as volumes_mock:
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
             volumes_mock.return_value.all_volumes = [volume]
             with tempfile.TemporaryDirectory() as tmp_dir:
                 out_path = Path(tmp_dir).joinpath("out.png")
-                create_picture(out_path)
+                ProofReadPicture(mock.Mock(), mock.Mock()).create(out_path)
                 with Image.open(out_path) as image:
                     pixels = image.load()
                     bar_y = HEADER_HEIGHT + 1
