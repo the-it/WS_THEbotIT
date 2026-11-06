@@ -1,0 +1,12 @@
+{
+ "license": "CC0-1.0",
+ "version": 1,
+ "type": "area",
+ "title": {
+  "de": "Paulys Realencyclopädie: ${unit_de} nach Bearbeitungsstand${title_suffix_de}",
+  "en": "Paulys Realencyclopädie: ${unit_en} by proofreading status${title_suffix_en}"
+ },
+ "xAxis": {"title": {"de": "Datum", "en": "Date"}},
+ "yAxis": {"title": {"de": "${unit_de}", "en": "${axis_en}"}},
+ "source": "${name}.tab"
+}
