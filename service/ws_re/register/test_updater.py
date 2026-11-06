@@ -639,6 +639,85 @@ class TestBugUpdates(BaseTestRegister):
         compare(7, len(register.lemmas))
         compare("Symmachia 3a", str(register.lemmas[6].lemma))
 
+    def test_self_supplement_as_first_lemma(self):
+        # RE:Praefectura, the first occurrence is the first lemma of XXII,2, the VORGÄNGER is in XXII,1
+        copy_tst_data("praefectura_bug", "XXII_2")
+        register = VolumeRegister(Volumes()["XXII,2"], Authors())
+        update_dict_1 = {
+            "lemma": "Praefectura",
+            "previous": "Potitus 5",
+            "next": "praefectus",
+            "proof_read": 3,
+            "chapters": [{"start": 1257, "end": 1257}],
+        }
+        update_dict_2 = {
+            "lemma": "Praefectura",
+            "previous": "Poseidonia 3",
+            "next": "Praefectus Aegypti",
+            "proof_read": 1,
+            "chapters": [{"start": 2347, "end": 2353}],
+        }
+        with Updater(register) as updater:
+            compare(
+                "update_first_lemma_self_supplement",
+                updater.update_lemma(update_dict_1, [], self_supplement=True),
+            )
+            compare("update_pre_and_post_exists", updater.update_lemma(update_dict_2, [], self_supplement=True))
+        # both lemmas are updated in place, no new one is created
+        compare(6, len(register.lemmas))
+        compare(3, register.lemmas[0].proof_read)
+        compare("Potitus 5", register.lemmas[0].previous)
+        compare("praefectus", register.lemmas[0].next)
+        compare("Praefectura", register.lemmas[1].previous)
+        compare(1, register.lemmas[4].proof_read)
+
+    def test_self_supplement_as_first_lemma_without_previous(self):
+        copy_tst_data("praefectura_bug", "XXII_2")
+        register = VolumeRegister(Volumes()["XXII,2"], Authors())
+        update_dict = {"lemma": "Praefectura", "next": "praefectus", "proof_read": 3}
+        with Updater(register) as updater:
+            compare(
+                "update_first_lemma_self_supplement",
+                updater.update_lemma(update_dict, ["previous"], self_supplement=True),
+            )
+        compare(6, len(register.lemmas))
+        compare(3, register.lemmas[0].proof_read)
+        self.assertIsNone(register.lemmas[0].previous)
+
+    def test_self_supplement_as_first_lemma_insert(self):
+        # same as above, but the first occurrence isn't part of the register yet
+        copy_tst_data("praefectura_bug_missing", "XXII_2")
+        register = VolumeRegister(Volumes()["XXII,2"], Authors())
+        update_dict = {
+            "lemma": "Praefectura",
+            "previous": "Potitus 5",
+            "next": "praefectus",
+            "proof_read": 3,
+            "chapters": [{"start": 1257, "end": 1257}],
+        }
+        with Updater(register) as updater:
+            compare(
+                "update_first_lemma_self_supplement",
+                updater.update_lemma(update_dict, [], self_supplement=True),
+            )
+        compare(6, len(register.lemmas))
+        compare("Praefectura", str(register.lemmas[0].lemma))
+        compare(3, register.lemmas[0].proof_read)
+        compare("Praefectura", register.lemmas[1].previous)
+
+    def test_self_supplement_as_first_lemma_next_mismatch(self):
+        # a NACHFOLGER that matches neither of the two first lemmas is a data error, don't guess
+        copy_tst_data("praefectura_bug", "XXII_2")
+        register = VolumeRegister(Volumes()["XXII,2"], Authors())
+        update_dict = {"lemma": "Praefectura", "previous": "Potitus 5", "next": "praefericulum", "proof_read": 3}
+        with (
+            self.assertRaisesRegex(RegisterException, "matches the NACHFOLGER"),
+            Updater(register) as updater,
+        ):
+            updater.update_lemma(update_dict, [], self_supplement=True)
+        compare(6, len(register.lemmas))
+        self.assertIsNone(register.lemmas[0].proof_read)
+
 
 @ddt
 class TestMissingIndices(BaseTestRegister):
