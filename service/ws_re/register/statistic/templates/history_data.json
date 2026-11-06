@@ -1,8 +1,8 @@
 {
  "license": "CC0-1.0",
  "description": {
-  "de": "Anzahl der ${counted_de} der Paulys Realencyclopädie der classischen Altertumswissenschaft auf de.wikisource nach Bearbeitungsstand, jeweils zum Ende eines Quartals",
-  "en": "Number of ${counted_en} of Paulys Realencyclopädie der classischen Altertumswissenschaft on de.wikisource by proofreading status, at the end of every quarter"
+  "de": "Anzahl der ${counted_de} der Paulys Realencyclopädie der classischen Altertumswissenschaft auf de.wikisource nach Bearbeitungsstand, ${interval_de}",
+  "en": "Number of ${counted_en} of Paulys Realencyclopädie der classischen Altertumswissenschaft on de.wikisource by proofreading status, ${interval_en}"
  },
  "sources": "Erzeugt von THEbotIT aus dem Register, siehe [[:s:de:${statistic_page}]]",
  "schema": {

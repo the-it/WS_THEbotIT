@@ -6,3 +6,21 @@
 Jeder Artikel zählt mit seinen Anteilen an den Spalten, über die er sich erstreckt. Teilen sich mehrere Artikel eine Spalte, erhält jeder Artikel den gleichen Anteil an dieser Spalte. Eine Spalte ist also nur dann vollständig fertig, wenn alle ihre Artikel fertig sind.
 
 {{#chart:${column_chart}.chart}}
+
+=== Bände ===
+[[Datei:${picture}|ohne|Bearbeitungsstand der Spalten aller Bände]]
+
+=== Daten ===
+${table}
+
+== Bearbeitungsstand im laufenden Jahr ==
+Stand an jedem Sonntag des laufenden Jahres.
+
+=== Artikel ===
+{{#chart:${article_detail_chart}.chart}}
+
+=== Spalten ===
+{{#chart:${column_detail_chart}.chart}}
+
+=== Daten ===
+${detail_table}

@@ -4,10 +4,21 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 from pywikibot import FilePage
+from pywikibot.exceptions import APIError
 from pywikibot.site import BaseSite
 
 from service.ws_re.register.authors import Authors
-from service.ws_re.register.statistic.base import SUMMARY, lemmas_per_column, load_volume_lemmas
+from service.ws_re.register.statistic.base import (
+    AREA_OPACITY,
+    CHART_PALETTE,
+    SUMMARY,
+    Color,
+    current_state,
+    hex_to_rgb,
+    lemmas_per_column,
+    load_volume_lemmas,
+    mix_with_white,
+)
 from tools.bots.logger import WikiLogger
 
 LINE_HEIGHT = 20
@@ -17,23 +28,26 @@ HEADER_HEIGHT = 8
 COLUMN_GRID_INTERVAL = 50
 COLUMN_LABEL_FONT_SIZE = 7
 
-COLOR_GREEN = (102, 153, 102)
-COLOR_YELLOW = (255, 215, 0)
-COLOR_RED = (170, 0, 0)
-COLOR_LIGHT_RED = (255, 130, 130)
-COLOR_UNVOLLSTAENDIG = (212, 65, 65)  # midpoint between COLOR_RED and COLOR_LIGHT_RED
+# the states have the colors of their series in the history charts
+COLOR_ERFASST = hex_to_rgb(CHART_PALETTE[0])
+COLOR_KORRIGIERT = hex_to_rgb(CHART_PALETTE[1])
+COLOR_UNKORRIGIERT = hex_to_rgb(CHART_PALETTE[2])
+COLOR_FERTIG = hex_to_rgb(CHART_PALETTE[3])
+# erfasst articles, that are not in the public domain yet, get a lighter tone of COLOR_ERFASST. The tone is the area
+# color of the chart for articles entering the public domain next year and fades to OPACITY_PROTECTED_LATEST for
+# articles entering it in PROTECTED_GRADIENT_YEARS years or later.
+OPACITY_PROTECTED_LATEST = 0.15
+PROTECTED_GRADIENT_YEARS = 60
 COLOR_BLACK = (0, 0, 0)
 COLOR_WHITE = (255, 255, 255)
 COLOR_BACKGROUND = (255, 255, 255)
 COLOR_TEXT = (0, 0, 0)
 
-Color = tuple[int, int, int]
-
 
 class ProofReadPicture:
     """Picture of the proof read state of every column of every volume, uploaded to wikisource."""
 
-    WIKI_FILE_NAME = "RE Register Statistik.png"
+    WIKI_FILE_NAME = "Pauly-Wissowa stats overview.png"
 
     def __init__(self, wiki: BaseSite, logger: WikiLogger):
         self.wiki = wiki
@@ -47,11 +61,18 @@ class ProofReadPicture:
             self.create(output_path)
             self.logger.info(f"Upload {self.WIKI_FILE_NAME} to wikisource.")
             file_page = FilePage(self.wiki, f"File:{self.WIKI_FILE_NAME}")
-            file_page.upload(str(output_path), comment=SUMMARY, ignore_warnings=True)
+            try:
+                file_page.upload(str(output_path), comment=SUMMARY, ignore_warnings=True)
+            except APIError as error:
+                # the API refuses an upload identical to the current version, the picture is up to date then
+                if error.code != "fileexists-no-change":
+                    raise
+                self.logger.info(f"{self.WIKI_FILE_NAME} is up to date.")
 
-    def _is_public_domain(self, lemma: dict, volume_name: str) -> bool:
+    def _public_domain_year(self, lemma: dict, volume_name: str) -> int:
+        """The year the lemma enters the public domain, 0 if it has no known authors or no creative height."""
         if lemma.get("no_creative_height"):
-            return True
+            return 0
         max_pd_year = 0
         for chapter in lemma.get("chapters", []):
             author_name = chapter.get("author")
@@ -60,24 +81,30 @@ class ProofReadPicture:
             for mapped in self.authors.get_author_by_mapping(author_name, volume_name):
                 if mapped.year_public_domain:
                     max_pd_year = max(max_pd_year, mapped.year_public_domain)
-        if max_pd_year == 0:
-            return True
-        return max_pd_year <= datetime.now().year
+        return max_pd_year
+
+    @staticmethod
+    def _color_protected(years_to_public_domain: int) -> Color:
+        """
+        Color of an erfasst article, that enters the public domain in the given number of years (at least 1). The
+        later it enters the public domain, the lighter the color.
+        """
+        fade = min(max(years_to_public_domain - 1, 0) / (PROTECTED_GRADIENT_YEARS - 1), 1.0)
+        return mix_with_white(CHART_PALETTE[0], AREA_OPACITY - fade * (AREA_OPACITY - OPACITY_PROTECTED_LATEST))
 
     def _color_for_lemma(self, lemma: dict, volume_name: str) -> Color:
-        proof_read = lemma.get("proof_read")
+        proof_read = current_state(lemma)
         if proof_read == 3:
-            return COLOR_GREEN
+            return COLOR_FERTIG
         if proof_read == 2:
-            return COLOR_YELLOW
+            return COLOR_KORRIGIERT
         if proof_read == 1:
-            if not self._is_public_domain(lemma, volume_name):
-                return COLOR_LIGHT_RED
-            return COLOR_RED
+            return COLOR_UNKORRIGIERT
         if proof_read == 0:
-            if not self._is_public_domain(lemma, volume_name):
-                return COLOR_LIGHT_RED
-            return COLOR_UNVOLLSTAENDIG
+            years_to_public_domain = self._public_domain_year(lemma, volume_name) - datetime.now().year
+            if years_to_public_domain > 0:
+                return self._color_protected(years_to_public_domain)
+            return COLOR_ERFASST
         return COLOR_BLACK
 
     def _build_row_articles(

@@ -5,16 +5,16 @@ from pathlib import Path
 from unittest import mock
 
 from PIL import Image, ImageFont
+from pywikibot.exceptions import APIError
 from testfixtures import compare
 
 from service.ws_re.register.statistic.picture import (
     COLOR_BLACK,
-    COLOR_GREEN,
-    COLOR_LIGHT_RED,
-    COLOR_RED,
-    COLOR_UNVOLLSTAENDIG,
+    COLOR_ERFASST,
+    COLOR_FERTIG,
+    COLOR_KORRIGIERT,
+    COLOR_UNKORRIGIERT,
     COLOR_WHITE,
-    COLOR_YELLOW,
     HEADER_HEIGHT,
     LABEL_WIDTH,
     LINE_HEIGHT,
@@ -24,82 +24,122 @@ from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.volumes import Volume
 
 
-class TestIsPublicDomain(BaseTestRegister):
+class TestUpdate(BaseTestRegister):
+    def setUp(self):
+        self.logger = mock.Mock()
+        self.picture = ProofReadPicture(mock.Mock(), self.logger)
+
+    def _update(self, upload_error: Exception | None) -> mock.Mock:
+        with (
+            mock.patch.object(self.picture, "create"),
+            mock.patch("service.ws_re.register.statistic.picture.FilePage") as file_page_mock,
+        ):
+            file_page_mock.return_value.upload.side_effect = upload_error
+            self.picture.update()
+        return file_page_mock
+
+    def test_uploads_the_picture(self):
+        file_page_mock = self._update(None)
+        compare("File:Pauly-Wissowa stats overview.png", file_page_mock.call_args.args[1])
+        compare(1, file_page_mock.return_value.upload.call_count)
+
+    def test_unchanged_picture_is_up_to_date(self):
+        self._update(APIError("fileexists-no-change", "The upload is an exact duplicate"))
+        self.logger.info.assert_called_with("Pauly-Wissowa stats overview.png is up to date.")
+
+    def test_other_upload_errors_are_raised(self):
+        with self.assertRaises(APIError):
+            self._update(APIError("permissiondenied", "no"))
+
+
+class TestPublicDomainYear(BaseTestRegister):
     def setUp(self):
         self.picture = ProofReadPicture(mock.Mock(), mock.Mock())
 
     def test_no_creative_height_short_circuits(self):
-        # year_public_domain of Herman Abel (death 1998) would be 2069 — would normally not be PD,
-        # but no_creative_height bypasses the author check.
+        # year_public_domain of Herman Abel (death 1998) would be 2069, but no_creative_height bypasses the author
+        # check.
         lemma = {
             "no_creative_height": True,
             "chapters": [{"start": 1, "author": "Abel"}],
         }
-        compare(True, self.picture._is_public_domain(lemma, "I,1"))
+        compare(0, self.picture._public_domain_year(lemma, "I,1"))
 
-    def test_no_chapters_returns_true(self):
-        compare(True, self.picture._is_public_domain({"chapters": []}, "I,1"))
+    def test_no_chapters(self):
+        compare(0, self.picture._public_domain_year({"chapters": []}, "I,1"))
 
-    def test_chapter_without_author_returns_true(self):
+    def test_chapter_without_author(self):
         lemma = {"chapters": [{"start": 1}]}
-        compare(True, self.picture._is_public_domain(lemma, "I,1"))
+        compare(0, self.picture._public_domain_year(lemma, "I,1"))
 
-    def test_unknown_author_treated_as_public_domain(self):
-        # Unmapped author yields no Author objects, so max_pd_year stays 0 → True.
+    def test_unknown_author(self):
+        # Unmapped author yields no Author objects.
         lemma = {"chapters": [{"start": 1, "author": "Unknown"}]}
-        compare(True, self.picture._is_public_domain(lemma, "I,1"))
+        compare(0, self.picture._public_domain_year(lemma, "I,1"))
 
-    def test_author_in_public_domain(self):
-        # Abert death 1927 + 71 = 1998 ≤ current year → PD.
+    def test_author(self):
+        # Abert death 1927 + 71 = 1998.
         lemma = {"chapters": [{"start": 1, "author": "Abert"}]}
-        compare(True, self.picture._is_public_domain(lemma, "I,1"))
-
-    def test_author_not_in_public_domain(self):
-        # Herman Abel death 1998 + 71 = 2069 > current year → not PD.
-        lemma = {"chapters": [{"start": 1, "author": "Abel"}]}
-        compare(False, self.picture._is_public_domain(lemma, "I,1"))
+        compare(1998, self.picture._public_domain_year(lemma, "I,1"))
 
     def test_max_year_is_used_across_chapters(self):
-        # Abert (1998 PD) plus Abel (2069 PD) → max is 2069 → not PD.
+        # Abert (1998 PD) plus Abel (2069 PD) → max is 2069.
         lemma = {
             "chapters": [
                 {"start": 1, "author": "Abert"},
                 {"start": 2, "author": "Abel"},
             ]
         }
-        compare(False, self.picture._is_public_domain(lemma, "I,1"))
+        compare(2069, self.picture._public_domain_year(lemma, "I,1"))
 
     def test_volume_specific_mapping_is_respected(self):
         # For volume "XVI,1" the "Abel" mapping resolves to Abel_XVI,1 (death 1987 → PD 2058).
         lemma = {"chapters": [{"start": 1, "author": "Abel"}]}
-        compare(False, self.picture._is_public_domain(lemma, "XVI,1"))
+        compare(2058, self.picture._public_domain_year(lemma, "XVI,1"))
 
 
 class TestColorForLemma(BaseTestRegister):
     def setUp(self):
         self.picture = ProofReadPicture(mock.Mock(), mock.Mock())
 
-    def test_proof_read_3_is_green(self):
-        compare(COLOR_GREEN, self.picture._color_for_lemma({"proof_read": 3}, "I,1"))
+    def test_proof_read_3_is_fertig(self):
+        compare(COLOR_FERTIG, self.picture._color_for_lemma({"history": {"3": "200101"}}, "I,1"))
 
-    def test_proof_read_2_is_yellow(self):
-        compare(COLOR_YELLOW, self.picture._color_for_lemma({"proof_read": 2}, "I,1"))
+    def test_proof_read_2_is_korrigiert(self):
+        compare(COLOR_KORRIGIERT, self.picture._color_for_lemma({"history": {"2": "200101"}}, "I,1"))
 
-    def test_proof_read_1_public_domain_is_red(self):
-        lemma = {"proof_read": 1, "no_creative_height": True}
-        compare(COLOR_RED, self.picture._color_for_lemma(lemma, "I,1"))
+    def test_proof_read_1_is_unkorrigiert(self):
+        lemma = {"history": {"1": "200101"}, "no_creative_height": True}
+        compare(COLOR_UNKORRIGIERT, self.picture._color_for_lemma(lemma, "I,1"))
 
-    def test_proof_read_0_public_domain_is_unvollstaendig(self):
-        lemma = {"proof_read": 0, "no_creative_height": True}
-        compare(COLOR_UNVOLLSTAENDIG, self.picture._color_for_lemma(lemma, "I,1"))
+    def test_proof_read_1_not_public_domain_is_unkorrigiert(self):
+        lemma = {"history": {"1": "200101"}, "chapters": [{"start": 1, "author": "Abel"}]}
+        compare(COLOR_UNKORRIGIERT, self.picture._color_for_lemma(lemma, "I,1"))
 
-    def test_proof_read_1_not_public_domain_is_light_red(self):
-        lemma = {"proof_read": 1, "chapters": [{"start": 1, "author": "Abel"}]}
-        compare(COLOR_LIGHT_RED, self.picture._color_for_lemma(lemma, "I,1"))
+    def test_proof_read_0_public_domain_is_erfasst(self):
+        lemma = {"history": {"0": "200101"}, "chapters": [{"start": 1, "author": "Abert"}]}
+        compare(COLOR_ERFASST, self.picture._color_for_lemma(lemma, "I,1"))
 
-    def test_proof_read_0_not_public_domain_is_light_red(self):
-        lemma = {"proof_read": 0, "chapters": [{"start": 1, "author": "Abel"}]}
-        compare(COLOR_LIGHT_RED, self.picture._color_for_lemma(lemma, "I,1"))
+    def test_proof_read_0_not_public_domain_is_protected(self):
+        # Abel enters the public domain in 2069
+        lemma = {"history": {"0": "200101"}, "chapters": [{"start": 1, "author": "Abel"}]}
+        with mock.patch("service.ws_re.register.statistic.picture.datetime") as datetime_mock:
+            datetime_mock.now.return_value.year = 2068
+            compare((129, 160, 226), self.picture._color_for_lemma(lemma, "I,1"))
+
+    def test_color_protected_gradient(self):
+        # entering the public domain next year: the area color of erfasst in the chart (#81a0e2)
+        compare((129, 160, 226), ProofReadPicture._color_protected(1))
+        # in the middle of the gradient it is lighter
+        compare((178, 197, 237), ProofReadPicture._color_protected(30))
+        # at the end of the gradient and later: the lightest tone
+        compare((228, 235, 249), ProofReadPicture._color_protected(60))
+        compare((228, 235, 249), ProofReadPicture._color_protected(100))
+
+    def test_latest_state_of_history_is_used(self):
+        # the proof_read property is ignored, the history decides
+        lemma = {"proof_read": 3, "history": {"0": "070101", "1": "080101", "2": "090101"}}
+        compare(COLOR_KORRIGIERT, self.picture._color_for_lemma(lemma, "I,1"))
 
     def test_missing_proof_read_falls_through_to_black(self):
         compare(COLOR_BLACK, self.picture._color_for_lemma({}, "I,1"))
@@ -115,36 +155,36 @@ class TestBuildRowArticles(BaseTestRegister):
 
     def test_assigns_color_to_columns_in_span(self):
         lemma = {
-            "proof_read": 3,
+            "history": {"3": "200101"},
             "chapters": [{"start": 2, "end": 3, "author": "Abert"}],
         }
         result = self.picture._build_row_articles([lemma], 1, 5, "I,1")
-        compare([[], [COLOR_GREEN], [COLOR_GREEN], [], []], result)
+        compare([[], [COLOR_FERTIG], [COLOR_FERTIG], [], []], result)
 
     def test_uses_start_when_end_missing_and_no_following_span(self):
         # Open-ended last chapter with no following span → extends to volume_end.
         lemma = {
-            "proof_read": 2,
+            "history": {"2": "200101"},
             "chapters": [{"start": 2, "author": "Abert"}],
         }
         result = self.picture._build_row_articles([lemma], 1, 5, "I,1")
-        compare([[], [COLOR_YELLOW], [COLOR_YELLOW], [COLOR_YELLOW], [COLOR_YELLOW]], result)
+        compare([[], [COLOR_KORRIGIERT], [COLOR_KORRIGIERT], [COLOR_KORRIGIERT], [COLOR_KORRIGIERT]], result)
 
     def test_open_ended_span_clipped_to_next_span_start(self):
-        first = {"proof_read": 2, "chapters": [{"start": 1, "author": "Abert"}]}
-        second = {"proof_read": 3, "chapters": [{"start": 4, "end": 4, "author": "Abert"}]}
+        first = {"history": {"2": "200101"}, "chapters": [{"start": 1, "author": "Abert"}]}
+        second = {"history": {"3": "200101"}, "chapters": [{"start": 4, "end": 4, "author": "Abert"}]}
         result = self.picture._build_row_articles([first, second], 1, 5, "I,1")
         compare(
-            [[COLOR_YELLOW], [COLOR_YELLOW], [COLOR_YELLOW], [COLOR_GREEN], []],
+            [[COLOR_KORRIGIERT], [COLOR_KORRIGIERT], [COLOR_KORRIGIERT], [COLOR_FERTIG], []],
             result,
         )
 
     def test_open_ended_span_does_not_swallow_co_starting_long_span(self):
         # Regression: an open-ended lemma at column 5 must not be extended through a
         # closed span that begins on the same column.
-        open_ended = {"proof_read": 2, "chapters": [{"start": 5, "author": "Abert"}]}
+        open_ended = {"history": {"2": "200101"}, "chapters": [{"start": 5, "author": "Abert"}]}
         long_span = {
-            "proof_read": 3,
+            "history": {"3": "200101"},
             "chapters": [{"start": 5, "end": 9, "author": "Abert"}],
         }
         result = self.picture._build_row_articles([open_ended, long_span], 1, 10, "I,1")
@@ -154,11 +194,11 @@ class TestBuildRowArticles(BaseTestRegister):
                 [],
                 [],
                 [],
-                [COLOR_YELLOW, COLOR_GREEN],
-                [COLOR_GREEN],
-                [COLOR_GREEN],
-                [COLOR_GREEN],
-                [COLOR_GREEN],
+                [COLOR_KORRIGIERT, COLOR_FERTIG],
+                [COLOR_FERTIG],
+                [COLOR_FERTIG],
+                [COLOR_FERTIG],
+                [COLOR_FERTIG],
                 [],
             ],
             result,
@@ -170,11 +210,11 @@ class TestBuildRowArticles(BaseTestRegister):
         # open span must still be clamped to its own start — not extended across the
         # closed article's body to the next sorted neighbour.
         long_span = {
-            "proof_read": 3,
+            "history": {"3": "200101"},
             "chapters": [{"start": 5, "end": 9, "author": "Abert"}],
         }
-        open_ended = {"proof_read": 2, "chapters": [{"start": 5, "author": "Abert"}]}
-        far = {"proof_read": 3, "chapters": [{"start": 12, "end": 12, "author": "Abert"}]}
+        open_ended = {"history": {"2": "200101"}, "chapters": [{"start": 5, "author": "Abert"}]}
+        far = {"history": {"3": "200101"}, "chapters": [{"start": 12, "end": 12, "author": "Abert"}]}
         # Order matters: long_span first ensures it sorts before open_ended at col 5.
         result = self.picture._build_row_articles([long_span, open_ended, far], 1, 13, "I,1")
         expected = [
@@ -182,43 +222,43 @@ class TestBuildRowArticles(BaseTestRegister):
             [],
             [],
             [],
-            [COLOR_GREEN, COLOR_YELLOW],  # col 5 — both articles begin here
-            [COLOR_GREEN],
-            [COLOR_GREEN],
-            [COLOR_GREEN],
-            [COLOR_GREEN],  # cols 6–9 — long span only
+            [COLOR_FERTIG, COLOR_KORRIGIERT],  # col 5 — both articles begin here
+            [COLOR_FERTIG],
+            [COLOR_FERTIG],
+            [COLOR_FERTIG],
+            [COLOR_FERTIG],  # cols 6–9 — long span only
             [],
             [],  # cols 10–11 — gap
-            [COLOR_GREEN],  # col 12 — far span
+            [COLOR_FERTIG],  # col 12 — far span
             [],  # col 13
         ]
         compare(expected, result)
 
     def test_overlapping_spans_stack_colors(self):
-        first = {"proof_read": 3, "chapters": [{"start": 1, "end": 3, "author": "Abert"}]}
-        second = {"proof_read": 2, "chapters": [{"start": 2, "end": 4, "author": "Abert"}]}
+        first = {"history": {"3": "200101"}, "chapters": [{"start": 1, "end": 3, "author": "Abert"}]}
+        second = {"history": {"2": "200101"}, "chapters": [{"start": 2, "end": 4, "author": "Abert"}]}
         result = self.picture._build_row_articles([first, second], 1, 4, "I,1")
         compare(
-            [[COLOR_GREEN], [COLOR_GREEN, COLOR_YELLOW], [COLOR_GREEN, COLOR_YELLOW], [COLOR_YELLOW]],
+            [[COLOR_FERTIG], [COLOR_FERTIG, COLOR_KORRIGIERT], [COLOR_FERTIG, COLOR_KORRIGIERT], [COLOR_KORRIGIERT]],
             result,
         )
 
     def test_columns_outside_volume_window_are_clipped(self):
         # Span 1..10 but window only covers columns 3..5.
-        lemma = {"proof_read": 3, "chapters": [{"start": 1, "end": 10, "author": "Abert"}]}
+        lemma = {"history": {"3": "200101"}, "chapters": [{"start": 1, "end": 10, "author": "Abert"}]}
         result = self.picture._build_row_articles([lemma], 3, 3, "I,1")
-        compare([[COLOR_GREEN], [COLOR_GREEN], [COLOR_GREEN]], result)
+        compare([[COLOR_FERTIG], [COLOR_FERTIG], [COLOR_FERTIG]], result)
 
     def test_multiple_chapters_use_widest_extent(self):
         lemma = {
-            "proof_read": 3,
+            "history": {"3": "200101"},
             "chapters": [
                 {"start": 4, "end": 4, "author": "Abert"},
                 {"start": 4, "end": 5, "author": "Abert"},
             ],
         }
         result = self.picture._build_row_articles([lemma], 1, 6, "I,1")
-        compare([[], [], [], [COLOR_GREEN], [COLOR_GREEN], []], result)
+        compare([[], [], [], [COLOR_FERTIG], [COLOR_FERTIG], []], result)
 
 
 class TestLoadFont:
@@ -281,7 +321,7 @@ class TestCreatePicture(BaseTestRegister):
         lemmas = [
             {
                 "lemma": "Solo",
-                "proof_read": 3,
+                "history": {"3": "200101"},
                 "no_creative_height": True,
                 "chapters": [{"start": 1, "end": 6, "author": "Abert"}],
             }
@@ -297,8 +337,8 @@ class TestCreatePicture(BaseTestRegister):
                 with Image.open(out_path) as image:
                     pixels = image.load()
                     # Bar pixels are green inside the span.
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH, HEADER_HEIGHT])
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 5, HEADER_HEIGHT])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH, HEADER_HEIGHT])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 5, HEADER_HEIGHT])
 
     def test_gridline_does_not_overwrite_marked_column_data(self):
         # Col 50 is the first marked column. Give it its own (yellow) lemma so
@@ -307,19 +347,19 @@ class TestCreatePicture(BaseTestRegister):
         lemmas = [
             {
                 "lemma": "Before",
-                "proof_read": 3,
+                "history": {"3": "200101"},
                 "no_creative_height": True,
                 "chapters": [{"start": 1, "end": 49, "author": "Abert"}],
             },
             {
                 "lemma": "Marked",
-                "proof_read": 2,
+                "history": {"2": "200101"},
                 "no_creative_height": True,
                 "chapters": [{"start": 50, "end": 50, "author": "Abert"}],
             },
             {
                 "lemma": "After",
-                "proof_read": 3,
+                "history": {"3": "200101"},
                 "no_creative_height": True,
                 "chapters": [{"start": 51, "end": 55, "author": "Abert"}],
             },
@@ -337,10 +377,10 @@ class TestCreatePicture(BaseTestRegister):
                     bar_y = HEADER_HEIGHT + 1
                     # Col 49 (offset 48) green, gridline gap (offset 49) white,
                     # col 50 (offset 50) yellow — preserved! — col 51 (offset 51) green.
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 48, bar_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 48, bar_y])
                     compare(COLOR_WHITE, pixels[LABEL_WIDTH + 49, bar_y])
-                    compare(COLOR_YELLOW, pixels[LABEL_WIDTH + 50, bar_y])
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 51, bar_y])
+                    compare(COLOR_KORRIGIERT, pixels[LABEL_WIDTH + 50, bar_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 51, bar_y])
 
     def test_each_row_has_its_own_header_and_gridline(self):
         # Two volumes with different start columns. Each row gets its own header
@@ -351,7 +391,7 @@ class TestCreatePicture(BaseTestRegister):
         lemmas_a = [
             {
                 "lemma": "A",
-                "proof_read": 3,
+                "history": {"3": "200101"},
                 "no_creative_height": True,
                 "chapters": [{"start": 1, "end": 250, "author": "Abert"}],
             }
@@ -359,7 +399,7 @@ class TestCreatePicture(BaseTestRegister):
         lemmas_b = [
             {
                 "lemma": "B",
-                "proof_read": 3,
+                "history": {"3": "200101"},
                 "no_creative_height": True,
                 "chapters": [{"start": 1439, "end": 1700, "author": "Abert"}],
             }
@@ -388,8 +428,8 @@ class TestCreatePicture(BaseTestRegister):
                     compare(COLOR_WHITE, pixels[LABEL_WIDTH + 100, bar_a_y])
                     compare(COLOR_WHITE, pixels[LABEL_WIDTH + 151, bar_a_y])
                     # Marked-column data is preserved (no overlap).
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 50, bar_a_y])
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 101, bar_a_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 50, bar_a_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 101, bar_a_y])
                     # Volume I,2 (start=1439): first marked column is 1450, at
                     # col_idx 11. Gap goes before it → offset 11. Next marked
                     # column 1500 sits 50 cols later, with one gap already
@@ -397,8 +437,8 @@ class TestCreatePicture(BaseTestRegister):
                     compare(COLOR_WHITE, pixels[LABEL_WIDTH + 11, bar_b_y])
                     compare(COLOR_WHITE, pixels[LABEL_WIDTH + 62, bar_b_y])
                     # Col 1450 data preserved at offset 12, col 1500 at offset 63.
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 12, bar_b_y])
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 63, bar_b_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 12, bar_b_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 63, bar_b_y])
 
     def test_draws_white_gridline_every_50_columns(self):
         # Bar wide enough to contain several gridlines (at columns 50, 100, …).
@@ -407,7 +447,7 @@ class TestCreatePicture(BaseTestRegister):
         lemmas = [
             {
                 "lemma": "Solo",
-                "proof_read": 3,
+                "history": {"3": "200101"},
                 "no_creative_height": True,
                 "chapters": [{"start": 1, "end": 250, "author": "Abert"}],
             }
@@ -429,6 +469,6 @@ class TestCreatePicture(BaseTestRegister):
                     compare(COLOR_WHITE, pixels[LABEL_WIDTH + 151, bar_y])
                     # Marked column data is preserved on the right side of the
                     # gap (col 50 at offset 50, col 100 at offset 101).
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 48, bar_y])
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 50, bar_y])
-                    compare(COLOR_GREEN, pixels[LABEL_WIDTH + 101, bar_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 48, bar_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 50, bar_y])
+                    compare(COLOR_FERTIG, pixels[LABEL_WIDTH + 101, bar_y])

@@ -1,3 +1,4 @@
+from datetime import date
 from unittest import mock
 
 import pytest
@@ -5,11 +6,15 @@ from testfixtures import compare
 
 from service.ws_re.register.statistic.base import (
     SUMMARY,
+    current_state,
+    history_entries,
     lemmas_per_column,
     load_volume_lemmas,
+    parse_datestamp,
     render_template,
     save_json_page,
     save_page,
+    state_at,
 )
 from service.ws_re.register.test_base import BaseTestRegister, copy_tst_data
 from service.ws_re.volumes import Volume
@@ -36,6 +41,30 @@ class TestLoadVolumeLemmas(BaseTestRegister):
         compare(True, len(result[0][1]) > 0)
 
 
+class TestHistory:
+    def test_parse_datestamp(self):
+        compare(date(2013, 3, 5), parse_datestamp("130305"))
+
+    def test_history_entries(self):
+        lemma = {"history": {"2": "120601", "0": "100101"}}
+        compare([(date(2010, 1, 1), 0), (date(2012, 6, 1), 2)], history_entries(lemma))
+        compare([], history_entries({}))
+        compare([], history_entries({"history": None}))
+
+    def test_state_at(self):
+        history = [(date(2010, 1, 1), 0), (date(2012, 6, 1), 2), (date(2015, 1, 1), 3)]
+        compare(None, state_at(history, date(2009, 12, 31)))
+        compare(0, state_at(history, date(2010, 1, 1)))
+        compare(2, state_at(history, date(2014, 12, 31)))
+        compare(3, state_at(history, date(2020, 1, 1)))
+        compare(None, state_at([], date(2020, 1, 1)))
+
+    def test_current_state(self):
+        # dropped back: the higher states were deleted, korrigiert carries the date of the drop
+        compare(2, current_state({"history": {"0": "070101", "2": "071001"}}))
+        compare(None, current_state({"lemma": "never created"}))
+
+
 class TestLemmasPerColumn:
     def test_shared_and_open_ended(self):
         lemmas = [
@@ -50,13 +79,12 @@ class TestLemmasPerColumn:
 
 class TestRenderTemplate:
     def test_substitutes_placeholders(self):
-        text = render_template("statistic_page.wiki", article_chart="A", column_chart="C")
-        compare(True, "{{#chart:A.chart}}" in text)
-        compare(True, "{{#chart:C.chart}}" in text)
+        text = render_template("history_table.wiki", groups="G", columns="C", rows="R")
+        compare('{| class="wikitable" style="text-align:right"\n! rowspan="2" | Datum\nG\n|-\nC\nR\n|}\n', text)
 
     def test_missing_value_raises(self):
         with pytest.raises(KeyError):
-            render_template("statistic_page.wiki")
+            render_template("history_table.wiki", groups="G")
 
 
 class TestSavePage:

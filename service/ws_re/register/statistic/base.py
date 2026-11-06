@@ -1,5 +1,6 @@
 import json
 from collections.abc import Generator
+from datetime import date
 from pathlib import Path
 from string import Template
 
@@ -11,11 +12,65 @@ from tools.bots.logger import WikiLogger
 
 SUMMARY = "Bearbeitungsstand aktualisiert"
 TEMPLATE_PATH = Path(__file__).parent.joinpath("templates")
+# palette of the chart renderer of Extension:Chart (theme "categorical"), the n-th series of a chart gets the n-th
+# color. The picture uses the same colors.
+CHART_PALETTE = ("#4b77d6", "#eeb533", "#fd7865", "#80cdb3", "#269f4b", "#b0c1f0", "#9182c2", "#d9b4cd")
+# the chart renderer fills the areas with the color of the series at this opacity
+AREA_OPACITY = 0.7
+
+Color = tuple[int, int, int]
+
+
+def hex_to_rgb(color: str) -> Color:
+    """Converts a color like #4b77d6 to its channels (red, green, blue)."""
+    return int(color[1:3], 16), int(color[3:5], 16), int(color[5:7], 16)
+
+
+def mix_with_white(color: str, opacity: float) -> Color:
+    """The color drawn at the opacity on a white background."""
+    red, green, blue = (round(channel * opacity + 255 * (1 - opacity)) for channel in hex_to_rgb(color))
+    return red, green, blue
 
 
 def render_template(file_name: str, **values: str) -> str:
     """Reads a file of the templates folder and substitutes its placeholders (${name}) with the values."""
     return Template(TEMPLATE_PATH.joinpath(file_name).read_text(encoding="utf-8")).substitute(values)
+
+
+def parse_datestamp(datestamp: str) -> date:
+    """Converts a datestamp of the history (format yymmdd) to a date."""
+    return date(2000 + int(datestamp[0:2]), int(datestamp[2:4]), int(datestamp[4:6]))
+
+
+def history_entries(lemma: dict) -> list[tuple[date, int]]:
+    """
+    The history of a lemma records the date each proof read state was entered. If the lemma dropped back to a lower
+    state, the higher states were deleted.
+
+    :return: entries of the history as (date, state) sorted chronologically
+    """
+    history = lemma.get("history") or {}
+    return sorted((parse_datestamp(datestamp), int(state)) for state, datestamp in history.items())
+
+
+def state_at(entries: list[tuple[date, int]], day: date) -> int | None:
+    """
+    The state at a given day is the state of the latest entry of the history up to that day.
+
+    :param entries: entries of the history, see history_entries
+    :return: the state at the day, None if the article didn't exist at that day
+    """
+    state = None
+    for entry_date, entry_state in entries:
+        if entry_date > day:
+            break
+        state = entry_state
+    return state
+
+
+def current_state(lemma: dict) -> int | None:
+    """The current proof read state of the lemma according to its history, None if the article doesn't exist."""
+    return state_at(history_entries(lemma), date.max)
 
 
 def load_volume_lemmas() -> Generator[tuple[Volume, list[dict]]]:
