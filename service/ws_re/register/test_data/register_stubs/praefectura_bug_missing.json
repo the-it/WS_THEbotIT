@@ -1,0 +1,30 @@
+[
+  {
+    "lemma": "praefectus",
+    "next": "praefericulum",
+    "chapters": [{"start": 1257, "end": 1347}]
+  },
+  {
+    "lemma": "praefericulum",
+    "previous": "praefectus",
+    "next": "Poseidonia 3",
+    "chapters": [{"start": 1347, "end": 1348}]
+  },
+  {
+    "lemma": "Poseidonia 3",
+    "previous": "praefericulum",
+    "next": "Praefectura",
+    "chapters": [{"start": 2348, "end": 2348}]
+  },
+  {
+    "lemma": "Praefectura",
+    "previous": "Poseidonia 3",
+    "next": "Praefectus Aegypti",
+    "chapters": [{"start": 2347, "end": 2353}]
+  },
+  {
+    "lemma": "Praefectus Aegypti",
+    "previous": "Praefectura",
+    "chapters": [{"start": 2353, "end": 2377}]
+  }
+]
