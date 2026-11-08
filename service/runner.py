@@ -19,7 +19,7 @@ if __name__ == "__main__":
     SCHEDULER = BotScheduler(wiki=WS_WIKI, debug=False)
     SCHEDULER.daily_bots = [AuthorList, PoemList, ReImporter, ReScanner, ReRegisterPrinter, Finisher]
     SCHEDULER.weekly_bots = {
-        0: [ReStatistic],  # monday
+        0: [],  # monday
         1: [],
         2: [],
         3: [],
