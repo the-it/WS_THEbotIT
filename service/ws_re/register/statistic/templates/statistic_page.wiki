@@ -1,0 +1,32 @@
+{| style="width:100%; table-layout:fixed"
+| style="width:50%; vertical-align:top" | {{${navigation}}}
+| style="width:50%" | [[Datei:${picture}|rahmenlos|460px|Bearbeitungsstand der Spalten aller Bände]]
+|}
+
+== Fortschritt ==
+=== Artikel ===
+{{#chart:${article_chart}}}
+
+=== Spalten ===
+{{#chart:${column_chart}}}
+
+=== Daten ===
+<div class="mw-collapsible mw-collapsed">
+${table}
+</div>
+
+== Fortschritt ${year} ==
+{| style="width:100%; table-layout:fixed"
+! style="width:50%; text-align:left; font-size:1.2em" | Artikel
+! style="width:50%; text-align:left; font-size:1.2em" | Spalten
+|-
+| style="vertical-align:top" |
+{{#chart:${article_detail_chart}}}
+| style="vertical-align:top" |
+{{#chart:${column_detail_chart}}}
+|}
+
+=== Daten ===
+<div class="mw-collapsible mw-collapsed">
+${detail_table}
+</div>
