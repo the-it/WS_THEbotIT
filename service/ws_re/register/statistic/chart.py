@@ -9,6 +9,9 @@ from pywikibot.site import BaseSite
 from service.ws_re.register.statistic.base import (
     AREA_OPACITY,
     CHART_PALETTE,
+    PAST_YEARS,
+    STATISTIC_VOLUMES,
+    Color,
     history_entries,
     lemmas_per_column,
     load_volume_lemmas,
@@ -23,6 +26,9 @@ from service.ws_re.volumes import Volume
 from tools.bots.logger import WikiLogger
 
 STATISTIC_PAGE = "Paulys Realencyclopädie der classischen Altertumswissenschaft/Statistik"
+NAVIGATION_TEMPLATE = "RE Statistik Navigation"
+# the cells of the navigation get the blue of the charts at this opacity, light enough for readable links
+NAVIGATION_CELL_OPACITY = 0.15
 START_YEAR = 2007
 # proof read state counted in each column of the data. The columns are ordered by the fields of the template
 # history_data.json. The chart renderer stacks the series of an area chart in column order, the first series at the
@@ -33,9 +39,13 @@ STATE_OF_COLUMN: dict[str, int] = {"erfasst": 0, "korrigiert": 2, "unkorrigiert"
 TABLE_COLUMNS = ("erfasst", "unkorrigiert", "korrigiert", "fertig")
 
 
+def _hex(color: Color) -> str:
+    return "#" + "".join(f"{channel:02x}" for channel in color)
+
+
 def _area_color(color: str) -> str:
     """The color of an area in the chart: the color of the series at AREA_OPACITY on a white background."""
-    return "#" + "".join(f"{channel:02x}" for channel in mix_with_white(color, AREA_OPACITY))
+    return _hex(mix_with_white(color, AREA_OPACITY))
 
 
 VolumeLemmas = list[tuple[Volume, list[dict]]]
@@ -116,8 +126,9 @@ QUARTERLY = Period(
 )
 WEEKLY = Period(
     days=_sundays,
-    title_suffix_de=" im laufenden Jahr",
-    title_suffix_en=" in the current year",
+    # the chart definition is shared by the statistic pages of all years
+    title_suffix_de=" im Jahr",
+    title_suffix_en=" in the year",
     interval_de="jeweils sonntags im laufenden Jahr",
     interval_en="every Sunday of the current year",
 )
@@ -140,6 +151,38 @@ class HistoryChart:
     counted_en: str
     weights: Callable[[VolumeLemmas], WeightedLemmas]
     period: Period
+    # every year and every volume has its own tabular data page (name of the chart plus the year or the volume), all
+    # of them share the chart definition
+    suffix: str | None = None
+
+    @property
+    def tab_name(self) -> str:
+        return f"{self.name} {self.suffix}" if self.suffix else self.name
+
+    @property
+    def embedding(self) -> str:
+        """Arguments of the #chart parser function, that embeds the chart with its data."""
+        return f"{self.name}.chart|data={self.tab_name}.tab"
+
+    def _with_weekly_year(self, year: int) -> Period:
+        if self.period is WEEKLY:
+            return replace(
+                self.period, interval_de=f"jeweils sonntags im Jahr {year}", interval_en=f"every Sunday of {year}"
+            )
+        return self.period
+
+    def of_year(self, year: int) -> HistoryChart:
+        return replace(self, suffix=str(year), period=self._with_weekly_year(year))
+
+    def of_volume(self, volume_name: str, year: int) -> HistoryChart:
+        """The chart of the articles of a single volume, the weekly data covers the year."""
+        return replace(
+            self,
+            suffix=volume_name,
+            period=self._with_weekly_year(year),
+            counted_de=f"{self.counted_de} des Bandes {volume_name}",
+            counted_en=f"{self.counted_en} of volume {volume_name}",
+        )
 
     def build_rows(self, volumes: VolumeLemmas, today: date, columns: list[str]) -> list[list[str | int]]:
         """
@@ -177,11 +220,11 @@ class HistoryChart:
         return data
 
     def create_definition(self) -> dict:
-        """Content of the chart definition page (Data:….chart) on Commons."""
+        """Content of the chart definition page (Data:….chart) on Commons, its default data is the one of the year."""
         return json.loads(
             render_template(
                 "history_chart.json",
-                name=self.name,
+                source=self.tab_name,
                 unit_de=self.unit_de,
                 unit_en=self.unit_en,
                 axis_en=self.unit_en.capitalize(),
@@ -216,11 +259,21 @@ ARTICLE_DETAIL_CHART = ARTICLE_CHART.with_period(f"{ARTICLE_CHART.name} detail",
 COLUMN_DETAIL_CHART = COLUMN_CHART.with_period(f"{COLUMN_CHART.name} detail", WEEKLY)
 
 
-class HistoryCharts:
-    """Maintains the history charts on Commons and the statistic page on wikisource, that embeds them."""
+def chart_groups(year: int, volume_name: str | None = None) -> tuple[tuple[HistoryChart, ...], ...]:
+    """
+    The groups of charts of the statistic page of a year or of a volume, every group gets a joined table of its data.
+    All pages share the chart definitions, every year and every volume has its own data pages, named with the year or
+    the volume. The weekly charts of a volume cover the given (current) year.
+    """
+    charts = (ARTICLE_CHART, COLUMN_CHART), (ARTICLE_DETAIL_CHART, COLUMN_DETAIL_CHART)
+    return tuple(
+        tuple(chart.of_volume(volume_name, year) if volume_name else chart.of_year(year) for chart in group)
+        for group in charts
+    )
 
-    # every group of charts gets a joined table of its data
-    GROUPS = ((ARTICLE_CHART, COLUMN_CHART), (ARTICLE_DETAIL_CHART, COLUMN_DETAIL_CHART))
+
+class HistoryCharts:
+    """Maintains the history charts on Commons and the statistic pages on wikisource, that embed them."""
 
     def __init__(self, wiki: BaseSite, commons: BaseSite, logger: WikiLogger):
         self.wiki = wiki
@@ -230,16 +283,58 @@ class HistoryCharts:
     def update(self, today: date) -> None:
         self.logger.info("Update the history charts.")
         volumes = list(load_volume_lemmas())
+        save_page(
+            Page(self.wiki, f"Vorlage:{NAVIGATION_TEMPLATE}"),
+            self.create_navigation([volume.name for volume, _ in volumes], today.year),
+            self.logger,
+        )
+        # every year gets its own page, a past year shows the state at its end
+        for year in PAST_YEARS:
+            if year < today.year:
+                self.update_year(volumes, year, date(year, 12, 31), today.year)
+        self.update_year(volumes, today.year, today, today.year)
+        # the statistic page redirects to the page of the current year
+        save_page(Page(self.wiki, STATISTIC_PAGE), f"#WEITERLEITUNG [[{STATISTIC_PAGE}/{today.year}]]", self.logger)
+        # some volumes get their own page with the state of today
+        for volume_name in STATISTIC_VOLUMES:
+            self.update_volume([item for item in volumes if item[0].name == volume_name], volume_name, today)
+
+    def update_year(self, volumes: VolumeLemmas, year: int, day: date, current_year: int) -> None:
+        """Updates the charts of the year on Commons and the statistic page of the year, the data ends with the day."""
+        # the shared definitions link the data of the current year
+        tables = self._update_data(volumes, chart_groups(year), day, save_definitions=year == current_year)
+        save_page(
+            Page(self.wiki, f"{STATISTIC_PAGE}/{year}"),
+            self.create_page_text(tables[0], tables[1], year),
+            self.logger,
+        )
+
+    def update_volume(self, volumes: VolumeLemmas, volume_name: str, today: date) -> None:
+        """Updates the charts of the volume on Commons and the statistic page of the volume."""
+        tables = self._update_data(volumes, chart_groups(today.year, volume_name), today, save_definitions=False)
+        save_page(
+            Page(self.wiki, f"{STATISTIC_PAGE}/{volume_name}"),
+            self.create_page_text(tables[0], tables[1], today.year, volume_name),
+            self.logger,
+        )
+
+    def _update_data(
+        self, volumes: VolumeLemmas, groups: tuple[tuple[HistoryChart, ...], ...], day: date, save_definitions: bool
+    ) -> list[str]:
+        """Saves the data pages of the charts up to the day, returns a joined table of the data of every group."""
         tables: list[str] = []
-        for group in self.GROUPS:
+        for group in groups:
             datasets: list[tuple[HistoryChart, dict]] = []
             for chart in group:
-                data = chart.create_data(volumes, today)
-                save_json_page(Page(self.commons, f"Data:{chart.name}.tab"), data, self.logger)
-                save_json_page(Page(self.commons, f"Data:{chart.name}.chart"), chart.create_definition(), self.logger)
+                data = chart.create_data(volumes, day)
+                save_json_page(Page(self.commons, f"Data:{chart.tab_name}.tab"), data, self.logger)
+                if save_definitions:
+                    save_json_page(
+                        Page(self.commons, f"Data:{chart.name}.chart"), chart.create_definition(), self.logger
+                    )
                 datasets.append((chart, data))
             tables.append(self.create_table(datasets))
-        save_page(Page(self.wiki, STATISTIC_PAGE), self.create_page_text(*tables), self.logger)
+        return tables
 
     @staticmethod
     def create_table(datasets: list[tuple[HistoryChart, dict]]) -> str:
@@ -272,14 +367,33 @@ class HistoryCharts:
         return render_template("history_table.wiki", groups=groups, columns=columns, rows="\n".join(rows)).rstrip("\n")
 
     @staticmethod
-    def create_page_text(table: str, detail_table: str) -> str:
+    def create_navigation(volume_names: list[str], year: int) -> str:
+        """Navigation template linking the statistic pages of every year since START_YEAR and of every volume."""
+        years = " · ".join(f"[[{STATISTIC_PAGE}/{page_year}|{page_year}]]" for page_year in range(START_YEAR, year + 1))
+        volumes = " · ".join(f"[[{STATISTIC_PAGE}/{name}|{name}]]" for name in volume_names)
+        # the blue of the charts (Erfasst) for the headers and a very light tone of it for the cells
+        return render_template(
+            "navigation.wiki",
+            header=CHART_PALETTE[0],
+            cell=_hex(mix_with_white(CHART_PALETTE[0], NAVIGATION_CELL_OPACITY)),
+            years=years,
+            volumes=volumes,
+        )
+
+    @staticmethod
+    def create_page_text(table: str, detail_table: str, year: int, volume_name: str | None = None) -> str:
+        """Text of the statistic page of the year, or of the volume (its weekly charts cover the year)."""
+        (article_chart, column_chart), (article_detail_chart, column_detail_chart) = chart_groups(year, volume_name)
+        picture = ProofReadPicture.volume_file_name(volume_name) if volume_name else ProofReadPicture.file_name(year)
         return render_template(
             "statistic_page.wiki",
-            article_chart=ARTICLE_CHART.name,
-            column_chart=COLUMN_CHART.name,
-            picture=ProofReadPicture.WIKI_FILE_NAME,
+            article_chart=article_chart.embedding,
+            column_chart=column_chart.embedding,
+            navigation=NAVIGATION_TEMPLATE,
+            picture=picture,
             table=table,
-            article_detail_chart=ARTICLE_DETAIL_CHART.name,
-            column_detail_chart=COLUMN_DETAIL_CHART.name,
+            year=str(year),
+            article_detail_chart=article_detail_chart.embedding,
+            column_detail_chart=column_detail_chart.embedding,
             detail_table=detail_table,
         )

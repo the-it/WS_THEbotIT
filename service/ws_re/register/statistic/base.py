@@ -11,6 +11,10 @@ from service.ws_re.volumes import Volume, Volumes
 from tools.bots.logger import WikiLogger
 
 SUMMARY = "Bearbeitungsstand aktualisiert"
+# past years, that get a statistic page with charts and a picture of the proof read state at their end
+PAST_YEARS = (2007, 2020, 2025)
+# volumes, that get a statistic page with charts and a picture of the proof read state of their columns
+STATISTIC_VOLUMES = ("I,1", "VIII,1", "S III")
 TEMPLATE_PATH = Path(__file__).parent.joinpath("templates")
 # palette of the chart renderer of Extension:Chart (theme "categorical"), the n-th series of a chart gets the n-th
 # color. The picture uses the same colors.

@@ -1,26 +1,32 @@
-== Bearbeitungsstand ==
+{| style="width:100%; table-layout:fixed"
+| style="width:50%; vertical-align:top" | {{${navigation}}}
+| style="width:50%" | [[Datei:${picture}|rahmenlos|460px|Bearbeitungsstand der Spalten aller Bände]]
+|}
+
+== Fortschritt ==
 === Artikel ===
-{{#chart:${article_chart}.chart}}
+{{#chart:${article_chart}}}
 
 === Spalten ===
-Jeder Artikel zählt mit seinen Anteilen an den Spalten, über die er sich erstreckt. Teilen sich mehrere Artikel eine Spalte, erhält jeder Artikel den gleichen Anteil an dieser Spalte. Eine Spalte ist also nur dann vollständig fertig, wenn alle ihre Artikel fertig sind.
-
-{{#chart:${column_chart}.chart}}
-
-=== Bände ===
-[[Datei:${picture}|ohne|Bearbeitungsstand der Spalten aller Bände]]
+{{#chart:${column_chart}}}
 
 === Daten ===
+<div class="mw-collapsible mw-collapsed">
 ${table}
+</div>
 
-== Bearbeitungsstand im laufenden Jahr ==
-Stand an jedem Sonntag des laufenden Jahres.
-
-=== Artikel ===
-{{#chart:${article_detail_chart}.chart}}
-
-=== Spalten ===
-{{#chart:${column_detail_chart}.chart}}
+== Fortschritt ${year} ==
+{| style="width:100%; table-layout:fixed"
+! style="width:50%; text-align:left; font-size:1.2em" | Artikel
+! style="width:50%; text-align:left; font-size:1.2em" | Spalten
+|-
+| style="vertical-align:top" |
+{{#chart:${article_detail_chart}}}
+| style="vertical-align:top" |
+{{#chart:${column_detail_chart}}}
+|}
 
 === Daten ===
+<div class="mw-collapsible mw-collapsed">
 ${detail_table}
+</div>

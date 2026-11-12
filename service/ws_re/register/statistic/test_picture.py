@@ -1,6 +1,7 @@
 # pylint: disable=protected-access,no-self-use
 import json
 import tempfile
+from datetime import date
 from pathlib import Path
 from unittest import mock
 
@@ -27,7 +28,7 @@ from service.ws_re.volumes import Volume
 class TestUpdate(BaseTestRegister):
     def setUp(self):
         self.logger = mock.Mock()
-        self.picture = ProofReadPicture(mock.Mock(), self.logger)
+        self.picture = ProofReadPicture(mock.Mock(), self.logger, date(2026, 11, 7))
 
     def _update(self, upload_error: Exception | None) -> mock.Mock:
         with (
@@ -40,12 +41,23 @@ class TestUpdate(BaseTestRegister):
 
     def test_uploads_the_picture(self):
         file_page_mock = self._update(None)
-        compare("File:Pauly-Wissowa stats overview.png", file_page_mock.call_args.args[1])
+        # the picture of the year of the day
+        compare("File:Pauly-Wissowa stats overview 2026.png", file_page_mock.call_args.args[1])
         compare(1, file_page_mock.return_value.upload.call_count)
 
     def test_unchanged_picture_is_up_to_date(self):
         self._update(APIError("fileexists-no-change", "The upload is an exact duplicate"))
-        self.logger.info.assert_called_with("Pauly-Wissowa stats overview.png is up to date.")
+        self.logger.info.assert_called_with("Pauly-Wissowa stats overview 2026.png is up to date.")
+
+    def test_uploads_the_picture_of_a_volume(self):
+        with (
+            mock.patch.object(self.picture, "create_volume") as create_mock,
+            mock.patch("service.ws_re.register.statistic.picture.FilePage") as file_page_mock,
+        ):
+            self.picture.update_volume("VIII,1")
+        compare("VIII,1", create_mock.call_args.args[0])
+        compare("File:Pauly-Wissowa stats overview VIII,1.png", file_page_mock.call_args.args[1])
+        compare(1, file_page_mock.return_value.upload.call_count)
 
     def test_other_upload_errors_are_raised(self):
         with self.assertRaises(APIError):
@@ -123,9 +135,11 @@ class TestColorForLemma(BaseTestRegister):
     def test_proof_read_0_not_public_domain_is_protected(self):
         # Abel enters the public domain in 2069
         lemma = {"history": {"0": "200101"}, "chapters": [{"start": 1, "author": "Abel"}]}
-        with mock.patch("service.ws_re.register.statistic.picture.datetime") as datetime_mock:
-            datetime_mock.now.return_value.year = 2068
-            compare((129, 160, 226), self.picture._color_for_lemma(lemma, "I,1"))
+        picture = ProofReadPicture(mock.Mock(), mock.Mock(), date(2068, 6, 1))
+        compare((129, 160, 226), picture._color_for_lemma(lemma, "I,1"))
+        # a year later the lemma is in the public domain
+        picture = ProofReadPicture(mock.Mock(), mock.Mock(), date(2069, 1, 1))
+        compare(COLOR_ERFASST, picture._color_for_lemma(lemma, "I,1"))
 
     def test_color_protected_gradient(self):
         # entering the public domain next year: the area color of erfasst in the chart (#81a0e2)
@@ -143,6 +157,20 @@ class TestColorForLemma(BaseTestRegister):
 
     def test_missing_proof_read_falls_through_to_black(self):
         compare(COLOR_BLACK, self.picture._color_for_lemma({}, "I,1"))
+
+    def test_state_at_the_day_is_used(self):
+        lemma = {"history": {"0": "070101", "1": "080101", "2": "090101"}}
+        compare(
+            COLOR_BLACK, ProofReadPicture(mock.Mock(), mock.Mock(), date(2006, 12, 31))._color_for_lemma(lemma, "I,1")
+        )
+        compare(
+            COLOR_ERFASST, ProofReadPicture(mock.Mock(), mock.Mock(), date(2007, 1, 1))._color_for_lemma(lemma, "I,1")
+        )
+        compare(
+            COLOR_UNKORRIGIERT,
+            ProofReadPicture(mock.Mock(), mock.Mock(), date(2008, 6, 1))._color_for_lemma(lemma, "I,1"),
+        )
+        compare(COLOR_KORRIGIERT, ProofReadPicture(mock.Mock(), mock.Mock())._color_for_lemma(lemma, "I,1"))
 
 
 class TestBuildRowArticles(BaseTestRegister):
@@ -290,6 +318,34 @@ class TestCreatePicture(BaseTestRegister):
                 with Image.open(out_path) as image:
                     compare("PNG", image.format)
                     compare((LABEL_WIDTH + 10, HEADER_HEIGHT + LINE_HEIGHT), image.size)
+
+    def _create_volume(self, end_column: str, volume_name: str = "I,1") -> Image.Image:
+        volume = Volume(name="I,1", year=1893, data_item="Q1", start_column="1", end_column=end_column)
+        with mock.patch("service.ws_re.register.statistic.base.Volumes") as volumes_mock:
+            volumes_mock.return_value.all_volumes = [volume]
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                out_path = Path(tmp_dir).joinpath("out.png")
+                ProofReadPicture(mock.Mock(), mock.Mock()).create_volume(volume_name, out_path)
+                with Image.open(out_path) as image:
+                    image.load()
+                    return image
+
+    def test_volume_is_broken_into_lines(self):
+        # lines 1-50, 51-100 and 101-120. The picture is too small to widen the columns, they stay one pixel wide.
+        image = self._create_volume("120")
+        compare((LABEL_WIDTH + 50, 3 * (HEADER_HEIGHT + LINE_HEIGHT)), image.size)
+        # the first line is complete, there is no gridline gap before column 50
+        compare(COLOR_BLACK, image.getpixel((LABEL_WIDTH + 49, HEADER_HEIGHT)))
+
+    def test_volume_columns_are_widened_to_the_ratio(self):
+        # 26 lines, columns 1-1300. The columns are 11 pixels wide to get the ratio of the picture of all volumes.
+        image = self._create_volume("1300")
+        compare((LABEL_WIDTH + 50 * 11, 26 * (HEADER_HEIGHT + LINE_HEIGHT)), image.size)
+        compare(0.87, round(image.size[0] / image.size[1], 2))
+
+    def test_unknown_volume_raises(self):
+        with self.assertRaisesRegex(ValueError, "There is no register of II,1"):
+            self._create_volume("120", "II,1")
 
     def test_skips_volumes_without_columns(self):
         # The volume without columns is skipped; only I,1 contributes a row.

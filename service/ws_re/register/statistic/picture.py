@@ -1,5 +1,5 @@
 import tempfile
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -13,11 +13,12 @@ from service.ws_re.register.statistic.base import (
     CHART_PALETTE,
     SUMMARY,
     Color,
-    current_state,
     hex_to_rgb,
+    history_entries,
     lemmas_per_column,
     load_volume_lemmas,
     mix_with_white,
+    state_at,
 )
 from tools.bots.logger import WikiLogger
 
@@ -42,32 +43,60 @@ COLOR_BLACK = (0, 0, 0)
 COLOR_WHITE = (255, 255, 255)
 COLOR_BACKGROUND = (255, 255, 255)
 COLOR_TEXT = (0, 0, 0)
+# width / height of the picture of a single volume, the ratio of the picture of all volumes
+VOLUME_PICTURE_RATIO = 2038 / 2352
+
+# label of the line, first column of the line, colors of the articles of every column of the line
+Row = tuple[str, int, list[list[Color]]]
 
 
 class ProofReadPicture:
     """Picture of the proof read state of every column of every volume, uploaded to wikisource."""
 
-    WIKI_FILE_NAME = "Pauly-Wissowa stats overview.png"
+    @staticmethod
+    def file_name(year: int) -> str:
+        """Every year gets its own picture on wikisource, showing the state of the day of the last upload."""
+        return f"Pauly-Wissowa stats overview {year}.png"
 
-    def __init__(self, wiki: BaseSite, logger: WikiLogger):
+    def __init__(self, wiki: BaseSite, logger: WikiLogger, day: date | None = None):
+        """
+        :param day: the picture shows the proof read state of every lemma at the end of this day, default today.
+            The years to the public domain count from the year of the day too.
+        """
         self.wiki = wiki
         self.logger = logger
         self.authors = Authors()
+        self.day = day or datetime.now().date()
+
+    @staticmethod
+    def volume_file_name(volume_name: str) -> str:
+        """The picture of a single volume on wikisource, showing the state of the day of the last upload."""
+        return f"Pauly-Wissowa stats overview {volume_name}.png"
 
     def update(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             output_path = Path(tmp_dir).joinpath("proof_read_overview.png")
             self.logger.info("Generate proof-read overview picture.")
             self.create(output_path)
-            self.logger.info(f"Upload {self.WIKI_FILE_NAME} to wikisource.")
-            file_page = FilePage(self.wiki, f"File:{self.WIKI_FILE_NAME}")
-            try:
-                file_page.upload(str(output_path), comment=SUMMARY, ignore_warnings=True)
-            except APIError as error:
-                # the API refuses an upload identical to the current version, the picture is up to date then
-                if error.code != "fileexists-no-change":
-                    raise
-                self.logger.info(f"{self.WIKI_FILE_NAME} is up to date.")
+            self._upload(output_path, self.file_name(self.day.year))
+
+    def update_volume(self, volume_name: str) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir).joinpath("proof_read_volume.png")
+            self.logger.info(f"Generate proof-read picture of {volume_name}.")
+            self.create_volume(volume_name, output_path)
+            self._upload(output_path, self.volume_file_name(volume_name))
+
+    def _upload(self, output_path: Path, file_name: str) -> None:
+        self.logger.info(f"Upload {file_name} to wikisource.")
+        file_page = FilePage(self.wiki, f"File:{file_name}")
+        try:
+            file_page.upload(str(output_path), comment=SUMMARY, ignore_warnings=True)
+        except APIError as error:
+            # the API refuses an upload identical to the current version, the picture is up to date then
+            if error.code != "fileexists-no-change":
+                raise
+            self.logger.info(f"{file_name} is up to date.")
 
     def _public_domain_year(self, lemma: dict, volume_name: str) -> int:
         """The year the lemma enters the public domain, 0 if it has no known authors or no creative height."""
@@ -93,7 +122,7 @@ class ProofReadPicture:
         return mix_with_white(CHART_PALETTE[0], AREA_OPACITY - fade * (AREA_OPACITY - OPACITY_PROTECTED_LATEST))
 
     def _color_for_lemma(self, lemma: dict, volume_name: str) -> Color:
-        proof_read = current_state(lemma)
+        proof_read = state_at(history_entries(lemma), self.day)
         if proof_read == 3:
             return COLOR_FERTIG
         if proof_read == 2:
@@ -101,7 +130,7 @@ class ProofReadPicture:
         if proof_read == 1:
             return COLOR_UNKORRIGIERT
         if proof_read == 0:
-            years_to_public_domain = self._public_domain_year(lemma, volume_name) - datetime.now().year
+            years_to_public_domain = self._public_domain_year(lemma, volume_name) - self.day.year
             if years_to_public_domain > 0:
                 return self._color_protected(years_to_public_domain)
             return COLOR_ERFASST
@@ -138,7 +167,8 @@ class ProofReadPicture:
         return end // COLUMN_GRID_INTERVAL - start // COLUMN_GRID_INTERVAL
 
     def create(self, output_path: Path) -> None:
-        rows: list[tuple[str, int, list[list[Color]]]] = []
+        """Picture of all volumes, one line per volume, every column one pixel wide."""
+        rows: list[Row] = []
         for volume, lemmas in load_volume_lemmas():
             start_column = volume.start_column
             end_column = volume.end_column
@@ -152,8 +182,41 @@ class ProofReadPicture:
                     self._build_row_articles(lemmas, start_column, length, volume.name),
                 )
             )
+        self._draw(rows, output_path, 1)
 
-        bar_width = max(len(articles) + self._gridline_count(start, len(articles)) for _, start, articles in rows)
+    def create_volume(self, volume_name: str, output_path: Path) -> None:
+        """
+        Picture of a single volume. The line of the volume is broken into lines of COLUMN_GRID_INTERVAL columns on top of
+        each other, starting with the first column of the volume. Every line is labeled with its first column, there are
+        no gridlines. The columns are widened, so the picture gets the ratio of the picture of all volumes
+        (VOLUME_PICTURE_RATIO).
+        """
+        for volume, lemmas in load_volume_lemmas():
+            if volume.name != volume_name:
+                continue
+            if volume.start_column is None or volume.end_column is None:
+                raise ValueError(f"The columns of {volume_name} are unknown.")
+            length = volume.end_column - volume.start_column + 1
+            articles = self._build_row_articles(lemmas, volume.start_column, length, volume.name)
+            rows: list[Row] = [
+                (
+                    str(volume.start_column + offset),
+                    volume.start_column + offset,
+                    articles[offset : offset + COLUMN_GRID_INTERVAL],
+                )
+                for offset in range(0, length, COLUMN_GRID_INTERVAL)
+            ]
+            height = len(rows) * (HEADER_HEIGHT + LINE_HEIGHT)
+            column_width = max(1, round((VOLUME_PICTURE_RATIO * height - LABEL_WIDTH) / COLUMN_GRID_INTERVAL))
+            self._draw(rows, output_path, column_width, gridlines=False)
+            return
+        raise ValueError(f"There is no register of {volume_name}.")
+
+    def _draw(self, rows: list[Row], output_path: Path, column_width: int, gridlines: bool = True) -> None:
+        bar_width = max(
+            len(articles) * column_width + (self._gridline_count(start, len(articles)) if gridlines else 0)
+            for _, start, articles in rows
+        )
         row_block = HEADER_HEIGHT + LINE_HEIGHT
         width = LABEL_WIDTH + bar_width
         height = len(rows) * row_block
@@ -174,21 +237,21 @@ class ProofReadPicture:
             gridline_positions: list[tuple[int, int]] = []
             for col_idx, article_colors in enumerate(articles_per_column):
                 c = start_column + col_idx
-                if col_idx > 0 and c % COLUMN_GRID_INTERVAL == 0:
+                if gridlines and col_idx > 0 and c % COLUMN_GRID_INTERVAL == 0:
                     gridline_positions.append((c, bar_offset))
                     bar_offset += 1
-                x = LABEL_WIDTH + bar_offset
-                if not article_colors:
-                    for y_offset in range(bar_height):
-                        pixels[x, bar_y + y_offset] = COLOR_BLACK
-                else:
-                    count = len(article_colors)
-                    for i, color in enumerate(article_colors):
-                        y_start = (i * bar_height) // count
-                        y_end = ((i + 1) * bar_height) // count
-                        for y_offset in range(y_start, y_end):
-                            pixels[x, bar_y + y_offset] = color
-                bar_offset += 1
+                for x in range(LABEL_WIDTH + bar_offset, LABEL_WIDTH + bar_offset + column_width):
+                    if not article_colors:
+                        for y_offset in range(bar_height):
+                            pixels[x, bar_y + y_offset] = COLOR_BLACK
+                    else:
+                        count = len(article_colors)
+                        for i, color in enumerate(article_colors):
+                            y_start = (i * bar_height) // count
+                            y_end = ((i + 1) * bar_height) // count
+                            for y_offset in range(y_start, y_end):
+                                pixels[x, bar_y + y_offset] = color
+                bar_offset += column_width
 
             draw.text(
                 (LABEL_PADDING, bar_y + (LINE_HEIGHT - 13) // 2),
