@@ -109,8 +109,9 @@ class HLTSTask(ReScannerTask):
         lemma, anchor = target.split("#", 1)
         lemma = lemma.strip()
         display_text = display_text or lemma
-        if self._resolve_lemma(lemma):
-            return self._hard_link(self._resolve_lemma(lemma), display_text, anchor)
+        resolved = self._resolve_lemma(lemma)
+        if resolved:
+            return self._hard_link(resolved, display_text, anchor)
         self._unknown_targets.add((lemma, self.re_page.lemma_without_prefix))
         return f"{{{{RE siehe|{lemma}|{display_text}|{anchor}}}}}"
 
