@@ -161,6 +161,37 @@ Text mit Vorlage: {{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}.
         compare({"success": True, "changed": False}, result)
         self.assertIn("{{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}", re_page[0].text)
 
+    def test_siehe_with_anchor_in_target_repaired_to_hardlink_when_lemma_in_register(self):
+        self.page_mock.text = """{{REDaten}}
+Text: {{RE siehe|Aarassos#Seite_586|Bd. V A S. 586}} und {{RE siehe|Aal#Abschnitt}}.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("[[RE:Aarassos#Seite_586|Bd. V A S. 586]] und [[RE:Aal#Abschnitt|Aal]].", re_page[0].text)
+
+    def test_siehe_with_anchor_in_target_repaired_when_lemma_not_yet_written(self):
+        self.page_mock.title_str = "RE:Quelllemma"
+        self.page_mock.text = """{{REDaten}}
+Text: {{RE siehe|Ababa#Seite_586|Bd. V A S. 586}}.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": True}, result)
+        self.assertIn("{{RE siehe|Ababa|Bd. V A S. 586|Seite_586}}.", re_page[0].text)
+        compare({("Ababa", "Quelllemma")}, self.task._unknown_targets)  # pylint: disable=protected-access
+
+    def test_siehe_with_anchor_in_target_and_third_parameter_stays_as_it_is(self):
+        self.page_mock.text = """{{REDaten}}
+Text: {{RE siehe|Aarassos#Seite_586|Leben|Abschnitt}}.
+{{REAutor|Autor.}}"""
+        re_page = RePage(self.page_mock)
+
+        result = self.task.run(re_page)
+        compare({"success": True, "changed": False}, result)
+
     def test_siehe_with_too_many_parameters_stays_as_it_is(self):
         self.page_mock.text = """{{REDaten}}
 Text mit Vorlage: {{RE siehe|Aarassos|Leben|Abschnitt|Unsinn}}.
