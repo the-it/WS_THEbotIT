@@ -35,6 +35,10 @@ class HLTSTask(ReScannerTask):
     - "[[RE:Lemma|Anzeigetext|Anker]]" -> "[[RE:Lemma#Anker|Anzeigetext]]" (Lemma's article exists)
     - "[[RE:Lemma|Anzeigetext|Anker]]" -> "{{RE siehe|Lemma|Anzeigetext|Anker}}" (Lemma's article doesn't exist)
 
+    Likewise, {{RE siehe}} templates with the anchor glued to the first parameter are repaired:
+    - "{{RE siehe|Lemma#Anker|Anzeigetext}}" -> "[[RE:Lemma#Anker|Anzeigetext]]" (Lemma's article exists)
+    - "{{RE siehe|Lemma#Anker|Anzeigetext}}" -> "{{RE siehe|Lemma|Anzeigetext|Anker}}" (Lemma's article doesn't exist)
+
     While this task is still being rolled out carefully, it only changes MAX_CHANGED_ARTICLES
     articles per scanner run (the scanner runs once a night), then leaves the rest untouched
     until the next run.
@@ -100,10 +104,25 @@ class HLTSTask(ReScannerTask):
             return f"{{{{RE siehe|{target}|{display_text}}}}}"
         return f"{{{{RE siehe|{target}}}}}"
 
+    def _repair_anchor_in_target(self, target: str, display_text: str | None) -> str:
+        """Repairs "{{RE siehe|Lemma#Anker|Anzeigetext}}", the anchor belongs into the third parameter."""
+        lemma, anchor = target.split("#", 1)
+        lemma = lemma.strip()
+        display_text = display_text or lemma
+        if self._resolve_lemma(lemma):
+            return self._hard_link(self._resolve_lemma(lemma), display_text, anchor)
+        self._unknown_targets.add((lemma, self.re_page.lemma_without_prefix))
+        return f"{{{{RE siehe|{lemma}|{display_text}|{anchor}}}}}"
+
     def _replace_siehe(self, match: re.Match) -> str:
         target = match.group(1)
         display_text = match.group(2)
         anchor = match.group(3)
+        if "#" in target:
+            if anchor:
+                # anchor given twice, can't be repaired unambiguously
+                return match.group(0)
+            return self._repair_anchor_in_target(target, display_text)
         resolved = self._resolve_lemma(target)
         if not resolved:
             # lemma doesn't exactly match an existing register lemma, stays as it is
