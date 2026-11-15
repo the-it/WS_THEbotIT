@@ -10,7 +10,6 @@ import pywikibot
 from service.ws_re.scanner.tasks.add_issue_to_complex_author import AICATask
 from service.ws_re.scanner.tasks.add_short_description import KURZTask
 from service.ws_re.scanner.tasks.adjust_author import ADAUTask
-from service.ws_re.scanner.tasks.author_or_redirect import REAUTask
 from service.ws_re.scanner.tasks.base_task import ReScannerTask
 from service.ws_re.scanner.tasks.categorize_redirects import CARETask
 from service.ws_re.scanner.tasks.check_redirect_links import CHRETask
@@ -55,7 +54,6 @@ class ReScanner(CloudBot):
             RELITask,  # remove unwanted RE cross-reference syntax
             DEALTask,  # check for dead links RE internal
             DEWPTask,  # check for dead links to Wikipedia
-            REAUTask,  # check for integrity article must have an author, or it is a soft redirect
             ADAUTask,  # adjust author full names to short names
             AICATask,  # add issue number to authors with a complex mapping
             COPDTask,  # removes properties after article is in common domain and corrects the birth and death date
