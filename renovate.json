@@ -16,6 +16,16 @@
       ],
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch"
+    },
+    {
+      "matchDepNames": [
+        "python"
+      ],
+      "matchManagers": [
+        "pep621"
+      ],
+      "groupName": null,
+      "minimumReleaseAge": "90 days"
     }
   ]
 }
