@@ -22,7 +22,7 @@ def _add_defaults_maxlag_writes_only(self) -> None:
 
 
 config.maxlag = 20  # type: ignore
-config.max_retries = 2 # type: ignore
+config.max_retries = 2  # type: ignore
 Request._add_defaults = _add_defaults_maxlag_writes_only
 
 
