@@ -24,8 +24,11 @@
       "matchManagers": [
         "pep621"
       ],
-      "groupName": null,
-      "minimumReleaseAge": "90 days"
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "enabled": false
     }
   ]
 }
