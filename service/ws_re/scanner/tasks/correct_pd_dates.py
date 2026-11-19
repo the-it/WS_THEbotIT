@@ -13,7 +13,7 @@ from tools.bots.logger import WikiLogger
 @dataclass
 class Years:
     birth: int | None = None
-    death: int | None = None
+    death: int | str | None = None
     pd: int = 0
 
 
@@ -67,9 +67,10 @@ class COPDTask(ReScannerTask):
                         years.death = None
                         years.pd = author.year_public_domain
                     else:
-                        # neither birth nor death is known, the article is protected until the fallback year
-                        # of year_public_domain, expressed as a placeholder death year
+                        # neither birth nor death is known, we have to assume the article is still protected
+                        # (fallback year of year_public_domain). Mark that with the unknown marker "?" instead
+                        # of a fake death year, so no wrong death year is shown on Wikisource.
                         years.birth = None
-                        years.death = author.year_public_domain - public_domain.YEARS_AFTER_DEATH
+                        years.death = public_domain.UNKNOWN_YEAR
                         years.pd = author.year_public_domain
         return years

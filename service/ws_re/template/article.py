@@ -114,6 +114,9 @@ class Article(Mapping):
     @property
     def common_free(self) -> bool:
         current_year = datetime.now().year
+        if self["TODESJAHR"].value == public_domain.UNKNOWN_YEAR and not self["KEINE_SCHÖPFUNGSHÖHE"].value:
+            # no life dates known ... we have to assume the article is still protected
+            return False
         with contextlib.suppress(ValueError):
             if (
                 self["TODESJAHR"].value
