@@ -50,7 +50,13 @@ class COPDTask(ReScannerTask):
             # still protected ... set values according to years object
             if article["GEBURTSJAHR"].value or article["TODESJAHR"].value or years.pd > self.current_year:
                 article["GEBURTSJAHR"].value = str(years.birth) if years.birth else ""
-                article["TODESJAHR"].value = str(years.death) if years.death else ""
+                if years.death:
+                    article["TODESJAHR"].value = str(years.death)
+                elif years.birth:
+                    article["TODESJAHR"].value = ""
+                else:
+                    # neither birth nor death year known
+                    article["TODESJAHR"].value = public_domain.UNKNOWN_YEAR
 
     def get_max_pd_year(self, re_article_list) -> Years:
         years = Years()
@@ -68,8 +74,8 @@ class COPDTask(ReScannerTask):
                         years.pd = author.year_public_domain
                     else:
                         # neither birth nor death is known, the article is protected until the fallback year
-                        # of year_public_domain, expressed as a placeholder death year
+                        # of year_public_domain. set_year_values marks this case with "?" in TODESJAHR
                         years.birth = None
-                        years.death = author.year_public_domain - public_domain.YEARS_AFTER_DEATH
+                        years.death = None
                         years.pd = author.year_public_domain
         return years

@@ -337,6 +337,14 @@ text
         article["KEINE_SCHÖPFUNGSHÖHE"].value = True
         self.assertTrue(article.common_free)
 
+    def test_common_free_unknown_life_dates(self):
+        article = Article()
+        article["TODESJAHR"].value = "?"
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = False
+        self.assertFalse(article.common_free)
+        article["KEINE_SCHÖPFUNGSHÖHE"].value = True
+        self.assertTrue(article.common_free)
+
     def test_bug_common_free(self):
         article = Article()
         article["TODESJAHR"].value = "bla1234"
