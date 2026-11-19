@@ -38,21 +38,15 @@ class HLTSTask(ReScannerTask):
     Likewise, {{RE siehe}} templates with the anchor glued to the first parameter are repaired:
     - "{{RE siehe|Lemma#Anker|Anzeigetext}}" -> "[[RE:Lemma#Anker|Anzeigetext]]" (Lemma's article exists)
     - "{{RE siehe|Lemma#Anker|Anzeigetext}}" -> "{{RE siehe|Lemma|Anzeigetext|Anker}}" (Lemma's article doesn't exist)
-
-    While this task is still being rolled out carefully, it only changes MAX_CHANGED_ARTICLES
-    articles per scanner run (the scanner runs once a night), then leaves the rest untouched
-    until the next run.
     """
 
     _link_regex = re.compile(r"\[\[RE:([^|\]]+)(?:\|([^\]]+))?]]")
     _siehe_regex = re.compile(r"\{\{RE siehe\|([^|{}]+)(?:\|([^|{}]*))?(?:\|([^|{}]*))?}}")
-    MAX_CHANGED_ARTICLES = 20
 
     def __init__(self, wiki: pywikibot.site.BaseSite, logger: WikiLogger, debug: bool = True):
         super().__init__(wiki, logger, debug)
         self._existing_lemma_names: set[str] | None = None
         self._unknown_targets: set[tuple[str, str]] = set()
-        self._changed_articles = 0
 
     @property
     def existing_lemma_names(self) -> set[str]:
@@ -135,22 +129,11 @@ class HLTSTask(ReScannerTask):
         return self._siehe_regex.sub(self._replace_siehe, text)
 
     def task(self) -> bool:
-        if self._changed_articles >= self.MAX_CHANGED_ARTICLES:
-            return True
-        page_changed = False
         for idx, part in enumerate(self.re_page):
             if isinstance(part, Article):
-                fixed = self._fix_text(part.text)
-                if fixed != part.text:
-                    part.text = fixed
-                    page_changed = True
+                part.text = self._fix_text(part.text)
             elif isinstance(part, str):
-                fixed = self._fix_text(part)
-                if fixed != part:
-                    self.re_page[idx] = fixed
-                    page_changed = True
-        if page_changed:
-            self._changed_articles += 1
+                self.re_page[idx] = self._fix_text(part)
         return True
 
     def finish_task(self):
