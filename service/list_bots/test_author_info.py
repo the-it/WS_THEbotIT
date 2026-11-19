@@ -31,15 +31,16 @@ class TestAuthorInfo(TestCase):
             author_dict,
         )
 
-    @real_wiki_test
     def test_enrich_eschenbach(self):
-        lemma = pywikibot.Page(self.wiki, "Wolfram von Eschenbach")
-        data_item = lemma.data_item()
+        # offline: wikipedia page with a data item without any claims
+        page = MagicMock()
+        page.data_item.return_value.text = {"claims": {}}
+        page.data_item.return_value.get.return_value = {"descriptions": {}}
         author_dict = {
             "first_name": "Wolfram",
             "last_name": "von Eschenbach",
         }
-        self.author_info.enrich_author_dict(author_dict, data_item)
+        self.author_info.enrich_author_dict(author_dict, page)
         compare("Eschenbach, Wolfram", author_dict["sortkey"])
 
     @real_wiki_test
@@ -94,11 +95,16 @@ class TestAuthorInfo(TestCase):
             author_dict,
         )
 
-    @real_wiki_test
     def test_get_highest_claim_filter_out(self):
-        lemma = pywikibot.Page(self.wiki, "Aristoteles")
-        data_item = lemma.data_item()
+        # offline: the deprecated claim must be filtered out, the first "normal" claim wins
+        deprecated_claim = MagicMock(rank="deprecated")
+        deprecated_claim.getTarget.return_value.get.return_value = {"labels": {"de": "Falsch"}}
+        normal_claim = MagicMock(rank="normal")
+        normal_claim.getTarget.return_value.get.return_value = {"labels": {"de": "Aristoteles"}}
+        data_item = MagicMock()
+        data_item.text = {"claims": {"P735": [deprecated_claim, normal_claim]}}
         claim = self.author_info.get_highest_claim(data_item, "P735")
+        self.assertIs(normal_claim, claim)
         compare(claim.getTarget().get()["labels"]["de"], "Aristoteles")
 
     @real_wiki_test

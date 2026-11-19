@@ -1,4 +1,6 @@
 # pylint: disable=protected-access,no-self-use
+from unittest import mock
+
 import pywikibot
 from pywikibot import ItemPage
 from testfixtures import compare
@@ -39,17 +41,6 @@ class TestP921MainSubject(BaseTestClaimFactory):
         claim_json = factory._get_claim_json()
         compare(212239, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
-    def test_get_backlink_mapping_real_query(self):
-        # reset the cache preset by setUp, so the real sparql query is executed
-        P921MainSubject._backlink_mapping = None
-        mapping = P921MainSubject.get_backlink_mapping()
-        self.assertGreater(len(mapping), 10)
-        for lemma, item_id in mapping.items():
-            self.assertIsInstance(lemma, str)
-            self.assertRegex(item_id, r"^Q\d+$")
-        # the second call is served from the cache
-        self.assertIs(mapping, P921MainSubject.get_backlink_mapping())
-
     def test__process_backlink_query(self):
         query_result = [
             {"candidate": "http://www.wikidata.org/entity/Q100346248", "REArticle": "Postumius 12a"},
@@ -81,12 +72,6 @@ class TestP921MainSubject(BaseTestClaimFactory):
 
     def test__get_claim_json_implicite_german_lemma(self):
         re_page = self._create_mock_page(text="{{REDaten|\nWP=Aale}}\ntext\n{{REAutor|Blub}}", title="RE:Aal")
-        factory = P921MainSubject(re_page, self.logger)
-        claim_json = factory._get_claim_json()
-        compare(212239, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
-
-    def test__get_claim_json_other_language(self):
-        re_page = self._create_mock_page(text="{{REDaten|\nWP=ja:ウナギ科}}\ntext\n{{REAutor|Blub}}", title="RE:Aal")
         factory = P921MainSubject(re_page, self.logger)
         claim_json = factory._get_claim_json()
         compare(212239, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
@@ -167,3 +152,44 @@ class TestP921MainSubject(BaseTestClaimFactory):
         add_remove = factory.get_claims_to_update(data_item)
         compare({"add": {}, "remove": []}, add_remove)
         compare("[[Kategorie:RE:Wartung Wikidata (WD!=WS)]]", re_page[1])  #  error is persisted in re_page
+
+
+MODULE = "service.ws_re.scanner.tasks.wikidata.claims.p921_main_subject"
+
+
+class TestP921MainSubjectOffline(BaseTestClaimFactory):
+    def setUp(self) -> None:
+        super().setUp()
+        # don't clone the register data repository from github for every factory
+        authors_patch = mock.patch("service.ws_re.scanner.tasks.wikidata.claims.claim_factory.Authors")
+        authors_patch.start()
+        self.addCleanup(authors_patch.stop)
+        # don't trigger the sparql query for the backlink mapping in tests
+        P921MainSubject._backlink_mapping = {}
+        self.addCleanup(setattr, P921MainSubject, "_backlink_mapping", None)
+
+    def test__get_claim_json_other_language(self):
+        re_page = self._create_mock_page(text="{{REDaten|\nWP=ja:ウナギ科}}\ntext\n{{REAutor|Blub}}", title="RE:Aal")
+        factory = P921MainSubject(re_page, self.logger)
+        with mock.patch(f"{MODULE}.pywikibot.Site") as site_mock, mock.patch(f"{MODULE}.pywikibot.Page") as page_mock:
+            page_mock.return_value.data_item.return_value.id = "Q212239"
+            claim_json = factory._get_claim_json()
+        # the article has to be looked up at the japanese wikipedia
+        site_mock.assert_called_once_with(code="ja", fam="wikipedia")
+        page_mock.assert_called_once_with(site_mock.return_value, "ウナギ科")
+        compare(212239, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+    def test_get_backlink_mapping_query(self):
+        # reset the cache preset by setUp, so the sparql query is executed (mocked)
+        P921MainSubject._backlink_mapping = None
+        rows = [
+            {"candidate": "http://www.wikidata.org/entity/Q100346248", "REArticle": "Postumius 12a"},
+            {"candidate": "http://www.wikidata.org/entity/Q100347483", "REArticle": "Postumius 66"},
+        ]
+        with mock.patch(f"{MODULE}.sparql.SparqlQuery") as query_mock:
+            query_mock.return_value.select.return_value = rows
+            mapping = P921MainSubject.get_backlink_mapping()
+            # the second call is served from the cache
+            self.assertIs(mapping, P921MainSubject.get_backlink_mapping())
+            query_mock.return_value.select.assert_called_once_with(P921MainSubject._BACKLINK_QUERY)
+        compare({"Postumius 12a": "Q100346248", "Postumius 66": "Q100347483"}, mapping)

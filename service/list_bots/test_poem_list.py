@@ -3,11 +3,52 @@ from unittest import mock
 
 import pywikibot
 from ddt import ddt, file_data
+from pywikibot.exceptions import NoPageError
 from testfixtures import compare
 
 from service.list_bots.poem_list import PoemList
 from tools.bots.test_base import TestCloudBase
 from tools.test import PageMock, real_wiki_test
+
+PAGE_TEXTS = {
+    ":An_die_Freude_(Schiller)": """{{Textdaten
+|AUTOR=[[Friedrich Schiller]]
+|TITEL=An die Freude.
+|ENTSTEHUNGSJAHR=November 1785
+|ERSCHEINUNGSJAHR=1786
+}}
+<poem>
+Freude, schöner Götterfunken,
+Tochter aus Elysium,
+</poem>""",
+    "Friedrich Schiller": """{{Personendaten
+|NAME=Schiller, Friedrich
+|VORNAMEN=Friedrich
+|NACHNAME=Schiller
+|SORTIERUNG=Schiller, Friedrich
+}}""",
+    "Mayfest (Johann Wolfgang von Goethe)": """<poem>
+Wie herrlich leuchtet
+Mir die Natur!
+</poem>""",
+    "Johann Wolfgang von Goethe": """{{Personendaten
+|NAME=Goethe, Johann Wolfgang von
+|VORNAMEN=Johann Wolfgang
+|NACHNAME=von Goethe
+|SORTIERUNG=Goethe, Johann Wolfgang von
+}}""",
+}
+
+
+def fake_page(_site, title: str):
+    # canned replacement for pywikibot.Page, no access to the live wiki
+    page = mock.MagicMock()
+    page.title.return_value = title
+    page.text = PAGE_TEXTS.get(title, "")
+    page.isRedirectPage.return_value = False
+    page.exists.return_value = True
+    page.data_item.side_effect = NoPageError(page)
+    return page
 
 
 @ddt
@@ -77,7 +118,6 @@ class TestPoemList(TestCloudBase):
         )
         compare("off", self.poem_list.get_year({"creation": "off"}))
 
-    @real_wiki_test
     def test_integration(self):
         lemma_mock = mock.patch(
             "service.list_bots.poem_list.PetScan.get_combined_lemma_list", new_callable=mock.MagicMock
@@ -85,11 +125,14 @@ class TestPoemList(TestCloudBase):
         lemma_raw_mock = mock.patch(
             "service.list_bots.poem_list.PetScan.make_plain_list", new_callable=mock.MagicMock
         ).start()
-        mock.patch("service.list_bots.author_list.Page.save").start()
+        mock.patch("service.list_bots.poem_list.PetScan.run", return_value=[]).start()
+        # no live wiki: all pages are served from the canned texts, nothing is saved
+        mock.patch("service.list_bots.list_bot.Page", side_effect=fake_page).start()
+        mock.patch("service.list_bots.poem_list.Page", side_effect=fake_page).start()
         lemma_mock.return_value = ([":An_die_Freude_(Schiller)"], 1)
         lemma_raw_mock.return_value = [":An_die_Freude_(Schiller)"]
         self.addCleanup(mock.patch.stopall)
-        with PoemList(self.wiki) as bot:
+        with PoemList(self.wiki, log_to_wiki=False) as bot:
             bot.data.assign_dict(
                 {
                     "now_moved_lemma": {
@@ -116,9 +159,10 @@ class TestPoemList(TestCloudBase):
                 bot.data._data,
             )
 
-    @real_wiki_test
     def test_enrich_author(self):
-        lemma = pywikibot.Page(self.wiki, "Mayfest (Johann Wolfgang von Goethe)")
+        mock.patch("service.list_bots.poem_list.Page", side_effect=fake_page).start()
+        self.addCleanup(mock.patch.stopall)
+        lemma = fake_page(self.wiki, "Mayfest (Johann Wolfgang von Goethe)")
         poem_list = PoemList(self.wiki)
         poem_dict = {"lemma": lemma.title(), "author": "Johann Wolfgang von Goethe"}
         poem_list.enrich_dict(lemma, poem_dict)

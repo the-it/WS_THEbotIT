@@ -1,4 +1,6 @@
 # pylint: disable=protected-access
+from unittest import mock
+
 from testfixtures import compare
 
 from service.ws_re.scanner.tasks.wikidata.claims.p50_author import P50Author
@@ -41,13 +43,6 @@ class TestP50Author(BaseTestClaimFactory):
         # should be Arthur Stein (Althistoriker) (https://www.wikidata.org/wiki/Q711593)
         compare(711593, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
 
-    def test__get_claim_json_bug_author_from_non_de_wikipedia(self):
-        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|J. E. Holmberg.}}", title="RE:Bla")
-        factory = P50Author(re_page, self.logger)
-        claim_json = factory._get_claim_json()
-        # should be Erik J. Holmberg (https://www.wikidata.org/wiki/Q16649410)
-        compare(16649410, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
-
     def test__get_claim_json_bug_johannes_schmidt(self):
         re_page = self._create_mock_page(text="{{REDaten|BAND=III,1}}\ntext\n{{REAutor|J. Schmidt.}}", title="RE:Bla")
         factory = P50Author(re_page, self.logger)
@@ -79,3 +74,27 @@ class TestP50Author(BaseTestClaimFactory):
         compare(1363334, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])
         # should be Christian Hülsen (https://www.wikidata.org/wiki/Q69896)
         compare(69896, claim_json[1]["mainsnak"]["datavalue"]["value"]["numeric-id"])
+
+
+class TestP50AuthorOffline(BaseTestClaimFactory):
+    def setUp(self) -> None:
+        super().setUp()
+        # don't clone the register data repository from github for every factory
+        authors_patch = mock.patch("service.ws_re.scanner.tasks.wikidata.claims.claim_factory.Authors")
+        authors_patch.start()
+        self.addCleanup(authors_patch.stop)
+
+    def test__get_claim_json_bug_author_from_non_de_wikipedia(self):
+        re_page = self._create_mock_page(text="{{REDaten}}\ntext\n{{REAutor|J. E. Holmberg.}}", title="RE:Bla")
+        factory = P50Author(re_page, self.logger)
+        # the author has no wikisource page, only a wikipedia article
+        author = mock.Mock(ws_lemma=None, wp_lemma="Erik J. Holmberg")
+        with (
+            mock.patch.object(factory, "get_authors_article", return_value=[author]),
+            mock.patch("service.ws_re.scanner.tasks.wikidata.claims.p50_author.pywikibot.Page") as page_mock,
+        ):
+            page_mock.return_value.data_item.return_value.id = "Q16649410"
+            claim_json = factory._get_claim_json()
+        page_mock.assert_called_once_with(factory.wikipedia, "Erik J. Holmberg")
+        # should be Erik J. Holmberg (https://www.wikidata.org/wiki/Q16649410)
+        compare(16649410, claim_json[0]["mainsnak"]["datavalue"]["value"]["numeric-id"])

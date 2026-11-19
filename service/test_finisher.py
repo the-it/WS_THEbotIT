@@ -8,6 +8,74 @@ from service.finisher import Finisher
 from tools.bots.test_base import TestCloudBase
 from tools.test import real_wiki_test
 
+PAGE_PREFIX = "Benutzer:THE IT/unittest/finisher/"
+SEITEN_TEXT = (
+    "{{#lst:Seite:THE IT/unittest/finisher/Seite:1}}\n{{#lst:Seite:THE IT/unittest/finisher/Seite:2}}\n"
+    "[[Kategorie:Korrigiert]]"
+)
+SEITEN_FERTIG = ("THE IT/unittest/finisher/Seite:1", "THE IT/unittest/finisher/Seite:2")
+NAVIGATION_TEXT = """{{Navigation2
+ |AUTOR      = [[Friedrich von Boetticher]]
+ |ÜBERSETZER =
+ |ARTIKEL    = [[Malerwerke des neunzehnten Jahrhunderts – Erster Band]]
+ |KAPITEL  =  [[Boetticher:Adam, Benno|Adam, Benno]]
+ |VORIGER  =   [[Boetticher:Adam, Albrecht|Adam, Albrecht]]
+ |NÄCHSTER   =[[Boetticher:Adam, Emil|Adam, Emil]]
+ |JAHR       = 1891
+ |ANMERKUNG  =
+ |STATUS   = korrigiert
+}}
+"""
+
+# title -> (text, has category korrigiert, included pages, titles of linked pages)
+CANNED_LEMMAS: dict[str, tuple[str, bool, tuple[str, ...], tuple[str, ...]]] = {
+    "Lemma fertig pages fertig": ("[[Kategorie:Fertig]]", False, SEITEN_FERTIG, ()),
+    "Lemma korrigiert pages fertig": (SEITEN_TEXT, True, SEITEN_FERTIG, ()),
+    "Lemma korrigiert pages korrigiert": (
+        SEITEN_TEXT,
+        True,
+        ("THE IT/unittest/finisher/Seite:1", "THE IT/unittest/finisher/Seite:3"),
+        (),
+    ),
+    "Lemma korrigiert overview": (
+        SEITEN_TEXT,
+        True,
+        SEITEN_FERTIG,
+        (f"{PAGE_PREFIX}Lemma korrigiert overview/Unterlemma",),
+    ),
+    "Lemma no included pages": ("[[Kategorie:Korrigiert]]", True, (), ()),
+    "Lemma underscores": (SEITEN_TEXT, True, SEITEN_FERTIG, ()),
+    "Lemma korrigiert pages fertig autocorrect": (
+        NAVIGATION_TEXT + SEITEN_TEXT,
+        True,
+        SEITEN_FERTIG,
+        (),
+    ),
+}
+
+
+def fake_lemma_page(_site, title: str):
+    # canned replacement for pywikibot.Page, no access to the live wiki
+    text, has_korrigiert, included_pages, linked_titles = CANNED_LEMMAS[title.removeprefix(PAGE_PREFIX)]
+    page = mock.MagicMock()
+    page.title.return_value = title
+    page.text = text
+    page.has_korrigiert = has_korrigiert
+    included = []
+    for included_title in included_pages:
+        included_page = mock.MagicMock()
+        included_page.title.return_value = included_title
+        included.append(included_page)
+    page.templates.return_value = included
+    linked = []
+    for linked_title in linked_titles:
+        linked_page = mock.MagicMock()
+        linked_page.title.return_value = linked_title
+        linked_page.namespace.return_value = 2
+        linked.append(linked_page)
+    page.linkedPages.return_value = linked
+    return page
+
 
 class TestFinisher(TestCloudBase):
     def setUp(self):
@@ -135,7 +203,6 @@ __TOC__
         compare(new, after)
         compare(changed, True)
 
-    @real_wiki_test
     @staticmethod
     def test_integration():
         petscan_mock = mock.patch("service.finisher.PetScan").start()
@@ -168,6 +235,11 @@ __TOC__
                 2,
             )
         ]
+        # no live wiki: lemmas are served from canned pages, nothing is saved
+        mock.patch("service.finisher.Page", side_effect=fake_lemma_page).start()
+        # the current pages don't have any backlinks
+        mock.patch("service.finisher.pywikibot.Page").start().return_value.backlinks.return_value = []
+        mock.patch("service.finisher.has_korrigiert_category", side_effect=lambda page: page.has_korrigiert).start()
         WS_WIKI = Site(code="de", fam="wikisource", user="THEbotIT")
         with Finisher(wiki=WS_WIKI, debug=False, log_to_wiki=False) as bot:
             bot.run()
