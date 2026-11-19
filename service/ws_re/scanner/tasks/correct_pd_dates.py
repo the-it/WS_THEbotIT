@@ -13,7 +13,7 @@ from tools.bots.logger import WikiLogger
 @dataclass
 class Years:
     birth: int | None = None
-    death: int | str | None = None
+    death: int | None = None
     pd: int = 0
 
 
@@ -50,7 +50,13 @@ class COPDTask(ReScannerTask):
             # still protected ... set values according to years object
             if article["GEBURTSJAHR"].value or article["TODESJAHR"].value or years.pd > self.current_year:
                 article["GEBURTSJAHR"].value = str(years.birth) if years.birth else ""
-                article["TODESJAHR"].value = str(years.death) if years.death else ""
+                if years.death:
+                    article["TODESJAHR"].value = str(years.death)
+                elif years.birth:
+                    article["TODESJAHR"].value = ""
+                else:
+                    # neither birth nor death year known
+                    article["TODESJAHR"].value = public_domain.UNKNOWN_YEAR
 
     def get_max_pd_year(self, re_article_list) -> Years:
         years = Years()
@@ -67,10 +73,9 @@ class COPDTask(ReScannerTask):
                         years.death = None
                         years.pd = author.year_public_domain
                     else:
-                        # neither birth nor death is known, we have to assume the article is still protected
-                        # (fallback year of year_public_domain). Mark that with the unknown marker "?" instead
-                        # of a fake death year, so no wrong death year is shown on Wikisource.
+                        # neither birth nor death is known, the article is protected until the fallback year
+                        # of year_public_domain. set_year_values marks this case with "?" in TODESJAHR
                         years.birth = None
-                        years.death = public_domain.UNKNOWN_YEAR
+                        years.death = None
                         years.pd = author.year_public_domain
         return years
