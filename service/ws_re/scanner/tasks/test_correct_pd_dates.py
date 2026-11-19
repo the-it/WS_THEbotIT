@@ -226,7 +226,7 @@ something
 {{REAutor|Garth Thomas.}}"""
         re_page = RePage(self.page_mock)
         article_list = re_page.splitted_article_list[0]
-        compare(Years(None, None, 2100),self.task.get_max_pd_year(article_list))
+        compare(Years(None, None, 2100), self.task.get_max_pd_year(article_list))
 
     def test_no_author_information(self):
         """
