@@ -104,19 +104,24 @@ class TestDATATask(TestCase):
         }
         compare(remove_expect, remove_args[0].kwargs["claims"][0].toJSON()["mainsnak"])
 
-    @real_wiki_test
     def test_integration_create_page(self):
-        edit_mock = mock.patch(
-            "service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage.editEntity", new_callable=mock.MagicMock
-        ).start()
+        # no live wiki: the lemma has no wikidata item yet, so a new one has to be created
+        mock.patch("service.ws_re.scanner.tasks.wikidata.task.time.sleep").start()
+        self.addCleanup(mock.patch.stopall)
+        item_page_mock = mock.patch("service.ws_re.scanner.tasks.wikidata.task.pywikibot.ItemPage").start()
+        edit_mock = item_page_mock.return_value.editEntity
         mock.patch("service.ws_re.scanner.tasks.wikidata.task.NonClaims", new_callable=self.NonClaimsFake).start()
+        mock.patch.object(DATATask, "back_link_main_topic").start()
         WS_WIKI = pywikibot.Site(code="de", fam="wikisource", user="THEbotIT")
-        lemma = pywikibot.Page(WS_WIKI, "Benutzer:THE IT/RE:Aba 1")  # existing wikidata_item
+        page_mock = mock.MagicMock()
+        page_mock.text = "{{REDaten}}\ntext\n{{REAutor|Blub}}"
+        page_mock.title.return_value = "RE:Aba 1"
+        page_mock.data_item.side_effect = pywikibot.exceptions.NoPageError(page_mock)
         data_task = DATATask(
             WS_WIKI, WikiLogger(bot_name="Test", start_time=datetime(2000, 1, 1), log_to_screen=False), True
         )
         data_task.claim_factories = (self.P50AuthorFake,)
-        self.assertTrue(data_task.run(RePage(lemma)))
+        self.assertTrue(data_task.run(RePage(page_mock)))
         edit_args = edit_mock.call_args_list
         edit_expect = {
             "claims": {

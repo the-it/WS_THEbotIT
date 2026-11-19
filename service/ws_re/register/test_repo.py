@@ -1,15 +1,13 @@
 # pylint: disable=protected-access,no-self-use
-from datetime import datetime, timedelta
-from os import path
+from datetime import datetime
 from pathlib import Path
 from unittest import TestCase, mock
 
-from git import Repo
+from git import GitError, Repo
 from testfixtures import StringComparison, compare
 
-from service.ws_re.register.repo import DataRepo
+from service.ws_re.register.repo import REPO_URL, DataRepo
 from service.ws_re.register.test_base import clear_tst_path
-from tools.test import real_wiki_test
 
 
 class TestDataRepo(TestCase):
@@ -28,27 +26,31 @@ class TestDataRepo(TestCase):
         DataRepo.mock_data(False)
         compare(Path(__file__).parent.joinpath("data").joinpath("registers"), DataRepo.get_data_path())
 
-    @real_wiki_test
-    def test__get_git_repo(self):
-        with mock.patch("service.ws_re.register.repo.PATH_REAL_DATA", Path(__file__).parent.joinpath("mock_data")):
-            # worst condition path exists but isn't a real git repo
-            clear_tst_path(renew_path=True)
-            # if git repository doesn't exists it will be freshly cloned from source ... duration more than 1 second
-            tick = datetime.now()
-            DataRepo._get_git_repo(update_repo=False)
-            tock = datetime.now()
-            diff = tock - tick  # the result is a datetime.timedelta object
-            self.assertTrue(diff > timedelta(seconds=0.1))
-            self.assertTrue(
-                path.isfile(Path(__file__).parent.joinpath("mock_data").joinpath("registers").joinpath("I_1.json"))
-            )
-            # further initiations of the git repo will only be initialised locally ... execution time should be quick
-            tick = datetime.now()
+    def test__get_git_repo_clone_if_no_repo(self):
+        data_path = Path(__file__).parent.joinpath("mock_data")
+        with (
+            mock.patch("service.ws_re.register.repo.PATH_REAL_DATA", data_path),
+            mock.patch("service.ws_re.register.repo.Repo", mock.Mock(spec=Repo)) as git_repo_mock,
+            mock.patch("service.ws_re.register.repo.shutil.rmtree") as rmtree_mock,
+        ):
+            # path exists but isn't a real git repo
+            git_repo_mock.side_effect = GitError("no repo")
+            git_repo_mock.clone_from.return_value = "cloned repo"
+            compare("cloned repo", DataRepo._get_git_repo(update_repo=False))
+            rmtree_mock.assert_called_once_with(data_path)
+            git_repo_mock.clone_from.assert_called_once_with(url=REPO_URL, to_path=data_path)
+
+    def test__get_git_repo_existing_repo_is_not_cloned(self):
+        data_path = Path(__file__).parent.joinpath("mock_data")
+        with (
+            mock.patch("service.ws_re.register.repo.PATH_REAL_DATA", data_path),
+            mock.patch("service.ws_re.register.repo.Repo", mock.Mock(spec=Repo)) as git_repo_mock,
+        ):
             for _ in range(10):
-                DataRepo._get_git_repo(update_repo=False)
-            tock = datetime.now()
-            diff = tock - tick  # the result is a datetime.timedelta object
-            self.assertTrue(diff < timedelta(seconds=0.1))
+                compare(git_repo_mock.return_value, DataRepo._get_git_repo(update_repo=False))
+            compare(10, git_repo_mock.call_count)
+            git_repo_mock.assert_called_with(path=data_path)
+            git_repo_mock.clone_from.assert_not_called()
 
     def test_pull(self):
         with mock.patch("service.ws_re.register.repo.Repo", mock.Mock(spec=Repo)) as git_repo_mock:
