@@ -11,6 +11,8 @@ from service.ws_re.register.authors import Authors
 from service.ws_re.register.statistic.base import (
     AREA_OPACITY,
     CHART_PALETTE,
+    FILE_DESCRIPTION_COMMONS,
+    FILE_DESCRIPTION_WIKISOURCE,
     SUMMARY,
     Color,
     hex_to_rgb,
@@ -58,12 +60,16 @@ class ProofReadPicture:
         """Every year gets its own picture on wikisource, showing the state of the day of the last upload."""
         return f"Pauly-Wissowa stats overview {year}.png"
 
-    def __init__(self, wiki: BaseSite, logger: WikiLogger, day: date | None = None):
+    def __init__(
+        self, wiki: BaseSite, logger: WikiLogger, day: date | None = None, commons: BaseSite | None = None
+    ):
         """
         :param day: the picture shows the proof read state of every lemma at the end of this day, default today.
             The years to the public domain count from the year of the day too.
+        :param commons: if given, the pictures are uploaded to Wikimedia Commons too.
         """
         self.wiki = wiki
+        self.commons = commons
         self.logger = logger
         self.authors = Authors()
         self.day = day or datetime.now().date()
@@ -88,15 +94,20 @@ class ProofReadPicture:
             self._upload(output_path, self.volume_file_name(volume_name))
 
     def _upload(self, output_path: Path, file_name: str) -> None:
-        self.logger.info(f"Upload {file_name} to wikisource.")
-        file_page = FilePage(self.wiki, f"File:{file_name}")
+        self._upload_to(self.wiki, "wikisource", output_path, file_name, FILE_DESCRIPTION_WIKISOURCE)
+        if self.commons:
+            self._upload_to(self.commons, "commons", output_path, file_name, FILE_DESCRIPTION_COMMONS)
+
+    def _upload_to(self, site: BaseSite, site_name: str, output_path: Path, file_name: str, text: str) -> None:
+        self.logger.info(f"Upload {file_name} to {site_name}.")
+        file_page = FilePage(site, f"File:{file_name}")
         try:
-            file_page.upload(str(output_path), comment=SUMMARY, ignore_warnings=True)
+            file_page.upload(str(output_path), comment=SUMMARY, text=text, ignore_warnings=True)
         except APIError as error:
             # the API refuses an upload identical to the current version, the picture is up to date then
             if error.code != "fileexists-no-change":
                 raise
-            self.logger.info(f"{file_name} is up to date.")
+            self.logger.info(f"{file_name} is up to date on {site_name}.")
 
     def _public_domain_year(self, lemma: dict, volume_name: str) -> int:
         """The year the lemma enters the public domain, 0 if it has no known authors or no creative height."""
