@@ -121,6 +121,8 @@ def target_info(text: str):
 
 def body_is_pristine(body_lines) -> str:
     """'' if the body is headword + [...] + Seite lines only, else a reason string."""
+    if not any(line.strip() for line in body_lines):
+        return ""  # completely empty body (e.g. RE:Rufinus 39): nothing started either
     if not any(line.strip() == "[...]" for line in body_lines):
         return "no [...] placeholder line - already started"
     for line in body_lines:
