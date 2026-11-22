@@ -158,7 +158,9 @@ then continue with the shortest-first PetScan selection to fill out the batch si
    headword line (optionally preceded by a Nachtrag lead-in like
    `: S. 299, 48 zum Art. '''[[RE:Helvius 15|Helvius]]:'''`), a `[...]` line, any
    pre-generated `{{Seite|…}}` lines, and its `{{REAutor|…}}`. If there's already real text
-   or no `[...]`, someone started filling it — skip. (Older stubs, esp. Nachträge, carry
+   or no `[...]`, someone started filling it — skip. A completely **empty** body (no
+   headword, no `[...]`, e.g. `RE:Rufinus 39`) is also pristine: nothing was started, so
+   fill it. (Older stubs, esp. Nachträge, carry
    **no** pre-generated `{{Seite}}` lines — that's fine; see Assembly for generating them.)
 2. **Pick the fillable block.** One `{{REDaten}}` block → fill it. **Nachtrag / multi-band
    pages stack several `{{REDaten}}` chains on one page** (e.g. a Supplement article plus a
