@@ -13,8 +13,6 @@ class P2567AmendedBy(ClaimFactory):
     Returns the Claim **amended by** -> **issue of the amendment** + some qualifiers
     """
 
-    ITEM_R = "Q26470176"
-
     def __init__(self, re_page, logger):
         super().__init__(re_page, logger)
         self.p1433_published_in = P1433PublishedIn(re_page, self.logger)
@@ -32,8 +30,6 @@ class P2567AmendedBy(ClaimFactory):
                 continue
             published_in_snak = self.p1433_published_in.get_volume_snak(article_list[0])
             published_in_snak.property_str = self.get_property_string()
-            if published_in_snak.target == self.ITEM_R:
-                continue
             qualifiers: list[SnakParameter] = []
             qualifiers += self.p50_author.get_author_list(article_list)
             date_qualifier = self.p577_publication_date.get_snack(article_list[0])
