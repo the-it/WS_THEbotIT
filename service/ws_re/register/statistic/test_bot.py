@@ -21,12 +21,12 @@ class TestReStatistic:
         # the charts show the same day
         compare(
             [
-                mock.call(bot.wiki, bot.logger, date(2007, 12, 31), site_mock.return_value),
-                mock.call(bot.wiki, bot.logger, date(2020, 12, 31), site_mock.return_value),
-                mock.call(bot.wiki, bot.logger, date(2025, 11, 7), site_mock.return_value),
+                mock.call(site_mock.return_value, bot.logger, date(2007, 12, 31)),
+                mock.call(site_mock.return_value, bot.logger, date(2020, 12, 31)),
+                mock.call(site_mock.return_value, bot.logger, date(2025, 11, 7)),
                 # the pictures of the volumes show the state of today
-                mock.call(bot.wiki, bot.logger, date(2025, 11, 7), site_mock.return_value),
-                mock.call(bot.wiki, bot.logger, date(2025, 11, 7), site_mock.return_value),
+                mock.call(site_mock.return_value, bot.logger, date(2025, 11, 7)),
+                mock.call(site_mock.return_value, bot.logger, date(2025, 11, 7)),
             ],
             picture_mock.call_args_list,
         )

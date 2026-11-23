@@ -11,8 +11,8 @@ from service.ws_re.volumes import Volume, Volumes
 from tools.bots.logger import WikiLogger
 
 SUMMARY = "Bearbeitungsstand aktualisiert"
-# description page of the pictures on Commons
-FILE_DESCRIPTION_COMMONS = """=={{int:filedesc}}==
+# description page of the pictures, with a machine readable license
+FILE_DESCRIPTION = """=={{int:filedesc}}==
 {{Information
 |Description={{de|1=Bearbeitungsstand der Artikel der Pauly-Wissowa-Realencyclopädie spaltenweise.}}
 {{en|1=Proof-read state of the articles of the Pauly-Wissowa Realencyclopädie, column by column.}}
@@ -28,22 +28,6 @@ FILE_DESCRIPTION_COMMONS = """=={{int:filedesc}}==
 PAST_YEARS = (2007, 2020, 2025)
 # volumes, that get a statistic page with charts and a picture of the proof read state of their columns
 STATISTIC_VOLUMES = ("I,1", "VIII,1", "S III")
-# description page of the pictures on wikisource. The Commons templates don't exist there, so the machine readable
-# description, source, author (ids read by Extension:CommonsMetadata) and license (Vorlage:Bild-PD) are set locally.
-# Without them the move to Commons is refused.
-FILE_DESCRIPTION_WIKISOURCE = """{| class="fileinfotpl-type-information"
-| id="fileinfotpl_desc" | Beschreibung
-| Bearbeitungsstand der Artikel der Pauly-Wissowa-Realencyclopädie spaltenweise (Proof-read state of the articles of the Pauly-Wissowa Realencyclopädie, column by column).
-|-
-| id="fileinfotpl_src" | Quelle
-| Eigenes Werk, per Skript aus den Registerdaten des Pauly-Wissowa-Projekts auf de.wikisource erzeugt.
-|-
-| id="fileinfotpl_aut" | Urheber
-| THEbotIT
-|}
-
-{{Bild-PD}}
-"""
 TEMPLATE_PATH = Path(__file__).parent.joinpath("templates")
 # palette of the chart renderer of Extension:Chart (theme "categorical"), the n-th series of a chart gets the n-th
 # color. The picture uses the same colors.

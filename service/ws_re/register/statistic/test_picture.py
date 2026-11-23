@@ -42,12 +42,13 @@ class TestUpdate(BaseTestRegister):
     def test_uploads_the_picture(self):
         file_page_mock = self._update(None)
         # the picture of the year of the day
+        compare(self.picture.commons, file_page_mock.call_args.args[0])
         compare("File:Pauly-Wissowa stats overview 2026.png", file_page_mock.call_args.args[1])
         compare(1, file_page_mock.return_value.upload.call_count)
 
     def test_unchanged_picture_is_up_to_date(self):
         self._update(APIError("fileexists-no-change", "The upload is an exact duplicate"))
-        self.logger.info.assert_called_with("Pauly-Wissowa stats overview 2026.png is up to date on wikisource.")
+        self.logger.info.assert_called_with("Pauly-Wissowa stats overview 2026.png is up to date.")
 
     def test_uploads_the_picture_of_a_volume(self):
         with (
@@ -58,17 +59,6 @@ class TestUpdate(BaseTestRegister):
         compare("VIII,1", create_mock.call_args.args[0])
         compare("File:Pauly-Wissowa stats overview VIII,1.png", file_page_mock.call_args.args[1])
         compare(1, file_page_mock.return_value.upload.call_count)
-
-    def test_uploads_the_picture_to_commons_too(self):
-        commons = mock.Mock()
-        picture = ProofReadPicture(mock.Mock(), self.logger, date(2026, 11, 7), commons)
-        with (
-            mock.patch.object(picture, "create"),
-            mock.patch("service.ws_re.register.statistic.picture.FilePage") as file_page_mock,
-        ):
-            picture.update()
-        compare([picture.wiki, commons], [call.args[0] for call in file_page_mock.call_args_list])
-        compare(2, file_page_mock.return_value.upload.call_count)
 
     def test_other_upload_errors_are_raised(self):
         with self.assertRaises(APIError):

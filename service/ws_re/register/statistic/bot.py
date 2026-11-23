@@ -18,10 +18,10 @@ class ReStatistic(CloudBot):
         # An unchanged picture isn't uploaded again.
         for year in PAST_YEARS:
             if year < today.year:
-                ProofReadPicture(self.wiki, self.logger, date(year, 12, 31), commons).update()
-        ProofReadPicture(self.wiki, self.logger, today, commons).update()
+                ProofReadPicture(commons, self.logger, date(year, 12, 31)).update()
+        ProofReadPicture(commons, self.logger, today).update()
         for volume_name in STATISTIC_VOLUMES:
-            ProofReadPicture(self.wiki, self.logger, today, commons).update_volume(volume_name)
+            ProofReadPicture(commons, self.logger, today).update_volume(volume_name)
         self.update_history_chart(today, commons)
         return True
 
